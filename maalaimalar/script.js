@@ -76,7 +76,7 @@ mybotFaceOpen = '<div class="mybotcard-container bot_p_img" id="botfaceopen"><im
 // mybotFaceOpen = '<img id="botfaceopen" src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/maalaimalar/newsbot.gif" class="bot_p_img face">';
 
 function mybotCustomFunction() {
-  loadCustomScripts();
+  // loadCustomScripts();
   document.getElementById('mybotFace').classList.remove('face');
   document.getElementById('mybotFace').innerHTML=mybotFace;
   document.getElementById('mybotFaceOpen').innerHTML=mybotFaceOpen;
@@ -93,115 +93,115 @@ function loadAdCustom() {
   return false;
 }
 
-function sliderSwipe(){
-  if (navigator.msMaxTouchPoints) {
-
-    $('mybot #slick-list').addClass('ms-touch');
-
-    $('mybot #slick-list').on('scroll', function() {
-      $('mybot .carousel-item').css('transform','translate3d(-' + (100-$(this).scrollLeft()/6) + 'px,0,0)');
-    });
-
-  }
-  else {
-
-    var slider = {
-
-      el: {
-        slider: $("mybot .slick-list"),
-        holder: $("mybot .slick-track"),
-        imgSlide: $("mybot .carousel-item")
-      },
-
-      slideWidth: $('mybot .slick-slide').width(),
-      touchstartx: undefined,
-      touchmovex: undefined,
-      movex: undefined,
-      index: 0,
-      longTouch: undefined,
-
-      init: function() {
-        console.log('init event ran');
-        this.bindUIEvents();
-      },
-
-      bindUIEvents: function() {
-
-        this.el.holder.on("touchstart", function(event) {
-          slider.start(event);
-        });
-
-        this.el.holder.on("touchmove", function(event) {
-          slider.move(event);
-        });
-
-        this.el.holder.on("touchend", function(event) {
-          slider.end(event);
-        });
-
-      },
-
-      start: function(event) {
-        console.log('start event ran');
-        // Test for flick.
-        this.longTouch = false;
-        setTimeout(function() {
-          window.slider.longTouch = true;
-        }, 250);
-
-        // Get the original touch position.
-        this.touchstartx =  event.originalEvent.touches[0].pageX;
-
-        // The movement gets all janky if there's a transition on the elements.
-        $('.animate').removeClass('animate');
-      },
-
-      move: function(event) {
-        console.log('move event ran');
-        // Continuously return touch position.
-        this.touchmovex =  event.originalEvent.touches[0].pageX;
-        // Calculate distance to translate slick-track.
-        this.movex = this.index*this.slideWidth + (this.touchstartx - this.touchmovex);
-        // Defines the speed the images should move at.
-        var panx = 100-this.movex/6;
-        console.log('movex = '+this.movex);
-        if (this.movex < 600) { // Makes the slick-track stop moving when there is no more content.
-          this.el.holder.css('transform','translate3d(-' + this.movex + 'px,0,0)');
-        }
-        if (panx < 100) { // Corrects an edge-case problem where the background image moves without the container moving.
-          this.el.imgSlide.css('transform','translate3d(-' + panx + 'px,0,0)');
-        }
-      },
-
-      end: function(event) {
-        console.log('end event ran');
-        // Calculate the distance swiped.
-        var absMove = Math.abs(this.index*this.slideWidth - this.movex);
-        // Calculate the index. All other calculations are based on the index.
-        if (absMove > this.slideWidth/2 || this.longTouch === false) {
-          if (this.movex > this.index*this.slideWidth && this.index < 9) {
-            this.index++;
-          } else if (this.movex < this.index*this.slideWidth && this.index > 0) {
-            this.index--;
-          }
-        }
-        // Move and animate the elements.
-        this.el.holder.addClass('animate').css('transform', 'translate3d(-' + this.index*this.slideWidth + 'px,0,0)');
-        this.el.imgSlide.addClass('animate').css('transform', 'translate3d(-' + 100-this.index*50 + 'px,0,0)');
-
-      }
-    };
-
-    slider.init();
-  }
-}
-
-function loadCustomScripts(){
-  var s0 = document.createElement('script');
-  s0.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js";
-  s0.type = "text/javascript";
-  document.getElementsByTagName('head')[0].appendChild(s0);
-}
+// function sliderSwipe(){
+//   if (navigator.msMaxTouchPoints) {
+//
+//     $('mybot #slick-list').addClass('ms-touch');
+//
+//     $('mybot #slick-list').on('scroll', function() {
+//       $('mybot .carousel-item').css('transform','translate3d(-' + (100-$(this).scrollLeft()/6) + 'px,0,0)');
+//     });
+//
+//   }
+//   else {
+//
+//     var slider = {
+//
+//       el: {
+//         slider: $("mybot .slick-list"),
+//         holder: $("mybot .slick-track"),
+//         imgSlide: $("mybot .carousel-item")
+//       },
+//
+//       slideWidth: $('mybot .slick-slide').width(),
+//       touchstartx: undefined,
+//       touchmovex: undefined,
+//       movex: undefined,
+//       index: 0,
+//       longTouch: undefined,
+//
+//       init: function() {
+//         console.log('init event ran');
+//         this.bindUIEvents();
+//       },
+//
+//       bindUIEvents: function() {
+//
+//         this.el.holder.on("touchstart", function(event) {
+//           slider.start(event);
+//         });
+//
+//         this.el.holder.on("touchmove", function(event) {
+//           slider.move(event);
+//         });
+//
+//         this.el.holder.on("touchend", function(event) {
+//           slider.end(event);
+//         });
+//
+//       },
+//
+//       start: function(event) {
+//         console.log('start event ran');
+//         // Test for flick.
+//         this.longTouch = false;
+//         setTimeout(function() {
+//           window.slider.longTouch = true;
+//         }, 250);
+//
+//         // Get the original touch position.
+//         this.touchstartx =  event.originalEvent.touches[0].pageX;
+//
+//         // The movement gets all janky if there's a transition on the elements.
+//         $('.animate').removeClass('animate');
+//       },
+//
+//       move: function(event) {
+//         console.log('move event ran');
+//         // Continuously return touch position.
+//         this.touchmovex =  event.originalEvent.touches[0].pageX;
+//         // Calculate distance to translate slick-track.
+//         this.movex = this.index*this.slideWidth + (this.touchstartx - this.touchmovex);
+//         // Defines the speed the images should move at.
+//         var panx = 100-this.movex/6;
+//         console.log('movex = '+this.movex);
+//         if (this.movex < 600) { // Makes the slick-track stop moving when there is no more content.
+//           this.el.holder.css('transform','translate3d(-' + this.movex + 'px,0,0)');
+//         }
+//         if (panx < 100) { // Corrects an edge-case problem where the background image moves without the container moving.
+//           this.el.imgSlide.css('transform','translate3d(-' + panx + 'px,0,0)');
+//         }
+//       },
+//
+//       end: function(event) {
+//         console.log('end event ran');
+//         // Calculate the distance swiped.
+//         var absMove = Math.abs(this.index*this.slideWidth - this.movex);
+//         // Calculate the index. All other calculations are based on the index.
+//         if (absMove > this.slideWidth/2 || this.longTouch === false) {
+//           if (this.movex > this.index*this.slideWidth && this.index < 9) {
+//             this.index++;
+//           } else if (this.movex < this.index*this.slideWidth && this.index > 0) {
+//             this.index--;
+//           }
+//         }
+//         // Move and animate the elements.
+//         this.el.holder.addClass('animate').css('transform', 'translate3d(-' + this.index*this.slideWidth + 'px,0,0)');
+//         this.el.imgSlide.addClass('animate').css('transform', 'translate3d(-' + 100-this.index*50 + 'px,0,0)');
+//
+//       }
+//     };
+//
+//     slider.init();
+//   }
+// }
+//
+// function loadCustomScripts(){
+//   var s0 = document.createElement('script');
+//   s0.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js";
+//   s0.type = "text/javascript";
+//   document.getElementsByTagName('head')[0].appendChild(s0);
+// }
 
 function mybotSliderAddEvents(articleNo, slideNo){
   [].forEach.call(document.querySelectorAll('mybot .slick-track'), function(el) {

@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <title>news</title>
+  <path d="M63.67,32.06A31.41,31.41,0,0,1,53.1,55.63q-.7.62-1.43,1.2a32.86,32.86,0,0,1-3.91,2.63A31.58,31.58,0,0,1,17.48,60L7.4,64.3a1,1,0,0,1-1.33-1l1.3-10.79.1-.8A32.71,32.71,0,0,1,5,48.16V48.1L2,39.21v-.09c-.11-.51-.22-1-.3-1.53a27.34,27.34,0,0,1-.38-3c-.06-.63-.09-1.28-.1-1.93,0-.21,0-.43,0-.64a31.54,31.54,0,0,1,1.6-9.91A31.23,31.23,0,0,1,54.16,9.66a30.58,30.58,0,0,1,3.48,4A29,29,0,0,1,60,17.43v-.14a31.16,31.16,0,0,1,3.14,9.06c.09.47.16.95.23,1.42A30.34,30.34,0,0,1,63.67,32.06Z"/>
+  <polygon points="55.52 42 10.3 42 11.26 31 56.48 31 55.52 42" style="fill: #fff"/>
+  <polygon points="46.69 32 7.57 32 8.54 21 47.65 21 46.69 32" style="fill: #fb0000"/>
+  <text transform="matrix(1, 0, -0.09, 1, 11.22, 29.98)" style="font-size: 7.829794883728027px;font-family: Poppins-SemiBold, Poppins;font-weight: 700">WEBSITE</text>
+  <text transform="matrix(1, 0, -0.09, 1, 12.36, 39.27)" style="font-size: 7.829794883728027px;font-family: Poppins-SemiBold, Poppins;font-weight: 700">ASSISTANT</text>
+  <rect x="35" y="44" width="15" height="1" rx="0.5" ry="0.5" style="fill: #fff"/>
+  <rect x="28" y="44" width="5" height="1" rx="0.5" ry="0.5" style="fill: #fff"/>
+</svg>

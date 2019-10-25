@@ -1,10 +1,16 @@
+var mybotMultipleIconsEnabled=1;
+mybotspecialEvent = 0;
+mybotMultiIconName = '/diwali/100pxD';
+mybotMultiIconType = '.gif';
+mybotMultiIconNumber = 13;
+var mybotSearchTitleField = 1;
+
 mybotLoadAdDefault = 0;
 mybotAuthEnabled = 1;
 mybotClickLocation = '';
 var botPosition = 'right';
 var mybotClickCountEnabled = 1;
 var mybotCloseEnabled = 0;
-var mybotMultipleIconsEnabled=0;
 var myBotMenuCustomTopText='Hi! I am 123telugu Bot. I am here to guide through the website. Here are some popular topics I have found for you.';
 var myBotMenuCustomTopTextCats = 'Here are some categories for you to pick from!';
 var mybotContextTitle = '123telugu';
@@ -436,6 +442,7 @@ function botPic() {
 	mybotFace = '<img class="mybotimgprofile" id="botfaceclosed" src="">';
 	document.getElementById('mybotFace').innerHTML=mybotFace;
 	document.getElementById("botfaceclosed").src = myPix;
+	// document.getElementById("dragItem").style.height = '150px';
 	// mybotFaceOpen = '<div id="mybotui"><div class="mybottext">HAPPY DUSSEHRA</div></div>';
 	// document.getElementById('mybotFaceOpen').innerHTML=mybotFaceOpen;
 	// [].forEach.call(document.querySelectorAll('mybot .close'), function(el) {

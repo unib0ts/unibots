@@ -27,7 +27,7 @@ mybotslickCloseText = "Close this slide";
 
 mybotCatFallbackImage = "https://cdn.jsdelivr.net/gh/unib0ts/unibots/123telugu/placeholder.png";
 noImageExp =0;
-mybotampEnabled = 1;
+mybotampEnabled = 0;
 mybotLangSource = 'en';
 imageSearchExp = 1;
 mybotSearchTitleField = 1;
@@ -58,21 +58,21 @@ mybotCat6e = '\u0c15\u0c4d\u0c30\u0c40\u0c21\u0c32\u0c41';
 mybotCatMoree = '\u0c2e\u0c30\u0c3f\u0c28\u0c4d\u0c28\u0c3f\u0020\u0c35\u0c30\u0c4d\u0c17\u0c02';
 
 // Normal - Disable When AMP Enabled
-// mybotAdLinkIn = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
-// mybotAdInName = '/21805061584/Unibot/Exlu_Unibot_123telugu.com';
-// mybotAdInSize = '[300, 250]';
-// mybotAdInID = 'div-gpt-ad-1571621526072-0';
+mybotAdLinkIn = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+mybotAdInName = '/21805061584/Unibot/Exlu_Unibot_123telugu.com';
+mybotAdInSize = '[300, 250]';
+mybotAdInID = 'div-gpt-ad-1571621526072-0';
 
 //AMP - Comment When Amp Disabled
-mybotAdLinkSmall = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
-mybotAdSmallName = '/21804848220/ATD_123Telugu_AMP/ATD_320x50_P2';
-mybotAdSmallSize = '[320, 50]';
-mybotAdSmallID = 'div-gpt-ad-1564041246114-0';
-
-mybotAdLinkIn = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
-mybotAdInName = '/21804848220/ATD_123Telugu_AMP/ATD_300x250_P1';
-mybotAdInSize = '[300, 250]';
-mybotAdInID = 'div-gpt-ad-1564041397655-0';
+// mybotAdLinkSmall = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+// mybotAdSmallName = '/21804848220/ATD_123Telugu_AMP/ATD_320x50_P2';
+// mybotAdSmallSize = '[320, 50]';
+// mybotAdSmallID = 'div-gpt-ad-1564041246114-0';
+//
+// mybotAdLinkIn = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+// mybotAdInName = '/21804848220/ATD_123Telugu_AMP/ATD_300x250_P1';
+// mybotAdInSize = '[300, 250]';
+// mybotAdInID = 'div-gpt-ad-1564041397655-0';
 
 mybotGACode = 'UA-149767057-1';
 
@@ -114,13 +114,13 @@ mybotBundle2 = '<div class="botSmartButton"><span class="botSmartButtonSpan" onc
 
 mybotBundle2e = '<div class="botSmartButton"><span class="botSmartButtonSpan" onclick="function4e()">'+mybotCat4e+'</span><span class="botSmartButtonSpan2" onclick="function5e()">'+mybotCat5e+'</span></div><div class="botSmartButton"><span class="botSmartButtonSpan" onclick="function6e()">'+mybotCat6e+'</span><span class="botSmartButtonSpan2" onclick="function7e()">'+mybotCatMoree+'</span></div>';
 
-mybotadSmall = '<script async src="'+mybotAdLinkSmall+'"></script><script>var REFRESH_KEY = "refresh";var REFRESH_VALUE = "true";window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("'+mybotAdSmallName+'",'+mybotAdSmallSize+', "'+mybotAdSmallID+'").setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 15;googletag.pubads().addEventListener("impressionViewable", function(event) {var slot = event.slot;if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {setTimeout(function() {googletag.pubads().refresh([slot]);}, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);}});googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="'+mybotAdSmallID+'"><script>googletag.cmd.push(function() { googletag.display("'+mybotAdSmallID+'"); });</script></div>';
+// mybotadSmall = '<script async src="'+mybotAdLinkSmall+'"></script><script>var REFRESH_KEY = "refresh";var REFRESH_VALUE = "true";window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("'+mybotAdSmallName+'",'+mybotAdSmallSize+', "'+mybotAdSmallID+'").setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 15;googletag.pubads().addEventListener("impressionViewable", function(event) {var slot = event.slot;if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {setTimeout(function() {googletag.pubads().refresh([slot]);}, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);}});googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="'+mybotAdSmallID+'"><script>googletag.cmd.push(function() { googletag.display("'+mybotAdSmallID+'"); });</script></div>';
 
 mybotadIn = '<script async src="'+mybotAdLinkIn+'"></script><script>var REFRESH_KEY = "refresh";var REFRESH_VALUE = "true";window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("'+mybotAdInName+'",'+mybotAdInSize+', "'+mybotAdInID+'").setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 15;googletag.pubads().addEventListener("impressionViewable", function(event) {var slot = event.slot;if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {setTimeout(function() {googletag.pubads().refresh([slot]);}, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);}});googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="'+mybotAdInID+'"><script>googletag.cmd.push(function() { googletag.display("'+mybotAdInID+'"); });</script></div>';
 
 
 // Normal - Disable When AMP Enabled
-// mybotadSmall = '<div id="ATD_TG_320x100"></div>';
+mybotadSmall = '<div id="ATD_TG_320x100"></div>';
 
 // mybotadIn = '<div id="ATD_Ad_123telugu_300x250"></div>'; // Not Being Used
 
@@ -256,117 +256,156 @@ function placeBotAndAd(){
 }
 
 function callOnDocumentReady() {
-	if(typeof mybotMobileTopPlacement !== 'undefined' && mybotMobileTopPlacement==1){
-		mobileTopPlacement();
-		if(mobileCheck()){
-			document.getElementById('mybotClose').classList.add('closeBotFrontTop');
+	if(typeof mybotMatchEnabledFlag !== 'undefined' && mybotMatchEnabledFlag ==1){
+		currentTS = Date.now() / 1000 | 0;
+		for(i=0;i<mybotMatchTimestamps.length;i++){
+			if((mybotMatchTimestamps[i][0]<= currentTS) && (currentTS<=mybotMatchTimestamps[i][1])){
+				mybotMatchEnabled = 1;
+				break;
+			}
+			else{
+				mybotMatchEnabled = 0;
+			}
 		}
 	}
-	if(typeof mybotAdDesktopTopPlacement !== 'undefined' && mybotAdDesktopTopPlacement==1){
-		adDesktopTopPlacement();
-	}
-	if(typeof mybotCloseInVar !== 'undefined'){
-		mybotClosevarIn = mybotCloseInVar;
+	if(typeof mybotMatchEnabled !== 'undefined' && mybotMatchEnabled ==1){
+		mybotloadCricWidget();
 	}
 	else{
-		mybotClosevarIn = '<img src="https://api.warw.in/123telugu/img/close.svg" style="width: 20px; display: block;">';
-	}
-	document.getElementById('mybotCloseIn').innerHTML=mybotClosevarIn;
-	mybotCustomFunction();
-	placeBotAndAd();
-	loadAd('gabywa');
-	if(mybotLoadAdDefault){
-		loadAd('adSmall');
-		loadAd('adIn');
-	}
-	else{
-		loadAdCustom('adSmall');
-		loadAdCustom('adIn');
-	}
-	if(mybotAuthEnabled){
-		updateAuthToken();
-	}
-	if(mybotMultipleIconsEnabled){
-		botPic();
-	}
+		if(typeof mybotMobileTopPlacement !== 'undefined' && mybotMobileTopPlacement==1){
+			mobileTopPlacement();
+			if(mobileCheck()){
+				document.getElementById('mybotClose').classList.add('closeBotFrontTop');
+			}
+		}
+		if(typeof mybotAdDesktopTopPlacement !== 'undefined' && mybotAdDesktopTopPlacement==1){
+			adDesktopTopPlacement();
+		}
+		if(typeof mybotCloseInVar !== 'undefined'){
+			mybotClosevarIn = mybotCloseInVar;
+		}
+		else{
+			mybotClosevarIn = '<img src="https://api.warw.in/123telugu/img/close.svg" style="width: 20px; display: block;">';
+		}
+		document.getElementById('mybotCloseIn').innerHTML=mybotClosevarIn;
+		mybotCustomFunction();
+		placeBotAndAd();
+		loadAd('gabywa');
+		if(mybotLoadAdDefault){
+			loadAd('adSmall');
+			loadAd('adIn');
+		}
+		else{
+			loadAdCustom();
+		}
+		if(mybotAuthEnabled){
+			updateAuthToken();
+		}
+		if(mybotMultipleIconsEnabled){
+			botPic();
+		}
 
-	[].forEach.call(document.querySelectorAll('.mybotimgprofile'), function(el) {
-		el.addEventListener('click', function() {
-			if(mybotDragClick==false){
+		[].forEach.call(document.querySelectorAll('.mybotimgprofile'), function(el) {
+			el.addEventListener('click', function() {
+				if(mybotDragClick==false){
+					if (botPosition=='right')
+					{
+						document.querySelector('.chatCont-right').style.display = 'block';
+					}
+					else if (botPosition=='left')
+					{
+						document.querySelector('.chatCont-left').style.display = 'block';
+					}
+					document.querySelector('.bot_profile').style.display = 'block';
+					document.querySelector('.profile_div').style.display = 'none';
+					document.querySelector('.botBodyChat').style.display = 'block';
+
+					if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
+						mybotampOpen();
+					}
+
+					if(botAdInFlag==false){
+						openBotMenuCustom();
+						if(typeof mybotOutSliderEnabled !== 'undefined' && mybotOutSliderEnabled ==1){
+							mybotOpenOutSlider();
+						}
+						botAdInFlag = true;
+					}
+				}
+				else{
+					mybotDragClick = false;
+				}
+				mybotClickCount(0);
+			})
+		});
+
+		[].forEach.call(document.querySelectorAll('.mybotclose'), function(el) {
+			el.addEventListener('click', function() {
 				if (botPosition=='right')
 				{
-					document.querySelector('.chatCont-right').style.display = 'block';
+					document.querySelector('.chatCont-right').style.display = 'none';
 				}
 				else if (botPosition=='left')
 				{
-					document.querySelector('.chatCont-left').style.display = 'block';
+					document.querySelector('.chatCont-left').style.display = 'none';
 				}
-				document.querySelector('.bot_profile').style.display = 'block';
-				document.querySelector('.profile_div').style.display = 'none';
-				document.querySelector('.botBodyChat').style.display = 'block';
-
-				if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
-					mybotampOpen();
-				}
-
-				if(botAdInFlag==false){
-					openBotMenuCustom();
-					botAdInFlag = true;
-				}
-			}
-			else{
-				mybotDragClick = false;
-			}
-			mybotClickCount(0);
-		})
-	});
-
-	[].forEach.call(document.querySelectorAll('.close'), function(el) {
-		el.addEventListener('click', function() {
-			if (botPosition=='right')
-			{
-				document.querySelector('.chatCont-right').style.display = 'none';
-			}
-			else if (botPosition=='left')
-			{
-				document.querySelector('.chatCont-left').style.display = 'none';
-			}
-			document.querySelector('.bot_profile').style.display = 'none';
-			document.querySelector('.adIn').style.display = 'block';
-			document.querySelector('.profile_div').style.display = 'block';
-			if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
-				mybotampClose();
-			}
-		})
-	});
-
-	if(mybotCloseEnabled){
-		[].forEach.call(document.querySelectorAll('.closeBotFront'), function(el) {
-			el.style.display='block';
-			el.addEventListener('click', function() {
-			if (botPosition=='right')
-			{
-				document.querySelector('.chatCont-right').style.display = 'none';
-			}
-			else if (botPosition=='left')
-			{
-				document.querySelector('.chatCont-left').style.display = 'none';
-			}
 				document.querySelector('.bot_profile').style.display = 'none';
-				document.querySelector('.adIn').style.display = 'none';
-				document.querySelector('.profile_div').style.display = 'none';
+				document.querySelector('.adIn').style.display = 'block';
+				document.querySelector('.profile_div').style.display = 'block';
+				if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
+					mybotampClose();
+				}
 			})
 		});
-	}
 
-	dragElement(document.getElementById("dragItem"));
+		if(mybotCloseEnabled){
+			[].forEach.call(document.querySelectorAll('.closeBotFront'), function(el) {
+				el.style.display='block';
+				el.addEventListener('click', function() {
+				if (botPosition=='right')
+				{
+					document.querySelector('.chatCont-right').style.display = 'none';
+				}
+				else if (botPosition=='left')
+				{
+					document.querySelector('.chatCont-left').style.display = 'none';
+				}
+					document.querySelector('.bot_profile').style.display = 'none';
+					document.querySelector('.adIn').style.display = 'none';
+					document.querySelector('.profile_div').style.display = 'none';
+				})
+			});
+		}
 
-	if((typeof mybotIsBottomScrollDisapperEnabled !== 'undefined') && (mybotIsBottomScrollDisapperEnabled == 1)){
-		window.onscroll = function(ev) {mybotScrollEnd()};
-	}
-	if((typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined') && (mybotIsBottomScrollStartDisapperEnabled == 1)){
-		mybotScrollStart();
-		window.onscroll = function(ev) {mybotScrollStart()};
+		dragElement(document.getElementById("dragItem"));
+
+		if((typeof mybotIsBottomScrollDisapperEnabled !== 'undefined') && (mybotIsBottomScrollDisapperEnabled == 1)){
+			window.addEventListener('scroll',function(ev){mybotScrollEnd()});
+		}
+		if((typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined') && (mybotIsBottomScrollStartDisapperEnabled == 1)){
+			mybotScrollStart();
+			window.addEventListener('scroll',function(ev){mybotScrollStart()});
+		}
+
+		if(typeof mybotAutoOpenEnabled !== 'undefined'){
+			if(mybotAutoOpenDelay === 'undefined'){
+				mybotAutoOpenDelay = 2;
+			}
+			if(mybotAutoOpenEnabled == 'desktop'){
+				if(!mobileCheck()){
+					setTimeout(firstOpenBot, mybotAutoOpenDelay*1000);
+				}
+			}
+			else if(mybotAutoOpenEnabled == 'mobile'){
+				if(mobileCheck()){
+					setTimeout(firstOpenBot, mybotAutoOpenDelay*1000);
+				}
+			}
+			else if(mybotAutoOpenEnabled == 'all'){
+					setTimeout(firstOpenBot, mybotAutoOpenDelay*1000);
+			}
+		}
+
 	}
 }
 
@@ -430,7 +469,7 @@ function handleTouchMove(articleNo, slideNo, xDiff, yDiff) {
 
 function mybotScrollStart(){
 	if(mobileCheck()){
-		if ((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) {
+		if (((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) && (mybotScrollStartFlag == 0)) {
         document.getElementById('chatCont').style.display = 'none';
         document.getElementById('dragItem').style.display = 'none';
         mybotScrollStartFlag = 1;
@@ -502,10 +541,19 @@ function function10(elem){
 };
 
 function botPic() {
-	var randomNum = Math.floor(Math.random()*3)+1;
-	var myPix = "https://api.warw.in/123telugu/img/newsbot"+randomNum+".svg";
-	document.getElementById("botfaceopen").src = myPix;
+	var randomNum = Math.floor(Math.random()*(mybotMultiIconNumber))+1;
+	var myPix = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/"+mybotMultiIconName+randomNum+mybotMultiIconType;
+	mybotFace = '<img class="mybotimgprofile" id="botfaceclosed" src="">';
+	document.getElementById('mybotFace').innerHTML=mybotFace;
 	document.getElementById("botfaceclosed").src = myPix;
+	// mybotFaceOpen = '<div id="mybotui"><div class="mybottext">HAPPY DUSSEHRA</div></div>';
+	// document.getElementById('mybotFaceOpen').innerHTML=mybotFaceOpen;
+	// [].forEach.call(document.querySelectorAll('mybot .close'), function(el) {
+	// 	el.style.marginTop = '-10px';
+  // });
+	// [].forEach.call(document.querySelectorAll('mybot .bothead'), function(el) {
+	// 	el.style.background = 'rgba(20, 5, 5, 1)';
+  // });
 }
 
 function mobileTopPlacement(){
@@ -520,9 +568,15 @@ function mobileTopPlacement(){
 		else{
 			mybotDragItem.style.top = '0px';
 		}
-    window.addEventListener('scroll', function() {
-      mybotDragItem.style.display = 'block';
-    });
+		if(typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined' && mybotIsBottomScrollStartDisapperEnabled == 1){
+
+		}
+		else{
+			window.addEventListener('scroll', function() {
+	      mybotDragItem.style.display = 'block';
+	    });
+		}
+
   }
 }
 
@@ -597,6 +651,7 @@ Math.easeInOutQuad = function (t, b, c, d) {
 function botTranslate(trquery, lang, search) {
 	var request = new XMLHttpRequest();
 	if(mybottlang=='en'){
+		openloader();
 		botSearchQuery(trquery, lang);
 	}
 	else{
@@ -920,6 +975,10 @@ function botSearchQuery(query, lang){
 											var title = data.items[i].pagemap.metatags[0]['og:title'];
 											titleFlag = 1;
 										}
+										else if("title" in data.items[i]){
+											var title = data.items[i].title;
+											titleFlag = 1;
+										}
 										else if("og:description" in data.items[i].pagemap.metatags[0]){
 											var title = data.items[i].pagemap.metatags[0]['og:description'];
 											titleFlag = 1;
@@ -947,6 +1006,9 @@ function botSearchQuery(query, lang){
 							title=data.items[i].snippet;
 						}
 						var link = data.items[i].link;
+						if(typeof mybotlinkAppend !== 'undefined'){
+							link = link + mybotlinkAppend;
+						}
 						var index = articles.push(title);
 
 						if(typeof imageSearchExp === 'undefined' || (typeof imageSearchExp !== 'undefined' && imageSearchExp==0)){
@@ -1043,24 +1105,44 @@ function botSearchQuery(query, lang){
 	request.send();
 }
 
-function changeNewsCategories(){
-	[].forEach.call(document.querySelectorAll('.newsBotBundle1'), function(el) {
-		if(el.style['display'] == 'block') {
-			el.style['display'] = 'none';
+function changeNewsCategories(mybotBundleNumber){
+	if(typeof mybotBundleFlag !== 'undefined' && mybotBundleFlag == 1){
+		if(mybotBundleNumber==3){
+			mybotBundleNumberNext = 1;
 		}
-		else {
-			el.style['display'] = 'block';
+		else{
+			mybotBundleNumberNext = mybotBundleNumber+1;
 		}
-	});
+		[].forEach.call(document.querySelectorAll('.newsBotBundle'+mybotBundleNumber), function(el) {
+			if(el.style['display'] == 'block') {
+				el.style['display'] = 'none';
+				[].forEach.call(document.querySelectorAll('.newsBotBundle'+mybotBundleNumberNext), function(el2) {
+					if(el2.style['display'] == 'none') {
+						el2.style['display'] = 'block';
+					}
+				});
+			}
+		});
+	}
+	else{
+		[].forEach.call(document.querySelectorAll('.newsBotBundle1'), function(el) {
+			if(el.style['display'] == 'block') {
+				el.style['display'] = 'none';
+			}
+			else {
+				el.style['display'] = 'block';
+			}
+		});
 
-	[].forEach.call(document.querySelectorAll('.newsBotBundle2'), function(el) {
-		if(el.style['display'] == 'block') {
-			el.style['display'] = 'none';
-		}
-		else {
-			el.style['display'] = 'block';
-		}
-	});
+		[].forEach.call(document.querySelectorAll('.newsBotBundle2'), function(el) {
+			if(el.style['display'] == 'block') {
+				el.style['display'] = 'none';
+			}
+			else {
+				el.style['display'] = 'block';
+			}
+		});
+	}
 }
 
 function updateAuthToken(callback) {
@@ -1107,6 +1189,9 @@ function openBotMenuCustom(){
 	var element = document.querySelector('.botBodyChat');
 	scrollToMyBot(element, objDiv.scrollHeight, 1250);
 	botSearchWrapperAppend('english');
+	if((typeof mybotSingleSliderEnabled !== 'undefined') && (mybotSingleSliderEnabled == 1)){
+		function1();
+	}
 }
 
 function botSearchWrapperAppend(lang){
@@ -1165,8 +1250,14 @@ function openBotNewsHeadWrapper(displayText, lang){
 		case "kannada":
 			catText = "\u0ca8\u0ca8\u0c97\u0cc6 \u0cb9\u0cc6\u0c9a\u0ccd\u0c9a\u0cbf\u0ca8 \u0cb5\u0cb0\u0ccd\u0c97\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cbf";
 			break;
+		case "urdu":
+			catText = "\u0645\u0632\u06cc\u062f \u0632\u0645\u0631\u06d2 \u062f\u06a9\u06be\u0627\u0626\u06cc\u06ba";
+			break;
 		default:
 		catText = "Show me more categories!"
+	}
+	if(((typeof mybotSingleSliderEnabled !== 'undefined') && (mybotSingleSliderEnabled == 1))){
+		catText = "Show me the Latest News";
 	}
 	botHeadWrap = document.getElementById('botHeadWrap');
 	botHeadWrap = botHeadWrap.innerHTML;
@@ -1199,29 +1290,36 @@ function mobileCheck() {
 };
 
 function firstOpenBot(){
-	if (botPosition=='right')
-	{
-		document.querySelector('.chatCont-right').style.display = 'block';
+	if((typeof mybotAutoOpenLink !== 'undefined')){
+		if((window.location.href==mybotAutoOpenLink)){
+			document.getElementById("chatCont").style.display = 'block';
+			document.querySelector('.bot_profile').style.display = 'block';
+			document.querySelector('.profile_div').style.display = 'none';
+			document.querySelector('.botBodyChat').style.display = 'block';
+			openBotMenuCustom();
+			botAdInFlag = true;
+			if(mybotAutoOpenStay === 'undefined'){
+				mybotAutoOpenStay = 2;
+			}
+			botCloseAuto = setTimeout(firstCloseBot, mybotAutoOpenStay*1000);
+		}
 	}
-	else if (botPosition=='left')
-	{
-		document.querySelector('.chatCont-left').style.display = 'block';
-    }
-	document.querySelector('.bot_profile').style.display = 'block';
-	document.querySelector('.profile_div').style.display = 'none';
-	document.querySelector('.botBodyChat').style.display = 'block';
-	botCloseAuto = setTimeout(firstCloseBot, 6500);
+	else{
+		document.getElementById("chatCont").style.display = 'block';
+		document.querySelector('.bot_profile').style.display = 'block';
+		document.querySelector('.profile_div').style.display = 'none';
+		document.querySelector('.botBodyChat').style.display = 'block';
+		openBotMenuCustom();
+		botAdInFlag = true;
+		if(mybotAutoOpenStay === 'undefined'){
+			mybotAutoOpenStay = 2;
+		}
+		botCloseAuto = setTimeout(firstCloseBot, mybotAutoOpenStay*1000);
+	}
 }
 
 function firstCloseBot(){
-	if (botPosition=='right')
-	{
-		document.querySelector('.chatCont-right').style.display = 'none';
-	}
-	else if (botPosition=='left')
-	{
-		document.querySelector('.chatCont-left').style.display = 'none';
-    }
+	document.getElementById("chatCont").style.display = 'none';
 	document.querySelector('.bot_profile').style.display = 'none';
 	document.querySelector('.adIn').style.display = 'block';
 	document.querySelector('.profile_div').style.display = 'block';
@@ -1233,21 +1331,25 @@ function openNewsCategoryWise(category, count, lang, buttonText, displayText) {
 		return;
 	}
 	if(count == 0) {
-		html = '';
-		html += '<div class="botMessageItemWrapper">';
-		html += '	<div class="botfloatContainerUser">';
-		html += '		<div class="botMessageFromUser">'+buttonText+'</div>';
-		html += '	</div>';
-		html += '</div>';
-		var botMessageBody = document.querySelector('.botMessageBody');
-		var tempvar = document.createElement('div');
-		tempvar.innerHTML = html;
-		botMessageBody.appendChild(tempvar);
-		openBotNewsHeadWrapper(displayText, lang);
+		if(!((typeof mybotSingleSliderEnabled !== 'undefined') && (mybotSingleSliderEnabled == 1))){
+			html = '';
+			html += '<div class="botMessageItemWrapper">';
+			html += '	<div class="botfloatContainerUser">';
+			html += '		<div class="botMessageFromUser">'+buttonText+'</div>';
+			html += '	</div>';
+			html += '</div>';
+			var botMessageBody = document.querySelector('.botMessageBody');
+			var tempvar = document.createElement('div');
+			tempvar.innerHTML = html;
+			botMessageBody.appendChild(tempvar);
+			openBotNewsHeadWrapper(displayText, lang);
+		}
 	}
 	var cat = category;
 	var adIn = document.querySelector('.adIn');
-	hide(adIn);
+	if(!((typeof mybotSingleSliderEnabled !== 'undefined') && (mybotSingleSliderEnabled == 1))){
+		hide(adIn);
+	}
 	var language = lang;
 	openloader();
 
@@ -1278,41 +1380,42 @@ function openNewsCategoryWise(category, count, lang, buttonText, displayText) {
 				var articleNo = 0;
 				var reactionStack = [];
 				for(var i=0; i<totalLength; i++) {
-					if(firstCardSkip==1 && typeof firstCardSkip !== 'undefined'){
-						if(i==0){
-							continue;
-						}
-					}
 					var descData = data.articles[i].description;
 					var title = data.articles[i].title;
 					var link = data.articles[i].link;
 					if(typeof mybotlinkAppend !== 'undefined'){
-							link = link + mybotlinkAppend;
-						}
+						link = link + mybotlinkAppend;
+					}
 					var description = descData;
 					var image = '';
 					var reArray = [];
-
 					if(typeof noImageExp !== 'undefined' && noImageExp==1){
 						var image = displayText;
 						var cc = ['#582323','#582323', '#842780', '#470d7b', '#1a0d7b', '#2d639c', '#14655e', '#08542b', '#24752f', '#2f7106', '#9a8b1b',];
 						var randomNum = Math.floor(Math.random()*10)+1;
 					}
 					else{
-						if(typeof customImageExp !== 'undefined' && customImageExp == 1){
-							myRe = new RegExp('img class=\"img-responsive\" data-src=\"([^\"]+)', 'g');
-						}
-						else if(typeof customImageExpRetinaUrl !== 'undefined' && customImageExpRetinaUrl == 1){
-							myRe = new RegExp('data-img-retina-url=\"([^\"]+)', 'g');
-						}
-						else if(typeof mybotcustomImageExpDirectSrc !== 'undefined' && mybotcustomImageExpDirectSrc == 1){
-							myRe = new RegExp('src=\"([^\"]+)', 'g');
-						}
-						else if(typeof mybotcustomReg !== 'undefined' && mybotcustomReg == 1){
-							myRe = new RegExp(mybotcustomRegEx, 'g');
+						if((typeof mybotSeparateCategory !== 'undefined') && (mybotSeparateCategory == buttonText)){
+							if(typeof mybotSeaparateCatCustomRegEx !== 'undefined'){
+								myRe = new RegExp(mybotSeaparateCatCustomRegEx, 'g');
+							}
 						}
 						else{
-							var myRe = new RegExp('img src=\"([^\"]+)', 'g');
+							if(typeof customImageExp !== 'undefined' && customImageExp == 1){
+								myRe = new RegExp('img class=\"img-responsive\" data-src=\"([^\"]+)', 'g');
+							}
+							else if(typeof customImageExpRetinaUrl !== 'undefined' && customImageExpRetinaUrl == 1){
+								myRe = new RegExp('data-img-retina-url=\"([^\"]+)', 'g');
+							}
+							else if(typeof mybotcustomImageExpDirectSrc !== 'undefined' && mybotcustomImageExpDirectSrc == 1){
+								myRe = new RegExp('src=\"([^\"]+)', 'g');
+							}
+							else if(typeof mybotcustomReg !== 'undefined' && mybotcustomReg == 1){
+								myRe = new RegExp(mybotcustomRegEx, 'g');
+							}
+							else{
+								var myRe = new RegExp('img src=[\'\"]([^\'\"]+)', 'g');
+							}
 						}
 						reArray = myRe.exec(descData);
 						if (reArray == null){
@@ -1328,14 +1431,14 @@ function openNewsCategoryWise(category, count, lang, buttonText, displayText) {
 									image = data.articles[i].media;
 								}
 								else{
-								if(typeof mybotCatFallbackImage !== 'undefined'){
-									image = mybotCatFallbackImage;
-								}
-								else{
-									image = 'https://newsbot-images.s3.ap-south-1.amazonaws.com/main/placeholder.jpg';
+									if(typeof mybotCatFallbackImage !== 'undefined'){
+										image = mybotCatFallbackImage;
+									}
+									else{
+										image = 'https://newsbot-images.s3.ap-south-1.amazonaws.com/main/placeholder.jpg';
+									}
 								}
 							}
-						}
 							else {
 								if(reArray.length >= 2) {
 									image = reArray[1];
@@ -1349,7 +1452,14 @@ function openNewsCategoryWise(category, count, lang, buttonText, displayText) {
 						}
 					}
 				 	if(typeof mybotcustomPrepend !== 'undefined' && mybotcustomPrepend == 1){
-						image = mybotcustomPrependLink+image;
+							image = mybotcustomPrependLink+image;
+						}
+
+					if(typeof mybotImageReplaceText !== 'undefined' && typeof mybotImageReplaceTextNew !== 'undefined'){
+						reArr = image.split(mybotImageReplaceText);
+						if(reArr.length == 2){
+							image = image.replace(mybotImageReplaceText, mybotImageReplaceTextNew);
+						}
 					}
 
 					emoji = {
@@ -1375,6 +1485,7 @@ function openNewsCategoryWise(category, count, lang, buttonText, displayText) {
 						slideTrackBlockHTML = slideTrackBlockHTML.replace(/__IMAGE2__/g, '');
 						slideTrackBlockHTML = slideTrackBlockHTML.replace(/__IMAGE__/g, image);
 					}
+
 					slideTrackBlockHTML = slideTrackBlockHTML.replace(/__CATCLICKFUN__/g, catclickfun);
 					slideTrackBlockHTML = slideTrackBlockHTML.replace(/__LINK__/g, link);
 					slideTrackBlockHTML = slideTrackBlockHTML.replace(/__INDEX__/g, index);
@@ -1451,7 +1562,7 @@ function openNewsCategoryWise(category, count, lang, buttonText, displayText) {
 }
 
 function dragElement(elmnt) {
-	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, cx = 0, cy =0, cy1 = 0, cx1 = 0;
 	if (document.getElementById(elmnt)) {
 		// if present, the header is where you move the DIV from:
 		document.getElementById(elmnt).onmousedown = dragMouseDown;
@@ -1459,39 +1570,74 @@ function dragElement(elmnt) {
 	else {
 		// otherwise, move the DIV from anywhere inside the DIV:
 		elmnt.onmousedown = dragMouseDown;
+		elmnt.ontouchstart = dragMouseDown;
+		// [].forEach.call(document.querySelectorAll('#dragItem'), function(el) {
+		// 	el.addEventListener('touchstart', function(e){dragMouseDown(e)});
+		// });
 	}
 
 	function dragMouseDown(e) {
 		e = e || window.event;
-		e.preventDefault();
+		// e.preventDefault();
 		// get the mouse cursor position at startup:
-		pos3 = e.clientX;
-		pos4 = e.clientY;
+		if(e.type == 'touchstart'){
+			cx1 = e.touches[0].clientX;
+			cy1 = e.touches[0].clientY;
+		}
+		else if(e.type == 'mousedown'){
+			cx1 = e.clientX;
+			cy1 = e.clientY;
+		}
+		pos3 = cx1;
+		pos4 = cy1;
 		document.onmouseup = closeDragElement;
+		elmnt.ontouchend = closeDragElement;
+		// [].forEach.call(document.querySelectorAll('#dragItem'), function(el) {
+		// 	el.addEventListener('touchend', function(e){closeDragElement(e)});
+		// });
 		// call a function whenever the cursor moves:
 		document.onmousemove = elementDrag;
+		elmnt.ontouchmove = elementDrag;
+		// [].forEach.call(document.querySelectorAll('#dragItem'), function(el) {
+		// 	el.addEventListener('touchmove', function(e){elementDrag(e)});
+		// });
 	}
 
 	function elementDrag(e) {
+		// console.log(e);
 		e = e || window.event;
 		e.preventDefault();
 		// calculate the new cursor position:
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
+		// console.log(e);
+		if(e.type == 'touchmove'){
+			cx = e.touches[0].clientX;
+			cy = e.touches[0].clientY;
+		}
+		else if(e.type == 'mousemove'){
+			cx = e.clientX;
+			cy = e.clientY;
+		}
+		pos1 = pos3 - cx;
+		pos2 = pos4 - cy;
+
 		if(pos1 !=0 || pos2!=0){
 			mybotDragClick = true;
 		}
-		pos3 = e.clientX;
-		pos4 = e.clientY;
+		pos3 = cx;
+		pos4 = cy;
 		// set the element's new position:
 		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
 		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 	}
 
 	function closeDragElement(e) {
+		// console.log(e);
 		// stop moving when mouse button is released:
 		document.onmouseup = null;
 		document.onmousemove = null;
+		document.ontouchstart = null;
+		document.ontouchend = null;
+		document.ontouchmove = null;
 	}
 }
 
@@ -1662,9 +1808,10 @@ function closeSlide(article, slide){
 
 function mybotArticleSameTab(){
   var mybotlinkList = document.querySelectorAll('.mybotArticleLink');
-  for(var i in mybotlinkList){
-    mybotlinkList[i].setAttribute('target', '');
-  }
+	length = mybotlinkList.length;
+	for (var i = 0; i < length; i++) {
+		mybotlinkList[i].setAttribute('target', '');
+	}
 }
 
 function mybotSearchStore(count, term){
@@ -1702,4 +1849,15 @@ function mybotSearchStore(count, term){
 	};
 	request.send('searchText='+term);
 }
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"> </div> <div class="chatCont" id="chatCont" > <div class="bot_profile" > <div class="bothead"> <span class="NewsBotTag"> <p>NewsBot</p> </span> <span class="botfaceopen" id="mybotFaceOpen" style="display:inline;"> </span> <span class="close" id="mybotCloseIn"> </span> </div> <div class="botBodyChat"> <div id="botMessageBody" class="botMessageBody"> </div> <div class="adIn" id="adIn"> </div> <div class="botChatwave"> <span class="botdot"></span> <span class="botdot"></span> <span class="botdot"></span> </div> </div> <div class="PoweredTag" style="height:10px;"> <a target="_blank" href="https://unibots.in/"> <p id="mybotBranding" style="margin-block-start: unset; margin-block-end: unset; display:inline;">Powered By Unibots</p> </a> <a target="_blank" href="#"> <p id="mybotBranding2" style="margin-block-start: unset; margin-block-end: unset;display:inline;"></p> </a> </div> </div> </div> <div class="profile_div" id="dragItem"> <div class="row"> <div class="col-hgt face" id="mybotFace" style="cursor:move;"> </div> <div class="closeBotFront" id="mybotClose"> </div> </div> <div class="row"> <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> <div id="categoriesBlock" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBotWithBorder"> <div id="botnews1"> <div class="botMessageHeadMessage">__TOPTEXT__</div> <div class="newsBotBundle1" id="newsBotBundle1" style="display: block;"> </div> <div class="newsBotBundle2" id="newsBotBundle2" style="display: none;"> </div> <div class="newsBotBundle3" id="newsBotBundle3" style="display: none;"> </div> </div> </div> </div> </div> </div> <div id="slideTrackBlock" style="display: none;"> <div data-index="0" class="slick-slide slick-active"> <div class="carousel-item"> <a class="mybotArticleLink" href="__LINK__" target="_blank" onclick="return __CATCLICKFUN__"> <div class="image-section" style="background-image: url(__IMAGE__);background: __IMAGE3__;">__IMAGE2__</div> <div class="carousel-content-area"> <div class="carousel-header-area"> <div class="carousel-title-area">__TITLE__</div> </div> </div> </a> <div id="share__INDEX__" class="carousel-actionable-area" style="display:none;"> <a href="https://www.facebook.com/sharer/sharer.php?u=__LINK__&t=__TITLE__" onclick="function10(this);return false;" target="_blank" title="Share on Facebook"><img id="facebook__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/facebook.png" style="width: 25px" /></a> <a href="https://twitter.com/share?url=__LINK__&text=Check this out!" onclick="function10(this);return false;" target="_blank" title="Share on Twitter"><img id="twitter__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/twitter.png" style="width: 25px" /></a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=__LINK__&title=__TITLE__" onclick="function10(this);return false;" target="_blank" title="Share on LinkedIn"><img id="linkedin__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/linkedin.png" style="width: 25px" /></a> <a href="https://wa.me/?text=__LINK__" target="_blank" title="Share on WhatsApp"><img id="whatsapp__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/whatsapp.png" style="width: 25px" /></a> <a href="javascript:void(0)" onclick="copyToClipboard(__INDEX__)"><img id="clipboard__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/clipboard.png" style="width: 25px" /></a> </div> <div class="carousel-actionable-area"> <span><a href="javascript:void(0)" onclick="addReaction(__INDEX__,1,0,false)"><img id="like__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/like_unmarked.png" style="width: 35px" /></a></span><span id="likespan__INDEX__" style="color: #cac8c8; position: absolute; margin-top: 10px;">__EMOJI1__</span> <span style="margin-left: 30px;"><a href="javascript:void(0)" onclick="addReaction(__INDEX__,0,0,false)"><img id="dislike__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/dislike_unmarked.png" style="width: 35px" /></a></span><span id="dislikespan__INDEX__" style="color: #cac8c8; position: absolute; margin-top: 10px;">__EMOJI0__</span> <a href="javascript:void(0)" onclick="addShare(__INDEX__)"><img id="shareicon__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/share_unmarked.png" style="width: 32px;padding-left: 20px;" /></a> </div> </div> </div> </div> <div id="slideTrackBlockSearch" style="display: none;"> <div data-index="0" class="slick-slide slick-active" tabindex="-1" style="outline: none;transition: 1s;"> <div class="carousel-item"> <a class="mybotArticleLink" href="__LINK__" target="_blank" onclick="return __CATCLICKFUN__"> <div class="image-section-search" style="background-image: url(__IMAGE__);background: __IMAGE3__;">__IMAGE2__</div> <div class="carousel-content-area"> <div class="carousel-header-area"> <div class="carousel-title-area">__TITLE__</div> </div> </div> </a> </div> </div> </div> <div id="articlesBlock" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBot"> <div> <div id="mybot-slick-arrow" class="slick-initialized slick-slider"> <div class="slick-arrow __CLOSECLASS__" onclick="closeSlide(__ARTICLENO__, __SLIDENO__)"> <p class="slick-close-text">[X] __SLIDECLOSETEXT__</p> </div> <div class="slick-arrow slick-prev" onclick="moveArticlesLeft(__ARTICLENO__, __SLIDENO__)"> <img src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/left-arrow.png" style="margin-top:7px;"> </div> <div class="slick-list"> <div class="slick-track __SLICKTRACKCLOSE__" id="slideTrack__ARTICLENO__-__SLIDENO__" style="outline: none;transition: 1s;">__SLIDETRACK__</div> </div> <div class="slick-arrow slick-next" onclick="moveArticlesRight(__ARTICLENO__, __SLIDENO__)"> <img src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/left-arrow.png" style="margin-top:7px; margin-left:4px;"> </div> </div> </div> </div> </div> </div> </div> <div id="botHeadWrap" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBotWithBorder"> <div id="botnews1"> <div class="botMessageHeadMessage"> __DISPLAYTEXT__ </div> <div id="newsBotBundles"> <div class="botSmartButton" onclick="openBotMenuMore()"> __CATTEXT__ </div> </div> </div> </div> </div> </div> </div> <div id="searchBlock" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBot"> <div> <div class="slick-initialized slick-slider"> <div class="slick-arrow slick-prev"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"> <defs> <path id="a" d="M8 0h28v46H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z"></path> </defs> <g fill="none" fill-rule="evenodd"> <g transform="matrix(-1 0 0 1 36 0)"> <use fill="#FFF" xlink:href="#a"></use> <path stroke="#C0C0C0" d="M35.5 45.5V.5H8A7.5 7.5 0 0 0 .5 8v30A7.5 7.5 0 0 0 8 45.5h27.5z"></path> </g> <path fill="#ACACAC" d="M21.786 16.069L19.818 14.1l-8.432 8.433 8.432 8.432L21.786 29l-6.465-6.465z"></path> </g> </svg> </div> <div class="slick-list"> <div class="slick-track">__SLIDETRACK__</div> </div> <div class="slick-arrow slick-next"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"> <defs> <path id="a" d="M8 0h28v46H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z"></path> </defs> <g fill="none" fill-rule="evenodd"> <g> <use fill="#FFF" xlink:href="#a"></use> <path stroke="#C0C0C0" d="M35.5 45.5V.5H8A7.5 7.5 0 0 0 .5 8v30A7.5 7.5 0 0 0 8 45.5h27.5z"></path> </g> <path fill="#ACACAC" d="M14.214 16.069l1.968-1.968 8.432 8.433-8.432 8.432L14.214 29l6.465-6.465z"></path> </g> </svg> </div> </div> </div> </div> </div> </div> </div> <div id="mybotSearchFields" class="mybotSearchFields" style="display: none;"> <span> <input type="text" id="mybotSearchBox" class="mybotSearchBox"> <input type="text" class="mybotSearchBoxHidden" value="" placeholder="Translated Query" readonly> </span> <span class="botSendIconDisabled" id="botSendIconDisabled" style="right: 16px;"> <span class="send-button disabled"> <svg fill="#DDD" viewBox="0 0 24 24" height="20" width="20" class="transition-ease-point-3-s" style="vertical-align: middle;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg> </span> </span> <span class="botSendIconEnabled" id="botSendIconEnabled" style="right: 24px;"> <span class="send-button"> <svg fill="#21abf3" viewBox="0 0 24 24" height="20" width="20" class="transition-ease-point-3-s" style="vertical-align: middle;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg> </span> </span> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='mybot .chatCont-left{height:560px!important}mybot .chatCont-right{height:560px!important}mybot{z-index:2147483647}mybot .bot_profile{height:530px}mybot .profile_div{height:120px}mybot .img-profile{height:70px}mybot .col-hgt-ad-right{height:50px}mybot .col-hgt-right{height:70px!important}mybot .col-hgt-ad-left{height:50px}mybot .bot_p_img{display:inline-block}mybot img{background-color:unset}mybot .close{background-image:unset}mybot .mybotcontainer{height:60px;width:60px;position:relative}mybot .mybotcard{height:60px;width:60px;position:absolute;right:0;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}mybot .mybotcard1{-webkit-animation:scaleUp 8s infinite;animation:scaleUp 8s infinite}mybot .mybotcard2{-webkit-animation:scaleUp 8s 4s infinite;animation:scaleUp 8s 4s infinite}@-webkit-keyframes scaleUp{5%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1);transform:scale(1)}55%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}@keyframes scaleUp{5%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1);transform:scale(1)}55%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}mybot .botSmartButton{font-size:12px!important}mybot .slick-prev{padding-left:0}mybot .slick-arrow:before{display:none!important}mybot .slick-next{padding-left:0}mybot .bothead{background:#94CF00!important}mybot .mybotAmpDragItem{width:70px!important;height:70px!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);mybot{font-family:"Lato",sans-serif;font-size:14px;line-height:1.42857143;color:#333;position:sticky;cursor:move}mybot p{line-height:1;font-family:monospace;font-size:12px}mybot .PoweredTag p{font-size:10px}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0;margin-left:0;display:block}mybot .NewsBotTag{display:inline;float:left;margin-left:10px;font-family:cursive;color:#fff}mybot .NewsBotTag>p{margin-top:10px;margin-bottom:10px}mybot .PoweredTag{display:inline;float:right;font-size:10px;margin-right:5px;font-family:monospace;color:#337ab7}mybot .botSendIconEnabled{display:none}mybot .botSearch{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:0.2s ease-out;margin-left:8px;margin-top:-8px;margin-bottom:8px;border-radius:6px;max-height:350px;overflow-y:auto}mybot .mybotSearchBox{display:inline-block;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0}mybot .mybotSearchBoxHidden{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0;display:none}mybot .mybotSearchButton{background:#6760CF;padding:8px 20px 8px 20px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,.12);-moz-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);-webkit-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);border:1px solid #257C9E;font-size:15px}mybot .botSearch::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearch::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botSearchResults::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearchResults::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot #botSearchOld{display:none}mybot .image-section-search{width:198px;height:140px;background-size:200px 140px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell}mybot svg g use{display:none}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .bothead{background:#6760CF;border-radius:10px 10px 0 0;height:35px}mybot .botBodyChat{width:320px;height:500px;overflow-y:scroll}mybot .botBodyChat::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botBodyChat::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botMessageFromBotWithBorder{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;border:solid 1px #E6E6E6;color:#333;padding:0 8px;font-size:13px;text-align:left;border-radius:6px;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageFromBot{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;color:#333;padding:0 8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageHeadMessage{padding:8px}mybot .botMessageFromUser{-ms-flex-align:end;align-items:flex-end;min-width:64px;max-width:250px;padding-right:10px;border-radius:8px;padding:8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;overflow:hidden;-ms-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);-o-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);box-shadow:0 1px 3px 0 rgba(0,0,0,.08);color:#fff;background-color:rgb(33,171,243);float:right;white-space:pre-line;overflow:visible}mybot .botSmartButton{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);padding:8px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;transition:0.2s ease-out;cursor:pointer}mybot .botSmartButtonSpan2{position:relative;-webkit-flex:1;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:49%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botSmartButtonSpan{position:relative;-webkit-flex:1;border-right:solid 1px #eaeaea;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:50%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botfloatContainerBot{float:left;padding-left:8px}mybot .botfloatContainerUser{float:right;padding-right:8px}mybot .botMessageItemWrapper{position:relative;margin:0;max-width:100vw;z-index:2;clear:both;overflow:hidden;will-change:height;margin-bottom:8px;animation:mybot-slide-up-fade-in ease 1s;animation-iteration-count:1;transform-origin:50% 50%;animation-fill-mode:forwards;-webkit-animation:mybot-slide-up-fade-in ease 1s;-webkit-animation-iteration-count:1;-webkit-transform-origin:50% 50%;-webkit-animation-fill-mode:forwards;-moz-animation:mybot-slide-up-fade-in ease 1s;-moz-animation-iteration-count:1;-moz-transform-origin:50% 50%;-moz-animation-fill-mode:forwards;-o-animation:mybot-slide-up-fade-in ease 1s;-o-animation-iteration-count:1;-o-transform-origin:50% 50%;-o-animation-fill-mode:forwards;-ms-animation:mybot-slide-up-fade-in ease 1s;-ms-animation-iteration-count:1;-ms-transform-origin:50% 50%;-ms-animation-fill-mode:forwards;opacity:0}@keyframes mybot-slide-up-fade-in{0%{opacity:0;transform:translate(0,40px)}100%{opacity:1;transform:translate(0,0)}}@-moz-keyframes mybot-slide-up-fade-in{0%{opacity:0;-moz-transform:translate(0,40px)}100%{opacity:1;-moz-transform:translate(0,0)}}@-webkit-keyframes mybot-slide-up-fade-in{0%{opacity:0;-webkit-transform:translate(0,40px)}100%{opacity:1;-webkit-transform:translate(0,0)}}@-o-keyframes mybot-slide-up-fade-in{0%{opacity:0;-o-transform:translate(0,40px)}100%{opacity:1;-o-transform:translate(0,0)}}@-ms-keyframes mybot-slide-up-fade-in{0%{opacity:0;-ms-transform:translate(0,40px)}100%{opacity:1;-ms-transform:translate(0,0)}}mybot.powered{font-size:17px;margin-top:20px}mybot.powered img{width:110px;position:relative;top:8px}mybot.footer{margin-top:50px;position:absolute;bottom:40px;width:auto;left:0;right:0;margin:0 auto}mybot .chatCont-right{position:fixed;width:320px;bottom:0;right:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .chatCont-left{position:fixed;width:320px;bottom:0;left:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .close{position:absolute;right:5px;margin-top:10px;color:#000;font-size:18px;cursor:pointer;opacity:1;filter:invert(98%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(10) contrast(103%)}mybot .closeBotFront{position:absolute;right:5px;margin-top:-20px;color:#000;font-size:18px;cursor:pointer;display:none;width:15px;pointer-events:auto}mybot .closeBotFrontLeft{margin-top:-15px!important;width:15px!important;left:5px;right:unset}mybot .closeBotFrontTop{margin-top:70px!important}mybot .bot_profile{position:absolute;right:0;text-align:center;width:320px;font-size:13px;display:none;z-index:1000}mybot .bot_p_img{height:80px;margin-top:-40px}mybot .botfaceopen{margin-left:-40px}mybot .botChatwave{width:100px;position:absolute;bottom:20px;display:none}mybot .botdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:3px;background:#303131;animation:mybot-botChatwave 0.9s linear infinite}mybot .botdot:nth-child(2){animation-delay:-0.7s}mybot .botdot:nth-child(3){animation-delay:-0.5s}@keyframes mybot-botChatwave{0%,60%,100%{transform:initial}30%{transform:translateY(-10px)}}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;cursor:default;pointer-events:none}mybot .profile_div-left{position:fixed;bottom:0;left:0px!important;width:320px;cursor:default;pointer-events:none}mybot .mybotimgprofile{cursor:pointer;pointer-events:auto}mybot .col-hgt-right{height:100px;display:flex;align-items:center;float:right;cursor:default!important}mybot .col-hgt-left{height:100px;display:flex;align-items:center;float:left;cursor:default!important}mybot .col-hgt-ad-right{display:flex;pointer-events:auto;align-items:center;float:right}mybot .col-hgt-ad-left{display:flex;align-items:center;float:left;pointer-events:auto}mybot .face{animation-name:mybot-spin;animation-duration:5000ms;animation-iteration-count:infinite;animation-timing-function:linear;transform:translate3d(0,0,0);backface-visibility:hidden;perspective:1000px}@keyframes mybot-mybotshake{1%,3%{transform:translate3d(-2px,0,0)}2%,3%{transform:translate3d(3px,0,0)}2%,4%,6%{transform:translate3d(-5px,0,0)}3%,5%{transform:translate3d(5px,0,0)}}mybot .newsBotBundle2{display:none}mybot .newsBotBundle3{display:none}mybot .carousel-container .slick-initialized{display:block;position:relative;top:0}mybot .slick-initialized{display:block;clear:both;position:relative}mybot .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}mybot .carousel-container .slick-list{margin:0 8px}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-list{margin:0!important;margin-left:8px!important;transition:ease all 0.1s}mybot .slick-list{position:relative;display:block;overflow:visible;margin:0 -6px;padding:0}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-close-text{margin-top:5px}mybot .slick-track-close{margin-top:30px}mybot .slick-track{display:-ms-flexbox;display:flex}mybot .slick-track{position:relative;top:0;left:0;min-width:10000px;display:block}mybot .slick-track .slick-slide{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;height:auto}mybot .slick-track .slick-slide{display:block;height:auto}mybot .slick-slide{display:none;float:left;min-height:1px}mybot .slick-slide img{display:inline-block}mybot .slick-next:before{content:""}mybot .slick-prev:before{content:""}mybot .carousel-item{font-size:13px;border-radius:8px;padding:0;margin-right:12px;overflow:hidden;border:solid 1px #e6e6e6;width:85%;background-color:#f7f7f7;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-box-shadow:0 2px 8px rgba(0,0,0,.1);-o-box-shadow:0 2px 8px rgba(0,0,0,.1);box-shadow:0 2px 8px rgba(0,0,0,.1)}mybot .image-section{-ms-background-size:cover;background-size:cover;-webkit-background-position:center center;-moz-background-position:center center;-ms-background-position:center center;-o-background-position:center center;background-position:center center;-webkit-background-repeat:no-repeat;-moz-background-repeat:no-repeat;-ms-background-repeat:no-repeat;-o-background-repeat:no-repeat;background-repeat:no-repeat;background-color:#fff;text-align:center;-moz-border-top-left-radius:3px;-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-top-right-radius:3px;border-top-right-radius:3px}mybot .carousel-actionable-area{display:block;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}mybot .carousel-actionable-area{margin:0;margin-top:auto}mybot .slick-prev{display:block;position:absolute;top:100px;left:-20px;z-index:1;cursor:pointer;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-next{display:block;cursor:pointer;position:absolute;top:100px;right:-50px;z-index:1;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close{top:0;height:35px;width:25px;padding-left:5px;display:none;position:absolute;left:-20px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close-show{top:-30px;height:20px!important;width:275px;display:block;position:absolute;left:10px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10px;box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);background:#24C6DC;background:-webkit-linear-gradient(to right,#514A9D,#24C6DC);background:linear-gradient(to right,#514A9D,#24C6DC);color:#fff;text-align:center}mybot .slick-next img{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}mybot .slick-track{opacity:1;transform:translate3d(0,0,0);width:800px}mybot .carousel-item{width:200px}mybot .image-section{width:198px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell;height:140px}mybot .carousel-actionable-area{background:#fff;text-align:center}mybot .carousel-content-area{padding:8px;max-height:120px;overflow:auto}mybot .carousel-content-area::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .carousel-content-area::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot{font-family:"Lato",sans-serif;font-size:14px;line-height:1.42857143;color:#333;position:sticky;cursor:move}mybot p{line-height:1;font-family:monospace;font-size:12px}mybot .PoweredTag p{font-size:10px}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0;margin-left:0;display:block}mybot .NewsBotTag{display:inline;float:left;margin-left:10px;font-family:cursive;color:#fff}mybot .NewsBotTag>p{margin-top:10px;margin-bottom:10px}mybot .PoweredTag{display:inline;float:right;font-size:10px;margin-right:5px;font-family:monospace;color:#337ab7}mybot .botSendIconEnabled{display:none}mybot .botSearch{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:0.2s ease-out;margin-left:8px;margin-top:-8px;margin-bottom:8px;border-radius:6px;max-height:350px;overflow-y:auto}mybot .mybotSearchBox{display:inline-block;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0}mybot .mybotSearchBoxHidden{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0;display:none}mybot .mybotSearchButton{background:#6760CF;padding:8px 20px 8px 20px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,.12);-moz-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);-webkit-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);border:1px solid #257C9E;font-size:15px}mybot .botSearch::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearch::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botSearchResults::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearchResults::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot #botSearchOld{display:none}mybot .image-section-search{width:198px;height:140px;background-size:200px 140px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell}mybot svg g use{display:none}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .bothead{background:#6760CF;border-radius:10px 10px 0 0;height:35px}mybot .botBodyChat{width:320px;height:500px;overflow-y:scroll}mybot .botBodyChat::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botBodyChat::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botMessageFromBotWithBorder{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;border:solid 1px #E6E6E6;color:#333;padding:0 8px;font-size:13px;text-align:left;border-radius:6px;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageFromBot{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;color:#333;padding:0 8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageHeadMessage{padding:8px}mybot .botMessageFromUser{-ms-flex-align:end;align-items:flex-end;min-width:64px;max-width:250px;padding-right:10px;border-radius:8px;padding:8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;overflow:hidden;-ms-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);-o-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);box-shadow:0 1px 3px 0 rgba(0,0,0,.08);color:#fff;background-color:rgb(33,171,243);float:right;white-space:pre-line;overflow:visible}mybot .botSmartButton{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);padding:8px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;transition:0.2s ease-out;cursor:pointer}mybot .botSmartButtonSpan2{position:relative;-webkit-flex:1;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:49%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botSmartButtonSpan{position:relative;-webkit-flex:1;border-right:solid 1px #eaeaea;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:50%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botfloatContainerBot{float:left;padding-left:8px}mybot .botfloatContainerUser{float:right;padding-right:8px}mybot .botMessageItemWrapper{position:relative;margin:0;max-width:100vw;z-index:2;clear:both;overflow:hidden;will-change:height;margin-bottom:8px;animation:mybot-slide-up-fade-in ease 1s;animation-iteration-count:1;transform-origin:50% 50%;animation-fill-mode:forwards;-webkit-animation:mybot-slide-up-fade-in ease 1s;-webkit-animation-iteration-count:1;-webkit-transform-origin:50% 50%;-webkit-animation-fill-mode:forwards;-moz-animation:mybot-slide-up-fade-in ease 1s;-moz-animation-iteration-count:1;-moz-transform-origin:50% 50%;-moz-animation-fill-mode:forwards;-o-animation:mybot-slide-up-fade-in ease 1s;-o-animation-iteration-count:1;-o-transform-origin:50% 50%;-o-animation-fill-mode:forwards;-ms-animation:mybot-slide-up-fade-in ease 1s;-ms-animation-iteration-count:1;-ms-transform-origin:50% 50%;-ms-animation-fill-mode:forwards;opacity:0}@keyframes mybot-slide-up-fade-in{0%{opacity:0;transform:translate(0,40px)}100%{opacity:1;transform:translate(0,0)}}@-moz-keyframes mybot-slide-up-fade-in{0%{opacity:0;-moz-transform:translate(0,40px)}100%{opacity:1;-moz-transform:translate(0,0)}}@-webkit-keyframes mybot-slide-up-fade-in{0%{opacity:0;-webkit-transform:translate(0,40px)}100%{opacity:1;-webkit-transform:translate(0,0)}}@-o-keyframes mybot-slide-up-fade-in{0%{opacity:0;-o-transform:translate(0,40px)}100%{opacity:1;-o-transform:translate(0,0)}}@-ms-keyframes mybot-slide-up-fade-in{0%{opacity:0;-ms-transform:translate(0,40px)}100%{opacity:1;-ms-transform:translate(0,0)}}mybot.powered{font-size:17px;margin-top:20px}mybot.powered img{width:110px;position:relative;top:8px}mybot.footer{margin-top:50px;position:absolute;bottom:40px;width:auto;left:0;right:0;margin:0 auto}mybot .chatCont-right{position:fixed;width:320px;bottom:0;right:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .chatCont-left{position:fixed;width:320px;bottom:0;left:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .close{position:absolute;right:5px;margin-top:10px;color:#000;font-size:18px;cursor:pointer;opacity:1;filter:invert(98%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(10) contrast(103%)}mybot .closeBotFront{position:absolute;right:5px;margin-top:-20px;color:#000;font-size:18px;cursor:pointer;display:none;width:15px;pointer-events:auto}mybot .closeBotFrontLeft{margin-top:-15px!important;width:15px!important;left:5px;right:unset}mybot .closeBotFrontTop{margin-top:70px!important}mybot .bot_profile{position:absolute;right:0;text-align:center;width:320px;font-size:13px;display:none;z-index:1000}mybot .bot_p_img{height:80px;margin-top:-40px}mybot .botfaceopen{margin-left:-40px}mybot .botChatwave{width:100px;position:absolute;bottom:20px;display:none}mybot .botdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:3px;background:#303131;animation:mybot-botChatwave 0.9s linear infinite}mybot .botdot:nth-child(2){animation-delay:-0.7s}mybot .botdot:nth-child(3){animation-delay:-0.5s}@keyframes mybot-botChatwave{0%,60%,100%{transform:initial}30%{transform:translateY(-10px)}}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;cursor:default;pointer-events:none}mybot .profile_div-left{position:fixed;bottom:0;left:0px!important;width:320px;cursor:default;pointer-events:none}mybot .mybotimgprofile{cursor:pointer;pointer-events:auto}mybot .col-hgt-right{height:100px;display:flex;align-items:center;float:right;cursor:default!important}mybot .col-hgt-left{height:100px;display:flex;align-items:center;float:left;cursor:default!important}mybot .col-hgt-ad-right{display:flex;pointer-events:auto;align-items:center;float:right}mybot .col-hgt-ad-left{display:flex;align-items:center;float:left;pointer-events:auto}mybot .face{animation-name:mybot-spin;animation-duration:5000ms;animation-iteration-count:infinite;animation-timing-function:linear;transform:translate3d(0,0,0);backface-visibility:hidden;perspective:1000px}@keyframes mybot-mybotshake{1%,3%{transform:translate3d(-2px,0,0)}2%,3%{transform:translate3d(3px,0,0)}2%,4%,6%{transform:translate3d(-5px,0,0)}3%,5%{transform:translate3d(5px,0,0)}}mybot .newsBotBundle2{display:none}mybot .newsBotBundle3{display:none}mybot .carousel-container .slick-initialized{display:block;position:relative;top:0}mybot .slick-initialized{display:block;clear:both;position:relative}mybot .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}mybot .carousel-container .slick-list{margin:0 8px}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-list{margin:0!important;margin-left:8px!important;transition:ease all 0.1s}mybot .slick-list{position:relative;display:block;overflow:visible;margin:0 -6px;padding:0}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-close-text{margin-top:5px}mybot .slick-track-close{margin-top:30px}mybot .slick-track{display:-ms-flexbox;display:flex}mybot .slick-track{position:relative;top:0;left:0;min-width:10000px;display:block}mybot .slick-track .slick-slide{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;height:auto}mybot .slick-track .slick-slide{display:block;height:auto}mybot .slick-slide{display:none;float:left;min-height:1px}mybot .slick-slide img{display:inline-block}mybot .slick-next:before{content:""}mybot .slick-prev:before{content:""}mybot .carousel-item{font-size:13px;border-radius:8px;padding:0;margin-right:12px;overflow:hidden;border:solid 1px #e6e6e6;width:85%;background-color:#f7f7f7;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-box-shadow:0 2px 8px rgba(0,0,0,.1);-o-box-shadow:0 2px 8px rgba(0,0,0,.1);box-shadow:0 2px 8px rgba(0,0,0,.1)}mybot .image-section{-ms-background-size:cover;background-size:cover;-webkit-background-position:center center;-moz-background-position:center center;-ms-background-position:center center;-o-background-position:center center;background-position:center center;-webkit-background-repeat:no-repeat;-moz-background-repeat:no-repeat;-ms-background-repeat:no-repeat;-o-background-repeat:no-repeat;background-repeat:no-repeat;background-color:#fff;text-align:center;-moz-border-top-left-radius:3px;-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-top-right-radius:3px;border-top-right-radius:3px}mybot .carousel-actionable-area{display:block;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}mybot .carousel-actionable-area{margin:0;margin-top:auto}mybot .slick-prev{display:block;position:absolute;top:100px;left:-20px;z-index:1;cursor:pointer;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-next{display:block;cursor:pointer;position:absolute;top:100px;right:-50px;z-index:1;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close{top:0;height:35px;width:25px;padding-left:5px;display:none;position:absolute;left:-20px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close-show{top:-30px;height:20px!important;width:275px;display:block;position:absolute;left:10px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10px;box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);background:#24C6DC;background:-webkit-linear-gradient(to right,#514A9D,#24C6DC);background:linear-gradient(to right,#514A9D,#24C6DC);color:#fff;text-align:center}mybot .slick-next img{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}mybot .slick-track{opacity:1;transform:translate3d(0,0,0);width:800px}mybot .carousel-item{width:200px}mybot .image-section{width:198px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell;height:140px}mybot .carousel-actionable-area{background:#fff;text-align:center}mybot .carousel-content-area{padding:8px;max-height:120px;overflow:auto}mybot .carousel-content-area::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .carousel-content-area::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});
+
+function mybotloadCricWidget(){
+  el = document.getElementsByTagName('mybot');
+  el[0].parentNode.removeChild(el[0]);
+
+  var s = document.createElement('script');
+  s.src = mybotloadCricWidgetScript;
+  s.type = "text/javascript";
+  s.async = true;
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"> </div> <div class="chatCont" id="chatCont" > <div class="bot_profile" > <div class="bothead"> <span class="NewsBotTag"> <p>NewsBot</p> </span> <span class="botfaceopen" id="mybotFaceOpen" style="display:inline;"> </span> <span class="mybotclose" id="mybotCloseIn"> </span> </div> <div class="botBodyChat"> <div id="botMessageBody" class="botMessageBody"> </div> <div class="adIn" id="adIn"> </div> <div class="botChatwave"> <span class="botdot"></span> <span class="botdot"></span> <span class="botdot"></span> </div> </div> <div class="PoweredTag" style="height:10px;"> <a target="_blank" href="https://unibots.in/"> <p id="mybotBranding" style="margin-block-start: unset; margin-block-end: unset; display:inline;">Powered By Unibots</p> </a> <a target="_blank" href="#"> <p id="mybotBranding2" style="margin-block-start: unset; margin-block-end: unset;display:inline;"></p> </a> </div> </div> </div> <div class="profile_div" id="dragItem"> <div class="row"> <div class="col-hgt face" id="mybotFace" style="cursor:move;"> </div> <div class="closeBotFront" id="mybotClose"> </div> </div> <div class="row"> <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> <div id="categoriesBlock" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBotWithBorder"> <div id="botnews1"> <div class="botMessageHeadMessage">__TOPTEXT__</div> <div class="newsBotBundle1" id="newsBotBundle1" style="display: block;"> </div> <div class="newsBotBundle2" id="newsBotBundle2" style="display: none;"> </div> <div class="newsBotBundle3" id="newsBotBundle3" style="display: none;"> </div> </div> </div> </div> </div> </div> <div id="slideTrackBlock" style="display: none;"> <div data-index="0" class="slick-slide slick-active"> <div class="carousel-item"> <a class="mybotArticleLink" href="__LINK__" target="_blank" onclick="return __CATCLICKFUN__"> <div class="image-section" style="background-image: url(__IMAGE__);background: __IMAGE3__;">__IMAGE2__</div> <div class="carousel-content-area"> <div class="carousel-header-area"> <div class="carousel-title-area">__TITLE__</div> </div> </div> </a> <div id="share__INDEX__" class="carousel-actionable-area" style="display:none;"> <a href="https://www.facebook.com/sharer/sharer.php?u=__LINK__&t=__TITLE__" onclick="function10(this);return false;" target="_blank" title="Share on Facebook"><img id="facebook__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/facebook.png" style="width: 25px" /></a> <a href="https://twitter.com/share?url=__LINK__&text=Check this out!" onclick="function10(this);return false;" target="_blank" title="Share on Twitter"><img id="twitter__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/twitter.png" style="width: 25px" /></a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=__LINK__&title=__TITLE__" onclick="function10(this);return false;" target="_blank" title="Share on LinkedIn"><img id="linkedin__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/linkedin.png" style="width: 25px" /></a> <a href="https://wa.me/?text=__LINK__" target="_blank" title="Share on WhatsApp"><img id="whatsapp__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/whatsapp.png" style="width: 25px" /></a> <a href="javascript:void(0)" onclick="copyToClipboard(__INDEX__)"><img id="clipboard__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/clipboard.png" style="width: 25px" /></a> </div> <div class="carousel-actionable-area"> <span><a href="javascript:void(0)" onclick="addReaction(__INDEX__,1,0,false)"><img id="like__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/like_unmarked.png" style="width: 35px" /></a></span><span id="likespan__INDEX__" style="color: #cac8c8; position: absolute; margin-top: 10px;">__EMOJI1__</span> <span style="margin-left: 30px;"><a href="javascript:void(0)" onclick="addReaction(__INDEX__,0,0,false)"><img id="dislike__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/dislike_unmarked.png" style="width: 35px" /></a></span><span id="dislikespan__INDEX__" style="color: #cac8c8; position: absolute; margin-top: 10px;">__EMOJI0__</span> <a href="javascript:void(0)" onclick="addShare(__INDEX__)"><img id="shareicon__INDEX__" src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/share_unmarked.png" style="width: 32px;padding-left: 20px;" /></a> </div> </div> </div> </div> <div id="slideTrackBlockSearch" style="display: none;"> <div data-index="0" class="slick-slide slick-active" tabindex="-1" style="outline: none;transition: 1s;"> <div class="carousel-item"> <a class="mybotArticleLink" href="__LINK__" target="_blank" onclick="return __CATCLICKFUN__"> <div class="image-section-search" style="background-image: url(__IMAGE__);background: __IMAGE3__;">__IMAGE2__</div> <div class="carousel-content-area"> <div class="carousel-header-area"> <div class="carousel-title-area">__TITLE__</div> </div> </div> </a> </div> </div> </div> <div id="articlesBlock" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBot"> <div> <div id="mybot-slick-arrow" class="slick-initialized slick-slider"> <div class="slick-arrow __CLOSECLASS__" onclick="closeSlide(__ARTICLENO__, __SLIDENO__)"> <p class="slick-close-text">[X] __SLIDECLOSETEXT__</p> </div> <div class="slick-arrow slick-prev" onclick="moveArticlesLeft(__ARTICLENO__, __SLIDENO__)"> <img src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/left-arrow.png" style="margin-top:7px;"> </div> <div class="slick-list"> <div class="slick-track __SLICKTRACKCLOSE__" id="slideTrack__ARTICLENO__-__SLIDENO__" style="outline: none;transition: 1s;">__SLIDETRACK__</div> </div> <div class="slick-arrow slick-next" onclick="moveArticlesRight(__ARTICLENO__, __SLIDENO__)"> <img src="https://s3.ap-south-1.amazonaws.com/newsbot-images/main/left-arrow.png" style="margin-top:7px; margin-left:4px;"> </div> </div> </div> </div> </div> </div> </div> <div id="botHeadWrap" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBotWithBorder"> <div id="botnews1"> <div class="botMessageHeadMessage"> __DISPLAYTEXT__ </div> <div id="newsBotBundles"> <div class="botSmartButton" onclick="openBotMenuMore()"> __CATTEXT__ </div> </div> </div> </div> </div> </div> </div> <div id="searchBlock" style="display: none;"> <div class="botMessageItemWrapper"> <div class="botfloatContainerBot"> <div class="botMessageFromBot"> <div> <div class="slick-initialized slick-slider"> <div class="slick-arrow slick-prev"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"> <defs> <path id="a" d="M8 0h28v46H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z"></path> </defs> <g fill="none" fill-rule="evenodd"> <g transform="matrix(-1 0 0 1 36 0)"> <use fill="#FFF" xlink:href="#a"></use> <path stroke="#C0C0C0" d="M35.5 45.5V.5H8A7.5 7.5 0 0 0 .5 8v30A7.5 7.5 0 0 0 8 45.5h27.5z"></path> </g> <path fill="#ACACAC" d="M21.786 16.069L19.818 14.1l-8.432 8.433 8.432 8.432L21.786 29l-6.465-6.465z"></path> </g> </svg> </div> <div class="slick-list"> <div class="slick-track">__SLIDETRACK__</div> </div> <div class="slick-arrow slick-next"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 46"> <defs> <path id="a" d="M8 0h28v46H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z"></path> </defs> <g fill="none" fill-rule="evenodd"> <g> <use fill="#FFF" xlink:href="#a"></use> <path stroke="#C0C0C0" d="M35.5 45.5V.5H8A7.5 7.5 0 0 0 .5 8v30A7.5 7.5 0 0 0 8 45.5h27.5z"></path> </g> <path fill="#ACACAC" d="M14.214 16.069l1.968-1.968 8.432 8.433-8.432 8.432L14.214 29l6.465-6.465z"></path> </g> </svg> </div> </div> </div> </div> </div> </div> </div> <div id="mybotSearchFields" class="mybotSearchFields" style="display: none;"> <span> <input type="text" id="mybotSearchBox" class="mybotSearchBox"> <input type="text" class="mybotSearchBoxHidden" value="" placeholder="Translated Query" readonly> </span> <span class="botSendIconDisabled" id="botSendIconDisabled" style="right: 16px;"> <span class="send-button disabled"> <svg fill="#DDD" viewBox="0 0 24 24" height="20" width="20" class="transition-ease-point-3-s" style="vertical-align: middle;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg> </span> </span> <span class="botSendIconEnabled" id="botSendIconEnabled" style="right: 24px;"> <span class="send-button"> <svg fill="#21abf3" viewBox="0 0 24 24" height="20" width="20" class="transition-ease-point-3-s" style="vertical-align: middle;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg> </span> </span> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='mybot .chatCont-left{height:560px!important}mybot .chatCont-right{height:560px!important}mybot{z-index:2147483647}mybot .bot_profile{height:530px}mybot .profile_div{height:120px}mybot .img-profile{height:70px}mybot .col-hgt-ad-right{height:50px}mybot .col-hgt-right{height:70px!important}mybot .col-hgt-ad-left{height:50px}mybot .bot_p_img{display:inline-block}mybot img{background-color:unset}mybot .close{background-image:unset}mybot .mybotcontainer{height:60px;width:60px;position:relative}mybot .mybotcard{height:60px;width:60px;position:absolute;right:0;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}mybot .mybotcard1{-webkit-animation:scaleUp 8s infinite;animation:scaleUp 8s infinite}mybot .mybotcard2{-webkit-animation:scaleUp 8s 4s infinite;animation:scaleUp 8s 4s infinite}@-webkit-keyframes scaleUp{5%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1);transform:scale(1)}55%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}@keyframes scaleUp{5%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1);transform:scale(1)}55%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}mybot .botSmartButton{font-size:12px!important}mybot .slick-prev{padding-left:0}mybot .slick-arrow:before{display:none!important}mybot .slick-next{padding-left:0}mybot .bothead{background:#94CF00!important}mybot .mybotAmpDragItem{width:70px!important;height:70px!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);mybot{font-family:"Lato",sans-serif;font-size:14px;line-height:1.42857143;color:#333;position:sticky;cursor:move}mybot p{line-height:1;font-family:monospace;font-size:12px}mybot .PoweredTag p{font-size:10px}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0;margin-left:0;display:block}mybot .NewsBotTag{display:inline;float:left;margin-left:10px;font-family:cursive;color:#fff}mybot .NewsBotTag>p{margin-top:10px;margin-bottom:10px}mybot .PoweredTag{display:inline;float:right;font-size:10px;margin-right:5px;font-family:monospace;color:#337ab7}mybot .botSendIconEnabled{display:none}mybot .botSearch{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:0.2s ease-out;margin-left:8px;margin-top:-8px;margin-bottom:8px;border-radius:6px;max-height:350px;overflow-y:auto}mybot .mybotSearchBox{display:inline-block;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0}mybot .mybotSearchBoxHidden{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0;display:none}mybot .mybotSearchButton{background:#6760CF;padding:8px 20px 8px 20px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,.12);-moz-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);-webkit-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);border:1px solid #257C9E;font-size:15px}mybot .botSearch::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearch::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botSearchResults::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearchResults::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot #botSearchOld{display:none}mybot .image-section-search{width:198px;height:140px;background-size:200px 140px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell}mybot svg g use{display:none}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .bothead{background:#6760CF;border-radius:10px 10px 0 0;height:35px}mybot .botBodyChat{width:320px;height:500px;overflow-y:scroll}mybot .botBodyChat::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botBodyChat::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botMessageFromBotWithBorder{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;border:solid 1px #E6E6E6;color:#333;padding:0 8px;font-size:13px;text-align:left;border-radius:6px;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageFromBot{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;color:#333;padding:0 8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageHeadMessage{padding:8px}mybot .botMessageFromUser{-ms-flex-align:end;align-items:flex-end;min-width:64px;max-width:250px;padding-right:10px;border-radius:8px;padding:8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;overflow:hidden;-ms-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);-o-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);box-shadow:0 1px 3px 0 rgba(0,0,0,.08);color:#fff;background-color:rgb(33,171,243);float:right;white-space:pre-line;overflow:visible}mybot .botSmartButton{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);padding:8px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;transition:0.2s ease-out;cursor:pointer}mybot .botSmartButtonSpan2{position:relative;-webkit-flex:1;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:49%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botSmartButtonSpan{position:relative;-webkit-flex:1;border-right:solid 1px #eaeaea;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:50%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botfloatContainerBot{float:left;padding-left:8px}mybot .botfloatContainerUser{float:right;padding-right:8px}mybot .botMessageItemWrapper{position:relative;margin:0;max-width:100vw;z-index:2;clear:both;overflow:hidden;will-change:height;margin-bottom:8px;animation:mybot-slide-up-fade-in ease 1s;animation-iteration-count:1;transform-origin:50% 50%;animation-fill-mode:forwards;-webkit-animation:mybot-slide-up-fade-in ease 1s;-webkit-animation-iteration-count:1;-webkit-transform-origin:50% 50%;-webkit-animation-fill-mode:forwards;-moz-animation:mybot-slide-up-fade-in ease 1s;-moz-animation-iteration-count:1;-moz-transform-origin:50% 50%;-moz-animation-fill-mode:forwards;-o-animation:mybot-slide-up-fade-in ease 1s;-o-animation-iteration-count:1;-o-transform-origin:50% 50%;-o-animation-fill-mode:forwards;-ms-animation:mybot-slide-up-fade-in ease 1s;-ms-animation-iteration-count:1;-ms-transform-origin:50% 50%;-ms-animation-fill-mode:forwards;opacity:0}@keyframes mybot-slide-up-fade-in{0%{opacity:0;transform:translate(0,40px)}100%{opacity:1;transform:translate(0,0)}}@-moz-keyframes mybot-slide-up-fade-in{0%{opacity:0;-moz-transform:translate(0,40px)}100%{opacity:1;-moz-transform:translate(0,0)}}@-webkit-keyframes mybot-slide-up-fade-in{0%{opacity:0;-webkit-transform:translate(0,40px)}100%{opacity:1;-webkit-transform:translate(0,0)}}@-o-keyframes mybot-slide-up-fade-in{0%{opacity:0;-o-transform:translate(0,40px)}100%{opacity:1;-o-transform:translate(0,0)}}@-ms-keyframes mybot-slide-up-fade-in{0%{opacity:0;-ms-transform:translate(0,40px)}100%{opacity:1;-ms-transform:translate(0,0)}}mybot.powered{font-size:17px;margin-top:20px}mybot.powered img{width:110px;position:relative;top:8px}mybot.footer{margin-top:50px;position:absolute;bottom:40px;width:auto;left:0;right:0;margin:0 auto}mybot .chatCont-right{position:fixed;width:320px;bottom:0;right:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .chatCont-left{position:fixed;width:320px;bottom:0;left:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .mybotclose{position:absolute;right:5px;margin-top:10px;color:#000;font-size:18px;cursor:pointer;opacity:1;filter:invert(98%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(10) contrast(103%)}mybot .closeBotFront{position:absolute;right:5px;margin-top:-20px;color:#000;font-size:18px;cursor:pointer;display:none;width:15px;pointer-events:auto}mybot .closeBotFrontLeft{margin-top:-15px!important;width:15px!important;left:5px;right:unset}mybot .bot_profile{position:absolute;right:0;text-align:center;width:320px;font-size:13px;display:none;z-index:1000}mybot .bot_p_img{height:80px;margin-top:-40px}@keyframes mybot-spin{10%{transform:rotateY(-90deg)}20%{transform:rotateY(0deg)}30%{transform:rotateY(0deg)}40%{transform:rotateY(0deg)}50%{transform:rotateY(0deg)}60%{transform:rotateY(-90deg)}70%{transform:rotateY(0deg)}80%{transform:rotateY(0deg)}90%{transform:rotateY(0deg)}100%{transform:rotateY(0deg)}}mybot .botfaceopen{margin-left:-40px}mybot .botChatwave{width:100px;position:absolute;bottom:20px;display:none}mybot .botdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:3px;background:#303131;animation:mybot-botChatwave 0.9s linear infinite}mybot .botdot:nth-child(2){animation-delay:-0.7s}mybot .botdot:nth-child(3){animation-delay:-0.5s}@keyframes mybot-botChatwave{0%,60%,100%{transform:initial}30%{transform:translateY(-10px)}}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;cursor:default;pointer-events:none}mybot .profile_div-left{position:fixed;bottom:0;left:0px!important;width:320px;cursor:default;pointer-events:none}mybot .mybotimgprofile{cursor:pointer;pointer-events:auto}mybot .col-hgt-right{height:100px;display:flex;align-items:center;float:right;cursor:default!important}mybot .col-hgt-left{height:100px;display:flex;align-items:center;float:left;cursor:default!important}mybot .col-hgt-ad-right{display:flex;pointer-events:auto;align-items:center;float:right}mybot .col-hgt-ad-left{display:flex;align-items:center;float:left;pointer-events:auto}mybot .face{animation-name:mybot-spin;animation-duration:5000ms;animation-iteration-count:infinite;animation-timing-function:linear;transform:translate3d(0,0,0);backface-visibility:hidden;perspective:1000px}@keyframes mybot-mybotshake{1%,3%{transform:translate3d(-2px,0,0)}2%,3%{transform:translate3d(3px,0,0)}2%,4%,6%{transform:translate3d(-5px,0,0)}3%,5%{transform:translate3d(5px,0,0)}}mybot .newsBotBundle2{display:none}mybot .newsBotBundle3{display:none}mybot .carousel-container .slick-initialized{display:block;position:relative;top:0}mybot .slick-initialized{display:block;clear:both;position:relative}mybot .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}mybot .carousel-container .slick-list{margin:0 8px}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-list{margin:0!important;margin-left:8px!important;transition:ease all 0.1s}mybot .slick-list{position:relative;display:block;overflow:visible;margin:0 -6px;padding:0}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-close-text{margin-top:5px}mybot .slick-track-close{margin-top:30px}mybot .slick-track{display:-ms-flexbox;display:flex}mybot .slick-track{position:relative;top:0;left:0;min-width:10000px;display:block}mybot .slick-track .slick-slide{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;height:auto}mybot .slick-track .slick-slide{display:block;height:auto}mybot .slick-slide{display:none;float:left;min-height:1px}mybot .slick-slide img{display:inline-block}mybot .slick-next:before{content:""}mybot .slick-prev:before{content:""}mybot .carousel-item{font-size:13px;border-radius:8px;padding:0;margin-right:12px;overflow:hidden;border:solid 1px #e6e6e6;width:85%;background-color:#f7f7f7;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-box-shadow:0 2px 8px rgba(0,0,0,.1);-o-box-shadow:0 2px 8px rgba(0,0,0,.1);box-shadow:0 2px 8px rgba(0,0,0,.1)}mybot .image-section{-ms-background-size:cover;background-size:cover;-webkit-background-position:center center;-moz-background-position:center center;-ms-background-position:center center;-o-background-position:center center;background-position:center center;-webkit-background-repeat:no-repeat;-moz-background-repeat:no-repeat;-ms-background-repeat:no-repeat;-o-background-repeat:no-repeat;background-repeat:no-repeat;background-color:#fff;text-align:center;-moz-border-top-left-radius:3px;-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-top-right-radius:3px;border-top-right-radius:3px}mybot .carousel-actionable-area{display:block;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}mybot .carousel-actionable-area{margin:0;margin-top:auto}mybot .slick-prev{display:block;position:absolute;top:100px;left:-20px;z-index:1;cursor:pointer;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-next{display:block;cursor:pointer;position:absolute;top:100px;right:-50px;z-index:1;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close{top:0;height:35px;width:25px;padding-left:5px;display:none;position:absolute;left:-20px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close-show{top:-30px;height:20px!important;width:275px;display:block;position:absolute;left:10px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10px;box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);background:#24C6DC;background:-webkit-linear-gradient(to right,#514A9D,#24C6DC);background:linear-gradient(to right,#514A9D,#24C6DC);color:#fff;text-align:center}mybot .slick-next img{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}mybot .slick-track{opacity:1;transform:translate3d(0,0,0);width:800px}mybot .carousel-item{width:200px}mybot .image-section{width:198px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell;height:140px}mybot .carousel-actionable-area{background:#fff;text-align:center}mybot .carousel-content-area{padding:8px;max-height:120px;overflow:auto}mybot .carousel-content-area::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .carousel-content-area::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot{font-family:"Lato",sans-serif;font-size:14px;line-height:1.42857143;color:#333;position:sticky;cursor:move}mybot p{line-height:1;font-family:monospace;font-size:12px}mybot .PoweredTag p{font-size:10px}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0;margin-left:0;display:block}mybot .NewsBotTag{display:inline;float:left;margin-left:10px;font-family:cursive;color:#fff}mybot .NewsBotTag>p{margin-top:10px;margin-bottom:10px}mybot .PoweredTag{display:inline;float:right;font-size:10px;margin-right:5px;font-family:monospace;color:#337ab7}mybot .botSendIconEnabled{display:none}mybot .botSearch{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:0.2s ease-out;margin-left:8px;margin-top:-8px;margin-bottom:8px;border-radius:6px;max-height:350px;overflow-y:auto}mybot .mybotSearchBox{display:inline-block;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0}mybot .mybotSearchBoxHidden{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px;width:240px;height:unset;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;border:1px solid #f0f0f0;display:none}mybot .mybotSearchButton{background:#6760CF;padding:8px 20px 8px 20px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,.12);-moz-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);-webkit-box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);box-shadow:inset 0 2px 2px 0 rgba(255,255,255,.17);border:1px solid #257C9E;font-size:15px}mybot .botSearch::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearch::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botSearchResults::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botSearchResults::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot #botSearchOld{display:none}mybot .image-section-search{width:198px;height:140px;background-size:200px 140px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell}mybot svg g use{display:none}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .bothead{background:#6760CF;border-radius:10px 10px 0 0;height:35px}mybot .botBodyChat{width:320px;height:500px;overflow-y:scroll}mybot .botBodyChat::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .botBodyChat::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}mybot .botMessageFromBotWithBorder{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;border:solid 1px #E6E6E6;color:#333;padding:0 8px;font-size:13px;text-align:left;border-radius:6px;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageFromBot{-ms-flex-align:start;align-items:flex-start;min-width:64px;max-width:250px;padding-left:10px;background-color:#fff;color:#333;padding:0 8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;-ms-box-shadow:0 0 8px 0 rgba(0,0,0,.05);-o-box-shadow:0 0 8px 0 rgba(0,0,0,.05);box-shadow:0 0 8px 0 rgba(0,0,0,.05)}mybot .botMessageHeadMessage{padding:8px}mybot .botMessageFromUser{-ms-flex-align:end;align-items:flex-end;min-width:64px;max-width:250px;padding-right:10px;border-radius:8px;padding:8px;font-size:13px;text-align:left;display:block;clear:both;position:relative;word-break:break-word;overflow:hidden;-ms-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);-o-box-shadow:0 1px 3px 0 rgba(0,0,0,.08);box-shadow:0 1px 3px 0 rgba(0,0,0,.08);color:#fff;background-color:rgb(33,171,243);float:right;white-space:pre-line;overflow:visible}mybot .botSmartButton{position:relative;text-align:center;font-size:13px;font-weight:600;border-top:solid 1px #eaeaea;background:#fff;color:rgb(33,171,243);padding:8px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;transition:0.2s ease-out;cursor:pointer}mybot .botSmartButtonSpan2{position:relative;-webkit-flex:1;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:49%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botSmartButtonSpan{position:relative;-webkit-flex:1;border-right:solid 1px #eaeaea;display:inline-block;display:-webkit-inline-flex;display:-ms-inline-flexbox;width:50%;justify-content:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify}mybot .botfloatContainerBot{float:left;padding-left:8px}mybot .botfloatContainerUser{float:right;padding-right:8px}mybot .botMessageItemWrapper{position:relative;margin:0;max-width:100vw;z-index:2;clear:both;overflow:hidden;will-change:height;margin-bottom:8px;animation:mybot-slide-up-fade-in ease 1s;animation-iteration-count:1;transform-origin:50% 50%;animation-fill-mode:forwards;-webkit-animation:mybot-slide-up-fade-in ease 1s;-webkit-animation-iteration-count:1;-webkit-transform-origin:50% 50%;-webkit-animation-fill-mode:forwards;-moz-animation:mybot-slide-up-fade-in ease 1s;-moz-animation-iteration-count:1;-moz-transform-origin:50% 50%;-moz-animation-fill-mode:forwards;-o-animation:mybot-slide-up-fade-in ease 1s;-o-animation-iteration-count:1;-o-transform-origin:50% 50%;-o-animation-fill-mode:forwards;-ms-animation:mybot-slide-up-fade-in ease 1s;-ms-animation-iteration-count:1;-ms-transform-origin:50% 50%;-ms-animation-fill-mode:forwards;opacity:0}@keyframes mybot-slide-up-fade-in{0%{opacity:0;transform:translate(0,40px)}100%{opacity:1;transform:translate(0,0)}}@-moz-keyframes mybot-slide-up-fade-in{0%{opacity:0;-moz-transform:translate(0,40px)}100%{opacity:1;-moz-transform:translate(0,0)}}@-webkit-keyframes mybot-slide-up-fade-in{0%{opacity:0;-webkit-transform:translate(0,40px)}100%{opacity:1;-webkit-transform:translate(0,0)}}@-o-keyframes mybot-slide-up-fade-in{0%{opacity:0;-o-transform:translate(0,40px)}100%{opacity:1;-o-transform:translate(0,0)}}@-ms-keyframes mybot-slide-up-fade-in{0%{opacity:0;-ms-transform:translate(0,40px)}100%{opacity:1;-ms-transform:translate(0,0)}}mybot.powered{font-size:17px;margin-top:20px}mybot.powered img{width:110px;position:relative;top:8px}mybot.footer{margin-top:50px;position:absolute;bottom:40px;width:auto;left:0;right:0;margin:0 auto}mybot .chatCont-right{position:fixed;width:320px;bottom:0;right:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .chatCont-left{position:fixed;width:320px;bottom:0;left:0;background:#f5f5f5;border-radius:10px 10px 0 0;z-index:10000;display:none;cursor:default}mybot .mybotclose{position:absolute;right:5px;margin-top:10px;color:#000;font-size:18px;cursor:pointer;opacity:1;filter:invert(98%) sepia(98%) saturate(9%) hue-rotate(155deg) brightness(10) contrast(103%)}mybot .closeBotFront{position:absolute;right:5px;margin-top:-20px;color:#000;font-size:18px;cursor:pointer;display:none;width:15px;pointer-events:auto}mybot .closeBotFrontLeft{margin-top:-15px!important;width:15px!important;left:5px;right:unset}mybot .closeBotFrontTop{margin-top:70px}mybot .bot_profile{position:absolute;right:0;text-align:center;width:320px;font-size:13px;display:none;z-index:1000}mybot .bot_p_img{height:80px;margin-top:-40px}@keyframes mybot-spin{10%{transform:rotateY(-90deg)}20%{transform:rotateY(0deg)}30%{transform:rotateY(0deg)}40%{transform:rotateY(0deg)}50%{transform:rotateY(0deg)}60%{transform:rotateY(-90deg)}70%{transform:rotateY(0deg)}80%{transform:rotateY(0deg)}90%{transform:rotateY(0deg)}100%{transform:rotateY(0deg)}}mybot .botfaceopen{margin-left:-40px}mybot .botChatwave{width:100px;position:absolute;bottom:20px;display:none}mybot .botdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:3px;background:#303131;animation:mybot-botChatwave 0.9s linear infinite}mybot .botdot:nth-child(2){animation-delay:-0.7s}mybot .botdot:nth-child(3){animation-delay:-0.5s}@keyframes mybot-botChatwave{0%,60%,100%{transform:initial}30%{transform:translateY(-10px)}}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;cursor:default;pointer-events:none}mybot .profile_div-left{position:fixed;bottom:0;left:0px!important;width:320px;cursor:default;pointer-events:none}mybot .mybotimgprofile{cursor:pointer;pointer-events:auto}mybot .col-hgt-right{height:100px;display:flex;align-items:center;float:right;cursor:default!important}mybot .col-hgt-left{height:100px;display:flex;align-items:center;float:left;cursor:default!important}mybot .col-hgt-ad-right{display:flex;pointer-events:auto;align-items:center;float:right}mybot .col-hgt-ad-left{display:flex;align-items:center;float:left;pointer-events:auto}mybot .face{animation-name:mybot-spin;animation-duration:5000ms;animation-iteration-count:infinite;animation-timing-function:linear;transform:translate3d(0,0,0);backface-visibility:hidden;perspective:1000px}@keyframes mybot-mybotshake{1%,3%{transform:translate3d(-2px,0,0)}2%,3%{transform:translate3d(3px,0,0)}2%,4%,6%{transform:translate3d(-5px,0,0)}3%,5%{transform:translate3d(5px,0,0)}}mybot .newsBotBundle2{display:none}mybot .newsBotBundle3{display:none}mybot .carousel-container .slick-initialized{display:block;position:relative;top:0}mybot .slick-initialized{display:block;clear:both;position:relative}mybot .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}mybot .carousel-container .slick-list{margin:0 8px}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-list{margin:0!important;margin-left:8px!important;transition:ease all 0.1s}mybot .slick-list{position:relative;display:block;overflow:visible;margin:0 -6px;padding:0}mybot .slick-slider .slick-track,.slick-slider .slick-list{transform:translate3d(0,0,0)}mybot .slick-close-text{margin-top:5px}mybot .slick-track-close{margin-top:30px}mybot .slick-track{display:-ms-flexbox;display:flex}mybot .slick-track{position:relative;top:0;left:0;min-width:10000px;display:block}mybot .slick-track .slick-slide{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;height:auto}mybot .slick-track .slick-slide{display:block;height:auto}mybot .slick-slide{display:none;float:left;min-height:1px}mybot .slick-slide img{display:inline-block}mybot .slick-next:before{content:""}mybot .slick-prev:before{content:""}mybot .carousel-item{font-size:13px;border-radius:8px;padding:0;margin-right:12px;overflow:hidden;border:solid 1px #e6e6e6;width:85%;background-color:#f7f7f7;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-box-shadow:0 2px 8px rgba(0,0,0,.1);-o-box-shadow:0 2px 8px rgba(0,0,0,.1);box-shadow:0 2px 8px rgba(0,0,0,.1)}mybot .image-section{-ms-background-size:cover;background-size:cover;-webkit-background-position:center center;-moz-background-position:center center;-ms-background-position:center center;-o-background-position:center center;background-position:center center;-webkit-background-repeat:no-repeat;-moz-background-repeat:no-repeat;-ms-background-repeat:no-repeat;-o-background-repeat:no-repeat;background-repeat:no-repeat;background-color:#fff;text-align:center;-moz-border-top-left-radius:3px;-border-top-left-radius:3px;border-top-left-radius:3px;-moz-border-top-right-radius:3px;border-top-right-radius:3px}mybot .carousel-actionable-area{display:block;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}mybot .carousel-actionable-area{margin:0;margin-top:auto}mybot .slick-prev{display:block;position:absolute;top:100px;left:-20px;z-index:1;cursor:pointer;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-next{display:block;cursor:pointer;position:absolute;top:100px;right:-50px;z-index:1;width:36px;height:46px;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close{top:0;height:35px;width:25px;padding-left:5px;display:none;position:absolute;left:-20px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10%;background-color:#fff}mybot .slick-close-show{top:-30px;height:20px!important;width:275px;display:block;position:absolute;left:10px;z-index:1;cursor:pointer;border:solid silver 1px;border-radius:10px;box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);background:#24C6DC;background:-webkit-linear-gradient(to right,#514A9D,#24C6DC);background:linear-gradient(to right,#514A9D,#24C6DC);color:#fff;text-align:center}mybot .slick-next img{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}mybot .slick-track{opacity:1;transform:translate3d(0,0,0);width:800px}mybot .carousel-item{width:200px}mybot .image-section{width:198px;font-size:20px;color:#fff;text-align:center;vertical-align:middle;display:table-cell;height:140px}mybot .carousel-actionable-area{background:#fff;text-align:center}mybot .carousel-content-area{padding:8px;max-height:120px;overflow:auto}mybot .carousel-content-area::-webkit-scrollbar{width:6px;background-color:#F5F5F5}mybot .carousel-content-area::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});

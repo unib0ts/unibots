@@ -142,7 +142,7 @@ function mybotCustomFunction() {
 	document.getElementById('newsBotBundle2').innerHTML=mybotBundle2;
   document.getElementById('mybotSearchBox').placeholder=botSearchPlaceholder;
 	document.getElementById('mybotFace').addEventListener('click', function() {
-	 window.open('https://www.maalaimalar.com/Topic/Union-Budget-2020', '_blank');
+	 window.open('https://www.maalaimalar.com/News/Budget', '_blank');
 	});
 }
 

@@ -142,7 +142,7 @@ function mybotCustomFunction() {
 	document.getElementById('newsBotBundle2').innerHTML=mybotBundle2;
   document.getElementById('mybotSearchBox').placeholder=botSearchPlaceholder;
 	document.getElementById('mybotFace').addEventListener('click', function() {
-	 window.open('https://www.maalaimalar.com/News/Budget', '_blank');
+	 window.open('https://www.maalaimalar.com/News/Budget?utm_source=Unibots&utm_medium=Direct&utm_campaign=maalaimalar', '_blank');
 	});
 }
 

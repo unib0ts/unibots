@@ -7,7 +7,6 @@ mybotMatchTimestamps = [
   [1578663000, 1578682800]
 ];
 
-
 mybotMultipleIconsDynamicEnabled = 1;
 var mybotMultipleIconsEnabled=1;
 mybotspecialEvent = 0;
@@ -17,8 +16,10 @@ mybotMultiIconNumber = 1;
 
 mybotProfileheight= 1;
 
-mybotMultipleIconsStartepoch = 1580841000;
+mybotMultipleIconsStartepoch = 1580818293;
 mybotMultipleIconsEndepoch = 1580927400;
+
+// mybotspecialEventLink='https://www.maalaimalar.com/devotional';
 
 mybotLoadAdDefault = 0;
 mybotAuthEnabled = 0;
@@ -141,9 +142,9 @@ function mybotCustomFunction() {
 	document.getElementById('newsBotBundle1').innerHTML=mybotBundle1;
 	document.getElementById('newsBotBundle2').innerHTML=mybotBundle2;
   document.getElementById('mybotSearchBox').placeholder=botSearchPlaceholder;
-	// document.getElementById('mybotFace').addEventListener('click', function() {
-	//  window.open('https://www.maalaimalar.com/News/Budget?utm_source=Unibots&utm_medium=Direct&utm_campaign=maalaimalar', '_blank');
-	// });
+	document.getElementById('mybotFace').addEventListener('click', function() {
+	 window.open('https://www.maalaimalar.com/devotional', '_blank');
+	});
 }
 
 function mybotChangeIframeSize(){
@@ -198,7 +199,7 @@ var desc =[];
 var links = [];
 var botAdInFlag = false;
 var AUTH_TOKEN = "";
-var mybotDragClick = false;
+var mybotDragClick = true;
 var botsite;
 var botCloseAuto;
 var catFlag = 0;
@@ -1885,6 +1886,7 @@ window.fbAsyncInit = function() {
 }
 
 function mybotLoginFb(){
+mybotClickCountFblogin(0);
 FB.login(function(response) {
 	console.log(response);
 	if (response.status === 'connected') {
@@ -2393,6 +2395,43 @@ function mybotClickCountPlayQuiz(count) {
 					console.log(data.msg);
 					console.log(data.errmsg);
 					updateAuthToken(mybotClickCountPlayQuiz(count+1));
+				}
+				else if(data.error == false) {
+					//closeloader();
+					// console.log("Request Completed Successfully");
+				}
+			}
+			else {
+				// We reached our target server, but it returned an error
+				console.log('Request failed from server');
+			}
+		};
+		request.onerror = function() {
+			closeloader();
+			console.log('Request failed');
+		};
+		request.send();
+	}
+}
+
+function mybotClickCountFblogin(count) {
+  if(mybotClickCountEnabled){
+		if(count >= 2) {
+			return;
+		}
+
+		var request = new XMLHttpRequest();
+		url = 'https://api.warw.in/maalaimalar/bot_fb_login';
+		request.open('GET', url, true);
+		request.setRequestHeader('Auth-Token', AUTH_TOKEN);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.error == true) {
+					console.log(data.msg);
+					console.log(data.errmsg);
+					updateAuthToken(mybotClickCountFblogin(count+1));
 				}
 				else if(data.error == false) {
 					//closeloader();

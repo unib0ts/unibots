@@ -142,9 +142,9 @@ function mybotCustomFunction() {
 	document.getElementById('newsBotBundle1').innerHTML=mybotBundle1;
 	document.getElementById('newsBotBundle2').innerHTML=mybotBundle2;
   document.getElementById('mybotSearchBox').placeholder=botSearchPlaceholder;
-	document.getElementById('mybotFace').addEventListener('click', function() {
-	 window.open('https://www.maalaimalar.com/devotional', '_blank');
-	});
+	// document.getElementById('mybotFace').addEventListener('click', function() {
+	//  window.open('https://www.maalaimalar.com/devotional', '_blank');
+	// });
 }
 
 function mybotChangeIframeSize(){
@@ -199,7 +199,7 @@ var desc =[];
 var links = [];
 var botAdInFlag = false;
 var AUTH_TOKEN = "";
-var mybotDragClick = true;
+var mybotDragClick = false;
 var botsite;
 var botCloseAuto;
 var catFlag = 0;
@@ -2092,7 +2092,7 @@ function mybotQuizStart(count){
 if(count >= 2) {
 		return;
 	}
-
+mybotClickCountStartQuiz(0);
 mybotQuizRules = document.getElementById('mybotQuizRules');
 hide(mybotQuizRules);
 
@@ -2432,6 +2432,43 @@ function mybotClickCountFblogin(count) {
 					console.log(data.msg);
 					console.log(data.errmsg);
 					updateAuthToken(mybotClickCountFblogin(count+1));
+				}
+				else if(data.error == false) {
+					//closeloader();
+					// console.log("Request Completed Successfully");
+				}
+			}
+			else {
+				// We reached our target server, but it returned an error
+				console.log('Request failed from server');
+			}
+		};
+		request.onerror = function() {
+			closeloader();
+			console.log('Request failed');
+		};
+		request.send();
+	}
+}
+
+function mybotClickCountStartQuiz(count) {
+  if(mybotClickCountEnabled){
+		if(count >= 2) {
+			return;
+		}
+
+		var request = new XMLHttpRequest();
+		url = 'https://api.warw.in/maalaimalar/bot_start_quiz';
+		request.open('GET', url, true);
+		request.setRequestHeader('Auth-Token', AUTH_TOKEN);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.error == true) {
+					console.log(data.msg);
+					console.log(data.errmsg);
+					updateAuthToken(mybotClickCountStartQuiz(count+1));
 				}
 				else if(data.error == false) {
 					//closeloader();

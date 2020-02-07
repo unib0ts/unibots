@@ -10,14 +10,14 @@ mybotMatchTimestamps = [
 mybotMultipleIconsDynamicEnabled = 1;
 var mybotMultipleIconsEnabled=1;
 mybotspecialEvent = 0;
-mybotMultiIconName = 'brihad';
-mybotMultiIconType = '.png';
+mybotMultiIconName = 'elections';
+mybotMultiIconType = '.gif';
 mybotMultiIconNumber = 1;
 
 mybotProfileheight= 1;
 
-mybotMultipleIconsStartepoch = 1580818293;
-mybotMultipleIconsEndepoch = 1580927400;
+mybotMultipleIconsStartepoch = 1581100200;
+mybotMultipleIconsEndepoch = 1581186600;
 
 // mybotspecialEventLink='https://www.maalaimalar.com/devotional';
 

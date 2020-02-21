@@ -10,14 +10,14 @@ mybotMatchTimestamps = [
 mybotMultipleIconsDynamicEnabled = 1;
 var mybotMultipleIconsEnabled=1;
 mybotspecialEvent = 0;
-mybotMultiIconName = 'elections';
+mybotMultiIconName = 'Mahashivratri';
 mybotMultiIconType = '.gif';
 mybotMultiIconNumber = 1;
 
 mybotProfileheight= 1;
 
 mybotMultipleIconsStartepoch = 1581100200;
-mybotMultipleIconsEndepoch = 1581186600;
+mybotMultipleIconsEndepoch = 1582309799;
 
 // mybotspecialEventLink='https://www.maalaimalar.com/devotional';
 

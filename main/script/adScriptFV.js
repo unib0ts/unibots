@@ -13,12 +13,16 @@ var adUnits = [{
 		  sizes: sizes
 	  }
   },
-  bids: [{
-	  bidder: 'appnexus',
-	  params: {
-		  placementId: 18677301
-	  }
-  }]
+  bids: [
+    {
+      bidder: 'oftmedia',
+      params: {placementId: '18677301'}
+    },
+    {
+      bidder: 'eplanning',
+      params: {ci: '2cfed', ml: '1'}
+    },
+  ]
 }];
 
 var pbjs = pbjs || {};
@@ -27,6 +31,14 @@ pbjs.que = pbjs.que || [];
 pbjs.que.push(function() {
   pbjs.addAdUnits(adUnits);
 });
+
+pbjs.bidderSettings = {
+    oftmedia: {
+      bidCpmAdjustment: function(bidCpm){
+        return bidCpm*0.80;
+      }
+    }
+};
 
 var slot1;
 googletag.cmd.push(function() {

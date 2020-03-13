@@ -1,7 +1,7 @@
 var sizes = [[320, 50]];
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 20000;
+var REFRESH_TIMEOUT = 40000;
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -39,6 +39,14 @@ pbjs.bidderSettings = {
       }
     }
 };
+
+pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+    provider: 'ga',
+  });
+});
+
+pbjs.aliasBidder('appnexus', 'oftmedia');
 
 var slot1;
 googletag.cmd.push(function() {

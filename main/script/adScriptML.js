@@ -67,7 +67,7 @@ function refreshBid() {
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });
-  });
+  });18671527
 }
 
 function initAdserver() {

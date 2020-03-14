@@ -40,13 +40,13 @@ pbjs.bidderSettings = {
     }
 };
 
-pbjs.que.push(function() {
-  pbjs.enableAnalytics({
-    provider: 'ga',
-  });
-});
-
-pbjs.aliasBidder('appnexus', 'oftmedia');
+// pbjs.que.push(function() {
+//   pbjs.enableAnalytics({
+//     provider: 'ga',
+//   });
+// });
+//
+// pbjs.aliasBidder('appnexus', 'oftmedia');
 
 var slot1;
 googletag.cmd.push(function() {

@@ -14,10 +14,10 @@ var adUnits = [{
 	  }
   },
   bids: [
-    {
-      bidder: 'oftmedia',
-      params: {placementId: '18671527'}
-    },
+    // {
+    //   bidder: 'oftmedia',
+    //   params: {placementId: '18671527'}
+    // },
     {
       bidder: 'eplanning',
       params: {ci: '2cfed', ml: '1'}
@@ -40,13 +40,13 @@ pbjs.bidderSettings = {
     }
 };
 
-pbjs.que.push(function() {
-  pbjs.enableAnalytics({
-    provider: 'ga',
-  });
-});
-
-pbjs.aliasBidder('appnexus', 'oftmedia');
+// pbjs.que.push(function() {
+//   pbjs.enableAnalytics({
+//     provider: 'ga',
+//   });
+// });
+//
+// pbjs.aliasBidder('appnexus', 'oftmedia');
 
 var slot1;
 googletag.cmd.push(function() {

@@ -50,7 +50,7 @@ pbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/dailythanthi.com_NB_320x50', sizes, 'div-gpt-ad-1584085147452-0')
+  slot1 = googletag.defineSlot('/21928950349/dailythanthi.com_NB_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();

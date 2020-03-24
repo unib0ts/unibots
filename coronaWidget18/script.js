@@ -452,6 +452,12 @@ function putData(mybotDataSet) {
 	  country_name = mybotDataSet["data"].country.location;
 		document.getElementById('mybotWorldCount').innerText = world_cases;
 		document.getElementById('mybotWorldDeaths').innerText = world_death;
+
+			if(typeof mybotSwapCountryData !== "undefined" && mybotSwapCountryData ==1){
+				document.getElementById('mybotWorldCount').innerText = country_cases;
+				document.getElementById('mybotWorldDeaths').innerText = country_death;
+						document.getElementById('mybotPrecautionTextCount').innerText = country_cases;
+			}
 		if(typeof mybotCountryNameLang !== 'undefined'){
 	    document.getElementById('mybotCountryName').innerHTML=mybotCountryNameLang;
 	  }

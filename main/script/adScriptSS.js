@@ -79,7 +79,7 @@ function initAdserver() {
   });
 }
 
-in case PBJS doesn't load
+// in case PBJS doesn't load
 setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);

@@ -75,14 +75,14 @@ function initAdserver() {
   pbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  pbjs.setTargetingForGPTAsync && pbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh();
+	  googletag.pubads().refresh([slot1]);
   });
 }
 
-// in case PBJS doesn't load
-// setTimeout(function() {
-//   initAdserver();
-// }, FAILSAFE_TIMEOUT);
+in case PBJS doesn't load
+setTimeout(function() {
+  initAdserver();
+}, FAILSAFE_TIMEOUT);
 
 setInterval(function() {
   refreshBid();

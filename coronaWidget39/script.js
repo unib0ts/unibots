@@ -27,9 +27,10 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 mybotCountrydataFirst =1;
 
-mybotGACode = 'UA-159929110-10';
+mybotGACode = 'UA-159929110-32';
 mybotClientName = 'dinamalar';
 mybotLocalDataPlacement = 0;
+mybotAppendReferLink=0;
 mybotDynamicRedirectLinkEnabled = 1;
 if(mybotClientName !== 'undefined'){
   mybotStatAPI = mybotStatAPI + '/' + mybotClientName;
@@ -42,8 +43,7 @@ if(mybotClientName !== 'undefined'){
 
 // mybotadSmall = '<script async src="'+mybotAdLinkSmall+'"></script><script>var REFRESH_KEY = "refresh";var REFRESH_VALUE = "true";window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("'+mybotAdSmallName+'",'+mybotAdSmallSize+' , "'+mybotAdSmallID+'").setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 15;googletag.pubads().addEventListener("impressionViewable", function(event) {var slot = event.slot;if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {setTimeout(function() {googletag.pubads().refresh([slot]);}, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);}});googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="'+mybotAdSmallID+'"><script>googletag.cmd.push(function() { googletag.display("'+mybotAdSmallID+'"); });</script></div>';
 
-mybotadSmall = '';
-
+mybotadSmall = '<div id="div-ub-1"><script type="text/javascript">googletag.cmd.push(function() {googletag.display("div-ub-1");});</script></div>';
 
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
@@ -94,7 +94,23 @@ function mybotCustomFunction() {
 }
 
 function loadAdCustom() {
-  return false;
+  var s0 = document.createElement('script');
+  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  var s1 = document.createElement('script');
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s1);
+
+  var s2 = document.createElement('script');
+  s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptDML.js";
+  s2.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s2);
+  s2.onload = function () {
+    loadAd('adSmall');
+  };
 }
 
 // if(typeof mybotPlayIconEnabled !== 'undefined' && mybotPlayIconEnabled == 1){
@@ -408,7 +424,7 @@ function putData(mybotDataSet) {
 		if(typeof mybotDynamicRedirectLinkEnabled !== undefined && mybotDynamicRedirectLinkEnabled == 1){
 			if(mybotDataSet["data"].text.redirectLink !== undefined && mybotDataSet["data"].text.redirectLink != 'none'){
 				redirectLink = mybotDataSet["data"].text.redirectLink;
-				if(typeof mybotAppendReferLink !== "undefined"){
+				if(typeof mybotAppendReferLink !== undefined){
 					redirectLink += mybotAppendReferLink;
 				}
 				document.getElementById('mybotstage').addEventListener('click', function() {
@@ -416,7 +432,7 @@ function putData(mybotDataSet) {
 			 });
 			}
 		}
-		if(mybotDataSet["data"].text !== "undefined"){
+		if(mybotDataSet["data"].text !== undefined){
 			text1 = mybotDataSet["data"].text.text1;
 			text2 = mybotDataSet["data"].text.text2;
 			text3 = mybotDataSet["data"].text.text3;
@@ -463,7 +479,7 @@ function putData(mybotDataSet) {
 		document.getElementById('mybotCountryCount').innerText = country_cases;
 		document.getElementById('mybotCountryDeaths').innerText = country_death;
 		if(typeof mybotLastSlideLocalDataPresent !== "undefined" && mybotLastSlideLocalDataPresent ==1){
-			if(mybotDataSet["data"].thirdlocation !== "undefined"){
+			if(mybotDataSet["data"].thirdlocation !== undefined){
 				local_text = mybotDataSet["data"].thirdlocation.location;
 				local_count = mybotDataSet["data"].thirdlocation.cases;
 				document.getElementById('mybotPrecautionText').innerText = capitalizeFLetter(local_text)+" Cases";;
@@ -475,9 +491,9 @@ function putData(mybotDataSet) {
 
 		}
 		if(typeof mybotDynamicRedirectLinkEnabled !== "undefined" && mybotDynamicRedirectLinkEnabled == 1){
-			if(mybotDataSet["data"].text.redirectLink !== "undefined" && mybotDataSet["data"].text.redirectLink != 'none'){
+			if(mybotDataSet["data"].text.redirectLink !== undefined && mybotDataSet["data"].text.redirectLink != 'none'){
 				redirectLink = mybotDataSet["data"].text.redirectLink;
-				if(typeof mybotAppendReferLink !== "undefined"){
+				if(typeof mybotAppendReferLink !== undefined){
 					redirectLink += mybotAppendReferLink;
 				}
 				document.getElementById('mybotstage').addEventListener('click', function() {
@@ -485,7 +501,7 @@ function putData(mybotDataSet) {
 			 });
 			}
 		}
-		if(mybotDataSet["data"].text !== "undefined"){
+		if(mybotDataSet["data"].text !== undefined){
 			text1 = mybotDataSet["data"].text.text1;
 			text2 = mybotDataSet["data"].text.text2;
 			text3 = mybotDataSet["data"].text.text3;

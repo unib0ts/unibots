@@ -7,7 +7,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/dailyrecruitment.in_NB_320x50',
+  code: '/21928950349/telegraphindia.com_nb_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -50,7 +50,7 @@ pbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/dailyrecruitment.in_NB_320x50', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21928950349/telegraphindia.com_nb_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -61,9 +61,9 @@ function refreshBid() {
   pbjs.que.push(function() {
 	  pbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
+		  adUnitCodes: ['/21928950349/telegraphindia.com_nb_320x50'],
 		  bidsBackHandler: function() {
-			  pbjs.setTargetingForGPTAsync(['/21928950349/dailyrecruitment.in_NB_320x50']);
+			  pbjs.setTargetingForGPTAsync(['/21928950349/telegraphindia.com_nb_320x50']);
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });

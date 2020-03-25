@@ -80,9 +80,9 @@ function initAdserver() {
 }
 
 // in case PBJS doesn't load
-setTimeout(function() {
-  initAdserver();
-}, FAILSAFE_TIMEOUT);
+// setTimeout(function() {
+//   initAdserver();
+// }, FAILSAFE_TIMEOUT);
 
 setInterval(function() {
   refreshBid();

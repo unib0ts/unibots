@@ -42,6 +42,10 @@ pbjs.que = pbjs.que || [];
 
 pbjs.que.push(function() {
   pbjs.addAdUnits(adUnits);
+  pbjs.setConfig({ userSync: {
+            iframeEnabled: true
+         }
+  });
   pbjs.requestBids({
     timeout: PREBID_TIMEOUT,
     adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
@@ -61,11 +65,6 @@ pbjs.bidderSettings = {
       }
     }
 };
-
-pbjs.setConfig({ userSync: {
-          iframeEnabled: true
-       }
-});
 
 var ub_slot1;
 googletag.cmd.push(function() {

@@ -42,6 +42,11 @@ pbjs.que = pbjs.que || [];
 
 pbjs.que.push(function() {
   pbjs.addAdUnits(adUnits);
+  pbjs.requestBids({
+    timeout: PREBID_TIMEOUT,
+    adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
+    bidsBackHandler: initAdserver
+  });
 });
 
 pbjs.bidderSettings = {
@@ -79,10 +84,7 @@ function refreshBid() {
 	  pbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
 		  adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
-		  bidsBackHandler: function() {
-			  pbjs.setTargetingForGPTAsync(['/21928950349/dailyrecruitment.in_NB_320x50']);
-			  googletag.pubads().refresh([ub_slot1]);
-		  }
+		  bidsBackHandler: initAdserver
 	  });
   });
 }
@@ -91,15 +93,16 @@ function initAdserver() {
   if (pbjs.initAdserverSet) return;
   pbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
+    googletag.pubads().disableInitialLoad();
 	  pbjs.setTargetingForGPTAsync && pbjs.setTargetingForGPTAsync();
 	  googletag.pubads().refresh([ub_slot1]);
   });
 }
 
 // in case PBJS doesn't load
-setTimeout(function() {
-  initAdserver();
-}, FAILSAFE_TIMEOUT);
+// setTimeout(function() {
+//   initAdserver();
+// }, FAILSAFE_TIMEOUT);
 
 setInterval(function() {
   refreshBid();

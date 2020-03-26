@@ -84,7 +84,10 @@ function refreshBid() {
 	  pbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
 		  adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
-		  bidsBackHandler: initAdserver
+		  bidsBackHandler: function() {
+        pbjs.setTargetingForGPTAsync(['/21928950349/dailyrecruitment.in_NB_320x50']);	
+			  googletag.pubads().refresh([ub_slot1]);
+		  }
 	  });
   });
 }

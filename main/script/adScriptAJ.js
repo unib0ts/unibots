@@ -42,6 +42,15 @@ pbjs.que = pbjs.que || [];
 
 pbjs.que.push(function() {
   pbjs.addAdUnits(adUnits);
+  pbjs.setConfig({ userSync: {
+            iframeEnabled: true
+         }
+  });
+  pbjs.requestBids({
+    timeout: PREBID_TIMEOUT,
+    adUnitCodes: ['/21928950349/andhrajyothy.com_NB_320x50'],
+    bidsBackHandler: initAdserver
+  });
 });
 
 pbjs.bidderSettings = {
@@ -56,14 +65,6 @@ pbjs.bidderSettings = {
       }
     }
 };
-
-// pbjs.que.push(function() {
-//   pbjs.enableAnalytics({
-//     provider: 'ga',
-//   });
-// });
-//
-// pbjs.aliasBidder('appnexus', 'oftmedia');
 
 var ub_slot1;
 googletag.cmd.push(function() {

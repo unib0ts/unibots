@@ -49,6 +49,11 @@ pbjs.bidderSettings = {
       bidCpmAdjustment: function(bidCpm){
         return bidCpm*0.80;
       }
+    },
+    emx_digital: {
+      bidCpmAdjustment: function(bidCpm){
+        return bidCpm*0.80;
+      }
     }
 };
 

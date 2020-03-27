@@ -14,10 +14,10 @@ var adUnits = [{
 	  }
   },
   bids: [
-//    {
-//    	bidder: 'oftmedia',
-//    	params: {placementId: '18778192'}
-//    },
+    {
+    	bidder: 'oftmedia',
+    	params: {placementId: '18778192'}
+    },
     {
     	bidder: 'eplanning',
     	params: {ci: '2cfed', ml: '1'}

@@ -15,13 +15,25 @@ var adUnits = [{
   },
   bids: [
     {
-      bidder: 'oftmedia',
-      params: {placementId: '18677301'}
+    	bidder: 'oftmedia',
+    	params: {placementId: '18677301'}
     },
     {
-      bidder: 'eplanning',
-      params: {ci: '2cfed', ml: '1'}
+    	bidder: 'eplanning',
+    	params: {ci: '2cfed', ml: '1'}
     },
+    {
+    	bidder: '33across',
+    	params: {siteId: 'aBehZsBuar6PWLaKlId8sQ', productId: 'siab'}
+    },
+    {
+    	bidder: 'emx_digital',
+    	params: {tagid: '97474'}
+    //},
+    //{
+    //  bidder: 'rhythmone',
+    //	params: {placementId: '205372'}
+    }
   ]
 }];
 
@@ -30,6 +42,15 @@ pbjs.que = pbjs.que || [];
 
 pbjs.que.push(function() {
   pbjs.addAdUnits(adUnits);
+  pbjs.setConfig({ userSync: {
+            iframeEnabled: true
+         }
+  });
+  pbjs.requestBids({
+    timeout: PREBID_TIMEOUT,
+    adUnitCodes: ['/21928950349/freshersvoice.com_NB_320x50'],
+    bidsBackHandler: initAdserver
+  }); 
 });
 
 pbjs.bidderSettings = {
@@ -37,16 +58,13 @@ pbjs.bidderSettings = {
       bidCpmAdjustment: function(bidCpm){
         return bidCpm*0.80;
       }
+	},
+    emx_digital: {
+      bidCpmAdjustment: function(bidCpm){
+        return bidCpm*0.80;
+      }    
     }
 };
-
-// pbjs.que.push(function() {
-//   pbjs.enableAnalytics({
-//     provider: 'ga',
-//   });
-// });
-//
-// pbjs.aliasBidder('appnexus', 'oftmedia');
 
 var slot1;
 googletag.cmd.push(function() {

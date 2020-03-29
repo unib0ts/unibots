@@ -37,23 +37,23 @@ var adUnits = [{
   ]
 }];
 
-var pbjs = pbjs || {};
-pbjs.que = pbjs.que || [];
+var ubpbjs = ubpbjs || {};
+ubpbjs.que = ubpbjs.que || [];
 
-pbjs.que.push(function() {
-  pbjs.addAdUnits(adUnits);
-  pbjs.setConfig({ userSync: {
+ubpbjs.que.push(function() {
+  ubpbjs.addAdUnits(adUnits);
+  ubpbjs.setConfig({ userSync: {
             iframeEnabled: true
          }
   });
-  pbjs.requestBids({
+  ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
     adUnitCodes: ['/21928950349/dailythanthi.com_NB_320x50'],
     bidsBackHandler: initAdserver
   });
 });
 
-pbjs.bidderSettings = {
+ubpbjs.bidderSettings = {
     oftmedia: {
       bidCpmAdjustment: function(bidCpm){
         return bidCpm*0.80;
@@ -76,12 +76,12 @@ googletag.cmd.push(function() {
 });
 
 function refreshBid() {
-  pbjs.que.push(function() {
-	  pbjs.requestBids({
+  ubpbjs.que.push(function() {
+	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
 		  adUnitCodes: ['/21928950349/dailythanthi.com_NB_320x50'],
 		  bidsBackHandler: function() {
-			  pbjs.setTargetingForGPTAsync(['/21928950349/dailythanthi.com_NB_320x50']);
+			  ubpbjs.setTargetingForGPTAsync(['/21928950349/dailythanthi.com_NB_320x50']);
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });
@@ -89,15 +89,15 @@ function refreshBid() {
 }
 
 function initAdserver() {
-  if (pbjs.initAdserverSet) return;
-  pbjs.initAdserverSet = true;
+  if (ubpbjs.initAdserverSet) return;
+  ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
-	  pbjs.setTargetingForGPTAsync && pbjs.setTargetingForGPTAsync();
+	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
 	  googletag.pubads().refresh();
   });
 }
 
-// in case PBJS doesn't load
+// in case ubpbjs doesn't load
 setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);

@@ -62,7 +62,7 @@ function mybotCustomFunction() {
   mybotbottombar.innerHTML =mybotBottomBarContent;
   // document.querySelector('.mybotface2').innerHTML=mybotBottomBarContentLive;
   document.getElementById('mybotstage').addEventListener('click', function() {
-    window.open('https://www.madhyamam.com/tags/covid-19-0?utm_source=unibots&utm_medium=widget&utm_campaign=coronavirus', '_blank');
+    window.open('https://www.madhyamam.com/tags/covid-19-0', '_blank');
   });
  //  if(mobileCheck()){
  //   document.getElementById('dragItem').style.left='0px';
@@ -469,15 +469,9 @@ function putData(mybotDataSet) {
 	else{
 		world_cases = mybotDataSet["data"].world.cases;
 		world_death = mybotDataSet["data"].world.deaths;
-		// world_recovered = mybotDataSet["data"].world.recovered;
 		country_cases = mybotDataSet["data"].country.cases;
 		country_death = mybotDataSet["data"].country.deaths;
 		country_name = mybotDataSet["data"].country.location;
-		// country_recovered = mybotDataSet["data"].country.recovered;
-		// third_cases = mybotDataSet["data"].thirdlocation.cases;
-		// third_deaths = mybotDataSet["data"].thirdlocation.deaths;
-		// third_recovered = mybotDataSet["data"].thirdlocation.recovered;
-		// third_name = mybotDataSet["data"].thirdlocation.location;
 		if(typeof mybotDuplicateDataPresent !== "undefined" && mybotDuplicateDataPresent == 1){
 			document.getElementById('mybotCountryCount').innerText = country_cases;
 			document.getElementById('mybotCountryCountDuplicate').innerText = country_cases;
@@ -533,6 +527,12 @@ function putData(mybotDataSet) {
 			document.getElementById('mybotCountryCount').innerText = country_cases;
 			document.getElementById('mybotCountryDeaths').innerText = country_death;
 			if(typeof mybotMultipleDataFaceValues !== "undefined" && mybotMultipleDataFaceValues ==1){
+				country_recovered = mybotDataSet["data"].country.recovered;
+				world_recovered = mybotDataSet["data"].world.recovered;
+				third_cases = mybotDataSet["data"].thirdlocation.cases;
+				third_deaths = mybotDataSet["data"].thirdlocation.deaths;
+				third_recovered = mybotDataSet["data"].thirdlocation.recovered;
+				third_name = mybotDataSet["data"].thirdlocation.location;
 				document.getElementById('mybotWorldCount').innerText = world_cases;
 				document.getElementById('mybotWorldDeaths').innerText = world_death;
 				document.getElementById('mybotWorldRecovered').innerText = world_recovered;

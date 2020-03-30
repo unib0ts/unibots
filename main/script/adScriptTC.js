@@ -25,7 +25,7 @@ var adUnits = [{
     {
     	bidder: '33across',
     	params: {siteId: 'ccvHyIBuar6PWLaKlId8sQ', productId: 'siab'}
-//    },
+     },
     {
     	bidder: 'emx_digital',
     	params: {tagid: '97555'}
@@ -62,7 +62,7 @@ ubpbjs.bidderSettings = {
     emx_digital: {
       bidCpmAdjustment: function(bidCpm){
         return bidCpm*0.80;
-      }  
+      }
     }
 };
 

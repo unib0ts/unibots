@@ -50,7 +50,7 @@ ubpbjs.que.push(function() {
     timeout: PREBID_TIMEOUT,
     adUnitCodes: ['/21928950349/ibtimes.sg_NB_320x50'],
     bidsBackHandler: initAdserver
-  });  
+  });
 });
 
 ubpbjs.bidderSettings = {
@@ -68,7 +68,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/ibtimes.sg_NB_320x50', sizes, 'div-gpt-ad-1584361853727-0')
+  slot1 = googletag.defineSlot('/21928950349/ibtimes.sg_NB_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();

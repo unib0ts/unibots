@@ -33,6 +33,10 @@ var adUnits = [{
     {
     	bidder: 'rhythmone',
     	params: {placementId: '205372'}
+    },
+    {
+      bidder: 'appnexus',
+      params: {placementId: '18926432'}
     }
   ]
 }];
@@ -103,6 +107,6 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-setInterval(function() {
-  refreshBid();
-}, REFRESH_TIMEOUT);
+// setInterval(function() {
+//   refreshBid();
+// }, REFRESH_TIMEOUT);

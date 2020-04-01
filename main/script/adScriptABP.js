@@ -102,6 +102,6 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-setInterval(function() {
-  refreshBid();
-}, REFRESH_TIMEOUT);
+// setInterval(function() {
+//   refreshBid();
+// }, REFRESH_TIMEOUT);

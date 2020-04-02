@@ -70,7 +70,7 @@ function refreshBid() {
 		  adUnitCodes: ['/21928950349/dinamalar.com_NB_320x50'],
 		  bidsBackHandler: function() {
 			  ubpbjs.setTargetingForGPTAsync(['/21928950349/dinamalar.com_NB_320x50']);
-			  googletag.pubads().refresh([slot1]);
+			  // googletag.pubads().refresh([slot1]);
 		  }
 	  });
   });

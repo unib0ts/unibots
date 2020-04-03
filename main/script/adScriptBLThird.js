@@ -68,7 +68,7 @@ ubpbjs.bidderSettings = {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21928950349/boomlive_NB_300x250', sizes, 'div-gpt-ad-1584533329503-0')
+  ub_slot1 = googletag.defineSlot('/21928950349/boomlive_NB_300x250', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();

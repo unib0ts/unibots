@@ -110,7 +110,7 @@ function ub_getIframeHtml(iframe) {
 }
 
 googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    if (event.slot === slot1) {
+    if (event.slot === ub_slot1) {
       ub_checkAdRendered();
     }
 });

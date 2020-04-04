@@ -114,13 +114,16 @@ googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       ub_checkAdRendered();
     }
 });
-
+ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
 	adId = 'div-gpt-ad-1583566570048-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe' && ub_getIframeHtml(nodes[0])) {
+    if(ub_adRefreshFlag != 1){
       setInterval(function() {
+        ub_adRefreshFlag = 1;
         refreshBid();
-      }, REFRESH_TIMEOUT);
+      }, REFRESH_TIMEOUT);      
+    }
 	 }
 }

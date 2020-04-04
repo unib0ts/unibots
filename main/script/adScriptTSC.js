@@ -14,26 +14,26 @@ var adUnits = [{
 	  }
   },
   bids: [
-    {
-    	bidder: 'oftmedia',
-    	params: {placementId: '18671527'}
-    },
+    // {
+    // 	bidder: 'oftmedia',
+    // 	params: {placementId: '18671527'}
+    // },
     {
     	bidder: 'eplanning',
     	params: {ci: '2cfed', ml: '1'}
     },
-    {
-    	bidder: '33across',
-    	params: {siteId: 'afgup6Buar6PWLaKlId8sQ', productId: 'siab'}
-    },
-    {
-    	bidder: 'emx_digital',
-    	params: {tagid: '97460'}
-    //},
-    //{
-    //	bidder: 'rhythmone',
-    //	params: {placementId: '205372'}
-    }
+    // {
+    // 	bidder: '33across',
+    // 	params: {siteId: 'afgup6Buar6PWLaKlId8sQ', productId: 'siab'}
+    // },
+    // {
+    // 	bidder: 'emx_digital',
+    // 	params: {tagid: '97460'}
+    // //},
+    // //{
+    // //	bidder: 'rhythmone',
+    // //	params: {placementId: '205372'}
+    // }
   ]
 }];
 

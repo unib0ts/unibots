@@ -82,7 +82,7 @@ function refreshBid() {
 		  adUnitCodes: ['/21928950349/anandabazar.com_nb_320x50'],
 		  bidsBackHandler: function() {
 			  ubpbjs.setTargetingForGPTAsync(['/21928950349/anandabazar.com_nb_320x50']);
-			  // googletag.pubads().refresh([ub_slot1]);
+			  googletag.pubads().refresh([ub_slot1]);
 		  }
 	  });
   });

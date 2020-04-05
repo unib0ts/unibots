@@ -102,6 +102,28 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-// setInterval(function() {
-//   refreshBid();
-// }, REFRESH_TIMEOUT);
+function ub_getIframeHtml(iframe) {
+   if(iframe.contentWindow && iframe.contentWindow.document && iframe.contentWindow.document.body && iframe.contentWindow.document.body.innerHTML) {
+       return iframe.contentWindow.document.body.innerHTML;
+   }
+   return null;
+}
+
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    if (event.slot === slot1) {
+      ub_checkAdRendered();
+    }
+});
+ub_adRefreshFlag = 0;
+function ub_checkAdRendered(){
+	adId = 'div-gpt-ad-1583566570048-0';
+	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe' && ub_getIframeHtml(nodes[0])) {
+    if(ub_adRefreshFlag != 1){
+      setInterval(function() {
+        ub_adRefreshFlag = 1;
+        refreshBid();
+      }, REFRESH_TIMEOUT);      
+    }
+	 }
+}

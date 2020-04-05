@@ -70,6 +70,7 @@ var slot1;
 googletag.cmd.push(function() {
   slot1 = googletag.defineSlot('/21928950349/aglasem.com_NB_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
+  slot1.clearTargeting();
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
@@ -93,7 +94,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh();
+	  googletag.pubads().refresh([slot1]);
   });
 }
 
@@ -102,6 +103,6 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-setInterval(function() {
-  refreshBid();
-}, REFRESH_TIMEOUT);
+// setInterval(function() {
+//   refreshBid();
+// }, REFRESH_TIMEOUT);

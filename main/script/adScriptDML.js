@@ -70,7 +70,7 @@ function refreshBid() {
 		  adUnitCodes: ['/21928950349/dinamalar.com_NB_320x50'],
 		  bidsBackHandler: function() {
 			  ubpbjs.setTargetingForGPTAsync(['/21928950349/dinamalar.com_NB_320x50']);
-			  // googletag.pubads().refresh([slot1]);
+			  googletag.pubads().refresh([slot1]);
 		  }
 	  });
   });
@@ -81,7 +81,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh();
+	  googletag.pubads().refresh([slot1]);
   });
 }
 
@@ -90,6 +90,21 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-// setInterval(function() {
-//   refreshBid();
-// }, REFRESH_TIMEOUT);
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    if (event.slot === slot1) {
+      ub_checkAdRendered();
+    }
+});
+ub_adRefreshFlag = 0;
+function ub_checkAdRendered(){
+	adId = 'div-ub-1';
+	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_adRefreshFlag != 1){
+      setInterval(function() {
+        ub_adRefreshFlag = 1;
+        refreshBid();
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}

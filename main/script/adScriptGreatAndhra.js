@@ -73,6 +73,11 @@ googletag.cmd.push(function() {
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === slot1) {
+        ub_checkAdRendered();
+      }
+  });
 });
 
 function refreshBid() {
@@ -102,11 +107,7 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    if (event.slot === slot1) {
-      ub_checkAdRendered();
-    }
-});
+
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
 	adId = 'div-ub-1';

@@ -7,7 +7,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/greatandhra.com_NB_320x50',
+  code: '/21928950349/Greatandhra_320x50_news',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -21,7 +21,7 @@ var adUnits = [{
     {
     	bidder: 'eplanning',
     	params: {ci: '2cfed', ml: '1'}
-    },
+    }
     // {
     // 	bidder: '33across',
     // 	params: {siteId: 'afgup6Buar6PWLaKlId8sQ', productId: 'siab'}
@@ -48,7 +48,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/greatandhra.com_NB_320x50'],
+    adUnitCodes: ['/21928950349/Greatandhra_320x50_news'],
     bidsBackHandler: initAdserver
   });
 });
@@ -68,7 +68,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/greatandhra.com_NB_320x50', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21928950349/Greatandhra_320x50_news', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -79,9 +79,9 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/greatandhra.com_NB_320x50'],
+		  adUnitCodes: ['/21928950349/Greatandhra_320x50_news'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21928950349/greatandhra.com_NB_320x50']);
+			  ubpbjs.setTargetingForGPTAsync(['/21928950349/Greatandhra_320x50_news']);
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });
@@ -93,7 +93,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh();
+	  googletag.pubads().refresh([slot1]);
   });
 }
 
@@ -102,6 +102,21 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-setInterval(function() {
-  refreshBid();
-}, REFRESH_TIMEOUT);
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    if (event.slot === slot1) {
+      ub_checkAdRendered();
+    }
+});
+ub_adRefreshFlag = 0;
+function ub_checkAdRendered(){
+	adId = 'div-ub-1';
+	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_adRefreshFlag != 1){
+      setInterval(function() {
+        ub_adRefreshFlag = 1;
+        refreshBid();
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}

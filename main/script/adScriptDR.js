@@ -7,7 +7,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/dailyrecruitment.in_NB_320x50',
+  code: '/21956916242/dailyrecruitment.in_NB_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -52,7 +52,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
+    adUnitCodes: ['/21956916242/dailyrecruitment.in_NB_320x50'],
     bidsBackHandler: initAdserver
   });
 });
@@ -72,7 +72,7 @@ ubpbjs.bidderSettings = {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21928950349/dailyrecruitment.in_NB_320x50', sizes, 'div-ub-1')
+  ub_slot1 = googletag.defineSlot('/21956916242/dailyrecruitment.in_NB_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -83,9 +83,9 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/dailyrecruitment.in_NB_320x50'],
+		  adUnitCodes: ['/21956916242/dailyrecruitment.in_NB_320x50'],
 		  bidsBackHandler: function() {
-        ubpbjs.setTargetingForGPTAsync(['/21928950349/dailyrecruitment.in_NB_320x50']);
+        ubpbjs.setTargetingForGPTAsync(['/21956916242/dailyrecruitment.in_NB_320x50']);
 			  googletag.pubads().refresh([ub_slot1]);
 		  }
 	  });

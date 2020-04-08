@@ -58,17 +58,54 @@ ubpbjs.que.push(function() {
 });
 
 ubpbjs.bidderSettings = {
-    oftmedia: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-    },
-    emx_digital: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
+    standard: {
+        adserverTargeting: [{
+            key: "hb_bidder",
+            val: function(bidResponse) {
+                return bidResponse.bidderCode;
+            }
+        }, {
+            key: "hb_adid",
+            val: function(bidResponse) {
+                return bidResponse.adId;
+            }
+        }, {
+            key: "hb_pb",
+            val: function(bidResponse) {
+                return bidResponse.pbHg;
+            }
+        }, {
+            key: 'hb_size',
+            val: function (bidResponse) {
+                return bidResponse.size;
+            }
+        }, {
+            key: 'hb_source',
+            val: function (bidResponse) {
+                return bidResponse.source;
+            }
+        }, {
+            key: 'hb_format',
+            val: function (bidResponse) {
+                return bidResponse.mediaType;
+            }
+        }]
     }
-};
+}
+
+
+// ubpbjs.bidderSettings = {
+//     oftmedia: {
+//       bidCpmAdjustment: function(bidCpm){
+//         return bidCpm*0.80;
+//       }
+//     },
+//     emx_digital: {
+//       bidCpmAdjustment: function(bidCpm){
+//         return bidCpm*0.80;
+//       }
+//     }
+// };
 
 var ub_slot1;
 googletag.cmd.push(function() {

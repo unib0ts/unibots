@@ -7,7 +7,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/hindutamil.in_NB_320x50',
+  code: '/21928950349/hindutamil_nb_320x50_mobile',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -48,7 +48,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/hindutamil.in_NB_320x50'],
+    adUnitCodes: ['/21928950349/hindutamil_nb_320x50_mobile'],
     bidsBackHandler: initAdserver
   });
 });
@@ -68,7 +68,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/hindutamil.in_NB_320x50', sizes, 'div-gpt-ad-1584367715233-0')
+  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-gpt-ad-1584367715233-0')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -79,9 +79,9 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/hindutamil.in_NB_320x50'],
+		  adUnitCodes: ['/21928950349/hindutamil_nb_320x50_mobile'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21928950349/hindutamil.in_NB_320x50']);
+			  ubpbjs.setTargetingForGPTAsync(['/21928950349/hindutamil_nb_320x50_mobile']);
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });

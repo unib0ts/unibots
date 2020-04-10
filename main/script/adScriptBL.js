@@ -23,6 +23,10 @@ var adUnits = [
     {
       bidder: '33across',
       params: {siteId: 'd9bktEBt8r6PWLaKlId8sQ', productId: 'siab'}
+    },
+    {
+      bidder: 'sovrn',
+      params: {tagid: '701547'}
     }
   ]
   },
@@ -41,6 +45,10 @@ var adUnits = [
       {
         bidder: '33across',
         params: {siteId: 'd9bktEBt8r6PWLaKlId8sQ', productId: 'siab'}
+      },
+      {
+        bidder: 'sovrn',
+        params: {tagid: '701547'}
       }
     ]
   }
@@ -74,6 +82,42 @@ ubpbjs.que.push(function() {
 //       }
 //     }
 // };
+
+ubpbjs.bidderSettings = {
+    standard: {
+        adserverTargeting: [{
+            key: "hb_bidder",
+            val: function(bidResponse) {
+                return bidResponse.bidderCode;
+            }
+        }, {
+            key: "hb_adid",
+            val: function(bidResponse) {
+                return bidResponse.adId;
+            }
+        }, {
+            key: "hb_pb",
+            val: function(bidResponse) {
+                return bidResponse.pbHg;
+            }
+        }, {
+            key: 'hb_size',
+            val: function (bidResponse) {
+                return bidResponse.size;
+            }
+        }, {
+            key: 'hb_source',
+            val: function (bidResponse) {
+                return bidResponse.source;
+            }
+        }, {
+            key: 'hb_format',
+            val: function (bidResponse) {
+                return bidResponse.mediaType;
+            }
+        }]
+    }
+}
 
 var slot1;
 var slot2;

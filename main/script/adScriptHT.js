@@ -104,7 +104,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-gpt-ad-1584367715233-0')
+  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();

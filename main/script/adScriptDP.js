@@ -7,7 +7,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/dailypakistan.com.pk_NB_320x50',
+  code: '/21956033520/dailypakistan.com.pk_nb_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -36,7 +36,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/dailypakistan.com.pk_NB_320x50'],
+    adUnitCodes: ['/21956033520/dailypakistan.com.pk_nb_320x50'],
     bidsBackHandler: initAdserver
   });
 });
@@ -56,7 +56,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/dailypakistan.com.pk_NB_320x50', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21956033520/dailypakistan.com.pk_nb_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -67,9 +67,9 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/dailypakistan.com.pk_NB_320x50'],
+		  adUnitCodes: ['/21956033520/dailypakistan.com.pk_nb_320x50'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21928950349/dailypakistan.com.pk_NB_320x50']);
+			  ubpbjs.setTargetingForGPTAsync(['/21956033520/dailypakistan.com.pk_nb_320x50']);
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });

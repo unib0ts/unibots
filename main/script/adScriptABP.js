@@ -109,6 +109,11 @@ googletag.cmd.push(function() {
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot1) {
+        ub_checkAdRendered();
+      }
+  });
 });
 
 function refreshBid() {
@@ -145,11 +150,6 @@ function ub_getIframeHtml(iframe) {
    return null;
 }
 
-googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    if (event.slot === ub_slot1) {
-      ub_checkAdRendered();
-    }
-});
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
 	adId = 'div-ub-1';

@@ -21,7 +21,11 @@ var adUnits = [{
     {
     	bidder: 'eplanning',
     	params: {ci: '2cfed', ml: '1'}
-    }
+    },
+    {
+    	bidder: 'appnexus',
+    	params: {placementId: '19028919'}
+    },
     // {
     // 	bidder: '33across',
     // 	params: {siteId: 'afgup6Buar6PWLaKlId8sQ', productId: 'siab'}
@@ -53,18 +57,18 @@ ubpbjs.que.push(function() {
   });
 });
 
-ubpbjs.bidderSettings = {
-    oftmedia: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-    },
-	emx_digital: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-    }
-};
+// ubpbjs.bidderSettings = {
+//     oftmedia: {
+//       bidCpmAdjustment: function(bidCpm){
+//         return bidCpm*0.80;
+//       }
+//     },
+// 	emx_digital: {
+//       bidCpmAdjustment: function(bidCpm){
+//         return bidCpm*0.80;
+//       }
+//     }
+// };
 
 var slot1;
 googletag.cmd.push(function() {

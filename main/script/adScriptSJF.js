@@ -143,7 +143,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh(slot1);
+	  googletag.pubads().refresh([slot1]);
   });
 }
 

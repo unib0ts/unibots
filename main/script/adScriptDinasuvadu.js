@@ -44,8 +44,18 @@ ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
   ubpbjs.setConfig({ userSync: {
             iframeEnabled: true
-         }
+         },
+       "currency": {
+          // enables currency feature
+          "adServerCurrency": "AED",
+          "granularityMultiplier":3 ,
+          // optionally override the default rate file
+          "conversionRateFile": "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/currency/currency.json",
+          // optionally provide a default rate in case the file can't be read
+          "defaultRates": { "USD": { "AED": 3.67 }}
+        }
   });
+
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
     adUnitCodes: ['/21956916242/dinasuvadu.com_nb_320x50'],
@@ -53,18 +63,54 @@ ubpbjs.que.push(function() {
   });
 });
 
+//ubpbjs.bidderSettings = {
+//    oftmedia: {
+//      bidCpmAdjustment: function(bidCpm){
+//        return bidCpm*0.80;
+//      }
+//    },
+//	emx_digital: {
+//      bidCpmAdjustment: function(bidCpm){
+//        return bidCpm*0.80;
+//      }
+//    }
+//};
+
 ubpbjs.bidderSettings = {
-    oftmedia: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-    },
-	emx_digital: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
+    standard: {
+        adserverTargeting: [{
+            key: "hb_bidder",
+            val: function(bidResponse) {
+                return bidResponse.bidderCode;
+            }
+        }, {
+            key: "hb_adid",
+            val: function(bidResponse) {
+                return bidResponse.adId;
+            }
+        }, {
+            key: "hb_pb",
+            val: function(bidResponse) {
+                return bidResponse.pbHg;
+            }
+        }, {
+            key: 'hb_size',
+            val: function (bidResponse) {
+                return bidResponse.size;
+            }
+        }, {
+            key: 'hb_source',
+            val: function (bidResponse) {
+                return bidResponse.source;
+            }
+        }, {
+            key: 'hb_format',
+            val: function (bidResponse) {
+                return bidResponse.mediaType;
+            }
+        }]
     }
-};
+}
 
 var slot1;
 googletag.cmd.push(function() {

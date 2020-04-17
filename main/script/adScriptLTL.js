@@ -41,19 +41,54 @@ ubpbjs.que.push(function() {
   });
 });
 
-ubpbjs.bidderSettings = {
-    oftmedia: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-	},
-    emx_digital: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-    }
-};
+// ubpbjs.bidderSettings = {
+//     oftmedia: {
+//       bidCpmAdjustment: function(bidCpm){
+//         return bidCpm*0.80;
+//       }
+//     },
+// 	emx_digital: {
+//       bidCpmAdjustment: function(bidCpm){
+//         return bidCpm*0.80;
+//       }
+//     }
+// };
 
+ubpbjs.bidderSettings = {
+    standard: {
+        adserverTargeting: [{
+            key: "hb_bidder",
+            val: function(bidResponse) {
+                return bidResponse.bidderCode;
+            }
+        }, {
+            key: "hb_adid",
+            val: function(bidResponse) {
+                return bidResponse.adId;
+            }
+        }, {
+            key: "hb_pb",
+            val: function(bidResponse) {
+                return bidResponse.pbHg;
+            }
+        }, {
+            key: 'hb_size',
+            val: function (bidResponse) {
+                return bidResponse.size;
+            }
+        }, {
+            key: 'hb_source',
+            val: function (bidResponse) {
+                return bidResponse.source;
+            }
+        }, {
+            key: 'hb_format',
+            val: function (bidResponse) {
+                return bidResponse.mediaType;
+            }
+        }]
+    }
+}
 
 var slot1;
 googletag.cmd.push(function() {
@@ -62,6 +97,11 @@ googletag.cmd.push(function() {
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === slot1) {
+        ub_checkAdRendered();
+      }
+  });
 });
 
 function refreshBid() {
@@ -82,7 +122,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh();
+	  googletag.pubads().refresh([slot1]);
   });
 }
 
@@ -91,6 +131,16 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-// setInterval(function() {
-//   refreshBid();
-// }, REFRESH_TIMEOUT);
+ub_adRefreshFlag = 0;
+function ub_checkAdRendered(){
+	adId = 'div-gpt-ad-ub-1';
+	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_adRefreshFlag != 1){
+      setInterval(function() {
+        ub_adRefreshFlag = 1;
+        refreshBid();
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}

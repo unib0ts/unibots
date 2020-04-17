@@ -104,11 +104,16 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-gpt-ad-1584367715233-0')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === slot1) {
+        ub_checkAdRendered();
+      }
+  });
 });
 
 function refreshBid() {
@@ -138,11 +143,6 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    if (event.slot === slot1) {
-      ub_checkAdRendered();
-    }
-});
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
 	adId = 'div-gpt-ad-1584367715233-0';

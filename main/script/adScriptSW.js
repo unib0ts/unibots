@@ -53,26 +53,67 @@ ubpbjs.que.push(function() {
   });
 });
 
+//ubpbjs.bidderSettings = {
+//    oftmedia: {
+//      bidCpmAdjustment: function(bidCpm){
+//        return bidCpm*0.80;
+//      }
+//	},
+//    emx_digital: {
+//      bidCpmAdjustment: function(bidCpm){
+//        return bidCpm*0.80;
+//      }
+//    }
+//};
+
 ubpbjs.bidderSettings = {
-    oftmedia: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
-	},
-    emx_digital: {
-      bidCpmAdjustment: function(bidCpm){
-        return bidCpm*0.80;
-      }
+    standard: {
+        adserverTargeting: [{
+            key: "hb_bidder",
+            val: function(bidResponse) {
+                return bidResponse.bidderCode;
+            }
+        }, {
+            key: "hb_adid",
+            val: function(bidResponse) {
+                return bidResponse.adId;
+            }
+        }, {
+            key: "hb_pb",
+            val: function(bidResponse) {
+                return bidResponse.pbHg;
+            }
+        }, {
+            key: 'hb_size',
+            val: function (bidResponse) {
+                return bidResponse.size;
+            }
+        }, {
+            key: 'hb_source',
+            val: function (bidResponse) {
+                return bidResponse.source;
+            }
+        }, {
+            key: 'hb_format',
+            val: function (bidResponse) {
+                return bidResponse.mediaType;
+            }
+        }]
     }
-};
+}
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/scoopwhoop.com_nb_320x50', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21928950349/scoopwhoop.com_nb_320x50', sizes, 'div-gpt-ad-1584360053513-0')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === slot1) {
+        ub_checkAdRendered();
+      }
+  });
 });
 
 function refreshBid() {
@@ -102,11 +143,6 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    if (event.slot === slot1) {
-      ub_checkAdRendered();
-    }
-});
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
 	adId = 'div-gpt-ad-1584360053513-0';

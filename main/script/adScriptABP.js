@@ -7,7 +7,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/anandabazar.com_nb_320x50',
+  code: '/21956238066/anandabazar.com_nb_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -44,11 +44,20 @@ ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
   ubpbjs.setConfig({ userSync: {
             iframeEnabled: true
-         }
+         },
+       "currency": {
+          // enables currency feature
+          "adServerCurrency": "AED",
+          "granularityMultiplier":3 ,
+          // optionally override the default rate file
+          "conversionRateFile": "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/currency/currency.json",
+          // optionally provide a default rate in case the file can't be read
+          "defaultRates": { "USD": { "AED": 3.67 }}
+        }
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/anandabazar.com_nb_320x50'],
+    adUnitCodes: ['/21956238066/anandabazar.com_nb_320x50'],
     bidsBackHandler: initAdserver
   });
 });
@@ -104,7 +113,7 @@ ubpbjs.bidderSettings = {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21928950349/anandabazar.com_nb_320x50', sizes, 'div-ub-1')
+  ub_slot1 = googletag.defineSlot('/21956238066/anandabazar.com_nb_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -120,9 +129,9 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/anandabazar.com_nb_320x50'],
+		  adUnitCodes: ['/21956238066/anandabazar.com_nb_320x50'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21928950349/anandabazar.com_nb_320x50']);
+			  ubpbjs.setTargetingForGPTAsync(['/21956238066/anandabazar.com_nb_320x50']);
 			  googletag.pubads().refresh([ub_slot1]);
 		  }
 	  });

@@ -33,7 +33,11 @@ var adUnits = [{
     {
     	bidder: 'sovrn',
     	params: {tagid: '701545'}
-    }
+    },
+    {
+      bidder: 'appnexus',
+      params: {placementId: '19053343'}
+    },
   ]
 }];
 

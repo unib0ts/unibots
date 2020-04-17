@@ -134,7 +134,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh();
+	  googletag.pubads().refresh([slot1]);
   });
 }
 

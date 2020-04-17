@@ -111,7 +111,7 @@ function refreshBid() {
 		  adUnitCodes: ['/21928950349/odishareporter.in_NB_320x50'],
 		  bidsBackHandler: function() {
 			  ubpbjs.setTargetingForGPTAsync(['/21928950349/odishareporter.in_NB_320x50']);
-			  googletag.pubads().refresh([slot1]);
+			  googletag.pubads().refresh();
 		  }
 	  });
   });

@@ -111,7 +111,7 @@ googletag.cmd.push(function() {
   googletag.enableServices();
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === slot1) {
-        ub_checkAdRendered([slot1]);
+        ub_checkAdRendered();
       }
   });
 });

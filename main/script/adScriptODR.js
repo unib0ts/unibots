@@ -99,7 +99,7 @@ googletag.cmd.push(function() {
   googletag.enableServices();
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === slot1) {
-        ub_checkAdRendered([slot1]);
+        ub_checkAdRendered();
       }
   });
 });
@@ -111,7 +111,7 @@ function refreshBid() {
 		  adUnitCodes: ['/21928950349/odishareporter.in_NB_320x50'],
 		  bidsBackHandler: function() {
 			  ubpbjs.setTargetingForGPTAsync(['/21928950349/odishareporter.in_NB_320x50']);
-			  googletag.pubads().refresh();
+			  googletag.pubads().refresh([slot1]);
 		  }
 	  });
   });

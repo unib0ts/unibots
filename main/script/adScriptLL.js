@@ -1,4 +1,5 @@
-var sizes = [[320, 50]];
+var sizes = [[300, 250]];
+var sizes_2 = [[728, 90]]
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 40000;
@@ -7,7 +8,7 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21928950349/livelaw.in_NB_320x50',
+  code: '/21928950349/livelaw.in_NB_300x250',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -35,7 +36,38 @@ var adUnits = [{
     //	params: {placementId: '205372'}
     }
   ]
-}];
+},
+{
+  code: '/21928950349/livelaw.in_NB_728x90',
+  mediaTypes: {
+	  banner: {
+		  sizes: sizes_2
+	  }
+  },
+  bids: [
+//    {
+//    	bidder: 'oftmedia',
+//    	params: {placementId: '18778192'}
+//    },
+    {
+    	bidder: 'eplanning',
+    	params: {ci: '2cfed', ml: '1'}
+    },
+    {
+    	bidder: '33across',
+    	params: {siteId: 'a3R6kwBuar6PWLaKlId8sQ', productId: 'siab'}
+//    },
+//    {
+//    	bidder: 'emx_digital',
+//    	params: {tagid: '97557'}
+    //},
+    //{
+    //  bidder: 'rhythmone',
+    //	params: {placementId: '205372'}
+    }
+  ]
+},
+];
 
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
@@ -48,7 +80,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/livelaw.in_NB_320x50'],
+    adUnitCodes: ['/21928950349/livelaw.in_NB_300x250', '/21928950349/livelaw.in_NB_728x90'],
     bidsBackHandler: initAdserver
   });
 });
@@ -103,27 +135,37 @@ ubpbjs.bidderSettings = {
 }
 
 var slot1;
+var slot2;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/livelaw.in_NB_320x50', sizes, 'div-gpt-ad-ub-1')
+  slot1 = googletag.defineSlot('/21928950349/livelaw.in_NB_300x250', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
+  slot2 = googletag.defineSlot('/21928950349/livelaw.in_NB_728x90', sizes_2, 'div-ub-1')
+  .addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === slot1) {
-        ub_checkAdRendered();
+        ub_checkAd1Rendered();
+      }
+      else if (event.slot === slot2) {
+        ub_checkAd2Rendered();
+      }
+      else if ((event.slot === slot1) && (event.slot === slot2)) {
+        ub_checkAd1Rendered();
+        ub_checkAd2Rendered();
       }
   });
 });
 
-function refreshBid() {
+function refreshBid(slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/livelaw.in_NB_320x50'],
+		  adUnitCodes: ['/21928950349/livelaw.in_NB_300x250', '/21928950349/livelaw.in_NB_728x90'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21928950349/livelaw.in_NB_320x50']);
-			  googletag.pubads().refresh([slot1]);
+			  ubpbjs.setTargetingForGPTAsync(['/21928950349/livelaw.in_NB_300x250', '/21928950349/livelaw.in_NB_728x90']);
+			  googletag.pubads().refresh([slot]);
 		  }
 	  });
   });
@@ -134,7 +176,7 @@ function initAdserver() {
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function() {
 	  ubpbjs.setTargetingForGPTAsync && ubpbjs.setTargetingForGPTAsync();
-	  googletag.pubads().refresh([slot1]);
+	  googletag.pubads().refresh([slot2, slot1]);
   });
 }
 
@@ -143,15 +185,29 @@ setTimeout(function() {
   initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-ub_adRefreshFlag = 0;
-function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-ub-1';
-	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+ub_ad1RefreshFlag = 0;
+function ub_checkAd1Rendered(){
+	adId1 = 'div-ub-1';
+	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if(ub_adRefreshFlag != 1){
+    if(ub_ad1RefreshFlag != 1){
       setInterval(function() {
-        ub_adRefreshFlag = 1;
-        refreshBid();
+        ub_ad1RefreshFlag = 1;
+        refreshBid(slot1);
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}
+
+ub_ad2RefreshFlag = 0;
+function ub_checkAd2Rendered(){
+	adId1 = 'div-ub-2';
+	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_ad2RefreshFlag != 1){
+      setInterval(function() {
+        ub_ad2RefreshFlag = 1;
+        refreshBid(slot2);
       }, REFRESH_TIMEOUT);
     }
 	 }

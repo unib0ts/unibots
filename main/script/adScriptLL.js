@@ -7,7 +7,8 @@ var REFRESH_TIMEOUT = 40000;
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
-var adUnits = [{
+var adUnits = [
+  {
   code: '/21928950349/livelaw.in_NB_300x250',
   mediaTypes: {
 	  banner: {
@@ -41,7 +42,7 @@ var adUnits = [{
   code: '/21928950349/livelaw.in_NB_728x90',
   mediaTypes: {
 	  banner: {
-		  sizes: sizes_2
+		  sizes: sizes
 	  }
   },
   bids: [
@@ -66,7 +67,7 @@ var adUnits = [{
     //	params: {placementId: '205372'}
     }
   ]
-},
+ }
 ];
 
 var ubpbjs = ubpbjs || {};
@@ -139,7 +140,7 @@ var slot2;
 googletag.cmd.push(function() {
   slot1 = googletag.defineSlot('/21928950349/livelaw.in_NB_300x250', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
-  slot2 = googletag.defineSlot('/21928950349/livelaw.in_NB_728x90', sizes_2, 'div-ub-1')
+  slot2 = googletag.defineSlot('/21928950349/livelaw.in_NB_728x90', sizes_2, 'div-ub-2')
   .addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();

@@ -1,4 +1,4 @@
-var sizes = [[320, 50]];
+var sizes = [[300, 250]];
 var sizes_2 = [[300, 250]]
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -9,7 +9,7 @@ googletag.cmd = googletag.cmd || [];
 
 var adUnits = [
   {
-  code: '/21928950349/livelaw.in_NB_320x50',
+  code: '/21928950349/livelaw_NB2_300x250',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
@@ -81,7 +81,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21928950349/livelaw.in_NB_320x50', '/21928950349/livelaw.in_nb1_300x250'],
+    adUnitCodes: ['/21928950349/livelaw_NB2_300x250', '/21928950349/livelaw.in_nb1_300x250'],
     bidsBackHandler: initAdserver
   });
 });
@@ -138,7 +138,7 @@ ubpbjs.bidderSettings = {
 var slot1;
 var slot2;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/livelaw.in_NB_320x50', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21928950349/livelaw_NB2_300x250', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   slot2 = googletag.defineSlot('/21928950349/livelaw.in_nb1_300x250', sizes_2, 'div-ub-2')
   .addService(googletag.pubads());
@@ -163,9 +163,9 @@ function refreshBid(slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/livelaw.in_NB_320x50', '/21928950349/livelaw.in_nb1_300x250'],
+		  adUnitCodes: ['/21928950349/livelaw_NB2_300x250', '/21928950349/livelaw.in_nb1_300x250'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21928950349/livelaw.in_NB_320x50', '/21928950349/livelaw.in_nb1_300x250']);
+			  ubpbjs.setTargetingForGPTAsync(['/21928950349/livelaw_NB2_300x250', '/21928950349/livelaw.in_nb1_300x250']);
 			  googletag.pubads().refresh([slot]);
 		  }
 	  });

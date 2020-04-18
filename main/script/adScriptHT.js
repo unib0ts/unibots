@@ -104,7 +104,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-gpt-ad-1584367715233-0')
+  slot1 = googletag.defineSlot('/21928950349/hindutamil_nb_320x50_mobile', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -145,7 +145,7 @@ setTimeout(function() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1584367715233-0';
+	adId = 'div-ub-1';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

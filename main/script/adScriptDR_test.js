@@ -45,18 +45,18 @@ googletag.cmd.push(function() {
     googletag.pubads().disableInitialLoad();
 });
 
-var ubpbjs = ubpbjs || {};
-ubpbjs.que = ubpbjs.que || [];
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
 
-ubpbjs.que.push(function() {
-    ubpbjs.addAdUnits(adUnits);
+pbjs.que.push(function() {
+    pbjs.addAdUnits(adUnits);
 
-    ubpbjs.bidderSettings = {
+    pbjs.bidderSettings = {
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       emx_digital: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
     };
-    ubpbjs.setConfig({
+    pbjs.setConfig({
 
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
@@ -77,7 +77,7 @@ ubpbjs.que.push(function() {
         syncsPerBidder: 999, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
         filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+        // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
       },
       debug: true,
       useBidCache: false,
@@ -89,23 +89,23 @@ ubpbjs.que.push(function() {
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
 
-    ubpbjs.requestBids({
+    pbjs.requestBids({
         bidsBackHandler: initAdserver,
         timeout: PREBID_TIMEOUT
     });
 });
 
 function initAdserver() {
-    if (ubpbjs.initAdserverSet) return;
-    ubpbjs.initAdserverSet = true;
+    if (pbjs.initAdserverSet) return;
+    pbjs.initAdserverSet = true;
     googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
+        pbjs.que.push(function() {
+            pbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh([ub_slot1]);
         });
     });
 }
-// in case ubpbjs doesn't load
+// in case pbjs doesn't load
 setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);

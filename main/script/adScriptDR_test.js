@@ -27,7 +27,7 @@ var adUnits = [
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '18926432', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: 'oftmedia', params: { placementId: '18671523', allowSmallerSizes: true } },
         	{ bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
@@ -45,18 +45,18 @@ googletag.cmd.push(function() {
     googletag.pubads().disableInitialLoad();
 });
 
-var pbjs = pbjs || {};
-pbjs.que = pbjs.que || [];
+var ubpbjs = ubpbjs || {};
+ubpbjs.que = ubpbjs.que || [];
 
-pbjs.que.push(function() {
-    pbjs.addAdUnits(adUnits);
+ubpbjs.que.push(function() {
+    ubpbjs.addAdUnits(adUnits);
 
-    pbjs.bidderSettings = {
+    ubpbjs.bidderSettings = {
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       emx_digital: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
     };
-    pbjs.setConfig({
+    ubpbjs.setConfig({
 
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
@@ -77,7 +77,7 @@ pbjs.que.push(function() {
         syncsPerBidder: 999, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
         filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-        // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
+        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
       },
       debug: true,
       useBidCache: false,
@@ -89,23 +89,23 @@ pbjs.que.push(function() {
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
 
-    pbjs.requestBids({
+    ubpbjs.requestBids({
         bidsBackHandler: initAdserver,
         timeout: PREBID_TIMEOUT
     });
 });
 
 function initAdserver() {
-    if (pbjs.initAdserverSet) return;
-    pbjs.initAdserverSet = true;
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
     googletag.cmd.push(function() {
-        pbjs.que.push(function() {
-            pbjs.setTargetingForGPTAsync();
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh([ub_slot1]);
         });
     });
 }
-// in case pbjs doesn't load
+// in case ubpbjs doesn't load
 setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);

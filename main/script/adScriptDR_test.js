@@ -20,7 +20,7 @@ var FAILSAFE_TIMEOUT = 3000;
 
 var adUnits = [
     {
-        code: '/21956916242/Prebid',
+        code: '/21956916242/dailyrecruitment.in_NB_320x50,
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -112,7 +112,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956916242/Prebid', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21956916242/dailyrecruitment.in_NB_320x50, div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });

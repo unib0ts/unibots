@@ -20,14 +20,14 @@ var FAILSAFE_TIMEOUT = 3000;
 
 var adUnits = [
     {
-        code: '/21956916242/Prebid',
+        code: '/21956916242/dailyrecruitment.in_NB_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '18926432', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: 'oftmedia', params: { placementId: '18671523', allowSmallerSizes: true } },
         	{ bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
@@ -112,7 +112,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956916242/Prebid', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21956916242/dailyrecruitment.in_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });

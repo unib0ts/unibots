@@ -9,7 +9,7 @@ const customConfigObjectA = {
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
     "max" : 20,
-    "increment" : 0.01  // from $0 to $5, 1-cent increments
+    "increment" : 0.01  // from $0 to $20, 1-cent increments
     }]
 };
 

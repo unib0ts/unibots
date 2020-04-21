@@ -1,3 +1,883 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1T=0;11=0;Y=0;1i=1;17=\'\';1d=\'1b\';18=12;1n=6;1a=0;1c=\'\';2 1e=0;1f=0;2 1h=1j;1k=0;2 15=0;2 1l=1;1m=0;1g=1;m=\'16-W-14\';13=\'10 Z X\';V=1;2 c=c||{};c.C=c.C||[];B=\'<k F="k-U-1"></k>\';x=\'<4 1p a="8://P.1E.H/b/7?F=\'+m+\'"></4><4>v.n = v.n || [];j b(){n.1I(1J);}b("7", 1K 1L());b("1H", "\'+m+\'");</4>\';z=\'<D a="8://1M.1N.1O/1P/D/1Q.1R">\';w=\'<5 g="E">1S-19 1G</5>\';R=\'<5 g="1q">1o 1F </5><5 g="E">1D</5>\';j 1C(){3.i(\'1B\').9=B;3.i(\'1A\').9=x;3.i(\'1z\').9=z;2 y=3.u(\'.1y\');A(2 t G y)t.9=w;2 I=3.u(\'.1x\');A(2 S G I)S.9=R;}j 1w(){2 e=3.h(\'4\');e.a="8://P.1v.H/1u/7/1t.7";e.o="p/q";3.s(\'r\')[0].l(e);2 f=3.h(\'4\');f.a="8://L.K.J/T/M/O@N/Q/4/1s.7";f.o="p/q";3.s(\'r\')[0].l(f);2 d=3.h(\'4\');d.a="8://L.K.J/T/M/O@N/Q/4/1r.7";d.o="p/q";3.s(\'r\')[0].l(d);}',62,118,'||var|document|script|span||js|https|innerHTML|src|gtag|googletag|s2|s0|s1|class|createElement|getElementById|function|div|appendChild|mybotGACode|dataLayer|type|text|javascript|head|getElementsByTagName|mybottopbar|querySelectorAll|window|mybotTopBarContent|mybotgabywa|mybotTopbar|mybotClosevar|for|mybotadSmall|cmd|img|mybotPoweredByBrand|id|of|com|mybotBottombar|net|jsdelivr|cdn|unib0ts|latest|unibots|www|main|mybotBottomBarContent|mybotbottombar|gh|ub|mybotAnotherCountryData|162275121|Emirates|mybotCloseEnabled|Arab|United|mybotAuthEnabled||mybotCountryname|33|mybotIsBottomScrollDisapperEnabled|UA|mybotClickLocation|mybotStartHour||mybotampEnabled|get_stat_all|botPoweredBrand|mybotStatAPI|mybotScrollFlag|mybotScrollStartFlag|mybotIsScrollupDisapperEnabled|mybotScrollPixelHeight|mybotClickCountEnabled|45|mybotScrollStartPixelHeight|mybotIsBottomScrollStartDisapperEnabled|mybotMobileTopPlacement|mybotEndHour|Powered|async|mybotPoweredBy|adScriptMyeztrips|adScript|gpt|tag|googletagservices|loadAdCustom|mybotBottomBar|mybotTopBar|mybotClose|gabywa|adSmall|mybotCustomFunction|Unibots|googletagmanager|By|CASES|config|push|arguments|new|Date|api|warw|in|coronaWidget1|close|svg|COVID|mybotLoadAdDefault'.split('|'),0,{}))
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('H 2v="";H 28=11;H 7S,6B;H 1P=2;H 2h=1;H 6C=0;H 4b=6D;H 1H;D 6E(){f(L 4z!==\'E\'&&4z==1){3Z=K.16.6F+K.16.6G;H F=1C 2f();1t=6H;F.Y(\'2g\',1t,1a);F.1E=D(){f(F.1b>=1I&&F.1b<2t){H z=F.2s;z=2r.2q(z);z=z[6I];f(z){z=z.6J;f(z.6K(3Z)){q.A(\'S\').1B=\'\';1j 11;}J{1J();}}}J{X.W(\'6A 6L 1d 1c\');1J();}};F.2i=D(){X.W(\'1d 1c\');1J();};F.2o();}J{1J();}}D 1J(){6N();2z(\'6O\');f(6P){2z(\'2n\');}J{6Q(\'2n\');}f(6R){2R();}f(1i()){4b=6S;}[].4F.4E(q.2u(\'.31\'),D(1w){1w.Z(\'1h\',D(){2X(0);})});f(L 48!==\'E\'&&48==1){3P();f(1i()){q.A(\'6T\').6U.6V(\'6W\');}}f((L 2l!==\'E\')&&(2l==1)){2E();K.Z(\'2F\',D(3R){2E()});}f((L 41!==\'E\')&&(41==1)){f(1i()){H 2T=K.2m;K.6X=D(){H 2U=K.2m;f(2T<2U){f(1H){q.A(\'S\').M.P=\'G\';}J{q.A(\'S\').M.P=\'1q\';}}J{q.A(\'S\').M.P=\'G\';}2T=2U;}}}f((L 3X!==\'E\')&&(3X==1)){K.Z(\'2F\',D(3R){4g()});}f(6M){[].4F.4E(q.2u(\'.6y\'),D(1w){1w.M.P=\'1q\';1w.Z(\'1h\',D(1x){1x.6m();1x.33();q.1y(\'#2n\').M.P=\'G\';q.1y(\'.6x\').M.P=\'G\';1H=1;f(L 4s!==\'E\'&&4s==1){6b();}})});}34();3h(q.A("S"));}D 6c(1O,46,4q){H x=0;H 4o=K.6d(D(){1O();f(++x===4q){K.6e(4o);}},46);}D 2z(2O,2Q){H 3l=q.A(2O);H 1A=3K(3l.2u("3n"));1A=1A[0];3F(H i=0;i<1A.3D;i++){1K=1A[i];6f 1M=q.6g("3n");H 1N=3K(1K.6h);1N=1N[0];3F(H j=0;j<1N.3D;j++){2C=1N[j];1M.6i(2C.68,2C.6k);}1M.6a(q.6l(1K.1B));1M.1E=D(){f(2Q!==E){6n.6o(2Q);}};1K.4G.6p(1M,1K);}}D 2X(2Z){f(6q){f(2Z>=2){1j;}H F=1C 2f();1t=\'35://36.2B.1Z/2P/6r\';F.Y(\'2g\',1t,1a);F.6s(\'6t-6u\',2v);F.1E=D(){f(F.1b>=1I&&F.1b<2t){H z=F.2s;z=2r.2q(z);f(z.1o==1a){X.W(z.6v);X.W(z.6w);2R(2X(2Z+1));}J f(z.1o==11){}}J{X.W(\'1d 1c 6Y 6z\');}};F.2i=D(){6Z();X.W(\'1d 1c\');};F.2o();f(2j!=\'\'){K.Y(2j,\'27\');}}J{f(2j!=\'\'){K.Y(2j,\'27\');}1j 11;}}D 2R(1O){H F=1C 2f();F.Y(\'2g\',\'35://36.2B.1Z/2P/7s\',1a);F.1E=D(){f(F.1b>=1I&&F.1b<2t){H z=F.2s;z=2r.2q(z);f(z.1o===11){2v=z.7u;}f(L 1O=="D"){1O();}}J{X.W(\'1d 1c\');}};F.2i=D(){X.W(\'1d 1c\');};F.2o();}D 1i(){H 30=11;(D(a){f(/(7v|7w\\d+|7x).+3q|7y|7z\\/|7A|7B|7C|7D|7t|7E|7G|3C(7H|3J)|4a|7I|7J |7K|7L|7M|3q.+7N|7O|3b m(7P|1Z)i|7Q( 3v)?|7F|p(7r|7e)\\/|7q|73|74|75(4|6)0|76|77|3I\\.(78|79)|7a|7b|7c 72|7d|7f/i.3E(a)||/7g|7h|7i|7j|7k|50[1-6]i|7l|7m|a 3w|7n|ac(3s|3p|s\\-)|ai(7o|7p)|al(av|4r|3G)|71|an(69|2x|67)|4V|ar(4W|2J)|as(2w|4Y)|51|au(56|\\-m|r |s )|4U|57(3r|3u|59)|4f(5a|4S)|5d(ac|az)|5e(e|v)w|5f|5g\\-(n|u)|5h\\/|58|4T|4J\\-|4L|4K|4M|4N\\-|3G(4P|3e)|4Q|4O(4H|3u|4I)|5i|5c\\-s|5k|5I|5K|4c(c|p)o|5L(12|\\-d)|1w(49|ai)|5N(5P|5Q)|3s(5S|5J)|5V|5W([4-7]0|3v|3w|5Z)|63|64(\\-|38)|3H u|65|66|5U\\-5|g\\-2K|2J(\\.w|3J)|5w(ad|5q)|5s|5t|5u\\-(m|p|t)|5l\\-|5v(3t|37)|5x( i|3C)|5A\\-c|5B(c(\\-| |38|a|g|p|s|t)|5F)|5E(aw|5D)|i\\-(20|2J|2H)|5C|5z( |\\-|\\/)|5y|5r|5p|5o|5n|5m|5G|4a|5H(t|v)a|62|5Y|5X|5j|5T|5R( |\\/)|5O|5M |4R\\-|5b(c|k)|55(4Z|4X)|7R( g|\\/(k|l|u)|50|54|\\-[a-w])|6j|7T|aG\\-w|aH|aI\\/|2H(2w|aL|aP)|3a(1z|21|4r)|m\\-aQ|aT(aV|3d)|b9(b2|b1|3L)|aR|2K(1z|aF|4f|a7|4c|t(\\-| |o|v)|a4)|a3(50|a2|v )|a1|a0|9Z[0-2]|9U[2-3]|9T(0|2)|9S(0|2|5)|9R(0(0|1)|10)|9Q((c|m)\\-|9N|a5|aC|ax|aq)|ak(6|i)|ah|ag|aa(aD|aE)|a9|ab|ae|af(a|d|t)|aj|a8(13|\\-([1-8]|c))|ao|ap|3B(ay|at)|aA\\-2|aB(3r|9L|3N)|am|a6|3t\\-g|9W\\-a|9O(9P|12|21|32|60|\\-[2-7]|i\\-)|9M|9V|9X|9Y|aX|aY(aZ|b0)|b4\\/|aW(b5|2H|b6|b7|2x|b8)|ba(1z|h\\-|3p|p\\-)|aS\\/|3N(c(\\-|0|1)|47|3a|3e|3d)|aN\\-|aM|aK(\\-|m)|aJ\\-0|aU(45|2O)|aO(al|ar|b3|4H|8Q)|9J(8q|2x)|8r(1z|h\\-|v\\-|v )|8s(1z|8t)|8u(18|50)|8v(8w|10|18)|37(8x|8y)|9K\\-|8z\\-|8A(i|m)|8p\\-|t\\-2K|8B(3B|8D)|3L(70|m\\-|8E|8F)|8G\\-9|3I(\\.b|3H|8H)|8I|8J|8K|8L|8M(8N|2w)|8C(40|5[0-3]|\\-v)|8n|8a|8m|7V(52|53|60|61|70|80|81|83|85|98)|7W(\\-| )|7X|7Y|7Z(g |82|84)|86|87|88|7U\\-|89|8b|8c\\-/i.3E(a.8d(0,4)))30=1a;})(3o.8e||3o.8f||K.3b);1j 30;};D 3h(1e){H 1Y=0,23=0,2e=0,2b=0;f(q.A(1e)){q.A(1e).3i=2S;}J{1e.3i=2S;}D 2S(e){e=e||K.1x;e.33();2e=e.2W;2b=e.2V;q.3y=3x;q.3z=3j;}D 3j(e){e=e||K.1x;e.33();1Y=2e-e.2W;23=2b-e.2V;f(1Y!=0||23!=0){28=1a;}2e=e.2W;2b=e.2V;1e.M.2A=(1e.8g-23)+"2y";1e.M.8h=(1e.8i-1Y)+"2y";}D 3x(e){q.3y=3A;q.3z=3A;}}D 8j(1l){H 3c=["8k","8l","8O","8o","8P","9j","9l","9m","9n","9o","9p","9q"];H 39=1l.9r();H 3f=1l.9s();H 3g=1l.9t();1j""+39+"-"+3c[3f]+"-"+3g;}D 9u(1l){1j 1l.9v().9k(\' \')[0];}D 43(B){f(L 3m!==\'E\'&&3m==1){1V=B["z"][9w];17=1V.19;1f=1V.15;1m=1V.16;1k=B["z"].1g.19;1u=B["z"].1g.15;q.A(\'1W\').C=1k;q.A(\'1L\').C=1u;q.A(\'1n\').C=1p(1m)+" 4l";q.A(\'1F\').C=17;q.A(\'1r\').C=1p(1m)+" 3V";q.A(\'1D\').C=1f;}J f(L 3M!==\'E\'&&3M==1){1k=B["z"].1g.19;1u=B["z"].1g.15;17=B["z"].14.19;1f=B["z"].14.15;1m=B["z"].14.16;1v=B["z"].14.1s;1X=B["z"].T.19;2D=B["z"].T.15;4n=B["z"].T.16;q.A(\'1W\').C=17;q.A(\'3W\').C=1X;q.A(\'1L\').C=1f;q.A(\'1F\').C=1v;f(L 3k!==E&&3k==1){}J{q.A(\'4k\').C=1k;}f(L 24!==E&&24==1){f(B["z"].I.N!==E&&B["z"].I.N!=\'G\'){N=B["z"].I.N;f(L 26!==E){N+=26;}q.A(\'31\').Z(\'1h\',D(){K.Y(N,\'27\');});}}f(B["z"].I!==E){R=B["z"].I.R;Q=B["z"].I.Q;O=B["z"].I.O;V=B["z"].I.V;U=B["z"].I.U;f(R!=\'G\'){q.A(\'2Y\').C=R;}f(Q!=\'G\'){q.A(\'3U\').C=Q;}f(O!=\'G\'){q.A(\'1T\').C=O;}f(V!=\'G\'){q.A(\'1n\').C=V;}f(U!=\'G\'){q.A(\'1R\').C=U;}}}J{17=B["z"].14.19;1f=B["z"].14.15;1m=B["z"].14.16;f(L 3O!=="E"&&3O==1){q.A(\'1F\').C=17;q.A(\'9y\').C=17;q.A(\'1D\').C=1f;f(B["z"].I!==E){R=B["z"].I.R;Q=B["z"].I.Q;O=B["z"].I.O;V=B["z"].I.V;U=B["z"].I.U;f(R!=\'G\'){q.A(\'1n\').C=R;}f(Q!=\'G\'){q.A(\'1r\').C=Q;}f(O!=\'G\'){q.A(\'9z\').C=O;}}f(L 4p!==E&&4p==1){N=B["z"].I.N;2G=B["z"].I.2G;2M=B["z"].I.2M;q.1y(\'.9A, .9B ,.9C\').Z(\'1h\',D(){K.Y(N,\'2L\');});q.1y(\'.9D, .9E\').Z(\'1h\',D(){K.Y(2G,\'2L\');});q.1y(\'.9F\').Z(\'1h\',D(){K.Y(2M,\'2L\');});}}J{1k=B["z"].1g.19;1u=B["z"].1g.15;q.A(\'1W\').C=1k;q.A(\'1L\').C=1u;f(L 4t!==\'E\'){q.A(\'1n\').1B=4t;}J{}f(L 4u!==\'E\'){q.A(\'1r\').1B=4u;}J{}q.A(\'1F\').C=17;q.A(\'1D\').C=1f;f(L 4v!=="E"&&4v==1){1v=B["z"].14.1s;q.A(\'1D\').1B=1v;q.A(\'1r\').C=1p(1m)+" 4x";}f(L 2I!=="E"&&2I==1){1S=B["z"].1g.1s;q.A(\'1L\').C=1S;q.A(\'1T\').C="9G 4x";}f(L 4y!=="E"&&4y==1){1v=B["z"].14.1s;1S=B["z"].1g.1s;1X=B["z"].T.19;2D=B["z"].T.15;4B=B["z"].T.1s;4n=B["z"].T.16;q.A(\'1W\').C=1k;q.A(\'1L\').C=1u;q.A(\'2I\').C=1S;q.A(\'1F\').C=17;q.A(\'1D\').C=1f;q.A(\'9H\').C=1v;q.A(\'9I\').C=1X;q.A(\'9x\').C=2D;q.A(\'9i\').C=4B;}f(L 4m!=="E"&&4m==1){f(B["z"].T!==E){22=B["z"].T.16;1U=B["z"].T.19;q.A(\'1R\').C=1p(22)+" 4l";;q.A(\'4k\').C=1U;}J{q.A(\'1R\').C="94 9h!";}}f(L 3S!=="E"&&3S==1){f(B["z"].T!==E){22=B["z"].T.16;1U=B["z"].T.15;q.A(\'3U\').C=1p(22)+" 3V";;q.A(\'3W\').C=1U;}}f(L 24!=="E"&&24==1){f(B["z"].I.N!==E&&B["z"].I.N!=\'G\'){N=B["z"].I.N;f(L 26!==E){N+=26;}q.A(\'31\').Z(\'1h\',D(){f(28==11){K.Y(N,\'27\');}8S(D(){28=11;},1I);});}}f(B["z"].I!==E){R=B["z"].I.R;Q=B["z"].I.Q;O=B["z"].I.O;V=B["z"].I.V;U=B["z"].I.U;2a=B["z"].I.2a;2c=B["z"].I.2c;2d=B["z"].I.2d;25=B["z"].I.25;f(L 3Y!=="E"&&3Y==1){f(R!=\'G\'){q.A(\'2Y\').C=R;}f(Q!=\'G\'){q.A(\'1T\').C=Q;}f(O!=\'G\'){q.A(\'8T\').C=O;}f(V!=\'G\'){q.A(\'1n\').C=V;}f(U!=\'G\'){q.A(\'1r\').C=U;}f(2a!=\'G\'){q.A(\'8U\').C=2a;}f(2c!=\'G\'){q.A(\'8V\').C=2c;}f(2d!=\'G\'){q.A(\'8W\').C=2d;}f(25!=\'G\'){q.A(\'8X\').C=25;}}J{f(R!=\'G\'){q.A(\'2Y\').C=R;}f(Q!=\'G\'){q.A(\'1T\').C=Q;}f(O!=\'G\'){q.A(\'1n\').C=O;}f(V!=\'G\'){q.A(\'1r\').C=V;}f(U!=\'G\'){q.A(\'1R\').C=U;}}}}}}D 34(){H F=1C 2f();1t=\'35://36.2B.1Z/2P/\'+8Y;F.Y(\'2g\',1t,1a);F.1E=D(){f(F.1b>=1I&&F.1b<2t){8Z=[];H z=F.2s;z=2r.2q(z);f(z.1o===11){43(z);}f(z.1o===1a){X.W("1o 90 91 z");}}J{X.W(\'1d 1c\');}};F.2i=D(){X.W(\'1d 1c\');};F.2o();}D 92(){t=1C 8R();4i=t.93();44=t.95();2k=4i+5;f(44>29){2k+=1;}f((2k>96)&&(2k<97)){}J{f(1P%4==1){1P=1;34(1);}}f(2h>0){f(2h==1){1P+=1;}2h-=1;}J{1P+=1;}}D 3P(){f(1i()){x=q.A(\'2n\');x.M.99=\'4A\';x=x.9a;x.4G.9b(x);y=q.A(\'S\');y.9c(x,y.9d);1Q=q.A(\'S\');1Q.M.P=\'G\';f(L 4w!==\'E\'){1Q.M.2A=4w+\'2y\';}J{1Q.M.2A=\'4A\';}f(L 2l!==\'E\'&&2l==1){}J{K.Z(\'2F\',D(){1Q.M.P=\'1q\';});}}}D 2E(){f(1i()){f(((K.4D)<=((4C.4h/3)-4j))&&(1G==0)){q.A(\'S\').M.P=\'G\';1G=1;}J f(1G==1){f((K.4D)>=((4C.4h/3)-4j)){f(1H){q.A(\'S\').M.P=\'G\';1G=0;}J{q.A(\'S\').M.P=\'1q\';1G=0;}}}}}D 4g(){f(1i()){f((K.4e+K.2m)>=q.4d.42-3T){q.A(\'S\').M.P=\'G\';2p=1;}J f(2p==1){f((K.4e+K.2m)<=q.4d.42-3T){f(1H){q.A(\'S\').M.P=\'1q\';2p=0;}J{q.A(\'S\').M.P=\'1q\';2p=0;}}}}}D 1p(3Q){H 2N=3Q;x=2N.9e(0).9f()+2N.9g(1);1j x;}',62,693,'|||||||||||||||if|||||||||||document|||||||||data|getElementById|mybotDataSet|innerText|function|undefined|request|none|var|text|else|window|typeof|style|redirectLink|text3|display|text2|text1|dragItem|thirdlocation|text5|text4|log|console|open|addEventListener||false|||country|deaths|location|country_cases||cases|true|status|failed|Request|elmnt|country_death|world|click|mobileCheck|return|world_cases|date|country_name|mybotCountryName|error|capitalizeFLetter|block|mybotCountryName2|recovered|url|world_death|country_recovered|el|event|querySelector|01|scripts|innerHTML|new|mybotCountryDeaths|onload|mybotCountryCount|mybotScrollStartFlag|mybotCloseTriggeredFlag|200|mybotStart|oldScript|mybotWorldDeaths|newScript|scriptAttr|callback|mybotSequenceIndex|mybotDragItem|mybotPrecautionText|world_recovered|mybotWorldDeathsCases|local_count|mybotCountrydata|mybotWorldCount|third_cases|pos1|in|||local_text|pos2|mybotDynamicRedirectLinkEnabled|text9|mybotAppendReferLink|_blank|mybotDragClick||text6|pos4|text7|text8|pos3|XMLHttpRequest|GET|mybotSequenceIndexStart|onerror|mybotClickLocation|istHour|mybotIsBottomScrollStartDisapperEnabled|pageYOffset|adSmall|send|mybotScrollFlag|parse|JSON|responseText|400|querySelectorAll|AUTH_TOKEN|te|ny|px|loadAd|top|warw|attr|third_deaths|mybotScrollStart|scroll|redirectLink2|ma|mybotWorldRecovered|go|mo|_self|redirectLink3|string|id|coronaWidget1|adUnits|updateAuthToken|dragMouseDown|prevScrollpos|currentScrollPos|clientY|clientX|mybotClickCount|mybotWorldCases|count|check|mybotstage||preventDefault|getScore|https|api|ta|_|day|mc|opera|month_names|ri|nd|month_index|year|dragElement|onmousedown|elementDrag|mybotLastSlideNoCount|elm|mybotAnotherCountryData|script|navigator|oo|mobile|ck|er|pt|ll|os|wa|closeDragElement|onmouseup|onmousemove|null|pl|ip|length|test|for|co|g1|up|od|Array|ts|mybotLocalDataPlacement|se|mybotDuplicateDataPresent|mobileTopPlacement|input|ev|mybotSecondSlideLocalDataPresent|mybotScrollPixelHeight|mybotFace2TempContent|Deaths|mybotFace2TempCount|mybotIsBottomScrollDisapperEnabled|mybotMultipleDataFace|urlToCheck||mybotIsScrollupDisapperEnabled|offsetHeight|putData|utcMinutes||delay||mybotMobileTopPlacement||iris|botInsideFlag|do|body|innerHeight|bi|mybotScrollEnd|height|utcHours|mybotScrollStartPixelHeight|mybotPrecautionTextCount|Cases|mybotLastSlideLocalDataPresent|third_name|intervalID|mybotMultipleRedirectLinks|repetitions|ca|mybotampEnabled|mybotCountryNameLang|mybotCountryName2Lang|mybotCountryRecovered|mobileTopPixel|Recovered|mybotMultipleDataFaceValues|mybotBlockedPagesFlag|0px|third_recovered|screen|scrollY|call|forEach|parentNode|it|ng|cdm|chtm|cell|cldc|cmd|da|mp|craw|kwc|rd|ccwa|avan|aptu|ch|xi|us|no||attw||||le|di|be|capi|nq|lb|kyo|dc|bl|br|bumb|bw|c55|dbte|kddi|devi|hei|inno|im1k|ikom|ig01|un|idea|haie|hcit|hd|hi|gr|hp|ibro|iac|hs|ht|i230|tc|hu|tp|ipaq|ja|dica|k0|dmob|ds|kpt|em|klon|l2|ul|kgt|ic|keji|gf|esl8|ez|jigs|jemu|ze|||jbro|fetc|fly|g560|gene|yw|name|ex|appendChild|mybotampClose|setIntervalX|setInterval|clearInterval|const|createElement|attributes|setAttribute|libw|value|createTextNode|stopPropagation|smartyads|buildUnits|replaceChild|mybotClickCountEnabled|bot_open|setRequestHeader|Auth|Token|msg|errmsg|profile_div|mybotclose|server|Block|mybotDataSet2|mybotIsMatchLive|120|callOnDocumentReady|host|pathname|mybotBlockedUrl|mybotBlockedClientName|urls|includes|Check|mybotCloseEnabled|mybotCustomFunction|gabywa|mybotLoadAdDefault|loadAdCustom|mybotAuthEnabled|100|mybotClose|classList|add|closeBotFrontTop|onscroll|from|closeloader||amoi|ce|pocket|psp|series|symbian|treo|browser|link|vodafone|wap|windows|xda|re|xiino|1207|6310|6590|3gso|4thp|770s|802s|abac|ko|rn|plucker|ixi|get_token|fennec|auth_token|android|bb|meego|avantgo|bada|blackberry|blazer|compal|elaine|hiptop|phone|iemobile|hone|kindle|lge|maemo|midp|mmp|firefox|netfront|ob|palm|lg|mybotDataSet1|lynx|yas|vx|w3c|webc|whit|wi|||nc||nw||wmlb|wonu|x700|your|voda|zeto|zte|substr|userAgent|vendor|offsetTop|left|offsetLeft|formatDate|Jan|Feb|vulc|vm40|Apr|tim|ft|sp|sy|mb|t2|t6|00|gt|lk|tdg|tel|to|vk|sh|m3|m5|tx|si|utst|v400|v750|veri|vi|rg|Mar|May|t5|Date|setTimeout|mybotWorldRecoveredCases|mybotIndiaRecoveredCases|mybotUaeCases|mybotUaeDeathsCases|mybotUaeRecoveredCases|mybotStatAPI|dataSet|occured|with|runSequence|getUTCHours|Stay|getUTCMinutes|mybotStartHour|mybotEndHour||marginTop|parentElement|removeChild|insertBefore|firstChild|charAt|toUpperCase|slice|Safe|mybotuaeRecovered|Jun|split|Jul|Aug|Sep|Oct|Nov|Dec|getDate|getMonth|getFullYear|formatTime|toTimeString|mybotCountryname|mybotUaeDeaths|mybotCountryCountDuplicate|mybotCountryNameDuplicate|mybotface1|mybotface3|mybotface5|mybotface2|mybotface6|mybotface4|World|mybotIndiaRecovered|mybotUaeCount|so|tcl|rt|qtek|on|qc|07|ne|n7|n50|n30|n20|r380|qa|r600|raks|n10|mywa|mwbp|p1|mt|zz|tf|psio|de|pg|oran|op|owg1|||p800|pan|o2im|nzph||pdxg|nok||prox||phil|pire|wt|||uc||||wg|||pn|po|wf|ti|wv|02|m1|m3ga|m50|sk|sie|ui|shar|sgh|sm|xo|cr|mmef|sdk|me|sl|rc|sa|rim9|ro|ve|zo|oa|o8||s55|ge|mm|ms|va|mi|sc'.split('|'),0,{}))
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div class="row"> <div class="mybotstage" id="mybotstage"> <div class="mybotcubespinner"> <div class="mybotface1 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldCases"> World Cases </span> <div class="mybotCount" id="mybotWorldCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface2 mybotface"></div> <div class="mybotface3 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldDeathsCases"> World Deaths </span> <div class="mybotCount" id="mybotWorldDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface4 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName"> India Cases </span> <div class="mybotCount" id="mybotCountryCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface5 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName2"> India Deaths </span> <div class="mybotCount" id="mybotCountryDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface6 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <span class="mybotScoreLiveDot"></span> <div class="mybotSummary"> <span class="mybotLocation" id="mybotPrecautionText"> Stay Safe! </span>  </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> </div> <div class="row"> <div class="col-hgt-ad" id="adSmall">  </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='@media screen and (max-width:635px;){mybot .profile_div{height:130px!important}}mybot .col-hgt-ad{height:50px;float:right;position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{cursor:pointer}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#fff!important}mybot .mybotLocation{font-size:12px!important}.mybotBottomBar,.mybotTopBar{background:#fff!important;color:#03bae4!important;font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:10px!important}mybot .mybotcubespinner .mybotface2{background:url(http://myeztrips.com/images/ez_logo.png)!important;background-size:100px 62px!important;background-color:#fff!important;background-position:center!important;background-repeat:no-repeat!important}@media screen and (max-width:635px){mybot .mybotcubespinner .mybotface2{background:url(http://myeztrips.com/images/ez_logo.png)!important;background-size:80px 42px!important;background-color:#fff!important;background-position:center!important;background-repeat:no-repeat!important}mybot .col-hgt-ad{position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{position:absolute;pointer-events:all;bottom:50px!important;cursor:pointer}.mybotBottomBar,.mybotTopBar{font-size:8px!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#fff!important;line-height:1.2!important}mybot .mybotLocation{font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:8px!important}}mybot .mybotcubespinner .mybotface1,.mybotface6,.mybotface3,.mybotface5,.mybotface4{background:#03bae4!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);@import url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget32/NotoSerifBengali-hinted/NotoSerifBengali-Regular.ttf);mybot{font-family:"Lato",sans-serif;font-size:14px;font-weight:400;color:#333;position:sticky;z-index:2147483640;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;height:150px;cursor:default;z-index:2147483647;pointer-events:none}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)!important}@keyframes mybotspincube{from,to{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}12%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}16%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}30%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}33%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}47%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}50%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}63%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}66%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}80%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}83%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}97%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50px 50px 0;-moz-transform-origin:50px 50px 0;-ms-transform-origin:50px 50px 0;transform-origin:50px 50px 0}mybot .mybotcubespinner .mybotface{position:absolute;width:100px;height:100px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 20px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(50px);-moz-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(50px);-moz-transform:rotateY(90deg) translateZ(50px);-ms-transform:rotateY(90deg) translateZ(50px);transform:rotateY(90deg) translateZ(50px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);transform:rotateY(90deg) rotateX(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(50px);-moz-transform:rotateX(-90deg) translateZ(50px);-ms-transform:rotateX(-90deg) translateZ(50px);transform:rotateX(-90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotstage{width:100px;height:100px;bottom:50px;position:absolute;right:25px;font-size:15px;pointer-events:all}.mybotTopBar{background:red;width:100px;height:15px;border-bottom:1px solid #fff;color:#fff;text-align:center;margin:auto;line-height:15px}.mybotPoweredBy{font-size:9px;font-weight:600}.mybotPoweredByBrand{font-size:12px;font-weight:600}.mybotBottomBar{background:red;width:100px;height:15px;color:#fff;margin:auto;line-height:15px;text-align:center;bottom:0;position:absolute;font-size:12px}.mybotSummary{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;font-family:"Baloo Chettan 2",cursive}.mybotContent{color:#fff;text-align:center;overflow:hidden}@-webkit-keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@media screen and (max-width:635px){mybot .profile_div{width:320px;height:130px}.mybotSummary{font-size:12px}.mybotTopBar,.mybotBottomBar{width:80px;font-size:10px}.mybotPoweredBy{font-size:7px}.mybotPoweredByBrand{font-size:8px}mybot .mybotcubespinner .mybotface{position:absolute;width:80px;height:80px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 10px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotstage{width:80px;height:80px;bottom:52px;position:absolute;right:20px;font-size:15px;pointer-events:all}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(40px);-moz-transform:translateZ(40px);-ms-transform:translateZ(40px);transform:translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(40px);-moz-transform:rotateY(90deg) translateZ(40px);-ms-transform:rotateY(90deg) translateZ(40px);transform:rotateY(90deg) translateZ(40px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);transform:rotateY(90deg) rotateX(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(40px);-moz-transform:rotateX(-90deg) translateZ(40px);-ms-transform:rotateX(-90deg) translateZ(40px);transform:rotateX(-90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:40px 40px 0;-moz-transform-origin:40px 40px 0;-ms-transform-origin:40px 40px 0;transform-origin:40px 40px 0}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});
+mybotLoadAdDefault = 0;
+mybotAuthEnabled = 0;
+mybotCloseEnabled = 0;
+mybotClickCountEnabled = 1;
+mybotClickLocation = '';
+mybotStatAPI = 'get_stat_all';
+mybotStartHour = 12;
+mybotEndHour = 6;
+mybotampEnabled = 0;
+
+botPoweredBrand = '';
+
+var mybotScrollFlag = 0;
+mybotScrollStartFlag = 0;
+var mybotScrollPixelHeight = 45;
+mybotScrollStartPixelHeight = 0;
+var mybotIsBottomScrollDisapperEnabled = 0;
+var mybotIsBottomScrollStartDisapperEnabled = 1;
+mybotMobileTopPlacement = 0;
+mybotIsScrollupDisapperEnabled =1;
+// mobileTopPixel = 48;
+// mybotCountryRecovered =1;
+// mybotWorldRecovered =1;
+
+mybotGACode = 'UA-162275121-33';
+
+mybotCountryname = 'United Arab Emirates';
+mybotAnotherCountryData =1;
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+
+mybotadSmall = '<div id="div-ub-1"></div>';
+
+mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+
+mybotClosevar = '<img src="https://unibots.warw.in//img/close.svg">';
+
+mybotTopBarContent = '<span class="mybotPoweredByBrand">COVID-19 CASES</span>';
+mybotBottomBarContent = '<span class="mybotPoweredBy">Powered By </span><span class="mybotPoweredByBrand">Unibots</span>';
+
+function mybotCustomFunction() {
+  document.getElementById('adSmall').innerHTML=mybotadSmall;
+  document.getElementById('gabywa').innerHTML=mybotgabywa;
+  document.getElementById('mybotClose').innerHTML=mybotClosevar;
+
+  var mybotTopbar = document.querySelectorAll('.mybotTopBar');
+  for(var mybottopbar of mybotTopbar)
+  mybottopbar.innerHTML =mybotTopBarContent;
+  var mybotBottombar = document.querySelectorAll('.mybotBottomBar');
+  for(var mybotbottombar of mybotBottombar)
+  mybotbottombar.innerHTML =mybotBottomBarContent;
+  // document.querySelector('.mybotface2').innerHTML=mybotBottomBarContentLive;
+  // document.getElementById('mybotstage').addEventListener('click', function() {
+  //   window.open('https://kwttoday.com/coronavirus-live-map-updates/?utm_source=unibots&utm_medium=widget&utm_campaign=coronavirus', '_blank');
+  // });
+ //  if(!mobileCheck()){
+   // document.getElementById('dragItem').style.left='0px';
+   // document.getElementById('mybotstage').style.left='25px';
+ // }
+}
+
+function loadAdCustom() {
+  var s0 = document.createElement('script');
+  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  var s1 = document.createElement('script');
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s1);
+
+  var s2 = document.createElement('script');
+  s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptMyeztrips.js";
+  s2.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s2);
+  // s2.onload = function () {
+  //   loadAd('adSmall');
+  // };
+}
+
+// if(typeof mybotPlayIconEnabled !== 'undefined' && mybotPlayIconEnabled == 1){
+// 			mybotShowPlaynWinIcon();
+//   }
+
+//   function mybotShowPlaynWinIcon(){
+//   document.getElementById('adSmall').addEventListener('click', function() {
+//     window.open('https://mpl.onelink.me/C4XS/a5ec8619', '_blank');
+//   });
+// }
+
+// =============================================================================
+// Change the code from here
+// Any function which you want to call on document.ready, put in this function
+var AUTH_TOKEN = "";
+var mybotDragClick = false;
+var mybotDataSet1, mybotDataSet2;
+var mybotSequenceIndex = 2;
+var mybotSequenceIndexStart = 1;
+var mybotIsMatchLive = 0;
+var botInsideFlag = 120;
+var mybotCloseTriggeredFlag;
+
+function callOnDocumentReady() {
+	if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+		urlToCheck = window.location.host+window.location.pathname;
+
+		var request = new XMLHttpRequest();
+		url = mybotBlockedUrl;
+
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				data = data[mybotBlockedClientName];
+				if(data) {
+					data = data.urls;
+					if(data.includes(urlToCheck)){
+						document.getElementById('dragItem').innerHTML = '';
+						return false;
+					}
+					else{
+						mybotStart();
+					}
+				}
+			}
+			else {
+				console.log('Block Check Request failed');
+				mybotStart();
+			}
+		};
+		request.onerror = function() {
+			console.log('Request failed');
+			mybotStart();
+		};
+		request.send();
+	}
+	else{
+		mybotStart();
+	}
+}
+
+function mybotStart(){
+	mybotCustomFunction();
+	loadAd('gabywa');
+	if(mybotLoadAdDefault){
+		loadAd('adSmall');
+	}
+	else{
+		loadAdCustom('adSmall');
+	}
+
+	if(mybotAuthEnabled){
+		updateAuthToken();
+	}
+
+	if(mobileCheck()){
+		botInsideFlag = 100;
+	}
+
+	[].forEach.call(document.querySelectorAll('.mybotstage'), function(el) {
+		el.addEventListener('click', function() {
+			mybotClickCount(0);
+		})
+	});
+
+	if(typeof mybotMobileTopPlacement !== 'undefined' && mybotMobileTopPlacement==1){
+		mobileTopPlacement();
+		if(mobileCheck()){
+			document.getElementById('mybotClose').classList.add('closeBotFrontTop');
+			// document.getElementById('mybotCloseUCB').classList.add('closeBotFrontTop');
+		}
+	}
+	if((typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined') && (mybotIsBottomScrollStartDisapperEnabled == 1)){
+		mybotScrollStart();
+		window.addEventListener('scroll',function(ev){mybotScrollStart()});
+	}
+  if((typeof mybotIsScrollupDisapperEnabled!=='undefined') && (mybotIsScrollupDisapperEnabled == 1)){
+		if(mobileCheck()){
+			var prevScrollpos = window.pageYOffset;
+	    window.onscroll = function() {
+	    var currentScrollPos = window.pageYOffset;
+	    if (prevScrollpos < currentScrollPos) {
+			 if(mybotCloseTriggeredFlag){
+				 	document.getElementById('dragItem').style.display = 'none';
+			 }
+			 else {
+			 	document.getElementById('dragItem').style.display = 'block';
+			 }
+	    } else {
+	    document.getElementById('dragItem').style.display = 'none';
+	    }
+	    prevScrollpos = currentScrollPos;
+	   }
+		}
+	}
+	if((typeof mybotIsBottomScrollDisapperEnabled !== 'undefined') && (mybotIsBottomScrollDisapperEnabled == 1)){
+		window.addEventListener('scroll',function(ev){mybotScrollEnd()});
+	}
+
+	if(mybotCloseEnabled){
+		[].forEach.call(document.querySelectorAll('.mybotclose'), function(el) {
+			el.style.display='block';
+			el.addEventListener('click', function(event) {
+				event.stopPropagation();
+				event.preventDefault();
+				document.querySelector('#adSmall').style.display = 'none';
+				document.querySelector('.profile_div').style.display = 'none';
+			 	mybotCloseTriggeredFlag = 1;
+				if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
+					mybotampClose();
+				}
+			})
+		});
+  }
+
+	getScore();
+	// runSequence();
+
+	// setIntervalX(function () {
+	// 	runSequence();
+	// }, 1000, 9);
+
+	// setInterval(function() {
+	// 	runSequence();
+	// }, 3600000);
+	dragElement(document.getElementById("dragItem"));
+}
+
+function setIntervalX(callback, delay, repetitions) {
+    var x = 0;
+    var intervalID = window.setInterval(function () {
+
+       callback();
+
+       if (++x === repetitions) {
+           window.clearInterval(intervalID);
+       }
+    }, delay);
+}
+
+function loadAd(id, adUnits){
+	var elm = document.getElementById(id);
+	var scripts = Array(elm.querySelectorAll("script"));
+	scripts = scripts[0];
+	for(var i=0; i<scripts.length; i++) {
+		oldScript = scripts[i];
+		const newScript = document.createElement("script");
+		var scriptAttr = Array(oldScript.attributes);
+		scriptAttr = scriptAttr[0];
+		for(var j=0; j<scriptAttr.length; j++) {
+			attr = scriptAttr[j];
+			newScript.setAttribute(attr.name, attr.value);
+		}
+    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+		newScript.onload = function() {
+			if(adUnits !== undefined) {
+				smartyads.buildUnits(adUnits);
+			}
+		};
+    oldScript.parentNode.replaceChild(newScript, oldScript);
+	}
+}
+
+function mybotClickCount(count){
+	if(mybotClickCountEnabled){
+		if(count >= 2) {
+			return;
+		}
+
+		var request = new XMLHttpRequest();
+		url = 'https://unibots.warw.in//bot_open';
+		request.open('GET', url, true);
+		request.setRequestHeader('Auth-Token', AUTH_TOKEN);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.error == true) {
+					console.log(data.msg);
+					console.log(data.errmsg);
+					updateAuthToken(mybotClickCount(count+1));
+				}
+				else if(data.error == false) {
+					//closeloader();
+					// console.log("Request Completed Successfully");
+				}
+			}
+			else {
+				// We reached our target server, but it returned an error
+				console.log('Request failed from server');
+			}
+		};
+		request.onerror = function() {
+			closeloader();
+			console.log('Request failed');
+		};
+		request.send();
+		if(mybotClickLocation!=''){
+			window.open(mybotClickLocation, '_blank');
+		}
+	}
+	else{
+		if(mybotClickLocation!=''){
+			window.open(mybotClickLocation, '_blank');
+		}
+		return false;
+	}
+}
+
+function updateAuthToken(callback) {
+	var request = new XMLHttpRequest();
+	request.open('GET', 'https://unibots.warw.in//get_token', true);
+	request.onload = function() {
+		if (request.status >= 200 && request.status < 400) {
+			var data = request.responseText;
+			data = JSON.parse(data);
+			if(data.error === false) {
+				AUTH_TOKEN = data.auth_token;
+			}
+			if(typeof callback == "function") {
+				callback();
+			}
+		}
+		else {
+			// We reached our target server, but it returned an error
+			console.log('Request failed');
+		}
+	};
+	request.onerror = function() {
+		console.log('Request failed');
+	};
+	request.send();
+}
+
+function mobileCheck() {
+	var check = false;
+	(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+	return check;
+};
+
+function dragElement(elmnt) {
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	if (document.getElementById(elmnt)) {
+		// if present, the header is where you move the DIV from:
+		document.getElementById(elmnt).onmousedown = dragMouseDown;
+	}
+	else {
+		// otherwise, move the DIV from anywhere inside the DIV:
+		elmnt.onmousedown = dragMouseDown;
+	}
+
+	function dragMouseDown(e) {
+		e = e || window.event;
+		e.preventDefault();
+		// get the mouse cursor position at startup:
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		// call a function whenever the cursor moves:
+		document.onmousemove = elementDrag;
+	}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		e.preventDefault();
+		// calculate the new cursor position:
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		if(pos1 !=0 || pos2!=0){
+			mybotDragClick = true;
+		}
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		// set the element's new position:
+		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	}
+
+	function closeDragElement(e) {
+		// stop moving when mouse button is released:
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+}
+
+function formatDate(date) {
+
+	var month_names =["Jan","Feb","Mar",
+		"Apr","May","Jun",
+		"Jul","Aug","Sep",
+		"Oct","Nov","Dec"];
+
+	var day = date.getDate();
+	var month_index = date.getMonth();
+	var year = date.getFullYear();
+
+	return "" + day + "-" + month_names[month_index] + "-" + year;
+}
+
+function formatTime(date) {
+
+	return  date.toTimeString().split(' ')[0];
+}
+
+function putData(mybotDataSet) {
+	if(typeof mybotAnotherCountryData !== 'undefined' && mybotAnotherCountryData == 1){
+		mybotCountrydata = mybotDataSet["data"][mybotCountryname];
+		country_cases = mybotCountrydata.cases;
+		country_death = mybotCountrydata.deaths;
+		country_recovered = mybotCountrydata.recovered;
+		country_name = mybotCountrydata.location;
+		world_cases = mybotDataSet["data"].world.cases;
+		world_death = mybotDataSet["data"].world.deaths;
+		world_recovered = mybotDataSet["data"].world.recovered;
+		document.getElementById('mybotWorldCount').innerText = world_cases;
+		document.getElementById('mybotWorldDeaths').innerText = world_death;
+		document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+		document.getElementById('mybotCountryCount').innerText = country_cases;
+		document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
+		document.getElementById('mybotCountryDeaths').innerText = country_death;
+		if (document.getElementById('mybotCountryRecoveredTxt')) {
+			document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+			document.getElementById('mybotCountryRecovered').innerText = country_recovered;
+		}
+	}
+	else if(typeof mybotStateData !== 'undefined' && mybotStateData == 1){
+			mybotStatedata = mybotDataSet["data"]["states"][mybotStateName];
+			state_cases = mybotStatedata.totalConfirmed;
+			state_recovered = mybotStatedata.totalRecovered;
+			state_death = mybotStatedata.totalDeaths;
+			state_name = mybotStatedata.state_name;
+			document.getElementById('mybotStateCases').innerText = state_cases;
+			document.getElementById('mybotStateRecovered').innerText = state_recovered;
+			document.getElementById('mybotStateCasesTxt').innerText = capitalizeFLetter(state_name)+" Cases";
+			document.getElementById('mybotStateRecoveredTxt').innerText = capitalizeFLetter(state_name)+" Recovered";
+			if (typeof mybotStateName2 !=='undefined'){
+				mybotStatedata2 = mybotDataSet["data"]["states"][mybotStateName2];
+				country_cases = mybotDataSet["data"].country.cases;
+				country_name = mybotDataSet["data"].country.location;
+				state2_cases = mybotStatedata2.totalConfirmed;
+				state2_recovered = mybotStatedata2.totalRecovered;
+				state2_death = mybotStatedata2.totalDeaths;
+				state2_name = mybotStatedata2.state_name;
+				document.getElementById('mybotState2Cases').innerText = state2_cases;
+				document.getElementById('mybotState2Recovered').innerText = state2_recovered;
+				document.getElementById('mybotState2CasesTxt').innerText = capitalizeFLetter(state2_name)+" Cases";
+				document.getElementById('mybotState2RecoveredTxt').innerText = capitalizeFLetter(state2_name)+" Recovered";
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+			}
+			else {
+				world_cases = mybotDataSet["data"].world.cases;
+				country_cases = mybotDataSet["data"].country.cases;
+				country_recovered = mybotDataSet["data"].country.recovered;
+				country_name = mybotDataSet["data"].country.location;
+				document.getElementById('mybotWorldCount').innerText = world_cases;
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+				document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+				document.getElementById('mybotCountryRecovered').innerText = country_recovered;
+			}
+	}
+	else if(typeof mybotLocalDataPlacement !== 'undefined' && mybotLocalDataPlacement == 1){
+		world_cases = mybotDataSet["data"].world.cases;
+	  world_death = mybotDataSet["data"].world.deaths;
+	  country_cases = mybotDataSet["data"].country.cases;
+	  country_death = mybotDataSet["data"].country.deaths;
+	  country_name = mybotDataSet["data"].country.location;
+		country_recovered = mybotDataSet["data"].country.recovered;
+		third_cases = mybotDataSet["data"].thirdlocation.cases;
+		third_deaths = mybotDataSet["data"].thirdlocation.deaths;
+		third_name = mybotDataSet["data"].thirdlocation.location;
+
+		document.getElementById('mybotWorldCount').innerText = country_cases;
+		document.getElementById('mybotFace2TempCount').innerText = third_cases;
+		document.getElementById('mybotWorldDeaths').innerText = country_death;
+		// if(typeof mybotCountryNameLang !== 'undefined'){
+	  //   document.getElementById('mybotCountryName').innerHTML=mybotCountryNameLang;
+	  // }
+		// else{
+		// 	document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+		// }
+	  // if(typeof mybotCountryName2Lang !== 'undefined'){
+	  //   document.getElementById('mybotCountryName2').innerHTML=mybotCountryName2Lang;
+	  // }
+		// else{
+		// 	document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
+		// }
+
+		document.getElementById('mybotCountryCount').innerText = country_recovered;
+		if(typeof mybotLastSlideNoCount !== undefined && mybotLastSlideNoCount ==1){}
+		else{
+			document.getElementById('mybotPrecautionTextCount').innerText = world_cases;
+		}
+		if(typeof mybotDynamicRedirectLinkEnabled !== undefined && mybotDynamicRedirectLinkEnabled == 1){
+			if(mybotDataSet["data"].text.redirectLink !== undefined && mybotDataSet["data"].text.redirectLink != 'none'){
+				redirectLink = mybotDataSet["data"].text.redirectLink;
+				if(typeof mybotAppendReferLink !== undefined){
+					redirectLink += mybotAppendReferLink;
+				}
+				document.getElementById('mybotstage').addEventListener('click', function() {
+			   window.open(redirectLink, '_blank');
+			 });
+			}
+		}
+		if(mybotDataSet["data"].text !== undefined){
+			text1 = mybotDataSet["data"].text.text1;
+			text2 = mybotDataSet["data"].text.text2;
+			text3 = mybotDataSet["data"].text.text3;
+			text4 = mybotDataSet["data"].text.text4;
+			text5 = mybotDataSet["data"].text.text5;
+			if(text1 != 'none'){
+				document.getElementById('mybotWorldCases').innerText = text1;
+			}
+			if(text2 != 'none'){
+				document.getElementById('mybotFace2TempContent').innerText = text2;
+			}
+			if(text3 != 'none'){
+				document.getElementById('mybotWorldDeathsCases').innerText = text3;
+			}
+			if(text4 != 'none'){
+				document.getElementById('mybotCountryName').innerText = text4;
+			}
+			if(text5 != 'none'){
+				document.getElementById('mybotPrecautionText').innerText = text5;
+			}
+		}
+	}
+	else{
+			country_cases = mybotDataSet["data"].country.cases;
+			country_death = mybotDataSet["data"].country.deaths;
+			country_name = mybotDataSet["data"].country.location;
+			if(typeof mybotDuplicateDataPresent !== "undefined" && mybotDuplicateDataPresent == 1){
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryCountDuplicate').innerText = country_cases;
+				document.getElementById('mybotCountryDeaths').innerText = country_death;
+				if(mybotDataSet["data"].text !== undefined){
+					text1 = mybotDataSet["data"].text.text1;
+					text2 = mybotDataSet["data"].text.text2;
+					text3 = mybotDataSet["data"].text.text3;
+					text4 = mybotDataSet["data"].text.text4;
+					text5 = mybotDataSet["data"].text.text5;
+					if(text1 != 'none'){
+						document.getElementById('mybotCountryName').innerText = text1;
+					}
+					if(text2 != 'none'){
+						document.getElementById('mybotCountryName2').innerText = text2;
+					}
+					if(text3 != 'none'){
+						document.getElementById('mybotCountryNameDuplicate').innerText = text3;
+					}
+				}
+				if(typeof mybotMultipleRedirectLinks !== undefined && mybotMultipleRedirectLinks ==1){
+					redirectLink = mybotDataSet["data"].text.redirectLink;
+					redirectLink2 = mybotDataSet["data"].text.redirectLink2;
+					redirectLink3 = mybotDataSet["data"].text.redirectLink3;
+					document.querySelector('.mybotface1, .mybotface3 ,.mybotface5').addEventListener('click', function() {
+						window.open(redirectLink, '_self');
+					});
+					document.querySelector('.mybotface2, .mybotface6').addEventListener('click', function() {
+						window.open(redirectLink2, '_self');
+					});
+					document.querySelector('.mybotface4').addEventListener('click', function() {
+						window.open(redirectLink3, '_self');
+					});
+				}
+			}
+			else{
+				world_cases = mybotDataSet["data"].world.cases;
+				world_death = mybotDataSet["data"].world.deaths;
+				document.getElementById('mybotWorldCount').innerText = world_cases;
+				document.getElementById('mybotWorldDeaths').innerText = world_death;
+				if(typeof mybotCountryNameLang !== 'undefined'){
+					document.getElementById('mybotCountryName').innerHTML=mybotCountryNameLang;
+				}
+				else{
+					document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+				}
+				if(typeof mybotCountryName2Lang !== 'undefined'){
+					document.getElementById('mybotCountryName2').innerHTML=mybotCountryName2Lang;
+				}
+				else{
+					document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
+				}
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryDeaths').innerText = country_death;
+				if(typeof mybotCountryRecovered !== "undefined" && mybotCountryRecovered ==1){
+						country_recovered = mybotDataSet["data"].country.recovered;
+						document.getElementById('mybotCountryDeaths').innerHTML= country_recovered;
+						document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Recovered";
+				}
+				if(typeof mybotWorldRecovered !== "undefined" && mybotWorldRecovered ==1){
+						world_recovered = mybotDataSet["data"].world.recovered;
+						document.getElementById('mybotWorldDeaths').innerText = world_recovered;
+						document.getElementById('mybotWorldDeathsCases').innerText = "World Recovered";
+				}
+				if(typeof mybotMultipleDataFaceValues !== "undefined" && mybotMultipleDataFaceValues ==1){
+					country_recovered = mybotDataSet["data"].country.recovered;
+					world_recovered = mybotDataSet["data"].world.recovered;
+					third_cases = mybotDataSet["data"].thirdlocation.cases;
+					third_deaths = mybotDataSet["data"].thirdlocation.deaths;
+					third_recovered = mybotDataSet["data"].thirdlocation.recovered;
+					third_name = mybotDataSet["data"].thirdlocation.location;
+					document.getElementById('mybotWorldCount').innerText = world_cases;
+					document.getElementById('mybotWorldDeaths').innerText = world_death;
+					document.getElementById('mybotWorldRecovered').innerText = world_recovered;
+					document.getElementById('mybotCountryCount').innerText = country_cases;
+					document.getElementById('mybotCountryDeaths').innerText = country_death;
+					document.getElementById('mybotIndiaRecovered').innerText = country_recovered;
+					document.getElementById('mybotUaeCount').innerText = third_cases;
+					document.getElementById('mybotUaeDeaths').innerText = third_deaths;
+					document.getElementById('mybotuaeRecovered').innerText = 	third_recovered;
+				}
+				if(typeof mybotLastSlideLocalDataPresent !== "undefined" && mybotLastSlideLocalDataPresent ==1){
+					if(mybotDataSet["data"].thirdlocation !== undefined){
+						local_text = mybotDataSet["data"].thirdlocation.location;
+						local_count = mybotDataSet["data"].thirdlocation.cases;
+						document.getElementById('mybotPrecautionText').innerText = capitalizeFLetter(local_text)+" Cases";;
+						document.getElementById('mybotPrecautionTextCount').innerText = local_count;
+					}
+					else{
+						document.getElementById('mybotPrecautionText').innerText = "Stay Safe!";
+					}
+
+				}
+				if(typeof mybotSecondSlideLocalDataPresent !== "undefined" && mybotSecondSlideLocalDataPresent ==1){
+					if(mybotDataSet["data"].thirdlocation !== undefined){
+						local_text = mybotDataSet["data"].thirdlocation.location;
+						local_count = mybotDataSet["data"].thirdlocation.deaths;
+						document.getElementById('mybotFace2TempContent').innerText = capitalizeFLetter(local_text)+" Deaths";;
+						document.getElementById('mybotFace2TempCount').innerText = local_count;
+					}
+				}
+				if(typeof mybotDynamicRedirectLinkEnabled !== "undefined" && mybotDynamicRedirectLinkEnabled == 1){
+					if(mybotDataSet["data"].text.redirectLink !== undefined && mybotDataSet["data"].text.redirectLink != 'none'){
+						redirectLink = mybotDataSet["data"].text.redirectLink;
+						if(typeof mybotAppendReferLink !== undefined){
+							redirectLink += mybotAppendReferLink;
+						}
+						document.getElementById('mybotstage').addEventListener('click', function() {
+							if(mybotDragClick == false){
+                window.open(redirectLink, '_blank');
+              }
+							setTimeout(function(){
+						   mybotDragClick = false;
+						  }, 200);
+					 });
+					}
+				}
+				if(mybotDataSet["data"].text !== undefined){
+					text1 = mybotDataSet["data"].text.text1;
+					text2 = mybotDataSet["data"].text.text2;
+					text3 = mybotDataSet["data"].text.text3;
+					text4 = mybotDataSet["data"].text.text4;
+					text5 = mybotDataSet["data"].text.text5;
+					text6 = mybotDataSet["data"].text.text6;
+					text7 = mybotDataSet["data"].text.text7;
+					text8 = mybotDataSet["data"].text.text8;
+					text9 = mybotDataSet["data"].text.text9;
+					if(typeof mybotMultipleDataFace !== "undefined" && mybotMultipleDataFace ==1){
+						if(text1 != 'none'){
+							document.getElementById('mybotWorldCases').innerText = text1;
+						}
+						if(text2 != 'none'){
+							document.getElementById('mybotWorldDeathsCases').innerText = text2;
+						}
+						if(text3 != 'none'){
+							document.getElementById('mybotWorldRecoveredCases').innerText = text3;
+						}
+						if(text4 != 'none'){
+							document.getElementById('mybotCountryName').innerText = text4;
+						}
+						if(text5 != 'none'){
+							document.getElementById('mybotCountryName2').innerText = text5;
+						}
+						if(text6 != 'none'){
+							document.getElementById('mybotIndiaRecoveredCases').innerText = text6;
+						}
+						if(text7 != 'none'){
+							document.getElementById('mybotUaeCases').innerText = text7;
+						}
+						if(text8 != 'none'){
+							document.getElementById('mybotUaeDeathsCases').innerText = text8;
+						}
+						if(text9 != 'none'){
+							document.getElementById('mybotUaeRecoveredCases').innerText = text9;
+						}
+					}
+					else{
+						if(text1 != 'none'){
+							document.getElementById('mybotWorldCases').innerText = text1;
+						}
+						if(text2 != 'none'){
+							document.getElementById('mybotWorldDeathsCases').innerText = text2;
+						}
+						if(text3 != 'none'){
+							document.getElementById('mybotCountryName').innerText = text3;
+						}
+						if(text4 != 'none'){
+							document.getElementById('mybotCountryName2').innerText = text4;
+						}
+						if(text5 != 'none'){
+							document.getElementById('mybotPrecautionText').innerText = text5;
+						}
+					}
+				}
+			}
+	}
+}
+
+function getScore() {
+	var request = new XMLHttpRequest();
+	url = 'https://unibots.warw.in//'+mybotStatAPI;
+	// console.log(url);
+	request.open('GET', url, true);
+	request.onload = function() {
+		if (request.status >= 200 && request.status < 400) {
+			dataSet = [];
+			var data = request.responseText;
+			data = JSON.parse(data);
+			// console.log(data);
+			if(data.error === false) {
+				putData(data);
+			}
+			if(data.error === true){
+				console.log("error occured with data");
+				// console.log(data);
+			}
+		}
+		else {
+			console.log('Request failed');
+		}
+	};
+	request.onerror = function() {
+		console.log('Request failed');
+	};
+	request.send();
+}
+
+function runSequence() {
+	t = new Date();
+	utcHours = t.getUTCHours();
+	utcMinutes = t.getUTCMinutes();
+	istHour = utcHours+5;
+	if(utcMinutes>29){
+		istHour += 1;
+	}
+	if((istHour > mybotStartHour) && (istHour < mybotEndHour)){
+
+		// if(mybotSequenceIndex%2 == 0) {
+		// 	setIntervalX(function () {
+		// 		putData(mybotDataSet1, mybotIsMatchLive);
+		// 	}, 1000, 9);
+		// }
+		// else {
+		// 	if(mybotDataSet2 != undefined) {
+		// 		setIntervalX(function () {
+		// 			putData(mybotDataSet2, mybotIsMatchLive);
+		// 		}, 1000, 9);
+		// 	}
+		// 	else {
+		// 		setIntervalX(function () {
+		// 			putData(mybotDataSet1, mybotIsMatchLive);
+		// 		}, 1000, 9);
+		// 	}
+		// }
+	}
+	else{
+		// if(mybotSequenceIndex%2 == 0) {
+		// 	setIntervalX(function () {
+		// 		putData(mybotDataSet1, mybotIsMatchLive);
+		// 	}, 1000, 9);
+		// }
+		// else {
+		// 	if(mybotDataSet2 != undefined) {
+		// 		setIntervalX(function () {
+		// 			putData(mybotDataSet2, mybotIsMatchLive);
+		// 		}, 1000, 9);
+		// 	}
+		// 	else {
+		// 		setIntervalX(function () {
+		// 			putData(mybotDataSet1, mybotIsMatchLive);
+		// 		}, 1000, 9);
+		// 	}
+		// }
+
+		if(mybotSequenceIndex%4 == 1) {
+			mybotSequenceIndex = 1;
+			getScore(1);
+		}
+	}
+	if(mybotSequenceIndexStart>0){
+		if(mybotSequenceIndexStart==1){
+			mybotSequenceIndex += 1;
+		}
+		mybotSequenceIndexStart -= 1;
+	}
+	else{
+		mybotSequenceIndex += 1;
+	}
+}
+
+function mobileTopPlacement(){
+  if(mobileCheck()){
+		x = document.getElementById('adSmall');
+		x.style.marginTop = '0px';
+		x=x.parentElement;
+		x.parentNode.removeChild(x);
+		y = document.getElementById('dragItem');
+		y.insertBefore(x, y.firstChild);
+		mybotDragItem = document.getElementById('dragItem');
+    mybotDragItem.style.display = 'none';
+		if(typeof mobileTopPixel !== 'undefined'){
+			mybotDragItem.style.top = mobileTopPixel+'px';
+		}
+		else{
+			mybotDragItem.style.top = '0px';
+		}
+		if(typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined' && mybotIsBottomScrollStartDisapperEnabled == 1){
+
+		}
+		else{
+			window.addEventListener('scroll', function() {
+	      mybotDragItem.style.display = 'block';
+	    });
+		}
+
+  }
+}
+
+function mybotScrollStart(){
+
+	if(mobileCheck()){
+		if (((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) && (mybotScrollStartFlag == 0)) {
+        document.getElementById('dragItem').style.display = 'none';
+        mybotScrollStartFlag = 1;
+    }
+    else if(mybotScrollStartFlag == 1){
+      if ((window.scrollY) >= ((screen.height/3) - mybotScrollStartPixelHeight)) {
+				 if(mybotCloseTriggeredFlag){
+          document.getElementById('dragItem').style.display = 'none';
+          mybotScrollStartFlag = 0;
+      }
+			else {
+				document.getElementById('dragItem').style.display = 'block';
+				mybotScrollStartFlag = 0;
+			}
+		 }
+    }
+	}
+}
+
+function mybotScrollEnd(){
+	if(mobileCheck()){
+		if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - mybotScrollPixelHeight) {
+        document.getElementById('dragItem').style.display = 'none';
+        mybotScrollFlag = 1;
+    }
+    else if(mybotScrollFlag == 1){
+      if ((window.innerHeight + window.pageYOffset) <= document.body.offsetHeight - mybotScrollPixelHeight) {
+				if(mybotCloseTriggeredFlag){
+					document.getElementById('dragItem').style.display = 'block';
+ 				 mybotScrollFlag = 0;
+		   }
+		   else {
+			 document.getElementById('dragItem').style.display = 'block';
+			 mybotScrollFlag = 0;
+		  }
+     }
+    }
+	}
+}
+
+function capitalizeFLetter(input) {
+  var string = input;
+  x = string.charAt(0).toUpperCase() + string.slice(1);
+	 return x;
+}
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div class="row"> <div class="mybotstage" id="mybotstage"> <div class="mybotcubespinner"> <div class="mybotface1 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldCases"> World Cases </span> <div class="mybotCount" id="mybotWorldCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface2 mybotface"></div> <div class="mybotface3 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldDeathsCases"> World Deaths </span> <div class="mybotCount" id="mybotWorldDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface4 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName"> India Cases </span> <div class="mybotCount" id="mybotCountryCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface5 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName2"> India Deaths </span> <div class="mybotCount" id="mybotCountryDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface6 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <span class="mybotScoreLiveDot"></span> <div class="mybotSummary"> <span class="mybotLocation" id="mybotPrecautionText"> Stay Safe! </span>  </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> </div> <div class="row"> <div class="col-hgt-ad" id="adSmall">  </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='@media screen and (max-width:635px;){mybot .profile_div{height:130px!important}}mybot .col-hgt-ad{height:50px;float:right;position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{cursor:pointer}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#fff!important}mybot .mybotLocation{font-size:12px!important}.mybotBottomBar,.mybotTopBar{background:#fff!important;color:#03bae4!important;font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:10px!important}mybot .mybotcubespinner .mybotface2{background:url(http://myeztrips.com/images/ez_logo.png)!important;background-size:100px 62px!important;background-color:#fff!important;background-position:center!important;background-repeat:no-repeat!important}@media screen and (max-width:635px){mybot .mybotcubespinner .mybotface2{background:url(http://myeztrips.com/images/ez_logo.png)!important;background-size:80px 42px!important;background-color:#fff!important;background-position:center!important;background-repeat:no-repeat!important}mybot .col-hgt-ad{position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{position:absolute;pointer-events:all;bottom:50px!important;cursor:pointer}.mybotBottomBar,.mybotTopBar{font-size:8px!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#fff!important;line-height:1.2!important}mybot .mybotLocation{font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:8px!important}}mybot .mybotcubespinner .mybotface1,.mybotface6,.mybotface3,.mybotface5,.mybotface4{background:#03bae4!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);@import url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget32/NotoSerifBengali-hinted/NotoSerifBengali-Regular.ttf);mybot{font-family:"Lato",sans-serif;font-size:14px;font-weight:400;color:#333;position:sticky;z-index:2147483640;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;height:150px;cursor:default;z-index:2147483647;pointer-events:none}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)!important}@keyframes mybotspincube{from,to{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}12%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}16%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}30%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}33%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}47%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}50%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}63%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}66%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}80%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}83%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}97%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50px 50px 0;-moz-transform-origin:50px 50px 0;-ms-transform-origin:50px 50px 0;transform-origin:50px 50px 0}mybot .mybotcubespinner .mybotface{position:absolute;width:100px;height:100px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 20px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(50px);-moz-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(50px);-moz-transform:rotateY(90deg) translateZ(50px);-ms-transform:rotateY(90deg) translateZ(50px);transform:rotateY(90deg) translateZ(50px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);transform:rotateY(90deg) rotateX(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(50px);-moz-transform:rotateX(-90deg) translateZ(50px);-ms-transform:rotateX(-90deg) translateZ(50px);transform:rotateX(-90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotstage{width:100px;height:100px;bottom:50px;position:absolute;right:25px;font-size:15px;pointer-events:all}.mybotTopBar{background:red;width:100px;height:15px;border-bottom:1px solid #fff;color:#fff;text-align:center;margin:auto;line-height:15px}.mybotPoweredBy{font-size:9px;font-weight:600}.mybotPoweredByBrand{font-size:12px;font-weight:600}.mybotBottomBar{background:red;width:100px;height:15px;color:#fff;margin:auto;line-height:15px;text-align:center;bottom:0;position:absolute;font-size:12px}.mybotSummary{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;font-family:"Baloo Chettan 2",cursive}.mybotContent{color:#fff;text-align:center;overflow:hidden}@-webkit-keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@media screen and (max-width:635px){mybot .profile_div{width:320px;height:130px}.mybotSummary{font-size:12px}.mybotTopBar,.mybotBottomBar{width:80px;font-size:10px}.mybotPoweredBy{font-size:7px}.mybotPoweredByBrand{font-size:8px}mybot .mybotcubespinner .mybotface{position:absolute;width:80px;height:80px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 10px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotstage{width:80px;height:80px;bottom:52px;position:absolute;right:20px;font-size:15px;pointer-events:all}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(40px);-moz-transform:translateZ(40px);-ms-transform:translateZ(40px);transform:translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(40px);-moz-transform:rotateY(90deg) translateZ(40px);-ms-transform:rotateY(90deg) translateZ(40px);transform:rotateY(90deg) translateZ(40px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);transform:rotateY(90deg) rotateX(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(40px);-moz-transform:rotateX(-90deg) translateZ(40px);-ms-transform:rotateX(-90deg) translateZ(40px);transform:rotateX(-90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:40px 40px 0;-moz-transform-origin:40px 40px 0;-ms-transform-origin:40px 40px 0;transform-origin:40px 40px 0}}mybot .closeBotFrontTop{margin-top:150px}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});

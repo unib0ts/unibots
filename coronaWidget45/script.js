@@ -37,7 +37,7 @@ mybotadSmall = '<div id="ATD_MM_320x100"></div>';
 // }
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-mybotClosevar = '<img src="https://api.warw.in/coronaWidget1/img/close.svg">';
+mybotClosevar = '<img src="https://unibots.warw.in//img/close.svg">';
 
 mybotTopBarContent = '<span class="mybotPoweredByBrand">COVID-19 CASES</span>';
 mybotBottomBarContent = '<span class="mybotPoweredBy">Powered By </span><span class="mybotPoweredByBrand">Unibots</span>';
@@ -206,6 +206,9 @@ function mybotStart(){
 				document.querySelector('#adSmall').style.display = 'none';
 				document.querySelector('.profile_div').style.display = 'none';
 			 	mybotCloseTriggeredFlag = 1;
+				if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
+					mybotampClose();
+				}
 			})
 		});
   }
@@ -265,7 +268,7 @@ function mybotClickCount(count){
 		}
 
 		var request = new XMLHttpRequest();
-		url = 'https://api.warw.in/coronaWidget1/bot_open';
+		url = 'https://unibots.warw.in//bot_open';
 		request.open('GET', url, true);
 		request.setRequestHeader('Auth-Token', AUTH_TOKEN);
 		request.onload = function() {
@@ -306,7 +309,7 @@ function mybotClickCount(count){
 
 function updateAuthToken(callback) {
 	var request = new XMLHttpRequest();
-	request.open('GET', 'https://api.warw.in/coronaWidget1/get_token', true);
+	request.open('GET', 'https://unibots.warw.in//get_token', true);
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
 			var data = request.responseText;
@@ -400,7 +403,64 @@ function formatTime(date) {
 }
 
 function putData(mybotDataSet) {
-	if(typeof mybotLocalDataPlacement !== 'undefined' && mybotLocalDataPlacement == 1){
+	if(typeof mybotAnotherCountryData !== 'undefined' && mybotAnotherCountryData == 1){
+		mybotCountrydata = mybotDataSet["data"][mybotCountryname];
+		country_cases = mybotCountrydata.cases;
+		country_death = mybotCountrydata.deaths;
+		country_recovered = mybotCountrydata.recovered;
+		country_name = mybotCountrydata.location;
+		world_cases = mybotDataSet["data"].world.cases;
+		world_death = mybotDataSet["data"].world.deaths;
+		world_recovered = mybotDataSet["data"].world.recovered;
+		document.getElementById('mybotWorldCount').innerText = world_cases;
+		document.getElementById('mybotWorldDeaths').innerText = world_death;
+		document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+		document.getElementById('mybotCountryCount').innerText = country_cases;
+		document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
+		document.getElementById('mybotCountryDeaths').innerText = country_death;
+		if (document.getElementById('mybotCountryRecoveredTxt')) {
+			document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+			document.getElementById('mybotCountryRecovered').innerText = country_recovered;
+		}
+	}
+	else if(typeof mybotStateData !== 'undefined' && mybotStateData == 1){
+			mybotStatedata = mybotDataSet["data"]["states"][mybotStateName];
+			state_cases = mybotStatedata.totalConfirmed;
+			state_recovered = mybotStatedata.totalRecovered;
+			state_death = mybotStatedata.totalDeaths;
+			state_name = mybotStatedata.state_name;
+			document.getElementById('mybotStateCases').innerText = state_cases;
+			document.getElementById('mybotStateRecovered').innerText = state_recovered;
+			document.getElementById('mybotStateCasesTxt').innerText = capitalizeFLetter(state_name)+" Cases";
+			document.getElementById('mybotStateRecoveredTxt').innerText = capitalizeFLetter(state_name)+" Recovered";
+			if (typeof mybotStateName2 !=='undefined'){
+				mybotStatedata2 = mybotDataSet["data"]["states"][mybotStateName2];
+				country_cases = mybotDataSet["data"].country.cases;
+				country_name = mybotDataSet["data"].country.location;
+				state2_cases = mybotStatedata2.totalConfirmed;
+				state2_recovered = mybotStatedata2.totalRecovered;
+				state2_death = mybotStatedata2.totalDeaths;
+				state2_name = mybotStatedata2.state_name;
+				document.getElementById('mybotState2Cases').innerText = state2_cases;
+				document.getElementById('mybotState2Recovered').innerText = state2_recovered;
+				document.getElementById('mybotState2CasesTxt').innerText = capitalizeFLetter(state2_name)+" Cases";
+				document.getElementById('mybotState2RecoveredTxt').innerText = capitalizeFLetter(state2_name)+" Recovered";
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+			}
+			else {
+				world_cases = mybotDataSet["data"].world.cases;
+				country_cases = mybotDataSet["data"].country.cases;
+				country_recovered = mybotDataSet["data"].country.recovered;
+				country_name = mybotDataSet["data"].country.location;
+				document.getElementById('mybotWorldCount').innerText = world_cases;
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+				document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+				document.getElementById('mybotCountryRecovered').innerText = country_recovered;
+			}
+	}
+	else if(typeof mybotLocalDataPlacement !== 'undefined' && mybotLocalDataPlacement == 1){
 		world_cases = mybotDataSet["data"].world.cases;
 	  world_death = mybotDataSet["data"].world.deaths;
 	  country_cases = mybotDataSet["data"].country.cases;
@@ -467,170 +527,190 @@ function putData(mybotDataSet) {
 		}
 	}
 	else{
-		world_cases = mybotDataSet["data"].world.cases;
-		world_death = mybotDataSet["data"].world.deaths;
-		country_cases = mybotDataSet["data"].country.cases;
-		country_death = mybotDataSet["data"].country.deaths;
-		country_name = mybotDataSet["data"].country.location;
-		if(typeof mybotDuplicateDataPresent !== "undefined" && mybotDuplicateDataPresent == 1){
-			document.getElementById('mybotCountryCount').innerText = country_cases;
-			document.getElementById('mybotCountryCountDuplicate').innerText = country_cases;
-			document.getElementById('mybotCountryDeaths').innerText = country_death;
-			if(mybotDataSet["data"].text !== undefined){
-				text1 = mybotDataSet["data"].text.text1;
-				text2 = mybotDataSet["data"].text.text2;
-				text3 = mybotDataSet["data"].text.text3;
-				text4 = mybotDataSet["data"].text.text4;
-				text5 = mybotDataSet["data"].text.text5;
-				if(text1 != 'none'){
-					document.getElementById('mybotCountryName').innerText = text1;
+			country_cases = mybotDataSet["data"].country.cases;
+			country_death = mybotDataSet["data"].country.deaths;
+			country_name = mybotDataSet["data"].country.location;
+			if(typeof mybotDuplicateDataPresent !== "undefined" && mybotDuplicateDataPresent == 1){
+				document.getElementById('mybotCountryCount').innerText = country_cases;
+				document.getElementById('mybotCountryCountDuplicate').innerText = country_cases;
+				document.getElementById('mybotCountryDeaths').innerText = country_death;
+				if(mybotDataSet["data"].text !== undefined){
+					text1 = mybotDataSet["data"].text.text1;
+					text2 = mybotDataSet["data"].text.text2;
+					text3 = mybotDataSet["data"].text.text3;
+					text4 = mybotDataSet["data"].text.text4;
+					text5 = mybotDataSet["data"].text.text5;
+					if(text1 != 'none'){
+						document.getElementById('mybotCountryName').innerText = text1;
+					}
+					if(text2 != 'none'){
+						document.getElementById('mybotCountryName2').innerText = text2;
+					}
+					if(text3 != 'none'){
+						document.getElementById('mybotCountryNameDuplicate').innerText = text3;
+					}
 				}
-				if(text2 != 'none'){
-					document.getElementById('mybotCountryName2').innerText = text2;
-				}
-				if(text3 != 'none'){
-					document.getElementById('mybotCountryNameDuplicate').innerText = text3;
+				if(typeof mybotMultipleRedirectLinks !== undefined && mybotMultipleRedirectLinks ==1){
+					redirectLink = mybotDataSet["data"].text.redirectLink;
+					redirectLink2 = mybotDataSet["data"].text.redirectLink2;
+					redirectLink3 = mybotDataSet["data"].text.redirectLink3;
+					document.querySelector('.mybotface1, .mybotface3 ,.mybotface5').addEventListener('click', function() {
+						window.open(redirectLink, '_self');
+					});
+					document.querySelector('.mybotface2, .mybotface6').addEventListener('click', function() {
+						window.open(redirectLink2, '_self');
+					});
+					document.querySelector('.mybotface4').addEventListener('click', function() {
+						window.open(redirectLink3, '_self');
+					});
 				}
 			}
-			if(typeof mybotMultipleRedirectLinks !== undefined && mybotMultipleRedirectLinks ==1){
-				redirectLink = mybotDataSet["data"].text.redirectLink;
-				redirectLink2 = mybotDataSet["data"].text.redirectLink2;
-				redirectLink3 = mybotDataSet["data"].text.redirectLink3;
-				document.querySelector('.mybotface1, .mybotface3 ,.mybotface5').addEventListener('click', function() {
-			    window.open(redirectLink, '_self');
-			  });
-			  document.querySelector('.mybotface2, .mybotface6').addEventListener('click', function() {
-			    window.open(redirectLink2, '_self');
-			  });
-			  document.querySelector('.mybotface4').addEventListener('click', function() {
-			    window.open(redirectLink3, '_self');
-			  });
-			}
-		}
-		else{
-			world_cases = mybotDataSet["data"].world.cases;
-		  world_death = mybotDataSet["data"].world.deaths;
-			document.getElementById('mybotWorldCount').innerText = world_cases;
-			document.getElementById('mybotWorldDeaths').innerText = world_death;
-			if(typeof mybotCountryNameLang !== 'undefined'){
-		    document.getElementById('mybotCountryName').innerHTML=mybotCountryNameLang;
-		  }
 			else{
-				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
-			}
-		  if(typeof mybotCountryName2Lang !== 'undefined'){
-		    document.getElementById('mybotCountryName2').innerHTML=mybotCountryName2Lang;
-		  }
-			else{
-				document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
-			}
-			document.getElementById('mybotCountryCount').innerText = country_cases;
-			document.getElementById('mybotCountryDeaths').innerText = country_death;
-			if(typeof mybotMultipleDataFaceValues !== "undefined" && mybotMultipleDataFaceValues ==1){
-				country_recovered = mybotDataSet["data"].country.recovered;
-				world_recovered = mybotDataSet["data"].world.recovered;
-				third_cases = mybotDataSet["data"].thirdlocation.cases;
-				third_deaths = mybotDataSet["data"].thirdlocation.deaths;
-				third_recovered = mybotDataSet["data"].thirdlocation.recovered;
-				third_name = mybotDataSet["data"].thirdlocation.location;
+				world_cases = mybotDataSet["data"].world.cases;
+				world_death = mybotDataSet["data"].world.deaths;
 				document.getElementById('mybotWorldCount').innerText = world_cases;
 				document.getElementById('mybotWorldDeaths').innerText = world_death;
-				document.getElementById('mybotWorldRecovered').innerText = world_recovered;
+				if(typeof mybotCountryNameLang !== 'undefined'){
+					document.getElementById('mybotCountryName').innerHTML=mybotCountryNameLang;
+				}
+				else{
+					document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+				}
+				if(typeof mybotCountryName2Lang !== 'undefined'){
+					document.getElementById('mybotCountryName2').innerHTML=mybotCountryName2Lang;
+				}
+				else{
+					document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
+				}
 				document.getElementById('mybotCountryCount').innerText = country_cases;
 				document.getElementById('mybotCountryDeaths').innerText = country_death;
-				document.getElementById('mybotIndiaRecovered').innerText = country_recovered;
-				document.getElementById('mybotUaeCount').innerText = third_cases;
-				document.getElementById('mybotUaeDeaths').innerText = third_deaths;
-				document.getElementById('mybotuaeRecovered').innerText = 	third_recovered;
-			}
-			if(typeof mybotLastSlideLocalDataPresent !== "undefined" && mybotLastSlideLocalDataPresent ==1){
-				if(mybotDataSet["data"].thirdlocation !== undefined){
-					local_text = mybotDataSet["data"].thirdlocation.location;
-					local_count = mybotDataSet["data"].thirdlocation.cases;
-					document.getElementById('mybotPrecautionText').innerText = capitalizeFLetter(local_text)+" Cases";;
-					document.getElementById('mybotPrecautionTextCount').innerText = local_count;
+				if(typeof mybotCountryRecovered !== "undefined" && mybotCountryRecovered ==1){
+						country_recovered = mybotDataSet["data"].country.recovered;
+						document.getElementById('mybotCountryDeaths').innerHTML= country_recovered;
+						document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Recovered";
 				}
-				else{
-					document.getElementById('mybotPrecautionText').innerText = "Stay Safe!";
+				if(typeof mybotWorldRecovered !== "undefined" && mybotWorldRecovered ==1){
+						world_recovered = mybotDataSet["data"].world.recovered;
+						document.getElementById('mybotWorldDeaths').innerText = world_recovered;
+						document.getElementById('mybotWorldDeathsCases').innerText = "World Recovered";
 				}
+				if(typeof mybotMultipleDataFaceValues !== "undefined" && mybotMultipleDataFaceValues ==1){
+					country_recovered = mybotDataSet["data"].country.recovered;
+					world_recovered = mybotDataSet["data"].world.recovered;
+					third_cases = mybotDataSet["data"].thirdlocation.cases;
+					third_deaths = mybotDataSet["data"].thirdlocation.deaths;
+					third_recovered = mybotDataSet["data"].thirdlocation.recovered;
+					third_name = mybotDataSet["data"].thirdlocation.location;
+					document.getElementById('mybotWorldCount').innerText = world_cases;
+					document.getElementById('mybotWorldDeaths').innerText = world_death;
+					document.getElementById('mybotWorldRecovered').innerText = world_recovered;
+					document.getElementById('mybotCountryCount').innerText = country_cases;
+					document.getElementById('mybotCountryDeaths').innerText = country_death;
+					document.getElementById('mybotIndiaRecovered').innerText = country_recovered;
+					document.getElementById('mybotUaeCount').innerText = third_cases;
+					document.getElementById('mybotUaeDeaths').innerText = third_deaths;
+					document.getElementById('mybotuaeRecovered').innerText = 	third_recovered;
+				}
+				if(typeof mybotLastSlideLocalDataPresent !== "undefined" && mybotLastSlideLocalDataPresent ==1){
+					if(mybotDataSet["data"].thirdlocation !== undefined){
+						local_text = mybotDataSet["data"].thirdlocation.location;
+						local_count = mybotDataSet["data"].thirdlocation.cases;
+						document.getElementById('mybotPrecautionText').innerText = capitalizeFLetter(local_text)+" Cases";;
+						document.getElementById('mybotPrecautionTextCount').innerText = local_count;
+					}
+					else{
+						document.getElementById('mybotPrecautionText').innerText = "Stay Safe!";
+					}
 
-			}
-			if(typeof mybotDynamicRedirectLinkEnabled !== "undefined" && mybotDynamicRedirectLinkEnabled == 1){
-				if(mybotDataSet["data"].text.redirectLink !== undefined && mybotDataSet["data"].text.redirectLink != 'none'){
-					redirectLink = mybotDataSet["data"].text.redirectLink;
-					if(typeof mybotAppendReferLink !== undefined){
-						redirectLink += mybotAppendReferLink;
-					}
-					document.getElementById('mybotstage').addEventListener('click', function() {
-				   window.open(redirectLink, '_blank');
-				 });
 				}
-			}
-			if(mybotDataSet["data"].text !== undefined){
-				text1 = mybotDataSet["data"].text.text1;
-				text2 = mybotDataSet["data"].text.text2;
-				text3 = mybotDataSet["data"].text.text3;
-				text4 = mybotDataSet["data"].text.text4;
-				text5 = mybotDataSet["data"].text.text5;
-				text6 = mybotDataSet["data"].text.text6;
-				text7 = mybotDataSet["data"].text.text7;
-				text8 = mybotDataSet["data"].text.text8;
-				text9 = mybotDataSet["data"].text.text9;
-				if(typeof mybotMultipleDataFace !== "undefined" && mybotMultipleDataFace ==1){
-					if(text1 != 'none'){
-						document.getElementById('mybotWorldCases').innerText = text1;
-					}
-					if(text2 != 'none'){
-						document.getElementById('mybotWorldDeathsCases').innerText = text2;
-					}
-					if(text3 != 'none'){
-						document.getElementById('mybotWorldRecoveredCases').innerText = text3;
-					}
-					if(text4 != 'none'){
-						document.getElementById('mybotCountryName').innerText = text4;
-					}
-					if(text5 != 'none'){
-						document.getElementById('mybotCountryName2').innerText = text5;
-					}
-					if(text6 != 'none'){
-						document.getElementById('mybotIndiaRecoveredCases').innerText = text6;
-					}
-					if(text7 != 'none'){
-						document.getElementById('mybotUaeCases').innerText = text7;
-					}
-					if(text8 != 'none'){
-						document.getElementById('mybotUaeDeathsCases').innerText = text8;
-					}
-					if(text9 != 'none'){
-						document.getElementById('mybotUaeRecoveredCases').innerText = text9;
+				if(typeof mybotSecondSlideLocalDataPresent !== "undefined" && mybotSecondSlideLocalDataPresent ==1){
+					if(mybotDataSet["data"].thirdlocation !== undefined){
+						local_text = mybotDataSet["data"].thirdlocation.location;
+						local_count = mybotDataSet["data"].thirdlocation.deaths;
+						document.getElementById('mybotFace2TempContent').innerText = capitalizeFLetter(local_text)+" Deaths";;
+						document.getElementById('mybotFace2TempCount').innerText = local_count;
 					}
 				}
-				else{
-					if(text1 != 'none'){
-						document.getElementById('mybotWorldCases').innerText = text1;
+				if(typeof mybotDynamicRedirectLinkEnabled !== "undefined" && mybotDynamicRedirectLinkEnabled == 1){
+					if(mybotDataSet["data"].text.redirectLink !== undefined && mybotDataSet["data"].text.redirectLink != 'none'){
+						redirectLink = mybotDataSet["data"].text.redirectLink;
+						if(typeof mybotAppendReferLink !== undefined){
+							redirectLink += mybotAppendReferLink;
+						}
+						document.getElementById('mybotstage').addEventListener('click', function() {
+							if(mybotDragClick == false){
+                window.open(redirectLink, '_blank');
+              }
+							setTimeout(function(){
+						   mybotDragClick = false;
+						  }, 200);
+					 });
 					}
-					if(text2 != 'none'){
-						document.getElementById('mybotWorldDeathsCases').innerText = text2;
+				}
+				if(mybotDataSet["data"].text !== undefined){
+					text1 = mybotDataSet["data"].text.text1;
+					text2 = mybotDataSet["data"].text.text2;
+					text3 = mybotDataSet["data"].text.text3;
+					text4 = mybotDataSet["data"].text.text4;
+					text5 = mybotDataSet["data"].text.text5;
+					text6 = mybotDataSet["data"].text.text6;
+					text7 = mybotDataSet["data"].text.text7;
+					text8 = mybotDataSet["data"].text.text8;
+					text9 = mybotDataSet["data"].text.text9;
+					if(typeof mybotMultipleDataFace !== "undefined" && mybotMultipleDataFace ==1){
+						if(text1 != 'none'){
+							document.getElementById('mybotWorldCases').innerText = text1;
+						}
+						if(text2 != 'none'){
+							document.getElementById('mybotWorldDeathsCases').innerText = text2;
+						}
+						if(text3 != 'none'){
+							document.getElementById('mybotWorldRecoveredCases').innerText = text3;
+						}
+						if(text4 != 'none'){
+							document.getElementById('mybotCountryName').innerText = text4;
+						}
+						if(text5 != 'none'){
+							document.getElementById('mybotCountryName2').innerText = text5;
+						}
+						if(text6 != 'none'){
+							document.getElementById('mybotIndiaRecoveredCases').innerText = text6;
+						}
+						if(text7 != 'none'){
+							document.getElementById('mybotUaeCases').innerText = text7;
+						}
+						if(text8 != 'none'){
+							document.getElementById('mybotUaeDeathsCases').innerText = text8;
+						}
+						if(text9 != 'none'){
+							document.getElementById('mybotUaeRecoveredCases').innerText = text9;
+						}
 					}
-					if(text3 != 'none'){
-						document.getElementById('mybotCountryName').innerText = text3;
-					}
-					if(text4 != 'none'){
-						document.getElementById('mybotCountryName2').innerText = text4;
-					}
-					if(text5 != 'none'){
-						document.getElementById('mybotPrecautionText').innerText = text5;
+					else{
+						if(text1 != 'none'){
+							document.getElementById('mybotWorldCases').innerText = text1;
+						}
+						if(text2 != 'none'){
+							document.getElementById('mybotWorldDeathsCases').innerText = text2;
+						}
+						if(text3 != 'none'){
+							document.getElementById('mybotCountryName').innerText = text3;
+						}
+						if(text4 != 'none'){
+							document.getElementById('mybotCountryName2').innerText = text4;
+						}
+						if(text5 != 'none'){
+							document.getElementById('mybotPrecautionText').innerText = text5;
+						}
 					}
 				}
 			}
-		}
-
 	}
 }
 
 function getScore() {
 	var request = new XMLHttpRequest();
-	url = 'https://api.warw.in/coronaWidget1/'+mybotStatAPI;
+	url = 'https://unibots.warw.in//'+mybotStatAPI;
 	// console.log(url);
 	request.open('GET', url, true);
 	request.onload = function() {
@@ -796,4 +876,4 @@ function capitalizeFLetter(input) {
   x = string.charAt(0).toUpperCase() + string.slice(1);
 	 return x;
 }
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div class="row"> <div class="mybotstage" id="mybotstage"> <div class="mybotcubespinner"> <div class="mybotface1 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldCases"> World Cases </span> <div class="mybotCount" id="mybotWorldCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface2 mybotface"></div> <div class="mybotface3 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldDeathsCases"> World Deaths </span> <div class="mybotCount" id="mybotWorldDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface4 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName"> India Cases </span> <div class="mybotCount" id="mybotCountryCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface5 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName2"> India Deaths </span> <div class="mybotCount" id="mybotCountryDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface6 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <span class="mybotScoreLiveDot"></span> <div class="mybotSummary"> <span class="mybotLocation" id="mybotPrecautionText"> Stay Safe! </span>  </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> </div> <div class="row"> <div class="col-hgt-ad" id="adSmall">  </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='@media screen and (max-width:635px;){mybot .profile_div{height:130px!important}}mybot .col-hgt-ad{height:50px;float:right;position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{cursor:pointer}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#000!important}.mybotBottomBar,.mybotTopBar{background:#ac0036!important;color:#fff!important;font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:10px!important}mybot .mybotcubespinner .mybotface2{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget45/madhyamam.png)!important;background-size:102px 102px!important}@media screen and (max-width:635px){mybot .mybotcubespinner .mybotface2{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget45/madhyamam.png)!important;background-size:82px 82px!important}mybot .col-hgt-ad{position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{position:absolute;pointer-events:all;bottom:50px!important;cursor:pointer}.mybotBottomBar,.mybotTopBar{font-size:8px!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#000!important}.mybotPoweredByBrand{font-weight:600!important;font-size:8px!important}}mybot .mybotcubespinner .mybotface1,.mybotface6,.mybotface3,.mybotface5,.mybotface4{background:#fff!important}mybot .mybotLiveCasesText{color:red!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);@import url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget32/NotoSerifBengali-hinted/NotoSerifBengali-Regular.ttf);mybot{font-family:"Lato",sans-serif;font-size:14px;font-weight:400;color:#333;position:sticky;z-index:2147483640;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;height:150px;cursor:default;z-index:2147483647;pointer-events:none}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)!important}@keyframes mybotspincube{from,to{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}12%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}16%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}30%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}33%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}47%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}50%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}63%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}66%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}80%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}83%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}97%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50px 50px 0;-moz-transform-origin:50px 50px 0;-ms-transform-origin:50px 50px 0;transform-origin:50px 50px 0}mybot .mybotcubespinner .mybotface{position:absolute;width:100px;height:100px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 20px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(50px);-moz-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(50px);-moz-transform:rotateY(90deg) translateZ(50px);-ms-transform:rotateY(90deg) translateZ(50px);transform:rotateY(90deg) translateZ(50px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);transform:rotateY(90deg) rotateX(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(50px);-moz-transform:rotateX(-90deg) translateZ(50px);-ms-transform:rotateX(-90deg) translateZ(50px);transform:rotateX(-90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotstage{width:100px;height:100px;bottom:50px;position:absolute;right:25px;font-size:15px;pointer-events:all}.mybotTopBar{background:red;width:100px;height:15px;border-bottom:1px solid #fff;color:#fff;text-align:center;margin:auto;line-height:15px}.mybotPoweredBy{font-size:9px;font-weight:600}.mybotPoweredByBrand{font-size:12px;font-weight:600}.mybotBottomBar{background:red;width:100px;height:15px;color:#fff;margin:auto;line-height:15px;text-align:center;bottom:0;position:absolute;font-size:12px}.mybotSummary{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;font-family:"Baloo Chettan 2",cursive}.mybotContent{color:#fff;text-align:center;overflow:hidden}@-webkit-keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@media screen and (max-width:635px){mybot .profile_div{width:320px;height:130px}.mybotSummary{font-size:12px}.mybotTopBar,.mybotBottomBar{width:80px;font-size:10px}.mybotPoweredBy{font-size:7px}.mybotPoweredByBrand{font-size:8px}mybot .mybotcubespinner .mybotface{position:absolute;width:80px;height:80px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 10px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotstage{width:80px;height:80px;bottom:52px;position:absolute;right:20px;font-size:15px;pointer-events:all}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(40px);-moz-transform:translateZ(40px);-ms-transform:translateZ(40px);transform:translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(40px);-moz-transform:rotateY(90deg) translateZ(40px);-ms-transform:rotateY(90deg) translateZ(40px);transform:rotateY(90deg) translateZ(40px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);transform:rotateY(90deg) rotateX(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(40px);-moz-transform:rotateX(-90deg) translateZ(40px);-ms-transform:rotateX(-90deg) translateZ(40px);transform:rotateX(-90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:40px 40px 0;-moz-transform-origin:40px 40px 0;-ms-transform-origin:40px 40px 0;transform-origin:40px 40px 0}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div class="row"> <div class="mybotstage" id="mybotstage"> <div class="mybotcubespinner"> <div class="mybotface1 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldCases"> World Cases </span> <div class="mybotCount" id="mybotWorldCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface2 mybotface"></div> <div class="mybotface3 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldDeathsCases"> World Deaths </span> <div class="mybotCount" id="mybotWorldDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface4 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName"> India Cases </span> <div class="mybotCount" id="mybotCountryCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface5 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName2"> India Deaths </span> <div class="mybotCount" id="mybotCountryDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface6 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <span class="mybotScoreLiveDot"></span> <div class="mybotSummary"> <span class="mybotLocation" id="mybotPrecautionText"> Stay Safe! </span>  </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> </div> <div class="row"> <div class="col-hgt-ad" id="adSmall">  </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='@media screen and (max-width:635px;){mybot .profile_div{height:130px!important}}mybot .col-hgt-ad{height:50px;float:right;position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{cursor:pointer}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#000!important}.mybotBottomBar,.mybotTopBar{background:#ac0036!important;color:#fff!important;font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:10px!important}mybot .mybotcubespinner .mybotface2{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget45/madhyamam.png)!important;background-size:102px 102px!important}@media screen and (max-width:635px){mybot .mybotcubespinner .mybotface2{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget45/madhyamam.png)!important;background-size:82px 82px!important}mybot .col-hgt-ad{position:absolute!important;bottom:0px!important;pointer-events:all}mybot .mybotstage{position:absolute;pointer-events:all;bottom:50px!important;cursor:pointer}.mybotBottomBar,.mybotTopBar{font-size:8px!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#000!important}.mybotPoweredByBrand{font-weight:600!important;font-size:8px!important}}mybot .mybotcubespinner .mybotface1,.mybotface6,.mybotface3,.mybotface5,.mybotface4{background:#fff!important}mybot .mybotLiveCasesText{color:red!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);@import url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget32/NotoSerifBengali-hinted/NotoSerifBengali-Regular.ttf);mybot{font-family:"Lato",sans-serif;font-size:14px;font-weight:400;color:#333;position:sticky;z-index:2147483640;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:320px;height:150px;cursor:default;z-index:2147483647;pointer-events:none}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)!important}@keyframes mybotspincube{from,to{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}12%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}16%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}30%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}33%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}47%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}50%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}63%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}66%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}80%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}83%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}97%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50px 50px 0;-moz-transform-origin:50px 50px 0;-ms-transform-origin:50px 50px 0;transform-origin:50px 50px 0}mybot .mybotcubespinner .mybotface{position:absolute;width:100px;height:100px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 20px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(50px);-moz-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(50px);-moz-transform:rotateY(90deg) translateZ(50px);-ms-transform:rotateY(90deg) translateZ(50px);transform:rotateY(90deg) translateZ(50px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);transform:rotateY(90deg) rotateX(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(50px);-moz-transform:rotateX(-90deg) translateZ(50px);-ms-transform:rotateX(-90deg) translateZ(50px);transform:rotateX(-90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotstage{width:100px;height:100px;bottom:50px;position:absolute;right:25px;font-size:15px;pointer-events:all}.mybotTopBar{background:red;width:100px;height:15px;border-bottom:1px solid #fff;color:#fff;text-align:center;margin:auto;line-height:15px}.mybotPoweredBy{font-size:9px;font-weight:600}.mybotPoweredByBrand{font-size:12px;font-weight:600}.mybotBottomBar{background:red;width:100px;height:15px;color:#fff;margin:auto;line-height:15px;text-align:center;bottom:0;position:absolute;font-size:12px}.mybotSummary{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;font-family:"Baloo Chettan 2",cursive}.mybotContent{color:#fff;text-align:center;overflow:hidden}@-webkit-keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@media screen and (max-width:635px){mybot .profile_div{width:320px;height:130px}.mybotSummary{font-size:12px}.mybotTopBar,.mybotBottomBar{width:80px;font-size:10px}.mybotPoweredBy{font-size:7px}.mybotPoweredByBrand{font-size:8px}mybot .mybotcubespinner .mybotface{position:absolute;width:80px;height:80px;border:1px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 10px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotstage{width:80px;height:80px;bottom:52px;position:absolute;right:20px;font-size:15px;pointer-events:all}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(40px);-moz-transform:translateZ(40px);-ms-transform:translateZ(40px);transform:translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(40px);-moz-transform:rotateY(90deg) translateZ(40px);-ms-transform:rotateY(90deg) translateZ(40px);transform:rotateY(90deg) translateZ(40px);background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/timesnowdemo.jpg);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);transform:rotateY(90deg) rotateX(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(40px);-moz-transform:rotateX(-90deg) translateZ(40px);-ms-transform:rotateX(-90deg) translateZ(40px);transform:rotateX(-90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:40px 40px 0;-moz-transform-origin:40px 40px 0;-ms-transform-origin:40px 40px 0;transform-origin:40px 40px 0}}mybot .closeBotFrontTop{margin-top:150px}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});

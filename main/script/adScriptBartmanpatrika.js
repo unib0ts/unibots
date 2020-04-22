@@ -7,33 +7,33 @@ var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 
 var adUnits = [{
-  code: '/21957769615/indiantelevision.com',
+  code: '/21957769615/bartmanpatrika.com_nb_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: sizes
 	  }
   },
   bids: [
-//    {
-//    	bidder: 'oftmedia',
-//    	params: {placementId: '18778192'}
-//    },
+    // {
+    // 	bidder: 'oftmedia',
+    // 	params: {placementId: '18671527'}
+    // },
     {
     	bidder: 'eplanning',
     	params: {ci: '2cfed', ml: '1'}
     },
-    {
-    	bidder: '33across',
-    	params: {siteId: 'aT6cnUBuar6PWLaKlId8sQ', productId: 'siab'}
-    },
-    {
-    	bidder: 'emx_digital',
-    	params: {tagid: '97557'}
-    },
-    {
-      bidder: 'sovrn',
-    	params: {tagid: '701559'}
-    }
+    // {
+    // 	bidder: '33across',
+    // 	params: {siteId: 'afgup6Buar6PWLaKlId8sQ', productId: 'siab'}
+    // },
+    // {
+    // 	bidder: 'emx_digital',
+    // 	params: {tagid: '97460'}
+    // //},
+    // //{
+    // //	bidder: 'rhythmone',
+    // //	params: {placementId: '205372'}
+    // }
   ]
 }];
 
@@ -48,7 +48,7 @@ ubpbjs.que.push(function() {
   });
   ubpbjs.requestBids({
     timeout: PREBID_TIMEOUT,
-    adUnitCodes: ['/21957769615/indiantelevision.com_NB_320x50'],
+    adUnitCodes: ['/21957769615/bartmanpatrika.com_nb_320x50'],
     bidsBackHandler: initAdserver
   });
 });
@@ -104,7 +104,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21957769615/indiantelevision.com', sizes, 'div-ub-1')
+  slot1 = googletag.defineSlot('/21957769615/bartmanpatrika.com_nb_320x50', sizes, 'div-ub-1')
 	.addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
@@ -120,9 +120,9 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21957769615/indiantelevision.com'],
+		  adUnitCodes: ['/21957769615/bartmanpatrika.com_nb_320x50'],
 		  bidsBackHandler: function() {
-			  ubpbjs.setTargetingForGPTAsync(['/21957769615/indiantelevision.com']);
+			  ubpbjs.setTargetingForGPTAsync(['/21957769615/bartmanpatrika.com_nb_320x50']);
 			  googletag.pubads().refresh([slot1]);
 		  }
 	  });

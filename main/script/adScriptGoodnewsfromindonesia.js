@@ -121,7 +121,7 @@ googletag.cmd.push(function() {
 
 function refreshBid() {
   ubpbjs.que.push(function() {
-	  ubpbjs.requestBidsd
+	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
 		  adUnitCodes: ['/21956916242/Goodnewsfromindonesia.id_nb_320x50'],
 		  bidsBackHandler: function() {

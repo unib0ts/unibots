@@ -23,7 +23,8 @@ var adUnits = [{
   bids: [
     {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'appnexus', params: { placementId: '18926432', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
-    { bidder: 'sovrn', params: {tagid: '701548'} }
+    { bidder: 'sovrn', params: {tagid: '701548'} },
+    { bidder: 'openx', params: {unit: '541046670', delDomain: 'yieldbird-d.openx.net'} }
   ]
 }];
 

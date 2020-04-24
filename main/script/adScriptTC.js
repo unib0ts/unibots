@@ -27,7 +27,8 @@ var adUnits = [{
     { bidder: 'oftmedia', params: { placementId: '18778201', allowSmallerSizes: true } },
     { bidder: '33across', params: { siteId : 'ccvHyIBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97555' } }, /* sizeless */
-    { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+    { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    { bidder: 'openx', params: {unit: '541046330', delDomain: 'yieldbird-d.openx.net'} }
   ]
 }];
 

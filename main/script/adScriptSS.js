@@ -25,7 +25,8 @@ var adUnits = [{
     { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
     { bidder: 'emx_digital', params: {tagid: '97515'} },
     { bidder: 'appnexus', params: {placementId: '18926466'} },
-    { bidder: 'sovrn', params: {tagid: '708881'} }
+    { bidder: 'sovrn', params: {tagid: '708881'} },
+    { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} }
   ]
 }];
 

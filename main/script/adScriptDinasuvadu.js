@@ -22,7 +22,8 @@ var adUnits = [{
   },
   bids: [
     { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    { bidder: 'sovrn', params: {tagid: '708891'} }
+    { bidder: 'sovrn', params: {tagid: '708891'} },
+    { bidder: 'openx', params: {unit: '541046673', delDomain: 'yieldbird-d.openx.net'} }
   ]
 }];
 

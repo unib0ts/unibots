@@ -1,6 +1,6 @@
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 40000;
+var REFRESH_TIMEOUT = 60000;
 
 const customConfigObjectA = {
  "buckets" : [{
@@ -24,7 +24,7 @@ var adUnits = [{
     { bidder: 'appnexus', params: { placementId: '19057758', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '710756'} },
     { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-    { bidder: 'openx', params: {unit: '541046471', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'openx', params: {unit: '541046471', delDomain: 'yieldbird-d.openx.net'} }
   ]
 }];
 

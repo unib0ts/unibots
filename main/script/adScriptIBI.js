@@ -26,7 +26,8 @@ var adUnits = [{
     { bidder: '33across', params: { siteId : 'aLBS4SBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97551' } }, /* sizeless */
     { bidder: 'sovrn', params: {tagid: '710751'} },
-    { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+    { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    { bidder: 'openx', params: {unit: '541046079', delDomain: 'yieldbird-d.openx.net'} }
   ]
 }];
 

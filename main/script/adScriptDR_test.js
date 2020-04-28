@@ -38,7 +38,13 @@ var adUnits = [
         mediaTypes: {
           native: {
             image: {
-              sizes: [300, 100],
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
               sendId: true
             },
             title: {

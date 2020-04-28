@@ -16,19 +16,19 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
     {
-        code: '/21956033520/mediaonetv.in_nb_320x50_new',
+        code: '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19054400', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+        	// { bidder: 'appnexus', params: { placementId: '19054400', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
         	//{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '716637'} },
-          { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
-        	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          // { bidder: 'sovrn', params: {tagid: '716637'} },
+          // { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
+        	// { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }
@@ -114,7 +114,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956033520/mediaonetv.in_nb_320x50_new', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21957769615/mediaonetv.in_NB_320x50_directcampaign', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -131,7 +131,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956033520/mediaonetv.in_nb_320x50_new'],
+		  adUnitCodes: ['/21957769615/mediaonetv.in_NB_320x50_directcampaign'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

@@ -38,7 +38,7 @@ var adUnits = [
         mediaTypes: {
           native: {
             image: {
-              sizes: div_1_sizes,
+              sizes: [300, 100],
               sendId: true
             },
             title: {

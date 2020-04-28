@@ -22,7 +22,8 @@ var adUnits = [{
   bids: [
     { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'appnexus', params: { placementId: '19054395', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
-    { bidder: 'sovrn', params: {tagid: '708876'} }
+    { bidder: 'sovrn', params: {tagid: '708876'} },
+    { bidder: 'nobid', params: { siteId : '21975045720'} }
   ]
 }];
 

@@ -30,7 +30,8 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '713871'} },
           { bidder: 'openx', params: {unit: '541045931', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '21975043611'} }
         ]
     }
 ];

@@ -32,6 +32,32 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
+    },
+    {
+        code: '/21956916242/dailyrecruitment.in_NB_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              sizes: div_1_sizes,
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+        	{ bidder: 'appnexus', params: { placementId: '18926432', allowSmallerSizes: true } }
+        ]
     }
 ];
 

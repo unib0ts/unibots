@@ -13,59 +13,29 @@ const customConfigObjectA = {
 
 var div_1_sizes = [320, 50];
 
+
 var adUnits = [
-  {
-    code: '/21957769615/maalaimalar.com_NB_320x50',
-    mediaTypes: {
-  	  banner: {
-  		  sizes: div_1_sizes
-  	  }
-    },
-    bids: [
-      { bidder: 'appnexus', params: { placementId: '19056046', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
-      { bidder: 'oftmedia', params: { placementId: '18677434', allowSmallerSizes: true } },
-      { bidder: '33across', params: { siteId : 'a6LzVMBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-      { bidder: 'emx_digital', params: { tagid: '97488' } }, /* sizeless */
-      { bidder: 'sovrn', params: {tagid: '710746'} },
-      { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-      { bidder: 'openx', params: {unit: '541046171', delDomain: 'yieldbird-d.openx.net'} }
-    ]
-  },
-  {
-      code: '/21957769615/maalaimalar.com_NB_320x50',
-      mediaTypes: {
-        native: {
-          image: {
-            // sizes: [300, 100],
-            aspect_ratios: [{
-              min_width: 100,        /* Optional */
-              min_height: 50,       /* Optional */
-              ratio_width: 2,        /* Required */
-              ratio_height: 1,       /* Required */
-            }],
-            sendId: true
-          },
-          title: {
-            len: 50,
-            sendId: true
-          },
-          sponsoredBy: {
-            required: true,
-            sendId: true
-          },
-          clickUrl: {
-            required: true,
-            sendId: true
-          }
-        }
-      },
-      bids: [
-        { bidder: 'appnexus', params: { placementId: '19056046', allowSmallerSizes: true } },
-        { bidder: 'oftmedia', params: { placementId: '18677434', allowSmallerSizes: true } }
-      ]
-  }
+    {
+        code: '/21956916242/bhopalsamachar.com_nb_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+          // { bidder: 'appnexus', params: { placementId: '19056061', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+        	// { bidder: 'oftmedia', params: { placementId: '18671523', allowSmallerSizes: true } },
+        	// { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+          // { bidder: 'sovrn', params: {tagid: '701548'} },
+          // { bidder: 'openx', params: {unit: '541046208', delDomain: 'yieldbird-d.openx.net'} },
+        	// { bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        ]
+    }
 ];
 
+// ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
@@ -108,7 +78,7 @@ ubpbjs.que.push(function() {
       useBidCache: false,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://www.maalaimalar.com/',
+      publisherDomain: 'https://www.bhopalsamachar.com/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -136,24 +106,24 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21957769615/maalaimalar.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-  googletag.pubads().collapseEmptyDivs(true);
-  googletag.pubads().setCentering(true);
-  googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-  googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
-  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot1) {
-        ub_checkAdRendered();
-      }
-  });
+    ub_slot1 = googletag.defineSlot('/21956916242/bhopalsamachar.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    googletag.pubads().collapseEmptyDivs(true);
+    googletag.pubads().setCentering(true);
+    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot1) {
+          ub_checkAdRendered();
+        }
+    });
 });
 
 function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21957769615/maalaimalar.com_NB_320x50'],
+		  adUnitCodes: ['/21956916242/bhopalsamachar.com_nb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

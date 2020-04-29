@@ -13,23 +13,58 @@ const customConfigObjectA = {
 
 var div_1_sizes = [320, 50];
 
-var adUnits = [{
-  code: '/21957769615/maalaimalar.com_NB_320x50',
-  mediaTypes: {
-	  banner: {
-		  sizes: div_1_sizes
-	  }
+var adUnits = [
+  {
+    code: '/21957769615/maalaimalar.com_NB_320x50',
+    mediaTypes: {
+  	  banner: {
+  		  sizes: div_1_sizes
+  	  }
+    },
+    bids: [
+      { bidder: 'appnexus', params: { placementId: '19056046', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+      { bidder: 'oftmedia', params: { placementId: '18677434', allowSmallerSizes: true } },
+      { bidder: '33across', params: { siteId : 'a6LzVMBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+      { bidder: 'emx_digital', params: { tagid: '97488' } }, /* sizeless */
+      { bidder: 'sovrn', params: {tagid: '710746'} },
+      { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      { bidder: 'openx', params: {unit: '541046171', delDomain: 'yieldbird-d.openx.net'} }
+    ]
   },
-  bids: [
-    { bidder: 'appnexus', params: { placementId: '19056046', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
-    { bidder: 'oftmedia', params: { placementId: '18677434', allowSmallerSizes: true } },
-    { bidder: '33across', params: { siteId : 'a6LzVMBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-    { bidder: 'emx_digital', params: { tagid: '97488' } }, /* sizeless */
-    { bidder: 'sovrn', params: {tagid: '710746'} },
-    { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-    { bidder: 'openx', params: {unit: '541046171', delDomain: 'yieldbird-d.openx.net'} }
-  ]
-}];
+  {
+      code: '/21957769615/maalaimalar.com_NB_320x50',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056046', allowSmallerSizes: true } },
+        { bidder: 'oftmedia', params: { placementId: '18677434', allowSmallerSizes: true } }
+      ]
+  }
+];
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];

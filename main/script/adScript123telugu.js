@@ -18,6 +18,39 @@ var adUnits = [
     {
         code: '/21928950349/123telugu.com_nb_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19053207', allowSmallerSizes: true } },
+          { bidder: 'oftmedia', params: { placementId: '18671514', allowSmallerSizes: true } }
+        ]
+    },
+    {
+        code: '/21928950349/123telugu.com_nb_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
@@ -31,7 +64,9 @@ var adUnits = [
           { bidder: 'openx', params: {unit: '541045931', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          { bidder: 'nobid', params: { siteId : '21975043611'} }
+          { bidder: 'nobid', params: { siteId : '21975043611'} },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
         ]
     }
 ];

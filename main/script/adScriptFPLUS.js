@@ -18,6 +18,39 @@ var adUnits = [
     {
         code: '/21928950349/facultyplus.com_nb_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19054708', allowSmallerSizes: true } },
+          { bidder: 'oftmedia', params: { placementId: '18671640', allowSmallerSizes: true } }
+        ]
+    },
+    {
+        code: '/21928950349/facultyplus.com_nb_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
@@ -30,7 +63,8 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '701552'} },
           { bidder: 'openx', params: {unit: '541046043', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }
 ];

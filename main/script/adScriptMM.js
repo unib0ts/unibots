@@ -61,7 +61,9 @@ var adUnits = [
       { bidder: 'emx_digital', params: { tagid: '97488' } }, /* sizeless */
       { bidder: 'sovrn', params: {tagid: '710746'} },
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-      { bidder: 'openx', params: {unit: '541046171', delDomain: 'yieldbird-d.openx.net'} }
+      { bidder: 'openx', params: {unit: '541046171', delDomain: 'yieldbird-d.openx.net'} },
+      { bidder: 'criteo', params: {networkId: '4902'} },
+      { bidder: 'rubicon', params: {accountId: '11734', siteId: '323746', zoneId: '1680434'} }
     ]
   }
 ];

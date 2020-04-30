@@ -13,7 +13,41 @@ const customConfigObjectA = {
 
 var div_1_sizes = [320, 50];
 
-var adUnits = [{
+var adUnits = [
+  {
+      code: '/21957769615/ragalahari.com_nb_320x50',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056651', allowSmallerSizes: true } },
+        { bidder: 'oftmedia', params: { placementId: '18677505', allowSmallerSizes: true } }
+      ]
+  },
+  {
   code: '/21957769615/ragalahari.com_nb_320x50',
   mediaTypes: {
 	  banner: {
@@ -27,7 +61,9 @@ var adUnits = [{
     { bidder: '33across', params: { siteId : 'bNbIJABuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97514' } }, /* sizeless */
     { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-    { bidder: 'openx', params: {unit: '541046261', delDomain: 'yieldbird-d.openx.net'} }
+    { bidder: 'openx', params: {unit: '541046261', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'criteo', params: {networkId: '4902'} },
+    { bidder: 'rubicon', params: {accountId: '11734', siteId: '323844', zoneId: '1680718'} }
   ]
 }];
 

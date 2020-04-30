@@ -14,7 +14,41 @@ const customConfigObjectA = {
 var div_1_sizes = [320, 50];
 
 
-var adUnits = [{
+var adUnits = [
+  {
+      code: '/21957769615/tellychakkar.com_NB_320x50',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19057694', allowSmallerSizes: true } },
+        { bidder: 'oftmedia', params: { placementId: '18778201', allowSmallerSizes: true } }
+      ]
+  },
+  {
   code: '/21957769615/tellychakkar.com_NB_320x50',
   mediaTypes: {
 	  banner: {
@@ -23,12 +57,13 @@ var adUnits = [{
   },
   bids: [
     { bidder: 'appnexus', params: { placementId: '19057694', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
-    { bidder: 'sovrn', params: {tagid: '710738'} },
     { bidder: 'oftmedia', params: { placementId: '18778201', allowSmallerSizes: true } },
+    { bidder: 'sovrn', params: {tagid: '710738'} },
     { bidder: '33across', params: { siteId : 'ccvHyIBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97555' } }, /* sizeless */
     { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-    { bidder: 'openx', params: {unit: '541046330', delDomain: 'yieldbird-d.openx.net'} }
+    { bidder: 'openx', params: {unit: '541046330', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];
 

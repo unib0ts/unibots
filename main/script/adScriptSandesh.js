@@ -18,16 +18,55 @@ var adUnits = [
     {
         code: '/21957769615/sandesh.com_nb_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19056689', allowSmallerSizes: true } },
+          { bidder: 'oftmedia', params: { placementId: '18677508', allowSmallerSizes: true } }
+        ]
+    },
+    {
+        code: '/21957769615/sandesh.com_nb_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19056689', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'oftmedia', params: { placementId: '18677508', allowSmallerSizes: true } },
           { bidder: 'sovrn', params: {tagid: '711904'} },
           { bidder: 'openx', params: {unit: '541046312', delDomain: 'yieldbird-d.openx.net'} },
-        	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'rhythmone', params: { placementId: '205382' } }, /* one placementId for all sizes */
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        	{ bidder: '33across', params: { siteId : 'bSOt5QBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        	{ bidder: 'emx_digital', params: { tagid: '97517' } }, /* sizeless */
+          { bidder: 'nobid', params: { siteId : '21986889220'} },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323848', zoneId: '1680746'} }
         ]
     }
 ];

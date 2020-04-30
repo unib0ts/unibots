@@ -24,7 +24,8 @@ mybotScrollStartPixelHeight = 0;
 mybotCountryDataname = 'india';
 mybotCountryDataname2 = 'United Arab Emirates';
 
-mybotadSmall = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21928950349/covin19-unibots_300x250", [300, 250], "div-ub-test1").addService(googletag.pubads());googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="div-ub-test1" style="width: 300px; height:250px;""><script>googletag.cmd.push(function() { googletag.display("div-ub-test1"); });</script></div>';
+// mybotadSmall = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21928950349/covin19-unibots_300x250", [300, 250], "div-ub-test1").addService(googletag.pubads());googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="div-ub-test1" style="width: 300px; height:250px;""><script>googletag.cmd.push(function() { googletag.display("div-ub-test1"); });</script></div>';
+mybotadSmall = '';
 
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/genericCorona/close.svg" alt="Close Covid-19 Tracker">';
@@ -36,7 +37,8 @@ function mybotCustomFunction() {
 }
 
 function loadAdCustom() {
-	loadAd('adSmall');
+	// loadAd('adSmall');
+  return false;
 }
 
 // =============================================================================

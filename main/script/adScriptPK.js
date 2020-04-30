@@ -12,7 +12,40 @@ const customConfigObjectA = {
     }]
 };
 
-var adUnits = [{
+var adUnits = [
+  {
+      code: '/21956916242/punjabkesari.in_NB_320x50',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056303', allowSmallerSizes: true } }
+      ]
+  },
+  {
   code: '/21956916242/punjabkesari.in_NB_320x50',
   mediaTypes: {
 	  banner: {
@@ -25,7 +58,9 @@ var adUnits = [{
     {	bidder: 'emx_digital', params: {tagid: '97507'} },
     { bidder: 'appnexus', params: { placementId: '19056303', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708884'} },
-    { bidder: 'openx', params: {unit: '541046242', delDomain: 'yieldbird-d.openx.net'} }
+    { bidder: 'openx', params: {unit: '541046242', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'criteo', params: {networkId: '4902'} },
+    { bidder: 'rubicon', params: {accountId: '11734', siteId: '323836', zoneId: '1680698'} }
   ]
 }];
 

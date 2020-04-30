@@ -13,7 +13,40 @@ const customConfigObjectA = {
     }]
 };
 
-var adUnits = [{
+var adUnits = [
+  {
+      code: '/21956916242/dinasuvadu.com_nb_320x50',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19140380', allowSmallerSizes: true } }
+      ]
+  },
+  {
   code: '/21956916242/dinasuvadu.com_nb_320x50',
   mediaTypes: {
 	  banner: {
@@ -21,9 +54,11 @@ var adUnits = [{
 	  }
   },
   bids: [
+    { bidder: 'appnexus', params: { placementId: '19140380', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'sovrn', params: {tagid: '708891'} },
-    { bidder: 'openx', params: {unit: '541046673', delDomain: 'yieldbird-d.openx.net'} }
+    { bidder: 'openx', params: {unit: '541046673', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];
 

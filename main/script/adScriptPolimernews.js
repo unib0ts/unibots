@@ -43,7 +43,7 @@ var adUnits = [
         }
       },
       bids: [
-        { bidder: 'appnexus', params: { placementId: '19054416', allowSmallerSizes: true } }
+        { bidder: 'appnexus', params: { placementId: '19054416' } }
       ]
   },
   {
@@ -55,7 +55,7 @@ var adUnits = [
   },
   bids: [
     {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    { bidder: 'appnexus', params: { placementId: '19054416', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+    { bidder: 'appnexus', params: { placementId: '19054416' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708887'} },
     {  bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     { bidder: 'openx', params: {unit: '541046670', delDomain: 'yieldbird-d.openx.net'} },

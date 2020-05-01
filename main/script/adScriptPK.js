@@ -42,7 +42,7 @@ var adUnits = [
         }
       },
       bids: [
-        { bidder: 'appnexus', params: { placementId: '19056303', allowSmallerSizes: true } }
+        { bidder: 'appnexus', params: { placementId: '19056303' } }
       ]
   },
   {
@@ -56,7 +56,7 @@ var adUnits = [
     { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: '33across', params: {siteId: 'bFxQqeBuar6PWLaKlId8sQ', productId: 'siab'} },
     {	bidder: 'emx_digital', params: {tagid: '97507'} },
-    { bidder: 'appnexus', params: { placementId: '19056303', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+    { bidder: 'appnexus', params: { placementId: '19056303' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708884'} },
     { bidder: 'openx', params: {unit: '541046242', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'criteo', params: {networkId: '4902'} },

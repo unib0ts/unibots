@@ -42,8 +42,8 @@ var adUnits = [
         }
       },
       bids: [
-        { bidder: 'appnexus', params: { placementId: '19056673', allowSmallerSizes: true } },
-        { bidder: 'oftmedia', params: { placementId: '18778196', allowSmallerSizes: true } }
+        { bidder: 'appnexus', params: { placementId: '19056673' } },
+        { bidder: 'oftmedia', params: { placementId: '18778196' } }
       ]
   },
   {

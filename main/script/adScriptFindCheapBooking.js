@@ -23,7 +23,7 @@ var adUnits = [
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19107705', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '19107705' } }, /* one placementId for all sizes  my appnexus bidder */
         	//{ bidder: '33across', params: { siteId : 'bCur3iBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '716627'} },

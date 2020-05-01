@@ -18,18 +18,52 @@ var adUnits = [
     {
         code: '/21956238066/sarkarijobfind.com_NB_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19056722' } }
+        ]
+    },
+    {
+        code: '/21956238066/sarkarijobfind.com_NB_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19056722', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '19056722' } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: '33across', params: { siteId : 'bXnoMgBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97520' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '716603'} },
           { bidder: 'openx', params: {unit: '541046319', delDomain: 'yieldbird-d.openx.net'} },
-        	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'rhythmone', params: { placementId: '205374' } }, /* one placementId for all sizes */
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323868', zoneId: '1680754'} }
         ]
     }
 ];

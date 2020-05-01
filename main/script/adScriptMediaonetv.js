@@ -18,18 +18,51 @@ var adUnits = [
     {
         code: '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19054400' } }
+        ]
+    },
+    {
+        code: '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19054400' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '19054400' } }, /* one placementId for all sizes  my appnexus bidder */
         	//{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '716637'} },
-          // { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'sovrn', params: {tagid: '716637'} },
+          { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }
 ];

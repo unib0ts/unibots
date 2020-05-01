@@ -68,8 +68,7 @@ ubpbjs.bidderSettings = {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21928950349/andhrajyothy.com_NB_320x50', sizes, 'div-gpt-ad-ub-1')
-	.addService(googletag.pubads());
+  ub_slot1 = googletag.defineSlot('/21928950349/andhrajyothy.com_NB_320x50', sizes, 'div-gpt-ad-ub-1').addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();

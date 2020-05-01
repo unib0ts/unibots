@@ -211,8 +211,7 @@ ubpbjs.bidderSettings = {
 
 var slot1;
 googletag.cmd.push(function() {
-  slot1 = googletag.defineSlot('/21928950349/trainman.in_NB_320x50', sizes, 'div-ub-1')
-	.addService(googletag.pubads());
+  slot1 = googletag.defineSlot('/21928950349/trainman.in_NB_320x50', sizes, 'div-ub-1').addService(googletag.pubads());
   googletag.pubads().disableInitialLoad();
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();

@@ -18,13 +18,46 @@ var adUnits = [
     {
         code: '/21928950349/mathrubhumi.com_nb_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19150441' } },
+          { bidder: 'oftmedia', params: { placementId: '19142068' } }
+        ]
+    },
+    {
+        code: '/21928950349/mathrubhumi.com_nb_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	//{ bidder: 'appnexus', params: { placementId: '19053207' } }, /* one placementId for all sizes  my appnexus bidder */
-        	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+        	{ bidder: 'appnexus', params: { placementId: '19150441' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'oftmedia', params: { placementId: '19142068' } },
         	{ bidder: '33across', params: { siteId : 'beW5lABuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97496' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '701560'} },

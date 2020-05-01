@@ -15,6 +15,38 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
+  {
+      code: '/21928950349/kwttoday.com_nb_320x50_non-amp',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19054931', allowSmallerSizes: true } }
+      ]
+  },
     {
         code: '/21928950349/kwttoday.com_nb_320x50_non-amp',
         mediaTypes: {
@@ -28,6 +60,7 @@ var adUnits = [
         	//{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '714097'} },
+          { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'openx', params: {unit: '541046615', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }

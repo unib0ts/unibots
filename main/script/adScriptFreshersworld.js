@@ -15,6 +15,39 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
+  {
+      code: '/21928950349/freshersworld.com_nb_320x50',
+      mediaTypes: {
+        native: {
+          image: {
+            // sizes: [300, 100],
+            aspect_ratios: [{
+              min_width: 100,        /* Optional */
+              min_height: 50,       /* Optional */
+              ratio_width: 2,        /* Required */
+              ratio_height: 1,       /* Required */
+            }],
+            sendId: true
+          },
+          title: {
+            len: 50,
+            sendId: true
+          },
+          sponsoredBy: {
+            required: true,
+            sendId: true
+          },
+          clickUrl: {
+            required: true,
+            sendId: true
+          }
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19054931', allowSmallerSizes: true } },
+        { bidder: 'oftmedia', params: { placementId: '19094373', allowSmallerSizes: true } }
+      ]
+  },
     {
         code: '/21928950349/freshersworld.com_nb_320x50',
         mediaTypes: {
@@ -30,7 +63,10 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '714087'} },
           { bidder: 'openx', params: {unit: '541046048', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '21986889214'} },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323696', zoneId: '1680290'} }
         ]
     }
 ];

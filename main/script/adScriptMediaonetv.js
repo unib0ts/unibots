@@ -28,7 +28,7 @@ var adUnits = [
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
           // { bidder: 'sovrn', params: {tagid: '716637'} },
           // { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
-        	// { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+        	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }

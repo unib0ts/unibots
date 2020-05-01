@@ -113,7 +113,7 @@ ubpbjs.que.push(function() {
       useBidCache: false,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://bartamanpatrika.com/','
+      publisherDomain: 'https://bartamanpatrika.com/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

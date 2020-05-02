@@ -18,19 +18,53 @@ var adUnits = [
     {
         code: '/21928950349/sandeshepaper.in_NB_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19057733' } },
+          { bidder: 'oftmedia', params: { placementId: '19142132' } }
+        ]
+    },
+    {
+        code: '/21928950349/sandeshepaper.in_NB_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19057733' } }, /* one placementId for all sizes  my appnexus bidder */
-        	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+        	{ bidder: 'oftmedia', params: { placementId: '19142132' } },
         	//{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '714175'} },
           { bidder: 'openx', params: {unit: '541046386', delDomain: 'yieldbird-d.openx.net'} },
         	{  bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }
 ];

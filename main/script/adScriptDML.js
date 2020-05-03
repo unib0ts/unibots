@@ -15,39 +15,39 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
-    // {
-    //     code: '/1028307/Dinamalar_Desktop_Unibot_Adslot_320x50',
-    //     mediaTypes: {
-    //       native: {
-    //         image: {
-    //           // sizes: [300, 100],
-    //           aspect_ratios: [{
-    //             min_width: 100,        /* Optional */
-    //             min_height: 50,       /* Optional */
-    //             ratio_width: 2,        /* Required */
-    //             ratio_height: 1,       /* Required */
-    //           }],
-    //           sendId: true
-    //         },
-    //         title: {
-    //           len: 50,
-    //           sendId: true
-    //         },
-    //         sponsoredBy: {
-    //           required: true,
-    //           sendId: true
-    //         },
-    //         clickUrl: {
-    //           required: true,
-    //           sendId: true
-    //         }
-    //       }
-    //     },
-    //     bids: [
-    //       { bidder: 'appnexus', params: { placementId: '19057738' } },
-    //       { bidder: 'oftmedia', params: { placementId: '19094359' } }
-    //     ]
-    // },
+     {
+         code: '/1028307/Dinamalar_Desktop_Unibot_Adslot_320x50',
+         mediaTypes: {
+           native: {
+             image: {
+               // sizes: [300, 100],
+               aspect_ratios: [{
+                 min_width: 100,        /* Optional */
+                 min_height: 50,       /* Optional */
+                 ratio_width: 2,        /* Required */
+                 ratio_height: 1,       /* Required */
+               }],
+               sendId: true
+             },
+             title: {
+               len: 50,
+               sendId: true
+             },
+             sponsoredBy: {
+               required: true,
+               sendId: true
+             },
+             clickUrl: {
+               required: true,
+               sendId: true
+             }
+           }
+         },
+         bids: [
+           { bidder: 'appnexus', params: { placementId: '19057738' } },
+           { bidder: 'oftmedia', params: { placementId: '19094359' } }
+         ]
+     },
     {
         code: '/1028307/Dinamalar_Desktop_Unibot_Adslot_320x50',
         mediaTypes: {
@@ -56,15 +56,15 @@ var adUnits = [
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19057738' } }, /* one placementId for all sizes  my appnexus bidder */
-        	// { bidder: 'oftmedia', params: { placementId: '19094359' } },
+        	{ bidder: 'appnexus', params: { placementId: '19057738' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'oftmedia', params: { placementId: '19094359' } },
           // //{ bidder: '33across', params: { siteId : 'bCur3iBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	// //{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '716626'} },
-          // { bidder: 'openx', params: {unit: '541046401', delDomain: 'yieldbird-d.openx.net'} },
-        	// { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          { bidder: 'sovrn', params: {tagid: '716626'} },
+          { bidder: 'openx', params: {unit: '541046401', delDomain: 'yieldbird-d.openx.net'} },
+        	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          // { bidder: 'criteo', params: {networkId: '4902'} }
+          { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }
 ];

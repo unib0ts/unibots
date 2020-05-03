@@ -15,39 +15,39 @@ var div_1_sizes = [320, 50];
 var div_2_sizes = [300, 250];
 
 var adUnits = [
-    {
-        code: '/21928950349/facultyplus.com_nb_320x50',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
-            },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
-        },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19054708' } },
-          { bidder: 'oftmedia', params: { placementId: '18671640' } }
-        ]
-    },
+    // {
+    //     code: '/21928950349/facultyplus.com_nb_320x50',
+    //     mediaTypes: {
+    //       native: {
+    //         image: {
+    //           // sizes: [300, 100],
+    //           aspect_ratios: [{
+    //             min_width: 100,        /* Optional */
+    //             min_height: 50,       /* Optional */
+    //             ratio_width: 2,        /* Required */
+    //             ratio_height: 1,       /* Required */
+    //           }],
+    //           sendId: true
+    //         },
+    //         title: {
+    //           len: 50,
+    //           sendId: true
+    //         },
+    //         sponsoredBy: {
+    //           required: true,
+    //           sendId: true
+    //         },
+    //         clickUrl: {
+    //           required: true,
+    //           sendId: true
+    //         }
+    //       }
+    //     },
+    //     bids: [
+    //       { bidder: 'appnexus', params: { placementId: '19054708' } },
+    //       { bidder: 'oftmedia', params: { placementId: '18671640' } }
+    //     ]
+    // },
     {
         code: '/21928950349/facultyplus.com_nb_320x50',
         mediaTypes: {
@@ -147,7 +147,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            googletag.pubads().refresh([ub_slot1, ub_slot2]);
         });
     });
 }

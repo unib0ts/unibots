@@ -1,4 +1,4 @@
-mybotLoadAdDefault = 0;
+mybotLoadAdDefault = 1;
 mybotAuthEnabled = 0;
 mybotCloseEnabled = 0;
 mybotClickCountEnabled = 1;
@@ -36,13 +36,13 @@ if(mybotClientName !== 'undefined'){
 }
 
 // mybotAdLinkSmall = 'https://www.googletagservices.com/tag/js/gpt.js';
-// mybotAdSmallName = '/1009127/Webasset_Rightlog_320x50';
+// mybotAdSmallName = '/1028307/Dinamalar_Desktop_Unibot_Adslot_320x50';
 // mybotAdSmallSize = '[320, 50]';
-// mybotAdSmallID = 'div-gpt-ad-1560427167936-0';
+// mybotAdSmallID = 'div-ub-1';
 
-// mybotadSmall = '<script async src="'+mybotAdLinkSmall+'"></script><script>var REFRESH_KEY = "refresh";var REFRESH_VALUE = "true";window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("'+mybotAdSmallName+'",'+mybotAdSmallSize+' , "'+mybotAdSmallID+'").setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 15;googletag.pubads().addEventListener("impressionViewable", function(event) {var slot = event.slot;if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {setTimeout(function() {googletag.pubads().refresh([slot]);}, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);}});googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="'+mybotAdSmallID+'"><script>googletag.cmd.push(function() { googletag.display("'+mybotAdSmallID+'"); });</script></div>';
+mybotadSmall = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/1028307/Dinamalar_Desktop_Unibot_Adslot_320x50", [320, 50], "div-ub-1").addService(googletag.pubads());googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="div-ub-1" style="width: 320px; height: 50px;"><script>googletag.cmd.push(function() { googletag.display("div-ub-1"); });</script></div>';
 
-mybotadSmall = '<div id="div-ub-1"></div>';
+// mybotadSmall = '<div id="div-ub-1"></div>';
 
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
@@ -93,34 +93,25 @@ function mybotCustomFunction() {
 }
 
 function loadAdCustom() {
-  var s0 = document.createElement('script');
-  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-  s0.type = "text/javascript";
-  document.getElementsByTagName('head')[0].appendChild(s0);
-
-  var s1 = document.createElement('script');
-  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-  s1.type = "text/javascript";
-  document.getElementsByTagName('head')[0].appendChild(s1);
-
-  var s2 = document.createElement('script');
-  s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptDML.js";
-  s2.type = "text/javascript";
-  document.getElementsByTagName('head')[0].appendChild(s2);
+  return false;
+  // var s0 = document.createElement('script');
+  // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  // s0.type = "text/javascript";
+  // document.getElementsByTagName('head')[0].appendChild(s0);
+  //
+  // var s1 = document.createElement('script');
+  // s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  // s1.type = "text/javascript";
+  // document.getElementsByTagName('head')[0].appendChild(s1);
+  //
+  // var s2 = document.createElement('script');
+  // s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptDML.js";
+  // s2.type = "text/javascript";
+  // document.getElementsByTagName('head')[0].appendChild(s2);
   // s2.onload = function () {
   //   loadAd('adSmall');
   // };
 }
-
-// if(typeof mybotPlayIconEnabled !== 'undefined' && mybotPlayIconEnabled == 1){
-// 			mybotShowPlaynWinIcon();
-//   }
-
-//   function mybotShowPlaynWinIcon(){
-//   document.getElementById('adSmall').addEventListener('click', function() {
-//     window.open('https://mpl.onelink.me/C4XS/a5ec8619', '_blank');
-//   });
-// }
 
 // =============================================================================
 // Change the code from here
@@ -453,10 +444,8 @@ function putData(mybotDataSet) {
 		document.getElementById('mybotCountryCount').innerText = country_cases;
 		document.getElementById('mybotCountryName2').innerText = capitalizeFLetter(country_name)+" Deaths";
 		document.getElementById('mybotCountryDeaths').innerText = country_death;
-		if (document.getElementById('mybotCountryRecoveredTxt')) {
-			document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
-			document.getElementById('mybotCountryRecovered').innerText = country_recovered;
-		}
+		document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+		document.getElementById('mybotCountryRecovered').innerText = country_recovered;
 	}
 	else if(typeof mybotStateData !== 'undefined' && mybotStateData == 1){
 			mybotStatedata = mybotDataSet["data"]["states"][mybotStateName];
@@ -471,6 +460,7 @@ function putData(mybotDataSet) {
 			if (typeof mybotStateName2 !=='undefined'){
 				mybotStatedata2 = mybotDataSet["data"]["states"][mybotStateName2];
 				country_cases = mybotDataSet["data"].country.cases;
+				country_recovered = mybotDataSet["data"].country.recovered;
 				country_name = mybotDataSet["data"].country.location;
 				state2_cases = mybotStatedata2.totalConfirmed;
 				state2_recovered = mybotStatedata2.totalRecovered;
@@ -482,6 +472,10 @@ function putData(mybotDataSet) {
 				document.getElementById('mybotState2RecoveredTxt').innerText = capitalizeFLetter(state2_name)+" Recovered";
 				document.getElementById('mybotCountryCount').innerText = country_cases;
 				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
+				if (document.getElementById('mybotCountryRecoveredTxt')) {
+					document.getElementById('mybotCountryRecovered').innerText = country_recovered;
+					document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+				}
 			}
 			else {
 				world_cases = mybotDataSet["data"].world.cases;
@@ -495,6 +489,7 @@ function putData(mybotDataSet) {
 				document.getElementById('mybotCountryRecovered').innerText = country_recovered;
 			}
 	}
+	else if (typeof mybotOnlyTextdata !== 'undefined' && mybotOnlyTextdata ==1) {}
 	else if(typeof mybotLocalDataPlacement !== 'undefined' && mybotLocalDataPlacement == 1){
 		world_cases = mybotDataSet["data"].world.cases;
 	  world_death = mybotDataSet["data"].world.deaths;

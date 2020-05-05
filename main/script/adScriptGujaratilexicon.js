@@ -97,7 +97,7 @@ var adUnits = [
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     ]
   }
-];y
+];
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};

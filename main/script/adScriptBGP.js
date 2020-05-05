@@ -75,34 +75,34 @@ var adUnits = [
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
-        	// //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
-        	// //{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
-        	// //{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '713872'} },
-          // { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
-        	// { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+        	{ bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
+        	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+        	//{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
+        	//{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '713872'} },
+          { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
+        	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          // { bidder: 'criteo', params: {networkId: '4902'} }
+          { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     },
     {
-        code: '/21928950349/banglarpran_NB_728x90',
+        code: '/21928950349/banglarpran_NB_782x90',
         mediaTypes: {
             banner: {
                 sizes: div_3_sizes
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
-        	// //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
-        	// //{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
-        	// //{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '713872'} },
-          // { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
-        	// { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+        	{ bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
+        	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+        	//{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
+        	//{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '713872'} },
+          { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
+        	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          // { bidder: 'criteo', params: {networkId: '4902'} }
+          { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }
 ];
@@ -180,7 +180,7 @@ var ub_slot1, ub_slot2, ub_slot3;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21928950349/banglarpran.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     ub_slot2 = googletag.defineSlot('/21928950349/banglarpran_300x250', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
-    ub_slot3 = googletag.defineSlot('/21928950349/banglarpran_NB_728x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
+    ub_slot3 = googletag.defineSlot('/21928950349/banglarpran_NB_782x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });

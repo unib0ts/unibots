@@ -153,7 +153,7 @@ googletag.cmd.push(function() {
     googletag.enableServices();
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
-          ub_checkAdRendered();
+          ub_checkAd1Rendered();
         }
         else if (event.slot === ub_slot2) {
           ub_checkAd2Rendered();

@@ -12,7 +12,7 @@ const customConfigObjectA = {
 };
 
 var div_1_sizes = [320, 50];
-
+var div_2_sizes = [728, 90];
 
 var adUnits = [
   {
@@ -52,6 +52,26 @@ var adUnits = [
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
+            }
+        },
+        bids: [
+        	{ bidder: 'appnexus', params: { placementId: '19057716' } }, /* one placementId for all sizes  my appnexus bidder */
+        	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+        	{ bidder: '33across', params: { siteId : 'cmquYiBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '714235'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681302'} },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
+        	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        ]
+    },
+    {
+        code: '/21928950349/twentyfournews.com_NB_728x90',
+        mediaTypes: {
+            banner: {
+                sizes: div_2_sizes
             }
         },
         bids: [
@@ -129,7 +149,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            googletag.pubads().refresh([ub_slot1, ub_slot2]);
         });
     });
 }
@@ -138,31 +158,39 @@ setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-var ub_slot1;
+var ub_slot1, ub_slot2;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21928950349/twentyfournews.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot2 = googletag.defineSlot('/21928950349/twentyfournews.com_NB_728x90', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAdRendered();
+      if (event.slot === ub_slot1) {
+        ub_checkAd1Rendered();
+      }
+      else if (event.slot === ub_slot2) {
+        ub_checkAd2Rendered();
+      }
+      else if ((event.slot === ub_slot1) && (event.slot === ub_slot2)) {
+        ub_checkAd1Rendered();
+        ub_checkAd2Rendered();
         }
     });
 });
 
-function refreshBid() {
+function refreshBid(ub_slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/twentyfournews.com_nb_320x50'],
+		  adUnitCodes: ['/21928950349/twentyfournews.com_nb_320x50', '/21928950349/twentyfournews.com_NB_728x90'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
+              googletag.pubads().refresh([ub_slot]);
           });
         });
 		  }
@@ -170,15 +198,29 @@ function refreshBid() {
   });
 }
 
-ub_adRefreshFlag = 0;
-function ub_checkAdRendered(){
-	adId = 'div-ub-1';
-	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+ub_ad1RefreshFlag = 0;
+function ub_checkAd1Rendered(){
+	adId1 = 'div-ub-1';
+	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if(ub_adRefreshFlag != 1){
+    if(ub_ad1RefreshFlag != 1){
       setInterval(function() {
-        ub_adRefreshFlag = 1;
-        refreshBid();
+        ub_ad1RefreshFlag = 1;
+        refreshBid(ub_slot1);
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}
+
+ub_ad2RefreshFlag = 0;
+function ub_checkAd2Rendered(){
+	adId2 = 'div-ub-2';
+	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_ad2RefreshFlag != 1){
+      setInterval(function() {
+        ub_ad2RefreshFlag = 1;
+        refreshBid(ub_slot2);
       }, REFRESH_TIMEOUT);
     }
 	 }

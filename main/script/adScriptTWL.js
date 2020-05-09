@@ -13,7 +13,7 @@ const customConfigObjectA = {
 
 var div_1_sizes = [320, 50];
 var div_2_sizes = [300, 250];
-
+var div_3_sizes = [[200, 200], [300, 250], [250, 250]];
 var adUnits = [
     {
       code: '/21928950349/thewall.in_NB_320x50',
@@ -50,6 +50,24 @@ var adUnits = [
           { bidder: 'openx', params: {unit: '541046564', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        ]
+    },
+    {
+      code: '/21928950349/thewall.in_nb_300x250_hb',
+        mediaTypes: {
+            banner: {
+                sizes: div_3_sizes
+            }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19057843' } }, /* one placementId for all sizes  my appnexus bidder */
+          //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+          //{ bidder: '33across', params: { siteId : 'd9bktEBt8r6PWLaKlId8sQ:siab', productId: 'siab' } }, /*All sizes*/
+          //{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '714244'} },
+          { bidder: 'openx', params: {unit: '541046564', delDomain: 'yieldbird-d.openx.net'} },
+          //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+          { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }
 ];
@@ -114,7 +132,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1, ub_slot2]);
+            googletag.pubads().refresh([ub_slot1, ub_slot2, ub_slot3]);
         });
     });
 }
@@ -123,10 +141,11 @@ setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-var ub_slot1, ub_slot2;
+var ub_slot1, ub_slot2, ub_slot3;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21928950349/thewall.in_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     ub_slot2 = googletag.defineSlot('/21928950349/thewall.in_NB_300x250', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
+    ub_slot3 = googletag.defineSlot('/21928950349/thewall.in_nb_300x250_hb', div_3_sizes, 'div-gpt-ad-1589043268569-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -139,9 +158,13 @@ googletag.cmd.push(function() {
         else if (event.slot === ub_slot2) {
           ub_checkAd2Rendered();
         }
-        else if ((event.slot === ub_slot1) && (event.slot === ub_slot2)) {
+        else if (event.slot === ub_slot3) {
+          ub_checkAd3Rendered();
+        }
+        else if ((event.slot === ub_slot1) && (event.slot === ub_slot2) && (event.slot === ub_slot3)) {
           ub_checkAd1Rendered();
           ub_checkAd2Rendered();
+          ub_checkAd3Rendered();
         }
     });
 });
@@ -150,7 +173,7 @@ function refreshBid(ub_slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/thewall.in_NB_320x50', '/21928950349/thewall.in_NB_300x250'],
+		  adUnitCodes: ['/21928950349/thewall.in_NB_320x50', '/21928950349/thewall.in_NB_300x250', '/21928950349/thewall.in_nb_300x250_hb'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -186,6 +209,20 @@ function ub_checkAd2Rendered(){
       setInterval(function() {
         ub_ad2RefreshFlag = 1;
         refreshBid(ub_slot2);
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}
+
+ub_ad3RefreshFlag = 0;
+function ub_checkAd3Rendered(){
+	adId3 = 'div-gpt-ad-1589043268569-0';
+	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_ad3RefreshFlag != 1){
+      setInterval(function() {
+        ub_ad3RefreshFlag = 1;
+        refreshBid(ub_slot3);
       }, REFRESH_TIMEOUT);
     }
 	 }

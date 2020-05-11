@@ -1,7 +1,7 @@
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
-
+var boturl = window.location.href;
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -70,7 +70,7 @@ if(mobileCheck === 'function'){
   ]
 }];
   }
-  else{
+  else if(boturl =='https://www.sakshi.com/news/national/video-conference-pm-modi-what-cms-said-lockdown-1285004'){
     adUnits = [
         {
             code: '21956916242/sakshi.com_NB_728x90',
@@ -93,6 +93,62 @@ if(mobileCheck === 'function'){
             ]
         }
     ];
+  }
+  else {
+    adUnits = [
+    {
+        code: '/21956916242/sakshi.com_NB_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19056673' } },
+          { bidder: 'oftmedia', params: { placementId: '18778196' } }
+        ]
+    },
+    {
+    code: '/21956916242/sakshi.com_NB_320x50',
+    mediaTypes: {
+      banner: {
+        sizes: div_1_sizes
+      }
+    },
+    bids: [
+      { bidder: 'oftmedia', params: {placementId: '18778196'} },
+      { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
+      { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
+      { bidder: 'emx_digital', params: {tagid: '97515'} },
+      { bidder: 'appnexus', params: {placementId: '19056673'} },
+      { bidder: 'sovrn', params: {tagid: '708881'} },
+      { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+      { bidder: 'nobid', params: { siteId : '21987177881'} },
+      { bidder: 'criteo', params: {networkId: '4902'} },
+      { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
+    ]
+  }];
   }
 }
 else{
@@ -157,8 +213,8 @@ else{
     ]
   }];
   }
-  else{
-    var adUnits = [
+  else if(boturl =='https://www.sakshi.com/news/national/video-conference-pm-modi-what-cms-said-lockdown-1285004'){
+    adUnits = [
         {
             code: '21956916242/sakshi.com_NB_728x90',
             mediaTypes: {
@@ -180,6 +236,62 @@ else{
             ]
         }
     ];
+  }
+  else {
+    adUnits = [
+    {
+        code: '/21956916242/sakshi.com_NB_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19056673' } },
+          { bidder: 'oftmedia', params: { placementId: '18778196' } }
+        ]
+    },
+    {
+    code: '/21956916242/sakshi.com_NB_320x50',
+    mediaTypes: {
+      banner: {
+        sizes: div_1_sizes
+      }
+    },
+    bids: [
+      { bidder: 'oftmedia', params: {placementId: '18778196'} },
+      { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
+      { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
+      { bidder: 'emx_digital', params: {tagid: '97515'} },
+      { bidder: 'appnexus', params: {placementId: '19056673'} },
+      { bidder: 'sovrn', params: {tagid: '708881'} },
+      { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+      { bidder: 'nobid', params: { siteId : '21987177881'} },
+      { bidder: 'criteo', params: {networkId: '4902'} },
+      { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
+    ]
+  }];
   }
 }
 
@@ -292,7 +404,7 @@ if(mobileCheck === 'function'){
     	 }
     }
   }
-  else{
+  else if(boturl =='https://www.sakshi.com/news/national/video-conference-pm-modi-what-cms-said-lockdown-1285004'){
     function initAdserver() {
         if (ubpbjs.initAdserverSet) return;
         ubpbjs.initAdserverSet = true;
@@ -352,6 +464,68 @@ if(mobileCheck === 'function'){
           }, REFRESH_TIMEOUT);
         }
     	 }
+    }
+  }
+  else {
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot1]);
+            });
+        });
+    }
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+
+    var ub_slot1;
+    googletag.cmd.push(function() {
+        ub_slot1 = googletag.defineSlot('/21956916242/sakshi.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAd1Rendered();
+          }
+        });
+    });
+
+    function refreshBid(ub_slot) {
+      ubpbjs.que.push(function() {
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: ['/21956916242/sakshi.com_NB_320x50'],
+          bidsBackHandler: function() {
+            googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh([ub_slot]);
+              });
+            });
+          }
+        });
+      });
+    }
+
+    ub_ad1RefreshFlag = 0;
+    function ub_checkAd1Rendered(){
+      adId1 = 'div-ub-1';
+      var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+        if(ub_ad1RefreshFlag != 1){
+          setInterval(function() {
+            ub_ad1RefreshFlag = 1;
+            refreshBid(ub_slot1);
+          }, REFRESH_TIMEOUT);
+        }
+       }
     }
   }
 }
@@ -418,7 +592,7 @@ else{
     	 }
     }
   }
-  else{
+  else if(boturl =='https://www.sakshi.com/news/national/video-conference-pm-modi-what-cms-said-lockdown-1285004'){
     function initAdserver() {
         if (ubpbjs.initAdserverSet) return;
         ubpbjs.initAdserverSet = true;
@@ -451,33 +625,95 @@ else{
 
     function refreshBid(ub_slot) {
       ubpbjs.que.push(function() {
-    	  ubpbjs.requestBids({
-    		  timeout: PREBID_TIMEOUT,
-    		  adUnitCodes: ['21956916242/sakshi.com_NB_728x90'],
-    		  bidsBackHandler: function() {
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: ['21956916242/sakshi.com_NB_728x90'],
+          bidsBackHandler: function() {
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
                   googletag.pubads().refresh([ub_slot]);
               });
             });
-    		  }
-    	  });
+          }
+        });
       });
     }
 
     ub_ad2RefreshFlag = 0;
     function ub_checkAd2Rendered(){
-    	adId2 = 'div-ub-2';
-    	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
-    	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+      adId2 = 'div-ub-2';
+      var nodes = document.getElementById(adId2).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
         if(ub_ad2RefreshFlag != 1){
           setInterval(function() {
             ub_ad2RefreshFlag = 1;
             refreshBid(ub_slot2);
           }, REFRESH_TIMEOUT);
         }
-    	 }
+       }
+    }
+  }
+  else {
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot1]);
+            });
+        });
+    }
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+
+    var ub_slot1;
+    googletag.cmd.push(function() {
+        ub_slot1 = googletag.defineSlot('/21956916242/sakshi.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAd1Rendered();
+          }
+        });
+    });
+
+    function refreshBid(ub_slot) {
+      ubpbjs.que.push(function() {
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: ['/21956916242/sakshi.com_NB_320x50'],
+          bidsBackHandler: function() {
+            googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh([ub_slot]);
+              });
+            });
+          }
+        });
+      });
+    }
+
+    ub_ad1RefreshFlag = 0;
+    function ub_checkAd1Rendered(){
+      adId1 = 'div-ub-1';
+      var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+        if(ub_ad1RefreshFlag != 1){
+          setInterval(function() {
+            ub_ad1RefreshFlag = 1;
+            refreshBid(ub_slot1);
+          }, REFRESH_TIMEOUT);
+        }
+       }
     }
   }
 }

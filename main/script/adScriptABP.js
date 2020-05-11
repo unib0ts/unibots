@@ -1,7 +1,7 @@
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
-
+var boturl = window.location.href;
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -12,7 +12,7 @@ const customConfigObjectA = {
 };
 
 var div_1_sizes = [320, 50];
-var div_2_sizes = [728, 90];
+var div_2_sizes = [160, 600];
 var div_3_sizes = [728, 90];
 var adUnits = [];
 if(mobileCheck === 'function'){
@@ -73,7 +73,7 @@ if(mobileCheck === 'function'){
     }
 ];
   }
-  else{
+  else if(boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1'){
     adUnits = [
         {
             code: '/21956238066/anandabazar.com_NB_160x600',
@@ -116,6 +116,63 @@ if(mobileCheck === 'function'){
             ]
         },
     ];
+  }
+  else {
+    adUnits = [
+    {
+        code: '/21956238066/anandabazar.com_nb_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19053343'} },
+          { bidder: 'oftmedia', params: { placementId: '19141968' } }
+        ]
+    },
+    {
+        code: '/21956238066/anandabazar.com_nb_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+        	{ bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'oftmedia', params: { placementId: '19141968' } },
+        	{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        	{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '716602'} },
+          { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
+        	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
+        ]
+    }
+];
   }
 }
 else{
@@ -181,7 +238,7 @@ else{
     }
 ];
   }
-  else{
+  else if(boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1'){
     adUnits = [
         {
             code: '/21956238066/anandabazar.com_NB_160x600',
@@ -224,6 +281,63 @@ else{
             ]
         },
     ];
+  }
+  else {
+    adUnits = [
+    {
+        code: '/21956238066/anandabazar.com_nb_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19053343'} },
+          { bidder: 'oftmedia', params: { placementId: '19141968' } }
+        ]
+    },
+    {
+        code: '/21956238066/anandabazar.com_nb_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+        	{ bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'oftmedia', params: { placementId: '19141968' } },
+        	{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        	{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '716602'} },
+          { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
+        	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
+        ]
+    }
+];
   }
 }
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -352,7 +466,7 @@ if(mobileCheck === 'function'){
     	 }
     }
   }
-  else{
+  else if (boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1') {
     function initAdserver() {
         if (ubpbjs.initAdserverSet) return;
         ubpbjs.initAdserverSet = true;
@@ -393,9 +507,85 @@ if(mobileCheck === 'function'){
 
     function refreshBid(ub_slot) {
       ubpbjs.que.push(function() {
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: ['/21956238066/anandabazar.com_NB_160x600', '/21956238066/anandabazar.com_NB_728x90'],
+          bidsBackHandler: function() {
+            googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh([ub_slot]);
+              });
+            });
+          }
+        });
+      });
+    }
+
+    ub_ad2RefreshFlag = 0;
+    function ub_checkAd2Rendered(){
+      adId2 = 'div-ub-2';
+      var nodes = document.getElementById(adId2).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+        if(ub_ad2RefreshFlag != 1){
+          setInterval(function() {
+            ub_ad2RefreshFlag = 1;
+            refreshBid(ub_slot2);
+          }, REFRESH_TIMEOUT);
+        }
+       }
+    }
+
+    ub_ad3RefreshFlag = 0;
+    function ub_checkAd3Rendered(){
+      adId3 = 'div-ub-3';
+      var nodes = document.getElementById(adId3).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+        if(ub_ad3RefreshFlag != 1){
+          setInterval(function() {
+            ub_ad3RefreshFlag = 1;
+            refreshBid(ub_slot3);
+          }, REFRESH_TIMEOUT);
+        }
+       }
+    }
+  }
+  else {
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot1]);
+            });
+        });
+    }
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+
+    var ub_slot1;
+    googletag.cmd.push(function() {
+        ub_slot1 = googletag.defineSlot('/21956238066/anandabazar.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAd1Rendered();
+          }
+        });
+    });
+
+    function refreshBid(ub_slot) {
+      ubpbjs.que.push(function() {
     	  ubpbjs.requestBids({
     		  timeout: PREBID_TIMEOUT,
-		      adUnitCodes: ['/21956238066/anandabazar.com_NB_160x600', '/21956238066/anandabazar.com_NB_728x90'],
+    		  adUnitCodes: ['/21956238066/anandabazar.com_nb_320x50'],
     		  bidsBackHandler: function() {
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
@@ -408,35 +598,21 @@ if(mobileCheck === 'function'){
       });
     }
 
-    ub_ad2RefreshFlag = 0;
-    function ub_checkAd2Rendered(){
-    	adId2 = 'div-ub-2';
-    	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
+    ub_ad1RefreshFlag = 0;
+    function ub_checkAd1Rendered(){
+    	adId1 = 'div-ub-1';
+    	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        if(ub_ad2RefreshFlag != 1){
+        if(ub_ad1RefreshFlag != 1){
           setInterval(function() {
-            ub_ad2RefreshFlag = 1;
-            refreshBid(ub_slot2);
-          }, REFRESH_TIMEOUT);
-        }
-    	 }
-    }
-
-    ub_ad3RefreshFlag = 0;
-    function ub_checkAd3Rendered(){
-    	adId3 = 'div-ub-3';
-    	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-    	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        if(ub_ad3RefreshFlag != 1){
-          setInterval(function() {
-            ub_ad3RefreshFlag = 1;
-            refreshBid(ub_slot3);
+            ub_ad1RefreshFlag = 1;
+            refreshBid(ub_slot1);
           }, REFRESH_TIMEOUT);
         }
     	 }
     }
   }
-}
+  }
 else{
   if(mobileCheckAdSript()){
     function initAdserver() {
@@ -500,7 +676,7 @@ else{
     	 }
     }
   }
-  else{
+  else if (boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1') {
     function initAdserver() {
         if (ubpbjs.initAdserverSet) return;
         ubpbjs.initAdserverSet = true;
@@ -541,9 +717,85 @@ else{
 
     function refreshBid(ub_slot) {
       ubpbjs.que.push(function() {
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: ['/21956238066/anandabazar.com_NB_160x600', '/21956238066/anandabazar.com_NB_728x90'],
+          bidsBackHandler: function() {
+            googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh([ub_slot]);
+              });
+            });
+          }
+        });
+      });
+    }
+
+    ub_ad2RefreshFlag = 0;
+    function ub_checkAd2Rendered(){
+      adId2 = 'div-ub-2';
+      var nodes = document.getElementById(adId2).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+        if(ub_ad2RefreshFlag != 1){
+          setInterval(function() {
+            ub_ad2RefreshFlag = 1;
+            refreshBid(ub_slot2);
+          }, REFRESH_TIMEOUT);
+        }
+       }
+    }
+
+    ub_ad3RefreshFlag = 0;
+    function ub_checkAd3Rendered(){
+      adId3 = 'div-ub-3';
+      var nodes = document.getElementById(adId3).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+        if(ub_ad3RefreshFlag != 1){
+          setInterval(function() {
+            ub_ad3RefreshFlag = 1;
+            refreshBid(ub_slot3);
+          }, REFRESH_TIMEOUT);
+        }
+       }
+    }
+  }
+  else {
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot1]);
+            });
+        });
+    }
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+
+    var ub_slot1;
+    googletag.cmd.push(function() {
+        ub_slot1 = googletag.defineSlot('/21956238066/anandabazar.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAd1Rendered();
+          }
+        });
+    });
+
+    function refreshBid(ub_slot) {
+      ubpbjs.que.push(function() {
     	  ubpbjs.requestBids({
     		  timeout: PREBID_TIMEOUT,
-		      adUnitCodes: ['/21956238066/anandabazar.com_NB_160x600', '/21956238066/anandabazar.com_NB_728x90'],
+    		  adUnitCodes: ['/21956238066/anandabazar.com_nb_320x50'],
     		  bidsBackHandler: function() {
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
@@ -556,29 +808,15 @@ else{
       });
     }
 
-    ub_ad2RefreshFlag = 0;
-    function ub_checkAd2Rendered(){
-    	adId2 = 'div-ub-2';
-    	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
+    ub_ad1RefreshFlag = 0;
+    function ub_checkAd1Rendered(){
+    	adId1 = 'div-ub-1';
+    	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        if(ub_ad2RefreshFlag != 1){
+        if(ub_ad1RefreshFlag != 1){
           setInterval(function() {
-            ub_ad2RefreshFlag = 1;
-            refreshBid(ub_slot2);
-          }, REFRESH_TIMEOUT);
-        }
-    	 }
-    }
-
-    ub_ad3RefreshFlag = 0;
-    function ub_checkAd3Rendered(){
-    	adId3 = 'div-ub-3';
-    	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-    	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        if(ub_ad3RefreshFlag != 1){
-          setInterval(function() {
-            ub_ad3RefreshFlag = 1;
-            refreshBid(ub_slot3);
+            ub_ad1RefreshFlag = 1;
+            refreshBid(ub_slot1);
           }, REFRESH_TIMEOUT);
         }
     	 }

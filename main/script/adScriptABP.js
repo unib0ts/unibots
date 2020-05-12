@@ -95,7 +95,7 @@ if(mobileCheck === 'function'){
                   { bidder: 'criteo', params: {networkId: '4902'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
                 ]
-            },
+            }
             // {
             //     code: '/21956238066/anandabazar.com_NB_728x90',
             //     mediaTypes: {
@@ -205,7 +205,7 @@ else{
                   { bidder: 'criteo', params: {networkId: '4902'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
                 ]
-            },
+            }
             // {
             //     code: '/21956238066/anandabazar.com_NB_728x90',
             //     mediaTypes: {

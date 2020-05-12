@@ -115,7 +115,7 @@ if(mobileCheck === 'function'){
                   { bidder: 'criteo', params: {networkId: '4902'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
                 ]
-            },
+            }
         ];
       }
   }
@@ -225,7 +225,7 @@ else{
                   { bidder: 'criteo', params: {networkId: '4902'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
                 ]
-            },
+            }
         ];
       }
   }
@@ -375,7 +375,7 @@ if(mobileCheck === 'function'){
 
         var ub_slot2, ub_slot3;
         googletag.cmd.push(function() {
-            ub_slot2 = googletag.defineSlot('21956238066/anandabazar.com_NB_160x600', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
+            ub_slot2 = googletag.defineSlot('/21956238066/anandabazar.com_NB_160x600', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
             ub_slot3 = googletag.defineSlot('/21956238066/anandabazar.com_NB_728x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
             googletag.pubads().collapseEmptyDivs(true);
             googletag.pubads().setCentering(true);
@@ -525,7 +525,7 @@ else{
 
        var ub_slot2, ub_slot3;
        googletag.cmd.push(function() {
-           ub_slot2 = googletag.defineSlot('21956238066/anandabazar.com_NB_160x600', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
+           ub_slot2 = googletag.defineSlot('/21956238066/anandabazar.com_NB_160x600', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
            ub_slot3 = googletag.defineSlot('/21956238066/anandabazar.com_NB_728x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
            googletag.pubads().collapseEmptyDivs(true);
            googletag.pubads().setCentering(true);

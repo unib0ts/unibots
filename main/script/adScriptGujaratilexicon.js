@@ -29,6 +29,7 @@ var adUnits = [
     bids: [
     { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
     { bidder: 'oftmedia', params: { placementId: '19095403' } },
+    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
   ]
   },
@@ -42,6 +43,7 @@ var adUnits = [
     bids: [
       { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
       { bidder: 'oftmedia', params: { placementId: '19095403' } },
+      { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     ]
   },
@@ -55,6 +57,7 @@ var adUnits = [
     bids: [
       { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
       { bidder: 'oftmedia', params: { placementId: '19095403' } },
+      { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     ]
   },
@@ -68,6 +71,7 @@ var adUnits = [
     bids: [
       { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
       { bidder: 'oftmedia', params: { placementId: '19095403' } },
+      { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     ]
   },
@@ -81,6 +85,7 @@ var adUnits = [
     bids: [
       { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
       { bidder: 'oftmedia', params: { placementId: '19095403' } },
+      { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     ]
   },
@@ -94,6 +99,7 @@ var adUnits = [
     bids: [
       { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
       { bidder: 'oftmedia', params: { placementId: '19095403' } },
+      { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     ]
   }

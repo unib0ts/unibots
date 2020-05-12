@@ -58,6 +58,7 @@ var adUnits = [
     { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'sovrn', params: {tagid: '708891'} },
     { bidder: 'openx', params: {unit: '541046673', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];

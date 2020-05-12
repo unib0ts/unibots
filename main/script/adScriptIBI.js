@@ -60,6 +60,7 @@ var adUnits = [
     { bidder: 'emx_digital', params: { tagid: '97551' } }, /* sizeless */
     { bidder: 'sovrn', params: {tagid: '710751'} },
     { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'openx', params: {unit: '541046079', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'criteo', params: {networkId: '4902'} }
   ]

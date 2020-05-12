@@ -351,6 +351,7 @@ if(mobileCheck === 'function'){
               }
             });
         });
+        
 
         function refreshBid(ub_slot) {
           ubpbjs.que.push(function() {

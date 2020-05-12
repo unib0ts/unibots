@@ -13,65 +13,66 @@ const customConfigObjectA = {
 
 var div_1_sizes = [320, 50];
 var div_2_sizes = [160, 600];
-// var div_3_sizes = [728, 90];
+
 var adUnits = [];
 if(mobileCheck === 'function'){
   if(mobileCheck()){
     adUnits = [
-    {
-        code: '/21956238066/anandabazar.com_nb_320x50',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
+        {
+            code: '/21956238066/anandabazar.com_nb_320x50',
+            mediaTypes: {
+              native: {
+                image: {
+                  // sizes: [300, 100],
+                  aspect_ratios: [{
+                    min_width: 100,        /* Optional */
+                    min_height: 50,       /* Optional */
+                    ratio_width: 2,        /* Required */
+                    ratio_height: 1,       /* Required */
+                  }],
+                  sendId: true
+                },
+                title: {
+                  len: 50,
+                  sendId: true
+                },
+                sponsoredBy: {
+                  required: true,
+                  sendId: true
+                },
+                clickUrl: {
+                  required: true,
+                  sendId: true
+                }
+              }
             },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19053343'} },
+              { bidder: 'oftmedia', params: { placementId: '19141968' } }
+            ]
         },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19053343'} },
-          { bidder: 'oftmedia', params: { placementId: '19141968' } }
-        ]
-    },
-    {
-        code: '/21956238066/anandabazar.com_nb_320x50',
-        mediaTypes: {
-            banner: {
-                sizes: div_1_sizes
-            }
-        },
-        bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
-          { bidder: 'oftmedia', params: { placementId: '19141968' } },
-        	{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-        	{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '716602'} },
-          { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
-        	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          { bidder: 'criteo', params: {networkId: '4902'} },
-          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
-        ]
-    }
-];
+        {
+            code: '/21956238066/anandabazar.com_nb_320x50',
+            mediaTypes: {
+                banner: {
+                    sizes: div_1_sizes
+                }
+            },
+            bids: [
+            	{ bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
+              { bidder: 'oftmedia', params: { placementId: '19141968' } },
+            	{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            	{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
+              { bidder: 'sovrn', params: {tagid: '716602'} },
+              { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
+            	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+            	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+              { bidder: 'criteo', params: {networkId: '4902'} },
+              { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
+            ]
+        }
+    ];
   }
   else {
     if(boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1'){
@@ -93,29 +94,10 @@ if(mobileCheck === 'function'){
                   //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
                   { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                   { bidder: 'criteo', params: {networkId: '4902'} },
+                  { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
                 ]
-            },
-            // {
-            //     code: '/21956238066/anandabazar.com_NB_728x90',
-            //     mediaTypes: {
-            //         banner: {
-            //             sizes: div_3_sizes
-            //         }
-            //     },
-            //     bids: [
-            //       { bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
-            //       { bidder: 'oftmedia', params: { placementId: '19141968' } },
-            //       { bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-            //       { bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-            //       { bidder: 'sovrn', params: {tagid: '716602'} },
-            //       { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
-            //       //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-            //       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            //       { bidder: 'criteo', params: {networkId: '4902'} },
-            //       { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
-            //     ]
-            // }
+            }
         ];
       }
   }
@@ -128,60 +110,61 @@ else{
   };
   if(mobileCheckAdSript()){
     adUnits = [
-    {
-        code: '/21956238066/anandabazar.com_nb_320x50',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
+        {
+            code: '/21956238066/anandabazar.com_nb_320x50',
+            mediaTypes: {
+              native: {
+                image: {
+                  // sizes: [300, 100],
+                  aspect_ratios: [{
+                    min_width: 100,        /* Optional */
+                    min_height: 50,       /* Optional */
+                    ratio_width: 2,        /* Required */
+                    ratio_height: 1,       /* Required */
+                  }],
+                  sendId: true
+                },
+                title: {
+                  len: 50,
+                  sendId: true
+                },
+                sponsoredBy: {
+                  required: true,
+                  sendId: true
+                },
+                clickUrl: {
+                  required: true,
+                  sendId: true
+                }
+              }
             },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19053343'} },
+              { bidder: 'oftmedia', params: { placementId: '19141968' } }
+            ]
         },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19053343'} },
-          { bidder: 'oftmedia', params: { placementId: '19141968' } }
-        ]
-    },
-    {
-        code: '/21956238066/anandabazar.com_nb_320x50',
-        mediaTypes: {
-            banner: {
-                sizes: div_1_sizes
-            }
-        },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
-          { bidder: 'oftmedia', params: { placementId: '19141968' } },
-          { bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-          { bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '716602'} },
-          { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
-          //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-          { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          { bidder: 'criteo', params: {networkId: '4902'} },
-          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
-        ]
-    }
-];
+        {
+            code: '/21956238066/anandabazar.com_nb_320x50',
+            mediaTypes: {
+                banner: {
+                    sizes: div_1_sizes
+                }
+            },
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
+              { bidder: 'oftmedia', params: { placementId: '19141968' } },
+              { bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+              { bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
+              { bidder: 'sovrn', params: {tagid: '716602'} },
+              { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
+              //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+              { bidder: 'criteo', params: {networkId: '4902'} },
+              { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
+            ]
+        }
+    ];
   }
   else {
     if(boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1'){
@@ -203,29 +186,10 @@ else{
                   //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
                   { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                   { bidder: 'criteo', params: {networkId: '4902'} },
+                  { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
                 ]
-            },
-            // {
-            //     code: '/21956238066/anandabazar.com_NB_728x90',
-            //     mediaTypes: {
-            //         banner: {
-            //             sizes: div_3_sizes
-            //         }
-            //     },
-            //     bids: [
-            //       { bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
-            //       { bidder: 'oftmedia', params: { placementId: '19141968' } },
-            //       { bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-            //       { bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
-            //       { bidder: 'sovrn', params: {tagid: '716602'} },
-            //       { bidder: 'openx', params: {unit: '541045935', delDomain: 'yieldbird-d.openx.net'} },
-            //       //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-            //       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            //       { bidder: 'criteo', params: {networkId: '4902'} },
-            //       { bidder: 'rubicon', params: {accountId: '11734', siteId: '323588', zoneId: '1679924'} }
-            //     ]
-            // }
+            }
         ];
       }
   }
@@ -376,7 +340,6 @@ if(mobileCheck === 'function'){
         var ub_slot2;
         googletag.cmd.push(function() {
             ub_slot2 = googletag.defineSlot('/21956238066/anandabazar.com_NB_160x600', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
-            // ub_slot3 = googletag.defineSlot('/21956238066/anandabazar.com_NB_728x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
             googletag.pubads().collapseEmptyDivs(true);
             googletag.pubads().setCentering(true);
             googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -386,13 +349,6 @@ if(mobileCheck === 'function'){
               if (event.slot === ub_slot2) {
                 ub_checkAd2Rendered();
               }
-              // else if (event.slot === ub_slot3) {
-              //   ub_checkAd3Rendered();
-              // }
-              // else if ((event.slot === ub_slot2) && (event.slot === ub_slot3)) {
-              //   ub_checkAd2Rendered();
-              //   ub_checkAd3Rendered();
-              // }
             });
         });
 
@@ -426,20 +382,6 @@ if(mobileCheck === 'function'){
             }
            }
         }
-
-        // ub_ad3RefreshFlag = 0;
-        // function ub_checkAd3Rendered(){
-        //   adId3 = 'div-ub-3';
-        //   var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-        //   if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        //     if(ub_ad3RefreshFlag != 1){
-        //       setInterval(function() {
-        //         ub_ad3RefreshFlag = 1;
-        //         refreshBid(ub_slot3);
-        //       }, REFRESH_TIMEOUT);
-        //     }
-        //    }
-        // }
       }
   }
   }
@@ -526,7 +468,6 @@ else{
        var ub_slot2;
        googletag.cmd.push(function() {
            ub_slot2 = googletag.defineSlot('/21956238066/anandabazar.com_NB_160x600', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
-           // ub_slot3 = googletag.defineSlot('/21956238066/anandabazar.com_NB_728x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
            googletag.pubads().collapseEmptyDivs(true);
            googletag.pubads().setCentering(true);
            googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -536,13 +477,6 @@ else{
              if (event.slot === ub_slot2) {
                ub_checkAd2Rendered();
              }
-             // else if (event.slot === ub_slot3) {
-             //   ub_checkAd3Rendered();
-             // }
-             // else if ((event.slot === ub_slot2) && (event.slot === ub_slot3)) {
-             //   ub_checkAd2Rendered();
-             //   ub_checkAd3Rendered();
-             // }
            });
        });
 
@@ -577,19 +511,6 @@ else{
           }
        }
 
-       // ub_ad3RefreshFlag = 0;
-       // function ub_checkAd3Rendered(){
-       //   adId3 = 'div-ub-3';
-       //   var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-       //   if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-       //     if(ub_ad3RefreshFlag != 1){
-       //       setInterval(function() {
-       //         ub_ad3RefreshFlag = 1;
-       //         refreshBid(ub_slot3);
-       //       }, REFRESH_TIMEOUT);
-       //     }
-       //    }
-       // }
      }
   }
 }

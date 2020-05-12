@@ -15,60 +15,62 @@ var div_2_sizes = [728, 90];
 var adUnits = [];
 if(mobileCheck === 'function'){
   if(mobileCheck()){
-  adUnits = [
-  {
-      code: '/21956916242/sakshi.com_NB_320x50',
-      mediaTypes: {
-        native: {
-          image: {
-            // sizes: [300, 100],
-            aspect_ratios: [{
-              min_width: 100,        /* Optional */
-              min_height: 50,       /* Optional */
-              ratio_width: 2,        /* Required */
-              ratio_height: 1,       /* Required */
-            }],
-            sendId: true
+    adUnits = [
+      {
+          code: '/21956916242/sakshi.com_NB_320x50',
+          mediaTypes: {
+            native: {
+              image: {
+                // sizes: [300, 100],
+                aspect_ratios: [{
+                  min_width: 100,        /* Optional */
+                  min_height: 50,       /* Optional */
+                  ratio_width: 2,        /* Required */
+                  ratio_height: 1,       /* Required */
+                }],
+                sendId: true
+              },
+              title: {
+                len: 50,
+                sendId: true
+              },
+              sponsoredBy: {
+                required: true,
+                sendId: true
+              },
+              clickUrl: {
+                required: true,
+                sendId: true
+              }
+            }
           },
-          title: {
-            len: 50,
-            sendId: true
-          },
-          sponsoredBy: {
-            required: true,
-            sendId: true
-          },
-          clickUrl: {
-            required: true,
-            sendId: true
-          }
-        }
+          bids: [
+            { bidder: 'appnexus', params: { placementId: '19056673' } },
+            { bidder: 'oftmedia', params: { placementId: '18778196' } }
+          ]
       },
-      bids: [
-        { bidder: 'appnexus', params: { placementId: '19056673' } },
-        { bidder: 'oftmedia', params: { placementId: '18778196' } }
-      ]
-  },
-  {
-  code: '/21956916242/sakshi.com_NB_320x50',
-  mediaTypes: {
-	  banner: {
-		  sizes: div_1_sizes
-	  }
-  },
-  bids: [
-    { bidder: 'oftmedia', params: {placementId: '18778196'} },
-    { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
-    { bidder: 'emx_digital', params: {tagid: '97515'} },
-    { bidder: 'appnexus', params: {placementId: '19056673'} },
-    { bidder: 'sovrn', params: {tagid: '708881'} },
-    { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
-    { bidder: 'nobid', params: { siteId : '21987177881'} },
-    { bidder: 'criteo', params: {networkId: '4902'} },
-    { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
-  ]
-}];
+      {
+        code: '/21956916242/sakshi.com_NB_320x50',
+        mediaTypes: {
+      	  banner: {
+      		  sizes: div_1_sizes
+      	  }
+        },
+        bids: [
+          { bidder: 'oftmedia', params: {placementId: '18778196'} },
+          { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
+          { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
+          { bidder: 'emx_digital', params: {tagid: '97515'} },
+          { bidder: 'appnexus', params: {placementId: '19056673'} },
+          { bidder: 'sovrn', params: {tagid: '708881'} },
+          { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'nobid', params: { siteId : '21987177881'} },
+          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
+        ]
+      }
+    ];
   }
   else {
     if(boturl =='https://www.sakshi.com/news/national/video-conference-pm-modi-what-cms-said-lockdown-1285004'){
@@ -90,6 +92,7 @@ if(mobileCheck === 'function'){
                  { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
                  { bidder: 'nobid', params: { siteId : '21987177881'} },
                  { bidder: 'criteo', params: {networkId: '4902'} },
+                 { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                  { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
                ]
            }
@@ -105,59 +108,61 @@ else{
   };
   if(mobileCheckAdSript()){
     adUnits = [
-    {
-        code: '/21956916242/sakshi.com_NB_320x50',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
+        {
+            code: '/21956916242/sakshi.com_NB_320x50',
+            mediaTypes: {
+              native: {
+                image: {
+                  // sizes: [300, 100],
+                  aspect_ratios: [{
+                    min_width: 100,        /* Optional */
+                    min_height: 50,       /* Optional */
+                    ratio_width: 2,        /* Required */
+                    ratio_height: 1,       /* Required */
+                  }],
+                  sendId: true
+                },
+                title: {
+                  len: 50,
+                  sendId: true
+                },
+                sponsoredBy: {
+                  required: true,
+                  sendId: true
+                },
+                clickUrl: {
+                  required: true,
+                  sendId: true
+                }
+              }
             },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19056673' } },
+              { bidder: 'oftmedia', params: { placementId: '18778196' } }
+            ]
         },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19056673' } },
-          { bidder: 'oftmedia', params: { placementId: '18778196' } }
-        ]
-    },
-    {
-    code: '/21956916242/sakshi.com_NB_320x50',
-    mediaTypes: {
-  	  banner: {
-  		  sizes: div_1_sizes
-  	  }
-    },
-    bids: [
-      { bidder: 'oftmedia', params: {placementId: '18778196'} },
-      { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-      { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
-      { bidder: 'emx_digital', params: {tagid: '97515'} },
-      { bidder: 'appnexus', params: {placementId: '19056673'} },
-      { bidder: 'sovrn', params: {tagid: '708881'} },
-      { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
-      { bidder: 'nobid', params: { siteId : '21987177881'} },
-      { bidder: 'criteo', params: {networkId: '4902'} },
-      { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
-    ]
-  }];
+        {
+          code: '/21956916242/sakshi.com_NB_320x50',
+          mediaTypes: {
+        	  banner: {
+        		  sizes: div_1_sizes
+        	  }
+          },
+          bids: [
+            { bidder: 'oftmedia', params: {placementId: '18778196'} },
+            { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
+            { bidder: '33across', params: {siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab'} },
+            { bidder: 'emx_digital', params: {tagid: '97515'} },
+            { bidder: 'appnexus', params: {placementId: '19056673'} },
+            { bidder: 'sovrn', params: {tagid: '708881'} },
+            { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+            { bidder: 'nobid', params: { siteId : '21987177881'} },
+            { bidder: 'criteo', params: {networkId: '4902'} },
+            { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
+          ]
+        }
+    ];
   }
   else {
     if(boturl =='https://www.sakshi.com/news/national/video-conference-pm-modi-what-cms-said-lockdown-1285004'){
@@ -179,6 +184,7 @@ else{
                   { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
                   { bidder: 'nobid', params: { siteId : '21987177881'} },
                   { bidder: 'criteo', params: {networkId: '4902'} },
+                  { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                   { bidder: 'rubicon', params: {accountId: '11734', siteId: '323846', zoneId: '1680740'} }
                 ]
             }
@@ -486,6 +492,6 @@ else{
             }
            }
         }
-      }  
+      }
   }
 }

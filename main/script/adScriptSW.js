@@ -16,7 +16,7 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
   {
-      code: '/21928950349/freshersworld.com_nb_320x50',
+      code: '/21928950349/scoopwhoop.com_nb_320x50',
       mediaTypes: {
         native: {
           image: {

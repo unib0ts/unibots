@@ -16,83 +16,86 @@ var div_2_sizes = [160, 600];
 
 var adUnits = [];
 if (mobileCheck === 'function') {
-  if (!mobileCheck() && boturl == 'https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1') {
-    adUnits = [{
-      code: '/21956238066/anandabazar.com_NB_160x600',
-      mediaTypes: {
-        banner: {
-          sizes: div_2_sizes
-        }
-      },
-      bids: [{
-          bidder: 'appnexus',
-          params: {
-            placementId: '19053343'
-          }
-        }, /* one placementId for all sizes  my appnexus bidder */
-        {
-          bidder: 'oftmedia',
-          params: {
-            placementId: '19141968'
-          }
-        },
-        {
-          bidder: '33across',
-          params: {
-            siteId: 'dWICUEBt8r6PWLaKlId8sQ',
-            productId: 'siab'
-          }
-        }, /*All sizes*/
-        {
-          bidder: 'emx_digital',
-          params: {
-            tagid: '97450'
-          }
-        }, /* sizeless */
-        {
-          bidder: 'sovrn',
-          params: {
-            tagid: '716602'
-          }
-        },
-        {
-          bidder: 'openx',
-          params: {
-            unit: '541045935',
-            delDomain: 'yieldbird-d.openx.net'
-          }
-        },
-        //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-        {
-          bidder: 'eplanning',
-          params: {
-            ci: '2cfed',
-            ml: '1'
-          }
-        },
-        {
-          bidder: 'criteo',
-          params: {
-            networkId: '4902'
-          }
-        },
-        {
-          bidder: 'adsolut',
-          params: {
-            zoneId: '107071',
-            host: 'cpm.adsolut.in'
-          }
-        },
-        {
-          bidder: 'rubicon',
-          params: {
-            accountId: '11734',
-            siteId: '323588',
-            zoneId: '1679924'
-          }
-        }
-      ]
-    }];
+  if (!mobileCheck()) {
+    if (boturl =='https://www.anandabazar.com/') {}
+     else {
+       adUnits = [{
+         code: '/21956238066/anandabazar.com_NB_160x600',
+         mediaTypes: {
+           banner: {
+             sizes: div_2_sizes
+           }
+         },
+         bids: [{
+             bidder: 'appnexus',
+             params: {
+               placementId: '19053343'
+             }
+           }, /* one placementId for all sizes  my appnexus bidder */
+           {
+             bidder: 'oftmedia',
+             params: {
+               placementId: '19141968'
+             }
+           },
+           {
+             bidder: '33across',
+             params: {
+               siteId: 'dWICUEBt8r6PWLaKlId8sQ',
+               productId: 'siab'
+             }
+           }, /*All sizes*/
+           {
+             bidder: 'emx_digital',
+             params: {
+               tagid: '97450'
+             }
+           }, /* sizeless */
+           {
+             bidder: 'sovrn',
+             params: {
+               tagid: '716602'
+             }
+           },
+           {
+             bidder: 'openx',
+             params: {
+               unit: '541045935',
+               delDomain: 'yieldbird-d.openx.net'
+             }
+           },
+           //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+           {
+             bidder: 'eplanning',
+             params: {
+               ci: '2cfed',
+               ml: '1'
+             }
+           },
+           {
+             bidder: 'criteo',
+             params: {
+               networkId: '4902'
+             }
+           },
+           {
+             bidder: 'adsolut',
+             params: {
+               zoneId: '107071',
+               host: 'cpm.adsolut.in'
+             }
+           },
+           {
+             bidder: 'rubicon',
+             params: {
+               accountId: '11734',
+               siteId: '323588',
+               zoneId: '1679924'
+             }
+           }
+         ]
+       }];
+     }
   } else {
     adUnits = [{
         code: '/21956238066/anandabazar.com_nb_320x50',
@@ -227,83 +230,86 @@ if (mobileCheck === 'function') {
     return check;
   };
 }
-if (!mobileCheckAdSript() && boturl == 'https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1') {
-  adUnits = [{
-    code: '/21956238066/anandabazar.com_NB_160x600',
-    mediaTypes: {
-      banner: {
-        sizes: div_2_sizes
-      }
-    },
-    bids: [{
-        bidder: 'appnexus',
-        params: {
-          placementId: '19053343'
-        }
-      }, /* one placementId for all sizes  my appnexus bidder */
-      {
-        bidder: 'oftmedia',
-        params: {
-          placementId: '19141968'
+if (!mobileCheckAdSript()) {
+  if (boturl =='https://www.anandabazar.com/') {}
+  else {
+    adUnits = [{
+      code: '/21956238066/anandabazar.com_NB_160x600',
+      mediaTypes: {
+        banner: {
+          sizes: div_2_sizes
         }
       },
-      {
-        bidder: '33across',
-        params: {
-          siteId: 'dWICUEBt8r6PWLaKlId8sQ',
-          productId: 'siab'
+      bids: [{
+          bidder: 'appnexus',
+          params: {
+            placementId: '19053343'
+          }
+        }, /* one placementId for all sizes  my appnexus bidder */
+        {
+          bidder: 'oftmedia',
+          params: {
+            placementId: '19141968'
+          }
+        },
+        {
+          bidder: '33across',
+          params: {
+            siteId: 'dWICUEBt8r6PWLaKlId8sQ',
+            productId: 'siab'
+          }
+        }, /*All sizes*/
+        {
+          bidder: 'emx_digital',
+          params: {
+            tagid: '97450'
+          }
+        }, /* sizeless */
+        {
+          bidder: 'sovrn',
+          params: {
+            tagid: '716602'
+          }
+        },
+        {
+          bidder: 'openx',
+          params: {
+            unit: '541045935',
+            delDomain: 'yieldbird-d.openx.net'
+          }
+        },
+        //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+        {
+          bidder: 'eplanning',
+          params: {
+            ci: '2cfed',
+            ml: '1'
+          }
+        },
+        {
+          bidder: 'criteo',
+          params: {
+            networkId: '4902'
+          }
+        },
+        {
+          bidder: 'adsolut',
+          params: {
+            zoneId: '107071',
+            host: 'cpm.adsolut.in'
+          }
+        },
+        {
+          bidder: 'rubicon',
+          params: {
+            accountId: '11734',
+            siteId: '323588',
+            zoneId: '1679924'
+          }
         }
-      }, /*All sizes*/
-      {
-        bidder: 'emx_digital',
-        params: {
-          tagid: '97450'
-        }
-      }, /* sizeless */
-      {
-        bidder: 'sovrn',
-        params: {
-          tagid: '716602'
-        }
-      },
-      {
-        bidder: 'openx',
-        params: {
-          unit: '541045935',
-          delDomain: 'yieldbird-d.openx.net'
-        }
-      },
-      //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-      {
-        bidder: 'eplanning',
-        params: {
-          ci: '2cfed',
-          ml: '1'
-        }
-      },
-      {
-        bidder: 'criteo',
-        params: {
-          networkId: '4902'
-        }
-      },
-      {
-        bidder: 'adsolut',
-        params: {
-          zoneId: '107071',
-          host: 'cpm.adsolut.in'
-        }
-      },
-      {
-        bidder: 'rubicon',
-        params: {
-          accountId: '11734',
-          siteId: '323588',
-          zoneId: '1679924'
-        }
-      }
-    ]
-  }];
+      ]
+    }];
+  }
 } else {
   adUnits = [{
       code: '/21956238066/anandabazar.com_nb_320x50',
@@ -556,7 +562,8 @@ if(mobileCheck === 'function'){
     }
   }
   else {
-    if (boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1') {
+    if (boturl =='https://www.anandabazar.com/') {}
+    else {
         function initAdserver() {
             if (ubpbjs.initAdserverSet) return;
             ubpbjs.initAdserverSet = true;
@@ -685,7 +692,8 @@ else{
     }
   }
   else {
-    if (boturl =='https://www.anandabazar.com/state/abhishek-orders-strong-publicity-against-bjp-s-lies-in-video-conference-with-party-dgtl-1.1147891?ref=storypage-most-read-stry-1') {
+    if (boturl =='https://www.anandabazar.com/') {}
+    else {
        function initAdserver() {
            if (ubpbjs.initAdserverSet) return;
            ubpbjs.initAdserverSet = true;

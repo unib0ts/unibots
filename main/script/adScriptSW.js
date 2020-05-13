@@ -141,10 +141,10 @@ setTimeout(function() {
 var ub_slot1;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21928950349/scoopwhoop.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-    googletag.pubads().collapseEmptyDivs(true);
+    // googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-    googletag.pubads().enableSingleRequest();
+    // googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {

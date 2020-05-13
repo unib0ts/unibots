@@ -65,6 +65,7 @@ var adUnits = [
           { bidder: '33across', params: { siteId : 'bppNgkBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97500' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '719002'} },
+          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323786', zoneId: '1680526'} }
         ]
     }

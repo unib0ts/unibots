@@ -66,6 +66,7 @@ var adUnits = [
         	{ bidder: 'emx_digital', params: { tagid: '97506' } }, /* sizeless */
           // { bidder: 'nobid', params: { siteId : '21975046114'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323828', zoneId: '1680664'} }
         ]
     }

@@ -196,6 +196,7 @@ function refreshBid(ub_slot) {
 
 ub_ad1RefreshFlag = 0;
 function ub_checkAd1Rendered(){
+ if (document.getElementById('div-ub-header')) {
 	adId1 = 'div-ub-1';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
@@ -206,10 +207,12 @@ function ub_checkAd1Rendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
+ }
 }
 
 ub_ad2RefreshFlag = 0;
 function ub_checkAd2Rendered(){
+ if (document.getElementById('div-ub-footer')) {
 	adId2 = 'div-ub-2';
 	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
@@ -220,10 +223,12 @@ function ub_checkAd2Rendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
+ }
 }
 
 ub_ad3RefreshFlag = 0;
 function ub_checkAd3Rendered(){
+ if (document.getElementById('div-ub-rect')) {
 	adId3 = 'div-ub-3';
 	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
@@ -234,10 +239,12 @@ function ub_checkAd3Rendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
+ }
 }
 
 ub_ad4RefreshFlag = 0;
 function ub_checkAd4Rendered(){
+ if (document.getElementById('div-ub-mobile')) {
 	adId4 = 'div-ub-4';
 	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
@@ -248,4 +255,5 @@ function ub_checkAd4Rendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
+ }
 }

@@ -58,6 +58,7 @@ var adUnits = [
     { bidder: 'sovrn', params: {tagid: '710740'} },
     { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+    { bidder: 'emx_digital', params: { tagid: '103698' } }, /* sizeless */
     { bidder: 'openx', params: {unit: '541046467', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'criteo', params: {networkId: '4902'} }

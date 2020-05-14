@@ -15,7 +15,7 @@ var div_1_sizes = [728, 90];
 var div_2_sizes = [728, 90];
 var div_3_sizes = [300, 250];
 var div_4_sizes =  [320, 50];
-if (mobileCheck === 'function') {
+if (typeof mobileCheck === 'function') {
   if (!mobileCheck() && window.location.pathname == '/home') {
     var adUnits = [
       {

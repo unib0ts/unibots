@@ -16,9 +16,7 @@ var div_2_sizes = [160, 600];
 
 var adUnits = [];
 if (mobileCheck === 'function') {
-  if (!mobileCheck()) {
-    if (boturl =='https://www.anandabazar.com/') {}
-     else {
+  if (!mobileCheck() && document.querySelector('.abp-storypage-article-right-wrap')) {
        adUnits = [{
          code: '/21956238066/anandabazar.com_NB_160x600',
          mediaTypes: {
@@ -95,7 +93,6 @@ if (mobileCheck === 'function') {
            }
          ]
        }];
-     }
   } else {
     adUnits = [{
         code: '/21956238066/anandabazar.com_nb_320x50',
@@ -230,9 +227,7 @@ if (mobileCheck === 'function') {
     return check;
   };
 }
-if (!mobileCheckAdSript()) {
-  if (boturl =='https://www.anandabazar.com/') {}
-  else {
+if (!mobileCheckAdSript() && document.querySelector('.abp-storypage-article-right-wrap')) {
     adUnits = [{
       code: '/21956238066/anandabazar.com_NB_160x600',
       mediaTypes: {
@@ -309,7 +304,6 @@ if (!mobileCheckAdSript()) {
         }
       ]
     }];
-  }
 } else {
   adUnits = [{
       code: '/21956238066/anandabazar.com_nb_320x50',
@@ -562,8 +556,7 @@ if(mobileCheck === 'function'){
     }
   }
   else {
-    if (boturl =='https://www.anandabazar.com/') {}
-    else {
+    if (document.querySelector('.abp-storypage-article-right-wrap')) {
         function initAdserver() {
             if (ubpbjs.initAdserverSet) return;
             ubpbjs.initAdserverSet = true;
@@ -625,7 +618,7 @@ if(mobileCheck === 'function'){
             }
            }
         }
-      }
+    }
   }
   }
 else{
@@ -692,8 +685,8 @@ else{
     }
   }
   else {
-    if (boturl =='https://www.anandabazar.com/') {}
-    else {
+    if (document.querySelector('.abp-storypage-article-right-wrap')) {
+
        function initAdserver() {
            if (ubpbjs.initAdserverSet) return;
            ubpbjs.initAdserverSet = true;
@@ -754,7 +747,6 @@ else{
            }
           }
        }
-
-     }
+    }
   }
 }

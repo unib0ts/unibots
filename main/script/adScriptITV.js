@@ -177,10 +177,15 @@ function ub_checkAdRendered(){
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){
-      setInterval(function() {
-        ub_adRefreshFlag = 1;
-        refreshBid();
-      }, REFRESH_TIMEOUT);
+      x = document.getElementById('div-ub-1');
+      y = x.querySelector('iframe');
+      z = y.contentDocument.body;
+      if(!z.querySelector('.img_ad')){
+        setInterval(function() {
+          ub_adRefreshFlag = 1;
+          refreshBid();
+        }, REFRESH_TIMEOUT);
+      }
     }
 	 }
 }

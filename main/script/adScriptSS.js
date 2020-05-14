@@ -57,7 +57,7 @@ if (mobileCheck === 'function') {
         {
           bidder: 'sovrn',
           params: {
-            tagid: '708881'
+            tagid: '724694'
           }
         },
         {
@@ -278,7 +278,7 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
       {
         bidder: 'sovrn',
         params: {
-          tagid: '708881'
+          tagid: '724694'
         }
       },
       {

@@ -52,7 +52,7 @@ if (mobileCheck === 'function') {
            {
              bidder: 'sovrn',
              params: {
-               tagid: '716602'
+               tagid: '724698'
              }
            },
            {
@@ -263,7 +263,7 @@ if (!mobileCheckAdSript() && document.querySelector('.abp-storypage-article-righ
         {
           bidder: 'sovrn',
           params: {
-            tagid: '716602'
+            tagid: '724698'
           }
         },
         {

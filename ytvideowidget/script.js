@@ -1,2 +1,91 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2 Z(o){l(1.M!=\'S\'){o();}G l(1.s){1.s(\'1T\',o);}G{1.1f(\'16\',2(){l(1.M!=\'S\');o();});}}q.Z(2(){H();});8 I=[{\'3\':\'19.n\',\'9\':\'/B/1k\',\'a\':\'[C,z]\',\'5\':\'d-r-D-18-0\'},{\'3\':\'15.f.n\',\'9\':\'/B/f.W\',\'a\':\'[C,z]\',\'5\':\'d-r-D-10-0\'},{\'3\':\'m.f.n\',\'9\':\'/B/f.W\',\'a\':\'[C,z]\',\'5\':\'d-r-D-10-0\'}];3=q.1e.3;l(3==\'1d\'||3==\'1h.1c\'){3=\'15.f.n\'}8 b=I.1b(2(J){17 J.3==3;});b=b[0];5=b.5;a=b.a;9=b.9;T="<6 1j R=\'O://1i.g.1g.N/1a/L/r.L\'></6><6>q.4 = q.4 || {A: []};4.A.P(2() {4.1m(\'"+9+"\',"+a+" , \'"+5+"\').1C(4.K());4.K().1G();4.1H();});</6><d w=\'"+5+"\'><6>4.A.P(2() { 4.t(\'"+5+"\'); });</6></d>";U=\'<1I R="O://1J.1K.N/1L/1l/1M@1F/1N/1P.1Q">\';2 H(){13(2(){Q();12(\'y\');},1R);}2 Q(){1.7(\'y\').v=T;1.7(\'p\').v=U;13(2(){1.7(\'p\').14.t=\'1S\';},1O);1.7(\'p\').s(\'1E\',2(){1.7(\'p\').14.t=\'1v\';u=1.7(\'y\');u.F.1D(u);});}2 12(w,x){8 11=1.7(w);8 h=Y(11.1o("6"));h=h[0];X(8 i=0;i<h.V;i++){k=h[i];1p e=1.1q("6");8 c=Y(k.1r);c=c[0];X(8 j=0;j<c.V;j++){E=c[j];e.1s(E.1t,E.1n);}e.1u(1.1w(k.v));e.1x=2(){l(x!==1y){1z.1A(x);}};k.F.1B(e,k);}}',62,118,'|document|function|hostname|googletag|adSmallID|script|getElementById|var|adSmallName|adSmallSize|currentClient|scriptAttr|div|newScript|ragalahari||scripts|||oldScript|if||com|fn|mybotCloseYT|window|gpt|addEventListener|display|elem|innerHTML|id|adUnits|ubPlayer|150|cmd|21957769615|112|ad|attr|parentNode|else|callOnDocumentReady|clients|client|pubads|js|readyState|net|https|push|customFunction|src|loading|adSmall|mybotClosevar|length|com_yt_Native|for|Array|ready|1589665213200|elm|loadAd|setTimeout|style|www|onreadystatechange|return|1589631112675|sandesh|tag|filter|in|localhost|location|attachEvent|doubleclick|webassets|securepubads|async|Native_1x1|unib0ts|defineSlot|value|querySelectorAll|const|createElement|attributes|setAttribute|name|appendChild|none|createTextNode|onload|undefined|smartyads|buildUnits|replaceChild|addService|removeChild|click|latest|enableSingleRequest|enableServices|img|cdn|jsdelivr|gh|unibots|main|5000|close|svg|500|block|DOMContentLoaded'.split('|'),0,{}))
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot><div class="player-wrapper"><div class="ub-player" id="ubPlayer"></div><div class="close-yt" id="mybotCloseYT"></div></div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='mybot{font-family:"Lato",sans-serif;line-height:1.42857143;color:#333;position:unset;z-index:2147483647;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot .ub-player{height:150px;width:112px;position:fixed;bottom:10px;right:10px;z-index:2147483647}mybot .player-wrapper{height:150px;width:112px;position:fixed;bottom:10px;right:10px;z-index:2147483647}mybot .close-yt{position:absolute;margin-top:-20px;display:none;width:15px;cursor:pointer;right:0}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});
+// Next 6 lines of code will be removed and will be replaced with HTML on build
+// =============================================================================
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}
+window.ready(function() {
+	callOnDocumentReady();
+});
+
+var clients = [
+	{
+		'hostname': 'default',
+		'loadedByUB': false,
+		'adSmallName': '/21957769615/Native_1x1',
+		'adSmallSize': '[112,150]',
+		'adSmallID': 'div-gpt-ad-1589631112675-0'
+	},
+	{
+		'hostname': 'sandesh.com',
+		'loadedByUB': true,
+		'adSmallName': '/21957769615/Native_1x1',
+		'adSmallSize': '[112,150]',
+		'adSmallID': 'div-gpt-ad-1589631112675-0'
+	},
+	{
+		'hostname': 'www.ragalahari.com',
+		'loadedByUB': true,
+		'adSmallName': '/21957769615/ragalahari.com_yt_Native',
+		'adSmallSize': '[112,150]',
+		'adSmallID': 'div-gpt-ad-1589665213200-0'
+	},
+	{
+		'hostname': 'm.ragalahari.com',
+		'loadedByUB': true,
+		'adSmallName': '/21957769615/ragalahari.com_yt_Native',
+		'adSmallSize': '[112,150]',
+		'adSmallID': 'div-gpt-ad-1589665213200-0'
+	}
+];
+
+hostname = window.location.hostname;
+if(hostname == 'localhost' || hostname == 'webassets.in'){
+	hostname = 'default'
+}
+
+var currentClient = clients.filter(function (client) {
+	return client.hostname == hostname;
+});
+currentClient = currentClient[0];
+adSmallID = currentClient.adSmallID;
+adSmallSize = currentClient.adSmallSize;
+adSmallName = currentClient.adSmallName;
+
+adSmall = "<div id='"+adSmallID+"'></div>";
+
+mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg">';
+
+// =============================================================================
+// Change the code from here
+// Any function which you want to call on document.ready, put in this function
+function callOnDocumentReady() {
+	setTimeout(function () {
+		customFunctionYT();
+	}, 500);
+}
+
+function customFunctionYT(){
+	if(!currentClient.loadedByUB){
+		var script = document.createElement("script");
+		script.async = true;
+		script.src="https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+		document.getElementsByTagName('head')[0].appendChild(script);
+	}
+	var script1 = document.createElement("script");
+	script1.innerHTML="window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot('"+adSmallName+"',"+adSmallSize+" , '"+adSmallID+"').addService(googletag.pubads()); googletag.pubads().enableSingleRequest();googletag.enableServices();});";
+	document.getElementsByTagName('head')[0].appendChild(script1);
+
+	document.getElementById('ubPlayer').innerHTML = adSmall;
+
+	var script2 = document.createElement("script");
+	script2.innerHTML="googletag.cmd.push(function() { googletag.display('"+adSmallID+"'); });";
+	document.getElementById(adSmallID).appendChild(script2);
+
+	document.getElementById('mybotCloseYT').innerHTML=mybotClosevar;
+	setTimeout(function () {
+		document.getElementById('mybotCloseYT').style.display = 'block';
+	}, 5000);
+	document.getElementById('mybotCloseYT').addEventListener('click', function () {
+		document.getElementById('mybotCloseYT').style.display = 'none';
+		elem = document.getElementById('ubPlayer');
+		elem.parentNode.removeChild(elem);
+	});
+}function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot><div class="player-wrapper"><div class="ub-player" id="ubPlayer"></div><div class="close-yt" id="mybotCloseYT"></div></div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='mybot{font-family:"Lato",sans-serif;line-height:1.42857143;color:#333;position:unset;z-index:2147483647;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot .ub-player{height:150px;width:112px;position:fixed;bottom:10px;right:10px;z-index:2147483647}mybot .player-wrapper{height:150px;width:112px;position:fixed;bottom:10px;right:10px;z-index:2147483647}mybot .close-yt{position:absolute;margin-top:-20px;display:none;width:15px;cursor:pointer;right:0}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});

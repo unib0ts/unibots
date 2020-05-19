@@ -21,44 +21,11 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [320, 50];
+var div_1_sizes = [300, 250];
 
 var adUnits = [
     {
-        code: '/21957769615/indiantelevision.com',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
-            },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
-        },
-        bids: [
-          // { bidder: 'oftmedia', params: { placementId: '19196682' } },
-          // { bidder: 'appnexus', params: { placementId: '19199132' } }
-        ]
-    },
-    {
-        code: '/21957769615/indiantelevision.com',
+        code: '21957769615/mail.com_HB_300x250',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -102,17 +69,17 @@ ubpbjs.que.push(function() {
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
-      s2sConfig: {
-        accountId: '',
-        enabled: false,
-        bidders: ['sovrn', 'openx','sharethrough'],
-        timeout: PREBID_TIMEOUT-300,
-        adapter: 'prebidServer',
-        endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-        cookieSet: true,
-        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-      },
+      // s2sConfig: {
+      //   accountId: '',
+      //   enabled: false,
+      //   bidders: ['sovrn', 'openx','sharethrough'],
+      //   timeout: PREBID_TIMEOUT-300,
+      //   adapter: 'prebidServer',
+      //   endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+      //   syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+      //   cookieSet: true,
+      //   cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+      // },
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 999, // and no more than 3 syncs at a time
@@ -152,7 +119,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21957769615/indiantelevision.com', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('21957769615/mail.com_HB_300x250', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -169,7 +136,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21957769615/indiantelevision.com'],
+		  adUnitCodes: ['21957769615/mail.com_HB_300x250'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

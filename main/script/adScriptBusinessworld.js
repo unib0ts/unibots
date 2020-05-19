@@ -25,12 +25,12 @@ if (mobileCheck === 'function') {
            }
          },
          bids: [
-           // {
-           //   bidder: 'appnexus',
-           //   params: {
-           //     placementId: '19053343'
-           //   }
-           // }, /* one placementId for all sizes  my appnexus bidder */
+           {
+             bidder: 'appnexus',
+             params: {
+                placementId: '19258738'
+              }
+           }, /* one placementId for all sizes  my appnexus bidder */
            // {
            //   bidder: 'oftmedia',
            //   params: {
@@ -70,13 +70,13 @@ if (mobileCheck === 'function') {
                ci: '2cfed',
                ml: '1'
              }
+           },
+           {
+             bidder: 'criteo',
+             params: {
+               networkId: '4902'
+             }
            }
-           // {
-           //   bidder: 'criteo',
-           //   params: {
-           //     networkId: '4902'
-           //   }
-           // },
            // {
            //   bidder: 'adsolut',
            //   params: {
@@ -150,12 +150,12 @@ if (mobileCheck === 'function') {
           }
         },
         bids: [
-          // {
-          //   bidder: 'appnexus',
-          //   params: {
-          //     placementId: '19053343'
-          //   }
-          // }, /* one placementId for all sizes  my appnexus bidder */
+          {
+            bidder: 'appnexus',
+            params: {
+              placementId: '19258738'
+            }
+          }, /* one placementId for all sizes  my appnexus bidder */
           // {
           //   bidder: 'oftmedia',
           //   params: {
@@ -195,13 +195,13 @@ if (mobileCheck === 'function') {
               ci: '2cfed',
               ml: '1'
             }
+          },
+          {
+            bidder: 'criteo',
+            params: {
+              networkId: '4902'
+            }
           }
-          // {
-          //   bidder: 'criteo',
-          //   params: {
-          //     networkId: '4902'
-          //   }
-          // },
           // {
           //   bidder: 'adsolut',
           //   params: {
@@ -239,12 +239,12 @@ if (!mobileCheckAdSript()) {
         }
       },
       bids: [
-        // {
-        //   bidder: 'appnexus',
-        //   params: {
-        //     placementId: '19053343'
-        //   }
-        // }, /* one placementId for all sizes  my appnexus bidder */
+        {
+          bidder: 'appnexus',
+          params: {
+            placementId: '19258738'
+          }
+        }, /* one placementId for all sizes  my appnexus bidder */
         // {
         //   bidder: 'oftmedia',
         //   params: {
@@ -284,13 +284,13 @@ if (!mobileCheckAdSript()) {
             ci: '2cfed',
             ml: '1'
           }
+        },
+        {
+          bidder: 'criteo',
+          params: {
+            networkId: '4902'
+          }
         }
-        // {
-        //   bidder: 'criteo',
-        //   params: {
-        //     networkId: '4902'
-        //   }
-        // },
         // {
         //   bidder: 'adsolut',
         //   params: {
@@ -318,12 +318,12 @@ if (!mobileCheckAdSript()) {
         }
       },
       bids: [
-        // {
-        //   bidder: 'appnexus',
-        //   params: {
-        //     placementId: '19053343'
-        //   }
-        // }, /* one placementId for all sizes  my appnexus bidder */
+        {
+          bidder: 'appnexus',
+          params: {
+            placementId: '19258738'
+          }
+        }, /* one placementId for all sizes  my appnexus bidder */
         // {
         //   bidder: 'oftmedia',
         //   params: {
@@ -363,13 +363,13 @@ if (!mobileCheckAdSript()) {
             ci: '2cfed',
             ml: '1'
           }
+        },
+        {
+          bidder: 'criteo',
+          params: {
+            networkId: '4902'
+          }
         }
-        // {
-        //   bidder: 'criteo',
-        //   params: {
-        //     networkId: '4902'
-        //   }
-        // },
         // {
         //   bidder: 'adsolut',
         //   params: {

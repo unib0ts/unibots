@@ -312,7 +312,7 @@ var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
-    ubpbjs.addAdUnits(adUnits);
+
     ubpbjs.bidderSettings = {
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       emx_digital: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
@@ -349,352 +349,342 @@ ubpbjs.que.push(function() {
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
-    ubpbjs.requestBids({
-        bidsBackHandler: initAdserver,
-        timeout: PREBID_TIMEOUT
-    });
+    // ubpbjs.requestBids({
+    //     bidsBackHandler: initAdserver,
+    //     timeout: PREBID_TIMEOUT
+    // });
 });
 // in case ubpbjs doesn't load
 setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);
 
+function ub_checkAdRendered(adId, parent, ub_slot, adCode){
+ if (document.getElementById(parent)) {
+  adId1 = adId;
+  var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+  if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    setTimeout(function() {
+      refreshBid(ub_slot, adCode);
+    }, REFRESH_TIMEOUT);
+   }
+ }
+}
+
+function refreshBid(ub_slot, adCode) {
+  ubpbjs.que.push(function() {
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+
 if (!mobileCheckAdSript() && window.location.pathname == '/home') {
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
-          });
-      });
-  }
-  var ub_slot1;
-  googletag.cmd.push(function() {
-      ub_slot1 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_header', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAd1Rendered();
-        }
-        else if (event.slot === ub_slot2) {
-          ub_checkAd2Rendered();
-        }
-        else if (event.slot === ub_slot3) {
-          ub_checkAd3Rendered();
-        }
-        else if (event.slot === ub_slot4) {
-          ub_checkAd4Rendered();
-        }
-        else if ((event.slot === ub_slot1) && (event.slot === ub_slot2) && (event.slot === ub_slot3) && (event.slot === ub_slot4)) {
-          ub_checkAd1Rendered();
-          ub_checkAd2Rendered();
-          ub_checkAd3Rendered();
-          ub_checkAd4Rendered();
+  if(typeof ub_slot1 !== 'undefined'){
+    refreshBid(ub_slot1, ['/21957769615/whyral.in_hb_728x90_header']);
+    googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAdRendered('div-ub-1', 'div-ub-header', ub_slot1, ['/21957769615/whyral.in_hb_728x90_header']);
           }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21957769615/whyral.in_hb_728x90_header'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
+        });
     });
   }
-  ub_ad1RefreshFlag = 0;
-  function ub_checkAd1Rendered(){
-   if (document.getElementById('div-ub-header')) {
-  	adId1 = 'div-ub-1';
-  	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad1RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad1RefreshFlag = 1;
-          refreshBid(ub_slot1);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-   }
-  }
-}
-else if(!mobileCheckAdSript() && window.location.pathname != '/home'){
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1, ub_slot2, ub_slot3]);
-          });
-      });
-  }
-  var ub_slot1, ub_slot2, ub_slot3;
-  googletag.cmd.push(function() {
-      ub_slot1 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_header', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-      ub_slot2 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_footer', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
-      ub_slot3 = googletag.defineSlot('/21957769615/whyral.in_hb_300x250', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAd1Rendered();
-        }
-        else if (event.slot === ub_slot2) {
-          ub_checkAd2Rendered();
-        }
-        else if (event.slot === ub_slot3) {
-          ub_checkAd3Rendered();
-        }
-        else if (event.slot === ub_slot4) {
-          ub_checkAd4Rendered();
-        }
-        else if ((event.slot === ub_slot1) && (event.slot === ub_slot2) && (event.slot === ub_slot3) && (event.slot === ub_slot4)) {
-          ub_checkAd1Rendered();
-          ub_checkAd2Rendered();
-          ub_checkAd3Rendered();
-          ub_checkAd4Rendered();
-          }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21957769615/whyral.in_hb_728x90_header', '/21957769615/whyral.in_hb_728x90_footer', '/21957769615/whyral.in_hb_300x250'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
+  else{
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
+                googletag.pubads().refresh([ub_slot1]);
             });
-          });
-  		  }
-  	  });
+        });
+    }
+    var ub_slot1;
+    ubpbjs.que.push(function() {
+      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.requestBids({
+          bidsBackHandler: initAdserver,
+          timeout: PREBID_TIMEOUT
+      });
+    });
+    googletag.cmd.push(function() {
+        ub_slot1 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_header', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAdRendered('div-ub-1', 'div-ub-header', ub_slot1, ['/21957769615/whyral.in_hb_728x90_header']);
+          }
+        });
     });
   }
-  ub_ad1RefreshFlag = 0;
-  function ub_checkAd1Rendered(){
-   if (document.getElementById('div-ub-header')) {
-  	adId1 = 'div-ub-1';
-  	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad1RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad1RefreshFlag = 1;
-          refreshBid(ub_slot1);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-   }
+}
+else if(!mobileCheckAdSript() && window.location.pathname != '/home' && window.location.pathname != '/channels'){
+
+  if(typeof ub_slot1 !== 'undefined' && typeof ub_slot2 !== 'undefined' && typeof ub_slot3 !== 'undefined'){
+    refreshBid([ub_slot1, ub_slot2, ub_slot3], ['/21957769615/whyral.in_hb_728x90_header', '/21957769615/whyral.in_hb_728x90_footer', '/21957769615/whyral.in_hb_300x250']);
   }
-  ub_ad2RefreshFlag = 0;
-  function ub_checkAd2Rendered(){
-   if (document.getElementById('div-ub-footer')) {
-  	adId2 = 'div-ub-2';
-  	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad2RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad2RefreshFlag = 1;
-          refreshBid(ub_slot2);
-        }, REFRESH_TIMEOUT);
+  else if(typeof ub_slot1 !== 'undefined' && typeof ub_slot2 === 'undefined' && typeof ub_slot3 === 'undefined'){
+
+    var adUnits = [
+      {
+        code: '/21957769615/whyral.in_hb_728x90_footer',
+        mediaTypes: {
+      	  banner: {
+      		  sizes: div_2_sizes
+      	  }
+        },
+        bids: [
+          { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
+          // { bidder: 'oftmedia', params: { placementId: '19095403' } },
+          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+          { bidder: 'appnexus', params: { placementId: '19238758' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'sovrn', params: {tagid: '724263'} },
+          { bidder: 'criteo', params: {networkId: '4902'} }
+        ]
+      },
+      {
+        code: '/21957769615/whyral.in_hb_300x250',
+        mediaTypes: {
+      	  banner: {
+      		  sizes: div_3_sizes
+      	  }
+        },
+        bids: [
+          { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
+          // { bidder: 'oftmedia', params: { placementId: '19095403' } },
+          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+          { bidder: 'appnexus', params: { placementId: '19238758' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'sovrn', params: {tagid: '724265'} },
+          { bidder: 'criteo', params: {networkId: '4902'} }
+        ]
       }
-  	 }
-   }
+    ];
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot2, ub_slot3]);
+            });
+        });
+    }
+    var ub_slot2, ub_slot3;
+    ubpbjs.que.push(function() {
+      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.requestBids({
+          bidsBackHandler: initAdserver,
+          timeout: PREBID_TIMEOUT
+      });
+    });
+    googletag.cmd.push(function() {
+        ub_slot2 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_footer', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
+        ub_slot3 = googletag.defineSlot('/21957769615/whyral.in_hb_300x250', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot2) {
+            ub_checkAdRendered('div-ub-2', 'div-ub-footer', ub_slot2, ['/21957769615/whyral.in_hb_728x90_footer']);
+          }
+          else if (event.slot === ub_slot3) {
+            ub_checkAdRendered('div-ub-3', 'div-ub-rect', ub_slot3, ['/21957769615/whyral.in_hb_300x250']);
+          }
+          else if (event.slot === ub_slot1) {
+            ub_checkAdRendered('div-ub-1', 'div-ub-header', ub_slot1, ['/21957769615/whyral.in_hb_728x90_header']);
+          }
+        });
+    });
+    // refreshBid([ub_slot1], ['/21957769615/whyral.in_hb_728x90_header']);
   }
-  ub_ad3RefreshFlag = 0;
-  function ub_checkAd3Rendered(){
-   if (document.getElementById('div-ub-rect')) {
-  	adId3 = 'div-ub-3';
-  	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad3RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad3RefreshFlag = 1;
-          refreshBid(ub_slot3);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-   }
+  else{
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot1, ub_slot2, ub_slot3]);
+            });
+        });
+    }
+    var ub_slot1, ub_slot2, ub_slot3;
+    googletag.cmd.push(function() {
+        ub_slot1 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_header', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+        ub_slot2 = googletag.defineSlot('/21957769615/whyral.in_hb_728x90_footer', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
+        ub_slot3 = googletag.defineSlot('/21957769615/whyral.in_hb_300x250', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot2) {
+            ub_checkAdRendered('div-ub-2', 'div-ub-footer', ub_slot2, ['/21957769615/whyral.in_hb_728x90_footer']);
+          }
+          else if (event.slot === ub_slot3) {
+            ub_checkAdRendered('div-ub-3', 'div-ub-rect', ub_slot3, ['/21957769615/whyral.in_hb_300x250']);
+          }
+          else if (event.slot === ub_slot1) {
+            ub_checkAdRendered('div-ub-1', 'div-ub-header', ub_slot1, ['/21957769615/whyral.in_hb_728x90_header']);
+          }
+        });
+    });
   }
 }
+
 else if(mobileCheckAdSript() && window.location.pathname == '/home'){
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1, ub_slot2, ub_slot3, ub_slot4]);
-          });
-      });
-  }
-  var ub_slot4;
-  googletag.cmd.push(function() {
-      ub_slot4 = googletag.defineSlot('/21957769615/whyral.in_hb_320x50', div_4_sizes, 'div-ub-4').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAd1Rendered();
-        }
-        else if (event.slot === ub_slot2) {
-          ub_checkAd2Rendered();
-        }
-        else if (event.slot === ub_slot3) {
-          ub_checkAd3Rendered();
-        }
-        else if (event.slot === ub_slot4) {
-          ub_checkAd4Rendered();
-        }
-        else if ((event.slot === ub_slot1) && (event.slot === ub_slot2) && (event.slot === ub_slot3) && (event.slot === ub_slot4)) {
-          ub_checkAd1Rendered();
-          ub_checkAd2Rendered();
-          ub_checkAd3Rendered();
-          ub_checkAd4Rendered();
+  if(typeof ub_slot4 !== 'undefined'){
+    refreshBid(ub_slot4, ['/21957769615/whyral.in_hb_320x50']);
+    googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAdRendered('div-ub-4', 'div-ub-mobile', ub_slot1, ['/21957769615/whyral.in_hb_320x50']);
           }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21957769615/whyral.in_hb_320x50'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
+        });
     });
   }
-  ub_ad4RefreshFlag = 0;
-  function ub_checkAd4Rendered(){
-   if (document.getElementById('div-ub-mobile')) {
-  	adId4 = 'div-ub-4';
-  	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad4RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad4RefreshFlag = 1;
-          refreshBid(ub_slot4);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-   }
+  else{
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot4]);
+            });
+        });
+    }
+    var ub_slot4;
+    ubpbjs.que.push(function() {
+      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.requestBids({
+          bidsBackHandler: initAdserver,
+          timeout: PREBID_TIMEOUT
+      });
+    });
+    googletag.cmd.push(function() {
+        ub_slot4 = googletag.defineSlot('/21957769615/whyral.in_hb_320x50', div_4_sizes, 'div-ub-4').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot4) {
+            ub_checkAdRendered('div-ub-4', 'div-ub-mobile', ub_slot1, ['/21957769615/whyral.in_hb_320x50']);
+          }
+        });
+    });
   }
 }
-else{
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1, ub_slot2, ub_slot3, ub_slot4]);
-          });
-      });
+else if(mobileCheckAdSript() && window.location.pathname != '/home' && window.location.pathname != '/channels'){
+  if(typeof ub_slot3 !== 'undefined' && typeof ub_slot4 !== 'undefined'){
+    refreshBid([ub_slot3, ub_slot4], ['/21957769615/whyral.in_hb_300x250', '/21957769615/whyral.in_hb_320x50']);
   }
-  var ub_slot3, ub_slot4;
-  googletag.cmd.push(function() {
-      ub_slot3 = googletag.defineSlot('/21957769615/whyral.in_hb_300x250', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
-      ub_slot4 = googletag.defineSlot('/21957769615/whyral.in_hb_320x50', div_4_sizes, 'div-ub-4').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAd1Rendered();
-        }
-        else if (event.slot === ub_slot2) {
-          ub_checkAd2Rendered();
-        }
-        else if (event.slot === ub_slot3) {
-          ub_checkAd3Rendered();
-        }
-        else if (event.slot === ub_slot4) {
-          ub_checkAd4Rendered();
-        }
-        else if ((event.slot === ub_slot1) && (event.slot === ub_slot2) && (event.slot === ub_slot3) && (event.slot === ub_slot4)) {
-          ub_checkAd1Rendered();
-          ub_checkAd2Rendered();
-          ub_checkAd3Rendered();
-          ub_checkAd4Rendered();
-          }
-      });
-  });
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21957769615/whyral.in_hb_300x250', '/21957769615/whyral.in_hb_320x50'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
+  else if(typeof ub_slot4 !== 'undefined' && typeof ub_slot3 === 'undefined'){
+    var adUnits = [
+      {
+        code: '/21957769615/whyral.in_hb_320x50',
+        mediaTypes: {
+      	  banner: {
+      		  sizes: div_4_sizes
+      	  }
+        },
+        bids: [
+          { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
+          // { bidder: 'oftmedia', params: { placementId: '19095403' } },
+          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+          { bidder: 'appnexus', params: { placementId: '19238758' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'sovrn', params: {tagid: '724266'} },
+          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { bidder: 'criteo', params: {networkId: '4902'} }
+        ]
+      }
+    ];
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
+                googletag.pubads().refresh([ub_slot3]);
             });
-          });
-  		  }
-  	  });
+        });
+    }
+    var ub_slot3;
+    ubpbjs.que.push(function() {
+      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.requestBids({
+          bidsBackHandler: initAdserver,
+          timeout: PREBID_TIMEOUT
+      });
+    });
+    googletag.cmd.push(function() {
+        ub_slot3 = googletag.defineSlot('/21957769615/whyral.in_hb_300x250', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot3) {
+            ub_checkAdRendered('div-ub-3', 'div-ub-rect', ub_slot3, ['/21957769615/whyral.in_hb_300x250']);
+          }
+          else if (event.slot === ub_slot4) {
+            ub_checkAdRendered('div-ub-4', 'div-ub-mobile', ub_slot1, ['/21957769615/whyral.in_hb_320x50']);
+          }
+        });
     });
   }
-  ub_ad4RefreshFlag = 0;
-  function ub_checkAd4Rendered(){
-   if (document.getElementById('div-ub-mobile')) {
-  	adId4 = 'div-ub-4';
-  	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad4RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad4RefreshFlag = 1;
-          refreshBid(ub_slot4);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-   }
-  }
-  ub_ad3RefreshFlag = 0;
-  function ub_checkAd3Rendered(){
-   if (document.getElementById('div-ub-rect')) {
-  	adId3 = 'div-ub-3';
-  	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad3RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad3RefreshFlag = 1;
-          refreshBid(ub_slot3);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-   }
+  else{
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot3, ub_slot4]);
+            });
+        });
+    }
+    var ub_slot3, ub_slot4;
+    googletag.cmd.push(function() {
+        ub_slot3 = googletag.defineSlot('/21957769615/whyral.in_hb_300x250', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
+        ub_slot4 = googletag.defineSlot('/21957769615/whyral.in_hb_320x50', div_4_sizes, 'div-ub-4').addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot3) {
+            ub_checkAdRendered('div-ub-3', 'div-ub-rect', ub_slot3, ['/21957769615/whyral.in_hb_300x250']);
+          }
+          else if (event.slot === ub_slot4) {
+            ub_checkAdRendered('div-ub-4', 'div-ub-mobile', ub_slot1, ['/21957769615/whyral.in_hb_320x50']);
+          }
+        });
+    });
   }
 }

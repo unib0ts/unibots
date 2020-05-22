@@ -18,16 +18,48 @@ var adUnits = [
     {
         code: '/21956033520/almowaten.net_nb_320x50',
         mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'oftmedia', params: { placementId: '19307528' } }
+        ]
+    },
+    {
+        code: '/21956033520/almowaten.net_nb_320x50',
+        mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19252324' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '19307528' } }, /* one placementId for all sizes  my appnexus bidder */
         	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
         	// { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '725495'} },
+          { bidder: 'sovrn', params: {tagid: '730862'} },
           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
         	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

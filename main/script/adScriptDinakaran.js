@@ -44,7 +44,7 @@ var adUnits = [
           }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '19054505' } }, 
+          { bidder: 'appnexus', params: { placementId: '19054505' } },
           { bidder: 'oftmedia', params: { placementId: '19196889' } }
         ]
     },
@@ -67,7 +67,7 @@ var adUnits = [
           { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'nobid', params: { siteId : '21975046114'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+          { bidder: 'rubicon', params: {accountId: '11734', siteId: '323630', zoneId: '1680030'} }
         ]
     }
 ];

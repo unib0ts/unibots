@@ -14,7 +14,7 @@ const customConfigObjectA = {
 var div_1_sizes = [320, 50];
 // var div_2_sizes = [300, 250];
 var div_3_sizes = [728, 90];
-
+var div_4_sizes = [[320, 100], [320, 50], [300, 100]];
 var adUnits = [
     {
         code: '/21928950349/banglarpran.com_NB_320x50',
@@ -107,6 +107,26 @@ var adUnits = [
           { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '4902'} }
         ]
+    },
+    {
+        code: '/21956916242/banglarpran.com_nb_320x100',
+        mediaTypes: {
+            banner: {
+                sizes: div_4_sizes
+            }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
+          //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+          //{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
+          { bidder: 'emx_digital', params: { tagid: '103696' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '724690'} },
+          { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { bidder: 'criteo', params: {networkId: '4902'} }
+        ]
     }
 ];
 
@@ -170,7 +190,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1, ub_slot3]);
+            googletag.pubads().refresh([ub_slot1, ub_slot3, ub_slot4]);
         });
     });
 }
@@ -179,11 +199,12 @@ setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);
 
-var ub_slot1, ub_slot3;
+var ub_slot1, ub_slot3, ub_slot4;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21928950349/banglarpran.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     // ub_slot2 = googletag.defineSlot('/21928950349/banglarpran_300x250', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
     ub_slot3 = googletag.defineSlot('/21928950349/banglarpran_NB_782x90', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
+    ub_slot4 = googletag.defineSlot('/21956916242/banglarpran.com_nb_320x100', div_4_sizes, 'div-gpt-ad-1590140470399-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -199,10 +220,14 @@ googletag.cmd.push(function() {
         else if (event.slot === ub_slot3) {
           ub_checkAd3Rendered();
         }
-        else if ((event.slot === ub_slot1) && (event.slot === ub_slot3)) {
+        else if (event.slot === ub_slot4) {
+          ub_checkAd4Rendered();
+        }
+        else if ((event.slot === ub_slot1) && (event.slot === ub_slot3) && (event.slot === ub_slot4)) {
           ub_checkAd1Rendered();
           // ub_checkAd2Rendered();
           ub_checkAd3Rendered();
+          ub_checkAd4Rendered();
           }
     });
 });
@@ -211,7 +236,7 @@ function refreshBid(ub_slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-       adUnitCodes: ['/21928950349/banglarpran.com_NB_320x50', '/21928950349/banglarpran_NB_728x90'],
+       adUnitCodes: ['/21928950349/banglarpran.com_NB_320x50', '/21928950349/banglarpran_NB_728x90', '/21956916242/banglarpran.com_nb_320x100'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -261,6 +286,20 @@ function ub_checkAd3Rendered(){
       setInterval(function() {
         ub_ad3RefreshFlag = 1;
         refreshBid(ub_slot3);
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}
+
+ub_ad4RefreshFlag = 0;
+function ub_checkAd4Rendered(){
+	adId4 = 'div-gpt-ad-1590140470399-0';
+	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_ad4RefreshFlag != 1){
+      setInterval(function() {
+        ub_ad4RefreshFlag = 1;
+        refreshBid(ub_slot4);
       }, REFRESH_TIMEOUT);
     }
 	 }

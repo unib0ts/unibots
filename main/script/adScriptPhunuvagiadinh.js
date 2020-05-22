@@ -16,7 +16,7 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
     {
-        code: '/21956238066/phunuvagiadinh.vn_nb_320x50',
+        code: '/21957769615/phunuvagiadinh.vn_nb_320x50',
         mediaTypes: {
           native: {
             image: {
@@ -49,7 +49,7 @@ var adUnits = [
         ]
     },
     {
-        code: '/21956238066/phunuvagiadinh.vn_nb_320x50',
+        code: '/21957769615/phunuvagiadinh.vn_nb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -143,7 +143,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956238066/phunuvagiadinh.vn_nb_320x50', div_1_sizes, 'div-gpt-ad-1589865147835-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21957769615/phunuvagiadinh.vn_nb_320x50', div_1_sizes, 'div-gpt-ad-1589865147835-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -160,7 +160,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956238066/phunuvagiadinh.vn_nb_320x50'],
+		  adUnitCodes: ['/21957769615/phunuvagiadinh.vn_nb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

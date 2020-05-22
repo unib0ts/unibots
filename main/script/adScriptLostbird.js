@@ -16,24 +16,24 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
     {
-        code: '/21956033520/almowaten.net_nb_320x50',
+        code: '/21957769615/lostbird.vn_nb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19252324' } }, /* one placementId for all sizes  my appnexus bidder */
+        	// { bidder: 'appnexus', params: { placementId: '19202082' } }, /* one placementId for all sizes  my appnexus bidder */
         	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
         	// { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '725495'} },
+          // { bidder: 'sovrn', params: {tagid: '721744'} },
           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
         	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'nobid', params: { siteId : '21975046114'} },
-          { bidder: 'criteo', params: {networkId: '4902'} },
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} }
+          { bidder: 'criteo', params: {networkId: '4902'} }
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
     }
@@ -82,7 +82,7 @@ ubpbjs.que.push(function() {
       useBidCache: false,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://www.almowaten.net/',
+      publisherDomain: 'https://lostbird.vn/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -110,7 +110,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956033520/almowaten.net_nb_320x50', div_1_sizes, 'div-gpt-ad-1589908301018-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21957769615/lostbird.vn_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -127,7 +127,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956033520/almowaten.net_nb_320x50'],
+		  adUnitCodes: ['/21957769615/lostbird.vn_nb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -142,7 +142,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1589908301018-0';
+	adId = 'div-ub-1';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

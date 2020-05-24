@@ -349,7 +349,7 @@ if(mobileCheck === 'function'){
        });
    });
 
-   function refreshBid((ub_slot) {
+   function refreshBid(ub_slot) {
      ubpbjs.que.push(function() {
    	  ubpbjs.requestBids({
    		  timeout: PREBID_TIMEOUT,

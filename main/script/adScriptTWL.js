@@ -11,7 +11,7 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [320, 50];
+var div_1_sizes = [[320, 100], [320, 50], [300, 100]];
 var div_2_sizes = [300, 250];
 var div_3_sizes = [[200, 200], [300, 250], [250, 250]];
 var adUnits = [

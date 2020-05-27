@@ -79,13 +79,13 @@ if (mobileCheck === 'function') {
             networkId: '4902'
           }
         },
-        {
-          bidder: 'adsolut',
-          params: {
-            zoneId: '107071',
-            host: 'cpm.adsolut.in'
-          }
-        },
+        // {
+        //   bidder: 'adsolut',
+        //   params: {
+        //     zoneId: '107071',
+        //     host: 'cpm.adsolut.in'
+        //   }
+        // },
         {
           bidder: 'rubicon',
           params: {
@@ -207,13 +207,13 @@ if (mobileCheck === 'function') {
               networkId: '4902'
             }
           },
-          {
-            bidder: 'adsolut',
-            params: {
-              zoneId: '107071',
-              host: 'cpm.adsolut.in'
-            }
-          },
+          // {
+          //   bidder: 'adsolut',
+          //   params: {
+          //     zoneId: '107071',
+          //     host: 'cpm.adsolut.in'
+          //   }
+          // },
           {
             bidder: 'rubicon',
             params: {
@@ -300,13 +300,13 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
           networkId: '4902'
         }
       },
-      {
-        bidder: 'adsolut',
-        params: {
-          zoneId: '107071',
-          host: 'cpm.adsolut.in'
-        }
-      },
+      // {
+      //   bidder: 'adsolut',
+      //   params: {
+      //     zoneId: '107071',
+      //     host: 'cpm.adsolut.in'
+      //   }
+      // },
       {
         bidder: 'rubicon',
         params: {
@@ -429,13 +429,13 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
             networkId: '4902'
           }
         },
-        {
-          bidder: 'adsolut',
-          params: {
-            zoneId: '107071',
-            host: 'cpm.adsolut.in'
-          }
-        },
+        // {
+        //   bidder: 'adsolut',
+        //   params: {
+        //     zoneId: '107071',
+        //     host: 'cpm.adsolut.in'
+        //   }
+        // },
         {
           bidder: 'rubicon',
           params: {

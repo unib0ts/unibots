@@ -64,7 +64,7 @@ var adUnits = [
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323782', zoneId: '1680518'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'openx', params: {unit: '541046193', delDomain: 'yieldbird-d.openx.net'} },
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'nobid', params: { siteId : '22012495560'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
@@ -93,17 +93,17 @@ ubpbjs.que.push(function() {
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
-      s2sConfig: {
-        accountId: '',
-        enabled: false,
-        bidders: ['sovrn', 'openx','sharethrough'],
-        timeout: PREBID_TIMEOUT-300,
-        adapter: 'prebidServer',
-        endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-        cookieSet: true,
-        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-      },
+      // s2sConfig: {
+      //   accountId: '',
+      //   enabled: false,
+      //   bidders: ['sovrn', 'openx','sharethrough'],
+      //   timeout: PREBID_TIMEOUT-300,
+      //   adapter: 'prebidServer',
+      //   endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+      //   syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+      //   cookieSet: true,
+      //   cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+      // },
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 999, // and no more than 3 syncs at a time

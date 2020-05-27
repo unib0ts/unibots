@@ -1,4 +1,4 @@
-if(typeof customConfigObjectA !== 'undefined'){
+if(typeof customConfigObjectA === 'undefined'){
   var s0 = document.createElement('script');
   s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   s0.type = "text/javascript";

@@ -176,12 +176,12 @@ setTimeout(function() {
 
 var ub_slot1, ub_slot2, ub_slot3, ub_slot4, ub_slot5, ub_slot6;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956916242/gujratilexicon.com_1', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-    ub_slot2 = googletag.defineSlot('/21956916242/gujaratilexicon.com_2', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
-    ub_slot3 = googletag.defineSlot('/21956916242/gujaratilexicon.com_3', div_3_sizes, 'div-ub-3').addService(googletag.pubads());
-    ub_slot4 = googletag.defineSlot('/21956916242/gujaratilexicon.com_4', div_4_sizes, 'div-ub-4').addService(googletag.pubads());
-    ub_slot5 = googletag.defineSlot('/21956916242/gujaratilexicon.com_5', div_5_sizes, 'div-ub-5').addService(googletag.pubads());
-    ub_slot6 = googletag.defineSlot('/21956916242/gujaratilexicon.com_6', div_6_sizes, 'div-ub-6').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21956916242/gujratilexicon.com_1', div_1_sizes, 'div-ub1').addService(googletag.pubads());
+    ub_slot2 = googletag.defineSlot('/21956916242/gujaratilexicon.com_2', div_2_sizes, 'div-ub2').addService(googletag.pubads());
+    ub_slot3 = googletag.defineSlot('/21956916242/gujaratilexicon.com_3', div_3_sizes, 'div-ub3').addService(googletag.pubads());
+    ub_slot4 = googletag.defineSlot('/21956916242/gujaratilexicon.com_4', div_4_sizes, 'div-ub4').addService(googletag.pubads());
+    ub_slot5 = googletag.defineSlot('/21956916242/gujaratilexicon.com_5', div_5_sizes, 'div-ub5').addService(googletag.pubads());
+    ub_slot6 = googletag.defineSlot('/21956916242/gujaratilexicon.com_6', div_6_sizes, 'div-ub6').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -236,7 +236,7 @@ function refreshBid(ub_slot) {
 
 ub_ad1RefreshFlag = 0;
 function ub_checkAd1Rendered(){
-	adId1 = 'div-ub-1';
+	adId1 = 'div-ub1';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad1RefreshFlag != 1){
@@ -250,7 +250,7 @@ function ub_checkAd1Rendered(){
 
 ub_ad2RefreshFlag = 0;
 function ub_checkAd2Rendered(){
-	adId2 = 'div-ub-2';
+	adId2 = 'div-ub2';
 	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad2RefreshFlag != 1){
@@ -264,7 +264,7 @@ function ub_checkAd2Rendered(){
 
 ub_ad3RefreshFlag = 0;
 function ub_checkAd3Rendered(){
-	adId3 = 'div-ub-3';
+	adId3 = 'div-ub3';
 	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad3RefreshFlag != 1){
@@ -278,7 +278,7 @@ function ub_checkAd3Rendered(){
 
 ub_ad4RefreshFlag = 0;
 function ub_checkAd4Rendered(){
-	adId4 = 'div-ub-4';
+	adId4 = 'div-ub4';
 	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad4RefreshFlag != 1){
@@ -292,7 +292,7 @@ function ub_checkAd4Rendered(){
 
 ub_ad5RefreshFlag = 0;
 function ub_checkAd5Rendered(){
-	adId5 = 'div-ub-5';
+	adId5 = 'div-ub5';
 	var nodes = document.getElementById(adId5).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad5RefreshFlag != 1){
@@ -306,7 +306,7 @@ function ub_checkAd5Rendered(){
 
 ub_ad6RefreshFlag = 0;
 function ub_checkAd1Rendered(){
-	adId6 = 'div-ub-6';
+	adId6 = 'div-ub6';
 	var nodes = document.getElementById(adId6).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad6RefreshFlag != 1){

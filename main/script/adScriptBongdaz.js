@@ -536,7 +536,7 @@ if(mobileCheck === 'function'){
 
      ub_ad4RefreshFlag = 0;
      function ub_checkAd4Rendered(){
-       adId4 = 'div-gpt-ad-1590744031192-0'';
+       adId4 = 'div-gpt-ad-1590744031192-0';
        var nodes = document.getElementById(adId4).childNodes[0].childNodes;
        if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
          if(ub_ad4RefreshFlag != 1){
@@ -793,7 +793,7 @@ else {
 
       ub_ad4RefreshFlag = 0;
       function ub_checkAd4Rendered(){
-        adId4 = 'div-gpt-ad-1590744031192-0'';
+        adId4 = 'div-gpt-ad-1590744031192-0';
         var nodes = document.getElementById(adId4).childNodes[0].childNodes;
         if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
           if(ub_ad4RefreshFlag != 1){

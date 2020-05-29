@@ -77,12 +77,12 @@ if (mobileCheck === 'function') {
                networkId: '4902'
              }
            },
-           {
-             bidder: 'adsolut',
-             params: {
-               zoneId: '107071',
-               host: 'cpm.adsolut.in'
-             }
+           // {
+           //   //{ bidder: 'adsolut',
+           //   params: {
+           //     zoneId: '107071',
+           //     host: 'cpm.adsolut.in'
+           //   }
            }
            // {
            //   bidder: 'rubicon',
@@ -203,7 +203,7 @@ if (mobileCheck === 'function') {
             }
           }
           // {
-          //   bidder: 'adsolut',
+          //   //{ bidder: 'adsolut',
           //   params: {
           //     zoneId: '107071',
           //     host: 'cpm.adsolut.in'
@@ -291,12 +291,12 @@ if (!mobileCheckAdSript()) {
             networkId: '4902'
           }
         },
-        {
-          bidder: 'adsolut',
-          params: {
-            zoneId: '107071',
-            host: 'cpm.adsolut.in'
-          }
+        // {
+        //   //{ bidder: 'adsolut',
+        //   params: {
+        //     zoneId: '107071',
+        //     host: 'cpm.adsolut.in'
+        //   }
         }
         // {
         //   bidder: 'rubicon',
@@ -371,7 +371,7 @@ if (!mobileCheckAdSript()) {
           }
         }
         // {
-        //   bidder: 'adsolut',
+        //   //{ bidder: 'adsolut',
         //   params: {
         //     zoneId: '107071',
         //     host: 'cpm.adsolut.in'

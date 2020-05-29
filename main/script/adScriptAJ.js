@@ -26,7 +26,7 @@ var adUnits = [{
     	bidder: '33across',
     	params: {siteId: 'd0h6GkBt8r6PWLaKlId8sQ', productId: 'siab'}
     },
-    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     {
     	bidder: 'emx_digital',
     	params: {tagid: '97452'}

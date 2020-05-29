@@ -34,7 +34,7 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
           	{ bidder: 'appnexus', params: { placementId: '19307529' } },
-            // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           	// { bidder: 'oftmedia', params: { placementId: '19196682' } },
           	{ bidder: '33across', params: { siteId : 'cO7908Orar6OkfaKlId8sQ', productId: 'siab' } },
           	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */

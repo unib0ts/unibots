@@ -80,7 +80,7 @@ if (mobileCheck === 'function') {
           }
         },
         // {
-        //   bidder: 'adsolut',
+        //   //{ bidder: 'adsolut',
         //   params: {
         //     zoneId: '107071',
         //     host: 'cpm.adsolut.in'
@@ -208,7 +208,7 @@ if (mobileCheck === 'function') {
             }
           },
           // {
-          //   bidder: 'adsolut',
+          //   //{ bidder: 'adsolut',
           //   params: {
           //     zoneId: '107071',
           //     host: 'cpm.adsolut.in'
@@ -301,7 +301,7 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
         }
       },
       // {
-      //   bidder: 'adsolut',
+      //   //{ bidder: 'adsolut',
       //   params: {
       //     zoneId: '107071',
       //     host: 'cpm.adsolut.in'
@@ -430,7 +430,7 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
           }
         },
         // {
-        //   bidder: 'adsolut',
+        //   //{ bidder: 'adsolut',
         //   params: {
         //     zoneId: '107071',
         //     host: 'cpm.adsolut.in'

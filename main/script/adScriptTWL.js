@@ -31,7 +31,7 @@ var adUnits = [
           { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'openx', params: {unit: '541046564', delDomain: 'yieldbird-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     },
@@ -50,7 +50,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '714244'} },
           { bidder: 'openx', params: {unit: '541046564', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     },
@@ -69,7 +69,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '714244'} },
           { bidder: 'openx', params: {unit: '541046564', delDomain: 'yieldbird-d.openx.net'} },
           //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }

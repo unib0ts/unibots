@@ -26,7 +26,7 @@ var adUnits = [
         	{ bidder: 'appnexus', params: { placementId: '19057742' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'openx', params: {unit: '541046404', delDomain: 'yieldbird-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }

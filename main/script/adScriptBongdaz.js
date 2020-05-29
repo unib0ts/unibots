@@ -503,7 +503,7 @@ if(mobileCheck === 'function'){
 
      var ub_slot4;
      googletag.cmd.push(function() {
-         ub_slot4 = googletag.defineSlot('/21957769615/bongdaz.com_nb_300x250_hb', div_4_sizes, 'div-gpt-ad-1590744031192-0'').addService(googletag.pubads());
+         ub_slot4 = googletag.defineSlot('/21957769615/bongdaz.com_nb_300x250_hb', div_4_sizes, 'div-gpt-ad-1590744031192-0').addService(googletag.pubads());
          googletag.pubads().collapseEmptyDivs(true);
          googletag.pubads().setCentering(true);
          googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -760,7 +760,7 @@ else {
 
       var ub_slot4;
       googletag.cmd.push(function() {
-          ub_slot4 = googletag.defineSlot('/21957769615/bongdaz.com_nb_300x250_hb', div_4_sizes, 'div-gpt-ad-1590744031192-0'').addService(googletag.pubads());
+          ub_slot4 = googletag.defineSlot('/21957769615/bongdaz.com_nb_300x250_hb', div_4_sizes, 'div-gpt-ad-1590744031192-0').addService(googletag.pubads());
           googletag.pubads().collapseEmptyDivs(true);
           googletag.pubads().setCentering(true);
           googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });

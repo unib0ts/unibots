@@ -390,7 +390,7 @@ if (document.getElementById('4')) {
 
   var ub_slot4;
   googletag.cmd.push(function() {
-      ub_slot4 = googletag.defineSlot('/21956916242/gujaratilexicon.com_4', div_4_sizes, 'div-ub4').addService(googletag.pubads());
+      ub_slot4 = googletag.defineSlot('/21956916242/gujaratilexicon.com_4', div_4_sizes, 'div-gpt-ad-1590839286035-0').addService(googletag.pubads());
       googletag.pubads().collapseEmptyDivs(true);
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -422,7 +422,7 @@ if (document.getElementById('4')) {
 
   ub_ad4RefreshFlag = 0;
   function ub_checkAd4Rendered(){
-  	adId4 = 'div-ub4';
+  	adId4 = 'div-gpt-ad-1590839286035-0';
   	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
   	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       if(ub_ad4RefreshFlag != 1){
@@ -517,7 +517,7 @@ if (document.getElementById('6')) {
 
   var ub_slot6;
   googletag.cmd.push(function() {
-      ub_slot6 = googletag.defineSlot('/21956916242/gujaratilexicon.com_6', div_6_sizes, 'div-ub6').addService(googletag.pubads());
+      ub_slot6 = googletag.defineSlot('/21956916242/gujaratilexicon.com_6', div_6_sizes, 'div-gpt-ad-1590839347556-0').addService(googletag.pubads());
       googletag.pubads().collapseEmptyDivs(true);
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -549,7 +549,7 @@ if (document.getElementById('6')) {
 
   ub_ad6RefreshFlag = 0;
   function ub_checkAd6Rendered(){
-  	adId6 = 'div-ub6';
+  	adId6 = 'div-gpt-ad-1590839347556-0';
   	var nodes = document.getElementById(adId6).childNodes[0].childNodes;
   	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       if(ub_ad6RefreshFlag != 1){

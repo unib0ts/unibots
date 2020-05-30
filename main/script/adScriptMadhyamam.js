@@ -66,7 +66,7 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId : '21986889043'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
         ]
     }

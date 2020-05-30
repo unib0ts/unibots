@@ -42,7 +42,7 @@ if (mobileCheck === 'function') {
               { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                { bidder: 'nobid', params: { siteId : '21986996687'} },
                { bidder: 'criteo', params: {networkId: '4902'} },
-               { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+               // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
              ]
          }
@@ -100,7 +100,7 @@ if (mobileCheck === 'function') {
              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
               { bidder: 'nobid', params: { siteId : '21986996687'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
-              { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+              // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
             ]
         }
@@ -133,7 +133,7 @@ else {
               { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                { bidder: 'nobid', params: { siteId : '21986996687'} },
                { bidder: 'criteo', params: {networkId: '4902'} },
-               { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+               // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
              ]
          }
@@ -191,7 +191,7 @@ else {
              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
               { bidder: 'nobid', params: { siteId : '21986996687'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
-              { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+              // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
             ]
         }

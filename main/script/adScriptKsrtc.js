@@ -26,7 +26,7 @@ if (document.getElementById('corover-ksrtc-IP')) {
           bids: [
             { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
             // { bidder: 'oftmedia', params: { placementId: '19095403' } },
-            { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
             { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '725490'} },
@@ -47,7 +47,7 @@ if (document.getElementById('corover-ksrtc-HP')) {
               bids: [
                 { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
                 // { bidder: 'oftmedia', params: { placementId: '19095403' } },
-                { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+                // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                 // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
                 { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
                 { bidder: 'sovrn', params: {tagid: '725491'} },

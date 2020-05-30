@@ -60,7 +60,7 @@ var adUnits = [
     { bidder: 'sovrn', params: {tagid: '708884'} },
     { bidder: 'openx', params: {unit: '541046242', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'criteo', params: {networkId: '4902'} },
-    { //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'rubicon', params: {accountId: '11734', siteId: '323836', zoneId: '1680698'} }
   ]
 }];

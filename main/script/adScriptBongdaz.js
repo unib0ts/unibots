@@ -68,39 +68,39 @@ if (mobileCheck === 'function') {
   }
   else {
     adUnits = [
-      //  {
-      //     code: '/21928950349/freshersvoice.com_NB_320x50',
-      //     mediaTypes: {
-      //       native: {
-      //         image: {
-      //           // sizes: [300, 100],
-      //           aspect_ratios: [{
-      //             min_width: 100,        /* Optional */
-      //             min_height: 50,       /* Optional */
-      //             ratio_width: 2,        /* Required */
-      //             ratio_height: 1,       /* Required */
-      //           }],
-      //           sendId: true
-      //         },
-      //         title: {
-      //           len: 50,
-      //           sendId: true
-      //         },
-      //         sponsoredBy: {
-      //           required: true,
-      //           sendId: true
-      //         },
-      //         clickUrl: {
-      //           required: true,
-      //           sendId: true
-      //         }
-      //       }
-      //     },
-      //     bids: [
-      //       { bidder: 'appnexus', params: { placementId: '19028833' } }, /* one placementId for all sizes  my appnexus bidder */
-      //       { bidder: 'oftmedia', params: { placementId: '18677301' } }
-      //     ]
-      // },
+         {
+            code: '/21957769615/bongdaz.com_nb_328x50',
+            mediaTypes: {
+              native: {
+                image: {
+                  // sizes: [300, 100],
+                  aspect_ratios: [{
+                    min_width: 100,        /* Optional */
+                    min_height: 50,       /* Optional */
+                    ratio_width: 2,        /* Required */
+                    ratio_height: 1,       /* Required */
+                  }],
+                  sendId: true
+                },
+                title: {
+                  len: 50,
+                  sendId: true
+                },
+                sponsoredBy: {
+                  required: true,
+                  sendId: true
+                },
+                clickUrl: {
+                  required: true,
+                  sendId: true
+                }
+              }
+            },
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19348373' } }, /* one placementId for all sizes  my appnexus bidder */
+              // { bidder: 'oftmedia', params: { placementId: '18677301' } }
+            ]
+        },
         {
             code: '/21957769615/bongdaz.com_nb_328x50',
             mediaTypes: {
@@ -131,7 +131,7 @@ if (mobileCheck === 'function') {
                 }
             },
             bids: [
-             // { bidder: 'appnexus', params: { placementId: '19054472' } }, /* one placementId for all sizes  my appnexus bidder */
+             { bidder: 'appnexus', params: { placementId: '19348373' } }, /* one placementId for all sizes  my appnexus bidder */
              // { bidder: 'oftmedia', params: { placementId: '18671629' } },
              // { bidder: '33across', params: { siteId : 'ahujaUBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
              // { bidder: 'emx_digital', params: { tagid: '97462' } }, /* sizeless */
@@ -204,39 +204,39 @@ else {
   }
   else {
     adUnits = [
-      //  {
-      //     code: '/21928950349/freshersvoice.com_NB_320x50',
-      //     mediaTypes: {
-      //       native: {
-      //         image: {
-      //           // sizes: [300, 100],
-      //           aspect_ratios: [{
-      //             min_width: 100,        /* Optional */
-      //             min_height: 50,       /* Optional */
-      //             ratio_width: 2,        /* Required */
-      //             ratio_height: 1,       /* Required */
-      //           }],
-      //           sendId: true
-      //         },
-      //         title: {
-      //           len: 50,
-      //           sendId: true
-      //         },
-      //         sponsoredBy: {
-      //           required: true,
-      //           sendId: true
-      //         },
-      //         clickUrl: {
-      //           required: true,
-      //           sendId: true
-      //         }
-      //       }
-      //     },
-      //     bids: [
-      //       { bidder: 'appnexus', params: { placementId: '19028833' } }, /* one placementId for all sizes  my appnexus bidder */
-      //       { bidder: 'oftmedia', params: { placementId: '18677301' } }
-      //     ]
-      // },
+       {
+          code: '/21957769615/bongdaz.com_nb_328x50',
+          mediaTypes: {
+            native: {
+              image: {
+                // sizes: [300, 100],
+                aspect_ratios: [{
+                  min_width: 100,        /* Optional */
+                  min_height: 50,       /* Optional */
+                  ratio_width: 2,        /* Required */
+                  ratio_height: 1,       /* Required */
+                }],
+                sendId: true
+              },
+              title: {
+                len: 50,
+                sendId: true
+              },
+              sponsoredBy: {
+                required: true,
+                sendId: true
+              },
+              clickUrl: {
+                required: true,
+                sendId: true
+              }
+            }
+          },
+          bids: [
+            { bidder: 'appnexus', params: { placementId: '19348373' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'oftmedia', params: { placementId: '18677301' } }
+          ]
+      },
         {
             code: '/21957769615/bongdaz.com_nb_328x50',
             mediaTypes: {
@@ -267,7 +267,7 @@ else {
                 }
             },
             bids: [
-             // { bidder: 'appnexus', params: { placementId: '19054472' } }, /* one placementId for all sizes  my appnexus bidder */
+             { bidder: 'appnexus', params: { placementId: '19348373' } }, /* one placementId for all sizes  my appnexus bidder */
              // { bidder: 'oftmedia', params: { placementId: '18671629' } },
              // { bidder: '33across', params: { siteId : 'ahujaUBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
              // { bidder: 'emx_digital', params: { tagid: '97462' } }, /* sizeless */
@@ -306,17 +306,17 @@ ubpbjs.que.push(function() {
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
-      s2sConfig: {
-        accountId: '',
-        enabled: false,
-        bidders: ['sovrn', 'openx','sharethrough'],
-        timeout: PREBID_TIMEOUT-300,
-        adapter: 'prebidServer',
-        endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-        cookieSet: true,
-        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-      },
+      // s2sConfig: {
+      //   accountId: '',
+      //   enabled: false,
+      //   bidders: ['sovrn', 'openx','sharethrough'],
+      //   timeout: PREBID_TIMEOUT-300,
+      //   adapter: 'prebidServer',
+      //   endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+      //   syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+      //   cookieSet: true,
+      //   cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+      // },
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 999, // and no more than 3 syncs at a time

@@ -38,7 +38,7 @@ if (mobileCheck === 'function') {
               { bidder: 'emx_digital', params: { tagid: '97462' } }, /* sizeless */
                { bidder: 'sovrn', params: {tagid: '711906'} },
                { bidder: 'openx', params: {unit: '541046032', delDomain: 'yieldbird-d.openx.net'} },
-              //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+              // { bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
               { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                { bidder: 'nobid', params: { siteId : '21986996687'} },
                { bidder: 'criteo', params: {networkId: '4902'} },

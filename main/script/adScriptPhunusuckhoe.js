@@ -18,30 +18,30 @@ var adUnits = [];
 
 if (mobileCheck === 'function') {
   if (!mobileCheck()) {
-       adUnits = [
-         {
-             code: '/21957769615/phunusuckhoe_nb_320x100_desktop',
-             mediaTypes: {
-                 banner: {
-                     sizes: div_3_sizes
-                 }
-             },
-             bids: [
-              { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
-              // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-              // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-              // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-               { bidder: 'sovrn', params: {tagid: '727387'} },
-               // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-              // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-               // { bidder: 'nobid', params: { siteId : '21975046114'} },
-               { bidder: 'criteo', params: {networkId: '4902'} },
-               // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-             ]
-         }
-       ];
+       // adUnits = [
+       //   {
+       //       code: '/21957769615/phunusuckhoe_nb_320x100_desktop',
+       //       mediaTypes: {
+       //           banner: {
+       //               sizes: div_3_sizes
+       //           }
+       //       },
+       //       bids: [
+       //        { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
+       //        // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+       //        // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+       //        // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+       //         { bidder: 'sovrn', params: {tagid: '727387'} },
+       //         // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+       //        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+       //        { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+       //         // { bidder: 'nobid', params: { siteId : '21975046114'} },
+       //         { bidder: 'criteo', params: {networkId: '4902'} },
+       //         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+       //         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+       //       ]
+       //   }
+       // ];
   }
   else {
    if (boturl== 'https://phunusuckhoe.vn/') {
@@ -193,30 +193,30 @@ else {
     return check;
   };
   if (!mobileCheckAdSript()) {
-    adUnits = [
-      {
-          code: '/21957769615/phunusuckhoe_nb_320x100_desktop',
-          mediaTypes: {
-              banner: {
-                  sizes: div_3_sizes
-              }
-          },
-          bids: [
-           { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
-           // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-           // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-           // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-            { bidder: 'sovrn', params: {tagid: '727387'} },
-            // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-           // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-           { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '21975046114'} },
-            { bidder: 'criteo', params: {networkId: '4902'} },
-            // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-          ]
-      }
-    ];
+    // adUnits = [
+    //   {
+    //       code: '/21957769615/phunusuckhoe_nb_320x100_desktop',
+    //       mediaTypes: {
+    //           banner: {
+    //               sizes: div_3_sizes
+    //           }
+    //       },
+    //       bids: [
+    //        { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
+    //        // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+    //        // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+    //        // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+    //         { bidder: 'sovrn', params: {tagid: '727387'} },
+    //         // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+    //        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+    //        { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    //         // { bidder: 'nobid', params: { siteId : '21975046114'} },
+    //         { bidder: 'criteo', params: {networkId: '4902'} },
+    //         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    //         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+    //       ]
+    //   }
+    // ];
   }
   else {
    if (boturl== 'https://phunusuckhoe.vn/') {
@@ -418,67 +418,67 @@ ubpbjs.que.push(function() {
 
 if(mobileCheck === 'function'){
  if (!mobileCheck()){
-     function initAdserver() {
-         if (ubpbjs.initAdserverSet) return;
-         ubpbjs.initAdserverSet = true;
-         googletag.cmd.push(function() {
-             ubpbjs.que.push(function() {
-                 ubpbjs.setTargetingForGPTAsync();
-                 googletag.pubads().refresh([ub_slot3]);
-             });
-         });
-     }
-     // in case ubpbjs doesn't load
-     setTimeout(function() {
-         initAdserver();
-     }, FAILSAFE_TIMEOUT);
-
-     var ub_slot3;
-     googletag.cmd.push(function() {
-         ub_slot3 = googletag.defineSlot('/21957769615/phunusuckhoe_nb_320x100_desktop', div_3_sizes, 'div-gpt-ad-1590395809874-0').addService(googletag.pubads());
-         googletag.pubads().collapseEmptyDivs(true);
-         googletag.pubads().setCentering(true);
-         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-         googletag.pubads().enableSingleRequest();
-         googletag.enableServices();
-         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           if (event.slot === ub_slot3) {
-             ub_checkAd3Rendered();
-           }
-         });
-     });
-
-
-     function refreshBid(ub_slot) {
-       ubpbjs.que.push(function() {
-         ubpbjs.requestBids({
-           timeout: PREBID_TIMEOUT,
-           adUnitCodes: ['/21957769615/phunusuckhoe_nb_320x100_desktop'],
-           bidsBackHandler: function() {
-             googletag.cmd.push(function() {
-               ubpbjs.que.push(function() {
-                   ubpbjs.setTargetingForGPTAsync();
-                   googletag.pubads().refresh([ub_slot]);
-               });
-             });
-           }
-         });
-       });
-     }
-
-     ub_ad3RefreshFlag = 0;
-     function ub_checkAd3Rendered(){
-       adId3 = 'div-gpt-ad-1590395809874-0';
-       var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-       if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-         if(ub_ad3RefreshFlag != 1){
-           setInterval(function() {
-             ub_ad3RefreshFlag = 1;
-             refreshBid(ub_slot3);
-           }, REFRESH_TIMEOUT);
-         }
-        }
-     }
+     // function initAdserver() {
+     //     if (ubpbjs.initAdserverSet) return;
+     //     ubpbjs.initAdserverSet = true;
+     //     googletag.cmd.push(function() {
+     //         ubpbjs.que.push(function() {
+     //             ubpbjs.setTargetingForGPTAsync();
+     //             googletag.pubads().refresh([ub_slot3]);
+     //         });
+     //     });
+     // }
+     // // in case ubpbjs doesn't load
+     // setTimeout(function() {
+     //     initAdserver();
+     // }, FAILSAFE_TIMEOUT);
+     //
+     // var ub_slot3;
+     // googletag.cmd.push(function() {
+     //     ub_slot3 = googletag.defineSlot('/21957769615/phunusuckhoe_nb_320x100_desktop', div_3_sizes, 'div-gpt-ad-1590395809874-0').addService(googletag.pubads());
+     //     googletag.pubads().collapseEmptyDivs(true);
+     //     googletag.pubads().setCentering(true);
+     //     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+     //     googletag.pubads().enableSingleRequest();
+     //     googletag.enableServices();
+     //     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+     //       if (event.slot === ub_slot3) {
+     //         ub_checkAd3Rendered();
+     //       }
+     //     });
+     // });
+     //
+     //
+     // function refreshBid(ub_slot) {
+     //   ubpbjs.que.push(function() {
+     //     ubpbjs.requestBids({
+     //       timeout: PREBID_TIMEOUT,
+     //       adUnitCodes: ['/21957769615/phunusuckhoe_nb_320x100_desktop'],
+     //       bidsBackHandler: function() {
+     //         googletag.cmd.push(function() {
+     //           ubpbjs.que.push(function() {
+     //               ubpbjs.setTargetingForGPTAsync();
+     //               googletag.pubads().refresh([ub_slot]);
+     //           });
+     //         });
+     //       }
+     //     });
+     //   });
+     // }
+     //
+     // ub_ad3RefreshFlag = 0;
+     // function ub_checkAd3Rendered(){
+     //   adId3 = 'div-gpt-ad-1590395809874-0';
+     //   var nodes = document.getElementById(adId3).childNodes[0].childNodes;
+     //   if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+     //     if(ub_ad3RefreshFlag != 1){
+     //       setInterval(function() {
+     //         ub_ad3RefreshFlag = 1;
+     //         refreshBid(ub_slot3);
+     //       }, REFRESH_TIMEOUT);
+     //     }
+     //    }
+     // }
  }
  else {
   if (boturl== 'https://phunusuckhoe.vn/'){
@@ -630,67 +630,67 @@ if(mobileCheck === 'function'){
 }
 else {
   if (!mobileCheckAdSript()){
-    function initAdserver() {
-        if (ubpbjs.initAdserverSet) return;
-        ubpbjs.initAdserverSet = true;
-        googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot3]);
-            });
-        });
-    }
-    // in case ubpbjs doesn't load
-    setTimeout(function() {
-        initAdserver();
-    }, FAILSAFE_TIMEOUT);
-
-    var ub_slot3;
-    googletag.cmd.push(function() {
-        ub_slot3 = googletag.defineSlot('/21957769615/phunusuckhoe_nb_320x100_desktop', div_3_sizes, 'div-gpt-ad-1590395809874-0').addService(googletag.pubads());
-        googletag.pubads().collapseEmptyDivs(true);
-        googletag.pubads().setCentering(true);
-        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot3) {
-            ub_checkAd3Rendered();
-          }
-        });
-    });
-
-
-    function refreshBid(ub_slot) {
-      ubpbjs.que.push(function() {
-        ubpbjs.requestBids({
-          timeout: PREBID_TIMEOUT,
-          adUnitCodes: ['/21957769615/phunusuckhoe_nb_320x100_desktop'],
-          bidsBackHandler: function() {
-            googletag.cmd.push(function() {
-              ubpbjs.que.push(function() {
-                  ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
-              });
-            });
-          }
-        });
-      });
-    }
-
-    ub_ad3RefreshFlag = 0;
-    function ub_checkAd3Rendered(){
-      adId3 = 'div-gpt-ad-1590395809874-0';
-      var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        if(ub_ad3RefreshFlag != 1){
-          setInterval(function() {
-            ub_ad3RefreshFlag = 1;
-            refreshBid(ub_slot3);
-          }, REFRESH_TIMEOUT);
-        }
-       }
-    }
+    // function initAdserver() {
+    //     if (ubpbjs.initAdserverSet) return;
+    //     ubpbjs.initAdserverSet = true;
+    //     googletag.cmd.push(function() {
+    //         ubpbjs.que.push(function() {
+    //             ubpbjs.setTargetingForGPTAsync();
+    //             googletag.pubads().refresh([ub_slot3]);
+    //         });
+    //     });
+    // }
+    // // in case ubpbjs doesn't load
+    // setTimeout(function() {
+    //     initAdserver();
+    // }, FAILSAFE_TIMEOUT);
+    //
+    // var ub_slot3;
+    // googletag.cmd.push(function() {
+    //     ub_slot3 = googletag.defineSlot('/21957769615/phunusuckhoe_nb_320x100_desktop', div_3_sizes, 'div-gpt-ad-1590395809874-0').addService(googletag.pubads());
+    //     googletag.pubads().collapseEmptyDivs(true);
+    //     googletag.pubads().setCentering(true);
+    //     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+    //     googletag.pubads().enableSingleRequest();
+    //     googletag.enableServices();
+    //     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //       if (event.slot === ub_slot3) {
+    //         ub_checkAd3Rendered();
+    //       }
+    //     });
+    // });
+    //
+    //
+    // function refreshBid(ub_slot) {
+    //   ubpbjs.que.push(function() {
+    //     ubpbjs.requestBids({
+    //       timeout: PREBID_TIMEOUT,
+    //       adUnitCodes: ['/21957769615/phunusuckhoe_nb_320x100_desktop'],
+    //       bidsBackHandler: function() {
+    //         googletag.cmd.push(function() {
+    //           ubpbjs.que.push(function() {
+    //               ubpbjs.setTargetingForGPTAsync();
+    //               googletag.pubads().refresh([ub_slot]);
+    //           });
+    //         });
+    //       }
+    //     });
+    //   });
+    // }
+    //
+    // ub_ad3RefreshFlag = 0;
+    // function ub_checkAd3Rendered(){
+    //   adId3 = 'div-gpt-ad-1590395809874-0';
+    //   var nodes = document.getElementById(adId3).childNodes[0].childNodes;
+    //   if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    //     if(ub_ad3RefreshFlag != 1){
+    //       setInterval(function() {
+    //         ub_ad3RefreshFlag = 1;
+    //         refreshBid(ub_slot3);
+    //       }, REFRESH_TIMEOUT);
+    //     }
+    //    }
+    // }
   }
   else {
    if (boturl== 'https://phunusuckhoe.vn/'){

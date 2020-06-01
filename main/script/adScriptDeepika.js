@@ -15,11 +15,13 @@ var div_1_sizes = [320, 50];
 var div_2_sizes = [160, 600];
 var adUnits = [];
 
-x = document.querySelector('#form1');
-parentWidth = x.offsetWidth;
-child = document.querySelector('.container');
-childWidth = child.offsetWidth;
-space = (parentWidth - childWidth)/2;
+if (!mobileCheck()) {
+  x = document.querySelector('#form1');
+  parentWidth = x.offsetWidth;
+  child = document.querySelector('.container');
+  childWidth = child.offsetWidth;
+  var space = (parentWidth - childWidth)/2;
+}
 
 if (mobileCheck === 'function') {
   if (!mobileCheck() && (space > 160)) {

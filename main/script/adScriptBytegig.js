@@ -411,11 +411,16 @@ if(typeof mobileCheck === "function"){
   }
 }
 
-googleDefine(slotNumbers, adCode, sizes, adId);
-// refreshBid(slots, adCode);
-
-googlePush();
-
+if(typeof googletag.defineSlot === "function"){
+  googleDefine(slotNumbers, adCode, sizes, adId);
+  googlePush();
+}
+else{
+  setTimeout(function(){
+    googleDefine(slotNumbers, adCode, sizes, adId);
+    googlePush();
+  }, 500);
+}
 setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);

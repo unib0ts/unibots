@@ -96,7 +96,8 @@ if (mobileCheck === 'function') {
         }
       ]
     }];
-  } else {
+  }
+  else {
     adUnits = [{
         code: '/21956916242/sakshi.com_NB_320x50',
         mediaTypes: {
@@ -207,13 +208,14 @@ if (mobileCheck === 'function') {
               networkId: '4902'
             }
           },
-          // {
-          //   //{ bidder: 'adsolut',
-          //   params: {
-          //     zoneId: '107071',
-          //     host: 'cpm.adsolut.in'
-          //   }
-          // },
+          {
+            bidder: 'adsolut',
+            params: {
+              zoneId: '107071',
+              host: 'cpm.adsolut.in'
+            }
+          },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
           {
             bidder: 'rubicon',
             params: {
@@ -226,7 +228,8 @@ if (mobileCheck === 'function') {
       }
     ];
   }
-} else {
+}
+else {
   function mobileCheckAdSript() {
     var check = false;
     (function (a) {
@@ -318,7 +321,7 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
     ]
   }];
 }
- else {
+else {
   adUnits = [{
       code: '/21956916242/sakshi.com_NB_320x50',
       mediaTypes: {
@@ -429,13 +432,14 @@ if (!mobileCheckAdSript() && boturl == 'https://www.sakshi.com/news/national/vid
             networkId: '4902'
           }
         },
-        // {
-        //   //{ bidder: 'adsolut',
-        //   params: {
-        //     zoneId: '107071',
-        //     host: 'cpm.adsolut.in'
-        //   }
-        // },
+        {
+          bidder: 'adsolut',
+          params: {
+            zoneId: '107071',
+            host: 'cpm.adsolut.in'
+          }
+        },
+        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
         {
           bidder: 'rubicon',
           params: {

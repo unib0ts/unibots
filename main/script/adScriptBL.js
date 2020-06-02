@@ -12,7 +12,7 @@ const customConfigObjectA = {
 };
 
 var div_1_sizes = [320, 50];
-var div_2_sizes = [300, 250];
+var div_2_sizes = [[250, 250], [200, 200], [300, 250]];
 
 var adUnits = [
     {
@@ -36,7 +36,7 @@ var adUnits = [
         ]
     },
     {
-      code: '/21928950349/boomlive_NB_300x250',
+      code: '/21928950349/boomlive_nb_300x250_new',
         mediaTypes: {
             banner: {
                 sizes: div_2_sizes
@@ -129,7 +129,7 @@ setTimeout(function() {
 var ub_slot1, ub_slot2;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21928950349/boomlive.in_desk_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-    ub_slot2 = googletag.defineSlot('/21928950349/boomlive_NB_300x250', div_2_sizes, 'div-ub-2').addService(googletag.pubads());
+    ub_slot2 = googletag.defineSlot('/21928950349/boomlive_nb_300x250_new', div_2_sizes, 'div-gpt-ad-1591096103845-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -153,7 +153,7 @@ function refreshBid(ub_slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/boomlive.in_desk_NB_320x50', '/21928950349/boomlive_NB_300x250'],
+		  adUnitCodes: ['/21928950349/boomlive.in_desk_NB_320x50', '/21928950349/boomlive_nb_300x250_new'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -182,7 +182,7 @@ function ub_checkAd1Rendered(){
 
 ub_ad2RefreshFlag = 0;
 function ub_checkAd2Rendered(){
-	adId2 = 'div-ub-2';
+	adId2 = 'div-gpt-ad-1591096103845-0'';
 	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad2RefreshFlag != 1){

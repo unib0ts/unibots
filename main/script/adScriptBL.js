@@ -182,7 +182,7 @@ function ub_checkAd1Rendered(){
 
 ub_ad2RefreshFlag = 0;
 function ub_checkAd2Rendered(){
-	adId2 = 'div-gpt-ad-1591096103845-0'';
+	adId2 = 'div-gpt-ad-1591096103845-0';
 	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_ad2RefreshFlag != 1){

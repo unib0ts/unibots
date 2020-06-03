@@ -216,7 +216,6 @@ var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
-  console.log(adUnits);
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.bidderSettings = {
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

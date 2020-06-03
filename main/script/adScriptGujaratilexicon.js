@@ -20,7 +20,7 @@ const customConfigObjectA = {
 };
 
 if (document.getElementById('1')) {
-    adUnits = [
+    adUnits1 =
       {
         code: '/21956916242/gujratilexicon.com_1',
         mediaTypes: {
@@ -37,11 +37,11 @@ if (document.getElementById('1')) {
         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
       ]
-      }
-    ];
+    };
+    adUnits.push(adUnits1);
 }
 if (document.getElementById('2')) {
-    adUnits = [
+    adUnits1 =
       {
         code: '/21956916242/gujaratilexicon.com_2',
         mediaTypes: {
@@ -58,11 +58,11 @@ if (document.getElementById('2')) {
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]
-      }
-    ];
+      };
+    adUnits.push(adUnits1);
 }
 if (document.getElementById('3')) {
-    adUnits = [
+    adUnits1 =
       {
         code: '/21956916242/gujaratilexicon.com_3',
         mediaTypes: {
@@ -79,11 +79,11 @@ if (document.getElementById('3')) {
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]
-      }
-    ];
+      };
+    adUnits.push(adUnits1);
 }
 if (document.getElementById('4')) {
-    adUnits = [
+    adUnits1 =
       {
         code: '/21956916242/gujaratilexicon.com_4',
         mediaTypes: {
@@ -100,11 +100,11 @@ if (document.getElementById('4')) {
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]
-      }
-    ];
+      };
+    adUnits.push(adUnits1);
 }
 if (document.getElementById('5')) {
-    adUnits = [
+    adUnits1 =
       {
         code: '/21956916242/gujaratilexicon.com_5',
         mediaTypes: {
@@ -121,11 +121,11 @@ if (document.getElementById('5')) {
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]
-      }
-    ];
+      };
+    adUnits.push(adUnits1);
 }
 if (document.getElementById('6')) {
-    adUnits = [
+    adUnits1 =
       {
         code: '/21956916242/gujaratilexicon.com_6',
         mediaTypes: {
@@ -142,8 +142,8 @@ if (document.getElementById('6')) {
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]
-      }
-    ];
+      };
+    adUnits.push(adUnits1);
 }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -167,17 +167,6 @@ ubpbjs.que.push(function() {
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
-      s2sConfig: {
-        accountId: '',
-        enabled: false,
-        bidders: ['sovrn', 'openx','sharethrough'],
-        timeout: PREBID_TIMEOUT-300,
-        adapter: 'prebidServer',
-        endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-        cookieSet: true,
-        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-      },
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 999, // and no more than 3 syncs at a time
@@ -200,382 +189,166 @@ ubpbjs.que.push(function() {
     });
 });
 
-if (document.getElementById('1')) {
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
+var mappings = {
+  slots: [],
+  adCode: [],
+  slotNumbers: [],
+  sizes: [],
+  adId: [],
+  renderedFlag: [false, false, false, false, false, false]
+};
+
+function ub_checkAdRendered(adId, ub_slot, adCode){
+  ub_slotNum = ub_slot[ub_slot.length-1];
+  if(!mappings.renderedFlag[ub_slotNum]){
+    adId1 = adId;
+    var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+    if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+      setTimeout(function() {
+        refreshBid(ub_slot, adCode);
+      }, REFRESH_TIMEOUT);
+      mappings.renderedFlag[ub_slotNum] = true;
+    }
+  }
+}
+
+function refreshBid(ub_slot, adCode) {
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
+              googletag.pubads().refresh(ub_slot);
           });
-      });
-  }
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-
-  var ub_slot1;
-  googletag.cmd.push(function() {
-      ub_slot1 = googletag.defineSlot('/21956916242/gujratilexicon.com_1', div_1_sizes, 'div-ub1').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAd1Rendered();
-        }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21956916242/gujratilexicon.com_1'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
-    });
-  }
-
-  ub_ad1RefreshFlag = 0;
-  function ub_checkAd1Rendered(){
-  	adId1 = 'div-ub1';
-  	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad1RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad1RefreshFlag = 1;
-          refreshBid(ub_slot1);
-        }, REFRESH_TIMEOUT);
+        });
       }
-  	 }
-  }
+    });
+  });
+}
 
+function initAdserver() {
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(mappings.slots);
+        });
+    });
+}
+
+function googleDefine(slotNumbers, adCode, sizes, adId){
+  for(var i=0; i<slotNumbers.length;i++){
+    eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+    var a = eval('ub_slot'+slotNumbers[i]);
+    a.addService(googletag.pubads());
+    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+  }
+}
+
+function googlePush(){
+  googletag.cmd.push(function() {
+    googletag.pubads().collapseEmptyDivs(true);
+    googletag.pubads().setCentering(true);
+    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+}
+
+if (document.getElementById('1')) {
+  mappings.slotNumbers.push(1);
+  mappings.adCode.push('/21956916242/gujratilexicon.com_1');
+  mappings.sizes.push(div_1_sizes);
+  mappings.adId.push('div-ub1');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot1) {
+        ub_checkAdRendered('div-ub1', ub_slot1, ['/21956916242/gujratilexicon.com_1']);
+      }
+    });
+  });
 }
 if (document.getElementById('2')) {
-
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot2]);
-          });
-      });
-  }
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-
-  var ub_slot2;
+  mappings.slotNumbers.push(2);
+  mappings.adCode.push('/21956916242/gujaratilexicon.com_2');
+  mappings.sizes.push(div_2_sizes);
+  mappings.adId.push('div-ub2');
   googletag.cmd.push(function() {
-      ub_slot2 = googletag.defineSlot('/21956916242/gujaratilexicon.com_2', div_2_sizes, 'div-ub2').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot2) {
-          ub_checkAd2Rendered();
-        }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21956916242/gujaratilexicon.com_2'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
-    });
-  }
-
-  ub_ad2RefreshFlag = 0;
-  function ub_checkAd2Rendered(){
-  	adId2 = 'div-ub2';
-  	var nodes = document.getElementById(adId2).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad2RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad2RefreshFlag = 1;
-          refreshBid(ub_slot2);
-        }, REFRESH_TIMEOUT);
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot2) {
+        ub_checkAdRendered('div-ub2', ub_slot2, ['/21956916242/gujaratilexicon.com_2']);
       }
-  	 }
-  }
+    });
+  });
 }
 if (document.getElementById('3')) {
-
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot3]);
-          });
-      });
-  }
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-
-  var ub_slot3;
+  mappings.slotNumbers.push(3);
+  mappings.adCode.push('/21956916242/gujaratilexicon.com_3');
+  mappings.sizes.push(div_3_sizes);
+  mappings.adId.push('div-ub3');
   googletag.cmd.push(function() {
-      ub_slot3 = googletag.defineSlot('/21956916242/gujaratilexicon.com_3', div_3_sizes, 'div-ub3').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot3) {
-          ub_checkAd3Rendered();
+          ub_checkAdRendered('div-ub3', ub_slot3, ['/21956916242/gujaratilexicon.com_3']);
         }
       });
   });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21956916242/gujaratilexicon.com_3'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
-    });
-  }
-
-  ub_ad3RefreshFlag = 0;
-  function ub_checkAd3Rendered(){
-  	adId3 = 'div-ub3';
-  	var nodes = document.getElementById(adId3).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad3RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad3RefreshFlag = 1;
-          refreshBid(ub_slot3);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-  }
 }
 if (document.getElementById('4')) {
-
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot4]);
-          });
-      });
-  }
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-
-  var ub_slot4;
+  mappings.slotNumbers.push(4);
+  mappings.adCode.push('/21956916242/gujaratilexicon.com_4');
+  mappings.sizes.push(div_4_sizes);
+  mappings.adId.push('div-ub4');
   googletag.cmd.push(function() {
-      ub_slot4 = googletag.defineSlot('/21956916242/gujaratilexicon.com_4', div_4_sizes, 'div-gpt-ad-1590839286035-0').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot4) {
-          ub_checkAd4Rendered();
-        }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21956916242/gujaratilexicon.com_4'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
-    });
-  }
-
-  ub_ad4RefreshFlag = 0;
-  function ub_checkAd4Rendered(){
-  	adId4 = 'div-gpt-ad-1590839286035-0';
-  	var nodes = document.getElementById(adId4).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad4RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad4RefreshFlag = 1;
-          refreshBid(ub_slot4);
-        }, REFRESH_TIMEOUT);
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot4) {
+        ub_checkAdRendered('div-ub4', ub_slot4, ['/21956916242/gujaratilexicon.com_4']);
       }
-  	 }
-  }
-
+    });
+  });
 }
 if (document.getElementById('5')) {
-
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot5]);
-          });
-      });
-  }
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-
-  var ub_slot5;
+  mappings.slotNumbers.push(5);
+  mappings.adCode.push('/21956916242/gujaratilexicon.com_5');
+  mappings.sizes.push(div_5_sizes);
+  mappings.adId.push('div-ub5');
   googletag.cmd.push(function() {
-      ub_slot5 = googletag.defineSlot('/21956916242/gujaratilexicon.com_5', div_5_sizes, 'div-ub5').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot5) {
-          ub_checkAd5Rendered();
-        }
-      });
-  });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21956916242/gujaratilexicon.com_5'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
-    });
-  }
-
-  ub_ad5RefreshFlag = 0;
-  function ub_checkAd5Rendered(){
-  	adId5 = 'div-ub5';
-  	var nodes = document.getElementById(adId5).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad5RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad5RefreshFlag = 1;
-          refreshBid(ub_slot5);
-        }, REFRESH_TIMEOUT);
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot5) {
+        ub_checkAdRendered('div-ub5', ub_slot5, ['/21956916242/gujaratilexicon.com_5']);
       }
-  	 }
-  }
+    });
+  });
 }
 if (document.getElementById('6')) {
-
-  function initAdserver() {
-      if (ubpbjs.initAdserverSet) return;
-      ubpbjs.initAdserverSet = true;
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot6]);
-          });
-      });
-  }
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-
-  var ub_slot6;
+  mappings.slotNumbers.push(6);
+  mappings.adCode.push('/21956916242/gujaratilexicon.com_6');
+  mappings.sizes.push(div_6_sizes);
+  mappings.adId.push('div-gpt-ad-1590839347556-0');
   googletag.cmd.push(function() {
       ub_slot6 = googletag.defineSlot('/21956916242/gujaratilexicon.com_6', div_6_sizes, 'div-gpt-ad-1590839347556-0').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot6) {
-          ub_checkAd6Rendered();
+          ub_checkAdRendered('div-gpt-ad-1590839347556-0', ub_slot6, ['/21956916242/gujaratilexicon.com_6']);
         }
       });
   });
-
-  function refreshBid(ub_slot) {
-    ubpbjs.que.push(function() {
-  	  ubpbjs.requestBids({
-  		  timeout: PREBID_TIMEOUT,
-  		  adUnitCodes: ['/21956916242/gujaratilexicon.com_6'],
-  		  bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
-            });
-          });
-  		  }
-  	  });
-    });
-  }
-
-  ub_ad6RefreshFlag = 0;
-  function ub_checkAd6Rendered(){
-  	adId6 = 'div-gpt-ad-1590839347556-0';
-  	var nodes = document.getElementById(adId6).childNodes[0].childNodes;
-  	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      if(ub_ad6RefreshFlag != 1){
-        setInterval(function() {
-          ub_ad6RefreshFlag = 1;
-          refreshBid(ub_slot6);
-        }, REFRESH_TIMEOUT);
-      }
-  	 }
-  }
 }
+
+if(typeof googletag.defineSlot === "function"){
+  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+  googlePush();
+}
+else{
+  setTimeout(function(){
+    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+    googlePush();
+  }, 500);
+}
+setTimeout(function() {
+    initAdserver();
+}, FAILSAFE_TIMEOUT);

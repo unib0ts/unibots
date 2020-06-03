@@ -69,6 +69,7 @@ if(mobileCheck === 'function'){
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '21975043611'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934208'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
         ]
     }
@@ -94,6 +95,7 @@ if(mobileCheck === 'function'){
               { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
               { bidder: 'nobid', params: { siteId : '21975043611'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
+              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934209'} },
               { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
             ]
         }
@@ -158,6 +160,7 @@ else{
            //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
            { bidder: 'nobid', params: { siteId : '21975043611'} },
+           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934208'} },
            { bidder: 'criteo', params: {networkId: '4902'} },
            { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
          ]
@@ -182,6 +185,7 @@ else{
               { bidder: 'openx', params: {unit: '541045931', delDomain: 'yieldbird-d.openx.net'} },
               //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
               { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934209'} },
               { bidder: 'nobid', params: { siteId : '21975043611'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
               { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }

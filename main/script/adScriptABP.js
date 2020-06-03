@@ -62,6 +62,7 @@ if (mobileCheck === 'function') {
                delDomain: 'yieldbird-d.openx.net'
              }
            },
+           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934212'} },
            //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
            {
              bidder: 'eplanning',
@@ -185,6 +186,7 @@ if (mobileCheck === 'function') {
               delDomain: 'yieldbird-d.openx.net'
             }
           },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934210'} },
           //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
           {
             bidder: 'eplanning',
@@ -273,6 +275,7 @@ if (!mobileCheckAdSript() && document.querySelector('.abp-storypage-article-righ
             delDomain: 'yieldbird-d.openx.net'
           }
         },
+        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934212'} },
         //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         {
           bidder: 'eplanning',
@@ -396,6 +399,7 @@ if (!mobileCheckAdSript() && document.querySelector('.abp-storypage-article-righ
             delDomain: 'yieldbird-d.openx.net'
           }
         },
+        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934210'} },
         //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         {
           bidder: 'eplanning',

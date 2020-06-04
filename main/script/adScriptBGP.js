@@ -239,7 +239,7 @@ function checkRemnantUnits(){
   }
 
 
-  if(unit_tagName !== "iframe"){}
+  if(unit_tagName === "iframe"){}
   else{
     unit_width = unit.offsetwidth;
     unit_height = unit.offsetheight;

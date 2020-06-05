@@ -302,11 +302,11 @@ if (document.getElementById('4')) {
   mappings.slotNumbers.push(4);
   mappings.adCode.push('/21956916242/gujaratilexicon.com_4');
   mappings.sizes.push(div_4_sizes);
-  mappings.adId.push('div-ub4');
+  mappings.adId.push('div-gpt-ad-1590839286035-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot4) {
-        ub_checkAdRendered('div-ub4', ub_slot4, ['/21956916242/gujaratilexicon.com_4']);
+        ub_checkAdRendered('div-gpt-ad-1590839286035-0', ub_slot4, ['/21956916242/gujaratilexicon.com_4']);
       }
     });
   });
@@ -330,7 +330,6 @@ if (document.getElementById('6')) {
   mappings.sizes.push(div_6_sizes);
   mappings.adId.push('div-gpt-ad-1590839347556-0');
   googletag.cmd.push(function() {
-      ub_slot6 = googletag.defineSlot('/21956916242/gujaratilexicon.com_6', div_6_sizes, 'div-gpt-ad-1590839347556-0').addService(googletag.pubads());
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot6) {
           ub_checkAdRendered('div-gpt-ad-1590839347556-0', ub_slot6, ['/21956916242/gujaratilexicon.com_6']);

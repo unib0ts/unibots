@@ -234,12 +234,12 @@ function checkRemnantUnits(){
   var unit = document.querySelectorAll('[data-ad-slot="6622736606"]')[0];
   if(typeof unit.firstElementChild === "object"){
     if(typeof unit.firstElementChild.firstElementChild === "object"){
-      unit_tagName = unit.firstElementChild.firstElementChild.firstElementChild.tagName.toLowerCase();
+      unit_ad = unit.firstElementChild.firstElementChild.firstElementChild.firstElementChild;
     }
   }
 
 
-  if(unit_tagName === "iframe"){}
+  if(unit_ad.hasOwnProperty('data-google-query-id')){}
   else{
     unit_width = unit.offsetwidth;
     unit_height = unit.offsetheight;

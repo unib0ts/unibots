@@ -250,9 +250,9 @@ function ub_checkAd1Rendered(){
 	 }
 }
 
-setTimeout(function(){
-  checkRemnantUnits();
-}, 10000);
+// setTimeout(function(){
+//   checkRemnantUnits();
+// }, 10000);
 
 var mappings_remnant = {
   slots: [],
@@ -316,6 +316,10 @@ function checkRemnantUnits(){
 
     googleDefine_remnant(mappings_remnant.slotNumbers, mappings_remnant.adCode, mappings_remnant.sizes, mappings_remnant.adId);
     callRemnantAds(mappings_remnant.adCode, mappings_remnant.slots);
+
+    setTimeout(function() {
+        initAdserver_ramnant();
+    }, FAILSAFE_TIMEOUT);
   }
 }
 
@@ -338,10 +342,6 @@ function googleDefine_remnant(slotNumbers, adCode, sizes, adId){
     mappings_remnant.slots.push(eval('ub_remnant_slot'+slotNumbers[i]));
   }
 }
-
-setTimeout(function() {
-    initAdserver_ramnant();
-}, FAILSAFE_TIMEOUT);
 
 function callRemnantAds(adCode, ub_slot){
   ubpbjs.que.push(function(){

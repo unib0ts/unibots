@@ -15,39 +15,39 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
-    // {
-    //     code: '/21956033520/vtvgujarati.com_nb_320x50',
-    //     mediaTypes: {
-    //       native: {
-    //         image: {
-    //           // sizes: [300, 100],
-    //           aspect_ratios: [{
-    //             min_width: 100,        /* Optional */
-    //             min_height: 50,       /* Optional */
-    //             ratio_width: 2,        /* Required */
-    //             ratio_height: 1,       /* Required */
-    //           }],
-    //           sendId: true
-    //         },
-    //         title: {
-    //           len: 50,
-    //           sendId: true
-    //         },
-    //         sponsoredBy: {
-    //           required: true,
-    //           sendId: true
-    //         },
-    //         clickUrl: {
-    //           required: true,
-    //           sendId: true
-    //         }
-    //       }
-    //     },
-    //     bids: [
-    //       { bidder: 'appnexus', params: { placementId: '19054397' } },
-    //       { bidder: 'oftmedia', params: { placementId: '18671527' } }
-    //     ]
-    // },
+    {
+        code: '/21956033520/vtvgujarati.com_nb_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19425194' } },
+          // { bidder: 'oftmedia', params: { placementId: '18671527' } }
+        ]
+    },
     {
         code: '/21956033520/vtvgujarati.com_nb_320x50',
         mediaTypes: {
@@ -56,11 +56,11 @@ var adUnits = [
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19054397' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '19425194' } }, /* one placementId for all sizes  my appnexus bidder */
         	// { bidder: 'oftmedia', params: { placementId: '18671527' } },
         	// { bidder: '33across', params: { siteId : 'afgup6Buar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97460' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '701549'} },
+          { bidder: 'sovrn', params: {tagid: '735400'} },
           // { bidder: 'openx', params: {unit: '541046030', delDomain: 'yieldbird-d.openx.net'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

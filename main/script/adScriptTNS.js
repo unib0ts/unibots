@@ -496,7 +496,7 @@ else{
 
 setTimeout(function(){
   checkRemnantUnits();
-}, 10000);
+}, 30000);
 
 var mappings_remnant = {
   slots: [],

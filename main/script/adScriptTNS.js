@@ -493,3 +493,200 @@ else{
     }
   }
 }
+
+setTimeout(function(){
+  checkRemnantUnits();
+}, 10000);
+
+var mappings_remnant = {
+  slots: [],
+  adCode: [],
+  slotNumbers: [],
+  sizes: [],
+  adId: [],
+  renderedFlag: [false, false, false, false, false, false]
+};
+var remnantAdUnits= [];
+var div_sizes_remnant_1 = [[320, 100], [300, 50], [320, 50]];
+var div_sizes_remnant_2 = [[728, 90], [468, 60]];
+
+function checkRemnantUnits(){
+
+  var unit = document.querySelectorAll('[data-ad-slot="8758753195"]')[0];
+  if(typeof unit.firstElementChild === "object"){
+    if(typeof mobileCheck === 'function'){
+      if(mobileCheck()){
+        remnantAdUnits = [
+          {
+            code: '/21928950349/twentyfournews.com_nb_320x100',
+            mediaTypes: {
+                banner: {
+                    sizes: div_sizes_remnant_1
+                }
+            },
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19057716' } }, /* one placementId for all sizes  my appnexus bidder */
+            	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+            	{ bidder: '33across', params: { siteId : 'cmquYiBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
+              { bidder: 'sovrn', params: {tagid: '735547'} },
+              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681302'} },
+              { bidder: 'criteo', params: {networkId: '4902'} },
+              { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
+              { bidder: 'nobid', params: { siteId : '22027218255'} },
+              // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+            	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+            ]
+          }
+        ]
+        var z= document.createElement('div');
+        z.id = 'ub-remnant-ad-1';
+        z.className = 'ub-remnant-ad-1';
+        var node = unit.parentNode;
+        node.replaceChild(z, unit);
+
+        mappings_remnant.slotNumbers.push(1);
+        mappings_remnant.adCode.push('/21928950349/twentyfournews.com_nb_320x100');
+        mappings_remnant.sizes.push(div_sizes_remnant_1);
+        mappings_remnant.adId.push('ub-remnant-ad-1');
+
+        googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_remnant_slot1) {
+              ub_checkAdRendered_remnant('ub-remnant-ad-1', ub_remnant_slot1, ['/21928950349/twentyfournews.com_nb_320x100']);
+            }
+          });
+        });
+      }
+      else{
+        remnantAdUnits = [
+          {
+            code: '/21928950349/twentyfournews.com_nb_728x90_sr',
+            mediaTypes: {
+                banner: {
+                    sizes: div_sizes_remnant_2
+                }
+            },
+            bids: [
+              { bidder: 'appnexus', params: { placementId: '19057716' } }, /* one placementId for all sizes  my appnexus bidder */
+            	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+            	{ bidder: '33across', params: { siteId : 'cmquYiBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
+              { bidder: 'sovrn', params: {tagid: '735548'} },
+              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681302'} },
+              { bidder: 'criteo', params: {networkId: '4902'} },
+              { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
+              { bidder: 'nobid', params: { siteId : '22027218255'} },
+              // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+            	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+            ]
+          }
+        ]
+        var z= document.createElement('div');
+        z.id = 'ub-remnant-ad-1';
+        z.className = 'ub-remnant-ad-1';
+        var node = unit.parentNode;
+        node.replaceChild(z, unit);
+
+        mappings_remnant.slotNumbers.push(1);
+        mappings_remnant.adCode.push('/21928950349/twentyfournews.com_nb_728x90_sr');
+        mappings_remnant.sizes.push(div_sizes_remnant_1);
+        mappings_remnant.adId.push('ub-remnant-ad-1');
+
+        googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_remnant_slot1) {
+              ub_checkAdRendered_remnant('ub-remnant-ad-1', ub_remnant_slot1, ['/21928950349/twentyfournews.com_nb_728x90_sr']);
+            }
+          });
+        });
+      }
+    }
+  }
+
+  if(typeof googletag.defineSlot === "function"){
+    googleDefine_remnant(mappings_remnant.slotNumbers, mappings_remnant.adCode, mappings_remnant.sizes, mappings_remnant.adId);
+    // googlePush_remnant();
+  }
+  else{
+    setTimeout(function(){
+      googleDefine_remnant(mappings_remnant.slotNumbers, mappings_remnant.adCode, mappings_remnant.sizes, mappings_remnant.adId);
+      // googlePush_remnant();
+    }, 500);
+  }
+
+  callRemnantAds(mappings_remnant.adCode, mappings_remnant.slots);
+}
+
+function ub_checkAdRendered_remnant(adId, ub_slot, adCode){
+  adId1 = adId;
+  var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+  if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    setTimeout(function() {
+      refreshBid_remnant(ub_slot, adCode);
+    }, REFRESH_TIMEOUT);
+  }
+}
+
+function refreshBid_remnant(ub_slot, adCode) {
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnits: remnantAdUnits,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+
+function initAdserver_ramnant() {
+    if (ubpbjs.initAdserverSetRemnant) return;
+    ubpbjs.initAdserverSetRemnant = true;
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(mappings_remnant.slots);
+        });
+    });
+}
+
+function googleDefine_remnant(slotNumbers, adCode, sizes, adId){
+  for(var i=0; i<slotNumbers.length;i++){
+    eval('ub_remnant_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+    var a = eval('ub_remnant_slot'+slotNumbers[i]);
+    a.addService(googletag.pubads());
+    mappings_remnant.slots.push(eval('ub_remnant_slot'+slotNumbers[i]));
+  }
+}
+
+setTimeout(function() {
+    initAdserver_ramnant();
+}, FAILSAFE_TIMEOUT);
+
+function callRemnantAds(adCode, ub_slot){
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnits: remnantAdUnits,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        ubpbjs.initAdserverSetRemnant = true;
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}

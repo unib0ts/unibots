@@ -181,7 +181,6 @@ else{
               { bidder: 'criteo', params: {networkId: '4902'} },
               { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
               { bidder: 'nobid', params: { siteId : '22027218255'} },
-              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681032'} },
               //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
               { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
             ]

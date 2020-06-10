@@ -528,11 +528,11 @@ function checkRemnantUnits(){
             },
             bids: [
               { bidder: 'appnexus', params: { placementId: '19057716' } }, /* one placementId for all sizes  my appnexus bidder */
-            	//{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+            	{ bidder: 'oftmedia', params: { placementId: '18778196' } },
             	{ bidder: '33across', params: { siteId : 'cmquYiBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
             	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
-              { bidder: 'sovrn', params: {tagid: '735547'} },
-              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681302'} },
+              { bidder: 'sovrn', params: {tagid: '735451'} },
+              { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681032'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
               { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
               { bidder: 'nobid', params: { siteId : '22027218255'} },

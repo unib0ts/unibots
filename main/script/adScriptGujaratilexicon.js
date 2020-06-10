@@ -76,7 +76,7 @@ if (document.getElementById('3')) {
           { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19352238' } },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          { bidder: 'sovrn', params: {tagid: '735395'} }
+          { bidder: 'sovrn', params: {tagid: '735395'} },
           // { bidder: 'nobid', params: { siteId : '21975046114'} },
           { bidder: 'oftmedia', params: { placementId: '19095403' } },
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

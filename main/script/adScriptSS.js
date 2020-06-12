@@ -215,11 +215,20 @@ function checkRemnantUnits(){
 
   if(!containsAd && typeof unit !== 'undefined'){
     var unit = document.getElementById('div-gpt-ad-1576678733140-0');
-    unit.firstElementChild.innerHTML = '';
-    var z= document.createElement('div');
-    z.id = 'ub-remnant-ad-1';
-    z.className = 'ub-remnant-ad-1';
-    unit.firstElementChild.appendChild(z);
+    var length = unit.childElementCount;
+    for(var i = 0; i<length; i++){
+      child = unit.children[i];
+      child_name = child.tagName.toLowerCase();
+      if(child_name == 'div'){
+        child.innerHTML = '';
+        var z= document.createElement('div');
+        z.id = 'ub-remnant-ad-1';
+        z.className = 'ub-remnant-ad-1';
+        child.appendChild(z);
+        break;
+      }
+    }
+
 
     remnantAdUnits = [
       {

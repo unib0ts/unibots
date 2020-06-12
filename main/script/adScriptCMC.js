@@ -59,8 +59,20 @@ ubpbjs.que = ubpbjs.que || [];
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.bidderSettings = {
-      oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      emx_digital: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+      'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+      'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+      'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+      'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+      'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+
+      '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
     };
     ubpbjs.setConfig({
 
@@ -73,8 +85,8 @@ ubpbjs.que.push(function() {
         filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
         // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
       },
-      debug: true,
-      useBidCache: false,
+      debug: false,
+      useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
       publisherDomain: 'https://coinmarketcap.com/',

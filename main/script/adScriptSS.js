@@ -203,9 +203,11 @@ function checkRemnantUnits(){
   if(typeof unit === "object"){
     if(typeof unit.firstElementChild === "object"){
       if(typeof unit.firstElementChild.firstElementChild === "object"){
-        unit_name = unit.firstElementChild.firstElementChild.tagName.toLowerCase();
-        if(unit_name === 'iframe'){
-          containsAd = true;
+        if(unit.firstElementChild.firstElementChild != null){
+          unit_name = unit.firstElementChild.firstElementChild.tagName.toLowerCase();
+          if(unit_name === 'iframe'){
+            containsAd = true;
+          }
         }
       }
     }

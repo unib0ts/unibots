@@ -59,7 +59,7 @@ var adUnits = [
     { bidder: 'sovrn', params: {tagid: '708890'} },
     { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
     { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
-    // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];
@@ -77,17 +77,22 @@ ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
   ubpbjs.setConfig({
     priceGranularity: customConfigObjectA,
-    s2sConfig: {
-      accountId: '',
-      enabled: false,
-      bidders: ['sovrn', 'openx','sharethrough'],
-      timeout: PREBID_TIMEOUT-300,
-      adapter: 'prebidServer',
-      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-      syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-      cookieSet: true,
-      cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-    },
+    ubpbjs.bidderSettings = {
+      'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+      'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+      'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+      'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+      'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+
+      '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+    };
     userSync: {
       iframeEnabled: true,
       syncsPerBidder: 999, // and no more than 3 syncs at a time
@@ -95,8 +100,8 @@ ubpbjs.que.push(function() {
       filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
       // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
     },
-    debug: true,
-    useBidCache: false,
+    debug: false,
+    useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0
     bidderSequence: 'random', // Default is random
     publisherDomain: 'https://www.gonewsindia.com/',

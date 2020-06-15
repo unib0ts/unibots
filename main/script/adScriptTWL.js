@@ -32,7 +32,7 @@ var adUnits = [
           { bidder: 'openx', params: {unit: '541046564', delDomain: 'yieldbird-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926310'} },
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     },
@@ -53,7 +53,7 @@ var adUnits = [
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926308'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     },
@@ -75,7 +75,7 @@ var adUnits = [
           //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926309'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }
@@ -102,7 +102,7 @@ ubpbjs.que.push(function() {
       'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
       'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-      'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
       '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

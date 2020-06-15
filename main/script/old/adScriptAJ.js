@@ -26,7 +26,7 @@ var adUnits = [{
     	bidder: '33across',
     	params: {siteId: 'd0h6GkBt8r6PWLaKlId8sQ', productId: 'siab'}
     },
-    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     {
     	bidder: 'emx_digital',
     	params: {tagid: '97452'}
@@ -63,7 +63,7 @@ ubpbjs.bidderSettings = {
   'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
   'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
   'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-  'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+  //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
   '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
   'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

@@ -60,7 +60,7 @@ var adUnits = [
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950119'} },
     // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
     // { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
-    { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];
@@ -85,7 +85,7 @@ ubpbjs.que.push(function() {
     'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-    'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
     '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

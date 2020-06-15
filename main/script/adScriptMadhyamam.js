@@ -67,7 +67,7 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId : '21986889043'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
         ]
     }
@@ -92,7 +92,7 @@ if(document.getElementById('HomePage_300x250_1') != null){
         { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId : '21986889043'} },
         { bidder: 'criteo', params: {networkId: '4902'} },
-        // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
       ]
   }
@@ -118,7 +118,7 @@ if(document.getElementById('div-gpt-ad-1590738750383-0') != null){
         { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId : '21986889043'} },
         { bidder: 'criteo', params: {networkId: '4902'} },
-        // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
       ]
   }
@@ -146,7 +146,7 @@ ubpbjs.que.push(function() {
       'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
       'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-      'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
       '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

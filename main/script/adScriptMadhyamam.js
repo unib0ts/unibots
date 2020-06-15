@@ -300,17 +300,15 @@ if(window.location.href != "https://m.madhyamam.com/" && window.location.href !=
   }
 }
 
-if(window.location.href != "https://m.madhyamam.com/" && window.location.href != "https://www.madhyamam.com/"){
-  if(typeof googletag.defineSlot === "function"){
+if(typeof googletag.defineSlot === "function"){
+  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+  googlePush();
+}
+else{
+  setTimeout(function(){
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
-  }
-  else{
-    setTimeout(function(){
-      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-      googlePush();
-    }, 500);
-  }
+  }, 500);
 }
 
 

@@ -140,14 +140,8 @@ function initAdserver() {
 
 var passbackTagHtml = '<script async src="https://www.googletagservices.com/tag/js/gpt.js"></script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21956033520/madhyamam.com_wm3_300x250", [[200, 200], [250, 250], [300, 250]], "div-gpt-ad-1592306328157-0").addService(googletag.pubads());googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="div-gpt-ad-1592306328157-0"><script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1592306328157-0"); });</script></div>';
 
-<iframe id='postbid_iframe'
-    FRAMEBORDER="0"
-    SCROLLING="no"
-    MARGINHEIGHT="0"
-    MARGINWIDTH="0"
-    TOPMARGIN="0"
-    LEFTMARGIN="0"
-    ALLOWTRANSPARENCY="true"
-    WIDTH="0"
-    HEIGHT="0">
-</iframe>
+var iframeHTML ='<iframe id="postbid_iframe" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="0" HEIGHT="0"></iframe>';
+
+target_div = document.getElementById('div-ub-1');
+console.log(target_div);
+target_div.innerHTML = iframeHTML;

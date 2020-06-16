@@ -90,15 +90,6 @@ ubpbjs.que.push(function() {
       bidderSequence: 'random', // Default is random
       publisherDomain: 'https://www.madhyamam.com/',
       bidderTimeout: PREBID_TIMEOUT+500,
-      "currency": {
-         // enables currency feature
-         "adServerCurrency": "AED",
-         "granularityMultiplier":3 ,
-         // optionally override the default rate file
-         "conversionRateFile": "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/currency/currency.json",
-         // optionally provide a default rate in case the file can't be read
-         "defaultRates": { "USD": { "AED": 3.67 }}
-       }
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
@@ -111,22 +102,12 @@ ubpbjs.que.push(function() {
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
     ubpbjs.initAdserverSet = true;
-    var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('/21956033520/madhyamam.com_wm3_300x250');
-    if (adServerTargeting && adServerTargeting['hb_adid']) {
-      googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
-          });
-      });
-    }
-    else{
-      placement = document.getElementById('div-ub-1');
-      placement.style.width = "300px";
-      placement.style.height = "250px";
-      placement.innerHTML = passbackTagHtml;
-    }
-
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot1]);
+        });
+    });
 }
 // in case ubpbjs doesn't load
 setTimeout(function() {
@@ -142,5 +123,3 @@ googletag.cmd.push(function() {
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
 });
-
-var passbackTagHtml = '<script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21956033520/madhyamam.com_wm3_300x250", [[200, 200], [250, 250], [300, 250]], "div-gpt-ad-1592306328157-0").addService(googletag.pubads());googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="div-gpt-ad-1592306328157-0"><script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1592306328157-0"); });</script></div>';

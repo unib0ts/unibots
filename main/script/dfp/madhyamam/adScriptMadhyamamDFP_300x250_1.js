@@ -121,10 +121,10 @@ function initAdserver() {
       });
     }
     else{
-      // iframe.width = div_1_sizes[0][0];
-      // iframe.height = div_1_sizes[0][1];
-      // iframeDoc.write('<head></head><body>' + passbackTagHtml + '</body>');
-      // iframeDoc.close();
+      iframe.width = div_1_sizes[0][0];
+      iframe.height = div_1_sizes[0][1];
+      iframeDoc.write('<head></head><body>' + passbackTagHtml + '</body>');
+      iframeDoc.close();
     }
 
 }

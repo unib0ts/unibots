@@ -11,12 +11,12 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [[250, 250], [300, 250], [200, 200]];
+var div_1_sizes = [[320, 50], [300, 50]];
 
 
 var adUnits = [
     // {
-    //     code: '/21956033520/outlookindia.com_nb_300x250',
+    //     code: '/21957769615/24honline.net_nb_320x50',
     //     mediaTypes: {
     //       native: {
     //         image: {
@@ -49,18 +49,18 @@ var adUnits = [
     //     ]
     // },
     {
-        code: '/21956033520/outlookindia.com_nb_300x250',
+        code: '/21957769615/24honline.net_nb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19509440' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '19509368' } }, /* one placementId for all sizes  my appnexus bidder */
         	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
         	// { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '740657'} },
+          { bidder: 'sovrn', params: {tagid: '740650'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2963475'} },
           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
         	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
@@ -117,7 +117,7 @@ ubpbjs.que.push(function() {
       useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://www.outlookindia.com/',
+      publisherDomain: 'https://24honline.net/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -145,7 +145,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956033520/outlookindia.com_nb_300x250', div_1_sizes, 'div-gpt-ad-1592297431439-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21957769615/24honline.net_nb_320x50', div_1_sizes, 'div-gpt-ad-1592419948348-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -162,7 +162,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956033520/outlookindia.com_nb_300x250'],
+		  adUnitCodes: ['/21957769615/24honline.net_nb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -177,7 +177,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1592297431439-0';
+	adId = 'div-gpt-ad-1592419948348-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

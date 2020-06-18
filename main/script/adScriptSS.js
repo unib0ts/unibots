@@ -221,7 +221,7 @@ var mappings_config = {
       //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
       { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
       // { bidder: 'emx_digital', params: { tagid: '103699' } }, /* sizeless */
-      // { bidder: 'sovrn', params: {tagid: '735296'} },
+      { bidder: 'sovrn', params: {tagid: '738414'} },
       { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

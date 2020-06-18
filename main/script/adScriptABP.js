@@ -416,7 +416,7 @@ var adUnits = [
             networkId: '4902'
           }
         },
-        {
+        //{
         //   { bidder: 'adsolut',
         //     params: {
         //       zoneId: '107071',

@@ -14,6 +14,7 @@ var customConfigObjectA = {
 var div_1_sizes = [300, 250];
 var div_2_sizes = [320, 50];
 var div_3_sizes = [[300, 50], [320, 50]];
+var adUnits = [];
 
 if (document.getElementById('corover-ksrtc-IP')) {
     adUnits1 =

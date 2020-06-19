@@ -69,9 +69,9 @@ if (document.getElementById('corover-ad-hp')) {
         },
         bids: [
           { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
-          // { bidder: 'appnexus', params: { placementId: '19352238' } },
+          { bidder: 'appnexus', params: { placementId: '19252129' } },
           { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'sovrn', params: {tagid: '735395'} },
+          { bidder: 'sovrn', params: {tagid: '741307'} },
           // { bidder: 'nobid', params: { siteId : '21975046114'} },
           // { bidder: 'oftmedia', params: { placementId: '19095403' } },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2953663'} },

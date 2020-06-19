@@ -126,7 +126,7 @@ function initAdserver() {
     //     });
       ubpbjs.que.push(function() {
          ubpbjs.setTargetingForGPTAsync();
-         ubpbjs.renderAd(iframe, adServerTargeting['hb_adid']);
+         ubpbjs.renderAd(iframeDoc, adServerTargeting['hb_adid']);
       });
     }
     else{

@@ -139,11 +139,11 @@ googletag.cmd.push(function() {
   googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
-  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot1) {
-        ub_checkAdRendered();
-      }
-  });
+  // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+  //     if (event.slot === ub_slot1) {
+  //       ub_checkAdRendered();
+  //     }
+  // });
 });
 
 function refreshBid() {

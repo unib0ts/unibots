@@ -72,7 +72,7 @@ if (document.getElementById('corover-ad-hp')) {
       	  }
         },
         bids: [
-          { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
+          // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19252129' } },
           { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'sovrn', params: {tagid: '741307'} },

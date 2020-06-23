@@ -50,12 +50,12 @@ if (mobileCheck === 'function') {
            //     tagid: '97450'
            //   }
            // }, /* sizeless */
-           // {
-           //   bidder: 'sovrn',
-           //   params: {
-           //     tagid: '724698'
-           //   }
-           // },
+           {
+             bidder: 'sovrn',
+             params: {
+               tagid: '741568'
+             }
+           },
            // {
            //   bidder: 'openx',
            //   params: {
@@ -178,7 +178,7 @@ if (mobileCheck === 'function') {
           // {
           //   bidder: 'sovrn',
           //   params: {
-          //     tagid: '716602'
+          //     tagid: '741568'
           //   }
           // },
           // {

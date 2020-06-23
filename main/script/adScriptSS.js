@@ -206,25 +206,27 @@ var mappings_config = {
   bids: [
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-      //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+      { bidder: 'oftmedia', params: { placementId: '18778196' } },
       { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-      // { bidder: 'emx_digital', params: { tagid: '103699' } }, /* sizeless */
+      { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
       { bidder: 'sovrn', params: {tagid: '735296'} },
       { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'criteo', params: {networkId: '4902'} }
     ],
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-      //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+      { bidder: 'oftmedia', params: { placementId: '18778196' } },
       { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-      // { bidder: 'emx_digital', params: { tagid: '103699' } }, /* sizeless */
+      { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
       { bidder: 'sovrn', params: {tagid: '738414'} },
       { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'criteo', params: {networkId: '4902'} }
     ]

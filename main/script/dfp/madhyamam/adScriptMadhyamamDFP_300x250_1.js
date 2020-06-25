@@ -117,12 +117,19 @@ ubpbjs.que.push(function() {
         bidsBackHandler: initAdserver,
         timeout: PREBID_TIMEOUT
     });
-    ubpbjs.enableAnalytics([{
-      provider: 'ga',
-      options: {
-        global: 'ubga'
-      }
-    }]);
+
+    ubpbjs.onEvent('auctionEnd', function(){
+      setTimeout(function(){
+        send_bids_for_analytics();
+      }, 5000);
+    });
+
+    // ubpbjs.enableAnalytics([{
+    //   provider: 'ga',
+    //   options: {
+    //     global: 'ubga'
+    //   }
+    // }]);
 });
 
 function initAdserver() {
@@ -168,3 +175,65 @@ function initAdserver() {
 // });
 
 var passbackTagHtml = '<script async src="https://www.googletagservices.com/tag/js/gpt.js"><\/script><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21956033520/madhyamam.com_wm3_300x250", [[200, 200], [250, 250], [300, 250]], "div-gpt-ad-1592306328157-0").addService(googletag.pubads());googletag.pubads().enableSingleRequest();googletag.pubads().set("page_url", "'+URL+'");googletag.enableServices();});<\/script><div id="div-gpt-ad-1592306328157-0"><script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1592306328157-0"); });<\/script></div>';
+
+
+function send_bids_for_analytics() {
+  function forEach(responses, cb) {
+    Object.keys(responses).forEach(function(adUnitCode) {
+      var response = responses[adUnitCode];
+      response.bids.forEach(function(bid) {
+        cb(adUnitCode, bid);
+      });
+    });
+  }
+  var winners = ubpbjs.getAllWinningBids();
+  var output = [];
+  forEach(ubpbjs.getBidResponses(), function(code, bid) {
+    output.push({
+      bid: {
+        bidderCode: bid.bidderCode,
+        mediaType: bid.mediaType,
+        adId: bid.adId,
+        cpm: bid.cpm,
+        pbHg: bid.pbHg,
+        currency: bid.currency,
+        creativeId: bid.creativeId,
+      },
+      adunit: code,
+      auctionId: bid.auctionId,
+      rendered: !!winners.find(function(winner) {
+        return winner.adId==bid.adId;
+      })
+    });
+  });
+  send_bids_to_server(output);
+}
+
+function send_bids_to_server(obj){
+		var request = new XMLHttpRequest();
+		url = 'https://unibots.warw.in/save_bids';
+  	request.open('POST', url, true);
+  	request.setRequestHeader("Content-type", "application/json");
+  	request.onload = function() {
+  		if (request.status >= 200 && request.status < 400) {
+  			var data = request.responseText;
+  			data = JSON.parse(data);
+  			if(data.error == true) {
+  				console.log(data.msg);
+  				console.log(data.errmsg);
+  			}
+  			else if(data.error == false) {
+  				//closeloader();
+  				// console.log("Request Completed Successfully");
+  			}
+  		}
+  		else {
+  			// We reached our target server, but it returned an error
+  			console.log('Request failed from server');
+  		}
+  	};
+  	request.onerror = function() {
+  		console.log('Request failed');
+  	};
+  	request.send(JSON.stringify(output));
+}

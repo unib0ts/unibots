@@ -10,8 +10,8 @@ var aa=function(a){var b=0;return function(){return b<a.length?{done:!1,value:a[
 // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 // })(window,document,'script','https://www.google-analytics.com/analytics.js','ubga');
 //
-ubga('create', 'UA-90028727-2', 'auto');
-ubga('send', 'pageview');
+// ubga('create', 'UA-90028727-2', 'auto');
+// ubga('send', 'pageview');
 
 var s1 = document.createElement('script');
 s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";

@@ -235,5 +235,5 @@ function send_bids_to_server(obj){
   	request.onerror = function() {
   		console.log('Request failed');
   	};
-  	request.send(JSON.stringify(output));
+  	request.send(JSON.stringify(obj));
 }

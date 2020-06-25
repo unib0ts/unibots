@@ -1,4 +1,4 @@
-var div_1_sizes = [[300, 50], [320, 50]];
+var div_1_sizes = [320, 50];
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -15,7 +15,7 @@ const customConfigObjectA = {
 
 var adUnits = [
   // {
-  //     code: '/21957769615/phunutoday.vn_nb_320x50',
+  //     code: '/21956238066/jobs4fresher.com_nb_320x50',
   //     mediaTypes: {
   //       native: {
   //         image: {
@@ -47,7 +47,7 @@ var adUnits = [
   //     ]
   // },
   {
-  code: '/21957769615/phunutoday.vn_nb_320x50',
+  code: '/21956238066/jobs4fresher.com_nb_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: div_1_sizes
@@ -55,13 +55,14 @@ var adUnits = [
   },
   bids: [
     {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    { bidder: 'appnexus', params: { placementId: '19518211' } }, /* one placementId for all sizes  my appnexus bidder */
-    { bidder: 'sovrn', params: {tagid: '741306'} },
-    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2973348'} },
-    // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-    // { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'appnexus', params: { placementId: '19055967' } }, /* one placementId for all sizes  my appnexus bidder */
+    // { bidder: 'sovrn', params: {tagid: '741309'} },
+    // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2971089'} },
+    // { bidder: 'nobid', params: { siteId : '22045891277'} },
+    { bidder: 'rhythmone', params: { placementId: '205376'}}, /* one placementId for all sizes */
+    { bidder: 'openx', params: {unit: '541046136', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'rubicon', params: {accountId: '11734', siteId: '323720', zoneId: '1680354'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    { bidder: 'nobid', params: { siteId : '22045890863'} },
     { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];
@@ -106,10 +107,18 @@ ubpbjs.que.push(function() {
     useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0
     bidderSequence: 'random', // Default is random
-    publisherDomain: 'https://phunutoday.vn/',
+    publisherDomain: 'https://jobs4fresher.com/',
     bidderTimeout: PREBID_TIMEOUT+500,
     //pubcid: {expInterval: },
-    //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+    "currency": {
+       // enables currency feature
+       "adServerCurrency": "AED",
+       "granularityMultiplier":3 ,
+       // optionally override the default rate file
+       "conversionRateFile": "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/currency/currency.json",
+       // optionally provide a default rate in case the file can't be read
+       "defaultRates": { "USD": { "AED": 3.67 }}
+     }
    });
   ubpbjs.requestBids({
     bidsBackHandler: initAdserver,
@@ -134,7 +143,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21957769615/phunutoday.vn_nb_320x50', div_1_sizes, 'div-gpt-ad-1592499326400-0').addService(googletag.pubads());
+  ub_slot1 = googletag.defineSlot('/21956238066/jobs4fresher.com_nb_320x50', div_1_sizes, 'div-gpt-ad-1593088455927-0').addService(googletag.pubads());
   googletag.pubads().collapseEmptyDivs(true);
   googletag.pubads().setCentering(true);
   googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -151,7 +160,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21957769615/phunutoday.vn_nb_320x50'],
+		  adUnitCodes: ['/21956238066/jobs4fresher.com_nb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -166,7 +175,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1592499326400-0';
+	adId = 'div-gpt-ad-1593088455927-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

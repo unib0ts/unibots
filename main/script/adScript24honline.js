@@ -120,7 +120,15 @@ ubpbjs.que.push(function() {
       publisherDomain: 'https://24honline.net/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
-      //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+      "currency": {
+         // enables currency feature
+         "adServerCurrency": "AED",
+         "granularityMultiplier":3 ,
+         // optionally override the default rate file
+         "conversionRateFile": "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/currency/currency.json",
+         // optionally provide a default rate in case the file can't be read
+         "defaultRates": { "USD": { "AED": 3.67 }}
+       }
      });
     ubpbjs.requestBids({
         bidsBackHandler: initAdserver,

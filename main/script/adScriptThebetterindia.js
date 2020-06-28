@@ -18,7 +18,7 @@ var adUnits = [];
 
 if (typeof mobileCheck === "function") {
   if (!mobileCheck()) {
-    if (document.querySelector('quads-ad5')) {
+    if (document.getElementById('quads-ad5')) {
       adUnits1 =
         {
             code: '/21956916242/thebetterindia.com_nb_970x250',
@@ -47,7 +47,7 @@ if (typeof mobileCheck === "function") {
     }
   }
   else {
-    if (document.querySelector('quads-ad5')) {
+    if (document.getElementById('quads-ad5')) {
       adUnits1 =
         {
           code: '/21956916242/thebetterindia.com_nb_336x280',
@@ -132,28 +132,31 @@ ubpbjs.que.push(function() {
     });
 });
 
-var slots = [], adCode = [], slotNumbers = [], sizes = [], adId = [];
-var renderedFlag = [false, false];
+var mappings = {
+  slots: [],
+  adCode: [],
+  slotNumbers: [],
+  sizes: [],
+  adId: [],
+  renderedFlag: [false, false]
+};
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1];
-  if(!renderedFlag[ub_slotNum]){
+  if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       setTimeout(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
-      renderedFlag[ub_slotNum] = true;
+      mappings.renderedFlag[ub_slotNum] = true;
     }
   }
 }
 
 function refreshBid(ub_slot, adCode) {
-  // console.log(adCode);
-  // ubpbjs.initAdserverSet = true;
-  // console.log(ubpbjs.adUnits);
-  ubpbjs.que.push(function() {
+  ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
@@ -175,17 +178,17 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(slots);
+            googletag.pubads().refresh(mappings.slots);
         });
     });
 }
 
-function googleDefine(slotsNumbers, adCode, sizes, adId){
+function googleDefine(slotNumbers, adCode, sizes, adId){
   for(var i=0; i<slotNumbers.length;i++){
     eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
     var a = eval('ub_slot'+slotNumbers[i]);
     a.addService(googletag.pubads());
-    slots.push(eval('ub_slot'+slotNumbers[i]));
+    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
   }
 }
 
@@ -201,11 +204,11 @@ function googlePush(){
 
 if(typeof mobileCheck === "function"){
   if (!mobileCheck()){
-   if (document.querySelector('quads-ad5')) {
-     slotNumbers.push(2);
-     adCode.push('/21956916242/thebetterindia.com_nb_970x250');
-     sizes.push(div_2_sizes);
-     adId.push('div-gpt-ad-1593335608286-0');
+   if (document.getElementById('quads-ad5')) {
+     mappings.slotNumbers.push(2);
+     mappings.adCode.push('/21956916242/thebetterindia.com_nb_970x250');
+     mappings.sizes.push(div_2_sizes);
+     mappings.adId.push('div-gpt-ad-1593335608286-0');
      googletag.cmd.push(function() {
          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
            if (event.slot === ub_slot2) {
@@ -216,11 +219,11 @@ if(typeof mobileCheck === "function"){
    }
   }
   else {
-    if (document.querySelector('quads-ad5')){
-     slotNumbers.push(1);
-     adCode.push('/21956916242/thebetterindia.com_nb_336x280');
-     sizes.push(div_1_sizes);
-     adId.push('div-gpt-ad-1593335576007-0');
+    if (document.getElementById('quads-ad5')){
+     mappings.slotNumbers.push(1);
+     mappings.adCode.push('/21956916242/thebetterindia.com_nb_336x280');
+     mappings.sizes.push(div_1_sizes);
+     mappings.adId.push('div-gpt-ad-1593335576007-0');
      googletag.cmd.push(function() {
          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
            if (event.slot === ub_slot1) {
@@ -233,12 +236,12 @@ if(typeof mobileCheck === "function"){
 }
 
 if(typeof googletag.defineSlot === "function"){
-  googleDefine(slotNumbers, adCode, sizes, adId);
+  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
   googlePush();
 }
 else{
   setTimeout(function(){
-    googleDefine(slotNumbers, adCode, sizes, adId);
+    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
   }, 500);
 }

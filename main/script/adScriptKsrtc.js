@@ -78,7 +78,7 @@ if (document.getElementById('corover-ad-hp')) {
           { bidder: 'sovrn', params: {tagid: '741307'} },
           { bidder: 'nobid', params: { siteId : '22045891280'} },
           // { bidder: 'oftmedia', params: { placementId: '19095403' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2975888'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2975889'} },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]

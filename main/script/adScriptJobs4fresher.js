@@ -56,7 +56,7 @@ var adUnits = [
   bids: [
     {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'appnexus', params: { placementId: '19055967' } }, /* one placementId for all sizes  my appnexus bidder */
-    // { bidder: 'sovrn', params: {tagid: '741309'} },
+    { bidder: 'sovrn', params: {tagid: '744366'} },
     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2971089'} },
     // { bidder: 'nobid', params: { siteId : '22045891277'} },
     { bidder: 'rhythmone', params: { placementId: '205376'}}, /* one placementId for all sizes */

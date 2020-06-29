@@ -208,8 +208,7 @@ function send_bids_for_analytics() {
       })
     });
   });
-  console.log(output)
-  // send_bids_to_server(output);
+  send_bids_to_server(output);
 }
 
 function send_bids_to_server(obj){

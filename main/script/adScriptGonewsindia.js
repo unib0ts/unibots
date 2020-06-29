@@ -15,7 +15,7 @@ const customConfigObjectA = {
 
 var adUnits = [
   {
-      code: '/21956916242/gonewsindia.com_nb_320x50',
+      code: '[/21956916242/gonewsindia.com_nb_320x50',
       mediaTypes: {
         native: {
           image: {
@@ -47,7 +47,7 @@ var adUnits = [
       ]
   },
   {
-  code: '/21956916242/gonewsindia.com_nb_320x50',
+  code: '[/21956916242/gonewsindia.com_nb_320x50',
   mediaTypes: {
 	  banner: {
 		  sizes: div_1_sizes
@@ -75,24 +75,24 @@ ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
+  ubpbjs.bidderSettings = {
+    'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+    'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+    'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+    'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+    'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+    'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+    'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+    //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+
+    '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+  };
   ubpbjs.setConfig({
     priceGranularity: customConfigObjectA,
-    ubpbjs.bidderSettings = {
-      'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-      'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-      'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-      'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-      //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-
-      '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
-    };
     userSync: {
       iframeEnabled: true,
       syncsPerBidder: 999, // and no more than 3 syncs at a time
@@ -132,24 +132,24 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21956916242/gonewsindia.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+  ub_slot1 = googletag.defineSlot('[/21956916242/gonewsindia.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
   googletag.pubads().collapseEmptyDivs(true);
   googletag.pubads().setCentering(true);
   googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
-  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot1) {
-        ub_checkAdRendered();
-      }
-  });
+  // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+  //     if (event.slot === ub_slot1) {
+  //       ub_checkAdRendered();
+  //     }
+  // });
 });
 
 function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956916242/gonewsindia.com_nb_320x50'],
+		  adUnitCodes: ['[/21956916242/gonewsindia.com_nb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

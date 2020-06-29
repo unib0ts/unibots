@@ -201,12 +201,15 @@ function send_bids_for_analytics() {
       },
       adunit: code,
       auctionId: bid.auctionId,
+      date: new Date().toLocaleDateString("en-US", {timeZone: "Asia/Kolkata"}),
+      client: 'madhyamam',
       rendered: !!winners.find(function(winner) {
         return winner.adId==bid.adId;
       })
     });
   });
-  send_bids_to_server(output);
+  console.log(output)
+  // send_bids_to_server(output);
 }
 
 function send_bids_to_server(obj){

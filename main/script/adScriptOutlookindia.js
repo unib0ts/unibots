@@ -11,7 +11,7 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [[250, 250], [300, 250], [200, 200]];
+var div_1_sizes = [[200, 200], [250, 250], [300, 250]];
 
 
 var adUnits = [
@@ -145,7 +145,7 @@ setTimeout(function() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956033520/outlookindia.com_nb_300x250', div_1_sizes, 'div-gpt-ad-1592297431439-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21956033520/outlookindia.com_nb_300x250', div_1_sizes, 'div-gpt-ad-1593500319656-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -177,7 +177,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1592297431439-0';
+	adId = 'div-gpt-ad-1593500319656-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

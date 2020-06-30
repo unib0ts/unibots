@@ -201,6 +201,8 @@ function send_bids_for_analytics() {
       },
       adunit: code,
       auctionId: bid.auctionId,
+      date: new Date().toLocaleDateString("en-US", {timeZone: "Asia/Kolkata"}),
+      client: 'madhyamam',
       rendered: !!winners.find(function(winner) {
         return winner.adId==bid.adId;
       })

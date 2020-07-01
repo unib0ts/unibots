@@ -1,4 +1,4 @@
-// !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
 var requestManager = {
     adserverRequestSent: false,
@@ -6,11 +6,11 @@ var requestManager = {
     prebid: false
 };
 //initialize the apstag.js library on the page to allow bidding
-// apstag.init({
-//      pubID: '5d8da970-719a-4a86-9bd0-adf1589f8c5e', //enter your pub ID here as shown above, it must within quotes
-//      adServer: 'googletag'
-// });
-// apSlots = []
+apstag.init({
+     pubID: '5d8da970-719a-4a86-9bd0-adf1589f8c5e', //enter your pub ID here as shown above, it must within quotes
+     adServer: 'googletag'
+});
+apSlots = []
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -197,7 +197,6 @@ function ub_checkAd1Rendered(){
 
 setTimeout(function(){
   checkRemnantUnits();
-  // checkHBUnits();
 }, 10000);
 
 var mappings_remnant = {
@@ -747,4 +746,8 @@ function callAPStagBids(){
           });
       }
   );
+}
+
+if(window.location.href === "https://www.sakshi.com/telangana" || window.location.href === "https://m.sakshi.com/telangana"){
+  checkHBUnits();
 }

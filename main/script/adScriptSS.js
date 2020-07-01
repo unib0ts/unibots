@@ -581,7 +581,7 @@ var mappings_full_hb_config = {
     false, // '/1062118/sakshiNew_box2_300x250',
     false, // '/1062118/sakshiNew_Box3_300x250',
     false, // '/1062118/fullstories_300x50_firstslot',
-    false, // '/1062118/sakshiNew_HP', Originally APS tag. Removed because of conflict
+    true, // '/1062118/sakshiNew_HP', Originally APS tag. Removed because of conflict
     true, // '/1062118/sakshiNew_skin_Left',
     true, // '/1062118/sakshiNew_skin_right',
     true, // '/1062118/SakshiNew_HP_Box_300x600',
@@ -748,6 +748,8 @@ function callAPStagBids(){
   );
 }
 
-if(window.location.href === "https://www.sakshi.com/telangana" || window.location.href === "https://m.sakshi.com/telangana"){
-  checkHBUnits();
-}
+// if(window.location.href === "https://www.sakshi.com/telangana" || window.location.href === "https://m.sakshi.com/telangana"){
+//   checkHBUnits();
+// }
+
+checkHBUnits();

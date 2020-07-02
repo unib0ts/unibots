@@ -757,39 +757,51 @@ function callMapUnits(){
       if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath()))
       {
         index = mappings_full_hb_config.adUnitNames.indexOf(x[i].getSlotId().getAdUnitPath());
-        console.log(index);
+        size_array = [];
+        size_temp_array = googletag.pubads().getSlots()[i].getSizes();
+        for(j=0;j<size_temp_array.length;j++){
+          length = size_temp_array[j]['l'];
+          height = size_temp_array[j]['j'];
+          temp_array = [length, height];
+          size_array.push(temp_array);
+        }
+
         adUnitTemp = {
-          code: mappings_full_hb_config.adUnitNames[index],
+          code: x[i].getSlotId().getAdUnitPath(),
           mediaTypes: {
               banner: {
-                  sizes: mappings_full_hb_config.sizes[index]
+                  sizes: size_array
               }
           },
           bids: mappings_full_hb_config.bids[index]
         };
-        console.log(adUnitTemp);
+        // adUnitTemp = {
+        //   code: mappings_full_hb_config.adUnitNames[index],
+        //   mediaTypes: {
+        //       banner: {
+        //           sizes: mappings_full_hb_config.sizes[index]
+        //       }
+        //   },
+        //   bids: mappings_full_hb_config.bids[index]
+        // };
         adUnits_full_hb.push(adUnitTemp);
         mapping_full_hb.slots.push(x[i]);
-        // mapping_full_hb.slotNumbers.push(i+1);
-        mapping_full_hb.slotNumbers.push(index+1);
-        // mapping_full_hb.adCode.push(x[i].getSlotId().getId());
-        mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[index]);
-        mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[index]);
-        // size_array = [];
-        // size_temp_array = googletag.pubads().getSlots()[i].getSizes();
-        // for(j=0;j<size_temp_array.length;j++){
-        //   length = size_temp_array[j]['l'];
-        //   height = size_temp_array[j]['j'];
-        //   temp_array = [length, height];
-        //   size_array.push(temp_array);
-        // }
-        // mapping_full_hb.sizes.push(size_array);
+        mapping_full_hb.slotNumbers.push(i+1);
+        // mapping_full_hb.slotNumbers.push(index+1);
+        mapping_full_hb.adCode.push(x[i].getSlotId().getAdUnitPath());
+        // mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[index]);
+        // mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[index]);
+        mapping_full_hb.sizes.push(size_array);
 
         if(mappings_full_hb_config.isAP[index]){
           apSlotTemp = {
-            slotID: mappings_full_hb_config.targetUnits[index],
-            slotName: mappings_full_hb_config.adUnitNames[index],
-            sizes: mappings_full_hb_config.sizes[index]
+            // slotID: mappings_full_hb_config.targetUnits[index],
+            // slotName: mappings_full_hb_config.adUnitNames[index],
+            // sizes: mappings_full_hb_config.sizes[index]
+
+            slotID: googletag.pubads().getSlots()[0].getSlotId().getDomId(),
+            slotName: x[i].getSlotId().getAdUnitPath(),
+            sizes: size_array
           }
           apSlots.push(apSlotTemp);
         }

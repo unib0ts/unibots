@@ -612,41 +612,43 @@ var mappings_full_hb_config = {
 
 function checkHBUnits(){
   changeConfigToHB();
-  for(var i=0; i<mappings_full_hb_config.targetUnits.length; i++){
-    var unit = document.getElementById(mappings_full_hb_config.targetUnits[i]);
-    if(typeof unit === "object" && unit != null && unit !== 'undefined'){
-      adUnitTemp = {
-        code: mappings_full_hb_config.adUnitNames[i],
-        mediaTypes: {
-            banner: {
-                sizes: mappings_full_hb_config.sizes[i]
-            }
-        },
-        bids: mappings_full_hb_config.bids[i]
-      };
-      adUnits_full_hb.push(adUnitTemp);
-      mapping_full_hb.slotNumbers.push(i+1);
-      mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[i]);
-      mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[i]);
+  // for(var i=0; i<mappings_full_hb_config.targetUnits.length; i++){
+    // var unit = document.getElementById(mappings_full_hb_config.targetUnits[i]);
+    // if(typeof unit === "object" && unit != null && unit !== 'undefined'){
+    //   adUnitTemp = {
+    //     code: mappings_full_hb_config.adUnitNames[i],
+    //     mediaTypes: {
+    //         banner: {
+    //             sizes: mappings_full_hb_config.sizes[i]
+    //         }
+    //     },
+    //     bids: mappings_full_hb_config.bids[i]
+    //   };
+    //   adUnits_full_hb.push(adUnitTemp);
+    //   mapping_full_hb.slotNumbers.push(i+1);
+    //   mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[i]);
+    //   mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[i]);
+    //
+    //   //Make Slots for apstag
+    //   if(mappings_full_hb_config.isAP[i]){
+    //     apSlotTemp = {
+    //       slotID: mappings_full_hb_config.targetUnits[i],
+    //       slotName: mappings_full_hb_config.adUnitNames[i],
+    //       sizes: mappings_full_hb_config.sizes[i]
+    //     }
+    //     apSlots.push(apSlotTemp);
+    //   }
+    // }
 
-      //Make Slots for apstag
-      if(mappings_full_hb_config.isAP[i]){
-        apSlotTemp = {
-          slotID: mappings_full_hb_config.targetUnits[i],
-          slotName: mappings_full_hb_config.adUnitNames[i],
-          sizes: mappings_full_hb_config.sizes[i]
-        }
-        apSlots.push(apSlotTemp);
-      }
-    }
-    hb_full_slot = locate_googleSlot(mappings_full_hb_config.adUnitNames[i]);
-    mapping_full_hb.slots.push(hb_full_slot);
-  }
+    //
+    // hb_full_slot = locate_googleSlot(mappings_full_hb_config.adUnitNames[i]);
+    // mapping_full_hb.slots.push(hb_full_slot);
+  // }
 
   // mappings_remnant.slots.push(eval('ub_remnant_slot'+slotNumbers[i]));
   // googleDefine_remnant(mappings_remnant.slotNumbers, mappings_remnant.adCode, mappings_remnant.sizes, mappings_remnant.adId);
-  callAPStagBids();
-  callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
+  callMapUnits();
+
 
   setTimeout(function() {
       initAdserver_hb_full();
@@ -748,8 +750,54 @@ function callAPStagBids(){
   );
 }
 
-// if(window.location.href === "https://www.sakshi.com/telangana" || window.location.href === "https://m.sakshi.com/telangana"){
-//   checkHBUnits();
-// }
+function callMapUnits(){
+  googletag.cmd.push(function() {
+    x = googletag.pubads().getSlots();
+    for(i=0;i<x.length;i++){
+      if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath()))
+      {
+        index = mappings_full_hb_config.adUnitNames.indexOf(x[i].getSlotId().getAdUnitPath());
+        console.log(index);
+        adUnitTemp = {
+          code: mappings_full_hb_config.adUnitNames[index],
+          mediaTypes: {
+              banner: {
+                  sizes: mappings_full_hb_config.sizes[index]
+              }
+          },
+          bids: mappings_full_hb_config.bids[index]
+        };
+        console.log(adUnitTemp);
+        adUnits_full_hb.push(adUnitTemp);
+        mapping_full_hb.slots.push(x[i]);
+        // mapping_full_hb.slotNumbers.push(i+1);
+        mapping_full_hb.slotNumbers.push(index+1);
+        // mapping_full_hb.adCode.push(x[i].getSlotId().getId());
+        mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[index]);
+        mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[index]);
+        // size_array = [];
+        // size_temp_array = googletag.pubads().getSlots()[i].getSizes();
+        // for(j=0;j<size_temp_array.length;j++){
+        //   length = size_temp_array[j]['l'];
+        //   height = size_temp_array[j]['j'];
+        //   temp_array = [length, height];
+        //   size_array.push(temp_array);
+        // }
+        // mapping_full_hb.sizes.push(size_array);
+
+        if(mappings_full_hb_config.isAP[index]){
+          apSlotTemp = {
+            slotID: mappings_full_hb_config.targetUnits[index],
+            slotName: mappings_full_hb_config.adUnitNames[index],
+            sizes: mappings_full_hb_config.sizes[index]
+          }
+          apSlots.push(apSlotTemp);
+        }
+      }
+    }
+    callAPStagBids();
+    callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
+  });
+}
 
 checkHBUnits();

@@ -28,16 +28,16 @@ if (typeof mobileCheck === "function") {
                 }
             },
             bids: [
-             { bidder: 'appnexus', params: { placementId: '19598572' } }, /* one placementId for all sizes  my appnexus bidder */
-             { bidder: 'sovrn', params: {tagid: '744322'} },
-             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995934'} },
+             // { bidder: 'appnexus', params: { placementId: '19598572' } }, /* one placementId for all sizes  my appnexus bidder */
+             // { bidder: 'sovrn', params: {tagid: '744322'} },
+             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995934'} },
              // { bidder: 'oftmedia', params: { placementId: '18671523' } },
              // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
              // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
               // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
              // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              { bidder: 'nobid', params: { siteId : '22049999761'} },
+              // { bidder: 'nobid', params: { siteId : '22049999761'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
               //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -57,16 +57,16 @@ if (typeof mobileCheck === "function") {
               }
           },
           bids: [
-            { bidder: 'appnexus', params: { placementId: '19598572' } }, /* one placementId for all sizes  my appnexus bidder */
-            { bidder: 'sovrn', params: {tagid: '744318'} },
-            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995935'} },
+            // { bidder: 'appnexus', params: { placementId: '19598572' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'sovrn', params: {tagid: '744318'} },
+            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995935'} },
            // { bidder: 'oftmedia', params: { placementId: '18671523' } },
            // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            { bidder: 'nobid', params: { siteId : '22049999761'} },
+            // { bidder: 'nobid', params: { siteId : '22049999761'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -121,7 +121,7 @@ ubpbjs.que.push(function() {
       useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://www.thebetterindia.com/',
+      publisherDomain: 'https://danviet.vn/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

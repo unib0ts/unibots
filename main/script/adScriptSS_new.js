@@ -822,5 +822,11 @@ function mobileCheckHB() {
 	return check;
 };
 if(!mobileCheckHB()){
-  checkHBUnits();
+  ubpbjs.que.push(function() {
+    ubpbjs.onEvent('bidResponse', function(bidResponse) {
+      if(bidResponse.adUnitCode === '/21956916242/sakshi.com_NB_320x50'){
+        checkHBUnits();
+      }
+    });
+  });
 }

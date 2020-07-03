@@ -13,6 +13,7 @@ const customConfigObjectA = {
 
 var div_1_sizes = [[336, 280], [300, 250]];
 var div_2_sizes = [970, 250];
+var div_3_sizes = [[300, 50], [320, 50]];
 
 var adUnits = [];
 
@@ -75,6 +76,31 @@ if (typeof mobileCheck === "function") {
       adUnits.push(adUnits1);
     }
   }
+    adUnits1 =
+      {
+          code: '/21957769615/danviet.vn_320x50',
+          mediaTypes: {
+              banner: {
+                  sizes: div_3_sizes
+              }
+          },
+          bids: [
+           // { bidder: 'appnexus', params: { placementId: '19598572' } }, /* one placementId for all sizes  my appnexus bidder */
+           // { bidder: 'sovrn', params: {tagid: '744322'} },
+           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995934'} },
+           // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+           // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+           // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+            // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+           // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+           { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            // { bidder: 'nobid', params: { siteId : '22049999761'} },
+            { bidder: 'criteo', params: {networkId: '4902'} },
+            //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+          ]
+      };
+      adUnits.push(adUnits1);
 }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -138,7 +164,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false]
+  renderedFlag: [false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -233,6 +259,17 @@ if(typeof mobileCheck === "function"){
      });
     }
   }
+  mappings.slotNumbers.push(3);
+  mappings.adCode.push('/21957769615/danviet.vn_320x50');
+  mappings.sizes.push(div_3_sizes);
+  mappings.adId.push('div-gpt-ad-1593765311014-0');
+  googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot3) {
+          ub_checkAdRendered('div-gpt-ad-1593765311014-0', ub_slot3, ['/21957769615/danviet.vn_320x50']);
+        }
+      });
+  });
 }
 
 if(typeof googletag.defineSlot === "function"){

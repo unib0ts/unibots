@@ -649,6 +649,10 @@ function checkHBUnits(){
   // googleDefine_remnant(mappings_remnant.slotNumbers, mappings_remnant.adCode, mappings_remnant.sizes, mappings_remnant.adId);
   callMapUnits();
 
+  setTimeout(function() {
+      changeConfigToUSD();
+  }, 5000);
+
 
   setTimeout(function() {
       initAdserver_hb_full();

@@ -41,7 +41,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '734872'} },
         	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          // { bidder: 'nobid', params: { siteId : '22029514886'} },
+          { bidder: 'nobid', params: { siteId : '22049996977'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926093'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

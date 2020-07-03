@@ -42,7 +42,7 @@ if (typeof mobileCheck === "function") {
               // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
              // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              // { bidder: 'nobid', params: { siteId : '21975046114'} },
+              { bidder: 'nobid', params: { siteId : '22049999650'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -68,7 +68,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '22027067866'} },
+            { bidder: 'nobid', params: { siteId : '22049999650'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -94,7 +94,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '22027067866'} },
+            { bidder: 'nobid', params: { siteId : '22049999650'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -119,7 +119,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '21975046114'} },
+            { bidder: 'nobid', params: { siteId : '22049999650'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -146,7 +146,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '22027067866'} },
+            { bidder: 'nobid', params: { siteId : '22049999650'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -172,7 +172,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '22027067866'} },
+            { bidder: 'nobid', params: { siteId : '22049999650'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -197,7 +197,7 @@ if (typeof mobileCheck === "function") {
               // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
             	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
             	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              // { bidder: 'nobid', params: { siteId : '22027067866'} },
+              { bidder: 'nobid', params: { siteId : '22049999650'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
               //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -223,7 +223,7 @@ if (typeof mobileCheck === "function") {
           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
          // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
          { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          // { bidder: 'nobid', params: { siteId : '22027067866'} },
+          { bidder: 'nobid', params: { siteId : '22049999650'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -249,7 +249,7 @@ if (typeof mobileCheck === "function") {
           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
          // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
          { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          // { bidder: 'nobid', params: { siteId : '22027067866'} },
+          { bidder: 'nobid', params: { siteId : '22049999650'} },
           { bidder: 'criteo', params: {networkId: '4902'} },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

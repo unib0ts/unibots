@@ -63,6 +63,7 @@ var adUnits = [
     { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     { bidder: 'openx', params: {unit: '541046045', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995936'} },
+    { bidder: 'nobid', params: { siteId : '22049999677'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'criteo', params: {networkId: '4902'} }
   ]

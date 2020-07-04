@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "ext": {
+    "last_updated": "04-07-2020"
+  },
+  "sellers": [
+      {
+          "domain": "sakshi.com",
+          "seller_id": "1",
+          "name": "Sakshi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "anandabazar.com",
+          "seller_id": "2",
+          "name": "ABP",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "scoopwhoop.com",
+          "seller_id": "3",
+          "name": "scoopwhoop",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "madhyamam.com",
+          "seller_id": "4",
+          "name": "madhyamam",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "deepika.com",
+          "seller_id": "5",
+          "name": "deepika",
+          "seller_type": "PUBLISHER"
+      }
+    ]
+}

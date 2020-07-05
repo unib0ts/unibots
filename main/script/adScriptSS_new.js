@@ -744,6 +744,8 @@ function sendAdserverRequest() {
     googletag.cmd.push(function() {
         googletag.pubads().refresh(mapping_full_hb.slots);
     });
+    changeConfigToUSD();
+    addNewBotAd();
 }
 function callAPStagBids(){
   apstag.fetchBids({
@@ -830,15 +832,6 @@ function mobileCheckHB() {
 hb_ran = false;
 if(!mobileCheckHB()){
   checkHBUnits();
-  ubpbjs.que.push(function() {
-    ubpbjs.onEvent('auctionEnd', function() {
-      if(!hb_ran){
-        changeConfigToUSD();
-        addNewBotAd();
-        hb_ran = true;
-      }
-    });
-  });
 }
 else{
   addNewBotAd();

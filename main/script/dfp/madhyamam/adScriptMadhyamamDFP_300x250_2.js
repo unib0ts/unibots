@@ -1,7 +1,3 @@
-var s0 = document.createElement('script');
-s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-s0.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(s0);
 
 var s1 = document.createElement('script');
 s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
@@ -21,7 +17,7 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [300, 250];
+var div_1_sizes = [[300, 250], [200, 200], [250, 250]];
 
 var adUnits = [
     {
@@ -48,10 +44,6 @@ var adUnits = [
         ]
     }
 ];
-
-// ======== DO NOT EDIT BELOW THIS LINE =========== //
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
 
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
@@ -91,6 +83,15 @@ ubpbjs.que.push(function() {
       bidderSequence: 'random', // Default is random
       publisherDomain: 'https://www.madhyamam.com/',
       bidderTimeout: PREBID_TIMEOUT+500,
+      "currency": {
+         // enables currency feature
+         "adServerCurrency": "AED",
+         "granularityMultiplier":3 ,
+         // optionally override the default rate file
+         "conversionRateFile": "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/currency/currency.json",
+         // optionally provide a default rate in case the file can't be read
+         "defaultRates": { "USD": { "AED": 3.67 }}
+       }
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
@@ -98,29 +99,84 @@ ubpbjs.que.push(function() {
         bidsBackHandler: initAdserver,
         timeout: PREBID_TIMEOUT
     });
+    ubpbjs.onEvent('auctionEnd', function(){
+      setTimeout(function(){
+        send_bids_for_analytics();
+      }, 5000);
+    });
 });
 
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
     ubpbjs.initAdserverSet = true;
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
-        });
-    });
+    var adServerTargeting = ubpbjs.getAdserverTargetingForAdUnitCode('/21956033520/madhyamam.com_wm3_300x250');
+    if (adServerTargeting && adServerTargeting['hb_adid']) {
+      ubpbjs.que.push(function() {
+         ubpbjs.setTargetingForGPTAsync();
+         ubpbjs.renderAd(iframeDoc, adServerTargeting['hb_adid']);
+      });
+    }
 }
-// in case ubpbjs doesn't load
-setTimeout(function() {
-    initAdserver();
-}, FAILSAFE_TIMEOUT);
 
-var ub_slot1;
-googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956033520/madhyamam.com_wm3_300x250', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-    googletag.pubads().collapseEmptyDivs(true);
-    googletag.pubads().setCentering(true);
-    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-});
+function send_bids_for_analytics() {
+  function forEach(responses, cb) {
+    Object.keys(responses).forEach(function(adUnitCode) {
+      var response = responses[adUnitCode];
+      response.bids.forEach(function(bid) {
+        cb(adUnitCode, bid);
+      });
+    });
+  }
+  var winners = ubpbjs.getAllWinningBids();
+  var output = [];
+  forEach(ubpbjs.getBidResponses(), function(code, bid) {
+    output.push({
+      bid: {
+        bidderCode: bid.bidderCode,
+        mediaType: bid.mediaType,
+        adId: bid.adId,
+        cpm: bid.cpm,
+        pbHg: bid.pbHg,
+        currency: bid.currency,
+        creativeId: bid.creativeId,
+      },
+      adunit: code,
+      auctionId: bid.auctionId,
+      date: new Date().toLocaleDateString("en-US", {timeZone: "Asia/Kolkata"}),
+      client: 'madhyamam',
+      rendered: !!winners.find(function(winner) {
+        return winner.adId==bid.adId;
+      })
+    });
+  });
+  send_bids_to_server(output);
+}
+
+function send_bids_to_server(obj){
+		var request = new XMLHttpRequest();
+		url = 'https://unibots.warw.in/save_bids';
+  	request.open('POST', url, true);
+  	request.setRequestHeader("Content-type", "application/json");
+  	request.onload = function() {
+  		if (request.status >= 200 && request.status < 400) {
+  			var data = request.responseText;
+  			data = JSON.parse(data);
+  			if(data.error == true) {
+  				console.log(data.msg);
+  				console.log(data.errmsg);
+  			}
+  			else if(data.error == false) {
+  				//closeloader();
+  				// console.log("Request Completed Successfully");
+  			}
+  		}
+  		else {
+  			// We reached our target server, but it returned an error
+  			console.log('Request failed from server');
+  		}
+  	};
+  	request.onerror = function() {
+  		console.log('Request failed');
+  	};
+  	request.send(JSON.stringify(obj));
+}

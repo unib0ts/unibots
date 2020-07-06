@@ -19,7 +19,7 @@ var adUnits = [];
 
 if (typeof mobileCheck === "function") {
   if (!mobileCheck()) {
-    if (document.getElementById('k57lqm6j')) {
+    if (document.getElementById('zone-k57lqm6j')) {
       adUnits1 =
         {
             code: '/21957769615/danviet.vn_nb_970x250',
@@ -38,7 +38,7 @@ if (typeof mobileCheck === "function") {
               // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
              // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
              { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              // { bidder: 'nobid', params: { siteId : '22049999761'} },
+              { bidder: 'nobid', params: { siteId : '22052735851'} },
               { bidder: 'criteo', params: {networkId: '4902'} },
               //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -67,7 +67,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '22049999761'} },
+            { bidder: 'nobid', params: { siteId : '22052735851'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -94,7 +94,7 @@ if (typeof mobileCheck === "function") {
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // { bidder: 'nobid', params: { siteId : '22049999761'} },
+            { bidder: 'nobid', params: { siteId : '22052735851'} },
             { bidder: 'criteo', params: {networkId: '4902'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -230,7 +230,7 @@ function googlePush(){
 
 if(typeof mobileCheck === "function"){
   if (!mobileCheck()){
-   if (document.getElementById('k57lqm6j')) {
+   if (document.getElementById('zone-k57lqm6j')) {
      mappings.slotNumbers.push(2);
      mappings.adCode.push('/21957769615/danviet.vn_nb_970x250');
      mappings.sizes.push(div_2_sizes);

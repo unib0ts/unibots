@@ -1,9 +1,3 @@
-
-var s1 = document.createElement('script');
-s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-s1.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(s1);
-
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
@@ -109,6 +103,8 @@ ubpbjs.que.push(function() {
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
     ubpbjs.initAdserverSet = true;
+    var iframe = document.getElementById('gpt_pb_iframe');
+    var iframeDoc = iframe.contentWindow.document;
     var adServerTargeting = ubpbjs.getAdserverTargetingForAdUnitCode('/21956033520/madhyamam.com_wm3_300x250');
     if (adServerTargeting && adServerTargeting['hb_adid']) {
       ubpbjs.que.push(function() {

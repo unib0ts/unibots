@@ -66,7 +66,7 @@ var adUnits = [
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999734'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          { bidder: 'criteo', params: {networkId: '4902'} }
+          // { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }
 ];

@@ -69,14 +69,15 @@ var adUnits = [
       },
       bids: [
         { bidder: 'oftmedia', params: { placementId: '18778196' } },
-        { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: '33across', params: { siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } },
         { bidder: 'emx_digital', params: { tagid: '97515' } },
         { bidder: 'appnexus', params: { placementId: '19056673' } },
         { bidder: 'sovrn', params: { tagid: '708881' } },
         { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
         { bidder: 'nobid', params: { siteId: '21987177881' } },
-        { bidder: 'criteo', params: { networkId: '4902' } },
+        { bidder: 'criteo', params: {networkId: '10542'} },
+        { bidder: 'criteo', params: {networkId: '10545'} },
         //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
         { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } }
@@ -235,10 +236,11 @@ var mappings_config = {
       { bidder: 'sovrn', params: {tagid: '735296'} },
       { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-      { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-      { bidder: 'criteo', params: {networkId: '4902'} }
+      { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'criteo', params: {networkId: '10545'} },
     ],
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
@@ -248,10 +250,11 @@ var mappings_config = {
       { bidder: 'sovrn', params: {tagid: '738414'} },
       { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-      { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-      { bidder: 'criteo', params: {networkId: '4902'} }
+      { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'criteo', params: {networkId: '10545'} },
     ]
   ]
 }
@@ -366,7 +369,8 @@ hb_full_common_bidders = [
   // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-  // { bidder: 'criteo', params: {networkId: '4902'} }
+  // { bidder: 'criteo', params: {networkId: '10542'} },
+// { bidder: 'criteo', params: {networkId: '10545'} },
 ];
 var mappings_full_hb_config = {
   targetUnits: [

@@ -24,14 +24,15 @@ var adUnits = [
         bids: [
           { bidder: 'appnexus', params: { placementId: '19056048' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'oftmedia', params: { placementId: '18677464' } },
-          { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: '33across', params: { siteId : 'a8_MFsBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '738922'} },
           { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId : '21986889043'} },
-          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'criteo', params: {networkId: '10545'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2964156'} },
           // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }

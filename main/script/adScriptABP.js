@@ -403,19 +403,21 @@ var adUnits = [
         },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934210'} },
         //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-        {
-          bidder: 'eplanning',
-          params: {
-            ci: '2cfed',
-            ml: '1'
-          }
-        },
-        {
-          bidder: 'criteo',
-          params: {
-            networkId: '4902'
-          }
-        },
+        // {
+        //   bidder: 'eplanning',
+        //   params: {
+        //     ci: '2cfed',
+        //     ml: '1'
+        //   }
+        // },
+        // {
+        //   bidder: 'criteo',
+        //   params: {
+        //     networkId: '4902'
+        //   }
+        // },
+        { bidder: 'criteo', params: {networkId: '10542'} },
+        { bidder: 'criteo', params: {networkId: '10545'} },
         { bidder: 'nobid',
           params: { siteId : '22049999632'
           }

@@ -26,7 +26,7 @@ if (document.getElementById('corover-ksrtc-IP')) {
         }
       },
       bids: [
-        { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
+        // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
         { bidder: 'nobid', params: { siteId : '22045891280'} },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2975888'} },
         // { bidder: 'oftmedia', params: { placementId: '19095403' } },
@@ -34,7 +34,8 @@ if (document.getElementById('corover-ksrtc-IP')) {
         // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'sovrn', params: {tagid: '725490'} },
-        { bidder: 'criteo', params: {networkId: '4902'} }
+        { bidder: 'criteo', params: {networkId: '10542'} },
+        { bidder: 'criteo', params: {networkId: '10545'} }
       ]
     };
     adUnits.push(adUnits1);
@@ -49,7 +50,7 @@ if (document.getElementById('corover-ksrtc-HP')) {
        }
       },
       bids: [
-        { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
+        // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
         { bidder: 'nobid', params: { siteId : '22045891280'} },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2975889'} },
         // { bidder: 'oftmedia', params: { placementId: '19095403' } },
@@ -57,7 +58,8 @@ if (document.getElementById('corover-ksrtc-HP')) {
         // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'sovrn', params: {tagid: '725491'} },
-        { bidder: 'criteo', params: {networkId: '4902'} }
+        { bidder: 'criteo', params: {networkId: '10542'} },
+        { bidder: 'criteo', params: {networkId: '10545'} }
       ]
     };
     adUnits.push(adUnits1);
@@ -74,7 +76,8 @@ if (document.getElementById('corover-ad-hp')) {
         bids: [
           // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19252129' } },
-          { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'criteo', params: {networkId: '10545'} },,
           { bidder: 'sovrn', params: {tagid: '741307'} },
           { bidder: 'nobid', params: { siteId : '22045891280'} },
           // { bidder: 'oftmedia', params: { placementId: '19095403' } },

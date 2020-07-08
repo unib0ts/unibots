@@ -33,6 +33,660 @@
           "seller_id": "5",
           "name": "deepika",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.123telugu.com",
+          "seller_id": "6",
+          "name": "123telugu",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.banglarpran.com",
+          "seller_id": "7",
+          "name": "Banglarpran",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.bollywoodpapa.com",
+          "seller_id": "8",
+          "name": "bollywoodpapa",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.bollywoodtadka.in",
+          "seller_id": "9",
+          "name": "Bollywoodtadka",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.boomlive.in",
+          "seller_id": "10",
+          "name": "Boomlive",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dailythanthi.com",
+          "seller_id": "11",
+          "name": "Daily Thanthi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.facultyplus.com",
+          "seller_id": "12",
+          "name": "Facultyplus",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.freshersworld.com",
+          "seller_id": "13",
+          "name": "Fresher World",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.freshersvoice.com",
+          "seller_id": "14",
+          "name": "Freshers Voice",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.mathrubhumi.com",
+          "seller_id": "15",
+          "name": "Mathru Bhumi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.punjabtribune.com",
+          "seller_id": "16",
+          "name": "punjabtribune",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.telegraphindia.com",
+          "seller_id": "17",
+          "name": "Telegraph India",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.telugubulletin.com",
+          "seller_id": "18",
+          "name": "Telugu Bulletin",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.twentyfournews.com",
+          "seller_id": "19",
+          "name": "Tewentyfour News",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.thewall.in",
+          "seller_id": "20",
+          "name": "thewall",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ttncinema.com",
+          "seller_id": "21",
+          "name": "ttncinema",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.uttarbangasambad.com",
+          "seller_id": "22",
+          "name": "uttarbangasambad",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.yespunjab.com",
+          "seller_id": "23",
+          "name": "yespunjab",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.teamlease.com",
+          "seller_id": "24",
+          "name": "Team Lease",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.sandeshepaper.in",
+          "seller_id": "25",
+          "name": "SandeshEpaper",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.udayavani.com",
+          "seller_id": "26",
+          "name": "Udayavani",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.assamcareer.com",
+          "seller_id": "27",
+          "name": "Assamcareer",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dishadaily.com",
+          "seller_id": "28",
+          "name": "dishadaily",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.asomiyapratidin.in",
+          "seller_id": "29",
+          "name": "asomiyapratidin",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.pratidintime.com",
+          "seller_id": "30",
+          "name": "pratidintime",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.meghalayaportal.com",
+          "seller_id": "31",
+          "name": "meghalayaportal",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.assamjobnews.in",
+          "seller_id": "32",
+          "name": "assamjobnews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.sentinelassam.com",
+          "seller_id": "33",
+          "name": "sentinelassam",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.aajkaal.in",
+          "seller_id": "34",
+          "name": "aajkaal",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dinasuvadu.com",
+          "seller_id": "35",
+          "name": "dinasuvadu",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.polimernews.com",
+          "seller_id": "36",
+          "name": "polimernews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.solopos.com",
+          "seller_id": "37",
+          "name": "solopos",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.mangalam.com",
+          "seller_id": "38",
+          "name": "mangalam",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.cricketnmore.com",
+          "seller_id": "39",
+          "name": "cricketnmore",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.gonewsindia.com",
+          "seller_id": "40",
+          "name": "gonewsindia",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dailyrecruitment.in",
+          "seller_id": "41",
+          "name": "dailyrecruitment",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.punjabkesari.com",
+          "seller_id": "42",
+          "name": "punjabkesari",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.shivpurisamachaar.com",
+          "seller_id": "43",
+          "name": "shivpurisamachaar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.bhopalsamachar.com",
+          "seller_id": "44",
+          "name": "bhopalsamachar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.puthiyathalaimurai.com",
+          "seller_id": "45",
+          "name": "puthiyathalaimurai",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.mirchi9.com",
+          "seller_id": "46",
+          "name": "mirchi9",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.goodnewsfromindonesia.id",
+          "seller_id": "47",
+          "name": "goodnewsfromindonesia",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.harianjogja.com",
+          "seller_id": "48",
+          "name": "harianjogja",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.bytegig.com",
+          "seller_id": "50",
+          "name": "bytegig",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.beanstalkmums.com",
+          "seller_id": "51",
+          "name": "beanstalkmums",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.gujratilexicon.com",
+          "seller_id": "52",
+          "name": "gujratilexicon",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ksrtc.in",
+          "seller_id": "53",
+          "name": "ksrtc",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.thebetterindia.com",
+          "seller_id": "54",
+          "name": "thebetterindia",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.anandabazar.com",
+          "seller_id": "55",
+          "name": "anandabazar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dharuvu.com",
+          "seller_id": "56",
+          "name": "dharuvu",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.headlinesoftoday.com",
+          "seller_id": "57",
+          "name": "headlinesoftoday",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.jobs4fresher.com",
+          "seller_id": "58",
+          "name": "jobs4fresher",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.outlookhindi.com",
+          "seller_id": "59",
+          "name": "outlookhindi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.teluguglobal.in",
+          "seller_id": "60",
+          "name": "jobs4fresher",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dailypakistan.com.pk",
+          "seller_id": "61",
+          "name": "dailypakistan",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dinamalar.com",
+          "seller_id": "62",
+          "name": "dinamalar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.findcheapbooking.com",
+          "seller_id": "63",
+          "name": "findcheapbooking",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.myeztrips.com",
+          "seller_id": "64",
+          "name": "myeztrips",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.raftaar.in",
+          "seller_id": "65",
+          "name": "raftaar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.sirajlive.com",
+          "seller_id": "66",
+          "name": "sirajlive",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.toptamilnews.com",
+          "seller_id": "67",
+          "name": "toptamilnews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.v6velugu.com",
+          "seller_id": "68",
+          "name": "v6velugu",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.valaitamil.com",
+          "seller_id": "69",
+          "name": "valaitamil",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.studyguideindia.com",
+          "seller_id": "70",
+          "name": "studyguideindia",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dinakaran.com",
+          "seller_id": "71",
+          "name": "dinakaran",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.almowaten.net",
+          "seller_id": "72",
+          "name": "almowaten",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.vtvgujrati.com",
+          "seller_id": "73",
+          "name": "vtvgujrati",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.outlookindia.com",
+          "seller_id": "74",
+          "name": "outlookindia",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.assamtribune.com",
+          "seller_id": "75",
+          "name": "assamtribune",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.bartamanpatrika.com",
+          "seller_id": "76",
+          "name": "bartamanpatrika",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.eastmojo.com",
+          "seller_id": "77",
+          "name": "eastmojo",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.freepressjournal.in",
+          "seller_id": "78",
+          "name": "freepressjournal",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ibtimes.co.in",
+          "seller_id": "79",
+          "name": "ibtimes",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ibtimes.sg",
+          "seller_id": "80",
+          "name": "ibtimes",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.indiantelevision.com",
+          "seller_id": "81",
+          "name": "indiantelevision",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.maalaimalar.com",
+          "seller_id": "82",
+          "name": "maalaimalar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.newstracklive.com",
+          "seller_id": "83",
+          "name": "newstracklive",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ntnews.com",
+          "seller_id": "84",
+          "name": "ntnews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.prabhasakshi.com",
+          "seller_id": "85",
+          "name": "prabhasakshi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ragalahari.com",
+          "seller_id": "86",
+          "name": "ragalahari",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.sandesh.com",
+          "seller_id": "87",
+          "name": "sandesh",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.oxibuzz.com",
+          "seller_id": "88",
+          "name": "oxibuzz",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.filmyfocus.com",
+          "seller_id": "89",
+          "name": "filmyfocus",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.independent24x7.com",
+          "seller_id": "90",
+          "name": "independent24x7",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.teluguone.com",
+          "seller_id": "91",
+          "name": "teluguone",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.ntvtelugu.com",
+          "seller_id": "92",
+          "name": "ntvtelugu",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.whyral.in",
+          "seller_id": "93",
+          "name": "whyral",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.offcampusjobs4u.com",
+          "seller_id": "94",
+          "name": "offcampusjobs4u",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.mediaonetv.in",
+          "seller_id": "95",
+          "name": "mediaonetv",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.fbtelugu.com",
+          "seller_id": "96",
+          "name": "fbtelugu",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.tamizhakam.com",
+          "seller_id": "97",
+          "name": "tamizhakam",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.businessworld.in",
+          "seller_id": "98",
+          "name": "businessworld",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.keralaonlinenews.com",
+          "seller_id": "99",
+          "name": "keralaonlinenews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.mail.com",
+          "seller_id": "100",
+          "name": "mail",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.alobacsi.com",
+          "seller_id": "101",
+          "name": "alobacsi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.todaymainnews.com",
+          "seller_id": "102",
+          "name": "todaymainnews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.phunusuckhoe.vn",
+          "seller_id": "103",
+          "name": "phunusuckhoe",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.phunuvagiadinh.vn",
+          "seller_id": "104",
+          "name": "phunuvagiadinh",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.cungcau.vn",
+          "seller_id": "105",
+          "name": "cungcau",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.vnexpress.net",
+          "seller_id": "106",
+          "name": "vnexpress",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.techz.vn",
+          "seller_id": "107",
+          "name": "techz",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.vietstock.vn",
+          "seller_id": "108",
+          "name": "vietstock",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.24online.net",
+          "seller_id": "109",
+          "name": "24online",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.tt24h.vn",
+          "seller_id": "110",
+          "name": "tt24h",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.webgiaitri.vn",
+          "seller_id": "111",
+          "name": "webgiaitri",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.phunutoday.vn",
+          "seller_id": "112",
+          "name": "phunutoday",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.danviet.vn",
+          "seller_id": "113",
+          "name": "danviet",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.manoramaonline.com",
+          "seller_id": "114",
+          "name": "manoramaonline",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.timesnownews.com",
+          "seller_id": "115",
+          "name": "timesnownews",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

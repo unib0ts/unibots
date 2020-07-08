@@ -58,7 +58,7 @@ var adUnits = [
     { bidder: 'appnexus', params: { placementId: '19055967' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '744366'} },
     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2971089'} },
-    // { bidder: 'nobid', params: { siteId : '22045891277'} },
+    { bidder: 'nobid', params: { siteId : '22052735857'} },
     { bidder: 'rhythmone', params: { placementId: '205376'}}, /* one placementId for all sizes */
     { bidder: 'openx', params: {unit: '541046136', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'rubicon', params: {accountId: '11734', siteId: '323720', zoneId: '1680354'} },

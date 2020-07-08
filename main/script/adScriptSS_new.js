@@ -247,7 +247,8 @@ var mappings_config = {
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-      { bidder: 'criteo', params: {networkId: '4902'} }
+      { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'criteo', params: {networkId: '10545'} },
     ],
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
@@ -260,7 +261,8 @@ var mappings_config = {
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-      { bidder: 'criteo', params: {networkId: '4902'} }
+      { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'criteo', params: {networkId: '10545'} },
     ]
   ]
 }
@@ -375,7 +377,8 @@ hb_full_common_bidders = [
   // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-  // { bidder: 'criteo', params: {networkId: '4902'} }
+  { bidder: 'criteo', params: {networkId: '10542'} },
+  { bidder: 'criteo', params: {networkId: '10545'} },
 ];
 var mappings_full_hb_config = {
   targetUnits: [
@@ -600,7 +603,6 @@ var mappings_full_hb_config = {
     hb_full_common_bidders.concat([
       { bidder: 'sovrn', params: { tagid: '708881' } },
       { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
-      { bidder: 'criteo', params: { networkId: '4902' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
       { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } }

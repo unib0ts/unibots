@@ -168,12 +168,12 @@ var mappings = {
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1];
+  ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setTimeout(function() {
+      setInterval(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;

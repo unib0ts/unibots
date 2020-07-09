@@ -642,6 +642,17 @@ var mappings_full_hb_config = {
     false, // /21959913182/sakshi.com_NB_320x50
   ]
 }
+var mappings_extra_units_config ={
+  adUnitNames: [
+    '/1062118/1x1_Sakshi.com_Live_Outstream_Desktop',
+    '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile',
+    '/1062118/Intersitial_640x480_Desktop',
+    '/1062118/Intersitial_320x480_mobile'
+  ]
+}
+var mappings_extra_units = {
+  slots: []
+}
 
 function checkHBUnits(){
   addNewsBotAd();
@@ -732,6 +743,7 @@ function sendAdserverRequest() {
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
         googletag.pubads().refresh(mapping_full_hb.slots);
+        googletag.pubads().refresh(mappings_extra_units.slots);
     });
 }
 function callAPStagBids(){
@@ -753,8 +765,7 @@ function callMapUnits(){
     x = googletag.pubads().getSlots();
     x_len = x.length;
     for(i=0;i<x.length;i++){
-      if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath()))
-      {
+      if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
         index = mappings_full_hb_config.adUnitNames.indexOf(x[i].getSlotId().getAdUnitPath());
         size_array = [];
         size_temp_array = googletag.pubads().getSlots()[i].getSizes();
@@ -804,6 +815,9 @@ function callMapUnits(){
           }
           apSlots.push(apSlotTemp);
         }
+      }
+      else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
+        mappings_extra_units.slots.push(x[i]);
       }
     }
 

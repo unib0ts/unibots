@@ -176,7 +176,7 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       setInterval(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
-      mappings.renderedFlag[ub_slotNum] = true;
+      mappings.renderedFlag[ub_slotNum]-1 = true;
     }
   }
 }

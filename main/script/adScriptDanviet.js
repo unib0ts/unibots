@@ -172,8 +172,8 @@ var mappings = {
   renderedFlag: [false, false, false]
 };
 
-function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1]-1;
+function ub_checkAdRendered(adId, ub_slot, adCode, ub_slotString){
+  ub_slotNum = ub_slotString[ub_slotString.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
@@ -181,8 +181,7 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       setInterval(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
-      ub_slotNumVal = mappings.renderedFlag[ub_slotNum]-1;
-      ub_slotNumVal = true;
+      mappings.renderedFlag[ub_slotNum] = true;
     }
   }
 }
@@ -248,7 +247,7 @@ if(typeof mobileCheck === "function"){
      googletag.cmd.push(function() {
          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
            if (event.slot === ub_slot2) {
-             ub_checkAdRendered('div-gpt-ad-1593712591794-0', ub_slot2, ['/21957769615/danviet.vn_nb_970x250']);
+             ub_checkAdRendered('div-gpt-ad-1593712591794-0', ub_slot2, ['/21957769615/danviet.vn_nb_970x250'], "ub_slot2");
            }
          });
      });
@@ -264,7 +263,7 @@ if(typeof mobileCheck === "function"){
      googletag.cmd.push(function() {
          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
            if (event.slot === ub_slot1) {
-             ub_checkAdRendered('div-gpt-ad-1593712612949-0', ub_slot1, ['/21957769615/danviet.vn_nb_336x280']);
+             ub_checkAdRendered('div-gpt-ad-1593712612949-0', ub_slot1, ['/21957769615/danviet.vn_nb_336x280'], "ub_slot1");
            }
          });
      });
@@ -277,7 +276,7 @@ if(typeof mobileCheck === "function"){
   googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot3) {
-          ub_checkAdRendered('div-gpt-ad-1593765311014-0', ub_slot3, ['/21957769615/danviet.vn_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1593765311014-0', ub_slot3, ['/21957769615/danviet.vn_320x50'], "ub_slot3");
         }
       });
   });

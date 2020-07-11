@@ -42,6 +42,7 @@ var adUnits = [
         }
       },
       bids: [
+        { bidder: 'oftmedia', params: { placementId: '19679390' } },
         { bidder: 'appnexus', params: { placementId: '19056303' } }
       ]
   },
@@ -59,6 +60,7 @@ var adUnits = [
     { bidder: 'appnexus', params: { placementId: '19056303' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708884'} },
     { bidder: 'openx', params: {unit: '541046242', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'oftmedia', params: { placementId: '19679390' } },
     // { bidder: 'criteo', params: {networkId: '10542'} },
     // { bidder: 'criteo', params: {networkId: '10545'} },
     { bidder: 'nobid', params: { siteId : '22049999722'} },

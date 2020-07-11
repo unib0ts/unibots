@@ -24,7 +24,7 @@ var adUnits = [
         },
         bids: [
           { bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
-          //{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+          { bidder: 'oftmedia', params: { placementId: '19671775' } },
           //{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
           { bidder: 'emx_digital', params: { tagid: '103696' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '713872'} },
@@ -215,7 +215,7 @@ function checkRemnantUnits(){
           bids: [
             { bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'oftmedia', params: { placementId: '19671779' } },
-            //{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
+            { bidder: '33across', params: { siteId : 'aSjtA6WtGr6OGPaKlId8sQ', productId: 'siab' } }, /*All sizes*/
             { bidder: 'emx_digital', params: { tagid: '103699' } }, /* sizeless */
             { bidder: 'sovrn', params: {tagid: '724691'} },
             { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
@@ -293,7 +293,7 @@ function checkRemnantUnits(){
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19057746' } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: 'oftmedia', params: { placementId: '19671775' } },
-        	//{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW:siab', productId: 'siab' } }, /*All sizes*/
+        	{ bidder: '33across', params: { siteId : 'aSjtA6WtGr6OGPaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '103695' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '713872'} },
           { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },

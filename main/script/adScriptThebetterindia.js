@@ -60,7 +60,7 @@ if (typeof mobileCheck === "function") {
             { bidder: 'appnexus', params: { placementId: '19598572' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '744318'} },
             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995935'} },
-           // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+           { bidder: 'oftmedia', params: { placementId: '19680399' } },
            // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },

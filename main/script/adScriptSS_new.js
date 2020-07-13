@@ -868,7 +868,7 @@ function mobileCheckHB() {
 };
 
 hb_ran = false;
-if(!mobileCheckHB()){
+if(!mobileCheckHB() || (mobileCheckHB() && window.location.href == "https://m.sakshi.com/")){
   checkHBUnits();
 }
 else{

@@ -1,6 +1,6 @@
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
+var REFRESH_TIMEOUT = 35000;
 var mybotboturl = window.location.href;
 const customConfigObjectA = {
  "buckets" : [{

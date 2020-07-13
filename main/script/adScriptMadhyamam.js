@@ -61,7 +61,7 @@ var adUnits = [
           { bidder: 'oftmedia', params: { placementId: '18677464' } },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
-          { bidder: '33across', params: { siteId : 'a8_MFsBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '719001'} },
         	{ bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
@@ -89,7 +89,7 @@ if(window.location.href != "https://m.madhyamam.com/" && window.location.href !=
           { bidder: 'oftmedia', params: { placementId: '18677464' } },
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
-          { bidder: '33across', params: { siteId : 'a8_MFsBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '738357'} },
           { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
@@ -117,7 +117,7 @@ if(window.location.href != "https://m.madhyamam.com/" && window.location.href !=
           { bidder: 'oftmedia', params: { placementId: '18677464' } },
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
-          { bidder: '33across', params: { siteId : 'a8_MFsBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '738358'} },
           { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */

@@ -57,7 +57,7 @@ var adUnits = [
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19054424' } }, /* one placementId for all sizes  my appnexus bidder */
-        	//{ bidder: '33across', params: { siteId : 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        	{ bidder: '33across', params: { siteId : 'bv1fmaWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '716636'} },
           { bidder: 'openx', params: {unit: '541046664', delDomain: 'yieldbird-d.openx.net'} },

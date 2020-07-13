@@ -61,6 +61,7 @@ var adUnits = [
     { bidder: 'openx', params: {unit: '541046485', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932874'} },
     { bidder: 'nobid', params: { siteId : '22049999668'} },
+    { bidder: '33across', params: { siteId : 'bK35s4WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]

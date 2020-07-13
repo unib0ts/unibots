@@ -37,7 +37,7 @@ if (typeof mobileCheck === "function") {
              { bidder: 'sovrn', params: {tagid: '746607'} },
              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3033233'} },
              // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-             { bidder: '33across', params: { siteId : 'b5MRwUWfGr6OoXaKkGJozW', productId: 'siab' } }, /*All sizes*/
+             { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
              // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
               // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
              // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
@@ -67,7 +67,7 @@ if (typeof mobileCheck === "function") {
             { bidder: 'sovrn', params: {tagid: '746608'} },
             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3033235'} },
            // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-           { bidder: '33across', params: { siteId : 'b5MRwUWfGr6OoXaKkGJozW', productId: 'siab' } }, /*All sizes*/
+           { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
@@ -94,7 +94,7 @@ if (typeof mobileCheck === "function") {
            { bidder: 'sovrn', params: {tagid: '746623'} },
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3033273'} },
            // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-           { bidder: '33across', params: { siteId : 'b5MRwUWfGr6OoXaKkGJozW', productId: 'siab' } }, /*All sizes*/
+           { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */

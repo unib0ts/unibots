@@ -34,6 +34,7 @@ if (document.getElementById('corover-ksrtc-IP')) {
         // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'sovrn', params: {tagid: '725490'} },
+      	{ bidder: '33across', params: { siteId : 'beqQPQWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteo', params: {networkId: '10545'} }
       ]
@@ -58,6 +59,7 @@ if (document.getElementById('corover-ksrtc-HP')) {
         // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'sovrn', params: {tagid: '725491'} },
+        { bidder: '33across', params: { siteId : 'beqQPQWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteo', params: {networkId: '10545'} }
       ]
@@ -80,6 +82,7 @@ if (document.getElementById('corover-ad-hp')) {
           { bidder: 'criteo', params: {networkId: '10545'} },,
           { bidder: 'sovrn', params: {tagid: '741307'} },
           { bidder: 'nobid', params: { siteId : '22045891280'} },
+        	{ bidder: '33across', params: { siteId : 'beqQPQWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           // { bidder: 'oftmedia', params: { placementId: '19095403' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2975889'} },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

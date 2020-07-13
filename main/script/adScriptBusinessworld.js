@@ -37,13 +37,13 @@ if (mobileCheck === 'function') {
            //     placementId: '19141968'
            //   }
            // },
-           // {
-           //   bidder: '33across',
-           //   params: {
-           //     siteId: 'dWICUEBt8r6PWLaKlId8sQ',
-           //     productId: 'siab'
-           //   }
-           // }, /*All sizes*/
+           {
+             bidder: '33across',
+             params: {
+               siteId: 'clmJOCWuGr6PjyaKlId8sQ',
+               productId: 'siab'
+             }
+           }, /*All sizes*/
            // {
            //   bidder: 'emx_digital',
            //   params: {
@@ -167,13 +167,13 @@ if (mobileCheck === 'function') {
           //     placementId: '19141968'
           //   }
           // },
-          // {
-          //   bidder: '33across',
-          //   params: {
-          //     siteId: 'dWICUEBt8r6PWLaKlId8sQ',
-          //     productId: 'siab'
-          //   }
-          // }, /*All sizes*/
+          {
+            bidder: '33across',
+            params: {
+              siteId: 'clmJOCWuGr6PjyaKlId8sQ',
+              productId: 'siab'
+            }
+          }, /*All sizes*/
           // {
           //   bidder: 'emx_digital',
           //   params: {
@@ -261,13 +261,13 @@ if (!mobileCheckAdSript()) {
         //     placementId: '19141968'
         //   }
         // },
-        // {
-        //   bidder: '33across',
-        //   params: {
-        //     siteId: 'dWICUEBt8r6PWLaKlId8sQ',
-        //     productId: 'siab'
-        //   }
-        // }, /*All sizes*/
+        {
+          bidder: '33across',
+          params: {
+            siteId: 'clmJOCWuGr6PjyaKlId8sQ',
+            productId: 'siab'
+          }
+        },/*All sizes*/
         // {
         //   bidder: 'emx_digital',
         //   params: {
@@ -345,13 +345,13 @@ if (!mobileCheckAdSript()) {
         //     placementId: '19141968'
         //   }
         // },
-        // {
-        //   bidder: '33across',
-        //   params: {
-        //     siteId: 'dWICUEBt8r6PWLaKlId8sQ',
-        //     productId: 'siab'
-        //   }
-        // }, /*All sizes*/
+        {
+          bidder: '33across',
+          params: {
+            siteId: 'clmJOCWuGr6PjyaKlId8sQ',
+            productId: 'siab'
+          }
+        }, /*All sizes*/
         // {
         //   bidder: 'emx_digital',
         //   params: {

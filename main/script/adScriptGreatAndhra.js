@@ -62,6 +62,7 @@ var adUnits = [
       { bidder: 'sovrn', params: {tagid: '708888'} },
       { bidder: 'emx_digital', params: { tagid: '103693' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932598'} },
+        	{ bidder: '33across', params: { siteId : 'a2CCmsWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
       //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       // { bidder: 'criteo', params: {networkId: '4902'} }
     ]

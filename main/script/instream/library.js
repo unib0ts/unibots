@@ -11,12 +11,12 @@ let sourceArray = [
     },
     {
         "sources": ["//player.vimeo.com/external/310303556.sd.mp4?s=53cd65f2c27c2d86bbfa26172efbff6122769899&profile_id=164&oauth2_token_id=57447761"],
-        "thumb": ["//https://images.pexels.com/videos/1776352/pictures/preview-1.jpg"],
+        "thumb": ["//images.pexels.com/videos/1776352/pictures/preview-1.jpg"],
         "title": "person-drinking-coffee-while-viewing-the-sea"
     },
     {
         "sources": ["//player.vimeo.com/external/330412624.sd.mp4?s=853ea7644708b7986c992689dd351b0413d7b3ca&profile_id=164&oauth2_token_id=57447761"],
-        "thumb": ["//https://images.pexels.com/videos/2169880/pictures/preview-3.jpg"],
+        "thumb": ["//images.pexels.com/videos/2169880/pictures/preview-3.jpg"],
         "title": "Ariel View of Resort"
     },
     {
@@ -26,7 +26,7 @@ let sourceArray = [
     },
     {
         "sources": ["//player.vimeo.com/external/327472845.sd.mp4?s=0e377c29d0f647f147ca3183a40bb73cf83cfd30&profile_id=164&oauth2_token_id=57447761"],
-        "thumb": ["//https://images.pexels.com/videos/2080389/pictures/preview-2.jpg"],
+        "thumb": ["//images.pexels.com/videos/2080389/pictures/preview-2.jpg"],
         "title": "Athletic and Sports"
     },
     {

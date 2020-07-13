@@ -158,7 +158,7 @@ function ub_checkAd1Rendered(){
 	 }
    else{
      callRemnantAdSense();
-   }banglarpran.com_NB_728x90
+   }
 }
 
 setTimeout(function(){

@@ -14,40 +14,43 @@ const customConfigObjectA = {
 var div_1_sizes = [[300, 100], [250, 250], [300, 250], [300, 50], [200, 200]];
 var div_2_sizes = [[200, 200], [250, 250], [300, 100], [300, 250], [300, 50]];
 var div_3_sizes = [[320, 50], [300, 50], [468, 60]];
-var div_4_sizes = [[468, 60], [728, 90], [970, 90]];
+var div_4_sizes = [[300, 100], [300, 50], [200, 200], [250, 250], [300, 250]];
 var div_5_sizes = [[320, 100], [320, 50], [728, 90], [468, 60]];
 var div_6_sizes = [[300, 50], [320, 50]];
+var div_7_sizes = [[300, 100], [300, 50], [200, 200], [250, 250], [300, 250]];
+var div_8_sizes = [[300, 100], [300, 50], [200, 200], [250, 250], [300, 250]];
+
 var adUnits = [];
 
 if (typeof mobileCheck === "function") {
   if (!mobileCheck()) {
-    if (document.querySelectorAll('.mybotdiv4')) {
-      adUnits1 =
-        {
-            code: '/21956916242/beanstalkmums.com.au_nb_970x90',
-            mediaTypes: {
-                banner: {
-                    sizes: div_4_sizes
-                }
-            },
-            bids: [
-             { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
-             { bidder: 'sovrn', params: {tagid: '736660'} },
-             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952069'} },
-             // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-             // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-             // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-              // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-             { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
-             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              { bidder: 'nobid', params: { siteId : '22042552139'} },
-              // { bidder: 'criteo', params: {networkId: '4902'} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-            ]
-        };
-        adUnits.push(adUnits1);
-    }
+    // if (document.querySelectorAll('.mybotdiv4')) {
+    //   adUnits1 =
+    //     {
+    //         code: '/21956916242/beanstalkmums.com.au_nb_970x90',
+    //         mediaTypes: {
+    //             banner: {
+    //                 sizes: div_4_sizes
+    //             }
+    //         },
+    //         bids: [
+    //          { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+    //          { bidder: 'sovrn', params: {tagid: '736660'} },
+    //          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952069'} },
+    //          // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+    //          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+    //          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+    //           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+    //          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+    //          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    //           { bidder: 'nobid', params: { siteId : '22042552139'} },
+    //           // { bidder: 'criteo', params: {networkId: '4902'} },
+    //           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    //           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+    //         ]
+    //     };
+    //     adUnits.push(adUnits1);
+    // }
     adUnits1 =
       {
           code: '/21956916242/beanstalkmums.com.au_nb_728x90_desktopcentersticky',
@@ -182,6 +185,87 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
+  if (document.querySelectorAll('.mybotdiv4')) {
+    adUnits1 =
+      {
+        code: '/21956916242/beanstalkmums.com.au_nb_330x250_2',
+        mediaTypes: {
+            banner: {
+                sizes: div_4_sizes
+            }
+        },
+        bids: [
+            { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '736651'} },
+          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '22042552139'} },
+          // { bidder: 'criteo', params: {networkId: '4902'} },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.querySelectorAll('.mybotdiv5')) {
+    adUnits1 =
+      {
+        code: '/21956916242/beanstalkmums.com.au_nb_330x250_2',
+        mediaTypes: {
+            banner: {
+                sizes: div_7_sizes
+            }
+        },
+        bids: [
+            { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '736651'} },
+          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '22042552139'} },
+          // { bidder: 'criteo', params: {networkId: '4902'} },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.querySelectorAll('.mybotdiv6')) {
+    adUnits1 =
+      {
+        code: '/21956916242/beanstalkmums.com.au_nb_330x250_2',
+        mediaTypes: {
+            banner: {
+                sizes: div_8_sizes
+            }
+        },
+        bids: [
+            { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '736651'} },
+          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '22042552139'} },
+          // { bidder: 'criteo', params: {networkId: '4902'} },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
 }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -240,7 +324,7 @@ ubpbjs.que.push(function() {
 });
 
 var slots = [], adCode = [], slotNumbers = [], sizes = [], adId = [];
-var renderedFlag = [false, false, false, false, false, false];
+var renderedFlag = [false, false, false, false, false, false, false, false];
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1];
@@ -308,19 +392,19 @@ function googlePush(){
 
 if(typeof mobileCheck === "function"){
   if (!mobileCheck()){
-   if (document.querySelectorAll('.mybotdiv4')) {
-     slotNumbers.push(4);
-     adCode.push('/21956916242/beanstalkmums.com.au_nb_970x90');
-     sizes.push(div_4_sizes);
-     adId.push('div-gpt-ad-1591771212941-0');
-     googletag.cmd.push(function() {
-         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           if (event.slot === ub_slot4) {
-             ub_checkAdRendered('div-gpt-ad-1591771212941-0', ub_slot4, ['/21956916242/beanstalkmums.com.au_nb_970x90']);
-           }
-         });
-     });
-   }
+   // if (document.querySelectorAll('.mybotdiv4')) {
+   //   slotNumbers.push(4);
+   //   adCode.push('/21956916242/beanstalkmums.com.au_nb_970x90');
+   //   sizes.push(div_4_sizes);
+   //   adId.push('div-gpt-ad-1591771212941-0');
+   //   googletag.cmd.push(function() {
+   //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+   //         if (event.slot === ub_slot4) {
+   //           ub_checkAdRendered('div-gpt-ad-1591771212941-0', ub_slot4, ['/21956916242/beanstalkmums.com.au_nb_970x90']);
+   //         }
+   //       });
+   //   });
+   // }
 
    slotNumbers.push(5);
    adCode.push('/21956916242/beanstalkmums.com.au_nb_728x90_desktopcentersticky');
@@ -347,7 +431,7 @@ if(typeof mobileCheck === "function"){
        });
    });
   }
-  if (document.querySelectorAll('.mybotdiv1')){
+  if (document.querySelector('.mybotdiv1')){
    slotNumbers.push(1);
    adCode.push('/21956916242/beanstalkmums.com.au_nb_330x250_1');
    sizes.push(div_1_sizes);
@@ -360,7 +444,7 @@ if(typeof mobileCheck === "function"){
        });
    });
   }
-  if (document.querySelectorAll('.mybotdiv2')){
+  if (document.querySelector('.mybotdiv2')){
    slotNumbers.push(2);
    adCode.push('/21956916242/beanstalkmums.com.au_nb_330x250_2');
    sizes.push(div_2_sizes);
@@ -373,7 +457,7 @@ if(typeof mobileCheck === "function"){
         });
     });
    }
-  if (document.querySelectorAll('.mybotdiv3')){
+  if (document.querySelector('.mybotdiv3')){
     slotNumbers.push(3);
     adCode.push('/21956916242/beanstalkmums.com.au_nb_468x60');
     sizes.push(div_3_sizes);
@@ -386,6 +470,45 @@ if(typeof mobileCheck === "function"){
         });
     });
    }
+  if (document.querySelector('.mybotdiv4')){
+     slotNumbers.push(4);
+     adCode.push('/21956916242/beanstalkmums.com.au_nb_330x250_2');
+     sizes.push(div_4_sizes);
+     adId.push('div-gpt-ad-1594707993175-0');
+     googletag.cmd.push(function() {
+         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+           if (event.slot === ub_slot4) {
+             ub_checkAdRendered('div-gpt-ad-1594707993175-0', ub_slot4, ['/21956916242/beanstalkmums.com.au_nb_330x250_2']);
+           }
+         });
+     });
+    }
+  if (document.querySelector('.mybotdiv5')){
+      slotNumbers.push(7);
+      adCode.push('/21956916242/beanstalkmums.com.au_nb_330x250_2');
+      sizes.push(div_7_sizes);
+      adId.push('div-gpt-ad-1594707993175-0');
+      googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_slot7) {
+              ub_checkAdRendered('div-gpt-ad-1594707993175-0', ub_slot7, ['/21956916242/beanstalkmums.com.au_nb_330x250_2']);
+            }
+          });
+      });
+     }
+  if (document.querySelector('.mybotdiv6')){
+       slotNumbers.push(8);
+       adCode.push('/21956916242/beanstalkmums.com.au_nb_330x250_2');
+       sizes.push(div_8_sizes);
+       adId.push('div-gpt-ad-1594707993175-0');
+       googletag.cmd.push(function() {
+           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+             if (event.slot === ub_slot8) {
+               ub_checkAdRendered('div-gpt-ad-1594707993175-0', ub_slot8, ['/21956916242/beanstalkmums.com.au_nb_330x250_2']);
+             }
+           });
+       });
+      }
 }
 
 if(typeof googletag.defineSlot === "function"){

@@ -197,7 +197,7 @@ if (typeof mobileCheck === "function") {
         bids: [
             { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3063520'} },
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '748838'} },
@@ -224,7 +224,7 @@ if (typeof mobileCheck === "function") {
         bids: [
             { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3063521'} },
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '748839'} },
@@ -251,7 +251,7 @@ if (typeof mobileCheck === "function") {
         bids: [
             { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3063522'} },
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '748843'} },

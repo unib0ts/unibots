@@ -1,3 +1,25 @@
+var itm = document.createElement('link');
+itm.rel = 'preconnect';
+itm.href = '//imasdk.googleapis.com/';
+document.getElementsByTagName('head')[0].appendChild(itm);
+
+
+var itm1 = document.createElement('link');
+itm1.rel = 'preconnect';
+itm1.href = '//test.quantcast.mgr.consensu.org/';
+document.getElementsByTagName('head')[0].appendChild(itm1);
+
+
+var itm2 = document.createElement('link');
+itm2.rel = 'preconnect';
+itm2.href = '//audit-tcfv2.quantcast.mgr.consensu.org/';
+document.getElementsByTagName('head')[0].appendChild(itm2);
+
+var s0 = document.createElement('script');
+s0.src = "//ads.vsvl.co.uk/pub000017/scripts/adysis.vid-obv.js";
+s0.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(s0);
+
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;

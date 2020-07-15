@@ -505,12 +505,12 @@ var mappings_full_hb_config = {
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983532'} },
       { bidder: 'sovrn', params: {tagid: '744068'} },
-      { bidder: 'dailyhunt', params: { placement_id: 62, publisher_id: 4, partner_name: 'sakshi' } }
+      { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]), //1062118/sakshiNew_skin_Left
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983533'} },
       { bidder: 'sovrn', params: {tagid: '744079'} },
-      { bidder: 'dailyhunt', params: { placement_id: 62, publisher_id: 4, partner_name: 'sakshi' } }
+      { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]), //1062118/sakshiNew_skin_right
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983531'} },
@@ -526,17 +526,17 @@ var mappings_full_hb_config = {
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983539'} },
       { bidder: 'sovrn', params: {tagid: '744072'} },
-      { bidder: 'dailyhunt', params: { placement_id: 62, publisher_id: 4, partner_name: 'sakshi' } }
+      { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]), ///1062118/sakshiNew_Artclepage_Skin_Left
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983540'} },
       { bidder: 'sovrn', params: {tagid: '744082'} },
-      { bidder: 'dailyhunt', params: { placement_id: 62, publisher_id: 4, partner_name: 'sakshi' } }
+      { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]), ///1062118/sakshiNew_Artclepage_skin_right
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983538'} },
       { bidder: 'sovrn', params: {tagid: '744059'} },
-      { bidder: 'dailyhunt', params: { placement_id: 62, publisher_id: 4, partner_name: 'sakshi' } }
+      { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]), ///1062118/sakshiNew_Artclepage_300x600
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983541'} },

@@ -652,7 +652,11 @@ var mappings_extra_units_config ={
     '/1062118/1x1_Sakshi.com_Live_Outstream_Desktop',
     '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile',
     '/1062118/Intersitial_640x480_Desktop',
-    '/1062118/Intersitial_320x480_mobile'
+    '/1062118/Intersitial_320x480_mobile',
+    '1x1_Sakshi.com_Live_Outstream_Desktop_Homepage',
+    '1x1_Sakshi.com_Live_Outstream_Desktop_Articlepage',
+    '1x1_Sakshi.com_Live_Outstream_Mobile_Articlepage',
+    '1x1_Sakshi.com_Live_Outstream_Mobile_Homepage'
   ]
 }
 var mappings_extra_units = {

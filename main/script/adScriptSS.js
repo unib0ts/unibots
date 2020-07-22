@@ -614,6 +614,8 @@ var mappings_full_hb_config = {
       { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } }
     ]), ///21959913182/sakshi.com_NB_320x50
     hb_full_common_bidders.concat([
+      { bidder: 'sovrn', params: { tagid: '751926' } },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3076400'} }
     ]), // /1062118/SakshiNew_ArticlepageLB_300x50
   ],
   isAP: [

@@ -36,7 +36,7 @@ var adUnits = [
           { bidder: 'nobid', params: { siteId : '22027067863'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
-          { bidder: 'criteo', params: {networkId: '10545'} }
+          { bidder: 'criteointl', params: {networkId: '10545'} }
         ]
     }
 ];
@@ -53,6 +53,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
+    ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
       'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
       'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
@@ -225,7 +226,7 @@ function checkRemnantUnits(){
             { bidder: 'nobid', params: { siteId : '22027067863'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             { bidder: 'criteo', params: {networkId: '10542'} },
-            { bidder: 'criteo', params: {networkId: '10545'} }
+            { bidder: 'criteointl', params: {networkId: '10545'} }
           ]
         }
       ]
@@ -303,7 +304,7 @@ function checkRemnantUnits(){
           { bidder: 'nobid', params: { siteId : '22027067863'} },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
-          { bidder: 'criteo', params: {networkId: '10545'} }
+          { bidder: 'criteointl', params: {networkId: '10545'} }
         ]
     }
   ];

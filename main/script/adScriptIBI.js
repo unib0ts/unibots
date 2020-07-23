@@ -66,7 +66,7 @@ var adUnits = [
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'openx', params: {unit: '541046079', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
-    { bidder: 'criteo', params: {networkId: '10545'} }
+    { bidder: 'criteointl', params: {networkId: '10545'} }
   ]
 }];
 
@@ -81,6 +81,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
+    ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
       'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
       'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },

@@ -65,7 +65,7 @@ var adUnits = [
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: '33across', params: { siteId : 'dmVeCmWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     { bidder: 'criteo', params: {networkId: '10542'} },
-    { bidder: 'criteo', params: {networkId: '10545'} }
+    { bidder: 'criteointl', params: {networkId: '10545'} }
   ]
 }];
 
@@ -80,6 +80,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
+  ubpbjs.aliasBidder('criteo','criteointl');
   ubpbjs.bidderSettings = {
     'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
     'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },

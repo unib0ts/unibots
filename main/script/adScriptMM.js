@@ -88,7 +88,6 @@ ubpbjs.que.push(function() {
       'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
       'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

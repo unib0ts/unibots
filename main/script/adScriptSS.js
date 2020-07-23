@@ -77,7 +77,7 @@ var adUnits = [
         { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
         { bidder: 'nobid', params: { siteId: '21987177881' } },
         { bidder: 'criteo', params: {networkId: '10542'} },
-        { bidder: 'criteo', params: {networkId: '10545'} },
+        { bidder: 'criteointl', params: {networkId: '10545'} },
         //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
         { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
@@ -96,12 +96,14 @@ var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
+  ubpbjs.aliasBidder('criteo','criteointl');
   ubpbjs.bidderSettings = {
     'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
     'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
     'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
     'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
     'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+    'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
     'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
@@ -249,7 +251,7 @@ var mappings_config = {
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'criteo', params: {networkId: '10542'} },
-      { bidder: 'criteo', params: {networkId: '10545'} },
+      { bidder: 'criteointl', params: {networkId: '10545'} },
     ],
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
@@ -263,7 +265,7 @@ var mappings_config = {
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'criteo', params: {networkId: '10542'} },
-      { bidder: 'criteo', params: {networkId: '10545'} },
+      { bidder: 'criteointl', params: {networkId: '10545'} },
     ]
   ]
 }
@@ -379,7 +381,7 @@ var hb_full_common_bidders = [
   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
   { bidder: 'criteo', params: {networkId: '10542'} },
-  { bidder: 'criteo', params: {networkId: '10545'} },
+  { bidder: 'criteointl', params: {networkId: '10545'} },
 ];
 var mappings_full_hb_config = {
   targetUnits: [

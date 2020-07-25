@@ -25,17 +25,18 @@ const customConfigObjectA = {
              }
          },
          bids: [
-          // { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '19804574' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'sovrn', params: {tagid: '7532769'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085764'} },
           // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          //  { bidder: 'sovrn', params: {tagid: '727387'} },
           //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-          // // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          //  // { bidder: 'nobid', params: { siteId : '21975046114'} },
-          //  { bidder: 'criteo', params: {networkId: '4902'} },
-           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          //  { bidder: 'nobid', params: { siteId : '22052735851'} },
+           // { bidder: 'criteo', params: {networkId: '4902'} },
+           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
          ]
      }
@@ -51,17 +52,18 @@ const customConfigObjectA = {
             }
         },
         bids: [
-         // { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
+         { bidder: 'appnexus', params: { placementId: '19804574' } }, /* one placementId for all sizes  my appnexus bidder */
+         { bidder: 'sovrn', params: {tagid: '752768'} },
+         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085763'} },
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-         //  { bidder: 'sovrn', params: {tagid: '732823'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-         // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-         //  // { bidder: 'nobid', params: { siteId : '22027067866'} },
-         //  { bidder: 'criteo', params: {networkId: '4902'} },
-          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22052735851'} },
+          // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
     }

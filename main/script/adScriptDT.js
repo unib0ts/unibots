@@ -62,7 +62,7 @@ var adUnits = [
         	{ bidder: 'emx_digital', params: { tagid: '97460' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '701549'} },
           { bidder: 'openx', params: {unit: '541046030', delDomain: 'yieldbird-d.openx.net'} },
-        	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+        	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },

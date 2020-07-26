@@ -62,7 +62,8 @@ var adUnits = [
         	//{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '714265'} },
           { bidder: 'openx', params: {unit: '541046526', delDomain: 'yieldbird-d.openx.net'} },
-          // { bidder: 'criteo', params: {networkId: '4902'} },
+          { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'nobid', params: { siteId : '22049997430'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -83,9 +84,12 @@ ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
+    ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
       oftmedia: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      emx_digital: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+      emx_digital: { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      criteointl: { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      criteo: { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } }
     };
     ubpbjs.setConfig({
 

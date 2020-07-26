@@ -81,6 +81,7 @@ var adUnits = [
         //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
         { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231' } }
       ]
     }
@@ -107,6 +108,7 @@ ubpbjs.que.push(function() {
     'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+    'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
     //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
     '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
@@ -251,6 +253,7 @@ var mappings_config = {
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
       { bidder: 'criteointl', params: {networkId: '10545'} },
     ],
     [
@@ -265,6 +268,7 @@ var mappings_config = {
       { bidder: 'nobid', params: { siteId: '21987177881' } },
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
       { bidder: 'criteointl', params: {networkId: '10545'} },
     ]
   ]
@@ -381,6 +385,7 @@ var hb_full_common_bidders = [
   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
   { bidder: 'criteo', params: {networkId: '10542'} },
+  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
   { bidder: 'criteointl', params: {networkId: '10545'} },
 ];
 var mappings_full_hb_config = {

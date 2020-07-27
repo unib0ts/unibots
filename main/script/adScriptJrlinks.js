@@ -343,13 +343,13 @@ var mappings = {
   renderedFlag: [false, false, false, false, false, false,false, false]
 };
 
-function ub_checkAdRendered(adId, ub_slot, adCode, ub_slotString){
-  ub_slotNum = ub_slotString[ub_slotString.length-1]-1;
+function ub_checkAdRendered(adId, ub_slot, adCode){
+  ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setInterval(function() {
+      setTimeout(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;
@@ -366,7 +366,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
+              googletag.pubads().refresh(ub_slot);
           });
         });
       }
@@ -427,7 +427,7 @@ if(typeof mobileCheck === "function"){
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot6) {
-           ub_checkAdRendered('div-gpt-ad-1595833851109-0', ub_slot6, ['/21956916242/jrlinks.in_nb_728x90_desktopcentersticky'], "ub_slot6");
+           ub_checkAdRendered('div-gpt-ad-1595833851109-0', ub_slot6, ['/21956916242/jrlinks.in_nb_728x90_desktopcentersticky']);
          }
        });
    });
@@ -440,7 +440,7 @@ if(typeof mobileCheck === "function"){
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot8) {
-           ub_checkAdRendered('div-gpt-ad-1595833900467-0', ub_slot8, ['/21956916242/jrlinks.in_nb_320x100_mobilecentersticky'], "ub_slot8");
+           ub_checkAdRendered('div-gpt-ad-1595833900467-0', ub_slot8, ['/21956916242/jrlinks.in_nb_320x100_mobilecentersticky']);
          }
        });
    });
@@ -453,7 +453,7 @@ if(typeof mobileCheck === "function"){
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot1) {
-           ub_checkAdRendered('div-gpt-ad-1595833459444-0', ub_slot1, ['/21956916242/jrlinks.in_nb_300x250_unibot1'], "ub_slot1");
+           ub_checkAdRendered('div-gpt-ad-1595833459444-0', ub_slot1, ['/21956916242/jrlinks.in_nb_300x250_unibot1']);
          }
        });
    });
@@ -466,7 +466,7 @@ if(typeof mobileCheck === "function"){
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {
-            ub_checkAdRendered('div-gpt-ad-1595833534169-0', ub_slot2, ['/21956916242/jrlinks.in_nb_300x250_unibot2'], "ub_slot2");
+            ub_checkAdRendered('div-gpt-ad-1595833534169-0', ub_slot2, ['/21956916242/jrlinks.in_nb_300x250_unibot2']);
           }
         });
     });
@@ -479,7 +479,7 @@ if(typeof mobileCheck === "function"){
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot3) {
-            ub_checkAdRendered('div-gpt-ad-1595833735874-0', ub_slot3, ['/21956916242/jrlinks.in_nb_300x600_unibot3'], "ub_slot3");
+            ub_checkAdRendered('div-gpt-ad-1595833735874-0', ub_slot3, ['/21956916242/jrlinks.in_nb_300x600_unibot3']);
           }
         });
     });
@@ -492,7 +492,7 @@ if(typeof mobileCheck === "function"){
      googletag.cmd.push(function() {
          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
            if (event.slot === ub_slot4) {
-             ub_checkAdRendered('div-gpt-ad-1595833597102-0', ub_slot4, ['/21956916242/jrlinks.in_nb_300x250_unibot4'], "ub_slot4");
+             ub_checkAdRendered('div-gpt-ad-1595833597102-0', ub_slot4, ['/21956916242/jrlinks.in_nb_300x250_unibot4']);
            }
          });
      });
@@ -505,7 +505,7 @@ if(typeof mobileCheck === "function"){
       googletag.cmd.push(function() {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             if (event.slot === ub_slot5) {
-              ub_checkAdRendered('div-gpt-ad-1595833647091-0', ub_slot5, ['/21956916242/jrlinks.in_nb_300x250_unibot5'], "ub_slot5");
+              ub_checkAdRendered('div-gpt-ad-1595833647091-0', ub_slot5, ['/21956916242/jrlinks.in_nb_300x250_unibot5']);
             }
           });
       });
@@ -518,7 +518,7 @@ if(typeof mobileCheck === "function"){
        googletag.cmd.push(function() {
            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
              if (event.slot === ub_slot7) {
-               ub_checkAdRendered('div-gpt-ad-1595833808931-0', ub_slot8, ['/21956916242/jrlinks.in_nb_970x250_unibot7'], "ub_slot7");
+               ub_checkAdRendered('div-gpt-ad-1595833808931-0', ub_slot7, ['/21956916242/jrlinks.in_nb_970x250_unibot7']);
              }
            });
        });

@@ -27,6 +27,8 @@ const customConfigObjectA = {
          { bidder: 'appnexus', params: { placementId: '19804574' } }, /* one placementId for all sizes  my appnexus bidder */
          { bidder: 'sovrn', params: {tagid: '7532769'} },
          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085764'} },
+         { bidder: 'criteo', params: {networkId: '10542'} },
+         { bidder: 'criteointl', params: {networkId: '10545'} },
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
@@ -54,6 +56,8 @@ if (document.getElementById('uniads1')) {
        { bidder: 'appnexus', params: { placementId: '19804574' } }, /* one placementId for all sizes  my appnexus bidder */
        { bidder: 'sovrn', params: {tagid: '752768'} },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085763'} },
+       { bidder: 'criteo', params: {networkId: '10542'} },
+       { bidder: 'criteointl', params: {networkId: '10545'} },
        // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
        // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
        // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
@@ -81,12 +85,14 @@ ubpbjs.que = ubpbjs.que || [];
 
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
+    ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
       'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
       'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
       'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
       'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
       'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },

@@ -109,7 +109,7 @@ if (typeof mobileCheck === "function") {
         };
     adUnits.push(adUnits1);
   }
-  if (document.querySelector('.adunit-2')) {
+  if (document.querySelector('.adunit-1')) {
     adUnits1 =
       {
         code: '/21956916242/thetechywizard.com_hb_300x250_adunit1',
@@ -463,7 +463,7 @@ function googlePush(){
 }
 
 if(typeof mobileCheck === "function"){
-  // if (!mobileCheck()){
+  if (!mobileCheck()){
   //  // if (document.querySelectorAll('.mybotdiv4')) {
   //  //   slotNumbers.push(4);
   //  //   adCode.push('/21956916242/beanstalkmums.com.au_nb_970x90');

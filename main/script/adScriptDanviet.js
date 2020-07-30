@@ -52,7 +52,7 @@ if (typeof mobileCheck === "function") {
 
     }
    else {
-    if (document.getElementById('mybotdiv-2')) {
+    if (document.getElementById('zone-k57lqm6j')) {
       adUnits1 =
         {
             code: '/21957769615/danviet.vn_nb_970x250',
@@ -89,7 +89,7 @@ if (typeof mobileCheck === "function") {
 
     }
    else {
-     if (document.getElementById('mybotdiv-1')) {
+     if (document.getElementById('k57m4qwp')) {
        adUnits1 =
          {
            code: '/21957769615/danviet.vn_nb_336x280',
@@ -239,7 +239,7 @@ if(typeof mobileCheck === "function"){
 
     }
    else {
-   if (document.getElementById('mybotdiv-2')) {
+   if (document.getElementById('zone-k57lqm6j')) {
      mappings.slotNumbers.push(2);
      mappings.adCode.push('/21957769615/danviet.vn_nb_970x250');
      mappings.sizes.push(div_2_sizes);
@@ -259,7 +259,7 @@ if(typeof mobileCheck === "function"){
 
     }
    else {
-     if (document.getElementById('mybotdiv-1')){
+     if (document.getElementById('k57m4qwp')){
       mappings.slotNumbers.push(1);
       mappings.adCode.push('/21957769615/danviet.vn_nb_336x280');
       mappings.sizes.push(div_1_sizes);

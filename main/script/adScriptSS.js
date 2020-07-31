@@ -421,7 +421,7 @@ var mappings_full_hb_config = {
     'div-gpt-ad-1578660796348-0', //sakshinew_resp_Box1_entertainment_300x250
     'div-gpt-ad-1540359629900-0', ///1062118/MobileMasthead_HP_300x250
     'div-ub-1', ///21959913182/sakshi.com_NB_320x50
-    'div-gpt-ad-1593080960785-0', ///1062118/SakshiNew_ArticlepageLB_300x50
+    'div-gpt-ad-1593080960785-0', ///1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
   ],
   adUnitNames: [
     '/1062118/sakshiNew_box1_300x250',
@@ -455,7 +455,7 @@ var mappings_full_hb_config = {
     '/1062118/sakshinew_resp_Box1_entertainment_300x250',
     '/1062118/MobileMasthead_HP_300x250',
     '/21959913182/sakshi.com_NB_320x50',
-    '/1062118/SakshiNew_ArticlepageLB_300x50'
+    '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
   ],
   sizes: [
     [300,250], //sakshiNew_box1_300x250
@@ -489,7 +489,7 @@ var mappings_full_hb_config = {
     [300, 250], //sakshinew_resp_Box1_entertainment_300x250
     [300, 250], ///1062118/MobileMasthead_HP_300x250
     [320, 50], ///21959913182/sakshi.com_NB_320x50
-    [[300, 150], [320, 50], [300, 100], [300, 50]], // /1062118/SakshiNew_ArticlepageLB_300x50
+    [[320, 50], [300, 50]], // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
   ],
   bids: [
     hb_full_common_bidders.concat([
@@ -645,10 +645,10 @@ var mappings_full_hb_config = {
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), ///21959913182/sakshi.com_NB_320x50
     hb_full_common_bidders.concat([
-      { bidder: 'sovrn', params: { tagid: '751926' } },
-      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3076400'} },
+      { bidder: 'sovrn', params: { tagid: '755249' } },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
-    ]), // /1062118/SakshiNew_ArticlepageLB_300x50
+    ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
   ],
   isAP: [
     false, // '/1062118/sakshiNew_box1_300x250',

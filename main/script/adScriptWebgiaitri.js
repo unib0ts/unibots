@@ -59,7 +59,7 @@ if (typeof mobileCheck === "function") {
                 }
             },
             bids: [
-             // { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+             { bidder: 'appnexus', params: { placementId: '19518194' } }, /* one placementId for all sizes  my appnexus bidder */
              // { bidder: 'sovrn', params: {tagid: '736660'} },
              // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952069'} },
              // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -88,7 +88,7 @@ if (typeof mobileCheck === "function") {
               }
           },
           bids: [
-           //  { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '19518194' } }, /* one placementId for all sizes  my appnexus bidder */
            //  { bidder: 'sovrn', params: {tagid: '736637'} },
            //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
            // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -115,7 +115,7 @@ if (typeof mobileCheck === "function") {
               }
           },
           bids: [
-           //    { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+              { bidder: 'appnexus', params: { placementId: '19518194' } }, /* one placementId for all sizes  my appnexus bidder */
            // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
            //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952065'} },
            // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -315,8 +315,8 @@ function mainHbRun(){
         'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
         'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
         'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
         'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
         'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },

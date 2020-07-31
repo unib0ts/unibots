@@ -55,7 +55,7 @@ var adUnits = [
   },
   bids: [
     // {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    // { bidder: 'appnexus', params: { placementId: '19518194' } }, /* one placementId for all sizes  my appnexus bidder */
+    { bidder: 'appnexus', params: { placementId: '19843544' } }, /* one placementId for all sizes  my appnexus bidder */
     // { bidder: 'sovrn', params: {tagid: '741305'} },
     // { bidder: '33across', params: { siteId : 'b_XbMyWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950119'} },
@@ -83,7 +83,7 @@ ubpbjs.que.push(function() {
     'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
     'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
     'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-    'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+    'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
     'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },

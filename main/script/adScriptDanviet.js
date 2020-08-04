@@ -47,44 +47,44 @@ var div_3_sizes = [[300, 50], [320, 50]];
 var adUnits = [];
 
 if (typeof mobileCheck === "function") {
-  if (!mobileCheck()) {
-    if (mybotboturl== 'https://danviet.vn/') {
-
-    }
-   else {
-    if (document.getElementById('zone-k57lqm6j')) {
-      adUnits1 =
-        {
-            code: '/21957769615/danviet.vn_nb_970x250',
-            mediaTypes: {
-                banner: {
-                    sizes: div_2_sizes
-                }
-            },
-            bids: [
-             { bidder: 'appnexus', params: { placementId: '19669443' } }, /* one placementId for all sizes  my appnexus bidder */
-             { bidder: 'sovrn', params: {tagid: '746607'} },
-             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3033233'} },
-             // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-             { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-             // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-              // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-             // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
-             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              { bidder: 'nobid', params: { siteId : '22052735851'} },
-              { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'criteo', params: {networkId: '10542'} },
-              { bidder: 'criteointl', params: {networkId: '10545'} },
-              // { bidder: 'criteo', params: {networkId: '4902'} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-            ]
-        };
-        adUnits.push(adUnits1);
-    }
-   }
-  }
-  else {
+  // if (!mobileCheck()) {
+  //   if (mybotboturl== 'https://danviet.vn/') {
+  //
+  //   }
+  //  else {
+  //   if (document.getElementById('zone-k57lqm6j')) {
+  //     adUnits1 =
+  //       {
+  //           code: '/21957769615/danviet.vn_nb_970x250',
+  //           mediaTypes: {
+  //               banner: {
+  //                   sizes: div_2_sizes
+  //               }
+  //           },
+  //           bids: [
+  //            { bidder: 'appnexus', params: { placementId: '19669443' } }, /* one placementId for all sizes  my appnexus bidder */
+  //            { bidder: 'sovrn', params: {tagid: '746607'} },
+  //            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3033233'} },
+  //            // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+  //            { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+  //            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+  //             // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+  //            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+  //            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+  //             { bidder: 'nobid', params: { siteId : '22052735851'} },
+  //             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  //             { bidder: 'criteo', params: {networkId: '10542'} },
+  //             { bidder: 'criteointl', params: {networkId: '10545'} },
+  //             // { bidder: 'criteo', params: {networkId: '4902'} },
+  //             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+  //             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+  //           ]
+  //       };
+  //       adUnits.push(adUnits1);
+  //   }
+  //  }
+  // }
+if (mobileCheck()) {
     if (mybotboturl== 'https://danviet.vn/') {
 
     }
@@ -169,7 +169,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false]
+  renderedFlag: [false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode, ub_slotString){
@@ -234,27 +234,27 @@ function googlePush(){
 }
 
 if(typeof mobileCheck === "function"){
-  if (!mobileCheck()){
-    if (mybotboturl== 'https://danviet.vn/') {
-
-    }
-   else {
-   if (document.getElementById('zone-k57lqm6j')) {
-     mappings.slotNumbers.push(2);
-     mappings.adCode.push('/21957769615/danviet.vn_nb_970x250');
-     mappings.sizes.push(div_2_sizes);
-     mappings.adId.push('div-gpt-ad-1593712591794-0');
-     googletag.cmd.push(function() {
-         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           if (event.slot === ub_slot2) {
-             ub_checkAdRendered('div-gpt-ad-1593712591794-0', ub_slot2, ['/21957769615/danviet.vn_nb_970x250'], "ub_slot2");
-           }
-         });
-     });
-   }
-  }
-}
-  else {
+//   if (!mobileCheck()){
+//     if (mybotboturl== 'https://danviet.vn/') {
+//
+//     }
+//    else {
+//    if (document.getElementById('zone-k57lqm6j')) {
+//      mappings.slotNumbers.push(2);
+//      mappings.adCode.push('/21957769615/danviet.vn_nb_970x250');
+//      mappings.sizes.push(div_2_sizes);
+//      mappings.adId.push('div-gpt-ad-1593712591794-0');
+//      googletag.cmd.push(function() {
+//          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//            if (event.slot === ub_slot2) {
+//              ub_checkAdRendered('div-gpt-ad-1593712591794-0', ub_slot2, ['/21957769615/danviet.vn_nb_970x250'], "ub_slot2");
+//            }
+//          });
+//      });
+//    }
+//   }
+// }
+  if (mobileCheck()) {
     if (mybotboturl== 'https://danviet.vn/') {
 
     }
@@ -307,8 +307,8 @@ function mainHbRun(){
         'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
         'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
         'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
         'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
         'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },

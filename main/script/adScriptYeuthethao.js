@@ -30,7 +30,7 @@ if (typeof mobileCheck === "function") {
             },
             bids: [
              { bidder: 'appnexus', params: { placementId: '19855809' } }, /* one placementId for all sizes  my appnexus bidder */
-             // { bidder: 'sovrn', params: {tagid: '752768'} },
+             { bidder: 'sovrn', params: {tagid: '756529'} },
              // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085763'} },
              // { bidder: 'criteo', params: {networkId: '10542'} },
              // { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -59,7 +59,7 @@ if (typeof mobileCheck === "function") {
             },
             bids: [
              { bidder: 'appnexus', params: { placementId: '19855809' } }, /* one placementId for all sizes  my appnexus bidder */
-             // { bidder: 'sovrn', params: {tagid: '752768'} },
+             { bidder: 'sovrn', params: {tagid: '756528'} },
              // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085763'} },
              // { bidder: 'criteo', params: {networkId: '10542'} },
              // { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -88,7 +88,7 @@ if (typeof mobileCheck === "function") {
             },
             bids: [
              { bidder: 'appnexus', params: { placementId: '19855809' } }, /* one placementId for all sizes  my appnexus bidder */
-             // { bidder: 'sovrn', params: {tagid: '752768'} },
+             { bidder: 'sovrn', params: {tagid: '756530'} },
              // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085763'} },
              // { bidder: 'criteo', params: {networkId: '10542'} },
              // { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -117,7 +117,7 @@ if (typeof mobileCheck === "function") {
       },
       bids: [
        { bidder: 'appnexus', params: { placementId: '19855809' } }, /* one placementId for all sizes  my appnexus bidder */
-       // { bidder: 'sovrn', params: {tagid: '7532769'} },
+       { bidder: 'sovrn', params: {tagid: '756527'} },
        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3085764'} },
        // { bidder: 'criteo', params: {networkId: '10542'} },
        // { bidder: 'criteointl', params: {networkId: '10545'} },

@@ -263,6 +263,7 @@ if(mobileCheck === 'function'){
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().set("page_url",'ragalahari.com');
         googletag.enableServices();
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot1) {
@@ -325,6 +326,7 @@ if(mobileCheck === 'function'){
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().set("page_url",'ragalahari.com');
         googletag.enableServices();
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {
@@ -389,6 +391,7 @@ else{
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().set("page_url",'ragalahari.com');
         googletag.enableServices();
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot1) {
@@ -451,6 +454,7 @@ else{
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().set("page_url",'ragalahari.com');
         googletag.enableServices();
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {

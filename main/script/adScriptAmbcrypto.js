@@ -71,7 +71,7 @@ var mapping_full_hb = {
 
 var adUnits_full_hb = [];
 var hb_full_common_bidders = [
-  // { bidder: 'appnexus', params: { placementId: '19828101' } }, /* one placementId for all sizes  my appnexus bidder */
+  { bidder: 'appnexus', params: { placementId: '19871860' } }, /* one placementId for all sizes  my appnexus bidder */
   // { bidder: 'oftmedia', params: { placementId: '18778196' } },
   // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
   // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */

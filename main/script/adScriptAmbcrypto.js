@@ -54,7 +54,7 @@ ubpbjs.que.push(function() {
     useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0
     bidderSequence: 'random', // Default is random
-    publisherDomain: 'https://es.ambcrypto.com/',
+    publisherDomain: 'https://ambcrypto.com/',
     bidderTimeout: PREBID_TIMEOUT+500,
     //pubcid: {expInterval: },
     //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -86,32 +86,28 @@ var hb_full_common_bidders = [
 ];
 var mappings_full_hb_config = {
   targetUnits: [
-    'div-gpt-ad-1596535960343-0',
-    'div-gpt-ad-1596535792198-0',
-    'div-gpt-ad-1596536006893-0',
-    'div-gpt-ad-1596535906350-0',
-    'div-gpt-ad-1596536083973-0',
-    'div-gpt-ad-1596536152329-0',
-    'div-gpt-ad-1596536409781-0',
-    'div-gpt-ad-1596536510055-0',
-    'div-gpt-ad-1596541334431-0',
-    'div-gpt-ad-1596538549723-0',
-    'div-gpt-ad-1596539231488-0',
-    'div-gpt-ad-1596538689315-0',
-      'div-gpt-ad-1596539260565-0',
-      'div-gpt-ad-1596538130119-0',
-      'div-gpt-ad-1596540125539-0',
-      'div-gpt-ad-1596540614556-0',
-      'div-gpt-ad-1596540555963-0',
-      'div-gpt-ad-1596540273904-0',
-      'div-gpt-ad-1596540335894-0',
-      'div-gpt-ad-1596540831569-0',
-      'div-gpt-ad-1596541047353-0',
-      'div-gpt-ad-1596545055111-0',
-      'div-gpt-ad-1596541638440-0',
-      'div-gpt-ad-1596543813106-0',
-      'div-gpt-ad-1596541690154-0',
-      'div-gpt-ad-1596543872826-0'
+    'div-gpt-ad-1596535960343-0', //'/21692080761/amb_es_desk_lb_1',
+    'div-gpt-ad-1596535792198-0', //'/21692080761/amb_es_mob_mpu_1',
+    'div-gpt-ad-1596536006893-0', //'/21692080761/amb_es_desk_lb_2',
+    'div-gpt-ad-1596535906350-0', //'/21692080761/amb_es_mob_mpu_2',
+    'div-gpt-ad-1596536083973-0', //'/21692080761/amb_es_desk_lb_3',
+    'div-gpt-ad-1596536152329-0', //'/21692080761/amb_es_mob_mpu_3',
+    'div-gpt-ad-1596536409781-0', //'/21692080761/amb_es_mob_mpu_4',
+    'div-gpt-ad-1596536510055-0', //'/21692080761/amb_es_mob_mpu_5',
+    'div-gpt-ad-1596541334431-0', //'/21692080761/amb_es_desk_mpu_6',
+    'div-gpt-ad-1596538549723-0', //'/21692080761/amb_es_header_desk_v2',
+    'div-gpt-ad-1596539231488-0', //'/21692080761/amb_es_footer_desk_v2',
+    'div-gpt-ad-1596538689315-0', //'/21692080761/amb_es_header_mob_v2',
+    'div-gpt-ad-1596539260565-0', //'/21692080761/amb_es_footer_mob_v2',
+    'div-gpt-ad-1596540614556-0', //'/21692080761/amb_eng_desk_lb_3',
+    'div-gpt-ad-1596540555963-0', //'21692080761/amb_eng_mob_mpu_3',
+    'div-gpt-ad-1596540273904-0', //'/21692080761/amb_eng_desk_lb_2',
+    'div-gpt-ad-1596540335894-0', //'/21692080761/amb_eng_mob_mpu_2',
+    'div-gpt-ad-1596541047353-0', //'/21692080761/amb_eng_mob_mpu_5',
+    'div-gpt-ad-1596545055111-0', //'/21692080761/amb_eng_mob_mpu_6',
+    'div-gpt-ad-1596543813106-0', //'/21692080761/amb_eng_footer_desk_v2',
+    'div-gpt-ad-1596541690154-0', //'/21692080761/amb_eng_header_mob_v2',
+    'div-gpt-ad-1596543872826-0' //'/21692080761/amb_eng_footer_mob_v2'
   ],
   adUnitNames: [
     '/21692080761/amb_es_desk_lb_1',
@@ -127,47 +123,39 @@ var mappings_full_hb_config = {
     '/21692080761/amb_es_footer_desk_v2',
     '/21692080761/amb_es_header_mob_v2',
     '/21692080761/amb_es_footer_mob_v2',
-      '/21692080761/amb_eng_desk_lb_1',
-      '/21692080761/amb_eng_mob_mpu_1',
-      '/21692080761/amb_eng_desk_lb_3',
-      '21692080761/amb_eng_mob_mpu_3',
-      '/21692080761/amb_eng_desk_lb_2',
-      '/21692080761/amb_eng_mob_mpu_2',
-      '/21692080761/amb_eng_mob_mpu_4',
-      '/21692080761/amb_eng_mob_mpu_5',
-      '/21692080761/amb_eng_mob_mpu_6',
-      '/21692080761/amb_eng_header_desk_v2',
-      '/21692080761/amb_eng_footer_desk_v2',
-      '/21692080761/amb_eng_header_mob_v2',
-      '/21692080761/amb_eng_footer_mob_v2'
+    '/21692080761/amb_eng_desk_lb_3',
+    '21692080761/amb_eng_mob_mpu_3',
+    '/21692080761/amb_eng_desk_lb_2',
+    '/21692080761/amb_eng_mob_mpu_2',
+    '/21692080761/amb_eng_mob_mpu_5',
+    '/21692080761/amb_eng_mob_mpu_6',
+    '/21692080761/amb_eng_footer_desk_v2',
+    '/21692080761/amb_eng_header_mob_v2',
+    '/21692080761/amb_eng_footer_mob_v2'
   ],
   sizes: [
-     [728, 90],
-     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-     [728, 90],
-     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-     [728, 90],
-     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-     [[728, 90], [970, 90], [970, 250], [1100, 90]],
-     [[728, 90], [970, 90], [970, 250], [1100, 90]],
-     [[320, 50], [320, 100]],
-     [[320, 50], [320, 100]],
-       [728, 90],
-       [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-       [728, 90],
-       [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-       [728, 90],
-       [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-       [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-       [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-       [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]],
-       [[728, 90], [970, 90], [970, 250], [1100, 90]],
-       [[728, 90], [970, 90], [970, 250], [1100, 90]],
-       [[320, 50], [320, 100]],
-       [[320, 50], [320, 100]]
+     [728, 90], //'/21692080761/amb_es_desk_lb_1',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_es_mob_mpu_1',
+     [728, 90], //'/21692080761/amb_es_desk_lb_2',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_es_mob_mpu_2',
+     [728, 90], //'/21692080761/amb_es_desk_lb_3',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_es_mob_mpu_3',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_es_mob_mpu_4',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_es_mob_mpu_5',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_es_desk_mpu_6',
+     [[728, 90], [970, 90], [970, 250], [1100, 90]], //'/21692080761/amb_es_header_desk_v2',
+     [[728, 90], [970, 90], [970, 250], [1100, 90]], //'/21692080761/amb_es_footer_desk_v2',
+     [[320, 50], [320, 100]], //'/21692080761/amb_es_header_mob_v2',
+     [[320, 50], [320, 100]], //'/21692080761/amb_es_footer_mob_v2',
+     [728, 90], //'/21692080761/amb_eng_desk_lb_3',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'21692080761/amb_eng_mob_mpu_3',
+     [728, 90], //'/21692080761/amb_eng_desk_lb_2',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_eng_mob_mpu_2',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_eng_mob_mpu_5',
+     [[300, 250], [320, 50], [320, 100], [320, 480], [336, 280]], //'/21692080761/amb_eng_mob_mpu_6',
+     [[728, 90], [970, 90], [970, 250], [1100, 90]], //'/21692080761/amb_eng_footer_desk_v2',
+     [[320, 50], [320, 100]], //'/21692080761/amb_eng_header_mob_v2',
+     [[320, 50], [320, 100]] //'/21692080761/amb_eng_footer_mob_v2'
   ],
   bids: [
     hb_full_common_bidders.concat([
@@ -216,19 +204,69 @@ var mappings_full_hb_config = {
     //   { bidder: 'sovrn', params: {tagid: '744067'} },
     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233', domain: 'https://prg8.smartadserver.com' } }
      ]), ///1062118/sakshiNew_Artclepage_LB
+     hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983534'} },
+     //   { bidder: 'sovrn', params: {tagid: '744054'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+      ]), //sakshiNew_box1_300x250
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983535'} },
+     //   { bidder: 'sovrn', params: {tagid: '744064'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+      ]), //sakshiNew_box2_300x250
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983536'} },
+     //   { bidder: 'sovrn', params: {tagid: '744057'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+      ]), //sakshiNew_box3_300x250
+      hb_full_common_bidders.concat([
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
+      ]), //fullstories_300x50_firstslot
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983530'} },
+     //   { bidder: 'sovrn', params: {tagid: '744083'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
+      ]), //sakshiNew_HP
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983532'} },
+     //   { bidder: 'sovrn', params: {tagid: '744068'} },
+     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi', domain: 'https://prg8.smartadserver.com' } }
+      ]), //1062118/sakshiNew_skin_Left
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983533'} },
+     //   { bidder: 'sovrn', params: {tagid: '744079'} },
+     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
+      ]), //1062118/sakshiNew_skin_right
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983531'} },
+     //   { bidder: 'sovrn', params: {tagid: '744058'} },
+      ]), //1062118/SakshiNew_HP_Box_300x600,
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983525'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
+      ]), //1062118/Desktop_HP_300x100
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983537'} },
+     //   { bidder: 'sovrn', params: {tagid: '744067'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233', domain: 'https://prg8.smartadserver.com' } }
+      ]), ///1062118/sakshiNew_Artclepage_LB
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983525'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
+      ]), //1062118/Desktop_HP_300x100
+      hb_full_common_bidders.concat([
+     //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983537'} },
+     //   { bidder: 'sovrn', params: {tagid: '744067'} },
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233', domain: 'https://prg8.smartadserver.com' } }
+      ]), ///1062118/sakshiNew_Artclepage_LB
   ]
 }
 var mappings_extra_units_config ={
   adUnitNames: [
-    // '/1062118/1x1_Sakshi.com_Live_Outstream_Desktop',
-    // '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile',
-    // '/1062118/Intersitial_640x480_Desktop',
-    // '/1062118/Intersitial_320x480_mobile',
-    // '/1062118/1x1_Sakshi.com_Live_Outstream_Desktop_Homepage',
-    // '/1062118/1x1_Sakshi.com_Live_Outstream_Desktop_Articlepage',
-    // '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile_Articlepage',
-    // '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile_Homepage',
-    // '/1009127/Sakshi_DBS_Carousel'
+    '/21692080761/amb_eng_desk_lb_1',
+    '/21692080761/amb_eng_mob_mpu_1',
+    '/21692080761/amb_eng_mob_mpu_4',
+    '/21692080761/amb_eng_header_desk_v2'
   ]
 }
 var mappings_extra_units = {

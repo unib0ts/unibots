@@ -57,6 +57,9 @@ var adUnits = [
     // {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'appnexus', params: { placementId: '19843544' } }, /* one placementId for all sizes  my appnexus bidder */
     // { bidder: 'sovrn', params: {tagid: '741305'} },
+    { bidder: 'smartadserver', params: { siteId: '362165', pageId: '1289667', formatId: '93418', domain: 'https://prg8.smartadserver.com' } },
+    //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     // { bidder: '33across', params: { siteId : 'b_XbMyWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950119'} },
     // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
@@ -88,6 +91,9 @@ ubpbjs.que.push(function() {
     'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
     //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+    // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+    // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
 
     '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
@@ -97,12 +103,24 @@ ubpbjs.que.push(function() {
   ubpbjs.setConfig({
     priceGranularity: customConfigObjectA,
     userSync: {
-      iframeEnabled: true,
-      syncsPerBidder: 999, // and no more than 3 syncs at a time
-      syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-      filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-      // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-    },
+        iframeEnabled: true,
+        syncsPerBidder: 999, // and no more than 3 syncs at a time
+        // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+        filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+        userIds: [{
+            name: "id5Id",
+            params: {
+                partner: 438,            // change to the Partner Number you received from ID5
+            },
+            storage: {
+                type: "cookie",
+                name: "id5id.1st",       // create a cookie with this name
+                expires: 90,             // cookie lasts for 90 days
+                refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+            }
+        }],
+        auctionDelay: 500},
     debug: false,
     useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0

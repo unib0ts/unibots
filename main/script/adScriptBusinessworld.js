@@ -113,6 +113,9 @@ if (mobileCheck === 'function') {
            },
            { bidder: 'criteo', params: {networkId: '10542'} },
            { bidder: 'criteointl', params: {networkId: '10545'} },
+           { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93416', domain: 'https://prg8.smartadserver.com' } },
+           { bidder: 'sonobi', params: { placement_id: 'ed9ad9ebfd4284f280b4', ad_unit: 'businessworld.in_NB_320x100' } },
+           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
            {
              bidder: 'adsolut',
              params: {
@@ -207,6 +210,9 @@ if (mobileCheck === 'function') {
           },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} }, /*All sizes*/
+          { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // {
           //   bidder: 'emx_digital',
           //   params: {
@@ -303,6 +309,9 @@ if (!mobileCheckAdSript()) {
         },/*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
+        { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93416', domain: 'https://prg8.smartadserver.com' } },
+        { bidder: 'sonobi', params: { placement_id: 'ed9ad9ebfd4284f280b4', ad_unit: 'businessworld.in_NB_320x100' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         // {
         //   bidder: 'emx_digital',
         //   params: {
@@ -389,6 +398,9 @@ if (!mobileCheckAdSript()) {
         }, /*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
+        { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+        { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         // {
         //   bidder: 'emx_digital',
         //   params: {
@@ -721,13 +733,16 @@ function mainHbRun(){
         'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
         'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
         'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
         'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
         'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
         //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
+        'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
         '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
@@ -739,12 +754,24 @@ function mainHbRun(){
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
         userSync: {
-          iframeEnabled: true,
-          syncsPerBidder: 999, // and no more than 3 syncs at a time
-          syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-          filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-          // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-        },
+            iframeEnabled: true,
+            syncsPerBidder: 999, // and no more than 3 syncs at a time
+            // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+            filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+            // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+            userIds: [{
+                name: "id5Id",
+                params: {
+                    partner: 438,            // change to the Partner Number you received from ID5
+                },
+                storage: {
+                    type: "cookie",
+                    name: "id5id.1st",       // create a cookie with this name
+                    expires: 90,             // cookie lasts for 90 days
+                    refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+                }
+            }],
+            auctionDelay: 500},
         debug: false,
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0

@@ -65,6 +65,9 @@ var adUnits = [
     { bidder: 'openx', params: {unit: '541046136', delDomain: 'yieldbird-d.openx.net'},
     { bidder: '33across', params: { siteId : 'dgPqqiWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
     { bidder: 'rubicon', params: {accountId: '11734', siteId: '323720', zoneId: '1680354'} },
+    { bidder: 'smartadserver', params: { siteId: '362123', pageId: '1289624', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+    { bidder: 'sonobi', params: { placement_id: '98d5a31a1df4d5b442fd', ad_unit: 'jobs4fresher.com_nb_320x50' } },
+    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]
@@ -87,12 +90,15 @@ ubpbjs.que.push(function() {
     'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
     'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
     'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-    'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-    'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+    'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+    'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
     'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
     //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+    // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+    // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
 
     '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
@@ -102,12 +108,24 @@ ubpbjs.que.push(function() {
   ubpbjs.setConfig({
     priceGranularity: customConfigObjectA,
     userSync: {
-      iframeEnabled: true,
-      syncsPerBidder: 999, // and no more than 3 syncs at a time
-      syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-      filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-      // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-    },
+        iframeEnabled: true,
+        syncsPerBidder: 999, // and no more than 3 syncs at a time
+        // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+        filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+        userIds: [{
+            name: "id5Id",
+            params: {
+                partner: 438,            // change to the Partner Number you received from ID5
+            },
+            storage: {
+                type: "cookie",
+                name: "id5id.1st",       // create a cookie with this name
+                expires: 90,             // cookie lasts for 90 days
+                refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+            }
+        }],
+        auctionDelay: 500},
     debug: false,
     useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0

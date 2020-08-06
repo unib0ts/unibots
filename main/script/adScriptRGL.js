@@ -523,7 +523,9 @@ function mainHbRun(){
         'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
         'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
         //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-
+        'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
         '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

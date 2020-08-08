@@ -61,11 +61,11 @@ var adUnits = [
     //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     // { bidder: '33across', params: { siteId : 'b_XbMyWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-    // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950119'} },
+    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099848'} },
     // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
     // { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    // { bidder: 'nobid', params: { siteId : '22045890551'} },
+    { bidder: 'nobid', params: { siteId : '22070847952'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];

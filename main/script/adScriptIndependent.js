@@ -65,6 +65,7 @@ var adUnits = [
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'nobid', params: { siteId : '22012436371'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028663'} },
           // { bidder: 'criteo', params: {networkId: '4902'} }
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]

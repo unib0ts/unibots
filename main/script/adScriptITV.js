@@ -65,6 +65,7 @@ var adUnits = [
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049996974'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028670'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'criteo', params: {networkId: '4902'} }
         ]

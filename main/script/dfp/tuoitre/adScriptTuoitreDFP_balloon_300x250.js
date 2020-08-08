@@ -42,10 +42,10 @@ var adUnits = [
           // { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
           // { bidder: 'sovrn', params: {tagid: '738922'} },
           // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-          // { bidder: 'nobid', params: { siteId : '21986889043'} },
+          { bidder: 'nobid', params: { siteId : '22070847952'} },
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2964156'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099849'} },
           // // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
         ]

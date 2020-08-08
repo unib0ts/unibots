@@ -91,6 +91,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '710748'} },
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999692'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028669'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'openx', params: {unit: '541046082', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'criteo', params: {networkId: '10542'} },

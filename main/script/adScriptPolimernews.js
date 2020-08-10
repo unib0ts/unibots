@@ -92,6 +92,7 @@ var adUnits = [
     { bidder: 'nobid', params: { siteId : '22049999716'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996038'} },
    	{ bidder: '33across', params: { siteId : 'aMYl4wWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
   ]

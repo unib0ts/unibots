@@ -67,6 +67,7 @@ var adUnits = [
           { bidder: 'smartadserver', params: { siteId: '362151', pageId: '1289652', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           { bidder: 'sonobi', params: { placement_id: 'e5e60465663764aefd67', ad_unit: 'telugubulletin.com_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996050'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }

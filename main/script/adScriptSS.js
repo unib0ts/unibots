@@ -255,6 +255,7 @@ var mappings_config = {
       { bidder: 'criteo', params: {networkId: '10542'} },
       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
       { bidder: 'criteointl', params: {networkId: '10545'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996013'} },
     ],
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
@@ -270,6 +271,7 @@ var mappings_config = {
       { bidder: 'criteo', params: {networkId: '10542'} },
       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
       { bidder: 'criteointl', params: {networkId: '10545'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996014'} },
     ]
   ]
 }

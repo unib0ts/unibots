@@ -71,6 +71,7 @@ var adUnits = [
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999644'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996016'} },
           // { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }

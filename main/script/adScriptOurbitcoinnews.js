@@ -98,19 +98,19 @@ var hb_full_common_bidders = [
 ];
 var mappings_full_hb_config_old = {
   targetUnits: [
-    'div-gpt-ad-1596618994131-0', //'/21692080761/amb_es_desk_lb_1',
-    'div-gpt-ad-1596619066662-0', //'/21692080761/amb_es_mob_mpu_1',
-    'div-gpt-ad-1596619332787-0', //'/21692080761/amb_es_desk_lb_2',
-    'div-gpt-ad-1596619387593-0', //'/21692080761/amb_es_mob_mpu_2',
-    'div-gpt-ad-1596619451100-0', //'/21692080761/amb_es_desk_lb_3',
-    'div-gpt-ad-1596619507145-0', //'/21692080761/amb_es_mob_mpu_3',
-    'div-gpt-ad-1596622391706-0', //'/21692080761/amb_es_mob_mpu_4',
-    'div-gpt-ad-1596622459587-0', //'/21692080761/amb_es_mob_mpu_5',
-    'div-gpt-ad-1596622506720-0', //'/21692080761/amb_es_desk_mpu_6',
-    'div-gpt-ad-1597161098765-0', //'/21692080761/amb_es_header_desk_v2',
-    'div-gpt-ad-1597161231923-0', //'/21692080761/amb_es_footer_desk_v2',
-    'div-gpt-ad-1597161328798-0', //'/21692080761/amb_es_header_mob_v2',
-    'div-gpt-ad-1597161293187-0' //'/21692080761/amb_es_footer_mob_v2',
+    'div-gpt-ad-1596618994131-0', //21692080761/obn_desk_lb_1
+    'div-gpt-ad-1596619066662-0', //'/21692080761/obn_mob_mpu_1',
+    'div-gpt-ad-1596619332787-0', //'/21692080761/obn_desk_lb_2'
+    'div-gpt-ad-1596619387593-0', //'/21692080761/obn_mob_mpu_2',
+    'div-gpt-ad-1596619451100-0', //'/21692080761/obn_desk_lb_3',
+    'div-gpt-ad-1596619507145-0', //'/21692080761/obn_mob_mpu_3',
+    'div-gpt-ad-1596622391706-0', //'/21692080761/obn_mob_mpu_4',
+    'div-gpt-ad-1596622459587-0', //'/21692080761/obn_mob_mpu_5',
+    'div-gpt-ad-1596622506720-0', //'/21692080761/obn_mob_mpu_6',
+    'div-gpt-ad-1597161098765-0', //'/21692080761/obn_header_desk_v2',
+    'div-gpt-ad-1597161231923-0', //'/21692080761/obn_header_mob_v2',
+    'div-gpt-ad-1597161328798-0', //'/21692080761/obn_footer_mob_v2'
+    'div-gpt-ad-1597161293187-0' //'/21692080761/obn_footer_desk_v2',
   ],
   adUnitNames: [
     '/21692080761/obn_desk_lb_1',
@@ -123,9 +123,9 @@ var mappings_full_hb_config_old = {
     '/21692080761/obn_mob_mpu_5',
     '/21692080761/obn_mob_mpu_6',
     '/21692080761/obn_header_desk_v2',
-    '/21692080761/obn_footer_desk_v2',
     '/21692080761/obn_header_mob_v2',
-    '/21692080761/obn_footer_mob_v2'
+    '/21692080761/obn_footer_mob_v2',
+    '/21692080761/obn_footer_desk_v2'  
   ],
   sizes: [
      [[728, 90], [970, 90]], //'/21692080761/amb_es_desk_lb_1',

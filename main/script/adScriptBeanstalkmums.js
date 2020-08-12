@@ -402,8 +402,8 @@ ubpbjs.que.push(function() {
 var slots = [], adCode = [], slotNumbers = [], sizes = [], adId = [];
 var renderedFlag = [false, false, false, false, false, false,false, false];
 
-function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1]-1;
+function ub_checkAdRendered(adId, ub_slot, adCode, slot_string){
+  ub_slotNum = slot_string[slot_string.length-1]-1;
   if(!renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
@@ -499,7 +499,7 @@ if(typeof mobileCheck === "function"){
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot5) {
-           ub_checkAdRendered('div-gpt-ad-1591770589095-0', ub_slot5, ['/21956916242/beanstalkmums.com.au_nb_728x90_desktopcentersticky']);
+           ub_checkAdRendered('div-gpt-ad-1591770589095-0', ub_slot5, ['/21956916242/beanstalkmums.com.au_nb_728x90_desktopcentersticky'], "ub_slot5");
          }
        });
    });
@@ -512,7 +512,7 @@ if(typeof mobileCheck === "function"){
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot6) {
-           ub_checkAdRendered('div-gpt-ad-1591770694120-0', ub_slot6, ['/21956916242/beanstalkmums.com.au_nb_320x50_mobilecentersticky']);
+           ub_checkAdRendered('div-gpt-ad-1591770694120-0', ub_slot6, ['/21956916242/beanstalkmums.com.au_nb_320x50_mobilecentersticky'], "ub_slot6");
          }
        });
    });
@@ -525,7 +525,7 @@ if(typeof mobileCheck === "function"){
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot1) {
-           ub_checkAdRendered('div-gpt-ad-1591769932677-0', ub_slot1, ['/21956916242/beanstalkmums.com.au_nb_330x250_1']);
+           ub_checkAdRendered('div-gpt-ad-1591769932677-0', ub_slot1, ['/21956916242/beanstalkmums.com.au_nb_330x250_1'], "ub_slot1");
          }
        });
    });
@@ -538,7 +538,7 @@ if(typeof mobileCheck === "function"){
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {
-            ub_checkAdRendered('div-gpt-ad-1591770089425-0', ub_slot2, ['/21956916242/beanstalkmums.com.au_nb_330x250_2']);
+            ub_checkAdRendered('div-gpt-ad-1591770089425-0', ub_slot2, ['/21956916242/beanstalkmums.com.au_nb_330x250_2'], "ub_slot2");
           }
         });
     });
@@ -551,7 +551,7 @@ if(typeof mobileCheck === "function"){
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot3) {
-            ub_checkAdRendered('div-gpt-ad-1591770917680-0', ub_slot3, ['/21956916242/beanstalkmums.com.au_nb_468x60']);
+            ub_checkAdRendered('div-gpt-ad-1591770917680-0', ub_slot3, ['/21956916242/beanstalkmums.com.au_nb_468x60'], "ub_slot3");
           }
         });
     });
@@ -564,7 +564,7 @@ if(typeof mobileCheck === "function"){
      googletag.cmd.push(function() {
          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
            if (event.slot === ub_slot4) {
-             ub_checkAdRendered('div-gpt-ad-1594713897080-0', ub_slot4, ['/21956916242/beanstalkmums.com.au_nb_300x250']);
+             ub_checkAdRendered('div-gpt-ad-1594713897080-0', ub_slot4, ['/21956916242/beanstalkmums.com.au_nb_300x250'], "ub_slot4");
            }
          });
      });
@@ -577,7 +577,7 @@ if(typeof mobileCheck === "function"){
       googletag.cmd.push(function() {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             if (event.slot === ub_slot7) {
-              ub_checkAdRendered('div-gpt-ad-1594713977636-0', ub_slot7, ['/21956916242/beanstalkmums.com.au_nb_300x250_1']);
+              ub_checkAdRendered('div-gpt-ad-1594713977636-0', ub_slot7, ['/21956916242/beanstalkmums.com.au_nb_300x250_1'], "ub_slot7");
             }
           });
       });
@@ -590,7 +590,7 @@ if(typeof mobileCheck === "function"){
        googletag.cmd.push(function() {
            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
              if (event.slot === ub_slot8) {
-               ub_checkAdRendered('div-gpt-ad-1594714013112-0', ub_slot8, ['/21956916242/beanstalkmums.com.au_nb_300x250_3']);
+               ub_checkAdRendered('div-gpt-ad-1594714013112-0', ub_slot8, ['/21956916242/beanstalkmums.com.au_nb_300x250_3'], "ub_slot8");
              }
            });
        });

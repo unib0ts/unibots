@@ -408,7 +408,7 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setTimeout(function() {
+      setInterval(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
       renderedFlag[ub_slotNum] = true;

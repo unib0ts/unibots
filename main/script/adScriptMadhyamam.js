@@ -169,7 +169,9 @@ if(window.location.href != "https://m.madhyamam.com/" && window.location.href !=
     }
     adUnits.push(adUnits1);
   }
-  if(document.getElementById('unibot1') != null){
+}
+else {
+  if(document.getElementById('unibot1')){
 
     adUnits1 = {
         code: '/21959913182/madhyamam.com_hb_300x250_dedicated-1',
@@ -224,11 +226,11 @@ var mappings = {
 };
 
 var wm_mappings = {
-  targetUnits: ['HomePage_300x250_1', 'div-gpt-ad-1590738750383-0', 'unibot1'],
-  slotNames: ['ub_slot2', 'ub_slot3', 'ub_slot4'],
-  adUnitNames: ['/21957769615/madhyamam.com_wm_300x250_1', '/21957769615/madhyamam.com_wm_300x250_2', '/21959913182/madhyamam.com_hb_300x250_dedicated-1'],
-  adId: ['div-ub-wm-2', 'div-ub-wm-3', 'div-gpt-ad-1597237707332-0'],
-  sizes: [div_2_sizes, div_3_sizes, div_4_sizes]
+  targetUnits: ['HomePage_300x250_1', 'div-gpt-ad-1590738750383-0'],
+  slotNames: ['ub_slot2', 'ub_slot3'],
+  adUnitNames: ['/21957769615/madhyamam.com_wm_300x250_1', '/21957769615/madhyamam.com_wm_300x250_2'],
+  adId: ['div-ub-wm-2', 'div-ub-wm-3'],
+  sizes: [div_2_sizes, div_3_sizes]
 }
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -301,6 +303,19 @@ if (document.getElementById('div-ub-1')){
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-ub-1', ub_slot1, ['/21957769615/madhyamam.com_nb_320x50']);
+      }
+    });
+  });
+}
+if (document.getElementById('unibot1')){
+  mappings.slotNumbers.push(4);
+  mappings.adCode.push('/21959913182/madhyamam.com_hb_300x250_dedicated-1');
+  mappings.sizes.push(div_4_sizes);
+  mappings.adId.push('div-gpt-ad-1597237707332-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot4) {
+        ub_checkAdRendered('div-gpt-ad-1597237707332-0', ub_slot4, ['/21959913182/madhyamam.com_hb_300x250_dedicated-1']);
       }
     });
   });

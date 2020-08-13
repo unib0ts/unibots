@@ -126,7 +126,7 @@ if (typeof mobileCheck === "function") {
       },
       bids: [
        // { bidder: 'appnexus', params: { placementId: '19855809' } }, /* one placementId for all sizes  my appnexus bidder */
-       // { bidder: 'sovrn', params: {tagid: '756527'} },
+       { bidder: 'sovrn', params: {tagid: '759850'} },
        // { bidder: 'smartadserver', params: { siteId: '362166', pageId: '1289666', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

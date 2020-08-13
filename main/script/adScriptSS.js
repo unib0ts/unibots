@@ -423,7 +423,7 @@ var mappings_full_hb_config = {
     'div-gpt-ad-1578660796348-0', //sakshinew_resp_Box1_entertainment_300x250
     'div-gpt-ad-1540359629900-0', ///1062118/MobileMasthead_HP_300x250
     'div-ub-1', ///21959913182/sakshi.com_NB_320x50
-    'div-gpt-ad-1597244904624-0',  ///21959913182/sakshi_hb_320x50_top_mobile_new'
+    'div-gpt-ad-1593080960785-0',  ///21959913182/sakshi_hb_320x50_top_mobile_new'
     // 'div-gpt-ad-1593080960785-0', ///1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
   ],
   adUnitNames: [

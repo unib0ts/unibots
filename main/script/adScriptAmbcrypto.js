@@ -730,12 +730,44 @@ function fillRefreshMap(){
         }
       });
   });
+  googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        var timer = REFRESH_TIMEOUT/1000;
+        var el = document.getElementById(event.slot.getSlotId().getDomId());
+        var temp = setInterval(function(){
+          if(isInViewSpace(el)){
+            timer -= 1;
+            if(timer <= 0){
+              refreshBid([event.slot], [event.slot.getSlotId().getAdUnitPath()]);
+              clearInterval(temp);
+            }
+          }
+        }, 1000);
+        if(mappings_final_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()}).length == 0){
+          mappings_final_refresh.adSlots.push(event.slot);
+          mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+        }
+      });
+  });
 }
 
-setInterval(function() {
-  refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-}, REFRESH_TIMEOUT);
+// setInterval(function() {
+//   refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+// }, REFRESH_TIMEOUT);
 
+function isInViewSpace(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+    var elemBottom = rect.bottom;
+
+    // Only completely visible elements return true:
+    var isFullVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight) && (!document.hidden);
+    // Partially visible elements return true:
+    var isPartialVisibleTop = elemTop < window.innerHeight && elemBottom >= 0 && (!document.hidden);
+    var isPartialVisibleBottom = (elemTop <= 0) && (elemBottom >0) && (!document.hidden);
+    isVisible = isFullVisible || isPartialVisibleTop || isPartialVisibleBottom;
+    return isVisible;
+}
 
 function refreshBid(ub_slot, adCode) {
   ubpbjs.que.push(function() {

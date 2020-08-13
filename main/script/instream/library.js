@@ -52,9 +52,7 @@ let sourceArray = [
       ],
       "title":"woman-walking-along-a-wall-with-graffiti-2360418"
    },
-
-
-
+   {
          "sources":[
          "https://player.vimeo.com/external/192235118.sd.mp4?s=592efbc381bad7b0489c55e0b4ebc8ec88dc8f4c&profile_id=164&oauth2_token_id=57447761"
       ],

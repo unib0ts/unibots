@@ -165,7 +165,7 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('unibot2')) {
+  if (document.querySelector('.unibot2')) {
     adUnits1 =
       {
         code: '/21957769615/workbank.vn',
@@ -430,7 +430,7 @@ if(typeof mobileCheck === "function"){
        });
    });
   }
-  if (document.getElementById('unibot2')){
+  if (document.querySelector('.unibot2')){
    slotNumbers.push(2);
    adCode.push('/21957769615/workbank.vn');
    sizes.push(div_2_sizes);

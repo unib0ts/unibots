@@ -458,7 +458,7 @@ var mappings_full_hb_config = {
     '/1062118/sakshinew_resp_Box1_entertainment_300x250',
     '/1062118/MobileMasthead_HP_300x250',
     '/21959913182/sakshi.com_NB_320x50',
-    '/21959913182/sakshi_hb_320x50_top_mobile_new'
+    '/21959913182/sakshi_hb_320x50_top_mobile_new',
     // '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
   ],
   sizes: [
@@ -649,11 +649,11 @@ var mappings_full_hb_config = {
       { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), ///21959913182/sakshi.com_NB_320x50
-    // hb_full_common_bidders.concat([
-    //   { bidder: 'sovrn', params: { tagid: '755249' } },
-    //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
-    //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
-    // ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
+    hb_full_common_bidders.concat([
+      { bidder: 'sovrn', params: { tagid: '755249' } },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
+      { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
+    ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
   ],
   isAP: [
     false, // '/1062118/sakshiNew_box1_300x250',
@@ -687,7 +687,7 @@ var mappings_full_hb_config = {
     false, // 'sakshinew_resp_Box1_entertainment_300x250',
     false, // '/1062118/MobileMasthead_HP_300x250'
     false, // /21959913182/sakshi.com_NB_320x50
-    // false, // /1062118/SakshiNew_ArticlepageLB_300x50
+    false, // /1062118/SakshiNew_ArticlepageLB_300x50
   ]
 }
 var mappings_extra_units_config ={

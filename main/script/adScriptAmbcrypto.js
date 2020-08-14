@@ -71,7 +71,7 @@ var mapping_full_hb = {
 
 var adUnits_full_hb = [];
 var hb_full_common_bidders = [
-  { bidder: 'appnexus', params: { placementId: '19871860' } }, /* one placementId for all sizes  my appnexus bidder */
+  { bidder: 'appnexus', params: { placementId: '19998799' } }, /* one placementId for all sizes  my appnexus bidder */
   // { bidder: 'oftmedia', params: { placementId: '18778196' } },
   // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
   // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
@@ -81,7 +81,7 @@ var hb_full_common_bidders = [
   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
   // { bidder: 'criteo', params: {networkId: '10542'} },
-  // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
   // { bidder: 'criteointl', params: {networkId: '10545'} },
 ];
 var mappings_full_hb_config_old = {

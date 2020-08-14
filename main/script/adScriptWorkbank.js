@@ -158,7 +158,7 @@ var adUnits = [];
          //   { bidder: 'criteointl', params: {networkId: '10545'} },
          //    { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
          //   // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
-         //   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -189,7 +189,7 @@ var adUnits = [];
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
          //  // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
-         //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -220,7 +220,7 @@ var adUnits = [];
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
          //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
-         //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -253,6 +253,9 @@ ubpbjs.que.push(function() {
       'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
       'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
       //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+      // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+      // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
 
       '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
       'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

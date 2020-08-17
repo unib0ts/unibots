@@ -740,15 +740,17 @@ function fillRefreshMap(){
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         var timer = REFRESH_TIMEOUT/1000;
         var el = document.getElementById(event.slot.getSlotId().getDomId());
-        var temp = setInterval(function(){
-          if(isInViewSpace(el)){
-            timer -= 1;
-            if(timer <= 0){
-              refreshBid([event.slot], [event.slot.getSlotId().getAdUnitPath()]);
-              clearInterval(temp);
+        if (el!=null) {
+          var temp = setInterval(function(){
+            if(isInViewSpace(el)){
+              timer -= 1;
+              if(timer <= 0){
+                refreshBid([event.slot], [event.slot.getSlotId().getAdUnitPath()]);
+                clearInterval(temp);
+              }
             }
-          }
-        }, 1000);
+          }, 1000);
+        }
         if(mappings_final_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()}).length == 0){
           mappings_final_refresh.adSlots.push(event.slot);
           mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());

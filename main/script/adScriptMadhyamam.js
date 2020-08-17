@@ -11,7 +11,8 @@ var GEO_CODE = '';
 			if (request.status >= 200 && request.status < 400) {
 				var data = request.responseText;
 				data = JSON.parse(data);
-				if(data.status == "succediv-gpt-ad-1597237707332-0ss") {
+        console.log(data);
+				if(data.status == "success") {
           GEO_CODE = data.countryCode;
 				}
 				else {

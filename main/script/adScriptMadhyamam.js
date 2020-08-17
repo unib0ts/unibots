@@ -11,7 +11,6 @@ var GEO_CODE = '';
 			if (request.status >= 200 && request.status < 400) {
 				var data = request.responseText;
 				data = JSON.parse(data);
-        console.log(data);
 				if(data.status == "success") {
           GEO_CODE = data.countryCode;
 				}

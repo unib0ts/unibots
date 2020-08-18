@@ -473,10 +473,10 @@ function googlePush(){
 
 if(typeof mobileCheck === "function"){
   if (!mobileCheck()){
-    slotNumbers.push(7);
-    adCode.push('/21957769615/workbank.vn_300x250_1');
-    sizes.push(div_7_sizes);
-    adId.push('div-gpt-ad-1597735352777-0');
+    mappings.slotNumbers.push(7);
+    mappings.adCode.push('/21957769615/workbank.vn_300x250_1');
+    mappings.sizes.push(div_7_sizes);
+    mappings.adId.push('div-gpt-ad-1597735352777-0');
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot7) {

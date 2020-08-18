@@ -46,6 +46,7 @@ var div_4_sizes = [[200, 200], [250, 250], [300, 250], [300, 100]];
 var div_5_sizes = [[250, 250], [300, 250], [200, 200]];
 var div_6_sizes = [[200, 200], [250, 250], [300, 250]];
 var div_7_sizes = [[250, 250], [300, 250], [200, 200]];
+var div_8_sizes = [[200, 200], [250, 250], [300, 250]];
 
 var adUnits = [
     {
@@ -299,6 +300,37 @@ if(document.getElementById('unibot4')){
   }
   adUnits.push(adUnits1);
 }
+if(document.getElementById('unibot6')){
+
+  adUnits1 = {
+      code: '/21959913182/madhyamam.com_hb_300x250_dedicated-5',
+      mediaTypes: {
+          banner: {
+              sizes: div_8_sizes
+          }
+      },
+      bids: [
+        // { bidder: 'appnexus', params: { placementId: '19056048' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'oftmedia', params: { placementId: '18677464' } },
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        // { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
+        // { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
+        // { bidder: 'sovrn', params: {tagid: '738358'} },
+        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+        // { bidder: 'nobid', params: { siteId : '21986889043'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2962618'} },
+        // { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+        //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+      ]
+  }
+  adUnits.push(adUnits1);
+}
 
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -451,6 +483,19 @@ if (document.getElementById('unibot4')){
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot7) {
         ub_checkAdRendered('div-gpt-ad-1597687810390-0', ub_slot7, ['/21959913182/madhyamam.com_hb_300x250_dedicated-4']);
+      }
+    });
+  });
+}
+if (document.getElementById('unibot6')){
+  mappings.slotNumbers.push(8);
+  mappings.adCode.push('/21959913182/madhyamam.com_hb_300x250_dedicated-5');
+  mappings.sizes.push(div_8_sizes);
+  mappings.adId.push('div-gpt-ad-1597752801943-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot8) {
+        ub_checkAdRendered('div-gpt-ad-1597752801943-0', ub_slot8, ['/21959913182/madhyamam.com_hb_300x250_dedicated-5']);
       }
     });
   });

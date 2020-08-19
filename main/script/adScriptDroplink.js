@@ -11,7 +11,7 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [[250, 250], [300, 250], [200, 200]];
+var div_1_sizes = [[300, 250], [336, 280]];
 // var div_2_sizes = [300, 600];
 // var div_3_sizes = [[970, 250], [728, 90], [970, 90]];
 
@@ -134,10 +134,10 @@ var adUnits = [];
   //       };
   //   adUnits.push(adUnits1);
   // }
-  if (document.getElementById('div-adx-ad-6gJ6YE8PPeT2wG7m6mLo')) {
+  if (document.getElementById('unibot1_tag')) {
     adUnits1 =
       {
-        code: '/21957769615/songvahuong.com_hb_300x250',
+        code: '/21957769615/droplink.co',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -361,15 +361,15 @@ function googlePush(){
   //      });
   //  });
   // }
-  if (document.getElementById('div-adx-ad-6gJ6YE8PPeT2wG7m6mLo')){
+  if (document.getElementById('unibot1_tag')){
    mappings.slotNumbers.push(1);
-   mappings.adCode.push('/21957769615/songvahuong.com_hb_300x250');
+   mappings.adCode.push('/21957769615/droplink.co');
    mappings.sizes.push(div_1_sizes);
-   mappings.adId.push('div-gpt-ad-1597230457612-0');
+   mappings.adId.push('div-gpt-ad-1597815801645-0');
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot1) {
-           ub_checkAdRendered('div-gpt-ad-1597230457612-0', ub_slot1, ['/21957769615/songvahuong.com_hb_300x250']);
+           ub_checkAdRendered('div-gpt-ad-1597815801645-0', ub_slot1, ['/21957769615/droplink.co']);
          }
        });
    });

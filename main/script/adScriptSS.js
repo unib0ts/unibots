@@ -78,6 +78,7 @@ var adUnits = [
         { bidder: 'nobid', params: { siteId: '21987177881' } },
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
+        // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
         //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
         { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
@@ -110,6 +111,7 @@ ubpbjs.que.push(function() {
     'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
     'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
     //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    // 'dailyhunt': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
 
     '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
     'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },

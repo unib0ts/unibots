@@ -28,7 +28,7 @@ if (typeof mobileCheck === "function") {
               }
           },
           bids: [
-           // { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+           { bidder: 'appnexus', params: { placementId: '20034420' } }, /* one placementId for all sizes  my appnexus bidder */
            // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
            //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952066'} },
            // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -59,7 +59,7 @@ if (typeof mobileCheck === "function") {
                 }
             },
             bids: [
-            	// { bidder: 'appnexus', params: { placementId: '19455531' } }, /* one placementId for all sizes  my appnexus bidder */
+            	{ bidder: 'appnexus', params: { placementId: '20034420' } }, /* one placementId for all sizes  my appnexus bidder */
             	// // { bidder: 'oftmedia', params: { placementId: '18671523' } },
               // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952067'} },
             	// // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -227,10 +227,10 @@ function googlePush(){
 
 if(typeof mobileCheck === "function"){
   if (!mobileCheck()){
-   slotNumbers.push(1);
-   adCode.push('/21956916242/sattakingresults.net_hb_970x90');
-   sizes.push(div_1_sizes);
-   adId.push('div-gpt-ad-1597818385874-0');
+   mappings.slotNumbers.push(1);
+   mappings.adCode.push('/21956916242/sattakingresults.net_hb_970x90');
+   mappings.sizes.push(div_1_sizes);
+   mappings.adId.push('div-gpt-ad-1597818385874-0');
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot1) {
@@ -240,10 +240,10 @@ if(typeof mobileCheck === "function"){
    });
   }
   else {
-   slotNumbers.push(2);
-   adCode.push('/21956916242/sattakingresults.net_hb_320x100');
-   sizes.push(div_2_sizes);
-   adId.push('div-gpt-ad-1597818407914-0');
+   mappings.slotNumbers.push(2);
+   mappings.adCode.push('/21956916242/sattakingresults.net_hb_320x100');
+   mappings.sizes.push(div_2_sizes);
+   mappings.adId.push('div-gpt-ad-1597818407914-0');
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot2) {

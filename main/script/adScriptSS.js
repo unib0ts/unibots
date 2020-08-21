@@ -902,7 +902,6 @@ function callMapUnits(){
         }
       }
       else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
-        console.log(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath()));
         mappings_extra_units.slots.push(x[i]);
       }
     }

@@ -729,10 +729,10 @@ var mappings_extra_units_config ={
     '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile_Articlepage',
     '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile_Homepage',
     '/1009127/Sakshi_DBS_Carousel',
-    '1062118/sakshiNew_cinema_sports_Bussiness_box1',
-    '1062118/sakshiNew_cinema_sports_Bussiness_box2',
-    '1062118/sakshiNew_cinema_sports_Bussiness_box5',
-    '21796214895/542194_Sakshi_block_1'
+    '/1062118/sakshiNew_cinema_sports_Bussiness_box1',
+    '/1062118/sakshiNew_cinema_sports_Bussiness_box2',
+    '/1062118/sakshiNew_cinema_sports_Bussiness_box5',
+    '/21796214895/542194_Sakshi_block_1'
   ]
 }
 var mappings_extra_units = {
@@ -902,6 +902,7 @@ function callMapUnits(){
         }
       }
       else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
+        console.log(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath()));
         mappings_extra_units.slots.push(x[i]);
       }
     }

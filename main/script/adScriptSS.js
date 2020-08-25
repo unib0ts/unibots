@@ -16,6 +16,35 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 // var boturl = window.location.href;
+
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
+
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -96,6 +125,7 @@ googletag.cmd.push(function() {
 
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
+function mainHbRun(){
 ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
   ubpbjs.aliasBidder('criteo','criteointl');
@@ -121,12 +151,24 @@ ubpbjs.que.push(function() {
   ubpbjs.setConfig({
     priceGranularity: customConfigObjectA,
     userSync: {
-      iframeEnabled: true,
-      syncsPerBidder: 999, // and no more than 3 syncs at a time
-      syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-      filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-      // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-    },
+        iframeEnabled: true,
+        syncsPerBidder: 999, // and no more than 3 syncs at a time
+        // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+        filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+        userIds: [{
+            name: "id5Id",
+            params: {
+                partner: 438,            // change to the Partner Number you received from ID5
+            },
+            storage: {
+                type: "cookie",
+                name: "id5id.1st",       // create a cookie with this name
+                expires: 90,             // cookie lasts for 90 days
+                refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+            }
+        }],
+        auctionDelay: 500},
     debug: true,
     useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0
@@ -136,7 +178,19 @@ ubpbjs.que.push(function() {
     //pubcid: {expInterval: },
     //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
    });
+   ubpbjs.requestBids({
+       bidsBackHandler: initAdserver,
+       timeout: PREBID_TIMEOUT,
+       labels: [GEO_CODE],
+   });
 });
+
+  // in case ubpbjs doesn't load
+  setTimeout(function() {
+      initAdserver();
+  }, FAILSAFE_TIMEOUT);
+}
+
 
 var ub_slot1;
 function addNewBotAdMobile(){

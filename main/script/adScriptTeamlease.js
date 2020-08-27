@@ -109,12 +109,24 @@ ubpbjs.que.push(function() {
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       userSync: {
-        iframeEnabled: true,
-        syncsPerBidder: 999, // and no more than 3 syncs at a time
-        syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-        filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-      },
+          iframeEnabled: true,
+          syncsPerBidder: 999, // and no more than 3 syncs at a time
+          // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+          filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+          // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+          userIds: [{
+              name: "id5Id",
+              params: {
+                  partner: 438,            // change to the Partner Number you received from ID5
+              },
+              storage: {
+                  type: "cookie",
+                  name: "id5id.1st",       // create a cookie with this name
+                  expires: 90,             // cookie lasts for 90 days
+                  refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+              }
+          }],
+          auctionDelay: 500},
       debug: false,
       useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0

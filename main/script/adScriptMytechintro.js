@@ -572,10 +572,10 @@ if(typeof mobileCheck === "function"){
   //  });
   // }
   if (mobileCheck()){
-   slotNumbers.push(9);
-   adCode.push('/21956916242/mytechintro.com_hb_320x100_1');
-   sizes.push(div_9_sizes);
-   adId.push('div-gpt-ad-1598685883458-0');
+   mappings.slotNumbers.push(9);
+   mappings.adCode.push('/21956916242/mytechintro.com_hb_320x100_1');
+   mappings.sizes.push(div_9_sizes);
+   mappings.adId.push('div-gpt-ad-1598685883458-0');
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot9) {

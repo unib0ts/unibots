@@ -732,10 +732,10 @@ var mappings_full_hb_config = {
     ]), ///21959913182/sakshi.com_NB_320x50
     hb_full_common_bidders.concat([
       { bidder: 'dailyhunt', params: {placement_id: 146, publisher_id: 6, partner_name: 'sakshi'} },
-      { bidder: 'sovrn', params: { tagid: '755249' } },
-      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
+      // { bidder: 'sovrn', params: { tagid: '755249' } },
+      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
-    ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
+    ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile -> '/21959913182/sakshi_hb_320x50_top_mobile_new
   ],
   isAP: [
     false, // '/1062118/sakshiNew_box1_300x250',

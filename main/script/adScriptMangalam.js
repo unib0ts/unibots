@@ -40,7 +40,9 @@ const customConfigObjectA = {
 };
 
 var div_1_sizes = [320, 50];
-
+var div_2_sizes = [[300, 250], [336, 280]];
+var div_3_sizes = [[300, 250], [336, 280]];
+var div_4_sizes = [[300, 250], [336, 280]];
 
 var adUnits = [
     {
@@ -106,6 +108,100 @@ var adUnits = [
     }
 ];
 
+if(document.getElementById('unibot1')){
+
+  adUnits1 = {
+      code: '/21959913182/mangalam.com_hb_300x250_1',
+      mediaTypes: {
+          banner: {
+              sizes: div_2_sizes
+          }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'oftmedia', params: { placementId: '18677464' } },
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        // { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
+        // { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
+        // { bidder: 'sovrn', params: {tagid: '738358'} },
+        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+        // { bidder: 'nobid', params: { siteId : '21986889043'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2962618'} },
+        // { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+        //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+      ]
+  }
+  adUnits.push(adUnits1);
+}
+if(document.getElementById('unibot2')){
+
+  adUnits1 = {
+      code: '/21959913182/mangalam.com_hb_300x250_2',
+      mediaTypes: {
+          banner: {
+              sizes: div_3_sizes
+          }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'oftmedia', params: { placementId: '18677464' } },
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        // { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
+        // { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
+        // { bidder: 'sovrn', params: {tagid: '738358'} },
+        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+        // { bidder: 'nobid', params: { siteId : '21986889043'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2962618'} },
+        // { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+        //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+      ]
+  }
+  adUnits.push(adUnits1);
+}
+if(document.getElementById('unibot3')){
+
+  adUnits1 = {
+      code: '/21959913182/mangalam.com_hb_300x250_3',
+      mediaTypes: {
+          banner: {
+              sizes: div_4_sizes
+          }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'oftmedia', params: { placementId: '18677464' } },
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        // { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'} },
+        // { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
+        // { bidder: 'sovrn', params: {tagid: '738358'} },
+        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+        // { bidder: 'nobid', params: { siteId : '21986889043'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2962618'} },
+        // { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+        //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+      ]
+  }
+  adUnits.push(adUnits1);
+}
+
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -116,62 +212,143 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+var mappings = {
+  slots: [],
+  adCode: [],
+  slotNumbers: [],
+  sizes: [],
+  adId: [],
+  renderedFlag: []
+};
+
+function ub_checkAdRendered(adId, ub_slot, adCode){
+  ub_slotNum = ub_slot[ub_slot.length-1];
+  if(typeof mappings.renderedFlag[ub_slotNum] || !mappings.renderedFlag[ub_slotNum]){
+    adId1 = adId;
+    var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+    if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+      setTimeout(function() {
+        refreshBid(ub_slot, adCode);
+      }, REFRESH_TIMEOUT);
+      mappings.renderedFlag[ub_slotNum] = true;
+    }
+  }
+}
+
+function refreshBid(ub_slot, adCode) {
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
     ubpbjs.initAdserverSet = true;
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            googletag.pubads().refresh(mappings.slots);
         });
     });
 }
 
+function googleDefine(slotNumbers, adCode, sizes, adId){
+  for(var i=0; i<slotNumbers.length;i++){
+    eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+    var a = eval('ub_slot'+slotNumbers[i]);
+    a.addService(googletag.pubads());
+    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+  }
+}
 
-var ub_slot1;
-googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956916242/mangalam.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+function googlePush(){
+  googletag.cmd.push(function() {
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
     googletag.pubads().enableSingleRequest();
+    // googletag.pubads().enableLazyLoad({
+    //           fetchMarginPercent: 200,
+    //           renderMarginPercent: 100,
+    //           mobileScaling: 2.0
+    //         });
     googletag.enableServices();
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAdRendered();
-        }
-    });
-});
-
-function refreshBid() {
-  ubpbjs.que.push(function() {
-	  ubpbjs.requestBids({
-		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956916242/mangalam.com_nb_320x50'],
-		  bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
-          });
-        });
-		  }
-	  });
   });
 }
 
-ub_adRefreshFlag = 0;
-function ub_checkAdRendered(){
-	adId = 'div-ub-1';
-	var nodes = document.getElementById(adId).childNodes[0].childNodes;
-	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if(ub_adRefreshFlag != 1){
-      setInterval(function() {
-        ub_adRefreshFlag = 1;
-        refreshBid();
-      }, REFRESH_TIMEOUT);
-    }
-	 }
+if (document.getElementById('div-ub-1')){
+  mappings.slotNumbers.push(1);
+  mappings.adCode.push('/21956916242/mangalam.com_nb_320x50');
+  mappings.sizes.push(div_1_sizes);
+  mappings.adId.push('div-ub-1');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot1) {
+        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21956916242/mangalam.com_nb_320x50']);
+      }
+    });
+  });
+}
+if (document.getElementById('unibot1')){
+  mappings.slotNumbers.push(2);
+  mappings.adCode.push('/21959913182/mangalam.com_hb_300x250_1');
+  mappings.sizes.push(div_2_sizes);
+  mappings.adId.push('div-gpt-ad-1598766449306-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot2) {
+        ub_checkAdRendered('div-gpt-ad-1598766449306-0', ub_slot2, ['/21959913182/mangalam.com_hb_300x250_1']);
+      }
+    });
+  });
+}
+if (document.getElementById('unibot2')){
+  mappings.slotNumbers.push(3);
+  mappings.adCode.push('/21959913182/mangalam.com_hb_300x250_2');
+  mappings.sizes.push(div_3_sizes);
+  mappings.adId.push('div-gpt-ad-1598766482812-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot3) {
+        ub_checkAdRendered('div-gpt-ad-1598766482812-0', ub_slot3, ['/21959913182/mangalam.com_hb_300x250_2']);
+      }
+    });
+  });
+}
+if (document.getElementById('unibot3')){
+  mappings.slotNumbers.push(4);
+  mappings.adCode.push('/21959913182/mangalam.com_hb_300x250_3');
+  mappings.sizes.push(div_4_sizes);
+  mappings.adId.push('div-gpt-ad-1598766502024-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot4) {
+        ub_checkAdRendered('div-gpt-ad-1598766502024-0', ub_slot4, ['/21959913182/mangalam.com_hb_300x250_3']);
+      }
+    });
+  });
+}
+
+if(typeof googletag.defineSlot === "function"){
+  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+  googlePush();
+}
+else{
+  setTimeout(function(){
+    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+    googlePush();
+  }, 500);
 }
 
 function mainHbRun(){

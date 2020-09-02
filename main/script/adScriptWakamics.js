@@ -11,19 +11,19 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [[336, 280], [300, 250]];
-var div_2_sizes = [[336, 280], [300, 250]];
-var div_3_sizes = [[336, 280], [300, 250]];
-var div_4_sizes = [[336, 280], [300, 250]];
-var div_5_sizes = [[336, 280], [300, 250]];
-var div_6_sizes = [[336, 280], [300, 250]];
-var div_7_sizes = [[320, 100], [300, 100], [300, 50], [320, 50]];
-var div_8_sizes = [[468, 60], [728, 90]];
-var div_9_sizes = [320, 50];
+var div_1_sizes = [320, 50];
+var div_2_sizes = [320, 50];
+var div_3_sizes = [320, 50];
+var div_4_sizes = [160, 600];
+var div_5_sizes = [160, 600];
+var div_6_sizes = [336, 280];
+var div_7_sizes = [336, 280];
+var div_8_sizes = [300, 250];
+var div_9_sizes = [300, 250];
 
 var adUnits = [];
 
-if (typeof mobileCheck === "function") {
+// if (typeof mobileCheck === "function") {
   // if (!mobileCheck()) {
   //   // adUnits1 =
   //   //   {
@@ -109,48 +109,48 @@ if (typeof mobileCheck === "function") {
   //     };
   //   adUnits.push(adUnits1);
   // }
-  if (mobileCheck()) {
-    adUnits1 =
-        {
-            code: '/21956916242/mytechintro.com_hb_320x100_1',
-            mediaTypes: {
-                banner: {
-                    sizes: div_9_sizes
-                }
-            },
-            bids: [
-            	{ bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
-            	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
-              // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952067'} },
-            	// // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-            	// // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-              // { bidder: 'sovrn', params: {tagid: '736646'} },
-              // // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-            	// { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
-            	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              // { bidder: 'nobid', params: { siteId : '22042552139'} },
-              // { bidder: 'criteo', params: {networkId: '10542'} },
-              // { bidder: 'criteointl', params: {networkId: '10545'} },
-              // { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-              // { bidder: 'sonobi', params: { placement_id: 'a55a624e18a52282bcb6', ad_unit: 'beanstalkmums.com.au_nb_320x50' } },
-              { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-            ]
-        };
-    adUnits.push(adUnits1);
-  }
-  if (document.getElementById('ad2501')) {
+  // if (mobileCheck()) {
+  //   adUnits1 =
+  //       {
+  //           code: '/21956916242/mytechintro.com_hb_320x100_1',
+  //           mediaTypes: {
+  //               banner: {
+  //                   sizes: div_9_sizes
+  //               }
+  //           },
+  //           bids: [
+  //           	{ bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+  //           	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
+  //             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952067'} },
+  //           	// // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+  //           	// // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+  //             // { bidder: 'sovrn', params: {tagid: '736646'} },
+  //             // // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+  //           	// { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+  //           	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+  //             // { bidder: 'nobid', params: { siteId : '22042552139'} },
+  //             // { bidder: 'criteo', params: {networkId: '10542'} },
+  //             // { bidder: 'criteointl', params: {networkId: '10545'} },
+  //             // { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+  //             // { bidder: 'sonobi', params: { placement_id: 'a55a624e18a52282bcb6', ad_unit: 'beanstalkmums.com.au_nb_320x50' } },
+  //             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  //             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+  //             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+  //           ]
+  //       };
+  //   adUnits.push(adUnits1);
+  // }
+  if (document.getElementById('unibots1')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_300x250_1',
+        code: '/21957769615/wakamics.com_hb_320x50_1',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+          // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'sovrn', params: {tagid: '736637'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -171,17 +171,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad2502')) {
+  if (document.getElementById('unibots2')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_300x250_2',
+        code: '/21957769615/wakamics.com_hb_320x50_2',
         mediaTypes: {
             banner: {
                 sizes: div_2_sizes
             }
         },
         bids: [
-            { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952065'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -202,17 +202,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad2503')) {
+  if (document.getElementById('unibots3')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_300x250_3',
+        code: '/21957769615/wakamics.com_hb_320x50_3',
         mediaTypes: {
             banner: {
                 sizes: div_3_sizes
             }
         },
         bids: [
-            { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -233,17 +233,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad2504')) {
+  if (document.getElementById('unibots4')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_300x250_4',
+        code: '/21957769615/wakamics.com_hb_160x600_4',
         mediaTypes: {
             banner: {
                 sizes: div_4_sizes
             }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+          // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'sovrn', params: {tagid: '736637'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -264,17 +264,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad2505')) {
+  if (document.getElementById('unibots5')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_300x250_5',
+        code: '/21957769615/wakamics.com_hb_160x600_5',
         mediaTypes: {
             banner: {
                 sizes: div_5_sizes
             }
         },
         bids: [
-            { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952065'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -295,17 +295,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad2506')) {
+  if (document.getElementById('unibots6')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_300x250_6',
+        code: '/21957769615/wakamics.com_hb_336x280_6',
         mediaTypes: {
             banner: {
                 sizes: div_6_sizes
             }
         },
         bids: [
-            { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -326,17 +326,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad3001')) {
+  if (document.getElementById('unibots7')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_320x100_1',
+        code: '/21957769615/wakamics.com_hb_336x280_7',
         mediaTypes: {
             banner: {
                 sizes: div_7_sizes
             }
         },
         bids: [
-            { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -357,17 +357,17 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('ad7201')) {
+  if (document.getElementById('unibots8')) {
     adUnits1 =
       {
-        code: '/21956916242/mytechintro.com_hb_728x90_1',
+        code: '/21957769615/wakamics.com_hb_300x250_8',
         mediaTypes: {
             banner: {
                 sizes: div_8_sizes
             }
         },
         bids: [
-            { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -388,7 +388,38 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
-}
+  if (document.getElementById('unibots9')) {
+    adUnits1 =
+      {
+        code: '/21957769615/wakamics.com_hb_300x250_9',
+        mediaTypes: {
+            banner: {
+                sizes: div_8_sizes
+            }
+        },
+        bids: [
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+// }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -452,7 +483,7 @@ ubpbjs.que.push(function() {
       useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'http://mytechintro.com/',
+      publisherDomain: 'https://wakamics.com/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -533,7 +564,7 @@ function googlePush(){
   });
 }
 
-if(typeof mobileCheck === "function"){
+// if(typeof mobileCheck === "function"){
   // if (!mobileCheck()){
   //   // slotNumbers.push(9);
   //   // adCode.push('/21956916242/beanstalkmums.com.au_nb_160x600_lb');
@@ -571,124 +602,125 @@ if(typeof mobileCheck === "function"){
   //      });
   //  });
   // }
-  if (mobileCheck()){
-   mappings.slotNumbers.push(9);
-   mappings.adCode.push('/21956916242/mytechintro.com_hb_320x100_1');
-   mappings.sizes.push(div_9_sizes);
-   mappings.adId.push('div-gpt-ad-1598685883458-0');
-   googletag.cmd.push(function() {
-       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-         if (event.slot === ub_slot9) {
-           ub_checkAdRendered('div-gpt-ad-1598685883458-0', ub_slot9, ['/21956916242/mytechintro.com_hb_320x100_1']);
-         }
-       });
-   });
-  }
-  if (document.getElementById('ad2501')){
-   mappings.slotNumbers.push(1);
-   mappings.adCode.push('/21956916242/mytechintro.com_hb_300x250_1');
-   mappings.sizes.push(div_1_sizes);
-   mappings.adId.push('div-gpt-ad-1597730359415-0');
-   googletag.cmd.push(function() {
-       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-         if (event.slot === ub_slot1) {
-           ub_checkAdRendered('div-gpt-ad-1597730359415-0', ub_slot1, ['/21956916242/mytechintro.com_hb_300x250_1']);
-         }
-       });
-   });
-  }
-  if (document.getElementById('ad2502')){
-   mappings.slotNumbers.push(2);
-   mappings.adCode.push('/21956916242/mytechintro.com_hb_300x250_2');
-   mappings.sizes.push(div_2_sizes);
-   mappings.adId.push('div-gpt-ad-1597730377254-0');
-    googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot2) {
-            ub_checkAdRendered('div-gpt-ad-1597730377254-0', ub_slot2, ['/21956916242/mytechintro.com_hb_300x250_2']);
-          }
-        });
-    });
-   }
-  if (document.getElementById('ad2503')){
-    mappings.slotNumbers.push(3);
-    mappings.adCode.push('/21956916242/mytechintro.com_hb_300x250_3');
-    mappings.sizes.push(div_3_sizes);
-    mappings.adId.push('div-gpt-ad-1597730397658-0');
-    googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot3) {
-            ub_checkAdRendered('div-gpt-ad-1597730397658-0', ub_slot3, ['/21956916242/mytechintro.com_hb_300x250_3']);
-          }
-        });
-    });
-   }
-   if (document.getElementById('ad2504')){
-    mappings.slotNumbers.push(4);
-    mappings.adCode.push('/21956916242/mytechintro.com_hb_300x250_4');
-    mappings.sizes.push(div_4_sizes);
-    mappings.adId.push('div-gpt-ad-1597730418436-0');
-    googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot4) {
-            ub_checkAdRendered('div-gpt-ad-1597730418436-0', ub_slot4, ['/21956916242/mytechintro.com_hb_300x250_4']);
-          }
-        });
-    });
-   }
-   if (document.getElementById('ad2505')){
-    mappings.slotNumbers.push(5);
-    mappings.adCode.push('/21956916242/mytechintro.com_hb_300x250_5');
-    mappings.sizes.push(div_5_sizes);
-    mappings.adId.push('div-gpt-ad-1597730436381-0');
-     googletag.cmd.push(function() {
-         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           if (event.slot === ub_slot5) {
-             ub_checkAdRendered('div-gpt-ad-1597730436381-0', ub_slot5, ['/21956916242/mytechintro.com_hb_300x250_5']);
-           }
-         });
+
+if (document.getElementById('unibots1')){
+ mappings.slotNumbers.push(1);
+ mappings.adCode.push('/21957769615/wakamics.com_hb_320x50_1');
+ mappings.sizes.push(div_1_sizes);
+ mappings.adId.push('div-gpt-ad-1599019722874-0');
+ googletag.cmd.push(function() {
+     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+       if (event.slot === ub_slot1) {
+         ub_checkAdRendered('div-gpt-ad-1599019722874-0', ub_slot1, ['/21957769615/wakamics.com_hb_320x50_1']);
+       }
      });
-    }
-   if (document.getElementById('ad2506')){
-     mappings.slotNumbers.push(6);
-     mappings.adCode.push('/21956916242/mytechintro.com_hb_300x250_6');
-     mappings.sizes.push(div_6_sizes);
-     mappings.adId.push('div-gpt-ad-1597730460270-0');
-     googletag.cmd.push(function() {
-         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           if (event.slot === ub_slot6) {
-             ub_checkAdRendered('div-gpt-ad-1597730460270-0', ub_slot6, ['/21956916242/mytechintro.com_hb_300x250_6']);
-           }
-         });
-     });
-    }
-   if (document.getElementById('ad3001')){
-  mappings.slotNumbers.push(7);
-  mappings.adCode.push('/21956916242/mytechintro.com_hb_320x100_1');
-  mappings.sizes.push(div_7_sizes);
-  mappings.adId.push('div-gpt-ad-1597730564691-0');
+ });
+}
+if (document.getElementById('unibots2')){
+ mappings.slotNumbers.push(2);
+ mappings.adCode.push('/21957769615/wakamics.com_hb_320x50_2');
+ mappings.sizes.push(div_2_sizes);
+ mappings.adId.push('div-gpt-ad-1599019772462-0');
   googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot7) {
-          ub_checkAdRendered('div-gpt-ad-1597730564691-0', ub_slot7, ['/21956916242/mytechintro.com_hb_320x100_1']);
+        if (event.slot === ub_slot2) {
+          ub_checkAdRendered('div-gpt-ad-1599019772462-0', ub_slot2, ['/21957769615/wakamics.com_hb_320x50_2']);
         }
       });
   });
-  }
-   if (document.getElementById('ad7201')){
-       mappings.slotNumbers.push(8);
-       mappings.adCode.push('/21956916242/mytechintro.com_hb_728x90_1');
-       mappings.sizes.push(div_8_sizes);
-       mappings.adId.push('div-gpt-ad-1597730583195-0');
-       googletag.cmd.push(function() {
-           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-             if (event.slot === ub_slot8) {
-               ub_checkAdRendered('div-gpt-ad-1597730583195-0', ub_slot8, ['/21956916242/mytechintro.com_hb_728x90_1']);
-             }
-           });
+ }
+if (document.getElementById('unibots3')){
+  mappings.slotNumbers.push(3);
+  mappings.adCode.push('/21957769615/wakamics.com_hb_320x50_3');
+  mappings.sizes.push(div_3_sizes);
+  mappings.adId.push('div-gpt-ad-1599019789379-0');
+  googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot3) {
+          ub_checkAdRendered('div-gpt-ad-1599019789379-0', ub_slot3, ['/21957769615/wakamics.com_hb_320x50_3']);
+        }
+      });
+  });
+ }
+if (document.getElementById('unibots4')){
+  mappings.slotNumbers.push(4);
+  mappings.adCode.push('/21957769615/wakamics.com_hb_160x600_4');
+  mappings.sizes.push(div_4_sizes);
+  mappings.adId.push('div-gpt-ad-1599019814791-0');
+  googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot4) {
+          ub_checkAdRendered('div-gpt-ad-1599019814791-0', ub_slot4, ['/21957769615/wakamics.com_hb_160x600_4']);
+        }
+      });
+  });
+ }
+if (document.getElementById('unibots5')){
+  mappings.slotNumbers.push(5);
+  mappings.adCode.push('/21957769615/wakamics.com_hb_160x600_5');
+  mappings.sizes.push(div_5_sizes);
+  mappings.adId.push('div-gpt-ad-1599019831646-0');
+   googletag.cmd.push(function() {
+       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+         if (event.slot === ub_slot5) {
+           ub_checkAdRendered('div-gpt-ad-1599019831646-0', ub_slot5, ['/21957769615/wakamics.com_hb_160x600_5']);
+         }
        });
+   });
+  }
+if (document.getElementById('unibots6')){
+   mappings.slotNumbers.push(6);
+   mappings.adCode.push('/21957769615/wakamics.com_hb_336x280_6');
+   mappings.sizes.push(div_6_sizes);
+   mappings.adId.push('div-gpt-ad-1599019854452-0');
+   googletag.cmd.push(function() {
+       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+         if (event.slot === ub_slot6) {
+           ub_checkAdRendered('div-gpt-ad-1599019854452-0', ub_slot6, ['/21957769615/wakamics.com_hb_336x280_6']);
+         }
+       });
+   });
+  }
+if (document.getElementById('unibots7')){
+mappings.slotNumbers.push(7);
+mappings.adCode.push('/21957769615/wakamics.com_hb_336x280_7');
+mappings.sizes.push(div_7_sizes);
+mappings.adId.push('div-gpt-ad-1599019871107-0');
+googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot7) {
+        ub_checkAdRendered('div-gpt-ad-1599019871107-0', ub_slot7, ['/21957769615/wakamics.com_hb_336x280_7']);
       }
+    });
+});
 }
+if (document.getElementById('unibots8')){
+     mappings.slotNumbers.push(8);
+     mappings.adCode.push('/21957769615/wakamics.com_hb_300x250_8');
+     mappings.sizes.push(div_8_sizes);
+     mappings.adId.push('div-gpt-ad-1599019902593-0');
+     googletag.cmd.push(function() {
+         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+           if (event.slot === ub_slot8) {
+             ub_checkAdRendered('div-gpt-ad-1599019902593-0', ub_slot8, ['/21957769615/wakamics.com_hb_300x250_8']);
+           }
+         });
+     });
+    }
+if (document.getElementById('unibots9')){
+         mappings.slotNumbers.push(9);
+         mappings.adCode.push('/21957769615/wakamics.com_hb_300x250_9');
+         mappings.sizes.push(div_9_sizes);
+         mappings.adId.push('div-gpt-ad-1599019920702-0');
+         googletag.cmd.push(function() {
+             googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+               if (event.slot === ub_slot9) {
+                 ub_checkAdRendered('div-gpt-ad-1599019920702-0', ub_slot9, ['/21957769615/wakamics.com_hb_300x250_9']);
+               }
+             });
+         });
+        }
+// }
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

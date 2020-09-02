@@ -20,6 +20,10 @@ var div_6_sizes = [336, 280];
 var div_7_sizes = [336, 280];
 var div_8_sizes = [300, 250];
 var div_9_sizes = [300, 250];
+var div_10_sizes = [[300, 250], [336, 280]];
+var div_11_sizes = [[300, 250], [336, 280]];
+var div_12_sizes = [[300, 250], [336, 280]];
+var div_13_sizes = [[300, 250], [336, 280]];
 
 var adUnits = [];
 
@@ -419,6 +423,130 @@ var adUnits = [];
     };
     adUnits.push(adUnits1);
   }
+  if (document.getElementById('unibots10')) {
+    adUnits1 =
+      {
+        code: '/21957769615/wakamics.com_hb_300x250_10',
+        mediaTypes: {
+            banner: {
+                sizes: div_10_sizes
+            }
+        },
+        bids: [
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.getElementById('unibots11')) {
+    adUnits1 =
+      {
+        code: '/21957769615/wakamics.com_hb_300x250_11',
+        mediaTypes: {
+            banner: {
+                sizes: div_11_sizes
+            }
+        },
+        bids: [
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.getElementById('unibots12')) {
+    adUnits1 =
+      {
+        code: '/21957769615/wakamics.com_hb_300x250_12',
+        mediaTypes: {
+            banner: {
+                sizes: div_12_sizes
+            }
+        },
+        bids: [
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.getElementById('unibots13')) {
+    adUnits1 =
+      {
+        code: '/21957769615/wakamics.com_hb_300x250_13',
+        mediaTypes: {
+            banner: {
+                sizes: div_13_sizes
+            }
+        },
+        bids: [
+            // { bidder: 'appnexus', params: { placementId: '20028947' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         //  { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
 // }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -500,7 +628,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false, false, false, false, false, false, false]
+  renderedFlag: [false, false, false, false, false, false, false, false, false, false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -720,6 +848,58 @@ if (document.getElementById('unibots9')){
              });
          });
         }
+if (document.getElementById('unibots10')){
+   mappings.slotNumbers.push(10);
+   mappings.adCode.push('/21957769615/wakamics.com_hb_300x250_10');
+   mappings.sizes.push(div_10_sizes);
+   mappings.adId.push('div-gpt-ad-1599053053100-0');
+   googletag.cmd.push(function() {
+       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+         if (event.slot === ub_slot10) {
+           ub_checkAdRendered('div-gpt-ad-1599053053100-0', ub_slot10, ['/21957769615/wakamics.com_hb_300x250_10']);
+         }
+       });
+   });
+  }
+if (document.getElementById('unibots11')){
+mappings.slotNumbers.push(11);
+mappings.adCode.push('/21957769615/wakamics.com_hb_300x250_11');
+mappings.sizes.push(div_11_sizes);
+mappings.adId.push('div-gpt-ad-1599053074257-0');
+googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot11) {
+        ub_checkAdRendered('div-gpt-ad-1599053074257-0', ub_slot11, ['/21957769615/wakamics.com_hb_300x250_11']);
+      }
+    });
+});
+}
+if (document.getElementById('unibots12')){
+     mappings.slotNumbers.push(12);
+     mappings.adCode.push('/21957769615/wakamics.com_hb_300x250_12');
+     mappings.sizes.push(div_12_sizes);
+     mappings.adId.push('div-gpt-ad-1599053099353-0');
+     googletag.cmd.push(function() {
+         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+           if (event.slot === ub_slot12) {
+             ub_checkAdRendered('div-gpt-ad-1599053099353-0', ub_slot12, ['/21957769615/wakamics.com_hb_300x250_12']);
+           }
+         });
+     });
+    }
+if (document.getElementById('unibots13')){
+                 mappings.slotNumbers.push(13);
+                 mappings.adCode.push('/21957769615/wakamics.com_hb_300x250_13');
+                 mappings.sizes.push(div_13_sizes);
+                 mappings.adId.push('div-gpt-ad-1599053132977-0');
+                 googletag.cmd.push(function() {
+                     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                       if (event.slot === ub_slot13) {
+                         ub_checkAdRendered('div-gpt-ad-1599053132977-0', ub_slot13, ['/21957769615/wakamics.com_hb_300x250_13']);
+                       }
+                     });
+                 });
+                }
 // }
 
 if(typeof googletag.defineSlot === "function"){

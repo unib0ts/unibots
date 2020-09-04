@@ -32,8 +32,10 @@ if(typeof customConfigObjectA === 'undefined'){
 
   var ubpbjs = ubpbjs || {};
   ubpbjs.que = ubpbjs.que || [];
-  ubpbjs.que.push(function() {
 
+  function mainHbRun(){
+  ubpbjs.que.push(function() {
+    ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
       'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
@@ -83,8 +85,18 @@ if(typeof customConfigObjectA === 'undefined'){
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
+     ubpbjs.requestBids({
+         bidsBackHandler: initAdserver,
+         timeout: PREBID_TIMEOUT,
+         labels: [GEO_CODE],
+     });
   });
-
+  
+  // in case ubpbjs doesn't load
+  setTimeout(function() {
+      initAdserver();
+  }, FAILSAFE_TIMEOUT);
+}
   var mapping_full_hb = {
     slots: [],
     adCode: [],
@@ -96,17 +108,17 @@ if(typeof customConfigObjectA === 'undefined'){
   var adUnits_full_hb = [];
   var hb_full_common_bidders = [
     { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-    // { bidder: 'oftmedia', params: { placementId: '18778196' } },
-    // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-    // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
-    // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-    // { bidder: 'nobid', params: { siteId: '21987177881' } },
+    //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+    { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+    { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
+    { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+    { bidder: 'nobid', params: { siteId: '21987177881' } },
     // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
     // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    // { bidder: 'criteo', params: {networkId: '10542'} },
-    // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-    // { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'criteo', params: {networkId: '10542'} },
+    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    { bidder: 'criteointl', params: {networkId: '10545'} },
   ];
   var mappings_full_hb_config_old = {
     targetUnits: [],

@@ -15,6 +15,34 @@ if(typeof customConfigObjectA === 'undefined'){
   var REFRESH_TIMEOUT = 60000;
   // var ubScriptUrl = window.location.href;
 
+  var GEO_CODE = '';
+  (function (){
+    var request = new XMLHttpRequest();
+  		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+  		request.open('GET', url, true);
+  		request.onload = function() {
+  			if (request.status >= 200 && request.status < 400) {
+  				var data = request.responseText;
+  				data = JSON.parse(data);
+  				if(data.status == "success") {
+            GEO_CODE = data.countryCode;
+  				}
+  				else {
+  					console.error("Geo Request Failed");
+  				}
+  			}
+  			else {
+  				console.error('Request failed from server');
+  			}
+        mainHbRun();
+  		};
+  		request.onerror = function() {
+  			console.error('Request failed to Reach GEO Server');
+        mainHbRun();
+  		};
+  		request.send();
+  })();
+
   const customConfigObjectA = {
    "buckets" : [{
       "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -32,58 +60,71 @@ if(typeof customConfigObjectA === 'undefined'){
 
   var ubpbjs = ubpbjs || {};
   ubpbjs.que = ubpbjs.que || [];
-  ubpbjs.que.push(function() {
+  function mainHbRun(){
+    ubpbjs.que.push(function() {
+      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.aliasBidder('criteo','criteointl');
+      ubpbjs.bidderSettings = {
+        'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+        'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+        'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+        'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+        'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
-    ubpbjs.aliasBidder('criteo','criteointl');
-    ubpbjs.bidderSettings = {
-      'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-      'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-      'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-      'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-      'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-      'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-      'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-      //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+      };
+      ubpbjs.setConfig({
+        priceGranularity: customConfigObjectA,
+        userSync: {
+            iframeEnabled: true,
+            syncsPerBidder: 999, // and no more than 3 syncs at a time
+            // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+            filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+            // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+            userIds: [{
+                name: "id5Id",
+                params: {
+                    partner: 438,            // change to the Partner Number you received from ID5
+                },
+                storage: {
+                    type: "cookie",
+                    name: "id5id.1st",       // create a cookie with this name
+                    expires: 90,             // cookie lasts for 90 days
+                    refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+                }
+            }],
+            auctionDelay: 500},
+        debug: false,
+        useBidCache: true,
+        enableSendAllBids: false, // Default will be `true` as of 1.0
+        bidderSequence: 'random', // Default is random
+        publisherDomain: 'https://www.sakshieducation.com/',
+        bidderTimeout: PREBID_TIMEOUT+500,
+        //pubcid: {expInterval: },
+        //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+       });
+       ubpbjs.requestBids({
+           bidsBackHandler: initAdserver,
+           timeout: PREBID_TIMEOUT,
+           labels: [GEO_CODE],
+       });
+    });
 
-      '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
-    };
-    ubpbjs.setConfig({
-      priceGranularity: customConfigObjectA,
-      userSync: {
-          iframeEnabled: true,
-          syncsPerBidder: 999, // and no more than 3 syncs at a time
-          // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-          filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-          // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-          userIds: [{
-              name: "id5Id",
-              params: {
-                  partner: 438,            // change to the Partner Number you received from ID5
-              },
-              storage: {
-                  type: "cookie",
-                  name: "id5id.1st",       // create a cookie with this name
-                  expires: 90,             // cookie lasts for 90 days
-                  refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
-              }
-          }],
-          auctionDelay: 500},
-      debug: false,
-      useBidCache: true,
-      enableSendAllBids: false, // Default will be `true` as of 1.0
-      bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://www.sakshieducation.com/',
-      bidderTimeout: PREBID_TIMEOUT+500,
-      //pubcid: {expInterval: },
-      //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
-     });
-  });
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+  }
+
 
   var mapping_full_hb = {
     slots: [],
@@ -96,17 +137,17 @@ if(typeof customConfigObjectA === 'undefined'){
   var adUnits_full_hb = [];
   var hb_full_common_bidders = [
     { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-    // { bidder: 'oftmedia', params: { placementId: '18778196' } },
-    // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-    // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
-    // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-    // { bidder: 'nobid', params: { siteId: '21987177881' } },
+    //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+    { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+    { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
+    { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+    { bidder: 'nobid', params: { siteId: '21987177881' } },
     // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
     // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    // { bidder: 'criteo', params: {networkId: '10542'} },
-    // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-    // { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'criteo', params: {networkId: '10542'} },
+    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    { bidder: 'criteointl', params: {networkId: '10545'} },
   ];
   var mappings_full_hb_config_old = {
     targetUnits: [],

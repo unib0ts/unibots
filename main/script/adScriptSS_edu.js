@@ -62,7 +62,6 @@ if(typeof customConfigObjectA === 'undefined'){
   ubpbjs.que = ubpbjs.que || [];
   function mainHbRun(){
     ubpbjs.que.push(function() {
-      ubpbjs.addAdUnits(adUnits);
       ubpbjs.aliasBidder('criteo','criteointl');
       ubpbjs.bidderSettings = {
         'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
@@ -112,17 +111,12 @@ if(typeof customConfigObjectA === 'undefined'){
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        });
-       ubpbjs.requestBids({
-           bidsBackHandler: initAdserver,
-           timeout: PREBID_TIMEOUT,
-           labels: [GEO_CODE],
-       });
+       // ubpbjs.requestBids({
+       //     bidsBackHandler: initAdserver,
+       //     timeout: PREBID_TIMEOUT,
+       //     labels: [GEO_CODE],
+       // });
     });
-
-    // in case ubpbjs doesn't load
-    setTimeout(function() {
-        initAdserver();
-    }, FAILSAFE_TIMEOUT);
   }
 
 
@@ -542,6 +536,7 @@ if(typeof customConfigObjectA === 'undefined'){
         timeout: PREBID_TIMEOUT,
         adUnits: adUnits_full_hb,
         adUnitCodes: adCode,
+        labels: [GEO_CODE],
         bidsBackHandler: function() {
           ubpbjs.initAdserverSetHB = true;
           googletag.cmd.push(function() {

@@ -85,7 +85,7 @@ var adUnits = [
     // {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'appnexus', params: { placementId: '19054488' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '744108'} },
-    // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2971089'} },
+    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3120161'} },
     { bidder: 'nobid', params: { siteId : '22052735854'} },
     { bidder: '33across', params: { siteId : 'da9IYYWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     { bidder: 'rhythmone', params: { placementId: '205381'}}, /* one placementId for all sizes */

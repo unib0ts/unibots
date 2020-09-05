@@ -928,7 +928,7 @@ if(typeof customConfigObjectA === 'undefined'){
         adUnits: adUnits_full_hb,
         adUnitCodes: adCode,
         labels: [GEO_CODE],
-        labels: [GEO_CODE],: function() {
+        bidsBackHandler: function() {
           ubpbjs.initAdserverSetHB = true;
           googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
@@ -1032,7 +1032,7 @@ if(typeof customConfigObjectA === 'undefined'){
       ubpbjs.requestBids({
         timeout: PREBID_TIMEOUT,
         adUnitCodes: adCode,
-        labels: [GEO_CODE],: function() {
+        bidsBackHandler: function() {
           googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();

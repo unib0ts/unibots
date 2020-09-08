@@ -15,33 +15,33 @@ if(typeof customConfigObjectA === 'undefined'){
   var REFRESH_TIMEOUT = 60000;
   // var ubScriptUrl = window.location.href;
 
-  var GEO_CODE = '';
-  (function (){
-    var request = new XMLHttpRequest();
-  		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-  		request.open('GET', url, true);
-  		request.onload = function() {
-  			if (request.status >= 200 && request.status < 400) {
-  				var data = request.responseText;
-  				data = JSON.parse(data);
-  				if(data.status == "success") {
-            GEO_CODE = data.countryCode;
-  				}
-  				else {
-  					console.error("Geo Request Failed");
-  				}
-  			}
-  			else {
-  				console.error('Request failed from server');
-  			}
-        mainHbRun();
-  		};
-  		request.onerror = function() {
-  			console.error('Request failed to Reach GEO Server');
-        mainHbRun();
-  		};
-  		request.send();
-  })();
+  // var GEO_CODE = '';
+  // (function (){
+  //   var request = new XMLHttpRequest();
+  // 		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+  // 		request.open('GET', url, true);
+  // 		request.onload = function() {
+  // 			if (request.status >= 200 && request.status < 400) {
+  // 				var data = request.responseText;
+  // 				data = JSON.parse(data);
+  // 				if(data.status == "success") {
+  //           GEO_CODE = data.countryCode;
+  // 				}
+  // 				else {
+  // 					console.error("Geo Request Failed");
+  // 				}
+  // 			}
+  // 			else {
+  // 				console.error('Request failed from server');
+  // 			}
+  //       mainHbRun();
+  // 		};
+  // 		request.onerror = function() {
+  // 			console.error('Request failed to Reach GEO Server');
+  //       mainHbRun();
+  // 		};
+  // 		request.send();
+  // })();
 
   const customConfigObjectA = {
    "buckets" : [{
@@ -60,7 +60,7 @@ if(typeof customConfigObjectA === 'undefined'){
 
   var ubpbjs = ubpbjs || {};
   ubpbjs.que = ubpbjs.que || [];
-  function mainHbRun(){
+  // function mainHbRun(){
     ubpbjs.que.push(function() {
       ubpbjs.aliasBidder('criteo','criteointl');
       ubpbjs.bidderSettings = {
@@ -117,7 +117,7 @@ if(typeof customConfigObjectA === 'undefined'){
        //     labels: [GEO_CODE],
        // });
     });
-  }
+  // }
 
 
   var mapping_full_hb = {

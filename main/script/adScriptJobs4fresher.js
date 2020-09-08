@@ -90,9 +90,9 @@ var adUnits = [
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'rhythmone', params: { placementId: '205376'}}, /* one placementId for all sizes */
-    { bidder: 'openx', params: {unit: '541046136', delDomain: 'yieldbird-d.openx.net'}},
+    // { bidder: 'openx', params: {unit: '541046136', delDomain: 'yieldbird-d.openx.net'}},
     { bidder: '33across', params: { siteId : 'dgPqqiWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-    { bidder: 'rubicon', params: {accountId: '11734', siteId: '323720', zoneId: '1680354'} },
+    // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323720', zoneId: '1680354'} },
     { bidder: 'smartadserver', params: { siteId: '362123', pageId: '1289624', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
     { bidder: 'sonobi', params: { placement_id: '98d5a31a1df4d5b442fd', ad_unit: 'jobs4fresher.com_nb_320x50' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

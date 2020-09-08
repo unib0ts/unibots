@@ -89,8 +89,8 @@ var adUnits = [
     { bidder: 'nobid', params: { siteId : '22052735854'} },
     { bidder: '33across', params: { siteId : 'da9IYYWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     { bidder: 'rhythmone', params: { placementId: '205381'}}, /* one placementId for all sizes */
-    { bidder: 'openx', params: {unit: '541046034', delDomain: 'yieldbird-d.openx.net'} },
-    { bidder: 'rubicon', params: {accountId: '11734', siteId: '323618', zoneId: '1680026'} },
+    // { bidder: 'openx', params: {unit: '541046034', delDomain: 'yieldbird-d.openx.net'} },
+    // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323618', zoneId: '1680026'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'smartadserver', params: { siteId: '362107', pageId: '1289608', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },

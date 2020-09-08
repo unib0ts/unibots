@@ -536,7 +536,6 @@ if(typeof customConfigObjectA === 'undefined'){
         timeout: PREBID_TIMEOUT,
         adUnits: adUnits_full_hb,
         adUnitCodes: adCode,
-        labels: [GEO_CODE],
         bidsBackHandler: function() {
           ubpbjs.initAdserverSetHB = true;
           googletag.cmd.push(function() {

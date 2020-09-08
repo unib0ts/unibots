@@ -88,7 +88,7 @@ var adUnits = [
     { bidder: 'sovrn', params: {tagid: '708887'} },
     { bidder: 'oftmedia', params: { placementId: '19679382' } },
     {  bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-    { bidder: 'openx', params: {unit: '541046670', delDomain: 'yieldbird-d.openx.net'} },
+    // { bidder: 'openx', params: {unit: '541046670', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'nobid', params: { siteId : '22049999716'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },

@@ -42,7 +42,7 @@ if(typeof customConfigObjectA === 'undefined'){
   		};
   		request.send();
   })();
-  
+
   const customConfigObjectA = {
    "buckets" : [{
       "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -955,7 +955,6 @@ if(typeof customConfigObjectA === 'undefined'){
         timeout: PREBID_TIMEOUT,
         adUnits: adUnits_full_hb,
         adUnitCodes: adCode,
-        labels: [GEO_CODE],
         bidsBackHandler: function() {
           ubpbjs.initAdserverSetHB = true;
           googletag.cmd.push(function() {

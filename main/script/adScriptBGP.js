@@ -57,7 +57,7 @@ var adUnits = [
           { bidder: 'emx_digital', params: { tagid: '103696' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '713872'} },
           { bidder: 'nobid', params: { siteId : '22027067863'} },
-          { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950120'} },
@@ -205,7 +205,7 @@ function checkRemnantUnits(){
             { bidder: '33across', params: { siteId : 'aSjtA6WtGr6OGPaKlId8sQ', productId: 'siab' } }, /*All sizes*/
             { bidder: 'emx_digital', params: { tagid: '103699' } }, /* sizeless */
             { bidder: 'sovrn', params: {tagid: '724691'} },
-            { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
+            // { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
             { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950121'} },
@@ -286,7 +286,7 @@ function checkRemnantUnits(){
         	{ bidder: '33across', params: { siteId : 'aSjtA6WtGr6OGPaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '103695' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '713872'} },
-          { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'openx', params: {unit: '541046448', delDomain: 'yieldbird-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2950122'} },

@@ -91,7 +91,7 @@ var adUnits = [
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323874', zoneId: '1680772'} },
-          { bidder: 'openx', params: {unit: '541046328', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'openx', params: {unit: '541046328', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'nobid', params: { siteId : '22049999752'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */

@@ -88,7 +88,7 @@ var adUnits = [
     { bidder: 'sovrn', params: {tagid: '708890'} },
     { bidder: 'oftmedia', params: { placementId: '19679389' } },
     { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-    { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
+    // { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'nobid', params: { siteId : '22049999680'} },
     { bidder: '33across', params: { siteId : 'aZAJc0WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

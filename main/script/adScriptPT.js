@@ -90,7 +90,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '714120'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'openx', params: {unit: '541046532', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'openx', params: {unit: '541046532', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'nobid', params: { siteId : '22049999725'} },
           { bidder: 'smartadserver', params: { siteId: '362141', pageId: '1289642', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },

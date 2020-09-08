@@ -96,7 +96,7 @@ var adUnits = [
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '725482'} },
           { bidder: 'oftmedia', params: { placementId: '19680368' } },
-          { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'openx', params: {unit: '541046675', delDomain: 'yieldbird-d.openx.net'} },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           { bidder: 'emx_digital', params: { tagid: '107932' } },

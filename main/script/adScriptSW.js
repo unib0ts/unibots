@@ -91,7 +91,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '703444'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'openx', params: {unit: '541046321', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'openx', params: {unit: '541046321', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'nobid', params: { siteId : '22049999737'} },
         	{ bidder: 'rhythmone', params: { placementId: '205475' } }, /* one placementId for all sizes */
           { bidder: 'smartadserver', params: { siteId: '362147', pageId: '1289648', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },

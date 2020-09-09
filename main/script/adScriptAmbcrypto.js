@@ -696,7 +696,7 @@ var mappings_full_hb_config = {
 var mappings_extra_units_config_desktop ={
   adUnitNames: [
     '/21692080761/amb_eng_desk_lb_1',
-    '/21692080761/amb_eng_header_desk_v2'
+    // '/21692080761/amb_eng_header_desk_v2'
   ]
 }
 var mappings_extra_units_config_mobile ={

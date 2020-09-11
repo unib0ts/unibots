@@ -483,6 +483,7 @@ var mappings_full_hb_config = {
     'div-ub-1', ///21959913182/sakshi.com_NB_320x50
     'div-gpt-ad-1593080960785-0',  ///21959913182/sakshi_hb_320x50_top_mobile_new'
     // 'div-gpt-ad-1593080960785-0', ///1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
+    'div-gpt-ad-1599810044319-0', ///1062118/Mobile_Articlepage_adslot3
   ],
   adUnitNames: [
     '/1062118/sakshiNew_box1_300x250',
@@ -518,6 +519,7 @@ var mappings_full_hb_config = {
     '/21959913182/sakshi.com_NB_320x50',
     '/21959913182/sakshi_hb_320x50_top_mobile_new',
     // '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
+    '/1062118/Mobile_Articlepage_adslot3',
   ],
   sizes: [
     [300,250], //sakshiNew_box1_300x250
@@ -553,6 +555,7 @@ var mappings_full_hb_config = {
     [320, 50], ///21959913182/sakshi.com_NB_320x50
     [[320, 100], [320, 50], [300, 50], [300, 100]], //'/21959913182/sakshi_hb_320x50_top_mobile_new
     // [[320, 50], [300, 50]], // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
+    [[300, 250], [336, 280]],
   ],
   bids: [
     hb_full_common_bidders.concat([
@@ -736,6 +739,14 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile -> '/21959913182/sakshi_hb_320x50_top_mobile_new
+    hb_full_common_bidders.concat([
+      // { bidder: 'sovrn', params: { tagid: '708881' } },
+      // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
+      //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
+      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+      // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
+      { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+    ]), ///21959913182/sakshi.com_NB_320x50
   ],
   isAP: [
     false, // '/1062118/sakshiNew_box1_300x250',
@@ -770,6 +781,7 @@ var mappings_full_hb_config = {
     false, // '/1062118/MobileMasthead_HP_300x250'
     false, // /21959913182/sakshi.com_NB_320x50
     false, // /1062118/SakshiNew_ArticlepageLB_300x50
+    false, ///1062118/Mobile_Articlepage_adslot3
   ]
 }
 var mappings_extra_units_config ={

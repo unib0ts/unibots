@@ -1,0 +1,14 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <title>news</title>
+  <path d="M20.05031,58.7408c0-.96437-.03416-1.93042.01266-2.89251a1.07529,1.07529,0,0,0-.69271-1.16749A28.29822,28.29822,0,0,1,26.55477,1.61361c7.871-1.48281,15.32808-.33627,22.0393,4.22692A28.345,28.345,0,0,1,60.46789,23.80686a30.70716,30.70716,0,0,1-4.26423,24.19238,31.92767,31.92767,0,0,1-13.362,11.43309A46.80672,46.80672,0,0,1,27.88946,63.586c-1.76445.20807-3.53357.33789-5.30619.40659-1.77555.0688-2.52982-.68435-2.53264-2.43483Q20.04836,60.1493,20.05031,58.7408Z" style="fill: #cf461f"/>
+  <g>
+    <rect x="8.035" y="21.13798" width="26.91" height="10.6899" style="opacity: 0.2"/>
+    <rect x="11.14" y="29.6899" width="47.61" height="10.6899" style="opacity: 0.2"/>
+    <rect x="10.105" y="27.55192" width="47.61" height="10.6899" style="fill: #fff"/>
+    <rect x="7" y="19" width="26.91" height="10.6899"/>
+    <text transform="translate(8.59277 27.25635) scale(0.9682 1)" style="font-size: 8.551920890808105px;fill: #fff;font-family: Poppins-SemiBold, Poppins;font-weight: 600">NEWS</text>
+    <text transform="translate(11.90771 36.92773) scale(0.9682 1)" style="font-size: 8.551920890808105px;font-family: Poppins-SemiBold, Poppins;font-weight: 600">ASSISTANT</text>
+  </g>
+  <rect x="25" y="44" width="20" height="1" rx="0.5" style="fill: #fff"/>
+  <rect x="47" y="44" width="4" height="1" rx="0.5" style="fill: #fff"/>
+</svg>

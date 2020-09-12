@@ -143,7 +143,7 @@ var adUnits = [];
             }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '20163224' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'sovrn', params: {tagid: '736637'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -174,7 +174,7 @@ var adUnits = [];
             }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '20163224' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'sovrn', params: {tagid: '736637'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },

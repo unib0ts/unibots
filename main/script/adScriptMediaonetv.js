@@ -1,6 +1,6 @@
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
+var REFRESH_TIMEOUT = 30000;
 
 // var GEO_CODE = '';
 // (function (){
@@ -673,11 +673,11 @@ function googlePush(){
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
     googletag.pubads().enableSingleRequest();
-    // googletag.pubads().enableLazyLoad({
-    //           fetchMarginPercent: 200,
-    //           renderMarginPercent: 100,
-    //           mobileScaling: 2.0
-    //         });
+    googletag.pubads().enableLazyLoad({
+              fetchMarginPercent: 200,
+              renderMarginPercent: 100,
+              mobileScaling: 2.0
+            });
     googletag.enableServices();
   });
 }

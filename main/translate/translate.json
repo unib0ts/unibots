@@ -276,5 +276,561 @@
             "to be decided": "",
             "unknown": ""
         }
+    },
+    "marathi": {
+        "schedule": {
+            "teams": {
+                "mumbai": "मूंबई",
+                "delhi": "दिल्ली",
+                "punjab": "पंजाब",
+                "kolkata": "कोलकाता",
+                "chennai": "चेन्नई",
+                "hyderabad": "हैदराबाद",
+                "bangalore": "बंगळुरू",
+                "rajasthan": "राजस्थान"
+            },
+            "dates": {
+                "september": "सप्टेंबर",
+                "october": "ऑक्टोबर",
+                "november": "नोव्हेंबर",
+                "19 september": "१९ सप्टेंबर",
+                "20 september": "२० सप्टेंबर",
+                "21 september": "२१ सप्टेंबर",
+                "22 september": "२२ सप्टेंबर",
+                "23 september": "२३ सप्टेंबर",
+                "24 september": "२४ सप्टेंबर",
+                "25 september": "२५ सप्टेंबर",
+                "26 september": "२६ सप्टेंबर",
+                "27 september": "२७ सप्टेंबर",
+                "28 september": "२८ सप्टेंबर",
+                "29 september": "२९ सप्टेंबर",
+                "30 september": "३० सप्टेंबर",
+                "1 october": "०१ ऑक्टोबर",
+                "2 october": "०२ ऑक्टोबर",
+                "3 october": "०३ ऑक्टोबर",
+                "4 october": "०४ ऑक्टोबर",
+                "5 october": "०५ ऑक्टोबर",
+                "6 october": "०६ ऑक्टोबर",
+                "7 october": "०७ ऑक्टोबर",
+                "8 october": "०८ ऑक्टोबर",
+                "9 october": "०९ ऑक्टोबर",
+                "10 october": "१० ऑक्टोबर",
+                "11 october": "११ ऑक्टोबर",
+                "12 october": "१२ ऑक्टोबर",
+                "13 october": "१३ ऑक्टोबर",
+                "14 october": "१४ ऑक्टोबर",
+                "15 october": "१५ ऑक्टोबर",
+                "16 october": "१६ ऑक्टोबर",
+                "17 october": "१७ ऑक्टोबर",
+                "18 october": "१८ ऑक्टोबर",
+                "19 october": "१९ ऑक्टोबर",
+                "20 october": "२० ऑक्टोबर",
+                "21 october": "२१ ऑक्टोबर",
+                "22 october": "२२ ऑक्टोबर",
+                "23 october": "२৩ ऑक्टोबर",
+                "24 october": "२४ ऑक्टोबर",
+                "25 october": "२५ ऑक्टोबर",
+                "26 october": "२६ ऑक्टोबर",
+                "27 october": "२७ ऑक्टोबर",
+                "28 october": "२८ ऑक्टोबर",
+                "29 october": "२९ ऑक्टोबर",
+                "30 october": "३० ऑक्टोबर",
+                "31 october": "३१ ऑक्टोबर",
+                "1 november": "०१ नोव्हेंबर",
+                "2 november": "०२ नोव्हेंबर",
+                "3 november": "०३ नोव्हेंबर"
+            },
+            "time": {
+                "19:30": "१९:३०",
+                "15:30": "१५:३०"
+            },
+            "locations": {
+                "abu dhabi": "अबू धाबी",
+                "dubai": "दुबई",
+                "sharjah": "शारजाह"
+            }
+        },
+        "players": {
+            "chennai":{
+                "ms dhoni": {
+                    "name": "মহেন্দ্র সিংহ ধোনি",
+                    "short": "ধোনি",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "imran tahir": {
+                    "name": "ইমরান তাহির",
+                    "short": "তাহির",
+                    "bio": "বোলার"
+                },
+                "lungi ngidi": {
+                    "name": "লুঙ্গি এনগিদি",
+                    "short": "এনগিদি",
+                    "bio": "বোলার"
+                },
+                "ruturaj gaikwad": {
+                    "name": "রুতুরাজ গায়কোয়াড়",
+                    "short": "গায়কোয়াড়",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "shane watson": {
+                    "name": "শেন ওয়াটসন",
+                    "short": "ওয়াটসন",
+                    "bio": "অলরাউন্ডার"
+                },
+                "ambati rayudu": {
+                    "name": "অম্বাতি রায়ুডু",
+                    "short": "রায়ুডু",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "harbhajan singh": {
+                    "name": "হরভজন সিংহ",
+                    "short": "সিংহ",
+                    "bio": "বোলার"
+                },
+                "murali vijay": {
+                    "name": "মুরলী বিজয়",
+                    "short": "বিজয়",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "kedar jadhav": {
+                    "name": "কেদার যাদব",
+                    "short": "যাদব",
+                    "bio": "অলরাউন্ডার"
+                },
+                "ravindra jadeja": {
+                    "name": "রবীন্দ্র জাদেজা",
+                    "short": "জাদেজা",
+                    "bio": "অলরাউন্ডার"
+                },
+                "deepak chahar": {
+                    "name": "দীপক চাহার",
+                    "short": "চাহার",
+                    "bio": "বোলার"
+                },
+                "piyush chawla": {
+                    "name": "পীযূষ চাওলা",
+                    "short": "চাওলা",
+                    "bio": "অলরাউন্ডার"
+                },
+                "narayan jagadeesan": {
+                    "name": "নারায়ণ জগদীশন",
+                    "short": "জগদীশন",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "suresh raina": {
+                    "name": "সুরেশ রায়না",
+                    "short": "রায়না",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "mitchell santner": {
+                    "name": "মিচেল স্যান্টনার",
+                    "short": "স্যান্টনার",
+                    "bio": "অলরাউন্ডার"
+                },
+                "km asif": {
+                    "name": "কেএম আসিফ",
+                    "short": "আসিফ",
+                    "bio": "বোলার"
+                },
+                "shardul thakur": {
+                    "name": "শার্দুল ঠাকুর",
+                    "short": "ঠাকুর",
+                    "bio": "বোলার"
+                },
+                "r sai kishore": {
+                    "name": "আর সাই কিশোর",
+                    "short": "কিশোর",
+                    "bio": "বোলার"
+                },
+                "faf du plesis": {
+                    "name": "ফাফ দুপ্লেসি",
+                    "short": "দুপ্লেসি",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "monu kumar": {
+                    "name": "মনু কুমার",
+                    "short": "কুমার",
+                    "bio": "বোলার"
+                },
+                "dwayne bravo": {
+                    "name": "ডোয়েন ব্রাভো",
+                    "short": "ব্রাভো",
+                    "bio": "অলরাউন্ডার"
+                },
+                "josh hazlewood": {
+                    "name": "জস হ্যাজেলউড",
+                    "short": "হ্যাজেলউড",
+                    "bio": "বোলার"
+                },
+                "sam curran": {
+                    "name": "স্যাম কুরান",
+                    "short": "কুরান",
+                    "bio": "অলরাউন্ডার"
+                },
+                "kam sharma": {
+                    "name": "কর্ণ শর্মা",
+                    "short": "শর্মা",
+                    "bio": "অলরাউন্ডার"
+                }
+            },
+            "mumbai":{
+
+            }
+        },
+        "numbers": {
+            "1": "१",
+            "2": "२",
+            "3": "३",
+            "4": "४",
+            "5": "५",
+            "6": "६",
+            "7": "७",
+            "8": "८",
+            "9": "९",
+            "0": "०"
+        },
+        "alphabets": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": "",
+            "e": "",
+            "f": "",
+            "g": "",
+            "h": "",
+            "i": "",
+            "j": "",
+            "k": "",
+            "l": "",
+            "m": "",
+            "n": "",
+            "o": "",
+            "p": "",
+            "q": "",
+            "r": "",
+            "s": "",
+            "t": "",
+            "u": "",
+            "v": "",
+            "w": "",
+            "x": "",
+            "y": "",
+            "z": ""
+        },
+        "weekdays": {
+            "monday": "सोमवार",
+            "tuesday": "मंगळवार",
+            "wednesday": "बुधवार",
+            "thursday": "गुरुवार",
+            "friday": "शुक्रवार",
+            "saturday": "शनिवार",
+            "sunday": "रविवार"
+        },
+        "words": {
+            "match": "सामना",
+            "sr": "स्ट्राइक रेट",
+            "avg": "सरासरी",
+            "bowlers": "गोलंदाज",
+            "bowler": "गोलंदाज",
+            "batsman": "फलंदाज",
+            "batsmen": "फलंदाज",
+            "over": "षटक",
+            "dots": "निर्धाव",
+            "maiden": "निर्धाव षटक",
+            "wickets": "विकेट्स",
+            "need": "गरज",
+            "runs to win": "विजयासाठी धावा",
+            "batting": "फलंदाजी",
+            "bowling": "गोलंदाजी",
+            "extras": "अतिरिक्त धावा",
+            "total runs": "एकूण धावा",
+            "yet to bat": "फलंदाजीला येणे बाकी",
+            "fall of wickets": "विकेट जाण्याचा क्रम",
+            "economy": "इकॉनॉमी",
+            "econ": "इकॉनॉमी",
+            "toss": "नाणेफेक",
+            "won the toss and decided to bat first": "नाणेफेक जिंकून प्रथम फलंदाजीचा निर्णय",
+            "won the toss and decided to bowl first": "नाणेफेक जिंकून प्रथम गोलंदाजीचा निर्णय",
+            "to be decided": "अद्याप ठरायचे आहे",
+            "unknown": "जाहीर झालेला नाही"
+        }
+    },
+    "hindi": {
+        "schedule": {
+            "teams": {
+                "mumbai": "मुंबई",
+                "delhi": "दिल्ली",
+                "punjab": "पंजाब",
+                "kolkata": "कोलकाता",
+                "chennai": "चेन्नई",
+                "hyderabad": "हैदराबाद",
+                "bangalore": "बैंगलोर",
+                "rajasthan": "राजस्थान"
+            },
+            "dates": {
+                "september": "सितंबर",
+                "october": "अक्टूबर",
+                "november": "नवंबर",
+                "19 september": "१९ सितंबर",
+                "20 september": "२० सितंबर",
+                "21 september": "२१ सितंबर",
+                "22 september": "२२ सितंबर",
+                "23 september": "२३ सितंबर",
+                "24 september": "२४ सितंबर",
+                "25 september": "२५ सितंबर",
+                "26 september": "२६ सितंबर",
+                "27 september": "२७ सितंबर",
+                "28 september": "२८ सितंबर",
+                "29 september": "२९ सितंबर",
+                "30 september": "३० सितंबर",
+                "1 october": "०१ अक्टूबर",
+                "2 october": "०२ अक्टूबर",
+                "3 october": "०३ अक्टूबर",
+                "4 october": "०४ अक्टूबर",
+                "5 october": "०५ अक्टूबर",
+                "6 october": "०६ अक्टूबर",
+                "7 october": "०७ अक्टूबर",
+                "8 october": "०८ अक्टूबर",
+                "9 october": "०९ अक्टूबर",
+                "10 october": "१० अक्टूबर",
+                "11 october": "११ अक्टूबर",
+                "12 october": "१२ अक्टूबर",
+                "13 october": "१३ अक्टूबर",
+                "14 october": "१४ अक्टूबर",
+                "15 october": "१५ अक्टूबर",
+                "16 october": "१६ अक्टूबर",
+                "17 october": "१७ अक्टूबर",
+                "18 october": "१८ अक्टूबर",
+                "19 october": "१९ अक्टूबर",
+                "20 october": "२० अक्टूबर",
+                "21 october": "२१ अक्टूबर",
+                "22 october": "२२ अक्टूबर",
+                "23 october": "२৩ अक्टूबर",
+                "24 october": "२४ अक्टूबर",
+                "25 october": "२५ अक्टूबर",
+                "26 october": "२६ अक्टूबर",
+                "27 october": "२७ अक्टूबर",
+                "28 october": "२८ अक्टूबर",
+                "29 october": "२९ अक्टूबर",
+                "30 october": "३० अक्टूबर",
+                "31 october": "३१ अक्टूबर",
+                "1 november": "०१ नवंबर",
+                "2 november": "०२ नवंबर",
+                "3 november": "०३ नवंबर"
+            },
+            "time": {
+                "19:30": "१९:३०",
+                "15:30": "१५:३०"
+            },
+            "locations": {
+                "abu dhabi": "अबू धाबी",
+                "dubai": "दुबई",
+                "sharjah": "शारजाह"
+            }
+        },
+        "players": {
+            "chennai":{
+                "ms dhoni": {
+                    "name": "মহেন্দ্র সিংহ ধোনি",
+                    "short": "ধোনি",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "imran tahir": {
+                    "name": "ইমরান তাহির",
+                    "short": "তাহির",
+                    "bio": "বোলার"
+                },
+                "lungi ngidi": {
+                    "name": "লুঙ্গি এনগিদি",
+                    "short": "এনগিদি",
+                    "bio": "বোলার"
+                },
+                "ruturaj gaikwad": {
+                    "name": "রুতুরাজ গায়কোয়াড়",
+                    "short": "গায়কোয়াড়",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "shane watson": {
+                    "name": "শেন ওয়াটসন",
+                    "short": "ওয়াটসন",
+                    "bio": "অলরাউন্ডার"
+                },
+                "ambati rayudu": {
+                    "name": "অম্বাতি রায়ুডু",
+                    "short": "রায়ুডু",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "harbhajan singh": {
+                    "name": "হরভজন সিংহ",
+                    "short": "সিংহ",
+                    "bio": "বোলার"
+                },
+                "murali vijay": {
+                    "name": "মুরলী বিজয়",
+                    "short": "বিজয়",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "kedar jadhav": {
+                    "name": "কেদার যাদব",
+                    "short": "যাদব",
+                    "bio": "অলরাউন্ডার"
+                },
+                "ravindra jadeja": {
+                    "name": "রবীন্দ্র জাদেজা",
+                    "short": "জাদেজা",
+                    "bio": "অলরাউন্ডার"
+                },
+                "deepak chahar": {
+                    "name": "দীপক চাহার",
+                    "short": "চাহার",
+                    "bio": "বোলার"
+                },
+                "piyush chawla": {
+                    "name": "পীযূষ চাওলা",
+                    "short": "চাওলা",
+                    "bio": "অলরাউন্ডার"
+                },
+                "narayan jagadeesan": {
+                    "name": "নারায়ণ জগদীশন",
+                    "short": "জগদীশন",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "suresh raina": {
+                    "name": "সুরেশ রায়না",
+                    "short": "রায়না",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "mitchell santner": {
+                    "name": "মিচেল স্যান্টনার",
+                    "short": "স্যান্টনার",
+                    "bio": "অলরাউন্ডার"
+                },
+                "km asif": {
+                    "name": "কেএম আসিফ",
+                    "short": "আসিফ",
+                    "bio": "বোলার"
+                },
+                "shardul thakur": {
+                    "name": "শার্দুল ঠাকুর",
+                    "short": "ঠাকুর",
+                    "bio": "বোলার"
+                },
+                "r sai kishore": {
+                    "name": "আর সাই কিশোর",
+                    "short": "কিশোর",
+                    "bio": "বোলার"
+                },
+                "faf du plesis": {
+                    "name": "ফাফ দুপ্লেসি",
+                    "short": "দুপ্লেসি",
+                    "bio": "ব্যাটসম্যান"
+                },
+                "monu kumar": {
+                    "name": "মনু কুমার",
+                    "short": "কুমার",
+                    "bio": "বোলার"
+                },
+                "dwayne bravo": {
+                    "name": "ডোয়েন ব্রাভো",
+                    "short": "ব্রাভো",
+                    "bio": "অলরাউন্ডার"
+                },
+                "josh hazlewood": {
+                    "name": "জস হ্যাজেলউড",
+                    "short": "হ্যাজেলউড",
+                    "bio": "বোলার"
+                },
+                "sam curran": {
+                    "name": "স্যাম কুরান",
+                    "short": "কুরান",
+                    "bio": "অলরাউন্ডার"
+                },
+                "kam sharma": {
+                    "name": "কর্ণ শর্মা",
+                    "short": "শর্মা",
+                    "bio": "অলরাউন্ডার"
+                }
+            },
+            "mumbai":{
+
+            }
+        },
+        "numbers": {
+            "1": "१",
+            "2": "२",
+            "3": "३",
+            "4": "४",
+            "5": "५",
+            "6": "६",
+            "7": "७",
+            "8": "८",
+            "9": "९",
+            "0": "०"
+        },
+        "alphabets": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": "",
+            "e": "",
+            "f": "",
+            "g": "",
+            "h": "",
+            "i": "",
+            "j": "",
+            "k": "",
+            "l": "",
+            "m": "",
+            "n": "",
+            "o": "",
+            "p": "",
+            "q": "",
+            "r": "",
+            "s": "",
+            "t": "",
+            "u": "",
+            "v": "",
+            "w": "",
+            "x": "",
+            "y": "",
+            "z": ""
+        },
+        "weekdays": {
+            "monday": "सोमवार",
+            "tuesday": "मंगलवार",
+            "wednesday": "बुधवार",
+            "thursday": "गुरुवार",
+            "friday": "शुक्रवार",
+            "saturday": "शनिवार",
+            "sunday": "रविवार"
+        },
+        "words": {
+            "match": "मैच",
+            "sr": "स्ट्राइक रेट",
+            "avg": "औसत",
+            "bowlers": "बॉलर्स",
+            "bowler": "बॉलर",
+            "batsman": "बैट्समैन",
+            "batsmen": "बैट्समैन",
+            "over": "ओवर",
+            "dots": "डॉट्स",
+            "maiden": "मेडन",
+            "wickets": "विकेट्स",
+            "need": "जरूरत",
+            "runs to win": "जीत के लिए रनों की दरकार",
+            "batting": "बैटिंग",
+            "bowling": "बॉलिंग",
+            "extras": "अतिरिक्त",
+            "total runs": "कुल रन",
+            "yet to bat": "बल्लेबाजी अभी तक",
+            "fall of wickets": "विकेट पतन",
+            "economy": "इकॉनामी",
+            "econ": "इकॉ",
+            "toss": "टॉस",
+            "won the toss and decided to bat first": "टॉस जीतकर पहले बल्लेबाजी का फैसला",
+            "won the toss and decided to bowl first": "टॉस जीतकर पहले गेंदबाजी का फैसला",
+            "to be decided": "सुनिश्चित करना",
+            "unknown": "अज्ञात"
+        }
     }
 }

@@ -63,8 +63,8 @@
                 "3 november": "০৩ নভেম্বর"
             },
             "time": {
-                "7:30": "সন্ধ্যে সাড়ে সাতটা",
-                "3:30": "দুপুর সাড়ে তিনটে"
+                "19:30": "সন্ধ্যে সাড়ে সাতটা",
+                "15:30": "দুপুর সাড়ে তিনটে"
             },
             "locations": {
                 "abu dhabi": "আবু ধাবি",
@@ -240,16 +240,16 @@
             "z": ""
         },
         "weekdays": {
-            "monday": "",
-            "tuesday": "",
-            "wednesday": "",
-            "thursday": "",
-            "friday": "",
-            "saturday": "",
-            "sunday": ""
+            "monday": "সোমবার",
+            "tuesday": "মঙ্গলবার",
+            "wednesday": "বুধবার",
+            "thursday": "বৃহস্পতিবার",
+            "friday": "শুক্রবার",
+            "saturday": "শনিবার",
+            "sunday": "রবিবার"
         },
         "words": {
-            "match": "",
+            "match": "ম্যাচ",
             "sr": "",
             "avg": "",
             "bowlers": "",
@@ -268,7 +268,6 @@
             "total runs": "",
             "yet to bat": "",
             "fall of wickets": "",
-            "bowling": "",
             "economy": "",
             "econ": "",
             "toss": "",

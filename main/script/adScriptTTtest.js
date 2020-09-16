@@ -43,40 +43,8 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
-  {
-      code: '/21928950349/telegraphindia.com_nb_320x50',
-      mediaTypes: {
-        native: {
-          image: {
-            // sizes: [300, 100],
-            aspect_ratios: [{
-              min_width: 100,        /* Optional */
-              min_height: 50,       /* Optional */
-              ratio_width: 2,        /* Required */
-              ratio_height: 1,       /* Required */
-            }],
-            sendId: true
-          },
-          title: {
-            len: 50,
-            sendId: true
-          },
-          sponsoredBy: {
-            required: true,
-            sendId: true
-          },
-          clickUrl: {
-            required: true,
-            sendId: true
-          }
-        }
-      },
-      bids: [
-        { bidder: 'appnexus', params: { placementId: '19057693' } }
-      ]
-  },
     {
-        code: '/21928950349/telegraphindia.com_nb_320x50',
+        code: '/21956916242/telegraphindia.com_hb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -84,10 +52,10 @@ var adUnits = [
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19057693' } }, /* one placementId for all sizes  my appnexus bidder */
-        	{ bidder: 'oftmedia', params: { placementId: '19671787' } },
+        	// { bidder: 'oftmedia', params: { placementId: '19671787' } },
         	{ bidder: '33across', params: { siteId : 'b_CmagBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97531' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '714225'} },
+          // { bidder: 'sovrn', params: {tagid: '714225'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'rubicon', params: {accountId: '11734', siteId: '323874', zoneId: '1680772'} },
@@ -124,7 +92,7 @@ function initAdserver() {
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21928950349/telegraphindia.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21956916242/telegraphindia.com_hb_320x50', div_1_sizes, 'div-gpt-ad-1600176329282-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -141,7 +109,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/telegraphindia.com_nb_320x50'],
+		  adUnitCodes: ['/21956916242/telegraphindia.com_hb_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -156,7 +124,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-ub-1';
+	adId = 'div-gpt-ad-1600176329282-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){
@@ -225,7 +193,6 @@ function mainHbRun(){
       ubpbjs.requestBids({
         bidsBackHandler: initAdserver,
         timeout: PREBID_TIMEOUT,
-        labels: [GEO_CODE],
       });
   });
   // in case ubpbjs doesn't load

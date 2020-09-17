@@ -144,7 +144,7 @@ var adUnits = [];
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '20035226' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '20198066' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'sovrn', params: {tagid: '736637'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },

@@ -564,10 +564,10 @@
             "tieshort": "ब",
             "points": "गुण",
             "pointsshort": "ग",
-            "NRR": "धावगती",
-            "NR": "निकाल नाही",
-            "NRRshort": "ध",
-            "NRshort": "नन"
+            "nrr": "धावगती",
+            "nr": "निकाल नाही",
+            "nrrshort": "ध",
+            "nrshort": "नन"
         }
     },
     "hindi": {
@@ -857,10 +857,10 @@
             "tieshort": "ट",
             "points": "अंक",
             "pointsshort": "अ",
-            "NRR": "नरर",
-            "NR": "नर",
-            "NRRshort": "नरर",
-            "NRshort": "नर"
+            "nrr": "नरर",
+            "nr": "नर",
+            "nrrshort": "नरर",
+            "nrshort": "नर"
         }
     }
 }

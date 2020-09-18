@@ -528,6 +528,7 @@
         },
         "words": {
             "match": "सामना",
+            "matchshort": "स",
             "sr": "स्ट्राइक रेट",
             "avg": "सरासरी",
             "bowlers": "गोलंदाज",
@@ -552,7 +553,21 @@
             "won the toss and decided to bat first": "नाणेफेक जिंकून प्रथम फलंदाजीचा निर्णय",
             "won the toss and decided to bowl first": "नाणेफेक जिंकून प्रथम गोलंदाजीचा निर्णय",
             "to be decided": "अद्याप ठरायचे आहे",
-            "unknown": "जाहीर झालेला नाही"
+            "unknown": "जाहीर झालेला नाही",
+            "team": "संघ",
+            "teamshort": "सं",
+            "win": "विजय",
+            "winshort": "वि",
+            "loss": "पराभव",
+            "lossshort": "प",
+            "tie": "बरोबरी",
+            "tieshort": "ब",
+            "points": "गुण",
+            "pointsshort": "ग",
+            "NRR": "धावगती",
+            "NR": "निकाल नाही",
+            "NRRshort": "ध",
+            "NRshort": "नन"
         }
     },
     "hindi": {
@@ -806,6 +821,7 @@
         },
         "words": {
             "match": "मैच",
+            "matchshort": "म",
             "sr": "स्ट्राइक रेट",
             "avg": "औसत",
             "bowlers": "बॉलर्स",
@@ -830,7 +846,21 @@
             "won the toss and decided to bat first": "टॉस जीतकर पहले बल्लेबाजी का फैसला",
             "won the toss and decided to bowl first": "टॉस जीतकर पहले गेंदबाजी का फैसला",
             "to be decided": "सुनिश्चित करना",
-            "unknown": "अज्ञात"
+            "unknown": "अज्ञात",
+            "team": "टीम",
+            "teamshort": "ट",
+            "win": "जीत",
+            "winshort": "ज",
+            "loss": "हार",
+            "lossshort": "ह",
+            "tie": "टाई",
+            "tieshort": "ट",
+            "points": "अंक",
+            "pointsshort": "अ",
+            "NRR": "नरर",
+            "NR": "नर",
+            "NRRshort": "नरर",
+            "NRshort": "नर"
         }
     }
 }

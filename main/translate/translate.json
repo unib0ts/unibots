@@ -250,6 +250,7 @@
         },
         "words": {
             "match": "ম্যাচ",
+            "matchshort": "ম্",
             "sr": "",
             "avg": "",
             "bowlers": "",
@@ -274,7 +275,21 @@
             "won the toss and decided to bat first": "",
             "won the toss and decided to bowl first": "",
             "to be decided": "",
-            "unknown": ""
+            "unknown": "",
+            "win": "জয়",
+            "winshort": "জ",
+            "loss": "হার",
+            "lossshort": "হা",
+            "tie": "টাই",
+            "tieshort": "ট",
+            "points": "পয়েন্ট",
+            "pointsshort": "প",
+            "nrr": "রান রেট",
+            "nrrshort": "রর",
+            "nr": "ম্যাচ বাতিল",
+            "nrshort": "ম্ব",
+            "team": "দল",
+            "teamshort": "দ"
         }
     },
     "marathi": {

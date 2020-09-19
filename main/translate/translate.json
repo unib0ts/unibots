@@ -366,249 +366,245 @@
             }
         },
         "players": {
-            "chennai":{
-                "ms dhoni": {
-                    "name": "महेंद्रसिंग धोनी",
-                    "short": "धोनी",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "imran tahir": {
-                    "name": "इम्रान ताहीर",
-                    "short": "ताहीर",
-                    "bio": "বোলার"
-                },
-                "lungi ngidi": {
-                    "name": "लुंगी एनगिडी",
-                    "short": "एनगिडी",
-                    "bio": "বোলার"
-                },
-                "ruturaj gaikwad": {
-                    "name": "ऋतुराज गायकवाड",
-                    "short": "गायकवाड",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "shane watson": {
-                    "name": "शेन वॉटसन",
-                    "short": "वॉटसन",
-                    "bio": "অলরাউন্ডার"
-                },
-                "ambati rayudu": {
-                    "name": "अंबाती रायुडू",
-                    "short": "रायुडू",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "harbhajan singh": {
-                    "name": "हरभजन सिंग",
-                    "short": "हरभजन",
-                    "bio": "বোলার"
-                },
-                "murali vijay": {
-                    "name": "मुरली विजय",
-                    "short": "विजय",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "kedar jadhav": {
-                    "name": "केदार जाधव",
-                    "short": "जाधव",
-                    "bio": "অলরাউন্ডার"
-                },
-                "ravindra jadeja": {
-                    "name": "रवींद्र जडेजा",
-                    "short": "जडेजा",
-                    "bio": "অলরাউন্ডার"
-                },
-                "deepak chahar": {
-                    "name": "दीपक चहर",
-                    "short": "चहर",
-                    "bio": "বোলার"
-                },
-                "piyush chawla": {
-                    "name": "पीयूष चावला",
-                    "short": "चावला",
-                    "bio": "অলরাউন্ডার"
-                },
-                "narayan jagadeesan": {
-                    "name": "नारायण जगदीसन",
-                    "short": "जगदीसन",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "suresh raina": {
-                    "name": "सुरेश रैना",
-                    "short": "रैना",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "mitchell santner": {
-                    "name": "मिचेल सँटनर",
-                    "short": "सँटनर",
-                    "bio": "অলরাউন্ডার"
-                },
-                "km asif": {
-                    "name": "केएम आसीफ",
-                    "short": "आसीफ",
-                    "bio": "বোলার"
-                },
-                "shardul thakur": {
-                    "name": "शार्दूल ठाकूर",
-                    "short": "ठाकूर",
-                    "bio": "বোলার"
-                },
-                "r sai kishore": {
-                    "name": "आर साई किशोर",
-                    "short": "किशोर",
-                    "bio": "বোলার"
-                },
-                "faf du plesis": {
-                    "name": "फॅफ ड्यू प्लेसिस",
-                    "short": "प्लेसिस",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "monu kumar": {
-                    "name": "मोनू कुमार",
-                    "short": "मोनू",
-                    "bio": "বোলার"
-                },
-                "dwayne bravo": {
-                    "name": "ड्वेन ब्राव्हो",
-                    "short": "ब्राव्हो",
-                    "bio": "অলরাউন্ডার"
-                },
-                "josh hazlewood": {
-                    "name": "जोस हेझलवूड",
-                    "short": "हेझलवूड",
-                    "bio": "বোলার"
-                },
-                "sam curran": {
-                    "name": "सॅम कुरन",
-                    "short": "कुरन",
-                    "bio": "অলরাউন্ডার"
-                },
-                "kam sharma": {
-                    "name": "कर्ऩ शर्मा",
-                    "short": "कर्ऩ",
-                    "bio": "অলরাউন্ডার"
-                }
+            "ms dhoni": {
+                "name": "महेंद्रसिंग धोनी",
+                "short": "धोनी",
+                "bio": "ব্যাটসম্যান"
             },
-            "mumbai":{
-                "rohit sharma": {
-                    "name": "रोहित शर्मा",
-                    "short": "शर्मा",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "aditya tare": {
-                    "name": "आदित्य तरे",
-                    "short": "तरे",
-                    "bio": "বোলার"
-                },
-                "anmolpreet singh": {
-                    "name": "अनमोलप्रीत सिंग",
-                    "short": "एनगिडी",
-                    "bio": "বোলার"
-                },
-                "anukul roy": {
-                    "name": "अनुकूल रॉय",
-                    "short": "अनुकूल",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "chris lynn": {
-                    "name": "ख्रिस लीन",
-                    "short": "लीन",
-                    "bio": "অলরাউন্ডার"
-                },
-                "trent boult": {
-                    "name": "ट्रेंट बोल्ट",
-                    "short": "रायुडू",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "dhawal kulkarni": {
-                    "name": "धवल कुलकर्णी",
-                    "short": "कुलकर्णी",
-                    "bio": "বোলার"
-                },
-                "hardik pandya": {
-                    "name": "हार्दिक पांड्या",
-                    "short": "हार्दिक",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "digvijay deshmukh": {
-                    "name": "दिग्विजय देशमुख",
-                    "short": "देशमुख",
-                    "bio": "অলরাউন্ডার"
-                },
-                "ishan kishan": {
-                    "name": "इशन किशन",
-                    "short": "जडेजा",
-                    "bio": "অলরাউন্ডার"
-                },
-                "jasprit bumrah": {
-                    "name": "जसप्रीत बुमराह",
-                    "short": "बुमराह",
-                    "bio": "বোলার"
-                },
-                "jayant yadav": {
-                    "name": "जयंत यादव",
-                    "short": "जयंत",
-                    "bio": "অলরাউন্ডার"
-                },
-                "kieron pollard": {
-                    "name": "किरॉन पोलार्ड",
-                    "short": "पोलार्ड",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "krunal pandya": {
-                    "name": "कृणाल पांड्या",
-                    "short": "कृणाल",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "lasith malinga": {
-                    "name": "लसिथ मलिंगा",
-                    "short": "मलिंगा",
-                    "bio": "অলরাউন্ডার"
-                },
-                "mitchell mcClenaghan": {
-                    "name": "मिचेल मॅक्लेघन",
-                    "short": "मॅक्लेघन",
-                    "bio": "বোলার"
-                },
-                "mohsin khan": {
-                    "name": "मोहसीन खान",
-                    "short": "मोहसीन",
-                    "bio": "বোলার"
-                },
-                "nathan coulter-nile": {
-                    "name": "नॅथन कोल्टर-नील",
-                    "short": "कोल्टर-नील",
-                    "bio": "বোলার"
-                },
-                "prince balwant rai singh": {
-                    "name": "प्रिंस बलवंत राय सिंग",
-                    "short": "बलवंत",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "quinton de kock": {
-                    "name": "क्विंटन डी'कॉक",
-                    "short": "डी'कॉक",
-                    "bio": "বোলার"
-                },
-                "rahul chahar": {
-                    "name": "राहुल चहर",
-                    "short": "चहर",
-                    "bio": "অলরাউন্ডার"
-                },
-                "saurabh tiwari": {
-                    "name": "सौरभ तिवारी",
-                    "short": "तिवारी",
-                    "bio": "বোলার"
-                },
-                "sherfane rutherford": {
-                    "name": "शेर्फाने रुथरफोर्ड",
-                    "short": "रुथरफोर्ड",
-                    "bio": "অলরাউন্ডার"
-                },
-                "suryakumar yadav": {
-                    "name": "सूर्यकुमार यादव",
-                    "short": "सूर्यकुमार",
-                    "bio": "অলরাউন্ডার"
-                }
+            "imran tahir": {
+                "name": "इम्रान ताहीर",
+                "short": "ताहीर",
+                "bio": "বোলার"
+            },
+            "lungi ngidi": {
+                "name": "लुंगी एनगिडी",
+                "short": "एनगिडी",
+                "bio": "বোলার"
+            },
+            "ruturaj gaikwad": {
+                "name": "ऋतुराज गायकवाड",
+                "short": "गायकवाड",
+                "bio": "ব্যাটসম্যান"
+            },
+            "shane watson": {
+                "name": "शेन वॉटसन",
+                "short": "वॉटसन",
+                "bio": "অলরাউন্ডার"
+            },
+            "ambati rayudu": {
+                "name": "अंबाती रायुडू",
+                "short": "रायुडू",
+                "bio": "ব্যাটসম্যান"
+            },
+            "harbhajan singh": {
+                "name": "हरभजन सिंग",
+                "short": "हरभजन",
+                "bio": "বোলার"
+            },
+            "murali vijay": {
+                "name": "मुरली विजय",
+                "short": "विजय",
+                "bio": "ব্যাটসম্যান"
+            },
+            "kedar jadhav": {
+                "name": "केदार जाधव",
+                "short": "जाधव",
+                "bio": "অলরাউন্ডার"
+            },
+            "ravindra jadeja": {
+                "name": "रवींद्र जडेजा",
+                "short": "जडेजा",
+                "bio": "অলরাউন্ডার"
+            },
+            "deepak chahar": {
+                "name": "दीपक चहर",
+                "short": "चहर",
+                "bio": "বোলার"
+            },
+            "piyush chawla": {
+                "name": "पीयूष चावला",
+                "short": "चावला",
+                "bio": "অলরাউন্ডার"
+            },
+            "narayan jagadeesan": {
+                "name": "नारायण जगदीसन",
+                "short": "जगदीसन",
+                "bio": "ব্যাটসম্যান"
+            },
+            "suresh raina": {
+                "name": "सुरेश रैना",
+                "short": "रैना",
+                "bio": "ব্যাটসম্যান"
+            },
+            "mitchell santner": {
+                "name": "मिचेल सँटनर",
+                "short": "सँटनर",
+                "bio": "অলরাউন্ডার"
+            },
+            "km asif": {
+                "name": "केएम आसीफ",
+                "short": "आसीफ",
+                "bio": "বোলার"
+            },
+            "shardul thakur": {
+                "name": "शार्दूल ठाकूर",
+                "short": "ठाकूर",
+                "bio": "বোলার"
+            },
+            "r sai kishore": {
+                "name": "आर साई किशोर",
+                "short": "किशोर",
+                "bio": "বোলার"
+            },
+            "faf du plesis": {
+                "name": "फॅफ ड्यू प्लेसिस",
+                "short": "प्लेसिस",
+                "bio": "ব্যাটসম্যান"
+            },
+            "monu kumar": {
+                "name": "मोनू कुमार",
+                "short": "मोनू",
+                "bio": "বোলার"
+            },
+            "dwayne bravo": {
+                "name": "ड्वेन ब्राव्हो",
+                "short": "ब्राव्हो",
+                "bio": "অলরাউন্ডার"
+            },
+            "josh hazlewood": {
+                "name": "जोस हेझलवूड",
+                "short": "हेझलवूड",
+                "bio": "বোলার"
+            },
+            "sam curran": {
+                "name": "सॅम कुरन",
+                "short": "कुरन",
+                "bio": "অলরাউন্ডার"
+            },
+            "kam sharma": {
+                "name": "कर्ऩ शर्मा",
+                "short": "कर्ऩ",
+                "bio": "অলরাউন্ডার"
+            },
+            "rohit sharma": {
+                "name": "रोहित शर्मा",
+                "short": "शर्मा",
+                "bio": "ব্যাটসম্যান"
+            },
+            "aditya tare": {
+                "name": "आदित्य तरे",
+                "short": "तरे",
+                "bio": "বোলার"
+            },
+            "anmolpreet singh": {
+                "name": "अनमोलप्रीत सिंग",
+                "short": "एनगिडी",
+                "bio": "বোলার"
+            },
+            "anukul roy": {
+                "name": "अनुकूल रॉय",
+                "short": "अनुकूल",
+                "bio": "ব্যাটসম্যান"
+            },
+            "chris lynn": {
+                "name": "ख्रिस लीन",
+                "short": "लीन",
+                "bio": "অলরাউন্ডার"
+            },
+            "trent boult": {
+                "name": "ट्रेंट बोल्ट",
+                "short": "रायुडू",
+                "bio": "ব্যাটসম্যান"
+            },
+            "dhawal kulkarni": {
+                "name": "धवल कुलकर्णी",
+                "short": "कुलकर्णी",
+                "bio": "বোলার"
+            },
+            "hardik pandya": {
+                "name": "हार्दिक पांड्या",
+                "short": "हार्दिक",
+                "bio": "ব্যাটসম্যান"
+            },
+            "digvijay deshmukh": {
+                "name": "दिग्विजय देशमुख",
+                "short": "देशमुख",
+                "bio": "অলরাউন্ডার"
+            },
+            "ishan kishan": {
+                "name": "इशन किशन",
+                "short": "जडेजा",
+                "bio": "অলরাউন্ডার"
+            },
+            "jasprit bumrah": {
+                "name": "जसप्रीत बुमराह",
+                "short": "बुमराह",
+                "bio": "বোলার"
+            },
+            "jayant yadav": {
+                "name": "जयंत यादव",
+                "short": "जयंत",
+                "bio": "অলরাউন্ডার"
+            },
+            "kieron pollard": {
+                "name": "किरॉन पोलार्ड",
+                "short": "पोलार्ड",
+                "bio": "ব্যাটসম্যান"
+            },
+            "krunal pandya": {
+                "name": "कृणाल पांड्या",
+                "short": "कृणाल",
+                "bio": "ব্যাটসম্যান"
+            },
+            "lasith malinga": {
+                "name": "लसिथ मलिंगा",
+                "short": "मलिंगा",
+                "bio": "অলরাউন্ডার"
+            },
+            "mitchell mcclenaghan": {
+                "name": "मिचेल मॅक्लेघन",
+                "short": "मॅक्लेघन",
+                "bio": "বোলার"
+            },
+            "mohsin khan": {
+                "name": "मोहसीन खान",
+                "short": "मोहसीन",
+                "bio": "বোলার"
+            },
+            "nathan coulter-nile": {
+                "name": "नॅथन कोल्टर-नील",
+                "short": "कोल्टर-नील",
+                "bio": "বোলার"
+            },
+            "prince balwant rai singh": {
+                "name": "प्रिंस बलवंत राय सिंग",
+                "short": "बलवंत",
+                "bio": "ব্যাটসম্যান"
+            },
+            "quinton de kock": {
+                "name": "क्विंटन डी'कॉक",
+                "short": "डी'कॉक",
+                "bio": "বোলার"
+            },
+            "rahul chahar": {
+                "name": "राहुल चहर",
+                "short": "चहर",
+                "bio": "অলরাউন্ডার"
+            },
+            "saurabh tiwari": {
+                "name": "सौरभ तिवारी",
+                "short": "तिवारी",
+                "bio": "বোলার"
+            },
+            "sherfane rutherford": {
+                "name": "शेर्फाने रुथरफोर्ड",
+                "short": "रुथरफोर्ड",
+                "bio": "অলরাউন্ডার"
+            },
+            "suryakumar yadav": {
+                "name": "सूर्यकुमार यादव",
+                "short": "सूर्यकुमार",
+                "bio": "অলরাউন্ডার"
             }
         },
         "numbers": {
@@ -702,7 +698,8 @@
             "nr": "निकाल नाही",
             "nrrshort": "ध",
             "nrshort": "नन",
-            "matches have not started yet": "सामने अद्याप सुरू झालेले नाहीत"
+            "matches have not started yet": "सामने अद्याप सुरू झालेले नाहीत",
+            "no batsmen left": "एकही फलंदाज शिल्लक नाही"
         }
     },
     "hindi": {
@@ -779,249 +776,245 @@
             }
         },
         "players": {
-            "chennai":{
-                "ms dhoni": {
-                    "name": "মহেন্দ্র সিংহ ধোনি",
-                    "short": "ধোনি",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "imran tahir": {
-                    "name": "ইমরান তাহির",
-                    "short": "তাহির",
-                    "bio": "বোলার"
-                },
-                "lungi ngidi": {
-                    "name": "লুঙ্গি এনগিদি",
-                    "short": "এনগিদি",
-                    "bio": "বোলার"
-                },
-                "ruturaj gaikwad": {
-                    "name": "রুতুরাজ গায়কোয়াড়",
-                    "short": "গায়কোয়াড়",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "shane watson": {
-                    "name": "শেন ওয়াটসন",
-                    "short": "ওয়াটসন",
-                    "bio": "অলরাউন্ডার"
-                },
-                "ambati rayudu": {
-                    "name": "অম্বাতি রায়ুডু",
-                    "short": "রায়ুডু",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "harbhajan singh": {
-                    "name": "হরভজন সিংহ",
-                    "short": "সিংহ",
-                    "bio": "বোলার"
-                },
-                "murali vijay": {
-                    "name": "মুরলী বিজয়",
-                    "short": "বিজয়",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "kedar jadhav": {
-                    "name": "কেদার যাদব",
-                    "short": "যাদব",
-                    "bio": "অলরাউন্ডার"
-                },
-                "ravindra jadeja": {
-                    "name": "রবীন্দ্র জাদেজা",
-                    "short": "জাদেজা",
-                    "bio": "অলরাউন্ডার"
-                },
-                "deepak chahar": {
-                    "name": "দীপক চাহার",
-                    "short": "চাহার",
-                    "bio": "বোলার"
-                },
-                "piyush chawla": {
-                    "name": "পীযূষ চাওলা",
-                    "short": "চাওলা",
-                    "bio": "অলরাউন্ডার"
-                },
-                "narayan jagadeesan": {
-                    "name": "নারায়ণ জগদীশন",
-                    "short": "জগদীশন",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "suresh raina": {
-                    "name": "সুরেশ রায়না",
-                    "short": "রায়না",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "mitchell santner": {
-                    "name": "মিচেল স্যান্টনার",
-                    "short": "স্যান্টনার",
-                    "bio": "অলরাউন্ডার"
-                },
-                "km asif": {
-                    "name": "কেএম আসিফ",
-                    "short": "আসিফ",
-                    "bio": "বোলার"
-                },
-                "shardul thakur": {
-                    "name": "শার্দুল ঠাকুর",
-                    "short": "ঠাকুর",
-                    "bio": "বোলার"
-                },
-                "r sai kishore": {
-                    "name": "আর সাই কিশোর",
-                    "short": "কিশোর",
-                    "bio": "বোলার"
-                },
-                "faf du plesis": {
-                    "name": "ফাফ দুপ্লেসি",
-                    "short": "দুপ্লেসি",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "monu kumar": {
-                    "name": "মনু কুমার",
-                    "short": "কুমার",
-                    "bio": "বোলার"
-                },
-                "dwayne bravo": {
-                    "name": "ডোয়েন ব্রাভো",
-                    "short": "ব্রাভো",
-                    "bio": "অলরাউন্ডার"
-                },
-                "josh hazlewood": {
-                    "name": "জস হ্যাজেলউড",
-                    "short": "হ্যাজেলউড",
-                    "bio": "বোলার"
-                },
-                "sam curran": {
-                    "name": "স্যাম কুরান",
-                    "short": "কুরান",
-                    "bio": "অলরাউন্ডার"
-                },
-                "kam sharma": {
-                    "name": "কর্ণ শর্মা",
-                    "short": "শর্মা",
-                    "bio": "অলরাউন্ডার"
-                }
+            "ms dhoni": {
+                "name": "মহেন্দ্র সিংহ ধোনি",
+                "short": "ধোনি",
+                "bio": "ব্যাটসম্যান"
             },
-            "mumbai":{
-                "rohit sharma": {
-                    "name": "रोहित शर्मा",
-                    "short": "शर्मा",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "aditya tare": {
-                    "name": "आदित्य तरे",
-                    "short": "तरे",
-                    "bio": "বোলার"
-                },
-                "anmolpreet singh": {
-                    "name": "अनमोलप्रीत सिंग",
-                    "short": "एनगिडी",
-                    "bio": "বোলার"
-                },
-                "anukul roy": {
-                    "name": "अनुकूल रॉय",
-                    "short": "अनुकूल",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "chris lynn": {
-                    "name": "ख्रिस लीन",
-                    "short": "लीन",
-                    "bio": "অলরাউন্ডার"
-                },
-                "trent boult": {
-                    "name": "ट्रेंट बोल्ट",
-                    "short": "रायुडू",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "dhawal kulkarni": {
-                    "name": "धवल कुलकर्णी",
-                    "short": "कुलकर्णी",
-                    "bio": "বোলার"
-                },
-                "hardik pandya": {
-                    "name": "हार्दिक पांड्या",
-                    "short": "हार्दिक",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "digvijay deshmukh": {
-                    "name": "दिग्विजय देशमुख",
-                    "short": "देशमुख",
-                    "bio": "অলরাউন্ডার"
-                },
-                "ishan kishan": {
-                    "name": "इशन किशन",
-                    "short": "जडेजा",
-                    "bio": "অলরাউন্ডার"
-                },
-                "jasprit bumrah": {
-                    "name": "जसप्रीत बुमराह",
-                    "short": "बुमराह",
-                    "bio": "বোলার"
-                },
-                "jayant yadav": {
-                    "name": "जयंत यादव",
-                    "short": "जयंत",
-                    "bio": "অলরাউন্ডার"
-                },
-                "kieron pollard": {
-                    "name": "किरॉन पोलार्ड",
-                    "short": "पोलार्ड",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "krunal pandya": {
-                    "name": "कृणाल पांड्या",
-                    "short": "कृणाल",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "lasith malinga": {
-                    "name": "लसिथ मलिंगा",
-                    "short": "मलिंगा",
-                    "bio": "অলরাউন্ডার"
-                },
-                "mitchell mcClenaghan": {
-                    "name": "मिचेल मॅक्लेघन",
-                    "short": "मॅक्लेघन",
-                    "bio": "বোলার"
-                },
-                "mohsin khan": {
-                    "name": "मोहसीन खान",
-                    "short": "मोहसीन",
-                    "bio": "বোলার"
-                },
-                "nathan coulter-nile": {
-                    "name": "नॅथन कोल्टर-नील",
-                    "short": "कोल्टर-नील",
-                    "bio": "বোলার"
-                },
-                "prince balwant rai singh": {
-                    "name": "प्रिंस बलवंत राय सिंग",
-                    "short": "बलवंत",
-                    "bio": "ব্যাটসম্যান"
-                },
-                "quinton de kock": {
-                    "name": "क्विंटन डी'कॉक",
-                    "short": "डी'कॉक",
-                    "bio": "বোলার"
-                },
-                "rahul chahar": {
-                    "name": "राहुल चहर",
-                    "short": "चहर",
-                    "bio": "অলরাউন্ডার"
-                },
-                "saurabh tiwari": {
-                    "name": "सौरभ तिवारी",
-                    "short": "तिवारी",
-                    "bio": "বোলার"
-                },
-                "sherfane rutherford": {
-                    "name": "शेर्फाने रुथरफोर्ड",
-                    "short": "रुथरफोर्ड",
-                    "bio": "অলরাউন্ডার"
-                },
-                "suryakumar yadav": {
-                    "name": "सूर्यकुमार यादव",
-                    "short": "सूर्यकुमार",
-                    "bio": "অলরাউন্ডার"
-                }
+            "imran tahir": {
+                "name": "ইমরান তাহির",
+                "short": "তাহির",
+                "bio": "বোলার"
+            },
+            "lungi ngidi": {
+                "name": "লুঙ্গি এনগিদি",
+                "short": "এনগিদি",
+                "bio": "বোলার"
+            },
+            "ruturaj gaikwad": {
+                "name": "রুতুরাজ গায়কোয়াড়",
+                "short": "গায়কোয়াড়",
+                "bio": "ব্যাটসম্যান"
+            },
+            "shane watson": {
+                "name": "শেন ওয়াটসন",
+                "short": "ওয়াটসন",
+                "bio": "অলরাউন্ডার"
+            },
+            "ambati rayudu": {
+                "name": "অম্বাতি রায়ুডু",
+                "short": "রায়ুডু",
+                "bio": "ব্যাটসম্যান"
+            },
+            "harbhajan singh": {
+                "name": "হরভজন সিংহ",
+                "short": "সিংহ",
+                "bio": "বোলার"
+            },
+            "murali vijay": {
+                "name": "মুরলী বিজয়",
+                "short": "বিজয়",
+                "bio": "ব্যাটসম্যান"
+            },
+            "kedar jadhav": {
+                "name": "কেদার যাদব",
+                "short": "যাদব",
+                "bio": "অলরাউন্ডার"
+            },
+            "ravindra jadeja": {
+                "name": "রবীন্দ্র জাদেজা",
+                "short": "জাদেজা",
+                "bio": "অলরাউন্ডার"
+            },
+            "deepak chahar": {
+                "name": "দীপক চাহার",
+                "short": "চাহার",
+                "bio": "বোলার"
+            },
+            "piyush chawla": {
+                "name": "পীযূষ চাওলা",
+                "short": "চাওলা",
+                "bio": "অলরাউন্ডার"
+            },
+            "narayan jagadeesan": {
+                "name": "নারায়ণ জগদীশন",
+                "short": "জগদীশন",
+                "bio": "ব্যাটসম্যান"
+            },
+            "suresh raina": {
+                "name": "সুরেশ রায়না",
+                "short": "রায়না",
+                "bio": "ব্যাটসম্যান"
+            },
+            "mitchell santner": {
+                "name": "মিচেল স্যান্টনার",
+                "short": "স্যান্টনার",
+                "bio": "অলরাউন্ডার"
+            },
+            "km asif": {
+                "name": "কেএম আসিফ",
+                "short": "আসিফ",
+                "bio": "বোলার"
+            },
+            "shardul thakur": {
+                "name": "শার্দুল ঠাকুর",
+                "short": "ঠাকুর",
+                "bio": "বোলার"
+            },
+            "r sai kishore": {
+                "name": "আর সাই কিশোর",
+                "short": "কিশোর",
+                "bio": "বোলার"
+            },
+            "faf du plesis": {
+                "name": "ফাফ দুপ্লেসি",
+                "short": "দুপ্লেসি",
+                "bio": "ব্যাটসম্যান"
+            },
+            "monu kumar": {
+                "name": "মনু কুমার",
+                "short": "কুমার",
+                "bio": "বোলার"
+            },
+            "dwayne bravo": {
+                "name": "ডোয়েন ব্রাভো",
+                "short": "ব্রাভো",
+                "bio": "অলরাউন্ডার"
+            },
+            "josh hazlewood": {
+                "name": "জস হ্যাজেলউড",
+                "short": "হ্যাজেলউড",
+                "bio": "বোলার"
+            },
+            "sam curran": {
+                "name": "স্যাম কুরান",
+                "short": "কুরান",
+                "bio": "অলরাউন্ডার"
+            },
+            "kam sharma": {
+                "name": "কর্ণ শর্মা",
+                "short": "শর্মা",
+                "bio": "অলরাউন্ডার"
+            },
+            "rohit sharma": {
+                "name": "रोहित शर्मा",
+                "short": "शर्मा",
+                "bio": "ব্যাটসম্যান"
+            },
+            "aditya tare": {
+                "name": "आदित्य तरे",
+                "short": "तरे",
+                "bio": "বোলার"
+            },
+            "anmolpreet singh": {
+                "name": "अनमोलप्रीत सिंग",
+                "short": "एनगिडी",
+                "bio": "বোলার"
+            },
+            "anukul roy": {
+                "name": "अनुकूल रॉय",
+                "short": "अनुकूल",
+                "bio": "ব্যাটসম্যান"
+            },
+            "chris lynn": {
+                "name": "ख्रिस लीन",
+                "short": "लीन",
+                "bio": "অলরাউন্ডার"
+            },
+            "trent boult": {
+                "name": "ट्रेंट बोल्ट",
+                "short": "रायुडू",
+                "bio": "ব্যাটসম্যান"
+            },
+            "dhawal kulkarni": {
+                "name": "धवल कुलकर्णी",
+                "short": "कुलकर्णी",
+                "bio": "বোলার"
+            },
+            "hardik pandya": {
+                "name": "हार्दिक पांड्या",
+                "short": "हार्दिक",
+                "bio": "ব্যাটসম্যান"
+            },
+            "digvijay deshmukh": {
+                "name": "दिग्विजय देशमुख",
+                "short": "देशमुख",
+                "bio": "অলরাউন্ডার"
+            },
+            "ishan kishan": {
+                "name": "इशन किशन",
+                "short": "जडेजा",
+                "bio": "অলরাউন্ডার"
+            },
+            "jasprit bumrah": {
+                "name": "जसप्रीत बुमराह",
+                "short": "बुमराह",
+                "bio": "বোলার"
+            },
+            "jayant yadav": {
+                "name": "जयंत यादव",
+                "short": "जयंत",
+                "bio": "অলরাউন্ডার"
+            },
+            "kieron pollard": {
+                "name": "किरॉन पोलार्ड",
+                "short": "पोलार्ड",
+                "bio": "ব্যাটসম্যান"
+            },
+            "krunal pandya": {
+                "name": "कृणाल पांड्या",
+                "short": "कृणाल",
+                "bio": "ব্যাটসম্যান"
+            },
+            "lasith malinga": {
+                "name": "लसिथ मलिंगा",
+                "short": "मलिंगा",
+                "bio": "অলরাউন্ডার"
+            },
+            "mitchell mcclenaghan": {
+                "name": "मिचेल मॅक्लेघन",
+                "short": "मॅक्लेघन",
+                "bio": "বোলার"
+            },
+            "mohsin khan": {
+                "name": "मोहसीन खान",
+                "short": "मोहसीन",
+                "bio": "বোলার"
+            },
+            "nathan coulter-nile": {
+                "name": "नॅथन कोल्टर-नील",
+                "short": "कोल्टर-नील",
+                "bio": "বোলার"
+            },
+            "prince balwant rai singh": {
+                "name": "प्रिंस बलवंत राय सिंग",
+                "short": "बलवंत",
+                "bio": "ব্যাটসম্যান"
+            },
+            "quinton de kock": {
+                "name": "क्विंटन डी'कॉक",
+                "short": "डी'कॉक",
+                "bio": "বোলার"
+            },
+            "rahul chahar": {
+                "name": "राहुल चहर",
+                "short": "चहर",
+                "bio": "অলরাউন্ডার"
+            },
+            "saurabh tiwari": {
+                "name": "सौरभ तिवारी",
+                "short": "तिवारी",
+                "bio": "বোলার"
+            },
+            "sherfane rutherford": {
+                "name": "शेर्फाने रुथरफोर्ड",
+                "short": "रुथरफोर्ड",
+                "bio": "অলরাউন্ডার"
+            },
+            "suryakumar yadav": {
+                "name": "सूर्यकुमार यादव",
+                "short": "सूर्यकुमार",
+                "bio": "অলরাউন্ডার"
             }
         },
         "numbers": {
@@ -1115,7 +1108,8 @@
             "nr": "नर",
             "nrrshort": "नरर",
             "nrshort": "नर",
-            "matches have not started yet": "अभी मैच शुरू नहीं हुए हैं"
+            "matches have not started yet": "अभी मैच शुरू नहीं हुए हैं",
+            "no batsmen left": "कोई बल्लेबाज नहीं बचा"
         }
     }
 }

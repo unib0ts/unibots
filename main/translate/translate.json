@@ -1029,13 +1029,61 @@
                 "name": "फिंच",
                 "short": "फिंच"
             },
-            "ab de villers":{
+            "ab de villiers":{
                 "name": "एबी डिव्हिलियर्स",
                 "short": "डिव्हिलियर्स"
             },
-            "de villers":{
+            "de villiers":{
                 "name": "डिव्हिलियर्स",
                 "short": "डिव्हिलियर्स"
+            },
+            "shahbaz ahamad":{
+                "name": "शाहबाज अहमद",
+                "short": "अहमद"
+            },
+            "ahamad":{
+                "name": "अहमद",
+                "short": "अहमद"
+            },
+            "yuzvendra chahal":{
+                "name": "युजवेंद्र चहल",
+                "short": "चहल"
+            },
+            "chahal":{
+                "name": "चहल",
+                "short": "चहल"
+            },
+            "navdeep saini":{
+                "name": "नवदीप सैनी",
+                "short": "सैनी"
+            },
+            "saini":{
+                "name": "सैनी",
+                "short": "सैनी"
+            },
+            "isuru udana":{
+                "name": "इसुरू उदाना",
+                "short": "उदाना"
+            },
+            "udana":{
+                "name": "उदाना",
+                "short": "उदाना"
+            },
+            "dale steyn":{
+                "name": "डेल स्टेन",
+                "short": "स्टेन"
+            },
+            "steyn":{
+                "name": "स्टेन",
+                "short": "स्टेन"
+            },
+            "pawan negi":{
+                "name": "पवन नेगी",
+                "short": "नेगी"
+            },
+            "negi":{
+                "name": "नेगी",
+                "short": "नेगी"
             },
             "devdutt padikkal":{
                 "name": "देवदत्त पडीक्कल",
@@ -1044,6 +1092,42 @@
             "padikkal":{
                 "name": "पडीक्कल",
                 "short": "पडीक्कल"
+            },
+            "shivam dube":{
+                "name": "शिवम दुबे",
+                "short": "दुबे"
+            },
+            "dube":{
+                "name": "दुबे",
+                "short": "दुबे"
+            },
+            "umesh yadav":{
+                "name": "उमेश यादव",
+                "short": "यादव"
+            },
+            "gurkeerat mann singh":{
+                "name": "गुरकिरत मन सिंग",
+                "short": "सिंग"
+            },
+            "washinton sundar":{
+                "name": "वॉशिंग्टन सुंदर",
+                "short": "सुंदर"
+            },
+            "sundar":{
+                "name": "सुंदर",
+                "short": "सुंदर"
+            },
+            "pavan deshpande":{
+                "name": "पवन देशपांडे",
+                "short": "देशपांडे"
+            },
+            "kane richardson":{
+                "name": "केन रिचर्डसन",
+                "short": "रिचर्डसन"
+            },
+            "richardson":{
+                "name": "रिचर्डसन",
+                "short": "रिचर्डसन"
             },
             "bhuvneshwar kumar":{
                 "name": "भुवनेश्वर कुमार",
@@ -1080,6 +1164,10 @@
             "rashid khan":{
                 "name": "रशीद खान",
                 "short": "खान"
+            },
+            "abhishek sharma":{
+                "name": "अभिषेक शर्मा",
+                "short": "शर्मा"
             },
             "anrich nortje":{
                 "name": "अॅनरिच नोर्टझे",
@@ -1957,6 +2045,46 @@
             }
         },
         "players": {
+            "virat kohli":{
+                "name": "विराट कोहली",
+                "short": "कोहली"
+            },
+            "kohli":{
+                "name": "विराट कोहली",
+                "short": "कोहली"
+            },
+            "mohammed siraj":{
+                "name": "मोहम्मद सिराज",
+                "short": "सिराज"
+            },
+            "siraj":{
+                "name": "सिराज",
+                "short": "सिराज"
+            },
+            "chris morris":{
+                "name": "ख्रिस मॉरिस",
+                "short": "मॉरिस"
+            },
+            "morris":{
+                "name": "मॉरिस",
+                "short": "मॉरिस"
+            },
+            "joshua philippe":{
+                "name": "जोशुआ फिलिप",
+                "short": "फिलिप"
+            },
+            "philippe":{
+                "name": "फिलिप",
+                "short": "फिलिप"
+            },
+            "moeen ali":{
+                "name": "मोईन अली",
+                "short": "अली"
+            },
+            "ali":{
+                "name": "अली",
+                "short": "अली"
+            },
             "aaron finch":{
                 "name": "अॅरोन फिंच",
                 "short": "फिंच"
@@ -1965,6 +2093,62 @@
                 "name": "फिंच",
                 "short": "फिंच"
             },
+            "ab de villiers":{
+                "name": "एबी डिव्हिलियर्स",
+                "short": "डिव्हिलियर्स"
+            },
+            "de villiers":{
+                "name": "डिव्हिलियर्स",
+                "short": "डिव्हिलियर्स"
+            },
+            "shahbaz ahamad":{
+                "name": "शाहबाज अहमद",
+                "short": "अहमद"
+            },
+            "ahamad":{
+                "name": "अहमद",
+                "short": "अहमद"
+            },
+            "yuzvendra chahal":{
+                "name": "युजवेंद्र चहल",
+                "short": "चहल"
+            },
+            "chahal":{
+                "name": "चहल",
+                "short": "चहल"
+            },
+            "navdeep saini":{
+                "name": "नवदीप सैनी",
+                "short": "सैनी"
+            },
+            "saini":{
+                "name": "सैनी",
+                "short": "सैनी"
+            },
+            "isuru udana":{
+                "name": "इसुरू उदाना",
+                "short": "उदाना"
+            },
+            "udana":{
+                "name": "उदाना",
+                "short": "उदाना"
+            },
+            "dale steyn":{
+                "name": "डेल स्टेन",
+                "short": "स्टेन"
+            },
+            "steyn":{
+                "name": "स्टेन",
+                "short": "स्टेन"
+            },
+            "pawan negi":{
+                "name": "पवन नेगी",
+                "short": "नेगी"
+            },
+            "negi":{
+                "name": "नेगी",
+                "short": "नेगी"
+            },
             "devdutt padikkal":{
                 "name": "देवदत्त पडीक्कल",
                 "short": "पडीक्कल"
@@ -1972,6 +2156,42 @@
             "padikkal":{
                 "name": "पडीक्कल",
                 "short": "पडीक्कल"
+            },
+            "shivam dube":{
+                "name": "शिवम दुबे",
+                "short": "दुबे"
+            },
+            "dube":{
+                "name": "दुबे",
+                "short": "दुबे"
+            },
+            "umesh yadav":{
+                "name": "उमेश यादव",
+                "short": "यादव"
+            },
+            "gurkeerat mann singh":{
+                "name": "गुरकिरत मन सिंग",
+                "short": "सिंग"
+            },
+            "washinton sundar":{
+                "name": "वॉशिंग्टन सुंदर",
+                "short": "सुंदर"
+            },
+            "sundar":{
+                "name": "सुंदर",
+                "short": "सुंदर"
+            },
+            "pavan deshpande":{
+                "name": "पवन देशपांडे",
+                "short": "देशपांडे"
+            },
+            "kane richardson":{
+                "name": "केन रिचर्डसन",
+                "short": "रिचर्डसन"
+            },
+            "richardson":{
+                "name": "रिचर्डसन",
+                "short": "रिचर्डसन"
             },
             "bhuvneshwar kumar":{
                 "name": "भुवनेश्वर कुमार",
@@ -2004,6 +2224,14 @@
             "shankar":{
                 "name": "शंकर",
                 "short": "शंकर"
+            },
+            "rashid khan":{
+                "name": "रशीद खान",
+                "short": "खान"
+            },
+            "abhishek sharma":{
+                "name": "अभिषेक शर्मा",
+                "short": "शर्मा"
             },
             "anrich nortje":{
                 "name": "अॅनरिच नोर्टझे",

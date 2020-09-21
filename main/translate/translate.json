@@ -981,6 +981,46 @@
             }
         },
         "players": {
+            "virat kohli":{
+                "name": "विराट कोहली",
+                "short": "कोहली"
+            },
+            "kohli":{
+                "name": "विराट कोहली",
+                "short": "कोहली"
+            },
+            "mohammed siraj":{
+                "name": "मोहम्मद सिराज",
+                "short": "सिराज"
+            },
+            "siraj":{
+                "name": "सिराज",
+                "short": "सिराज"
+            },
+            "chris morris":{
+                "name": "ख्रिस मॉरिस",
+                "short": "मॉरिस"
+            },
+            "morris":{
+                "name": "मॉरिस",
+                "short": "मॉरिस"
+            },
+            "joshua philippe":{
+                "name": "जोशुआ फिलिप",
+                "short": "फिलिप"
+            },
+            "philippe":{
+                "name": "फिलिप",
+                "short": "फिलिप"
+            },
+            "moeen ali":{
+                "name": "मोईन अली",
+                "short": "अली"
+            },
+            "ali":{
+                "name": "अली",
+                "short": "अली"
+            },
             "aaron finch":{
                 "name": "अॅरोन फिंच",
                 "short": "फिंच"
@@ -988,6 +1028,14 @@
             "finch":{
                 "name": "फिंच",
                 "short": "फिंच"
+            },
+            "ab de villers":{
+                "name": "एबी डिव्हिलियर्स",
+                "short": "डिव्हिलियर्स"
+            },
+            "de villers":{
+                "name": "डिव्हिलियर्स",
+                "short": "डिव्हिलियर्स"
             },
             "devdutt padikkal":{
                 "name": "देवदत्त पडीक्कल",
@@ -1028,6 +1076,10 @@
             "shankar":{
                 "name": "शंकर",
                 "short": "शंकर"
+            },
+            "rashid khan":{
+                "name": "रशीद खान",
+                "short": "खान"
             },
             "anrich nortje":{
                 "name": "अॅनरिच नोर्टझे",

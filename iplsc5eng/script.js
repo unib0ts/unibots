@@ -1324,7 +1324,7 @@ function compareValues(key, order = 'asc') {
 
 function mybotTranslateBotSC(){
     var request = new XMLHttpRequest();
-	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/translate/tr	anslate.json';
+	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/translate/translate.json';
 	// url = 'http://localhost:800/unibots/main/translate/translate.json';
 
     request.open('GET', url, true);

@@ -981,6 +981,54 @@
             }
         },
         "players": {
+            "aaron finch":{
+                "name": "अॅरोन फिंच",
+                "short": "फिंच"
+            },
+            "finch":{
+                "name": "फिंच",
+                "short": "फिंच"
+            },
+            "devdutt padikkal":{
+                "name": "देवदत्त पडीक्कल",
+                "short": "पडीक्कल"
+            },
+            "padikkal":{
+                "name": "पडीक्कल",
+                "short": "पडीक्कल"
+            },
+            "bhuvneshwar kumar":{
+                "name": "भुवनेश्वर कुमार",
+                "short": "भुवनेश्वर"
+            },
+            "sandeep sharma":{
+                "name": "संदीप शर्मा",
+                "short": "संदीप"
+            },
+            "t natarajan":{
+                "name": "टी नटराजन",
+                "short": "नटराजन"
+            },
+            "natarajan":{
+                "name": "नटराजन",
+                "short": "नटराजन"
+            },
+            "mitchell marsh":{
+                "name": "मिचेल मार्श",
+                "short": "मार्श"
+            },
+            "marsh":{
+                "name": "मार्श",
+                "short": "मार्श"
+            },
+            "vijay shankar":{
+                "name": "विजय शंकर",
+                "short": "शंकर"
+            },
+            "shankar":{
+                "name": "शंकर",
+                "short": "शंकर"
+            },
             "anrich nortje":{
                 "name": "अॅनरिच नोर्टझे",
                 "short": "नोर्टझे"
@@ -1857,6 +1905,54 @@
             }
         },
         "players": {
+            "aaron finch":{
+                "name": "अॅरोन फिंच",
+                "short": "फिंच"
+            },
+            "finch":{
+                "name": "फिंच",
+                "short": "फिंच"
+            },
+            "devdutt padikkal":{
+                "name": "देवदत्त पडीक्कल",
+                "short": "पडीक्कल"
+            },
+            "padikkal":{
+                "name": "पडीक्कल",
+                "short": "पडीक्कल"
+            },
+            "bhuvneshwar kumar":{
+                "name": "भुवनेश्वर कुमार",
+                "short": "भुवनेश्वर"
+            },
+            "sandeep sharma":{
+                "name": "संदीप शर्मा",
+                "short": "संदीप"
+            },
+            "t natarajan":{
+                "name": "टी नटराजन",
+                "short": "नटराजन"
+            },
+            "natarajan":{
+                "name": "नटराजन",
+                "short": "नटराजन"
+            },
+            "mitchell marsh":{
+                "name": "मिचेल मार्श",
+                "short": "मार्श"
+            },
+            "marsh":{
+                "name": "मार्श",
+                "short": "मार्श"
+            },
+            "vijay shankar":{
+                "name": "विजय शंकर",
+                "short": "शंकर"
+            },
+            "shankar":{
+                "name": "शंकर",
+                "short": "शंकर"
+            },
             "anrich nortje":{
                 "name": "अॅनरिच नोर्टझे",
                 "short": "नोर्टझे"

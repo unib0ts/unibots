@@ -1,7 +1,7 @@
 var div_1_sizes = [320, 50];
-// var div_2_sizes = [300, 600];
-// var div_3_sizes = [[200, 200], [250, 250], [300, 250]];
-// var div_4_sizes = [300, 600];
+var div_2_sizes = [320, 50];
+var div_3_sizes = [300, 250];
+var div_4_sizes = [970, 90];
 var adUnits = [];
 
 var PREBID_TIMEOUT = 2000;
@@ -48,7 +48,105 @@ const customConfigObjectA = {
       ]
   };
   adUnits.push(adUnits1);
-// }
+  if(document.getElementById('unibots1')){
+    adUnits1 =
+    {
+        code: '/21959913182/lokmat.com_ipl-page_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_2_sizes
+            }
+        },
+        bids: [
+                { bidder: 'appnexus', params: { placementId: '20215295' } }, /* one placementId for all sizes  my appnexus bidder */
+         // { bidder: 'sovrn', params: {tagid: '774106'} },
+         // // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+         // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+         // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206179'} },
+         // { bidder: 'criteo', params: {networkId: '10542'} },
+         // { bidder: 'criteointl', params: {networkId: '10545'} },
+         // { bidder: 'ucfunnel', params: { adid : 'ad-627D22E7996E3D3ACE3362B9D2B794BB'} },
+         // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: 'emx_digital', params: { tagid: '115488' } }, /* sizeless */
+         // // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+         // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22103911816'} },
+         // //  // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if(document.getElementById('unibots2')){
+    adUnits1 =
+    {
+        code: '/21959913182/lokmat.com_ipl-page_300x250',
+        mediaTypes: {
+            banner: {
+                sizes: div_3_sizes
+            }
+        },
+        bids: [
+         { bidder: 'appnexus', params: { placementId: '20215295' } }, /* one placementId for all sizes  my appnexus bidder */
+         // { bidder: 'sovrn', params: {tagid: '774106'} },
+         // // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+         // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+         // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206179'} },
+         // { bidder: 'criteo', params: {networkId: '10542'} },
+         // { bidder: 'criteointl', params: {networkId: '10545'} },
+         // { bidder: 'ucfunnel', params: { adid : 'ad-627D22E7996E3D3ACE3362B9D2B794BB'} },
+         // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: 'emx_digital', params: { tagid: '115488' } }, /* sizeless */
+         // // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+         // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22103911816'} },
+         //  // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if(document.getElementById('unibots3')){
+    adUnits1 =
+    {
+        code: '/21959913182/lokmat.com_ipl-page_970x90',
+        mediaTypes: {
+            banner: {
+                sizes: div_4_sizes
+            }
+        },
+        bids: [
+       { bidder: 'appnexus', params: { placementId: '20215295' } }, /* one placementId for all sizes  my appnexus bidder */
+         // { bidder: 'sovrn', params: {tagid: '774106'} },
+         // // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+         // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+         // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206179'} },
+         // { bidder: 'criteo', params: {networkId: '10542'} },
+         // { bidder: 'criteointl', params: {networkId: '10545'} },
+         // { bidder: 'ucfunnel', params: { adid : 'ad-627D22E7996E3D3ACE3362B9D2B794BB'} },
+         // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // { bidder: 'emx_digital', params: { tagid: '115488' } }, /* sizeless */
+         // // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+         // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         //  { bidder: 'nobid', params: { siteId : '22103911816'} },
+         //  // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -136,7 +234,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false]
+  renderedFlag: [false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -211,7 +309,45 @@ function googlePush(){
       }
     });
   });
-// }
+  if(document.getElementById('unibots1')){
+    mappings.slotNumbers.push(2);
+    mappings.adCode.push('/21959913182/lokmat.com_ipl-page_320x50');
+    mappings.sizes.push(div_2_sizes);
+    mappings.adId.push('div-gpt-ad-1600776024481-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot2) {
+          ub_checkAdRendered('div-gpt-ad-1600776024481-0', ub_slot2, ['/21959913182/lokmat.com_ipl-page_320x50']);
+        }
+      });
+    });
+  }
+  if(document.getElementById('unibots2')){
+    mappings.slotNumbers.push(3);
+    mappings.adCode.push('/21959913182/lokmat.com_ipl-page_300x250');
+    mappings.sizes.push(div_3_sizes);
+    mappings.adId.push('div-gpt-ad-1600776071642-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot3) {
+          ub_checkAdRendered('div-gpt-ad-1600776071642-0', ub_slot3, ['/21959913182/lokmat.com_ipl-page_300x250']);
+        }
+      });
+    });
+  }
+  if(document.getElementById('unibots3')){
+    mappings.slotNumbers.push(4);
+    mappings.adCode.push('/21959913182/lokmat.com_ipl-page_970x90');
+    mappings.sizes.push(div_4_sizes);
+    mappings.adId.push('div-gpt-ad-1600776101593-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot4) {
+          ub_checkAdRendered('div-gpt-ad-1600592073946-0', ub_slot4, ['/21959913182/lokmat.com_ipl-page_970x90']);
+        }
+      });
+    });
+  }
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

@@ -50,8 +50,8 @@ adUnits1 =
 // }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
+// var googletag = googletag || {};
+// googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
     googletag.pubads().disableInitialLoad();
 });

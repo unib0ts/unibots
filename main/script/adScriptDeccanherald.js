@@ -50,8 +50,8 @@ adUnits1 =
 // }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
-// var googletag = googletag || {};
-// googletag.cmd = googletag.cmd || [];
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
     googletag.pubads().disableInitialLoad();
 });
@@ -198,7 +198,7 @@ function googlePush(){
     googletag.enableServices();
   });
 }
-
+ var ub_slot1;
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956916242/deccanherald.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);

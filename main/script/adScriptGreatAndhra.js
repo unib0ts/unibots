@@ -71,7 +71,7 @@ var adUnits = [
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19053377' } },
-        { bidder: 'oftmedia', params: { placementId: '19142032' } }
+        { bidder: 'oftmedia', params: { placementId: '20219306' } }
       ]
   },
   {
@@ -83,7 +83,7 @@ var adUnits = [
   },
   bids: [
       { bidder: 'appnexus', params: { placementId: '19053377' } }, /* one placementId for all sizes  my appnexus bidder */
-      { bidder: 'oftmedia', params: { placementId: '19142032' } },
+      { bidder: 'oftmedia', params: { placementId: '20219306' } },
       // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       // { bidder: 'openx', params: {unit: '541045938', delDomain: 'yieldbird-d.openx.net'} },
       { bidder: 'nobid', params: { siteId : '21975046117'} },
@@ -93,8 +93,11 @@ var adUnits = [
       { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
       { bidder: '33across', params: { siteId : 'a2CCmsWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
       //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-      // { bidder: 'criteo', params: {networkId: '10542'} },
-      // { bidder: 'criteointl', params: {networkId: '10545'} },
+      { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'criteointl', params: {networkId: '10545'} },
+      { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+      { bidder: 'ucfunnel', params: { adid : 'ad-273676769B63893A0992439E4278E9E'} },
+      { bidder: 'smartadserver', params: { siteId: '371036', pageId: '1306260', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
     ]
   }
 ];

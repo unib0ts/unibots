@@ -91,6 +91,7 @@ var adUnits = [
     { bidder: 'oftmedia', params: { placementId: '19679390' } },
     { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     { bidder: 'criteo', params: {networkId: '10542'} },
+    { bidder: 'ucfunnel', params: { adid : 'ad-273677B4D347E3E2CD986DB2DAA2333'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'nobid', params: { siteId : '22049999722'} },
     { bidder: 'smartadserver', params: { siteId: '362140', pageId: '1289641', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },

@@ -101,7 +101,7 @@ if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-ri
           { bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'oftmedia', params: { placementId: '19141968' } },
           { bidder: '33across', params: { siteId: 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"]  }, /*All sizes*/
-          { bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
+          { bidder: 'emx_digital', params: { tagid: '115490' } }, /* sizeless */
           { bidder: 'sovrn', params: { tagid: '716602' } },
           // { bidder: 'openx', params: { unit: '541045935', delDomain: 'yieldbird-d.openx.net' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934210'} },
@@ -111,7 +111,8 @@ if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-ri
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'nobid', params: { siteId : '22049999632' } },
-          { bidder: 'smartadserver', params: { siteId: '362092', pageId: '1289593', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'ucfunnel', params: { adid : 'ad-77287878477266DECB6273E2A8E4EAD7'} },
+          { bidder: 'smartadserver', params: { siteId: '371038', pageId: '1306262', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           //{ { bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },

@@ -55,20 +55,21 @@ const customConfigObjectA = {
       },
       bids: [
        { bidder: 'appnexus', params: { placementId: '20215289' } }, /* one placementId for all sizes  my appnexus bidder */
-       // { bidder: 'sovrn', params: {tagid: '774103'} },
+       { bidder: 'sovrn', params: {tagid: '774103'} },
        // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206184'} },
+       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206184'} },
        { bidder: 'criteo', params: {networkId: '10542'} },
        { bidder: 'criteointl', params: {networkId: '10545'} },
        // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
       //  { bidder: '33across', params: { siteId : 'd0h6GkBt8r6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-       // { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
+       { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
        // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
        // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22103912380'} },
+        { bidder: 'smartadserver', params: { siteId: '371032', pageId: '1306256', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
         // { bidder: 'ucfunnel', params: { adid : 'ad-E2B4227B993A8AB7F76DE224B4AADEB9'} },
        //  // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

@@ -41,6 +41,9 @@ adUnits1 =
        // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22104180276'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-BE78EEB723B6B6D6FA7DB32D33D693D'} },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        { bidder: 'smartadserver', params: { siteId: '371034', pageId: '1306258', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+
         // { bidder: 'criteo', params: {networkId: '4902'} },
         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

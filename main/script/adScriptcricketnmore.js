@@ -71,7 +71,7 @@ var adUnits = [
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19057834' } }, /* one placementId for all sizes  my appnexus bidder */
-        { bidder: 'oftmedia', params: { placementId: '19094347' } }
+        { bidder: 'oftmedia', params: { placementId: '20219337' } }
       ]
   },
   {
@@ -83,7 +83,7 @@ var adUnits = [
   },
   bids: [
     // {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    { bidder: 'oftmedia', params: { placementId: '19094347' } },
+    { bidder: 'oftmedia', params: { placementId: '20219337' } },
     { bidder: 'appnexus', params: { placementId: '19057834' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708874'} },
     { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -94,6 +94,9 @@ var adUnits = [
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996024'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA7E46A3434DF4EAEB3787D27B3E'} },
+    { bidder: 'smartadserver', params: { siteId: '370920', pageId: '1306099', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
   ]
 }];
 

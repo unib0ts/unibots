@@ -95,6 +95,10 @@ var adUnits = [
           { bidder: 'nobid', params: { siteId : '22027217982'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996052'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-77287762D64BD7B3F248AE7AD689862'} },
+          { bidder: 'smartadserver', params: { siteId: '371050', pageId: '1306274', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]

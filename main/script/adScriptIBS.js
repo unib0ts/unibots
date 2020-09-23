@@ -87,8 +87,9 @@ var adUnits = [
           { bidder: 'appnexus', params: { placementId: '19055822' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'oftmedia', params: { placementId: '18778192' } },
           { bidder: '33across', params: { siteId : 'aOeL6wBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-          { bidder: 'emx_digital', params: { tagid: '97553' } }, /* sizeless */
+          { bidder: 'emx_digital', params: { tagid: '115492' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '710748'} },
+          { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999692'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028669'} },
@@ -99,6 +100,7 @@ var adUnits = [
           { bidder: 'smartadserver', params: { siteId: '362122', pageId: '1289623', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           { bidder: 'sonobi', params: { placement_id: '58a52a2fbb75390de3ec', ad_unit: 'ibtimes.sg_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'ucfunnel', params: { adid : 'ad-772877482D28A332FBD8EBE97B6EAB46'} },
         ]
     }
 ];

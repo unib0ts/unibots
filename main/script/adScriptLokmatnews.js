@@ -17,6 +17,7 @@ const customConfigObjectA = {
     }]
 };
 
+  if (document.getElementById('div-gpt-ad-1600592783566-0')) {
   adUnits1 =
   {
       code: '/21959913182/lokmatnews.in_ipl_320x50',
@@ -48,6 +49,7 @@ const customConfigObjectA = {
       ]
   };
   adUnits.push(adUnits1);
+}
   if(document.getElementById('unibots1')){
     adUnits1 =
     {
@@ -297,7 +299,7 @@ function googlePush(){
     googletag.enableServices();
   });
 }
-
+if (document.getElementById('div-gpt-ad-1600592783566-0')){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21959913182/lokmatnews.in_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
@@ -309,6 +311,7 @@ function googlePush(){
       }
     });
   });
+}
   if(document.getElementById('unibots1')){
     mappings.slotNumbers.push(2);
     mappings.adCode.push('/21959913182/lokmat.com_ipl-page_320x50');

@@ -118,7 +118,7 @@ const customConfigObjectA = {
   //   }
   adUnits1 =
   {
-      code: '/21956916242/manalokam.com_nb_320x50',
+      code: '/21959913182/tv9bharatvarsh.com_ipl_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -126,15 +126,15 @@ const customConfigObjectA = {
       },
       bids: [
        { bidder: 'appnexus', params: { placementId: '20215300' } }, /* one placementId for all sizes  my appnexus bidder */
-       { bidder: 'sovrn', params: {tagid: '759850'} },
-       { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+       { bidder: 'sovrn', params: {tagid: '775687'} },
+       { bidder: 'smartadserver', params: { siteId: '371051', pageId: '1306275', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206217'} },
        { bidder: 'criteo', params: {networkId: '10542'} },
        { bidder: 'criteointl', params: {networkId: '10545'} },
        { bidder: 'ucfunnel', params: { adid: 'ad-627D22E76A742BE7C6B8A874472E324' } }, /* sizeless */
-       // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+       { bidder: 'oftmedia', params: { placementId: '20219340' } },
        // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
        // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
        //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
@@ -341,13 +341,13 @@ function googlePush(){
   //   }
   // }
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21956916242/manalokam.com_nb_320x50');
+  mappings.adCode.push('/21959913182/tv9bharatvarsh.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1597257062855-0');
+  mappings.adId.push('div-gpt-ad-1601027213539-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1597257062855-0', ub_slot1, ['/21956916242/manalokam.com_nb_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1601027213539-0', ub_slot1, ['/21959913182/tv9bharatvarsh.com_ipl_320x50']);
       }
     });
   });

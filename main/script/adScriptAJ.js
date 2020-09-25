@@ -47,7 +47,7 @@ const customConfigObjectA = {
 
   adUnits1 =
   {
-      code: '/21959913182/andhrajyothy.com_ipl_320x50',
+      code: '/21959913182/andhrajyothy.com_nb_320x50_new',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -223,13 +223,13 @@ function googlePush(){
 }
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21959913182/andhrajyothy.com_ipl_320x50');
+  mappings.adCode.push('/21959913182/andhrajyothy.com_nb_320x50_new');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1600845149245-0');
+  mappings.adId.push('div-gpt-ad-1601026720847-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1600845149245-0', ub_slot1, ['/21959913182/andhrajyothy.com_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1601026720847-0', ub_slot1, ['/21959913182/andhrajyothy.com_nb_320x50_new']);
       }
     });
   });

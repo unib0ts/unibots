@@ -147,7 +147,7 @@ var adUnits = [];
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '20243362' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'sovrn', params: {tagid: '736637'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -161,7 +161,7 @@ var adUnits = [];
          // //   { bidder: 'criteointl', params: {networkId: '10545'} },
          //    { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
          // //   // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
-         //   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -178,7 +178,7 @@ var adUnits = [];
             }
         },
         bids: [
-         //    { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '20243362' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          // //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952065'} },
          // // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -192,7 +192,7 @@ var adUnits = [];
          // //  { bidder: 'criteointl', params: {networkId: '10545'} },
          // { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
          // //  // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
-         //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -209,7 +209,7 @@ var adUnits = [];
             }
         },
         bids: [
-         //    { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '20243362' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          // //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
          // // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -223,7 +223,7 @@ var adUnits = [];
          // //  { bidder: 'criteointl', params: {networkId: '10545'} },
          // { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
          // //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
-         //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -240,7 +240,7 @@ var adUnits = [];
             }
         },
         bids: [
-         //  { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '20243362' } }, /* one placementId for all sizes  my appnexus bidder */
          //  // { bidder: 'sovrn', params: {tagid: '736637'} },
          //  // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
          // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
@@ -254,7 +254,7 @@ var adUnits = [];
          // //   { bidder: 'criteointl', params: {networkId: '10545'} },
          // { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93417', domain: 'https://prg8.smartadserver.com' } },
          // //   // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
-         //   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -271,7 +271,7 @@ var adUnits = [];
             }
         },
         bids: [
-         //    { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '20243362' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          // //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952065'} },
          // // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -285,7 +285,7 @@ var adUnits = [];
          // //  { bidder: 'criteointl', params: {networkId: '10545'} },
          // { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93417', domain: 'https://prg8.smartadserver.com' } },
          // //  // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
-         //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -302,7 +302,7 @@ var adUnits = [];
             }
         },
         bids: [
-         //    { bidder: 'appnexus', params: { placementId: '20118144' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '20243362' } }, /* one placementId for all sizes  my appnexus bidder */
          // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          // //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
          // // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -316,7 +316,7 @@ var adUnits = [];
          // //  { bidder: 'criteointl', params: {networkId: '10545'} },
          // { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93418', domain: 'https://prg8.smartadserver.com' } },
          // //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
-         //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
          //  // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]

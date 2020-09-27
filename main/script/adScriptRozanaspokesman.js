@@ -117,7 +117,7 @@ const customConfigObjectA = {
   //         adUnits.push(adUnits1);
   //     }
   //   }
-if (botsiteurl=='www.rozanaspokesman.in')) {
+if (botsiteurl=='www.rozanaspokesman.in') {
   adUnits1 =
   {
       code: '/21956916242/rozanaspokesman_ipl_320x50',

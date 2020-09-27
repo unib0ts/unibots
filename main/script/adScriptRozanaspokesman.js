@@ -1,4 +1,4 @@
-var div_1_sizes = [320, 50]0];
+var div_1_sizes = [320, 50];
 // var div_2_sizes = [300, 600];
 // var div_3_sizes = [[200, 200], [250, 250], [300, 250]];
 // var div_4_sizes = [300, 600];

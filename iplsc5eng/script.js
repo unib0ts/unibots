@@ -29,7 +29,7 @@ mybotadSmall ='';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 mybotClosevar = '<img src="https://scoretest.warw.in/img/close.svg">';
 
-function mybotCustomFunction() {
+function mybotCustomFunctionsc() {
   // document.getElementById('adSmall').innerHTML=mybotadSmall;
   document.getElementById('gabywa').innerHTML=mybotgabywa;
   // document.getElementById('mybotClose').innerHTML=mybotClosevar;
@@ -185,7 +185,7 @@ function callOnDocumentReadysc() {
 }
 
 function mybotStartsc(){
-		mybotCustomFunction();
+		mybotCustomFunctionsc();
 		// placeBotAndAd();
 		loadAd('gabywa');
 		if(mybotLoadAdDefault){
@@ -638,8 +638,8 @@ function openTab(evt, cityName) {
   evt.currentTarget.className += " ub-active";
 }
 
-function mybotgetKeyByValue(object, value) { 
-    return Object.keys(object).find(key => object[key]['id'] === value); 
+function mybotgetKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key]['id'] === value);
 }
 
 function putDataSC(data, multiMatch){
@@ -725,11 +725,11 @@ function putDataSC(data, multiMatch){
 		document.querySelector('.ub-sc-score2').innerText = secondScore;
 		document.querySelector('.ub-sc-summary').innerText = data[0]['match_data'].currentMatchState;
 
-	
+
 		for(var i=0;i<data[0]['data']['fullScorecard']['innings'].length;i++){
 			var selectorClass = '.ub-sc-tab'+(i+1);
 			var selectorID = 'team'+(i+1);
-			
+
 			var currentTeamID = data[0]['data']['fullScorecard']['innings'][i]["team"]["id"];
 			var currentTeamName = teamsSC[mybotgetKeyByValue(teamsSC, currentTeamID.toString())];
 			if(typeof currentTeamName === "undefined"){
@@ -756,7 +756,7 @@ function putDataSC(data, multiMatch){
 					console.log(1);
 					currentTeamName = currentTeamName + " (S.O)";
 				}
-				
+
 			}
 			document.querySelector(selectorClass).innerText = currentTeamName;
 			addBatDataToSC(data[0]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "batsmen");
@@ -772,7 +772,7 @@ function putDataSC(data, multiMatch){
 		document.querySelector('.ub-sc-tab2').addEventListener('click', function(){
 			openTab(event, 'team2');
 		});
-			
+
 	}
 	else{
 		var date = new Date(data[0]['match_data'].startDateTime);
@@ -901,7 +901,7 @@ function putDataSC(data, multiMatch){
 		addBatDataToSC(text, 2, "remove");
 	}
 	}
-	
+
 
 }
 
@@ -910,7 +910,7 @@ function mybotMakeNewTab(num){
 	var element = document.createElement('button');
 	var newClass = 'ub-sc-tab'+(num+1);
 	element.classList.add('ub-tablinks', newClass);
-	
+
 	element.addEventListener('click', function(){
 		openTab(event, 'team'+(num+1));
 	});
@@ -955,7 +955,7 @@ function mybotMakeNewTab(num){
 	child.appendChild(subChild);
 	elem.appendChild(child);
 	parent.appendChild(elem);
-	
+
 	var child = document.createElement('table');
 	child.className = 'ub-team-bowl';
 	child.classList.add('ub-sc-teams-bowl'+(num+1));
@@ -985,7 +985,7 @@ function mybotMakeNewTab(num){
 	child.appendChild(subChild);
 	elem.appendChild(child);
 	parent.appendChild(elem);
-	
+
 }
 
 function addBatDataToSC(data, tab, type){
@@ -1324,7 +1324,7 @@ function compareValues(key, order = 'asc') {
 
 function mybotTranslateBotSC(){
     var request = new XMLHttpRequest();
-	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/translate/translate.json';
+	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/translate/tr	anslate.json';
 	// url = 'http://localhost:800/unibots/main/translate/translate.json';
 
     request.open('GET', url, true);

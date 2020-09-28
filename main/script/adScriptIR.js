@@ -40,6 +40,7 @@ if(typeof customConfigObjectA === 'undefined'){
       }]
   };
 
+  if (document.getElementById('ATD_Ad_IR_320x50')) {
     adUnits1 =
     {
         code: '/21956916242/indianrailways_hb_320x50',
@@ -70,7 +71,7 @@ if(typeof customConfigObjectA === 'undefined'){
         ]
     };
     adUnits.push(adUnits1);
-
+}
   // ======== DO NOT EDIT BELOW THIS LINE =========== //
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -132,7 +133,7 @@ if(typeof customConfigObjectA === 'undefined'){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://manalokam.com/',
+        publisherDomain: 'https://indianrailways.gov.in/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         // "currency": {
@@ -221,6 +222,7 @@ if(typeof customConfigObjectA === 'undefined'){
     });
   }
 
+  if (document.getElementById('ATD_Ad_IR_320x50')) {
     mappings.slotNumbers.push(1);
     mappings.adCode.push('/21956916242/indianrailways_hb_320x50');
     mappings.sizes.push(div_1_sizes);
@@ -232,7 +234,7 @@ if(typeof customConfigObjectA === 'undefined'){
         }
       });
     });
-
+}
   if(typeof googletag.defineSlot === "function"){
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();

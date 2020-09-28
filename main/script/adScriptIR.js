@@ -4,11 +4,11 @@ if(typeof customConfigObjectA === 'undefined'){
     document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
   }
 
-  var s3 = document.createElement('script');
-  s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
-  s3.async = true;
-  s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-  document.getElementsByTagName('head')[0].appendChild(s3);
+  // var s3 = document.createElement('script');
+  // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+  // s3.async = true;
+  // s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+  // document.getElementsByTagName('head')[0].appendChild(s3);
 
 	var s0 = document.createElement('script');
 	s0.src = "https://www.googletagservices.com/tag/js/gpt.js";

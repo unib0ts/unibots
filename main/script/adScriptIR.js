@@ -1,7 +1,7 @@
 if(typeof customConfigObjectA === 'undefined'){
-  unibot1 = '<div id="div-gpt-ad-1601280866524-0">';
-  if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
-    document.getElementById('ATD_Ad_IRCTC_320x50').innerHTML = unibot1;
+  unibot1 = '<div id="div-gpt-ad-1601280931672-0">';
+  if (document.getElementById('ATD_Ad_IR_320x50')) {
+    document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
   }
 
   var s3 = document.createElement('script');
@@ -42,7 +42,7 @@ if(typeof customConfigObjectA === 'undefined'){
 
     adUnits1 =
     {
-        code: '/21956916242/irctc.co.in_hb_320x50',
+        code: '/21956916242/indianrailways_hb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -222,13 +222,13 @@ if(typeof customConfigObjectA === 'undefined'){
   }
 
     mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21956916242/irctc.co.in_hb_320x50');
+    mappings.adCode.push('/21956916242/indianrailways_hb_320x50');
     mappings.sizes.push(div_1_sizes);
-    mappings.adId.push('div-gpt-ad-1601280866524-0');
+    mappings.adId.push('div-gpt-ad-1601280931672-0');
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1601280866524-0', ub_slot1, ['/21956916242/irctc.co.in_hb_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1601280931672-0', ub_slot1, ['/21956916242/indianrailways_hb_320x50']);
         }
       });
     });

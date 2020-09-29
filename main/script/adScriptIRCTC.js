@@ -15,7 +15,6 @@ if(typeof customConfigObjectA === 'undefined'){
 	s0.type = "text/javascript";
 	document.getElementsByTagName('head')[0].appendChild(s0);
 
-  s0.onload=function(){
   var s1 = document.createElement('script');
   s1.async = "async";
   s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
@@ -242,12 +241,15 @@ if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
   }
   else{
     setTimeout(function(){
-      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-      googlePush();
+      googletag.cmd.push(function() {
+        googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+        googlePush();
+      });
+      // googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      // googlePush();
     }, 500);
   }
   setTimeout(function() {
       initAdserver();
   }, FAILSAFE_TIMEOUT);
- }
 }

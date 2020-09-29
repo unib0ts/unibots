@@ -137,7 +137,7 @@ var adUnits = [];
   //       };
   //   adUnits.push(adUnits1);
   // }
-  if (document.getElementById('Unibot_1')) {
+  if (document.getElementById('unibots1')) {
     adUnits1 =
       {
         code: '/21957769615/nekoscan.com_hb_300x250_1',
@@ -168,7 +168,7 @@ var adUnits = [];
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('Unibot_2')) {
+  if (document.getElementById('unibots2')) {
     adUnits1 =
       {
         code: '/21957769615/nekoscan.com_hb_300x250_2',
@@ -199,7 +199,7 @@ var adUnits = [];
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('Unibot_3')) {
+  if (document.getElementById('unibots3')) {
     adUnits1 =
       {
         code: '/21957769615/nekoscan.com_hb_300x250_3',
@@ -230,7 +230,7 @@ var adUnits = [];
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('Unibot_4')) {
+  if (document.getElementById('unibots4')) {
     adUnits1 =
       {
         code: '/21957769615/nekoscan.com_hb_336x280_4',
@@ -261,7 +261,7 @@ var adUnits = [];
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('Unibot_5')) {
+  if (document.getElementById('unibots5')) {
     adUnits1 =
       {
         code: '/21957769615/nekoscan.com_hb_336x280_5',
@@ -292,7 +292,7 @@ var adUnits = [];
     };
     adUnits.push(adUnits1);
   }
-  if (document.getElementById('Unibot_6')) {
+  if (document.getElementById('unibots6')) {
     adUnits1 =
       {
         code: '/21957769615/nekoscan.com_hb_336x280_6',
@@ -507,7 +507,7 @@ function googlePush(){
   //  });
   // }
 
-if (document.getElementById('Unibot_1')){
+if (document.getElementById('unibots1')){
  mappings.slotNumbers.push(1);
  mappings.adCode.push('/21957769615/nekoscan.com_hb_300x250_1');
  mappings.sizes.push(div_1_sizes);
@@ -520,7 +520,7 @@ if (document.getElementById('Unibot_1')){
      });
  });
 }
-if (document.getElementById('Unibot_2')){
+if (document.getElementById('unibots2')){
  mappings.slotNumbers.push(2);
  mappings.adCode.push('/21957769615/nekoscan.com_hb_300x250_2');
  mappings.sizes.push(div_2_sizes);
@@ -533,7 +533,7 @@ if (document.getElementById('Unibot_2')){
       });
   });
  }
-if (document.getElementById('Unibot_3')){
+if (document.getElementById('unibots3')){
   mappings.slotNumbers.push(3);
   mappings.adCode.push('/21957769615/nekoscan.com_hb_300x250_3');
   mappings.sizes.push(div_3_sizes);
@@ -546,7 +546,7 @@ if (document.getElementById('Unibot_3')){
       });
   });
  }
-if (document.getElementById('Unibot_4')){
+if (document.getElementById('unibots4')){
   mappings.slotNumbers.push(4);
   mappings.adCode.push('/21957769615/nekoscan.com_hb_336x280_4');
   mappings.sizes.push(div_4_sizes);
@@ -559,7 +559,7 @@ if (document.getElementById('Unibot_4')){
       });
   });
  }
-if (document.getElementById('Unibot_5')){
+if (document.getElementById('unibots5')){
   mappings.slotNumbers.push(5);
   mappings.adCode.push('/21957769615/nekoscan.com_hb_336x280_5');
   mappings.sizes.push(div_5_sizes);
@@ -572,7 +572,7 @@ if (document.getElementById('Unibot_5')){
        });
    });
   }
-if (document.getElementById('Unibot_6')){
+if (document.getElementById('unibots6')){
    mappings.slotNumbers.push(6);
    mappings.adCode.push('/21957769615/nekoscan.com_hb_336x280_6');
    mappings.sizes.push(div_6_sizes);

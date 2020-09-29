@@ -1,8 +1,9 @@
 var div_1_sizes = [320, 50];
-// var div_2_sizes = [300, 600];
+var div_2_sizes = [320, 50];
 // var div_3_sizes = [[200, 200], [250, 250], [300, 250]];
 // var div_4_sizes = [300, 600];
 var adUnits = [];
+var botsiteurl =window.location.hostname;
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -116,37 +117,72 @@ const customConfigObjectA = {
   //         adUnits.push(adUnits1);
   //     }
   //   }
-  adUnits1 =
-  {
-      code: '/21956916242/esakal.com_ipl_320x50',
-      mediaTypes: {
-          banner: {
-              sizes: div_1_sizes
-          }
-      },
-      bids: [
-       { bidder: 'appnexus', params: { placementId: '20258760' } }, /* one placementId for all sizes  my appnexus bidder */
-       { bidder: 'sovrn', params: {tagid: '777763'} },
-       { bidder: 'smartadserver', params: { siteId: '371035', pageId: '1306259', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-       // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206183'} },
-       { bidder: 'criteo', params: {networkId: '10542'} },
-       { bidder: 'criteointl', params: {networkId: '10545'} },
-       // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-       // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-       { bidder: 'emx_digital', params: { tagid: '115493' } }, /* sizeless */
-       // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-       { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-       // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-        { bidder: 'nobid', params: { siteId : '22104180279'} },
-        { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA428E67687D0B26E68793B96322'} },
-       //  // { bidder: 'criteo', params: {networkId: '4902'} },
-        //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-      ]
-  };
-  adUnits.push(adUnits1);
+  if (botsiteurl=='www.sakalsports.com') {
+    adUnits1 =
+    {
+        code: '/21956916242/sakalsports.com_ipl_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_2_sizes
+            }
+        },
+        bids: [
+         { bidder: 'appnexus', params: { placementId: '20258760' } }, /* one placementId for all sizes  my appnexus bidder */
+         // { bidder: 'sovrn', params: {tagid: '777763'} },
+         // { bidder: 'smartadserver', params: { siteId: '371035', pageId: '1306259', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+         // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206183'} },
+         { bidder: 'criteo', params: {networkId: '10542'} },
+         { bidder: 'criteointl', params: {networkId: '10545'} },
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         { bidder: 'emx_digital', params: { tagid: '115493' } }, /* sizeless */
+         // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+         // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '22104180279'} },
+          // { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA428E67687D0B26E68793B96322'} },
+         //  // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  else {
+    adUnits1 =
+    {
+        code: '/21956916242/esakal.com_ipl_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+         { bidder: 'appnexus', params: { placementId: '20258760' } }, /* one placementId for all sizes  my appnexus bidder */
+         { bidder: 'sovrn', params: {tagid: '777763'} },
+         { bidder: 'smartadserver', params: { siteId: '371035', pageId: '1306259', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+         // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206183'} },
+         { bidder: 'criteo', params: {networkId: '10542'} },
+         { bidder: 'criteointl', params: {networkId: '10545'} },
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         { bidder: 'emx_digital', params: { tagid: '115493' } }, /* sizeless */
+         // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+         // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '22104180279'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA428E67687D0B26E68793B96322'} },
+         //  // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
 // }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -235,7 +271,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false]
+  renderedFlag: [false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -341,6 +377,20 @@ function googlePush(){
   //     });
   //   }
   // }
+if (botsiteurl=='www.sakalsports.com') {
+  mappings.slotNumbers.push(2);
+  mappings.adCode.push('/21956916242/sakalsports.com_ipl_320x50');
+  mappings.sizes.push(div_2_sizes);
+  mappings.adId.push('div-gpt-ad-1601376955957-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot2) {
+        ub_checkAdRendered('div-gpt-ad-1601376955957-0', ub_slot2, ['/21956916242/sakalsports.com_ipl_320x50']);
+      }
+    });
+  });
+}
+else {
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956916242/esakal.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
@@ -352,8 +402,7 @@ function googlePush(){
       }
     });
   });
-// }
-
+}
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
   googlePush();

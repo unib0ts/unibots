@@ -798,7 +798,9 @@ var mappings_extra_units_config ={
     '/1062118/sakshiNew_cinema_sports_Bussiness_box1',
     '/1062118/sakshiNew_cinema_sports_Bussiness_box2',
     '/1062118/sakshiNew_cinema_sports_Bussiness_box5',
-    '/21796214895/542194_Sakshi_block_1'
+    '/21796214895/542194_Sakshi_block_1',
+    '/1062118/Intersitial_640x480_Desktop_Articlepage',
+    '/1062118/Intersitial_320x480_mobile_Articlepage'
   ]
 }
 var mappings_extra_units = {

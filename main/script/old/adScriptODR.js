@@ -19,10 +19,10 @@ var adUnits = [{
     //   params: {placementId: '18671527'}
     // },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    {
-      bidder: 'eplanning',
-      params: {ci: '2cfed', ml: '1'}
-    },
+    // {
+    //   bidder: 'eplanning',
+    //   params: {ci: '2cfed', ml: '1'}
+    // },
   ]
 }];
 

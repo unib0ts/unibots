@@ -22,7 +22,7 @@ var adUnits = [{
 	  }
   },
   bids: [
-    { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'rhythmone', params: { placementId: '205945'} } /* one placementId for all sizes */
   ]

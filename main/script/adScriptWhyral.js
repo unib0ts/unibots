@@ -194,7 +194,7 @@ if (typeof mobileCheck === 'function') {
           { bidder: 'sovrn', params: {tagid: '724265'} },
           { bidder: 'nobid', params: { siteId : '22049999785'} },
           { bidder: '33across', params: { siteId : 'cDpG0sWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-          /{ bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'smartadserver', params: { siteId: '362164', pageId: '1289665', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
@@ -836,7 +836,7 @@ function mainHbRun(){
       //     timeout: PREBID_TIMEOUT
       // });
   });
-  
+
   ubpbjs.requestBids({
       bidsBackHandler: initAdserver,
       timeout: PREBID_TIMEOUT,

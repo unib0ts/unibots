@@ -177,7 +177,7 @@ function callBotman(){
       console.log('Not Valid Traffic for openx');
     }
   }
-	
+
 }
 
 function callAdsUB(){

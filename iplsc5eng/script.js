@@ -267,7 +267,8 @@ function mybotStartsc(){
         }
         else{
             getScoreCard(0);
-        }
+		}
+		addDropDown();
 		// runSequence();
 }
 
@@ -393,7 +394,7 @@ function formatTime(date) {
 function getScoreCard(flag) {
 	var request = new XMLHttpRequest();
 	url = 'https://scoretest.warw.in/'+'get_scorecard';
-	// url = "http://localhost:800/newsbot/frontend/js/test.json";
+	// url = "http://localhost/cric/newsbot/frontend/js/test.json";
 	request.open('GET', url, true);
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
@@ -404,7 +405,7 @@ function getScoreCard(flag) {
 			mybotCompleteMatches = 0;
 			var data = request.responseText;
 			data = JSON.parse(data);
-			console.log(data);
+			// console.log(data);
 			if(data.error === false) {
 				botnoMatchLive = false;
 				data = data.data;
@@ -650,22 +651,79 @@ function putDataSC(data, multiMatch){
 		else{
 			var text = "Matches have not started yet";
 		}
-		addBatDataToSC(text, 1, "destroy");
+		addBatDataToSC(text, 1, "destroy", 0);
 		return;
 	}
-	multiMatch = false;
+	var multiMatch = false;
+	if(data.length > 1){
+		multiMatch = true;
+	}
+	mybotintrimData(data, 0);
+	if(multiMatch){
+		[].forEach.call(document.querySelectorAll('.ub-sc-dropdown'), function(el) {
+			el.style.display='inline-block';
+		});
+		mybotintrimData(data, 1);
+		putDropData();
+	}
+
+
+}
+
+function putDropData(){
+	for(var j=0; j<2; j++){
+		var localElem = "#ub-match"+(j+1);
+		var pElem = document.querySelector(localElem);
+		var ddItems = pElem.querySelectorAll('.ub-dd-items');
+		for(var i=0; i<ddItems.length; i++){
+			if(i==0){
+				var one = document.querySelector("#ub-match1").querySelector('.ub-sc-team1').innerText;
+				var two = document.querySelector("#ub-match1").querySelector('.ub-sc-team2').innerText;
+				var name = one+" vs "+two;
+			}
+			else if(i==1){
+				var one = document.querySelector("#ub-match2").querySelector('.ub-sc-team1').innerText;
+				var two = document.querySelector("#ub-match2").querySelector('.ub-sc-team2').innerText;
+				var name = one+" vs "+two;
+			}
+			ddItems[i].innerText = name;
+		}
+	}
+	var pp = document.querySelectorAll('.ub-dropdown-content');
+	for(var z=0;z<pp.length;z++){
+		var chil = pp[z].children;
+		for(var x=0;x<chil.length;x++){
+			if(x==0){
+				chil[x].addEventListener('click', function(){
+					document.getElementById('ub-match1').style.display="block";
+					document.getElementById('team11').style.display="block";
+					document.getElementById('ub-match2').style.display="none";
+				});
+			}
+			else if(x==1){
+				chil[x].addEventListener('click', function(){
+					document.getElementById('ub-match1').style.display="none";
+					document.getElementById('ub-match2').style.display="block";
+					document.getElementById('team12').style.display="block";
+				});
+			}
+		}
+	}
+}
+
+function mybotintrimData(data, number){
 	var secondInningsPlayed;
-	data[0]['data']['fullScorecard']['innings'].length>1 ? secondInningsPlayed = true : secondInningsPlayed = false;
-	if(data[0]['data']['fullScorecard']['innings'].length>2){
-		var date = new Date(data[0]['match_data'].startDateTime);
-		var homeTeamID = data[0]['match_data'].homeTeam.id;
-		var homeTeam = data[0]['match_data'].homeTeam.name;
-		var awayTeam = data[0]['match_data'].awayTeam.name;
+	data[number]['data']['fullScorecard']['innings'].length>1 ? secondInningsPlayed = true : secondInningsPlayed = false;
+	if(data[number]['data']['fullScorecard']['innings'].length>2){
+		var date = new Date(data[number]['match_data'].startDateTime);
+		var homeTeamID = data[number]['match_data'].homeTeam.id;
+		var homeTeam = data[number]['match_data'].homeTeam.name;
+		var awayTeam = data[number]['match_data'].awayTeam.name;
 
 		var firstTeamHome=true;
-		var id1 = data[0]['data']['fullScorecard']['innings'][0].team.id;
-		homeScore = data[0]['match_data']['scores']['homeScore']+"("+data[0]['match_data']['scores']['homeOvers']+")";
-		awayScore = data[0]['match_data']['scores']['awayScore']+"("+data[0]['match_data']['scores']['awayOvers']+")";
+		var id1 = data[number]['data']['fullScorecard']['innings'][0].team.id;
+		homeScore = data[number]['match_data']['scores']['homeScore']+"("+data[number]['match_data']['scores']['homeOvers']+")";
+		awayScore = data[number]['match_data']['scores']['awayScore']+"("+data[number]['match_data']['scores']['awayOvers']+")";
 		if(!secondInningsPlayed){
 			if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
 				var text = translateTextSC("Yet to bat", "words");
@@ -697,7 +755,7 @@ function putDataSC(data, multiMatch){
 			var secondScore = homeScore;
 		}
 		if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
-			var matchName = data[0]['match_data'].name;
+			var matchName = data[number]['match_data'].name;
 			var nameArr = matchName.split(' ');
 			var matchName = translateTextSC(nameArr[0], "words") + " " + translateTextSC(nameArr[1], "numbers");
 			var date = translateTextSC(date.getDate().toString(), "numbers")+"/"+translateTextSC((date.getMonth()+1).toString(), "numbers")+", "+translateTextSC(date.getHours().toString(), "numbers")+":"+translateTextSC(date.getMinutes().toString(), "numbers");
@@ -710,27 +768,30 @@ function putDataSC(data, multiMatch){
 			var awayTeamName = translateTextSC(teamsSC[awayTeam].name, "teams", "schedule");
 		}
 		else{
-			var matchName = data[0]['match_data'].name;
+			var matchName = data[number]['match_data'].name;
 			var date = date.getDate()+"/"+(date.getMonth()+1)+", "+date.getHours()+":"+date.getMinutes();
 			firstName =  teamsSC[firstName].name;
 			secondName =  teamsSC[secondName].name;
 			var homeTeamName = homeTeam;
 			var awayTeamName = awayTeam;
 		}
-		document.querySelector('.ub-sc-num').innerText = matchName;
-		document.querySelector('.ub-sc-date').innerText = date;
-		document.querySelector('.ub-sc-team1').innerText = firstName;
-		document.querySelector('.ub-sc-team2').innerText = secondName;
-		document.querySelector('.ub-sc-score1').innerText = firstScore;
-		document.querySelector('.ub-sc-score2').innerText = secondScore;
-		document.querySelector('.ub-sc-summary').innerText = data[0]['match_data'].currentMatchState;
+		var localElem = "#ub-match"+(number+1);
+		var pElem = document.querySelector(localElem);
+		pElem.querySelector('.ub-sc-num').innerText = matchName;
+		pElem.querySelector('.ub-sc-date').innerText = date;
+		pElem.querySelector('.ub-sc-team1').innerText = firstName;
+		pElem.querySelector('.ub-sc-team2').innerText = secondName;
+		pElem.querySelector('.ub-dropbtn').innerHTML = firstName + " vs " + secondName+" <i class='ub-arrow ub-down'></i>";
+		pElem.querySelector('.ub-sc-score1').innerText = firstScore;
+		pElem.querySelector('.ub-sc-score2').innerText = secondScore;
+		pElem.querySelector('.ub-sc-summary').innerText = data[number]['match_data'].currentMatchState;
 
 
-		for(var i=0;i<data[0]['data']['fullScorecard']['innings'].length;i++){
+		for(var i=0;i<data[number]['data']['fullScorecard']['innings'].length;i++){
 			var selectorClass = '.ub-sc-tab'+(i+1);
 			var selectorID = 'team'+(i+1);
 
-			var currentTeamID = data[0]['data']['fullScorecard']['innings'][i]["team"]["id"];
+			var currentTeamID = data[number]['data']['fullScorecard']['innings'][i]["team"]["id"];
 			var currentTeamName = teamsSC[mybotgetKeyByValue(teamsSC, currentTeamID.toString())];
 			if(typeof currentTeamName === "undefined"){
 				currentTeamName = "TBD";
@@ -744,10 +805,10 @@ function putDataSC(data, multiMatch){
 				}
 			}
 			if(i>1){
-				mybotMakeNewTab(i);
+				mybotMakeNewTab(i, 1);
 			}
 			else{
-				if(data[0]['data']['fullScorecard']['innings'].length==3){
+				if(data[number]['data']['fullScorecard']['innings'].length==3){
 					if(i==0){
 						currentTeamName = currentTeamName + " (S.O)";
 					}
@@ -758,161 +819,172 @@ function putDataSC(data, multiMatch){
 				}
 
 			}
-			document.querySelector(selectorClass).innerText = currentTeamName;
-			addBatDataToSC(data[0]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "batsmen");
-			addBatDataToSC(data[0]['data']['fullScorecard']['innings'][i], i+1, "extras");
-			addBatDataToSC(data[0]['data']['fullScorecard']['innings'][i], i+1, "runs");
-			addBatDataToSC(data[0]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "ytb");
-			addBatDataToSC(data[0]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "fow");
-			addBowlDataToSC(data[0]['data']['fullScorecard']['innings'][i]['bowlers'], i+1);
+			pElem.querySelector(selectorClass).innerText = currentTeamName;
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "batsmen", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][i], i+1, "extras", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][i], i+1, "runs", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "ytb", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][i]['batsmen'], i+1, "fow", number);
+			addBowlDataToSC(data[number]['data']['fullScorecard']['innings'][i]['bowlers'], i+1, number);
 		}
 		document.querySelector('.ub-sc-tab1').addEventListener('click', function(){
-			openTab(event, 'team1');
+			openTab(event, 'team11');
 		});
 		document.querySelector('.ub-sc-tab2').addEventListener('click', function(){
-			openTab(event, 'team2');
+			openTab(event, 'team21');
 		});
 
 	}
 	else{
-		var date = new Date(data[0]['match_data'].startDateTime);
-	var homeTeamID = data[0]['match_data'].homeTeam.id;
-	var homeTeam = data[0]['match_data'].homeTeam.name;
-	var awayTeam = data[0]['match_data'].awayTeam.name;
+		var date = new Date(data[number]['match_data'].startDateTime);
+		var homeTeamID = data[number]['match_data'].homeTeam.id;
+		var homeTeam = data[number]['match_data'].homeTeam.name;
+		var awayTeam = data[number]['match_data'].awayTeam.name;
 
-	var firstTeamHome=true;
-	var id1 = data[0]['data']['fullScorecard']['innings'][0].team.id;
-	var score1 = data[0]['data']['fullScorecard']['innings'][0].run +"/"+ data[0]['data']['fullScorecard']['innings'][0].wicket + "(" + data[0]['data']['fullScorecard']['innings'][0].over + ")";
-	if(secondInningsPlayed){
-		var score2 = data[0]['data']['fullScorecard']['innings'][1].run +"/"+ data[0]['data']['fullScorecard']['innings'][1].wicket + "(" + data[0]['data']['fullScorecard']['innings'][1].over + ")";
+		var firstTeamHome=true;
+		var id1 = data[number]['data']['fullScorecard']['innings'][0].team.id;
+		var score1 = data[number]['data']['fullScorecard']['innings'][0].run +"/"+ data[number]['data']['fullScorecard']['innings'][0].wicket + "(" + data[number]['data']['fullScorecard']['innings'][0].over + ")";
+		if(secondInningsPlayed){
+			var score2 = data[number]['data']['fullScorecard']['innings'][1].run +"/"+ data[number]['data']['fullScorecard']['innings'][1].wicket + "(" + data[number]['data']['fullScorecard']['innings'][1].over + ")";
+
+			if(id1 != homeTeamID){
+				var homeScore = score2;
+			}
+			else{
+				var awayScore = score2;
+			}
+
+		}
+		else{
+			if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
+				var text = translateTextSC("Yet to bat", "words");
+			}
+			else{
+				var text = "Yet to bat";
+			}
+
+			if(id1 != homeTeamID){
+				var homeScore = text;
+			}
+			else{
+				var awayScore = text;
+			}
+
+		}
 
 		if(id1 != homeTeamID){
-			var homeScore = score2;
+			var awayScore = score1;
+			var firstName = homeTeam;
+			var firstScore = homeScore;
+			var secondName = awayTeam;
+			var secondScore = awayScore;
 		}
 		else{
-			var awayScore = score2;
+			firstTeamHome = false;
+			var homeScore = score1;
+			var firstName = awayTeam;
+			var firstScore = awayScore;
+			var secondName = homeTeam;
+			var secondScore = homeScore;
 		}
 
-	}
-	else{
 		if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
-			var text = translateTextSC("Yet to bat", "words");
+			var matchName = data[number]['match_data'].name;
+			var nameArr = matchName.split(' ');
+			var matchName = translateTextSC(nameArr[0], "words") + " " + translateTextSC(nameArr[1], "numbers");
+			var date = translateTextSC(date.getDate().toString(), "numbers")+"/"+translateTextSC((date.getMonth()+1).toString(), "numbers")+", "+translateTextSC(date.getHours().toString(), "numbers")+":"+translateTextSC(date.getMinutes().toString(), "numbers");
+			firstName =  translateTextSC(teamsSC[firstName].name,"teams", "schedule");
+			secondName =  translateTextSC(teamsSC[secondName].name,"teams", "schedule");
+			firstScore = translateTextSC(firstScore, "numbers");
+			secondScore = translateTextSC(secondScore, "numbers");
+			var homeTeamName = translateTextSC(teamsSC[homeTeam].name, "teams", "schedule");
+			var awayTeamName = translateTextSC(teamsSC[awayTeam].name, "teams", "schedule");
 		}
 		else{
-			var text = "Yet to bat";
+			var matchName = data[number]['match_data'].name;
+			var date = date.getDate()+"/"+(date.getMonth()+1)+", "+date.getHours()+":"+date.getMinutes();
+			firstName =  teamsSC[firstName].name;
+			secondName =  teamsSC[secondName].name;
+			var homeTeamName = homeTeam;
+			var awayTeamName = awayTeam;
 		}
+		var localElem = "#ub-match"+(number+1);
+		var pElem = document.querySelector(localElem);
 
-		if(id1 != homeTeamID){
-			var homeScore = text;
-		}
-		else{
-			var awayScore = text;
-		}
+		pElem.querySelector('.ub-sc-num').innerText = matchName;
+		pElem.querySelector('.ub-sc-date').innerText = date;
+		pElem.querySelector('.ub-sc-team1').innerText = firstName;
+		pElem.querySelector('.ub-sc-team2').innerText = secondName;
+		pElem.querySelector('.ub-dropbtn').innerHTML = firstName + " vs " + secondName+" <i class='ub-arrow ub-down'></i>";
+		pElem.querySelector('.ub-sc-score1').innerText = firstScore;
+		pElem.querySelector('.ub-sc-score2').innerText = secondScore;
+		pElem.querySelector('.ub-sc-summary').innerText = data[number]['match_data'].currentMatchState;
 
-	}
+		var ubsctab1 =document.querySelectorAll('.ub-sc-tab1');
+		for(var ubSCtab1 of ubsctab1)
+		ubSCtab1.addEventListener('click', function() {
+			openTab(event, 'team11');
+		});
+		var ubsctab2 =document.querySelectorAll('.ub-sc-tab2');
+		for(var ubSCtab2 of ubsctab2)
+		ubSCtab2.addEventListener('click', function(){
+			openTab(event, 'team21');
+		});
+		ubSCtab1.addEventListener('click', function() {
+				openTab(event, 'team12');
+			});
+		ubSCtab2.addEventListener('click', function(){
+			openTab(event, 'team22');
+		});
 
-	if(id1 != homeTeamID){
-		var awayScore = score1;
-		var firstName = homeTeam;
-		var firstScore = homeScore;
-		var secondName = awayTeam;
-		var secondScore = awayScore;
-	}
-	else{
-		firstTeamHome = false;
-		var homeScore = score1;
-		var firstName = awayTeam;
-		var firstScore = awayScore;
-		var secondName = homeTeam;
-		var secondScore = homeScore;
-	}
-
-	if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
-		var matchName = data[0]['match_data'].name;
-		var nameArr = matchName.split(' ');
-		var matchName = translateTextSC(nameArr[0], "words") + " " + translateTextSC(nameArr[1], "numbers");
-		var date = translateTextSC(date.getDate().toString(), "numbers")+"/"+translateTextSC((date.getMonth()+1).toString(), "numbers")+", "+translateTextSC(date.getHours().toString(), "numbers")+":"+translateTextSC(date.getMinutes().toString(), "numbers");
-		firstName =  translateTextSC(teamsSC[firstName].name,"teams", "schedule");
-		secondName =  translateTextSC(teamsSC[secondName].name,"teams", "schedule");
-		firstScore = translateTextSC(firstScore, "numbers");
-		secondScore = translateTextSC(secondScore, "numbers");
-		var homeTeamName = translateTextSC(teamsSC[homeTeam].name, "teams", "schedule");
-		var awayTeamName = translateTextSC(teamsSC[awayTeam].name, "teams", "schedule");
-	}
-	else{
-		var matchName = data[0]['match_data'].name;
-		var date = date.getDate()+"/"+date.getMonth()+1+", "+date.getHours()+":"+date.getMinutes();
-		firstName =  teamsSC[firstName].name;
-		secondName =  teamsSC[secondName].name;
-		var homeTeamName = homeTeam;
-		var awayTeamName = awayTeam;
-	}
-
-	document.querySelector('.ub-sc-num').innerText = matchName;
-	document.querySelector('.ub-sc-date').innerText = date;
-	document.querySelector('.ub-sc-team1').innerText = firstName;
-	document.querySelector('.ub-sc-team2').innerText = secondName;
-	document.querySelector('.ub-sc-score1').innerText = firstScore;
-	document.querySelector('.ub-sc-score2').innerText = secondScore;
-	document.querySelector('.ub-sc-summary').innerText = data[0]['match_data'].currentMatchState;
-
-	document.querySelector('.ub-sc-tab1').addEventListener('click', function(){
-		openTab(event, 'team1');
-	});
-	document.querySelector('.ub-sc-tab2').addEventListener('click', function(){
-		openTab(event, 'team2');
-	});
-
-	var homeBatting = data[0]['match_data'].homeTeam.isBatting;
-	if(homeBatting){
-		document.querySelector('.ub-sc-score1').classList.add('ub-active');
-		document.querySelector('.ub-sc-tab1').innerText = homeTeamName;
-		document.querySelector('.ub-sc-tab2').innerText = awayTeamName;
-	}
-	else{
-		document.querySelector('.ub-sc-score2').classList.add('ub-active');
-		document.querySelector('.ub-sc-tab1').innerText = awayTeamName;
-		document.querySelector('.ub-sc-tab2').innerText = homeTeamName;
-	}
-
-
-	addBatDataToSC(data[0]['data']['fullScorecard']['innings'][0]['batsmen'], 1, "batsmen");
-	addBatDataToSC(data[0]['data']['fullScorecard']['innings'][0], 1, "extras");
-	addBatDataToSC(data[0]['data']['fullScorecard']['innings'][0], 1, "runs");
-	addBatDataToSC(data[0]['data']['fullScorecard']['innings'][0]['batsmen'], 1, "ytb");
-	addBatDataToSC(data[0]['data']['fullScorecard']['innings'][0]['batsmen'], 1, "fow");
-	addBowlDataToSC(data[0]['data']['fullScorecard']['innings'][0]['bowlers'], 1);
-
-	if(secondInningsPlayed){
-		addBatDataToSC(data[0]['data']['fullScorecard']['innings'][1]['batsmen'], 2, "batsmen");
-		addBatDataToSC(data[0]['data']['fullScorecard']['innings'][1], 2, "extras");
-		addBatDataToSC(data[0]['data']['fullScorecard']['innings'][1], 2, "runs");
-		addBatDataToSC(data[0]['data']['fullScorecard']['innings'][1]['batsmen'], 2, "ytb");
-		addBatDataToSC(data[0]['data']['fullScorecard']['innings'][1]['batsmen'], 2, "fow");
-		addBowlDataToSC(data[0]['data']['fullScorecard']['innings'][1]['bowlers'], 2);
-	}
-	else{
-		if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
-			var text = translateTextSC("Yet to bat", "words");
+		var homeBatting = data[number]['match_data'].homeTeam.isBatting;
+		if(homeBatting){
+			pElem.querySelector('.ub-sc-score1').classList.add('ub-active');
+			pElem.querySelector('.ub-sc-tab1').innerText = homeTeamName;
+			pElem.querySelector('.ub-sc-tab2').innerText = awayTeamName;
 		}
 		else{
-			var text = "Yet to bat";
+			pElem.querySelector('.ub-sc-score2').classList.add('ub-active');
+			pElem.querySelector('.ub-sc-tab1').innerText = awayTeamName;
+			pElem.querySelector('.ub-sc-tab2').innerText = homeTeamName;
 		}
-		addBatDataToSC(text, 2, "remove");
-	}
-	}
 
 
+		addBatDataToSC(data[number]['data']['fullScorecard']['innings'][0]['batsmen'], 1, "batsmen", number);
+		addBatDataToSC(data[number]['data']['fullScorecard']['innings'][0], 1, "extras", number);
+		addBatDataToSC(data[number]['data']['fullScorecard']['innings'][0], 1, "runs", number);
+		addBatDataToSC(data[number]['data']['fullScorecard']['innings'][0]['batsmen'], 1, "ytb", number);
+		addBatDataToSC(data[number]['data']['fullScorecard']['innings'][0]['batsmen'], 1, "fow", number);
+		addBowlDataToSC(data[number]['data']['fullScorecard']['innings'][0]['bowlers'], 1, number);
+
+		if(secondInningsPlayed){
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][1]['batsmen'], 2, "batsmen", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][1], 2, "extras", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][1], 2, "runs", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][1]['batsmen'], 2, "ytb", number);
+			addBatDataToSC(data[number]['data']['fullScorecard']['innings'][1]['batsmen'], 2, "fow", number);
+			addBowlDataToSC(data[number]['data']['fullScorecard']['innings'][1]['bowlers'], 2, number);
+		}
+		else{
+			if(typeof mybotTranslateFlag !== 'undefined' && mybotTranslateFlag ==1){
+				var text = translateTextSC("Yet to bat", "words");
+			}
+			else{
+				var text = "Yet to bat";
+			}
+			addBatDataToSC(text, 2, "remove", number);
+		}
+	}
 }
 
-function mybotMakeNewTab(num){
+function mybotMakeNewTab(num, match_num){
 	var parent = document.querySelector('.ub-tab');
 	var element = document.createElement('button');
-	var newClass = 'ub-sc-tab'+(num+1);
+	var newClass = 'ub-sc-tab'+(num+1)+match_num;
 	element.classList.add('ub-tablinks', newClass);
 
 	element.addEventListener('click', function(){
-		openTab(event, 'team'+(num+1));
+		openTab(event, 'team'+(num+1)+match_num);
 	});
 	parent.appendChild(element);
 	var parent = document.querySelectorAll('mybot .ub-tab button');
@@ -923,7 +995,7 @@ function mybotMakeNewTab(num){
 
 	parent = document.querySelector('.ub-sc-teams');
 	var elem = document.createElement('div');
-	elem.id = "team"+(num+1);
+	elem.id = "team"+(num+1)+match_num;
 	elem.className = 'ub-tabcontent';
 
 	var child = document.createElement('table');
@@ -988,9 +1060,11 @@ function mybotMakeNewTab(num){
 
 }
 
-function addBatDataToSC(data, tab, type){
+function addBatDataToSC(data, tab, type, match_num){
+	var localElem = "#ub-match"+(match_num+1);
+	var pElem = document.querySelector(localElem);
 	var parent = '.ub-sc-teams-bat'+tab;
-	var table = document.querySelector(parent);
+	var table = pElem.querySelector(parent);
 	var body = table.querySelector('tbody');
 	if(type == "batsmen"){
 		for(var i=0; i<data.length; i++){
@@ -1231,21 +1305,23 @@ function addBatDataToSC(data, tab, type){
 		body.appendChild(element);
 	}
 	else if(type == "remove"){
-		parent = document.getElementById('team2');
+		var elem = 'team2' + (match_num+1);
+		parent = document.getElementById(elem);
 		parent.style.textAlign = "center";
 		parent.innerHTML = data;
 	}
 	else if(type == "destroy"){
-		console.log(data);
-		parent = document.querySelector('.ub-scorecard');
+		parent = pElem.querySelector('.ub-scorecard');
 		parent.classList.add('ub-sc-nomatch');
 		parent.innerHTML = data;
 	}
 }
 
-function addBowlDataToSC(data, tab, type){
+function addBowlDataToSC(data, tab, match_num){
+	var localElem = "#ub-match"+(match_num+1);
+	var pElem = document.querySelector(localElem);
 	var parent = '.ub-sc-teams-bowl'+tab;
-	var table = document.querySelector(parent);
+	var table = pElem.querySelector(parent);
 	var body = table.querySelector('tbody');
 
 	for(var i=0; i<data.length; i++){
@@ -1387,4 +1463,19 @@ function translateTextSC(word, category, parent){
     }
 
 }
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="ub-scorecard"> <div class="ub-sc-head"> <div class="ub-sc-num"> </div> <div class="ub-sc-date"> </div> <div> <div class="ub-sc-team1 ub-sc-team"> </div> <div class="ub-sc-score1 ub-sc-score"> </div> </div> <div> <div class="ub-sc-team2 ub-sc-team"> </div> <div class="ub-sc-score2 ub-sc-score"> </div> </div> <div class="ub-sc-summary"> </div> </div> <div class="ub-sc-teams"> <div class="ub-tab"> <button class="ub-tablinks ub-active ub-sc-tab1"></button> <button class="ub-tablinks ub-sc-tab2"></button> </div> <div id="team1" class="ub-tabcontent"> <table class="ub-team-head ub-sc-teams-bat1"> <thead> <tr> <th>Batting</th> <th>R</th> <th>B</th> <th>4s</th> <th>6s</th> <th>S/R</th> </tr> </thead> <tbody></tbody> </table> <table class="ub-team-bowl ub-sc-teams-bowl1"> <thead> <tr> <th>Bowling</th> <th>O</th> <th>M</th> <th>R</th> <th>W</th> <th>Econ</th> </tr> </thead> <tbody></tbody> </table>  </div> <div id="team2" class="ub-tabcontent"> <table class="ub-team-head ub-sc-teams-bat2"> <thead> <tr> <th>Batting</th> <th>R</th> <th>B</th> <th>4s</th> <th>6s</th> <th>S/R</th> </tr> </thead> <tbody></tbody> </table> <table class="ub-team-bowl ub-sc-teams-bowl2"> <thead> <tr> <th>Bowling</th> <th>O</th> <th>M</th> <th>R</th> <th>W</th> <th>Econ</th> </tr> </thead> <tbody></tbody> </table>  </div></mybot>';var element=document.querySelector('#ub-fullscore-wrapper');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='';var rule_common='mybot{color:#333;position:relative;z-index:2147483640}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .ub-scorecard{width:100%;max-width:700px;height:490px;max-height:490px;overflow-y:scroll;background:#fff;font-family:arial,sans-serif}mybot .ub-sc-nomatch{display:flex;justify-content:center;align-items:center;background:darkslategray!important;color:#fff;font-size:x-large}mybot .ub-sc-head{font-size:18px;border-bottom:1px solid #000;color:#fff;background:darkmagenta}mybot .ub-sc-num{padding:10px;color:#fff;display:inline-block}mybot .ub-sc-date{padding:10px;display:inline-block;float:right;font-weight:600}mybot .ub-sc-team{padding:10px;padding-top:0;font-size:18px;display:inline-block}mybot .ub-sc-score{padding:10px;padding-top:0;display:inline-block;float:right}mybot .ub-sc-summary{padding:5px;font-weight:600;text-align:center}mybot .ub-active{font-weight:600}mybot .ub-tab{overflow:hidden;border:1px solid #ccc;background-color:bisque}mybot .ub-tab button{background-color:inherit;width:49%;box-sizing:border-box!important;border:none;outline:none;cursor:pointer;padding:14px 16px;transition:0.3s;font-size:17px}mybot .ub-tab button:hover{background-color:#ddd}mybot .ub-tab button.ub-active{background-color:salmon}mybot .ub-tabcontent{display:none;padding:6px 12px;border:1px solid #ccc;border-top:none}mybot .ub-tabcontent#team1{display:block}mybot .ub-team-head,.ub-team-bowl{width:100%;text-align:left}mybot .ub-team-bowl{margin-top:20px}mybot .ub-team-head th:first-child,.ub-team-head td:first-child,.ub-team-bowl th:first-child,.ub-team-bowl td:first-child{width:60%}mybot .ub-team-head th,.ub-team-head td,.ub-team-bowl th,.ub-team-bowl td{padding:10px;border-bottom:1px solid grey}mybot .ub-team-name-sub{font-size:14px;color:grey}mybot .ub-scorecard::-webkit-scrollbar{width:6px}mybot .ub-scorecard::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);-webkit-border-radius:10px;border-radius:10px}mybot .ub-scorecard::-webkit-scrollbar-thumb{-webkit-border-radius:10px;border-radius:10px;background:#223577;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5)}mybot .ub-toss{margin-top:20px}@media only screen and (max-width:400px){mybot .ub-sc-head,mybot .ub-sc-team,mybot{font-size:13px}mybot .ub-sc-summary{font-size:12px}mybot .ub-tabcontent{padding:0;font-size:10px}mybot .ub-team-name-sub{font-size:10px}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReadysc();});
+
+function addDropDown(){
+	[].forEach.call(document.querySelectorAll('.ub-sc-dropdown'), function(el) {
+		el.addEventListener('mouseover', function(){
+			el.querySelector('.ub-dropdown-content').style.display='block';
+		});
+		el.addEventListener('mouseout', function(){
+			el.querySelector('.ub-dropdown-content').style.display='none';
+		});
+		el.addEventListener('click', function(){
+			el.querySelector('.ub-dropdown-content').style.display='block';
+		});
+	});
+
+};
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="ub-scorecard"> <div id="ub-match1"> <div class="ub-sc-head"> <div class="ub-sc-num"> </div> <div class="ub-sc-dropdown"> <button class="ub-dropbtn"> <i class="ub-arrow ub-down"></i> </button> <div class="ub-dropdown-content"> <div class="ub-dd-items"></div> <div class="ub-dd-items"></div> </div> </div> <div class="ub-sc-date"> </div> <div> <div class="ub-sc-team1 ub-sc-team"> </div> <div class="ub-sc-score1 ub-sc-score"> </div> </div> <div> <div class="ub-sc-team2 ub-sc-team"> </div> <div class="ub-sc-score2 ub-sc-score"> </div> </div> <div class="ub-sc-summary"> </div> </div> <div class="ub-sc-teams"> <div class="ub-tab"> <button class="ub-tablinks ub-active ub-sc-tab1"></button> <button class="ub-tablinks ub-sc-tab2"></button> </div> <div id="team11" class="ub-tabcontent"> <table class="ub-team-head ub-sc-teams-bat1"> <thead> <tr> <th>Batting</th> <th>R</th> <th>B</th> <th>4s</th> <th>6s</th> <th>S/R</th> </tr> </thead> <tbody></tbody> </table> <table class="ub-team-bowl ub-sc-teams-bowl1"> <thead> <tr> <th>Bowling</th> <th>O</th> <th>M</th> <th>R</th> <th>W</th> <th>Econ</th> </tr> </thead> <tbody></tbody> </table>  </div> <div id="team21" class="ub-tabcontent"> <table class="ub-team-head ub-sc-teams-bat2"> <thead> <tr> <th>Batting</th> <th>R</th> <th>B</th> <th>4s</th> <th>6s</th> <th>S/R</th> </tr> </thead> <tbody></tbody> </table> <table class="ub-team-bowl ub-sc-teams-bowl2"> <thead> <tr> <th>Bowling</th> <th>O</th> <th>M</th> <th>R</th> <th>W</th> <th>Econ</th> </tr> </thead> <tbody></tbody> </table>  </div> </div> </div> <div id="ub-match2" style="display: none;"> <div class="ub-sc-head"> <div class="ub-sc-num"> </div> <div class="ub-sc-dropdown"> <button class="ub-dropbtn"> <i class="ub-arrow ub-down"></i> </button> <div class="ub-dropdown-content"> <div class="ub-dd-items"></div> <div class="ub-dd-items"></div> </div> </div> <div class="ub-sc-date"> </div> <div> <div class="ub-sc-team1 ub-sc-team"> </div> <div class="ub-sc-score1 ub-sc-score"> </div> </div> <div> <div class="ub-sc-team2 ub-sc-team"> </div> <div class="ub-sc-score2 ub-sc-score"> </div> </div> <div class="ub-sc-summary"> </div> </div> <div class="ub-sc-teams"> <div class="ub-tab"> <button class="ub-tablinks ub-active ub-sc-tab1"></button> <button class="ub-tablinks ub-sc-tab2"></button> </div> <div id="team12" class="ub-tabcontent"> <table class="ub-team-head ub-sc-teams-bat1"> <thead> <tr> <th>Batting</th> <th>R</th> <th>B</th> <th>4s</th> <th>6s</th> <th>S/R</th> </tr> </thead> <tbody></tbody> </table> <table class="ub-team-bowl ub-sc-teams-bowl1"> <thead> <tr> <th>Bowling</th> <th>O</th> <th>M</th> <th>R</th> <th>W</th> <th>Econ</th> </tr> </thead> <tbody></tbody> </table>  </div> <div id="team22" class="ub-tabcontent"> <table class="ub-team-head ub-sc-teams-bat2"> <thead> <tr> <th>Batting</th> <th>R</th> <th>B</th> <th>4s</th> <th>6s</th> <th>S/R</th> </tr> </thead> <tbody></tbody> </table> <table class="ub-team-bowl ub-sc-teams-bowl2"> <thead> <tr> <th>Bowling</th> <th>O</th> <th>M</th> <th>R</th> <th>W</th> <th>Econ</th> </tr> </thead> <tbody></tbody> </table>  </div> </div> </div></mybot>';var element=document.querySelector('#ub-fullscore-wrapper');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='';var rule_common='mybot{color:#333;position:relative;z-index:2147483640}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .ub-scorecard{width:100%;max-width:700px;height:490px;max-height:490px;overflow-y:scroll;background:#fff;font-family:arial,sans-serif}mybot .ub-sc-nomatch{display:flex;justify-content:center;align-items:center;background:darkslategray!important;color:#fff;font-size:x-large}mybot .ub-sc-head{font-size:18px;border-bottom:1px solid #000;color:#fff;background:darkmagenta}mybot .ub-sc-num{padding:10px;color:#fff;display:inline-block}mybot .ub-sc-date{padding:10px;display:inline-block;float:right;font-weight:600}mybot .ub-sc-team{padding:10px;padding-top:0;font-size:18px;display:inline-block}mybot .ub-sc-score{padding:10px;padding-top:0;display:inline-block;float:right}mybot .ub-sc-summary{padding:5px;font-weight:600;text-align:center}mybot .ub-active{font-weight:600}mybot .ub-tab{overflow:hidden;border:1px solid #ccc;background-color:bisque}mybot .ub-tab button{background-color:inherit;width:49%;box-sizing:border-box!important;border:none;outline:none;cursor:pointer;padding:14px 16px;transition:0.3s;font-size:17px}mybot .ub-tab button:hover{background-color:#ddd}mybot .ub-tab button.ub-active{background-color:salmon}mybot .ub-tabcontent{display:none;padding:6px 12px;border:1px solid #ccc;border-top:none}mybot .ub-tabcontent#team1,mybot .ub-tabcontent#team11,mybot .ub-tabcontent#team12{display:block}mybot .ub-team-head,.ub-team-bowl{width:100%;text-align:left}mybot .ub-team-bowl{margin-top:20px}mybot .ub-team-head th:first-child,.ub-team-head td:first-child,.ub-team-bowl th:first-child,.ub-team-bowl td:first-child{width:60%}mybot .ub-team-head th,.ub-team-head td,.ub-team-bowl th,.ub-team-bowl td{padding:10px;border-bottom:1px solid grey}mybot .ub-team-name-sub{font-size:14px;color:grey}mybot .ub-scorecard::-webkit-scrollbar{width:6px}mybot .ub-scorecard::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);-webkit-border-radius:10px;border-radius:10px}mybot .ub-scorecard::-webkit-scrollbar-thumb{-webkit-border-radius:10px;border-radius:10px;background:#223577;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5)}mybot .ub-toss{margin-top:20px}@media only screen and (max-width:400px){mybot .ub-sc-head,mybot .ub-sc-team,mybot{font-size:13px}mybot .ub-sc-summary{font-size:12px}mybot .ub-tabcontent{padding:0;font-size:10px}mybot .ub-team-name-sub{font-size:10px}}.ub-sc-dropdown{display:none;position:relative;left:50%;transform:translate(-100%,0)}.ub-dropbtn{background-color:inherit;border:none;color:#fff;padding:5px 15px;text-align:center;text-decoration:none;display:inline-block;font-size:15px}.ub-dropdown-content{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1}.ub-dd-items{cursor:pointer;pointer-events:all;float:none;color:#000;padding:5px 5px;text-decoration:none;display:block;text-align:center;border-bottom:1px solid;font-size:12px}.ub-arrow{border:solid #fff;border-width:0 3px 3px 0;display:inline-block;padding:3px}.ub-down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}.ub-dropdown-hide{display:none!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReadysc();});

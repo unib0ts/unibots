@@ -1049,9 +1049,9 @@ if(typeof customConfigObjectA === 'undefined'){
     });
   }
 
-  setInterval(function() {
-    refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-  }, REFRESH_TIMEOUT);
+  // setInterval(function() {
+  //   refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+  // }, REFRESH_TIMEOUT);
 
 
   function refreshBid(ub_slot, adCode) {

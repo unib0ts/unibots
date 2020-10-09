@@ -219,6 +219,7 @@ if(typeof customConfigObjectA === 'undefined'){
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().set("page_url",'indianrailways.gov.in/');
         googletag.enableServices();
       });
     }

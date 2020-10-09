@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <title>news</title>
+  <path d="M20.05031,58.7408c0-.96437-.03416-1.93042.01266-2.89251a1.07529,1.07529,0,0,0-.69271-1.16749A28.29822,28.29822,0,0,1,26.55477,1.61361c7.871-1.48281,15.32808-.33627,22.0393,4.22692A28.345,28.345,0,0,1,60.46789,23.80686a30.70716,30.70716,0,0,1-4.26423,24.19238,31.92767,31.92767,0,0,1-13.362,11.43309A46.80672,46.80672,0,0,1,27.88946,63.586c-1.76445.20807-3.53357.33789-5.30619.40659-1.77555.0688-2.52982-.68435-2.53264-2.43483Q20.04836,60.1493,20.05031,58.7408Z" style="fill: #005689"/>
+  <polygon points="54.404 42.721 11.706 42.721 12.952 28.488 55.649 28.488 54.404 42.721" style="fill: #fff"/>
+  <text transform="matrix(0.99619, 0, -0.08716, 0.99619, 14.28517, 40.34806)" style="font-size: 9.52450942993164px;font-family: NirmalaUI-Bold, Nirmala UI;font-weight: 700"><tspan xml:space="preserve"> सहायक</tspan></text>
+  <polygon points="50.628 31.651 7.931 31.651 9.038 19 51.735 19 50.628 31.651"/>
+  <text transform="matrix(0.99619, 0, -0.08716, 0.99619, 13.3772, 28.95992)" style="font-size: 9.52450942993164px;fill: #fff;font-family: NirmalaUI-Bold, Nirmala UI;font-weight: 700">समाचार</text>
+  <line x1="26" y1="46" x2="42" y2="46" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 10"/>
+  <line x1="46" y1="46" x2="50" y2="46" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 10"/>
+</svg>

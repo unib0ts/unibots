@@ -218,7 +218,7 @@ if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
       googletag.pubads().enableSingleRequest();
-      // googletag.pubads().set("page_url",'https://www.irctc.co.in/');
+      googletag.pubads().set("page_url",'https://www.irctc.co.in/');
       googletag.enableServices();
     });
   }

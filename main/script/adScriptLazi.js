@@ -197,7 +197,7 @@ var mappings = {
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1];
+  ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
@@ -271,10 +271,10 @@ function googlePush(){
   //      });
   //  });
   if (document.getElementById('unibots_adsense')){
-   slotNumbers.push(1);
-   adCode.push('/21957769615/lazi.vn_hb_300x250');
-   sizes.push(div_2_sizes);
-   adId.push('div-gpt-ad-1601971865767-0');
+   mappings.slotNumbers.push(1);
+   mappings.adCode.push('/21957769615/lazi.vn_hb_300x250');
+   mappings.sizes.push(div_2_sizes);
+   mappings.adId.push('div-gpt-ad-1601971865767-0');
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot1) {
@@ -284,10 +284,10 @@ function googlePush(){
     });
    }
   if (document.getElementById('unibots_adsense_2')){
-    slotNumbers.push(2);
-    adCode.push('/21957769615/lazi.vn_hb_300x250_2');
-    sizes.push(div_3_sizes);
-    adId.push('div-gpt-ad-1601971906549-0');
+    mappings.slotNumbers.push(2);
+    mappings.adCode.push('/21957769615/lazi.vn_hb_300x250_2');
+    mappings.sizes.push(div_3_sizes);
+    mappings.adId.push('div-gpt-ad-1601971906549-0');
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {
@@ -308,7 +308,6 @@ else{
     googlePush();
   }, 500);
 }
-
 setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);

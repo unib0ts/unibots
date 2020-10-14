@@ -102,7 +102,7 @@ const customConfigObjectA = {
          // { bidder: 'criteo', params: {networkId: '10542'} },
          // { bidder: 'criteointl', params: {networkId: '10545'} },
          // { bidder: 'ucfunnel', params: { adid : 'ad-627D22E7996E3D3ACE3362B9D2B794BB'} },
-         // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         { bidder: 'oftmedia', params: { placementId: '20219326' } },
          // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '115488' } }, /* sizeless */
          // // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },

@@ -1,6 +1,6 @@
 if(typeof customConfigObjectA === 'undefined'){
   var botsiteUrl = window.location.hostname;
-  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost") {
+  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
     url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshihindi/script.js?cb='+cachebuster;
     s3 = document.createElement('script');
@@ -9,7 +9,7 @@ if(typeof customConfigObjectA === 'undefined'){
     s1.type = "text/javascript";
     document.getElementsByTagName('head')[0].appendChild(s3);
   }
-  if (botsiteUrl=="english.sakshi.com") {
+  if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
     url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
     s3 = document.createElement('script');
@@ -71,7 +71,7 @@ if(typeof customConfigObjectA === 'undefined'){
   };
 
   var div_1_sizes = [320, 50];
-  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost") {
+  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
     var adUnits = [
         // {
         //   code: '/21959913182/sakshi.com_NB_320x50',
@@ -136,7 +136,7 @@ if(typeof customConfigObjectA === 'undefined'){
         }
     ];
   }
-  else if (botsiteUrl=="english.sakshi.com") {
+  else if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var adUnits = [
         // {
         //   code: '/21959913182/sakshi.com_NB_320x50',
@@ -275,7 +275,7 @@ if(typeof customConfigObjectA === 'undefined'){
   }, FAILSAFE_TIMEOUT);
 }
 
-  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost") {
+  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
     var ub_slot1;
     function addNewsBotAd(){
       googletag.cmd.push(function() {
@@ -335,7 +335,7 @@ if(typeof customConfigObjectA === 'undefined'){
     }
     }
   }
-  else if (botsiteUrl=="english.sakshi.com") {
+  else if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var ub_slot2;
     function addNewsBotAd(){
       googletag.cmd.push(function() {

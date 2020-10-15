@@ -1,4 +1,11 @@
 if(typeof customConfigObjectA === 'undefined'){
+  var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
+  url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshiedu/script.js?cb='+cachebuster;
+  s3 = document.createElement('script');
+  s3.src = url;
+  s3.async = "async";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s3);
   // var s0 = document.createElement('script');
   // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   // s0.type = "text/javascript";

@@ -336,7 +336,7 @@ if(typeof customConfigObjectA === 'undefined'){
   if (document.getElementById('OV_MB_Hai_Xemthem8')) {
     document.getElementById('OV_MB_Hai_Xemthem8').innerHTML = unibot15;
   }
-}, 5000);
+}, 10000);
   // var s3 = document.createElement('script');
   // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
   // s3.async = true;
@@ -1270,5 +1270,5 @@ setTimeout(function(){
   setTimeout(function() {
       initAdserver();
   }, FAILSAFE_TIMEOUT);
-}, 5000);
+}, 10000);
 }

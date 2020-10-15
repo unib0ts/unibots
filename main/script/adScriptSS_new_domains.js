@@ -1,4 +1,23 @@
 if(typeof customConfigObjectA === 'undefined'){
+  var botsiteUrl = window.location.hostname;
+  if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost") {
+    var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshihindi/script.js?cb='+cachebuster;
+    s3 = document.createElement('script');
+    s3.src = url;
+    s3.async = "async";
+    s1.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(s3);
+  }
+  if (botsiteUrl=="english.sakshi.com") {
+    var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
+    s3 = document.createElement('script');
+    s3.src = url;
+    s3.async = "async";
+    s1.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(s3);
+  }
   // var s0 = document.createElement('script');
   // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   // s0.type = "text/javascript";
@@ -13,7 +32,6 @@ if(typeof customConfigObjectA === 'undefined'){
   var PREBID_TIMEOUT = 2000;
   var FAILSAFE_TIMEOUT = 3000;
   var REFRESH_TIMEOUT = 60000;
-  var botsiteUrl = window.location.hostname;
 
   var GEO_CODE = '';
   (function (){

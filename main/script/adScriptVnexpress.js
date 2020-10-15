@@ -15,6 +15,7 @@ if(typeof customConfigObjectA === 'undefined'){
   unibot14 = '<div id="div-gpt-ad-1602246138541-0">';
   unibot15 = '<div id="div-gpt-ad-1602246165071-0">';
 
+  setTimeout(function(){
   if (document.getElementById('OV_MB_Home_IF1')) {
     document.getElementById('OV_MB_Home_IF1').innerHTML = unibot1;
   }
@@ -335,6 +336,7 @@ if(typeof customConfigObjectA === 'undefined'){
   if (document.getElementById('OV_MB_Hai_Xemthem8')) {
     document.getElementById('OV_MB_Hai_Xemthem8').innerHTML = unibot15;
   }
+  }, 3000);
   // var s3 = document.createElement('script');
   // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
   // s3.async = true;
@@ -982,6 +984,7 @@ if(typeof customConfigObjectA === 'undefined'){
     renderedFlag: []
   };
 
+setTimeout(function(){
   function ub_checkAdRendered(adId, ub_slot, adCode){
     ub_slotNum = ub_slot[ub_slot.length-1]-1;
     if(typeof mappings.renderedFlag[ub_slotNum] || !mappings.renderedFlag[ub_slotNum]){
@@ -995,7 +998,6 @@ if(typeof customConfigObjectA === 'undefined'){
       }
     }
   }
-
   function refreshBid(ub_slot, adCode) {
     ubpbjs.que.push(function(){
       ubpbjs.requestBids({
@@ -1268,4 +1270,5 @@ if(typeof customConfigObjectA === 'undefined'){
   setTimeout(function() {
       initAdserver();
   }, FAILSAFE_TIMEOUT);
+  }, 3000);
 }

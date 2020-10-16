@@ -586,6 +586,8 @@ var mappings_full_hb_config = {
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), //sakshiNew_box3_300x250
     hb_full_common_bidders.concat([
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996104'} },
+      { bidder: 'sovrn', params: {tagid: '744089'} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), //fullstories_300x50_firstslot
     hb_full_common_bidders.concat([
@@ -720,6 +722,8 @@ var mappings_full_hb_config = {
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), ///1062118/sakshiNew_article_Box5
     hb_full_common_bidders.concat([
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996105'} },
+      { bidder: 'sovrn', params: {tagid: '744090'} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), ///1062118/320x50_Mobile_LB_New
     hb_full_common_bidders.concat([
@@ -744,8 +748,8 @@ var mappings_full_hb_config = {
     ]), ///21959913182/sakshi.com_NB_320x50
     hb_full_common_bidders.concat([
       { bidder: 'dailyhunt', params: {placement_id: 146, publisher_id: 6, partner_name: 'sakshi'} },
-      // { bidder: 'sovrn', params: { tagid: '755249' } },
-      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3100075'} },
+      { bidder: 'sovrn', params: { tagid: '751926' } },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3076400'} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile -> '/21959913182/sakshi_hb_320x50_top_mobile_new
     hb_full_common_bidders.concat([
@@ -757,26 +761,26 @@ var mappings_full_hb_config = {
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), ///21959913182/sakshi.com_NB_320x50
     hb_full_common_bidders.concat([
-      // { bidder: 'sovrn', params: { tagid: '708881' } },
+      { bidder: 'sovrn', params: { tagid: '789455' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3247597'} },
       // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), //'/1062118/Sakshi_Photos_Mobile_1',
     hb_full_common_bidders.concat([
-      // { bidder: 'sovrn', params: { tagid: '708881' } },
+      { bidder: 'sovrn', params: { tagid: '789456' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3247598'} },
       // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), //'/1062118/Sakshi_Videos_Mobile_1',
     hb_full_common_bidders.concat([
-      // { bidder: 'sovrn', params: { tagid: '708881' } },
+      { bidder: 'sovrn', params: { tagid: '789457' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3247599'} },
       // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]),  // '/1062118/Sakshi_Cartoon_Mobile_1',

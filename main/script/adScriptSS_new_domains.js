@@ -1175,12 +1175,14 @@ if(typeof customConfigObjectA === 'undefined'){
          //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
        ]),  //1062118/hindi_mob_hp_300x250_3',
        hb_full_common_bidders.concat([
+         	{ bidder: 'oftmedia', params: { placementId: '18778196' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983530'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
     ]),  //'/21959913182/sakshisamachar_nb_320x50',
        hb_full_common_bidders.concat([
+         	{ bidder: 'oftmedia', params: { placementId: '18778196' }
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983530'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },

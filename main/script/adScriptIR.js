@@ -199,7 +199,7 @@ if(typeof customConfigObjectA === 'undefined'){
           useBidCache: true,
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
-          publisherDomain: 'https://indianrailways.gov.in/',
+          publisherDomain: 'http://www.indianrail.gov.in/',
           bidderTimeout: PREBID_TIMEOUT+500,
           //pubcid: {expInterval: },
           // "currency": {

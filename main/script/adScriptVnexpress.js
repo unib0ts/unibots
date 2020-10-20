@@ -1004,9 +1004,9 @@ if(typeof customConfigObjectA === 'undefined'){
       });
     });
     // in case ubpbjs doesn't load
-    setTimeout(function() {
-        initAdserver();
-    }, FAILSAFE_TIMEOUT);
+    // setTimeout(function() {
+    //     initAdserver();
+    // }, FAILSAFE_TIMEOUT);
   }
 
   var mappings = {
@@ -1301,8 +1301,8 @@ setTimeout(function(){
       // googlePush();
     }, 500);
   }
-  // setTimeout(function() {
-  //     initAdserver();
-  // }, FAILSAFE_TIMEOUT);
+  setTimeout(function() {
+      initAdserver();
+  }, FAILSAFE_TIMEOUT);
 }, 10000);
 }

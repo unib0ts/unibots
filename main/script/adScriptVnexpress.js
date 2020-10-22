@@ -1,4 +1,4 @@
-if(typeof customConfigObjectA === 'undefined'){
+// if(typeof customConfigObjectA === 'undefined'){
   unibot1 = '<div id="div-gpt-ad-1602234437991-0">';
   unibot2 = '<div id="div-gpt-ad-1602234489708-0">';
   unibot3 = '<div id="div-gpt-ad-1602234673689-0">';
@@ -1075,7 +1075,7 @@ setTimeout(function(){
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
       googletag.pubads().enableSingleRequest();
-      // googletag.pubads().set("page_url",'https://www.irctc.co.in/');
+      googletag.pubads().set("page_url",'https://vnexpress.net/');
       googletag.enableServices();
     });
   }
@@ -1305,4 +1305,4 @@ setTimeout(function(){
       initAdserver();
   }, FAILSAFE_TIMEOUT);
 }, 10000);
-}
+// }

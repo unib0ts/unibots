@@ -1033,6 +1033,10 @@
                 "name": "ময়াঙ্ক আগরওয়াল",
                 "short": "আগরওয়াল"
             },
+            "mayank aggarwal":{
+                "name": "ময়াঙ্ক আগরওয়াল",
+                "short": "আগরওয়াল"
+            },
             "agarwal":{
                 "name": "আগরওয়াল",
                 "short": "আগরওয়াল"
@@ -1492,6 +1496,10 @@
             "suryakumar yadav": {
                 "name": "সূর্যকুমার যাদব",
                 "short": "সূর্যকুমার"
+            },
+            "lokesh rahul": {
+                "name": "লোকেশ রাহুল",
+                "short": "রাহুল"
             }
         },
         "numbers": {
@@ -1544,6 +1552,10 @@
             "sunday": "রবিবার"
         },
         "words": {
+            "name": "নাম",
+            "teams": "দল",
+            "inn": "ইনিংস",
+            "runs": "রান",
             "match": "ম্যাচ",
             "matchshort": "ম্",
             "sr": "",
@@ -2641,6 +2653,10 @@
                 "name": "मयांक अग्रवाल",
                 "short": "अग्रवाल"
             },
+            "mayank aggarwal":{
+                "name": "मयांक अग्रवाल",
+                "short": "अग्रवाल"
+            },
             "agarwal":{
                 "name": "अग्रवाल",
                 "short": "अग्रवाल"
@@ -3046,6 +3062,10 @@
             "suryakumar yadav": {
                 "name": "सूर्यकुमार यादव",
                 "short": "सूर्यकुमार"
+            },
+            "lokesh rahul": {
+                "name": "लोकेश राहूल",
+                "short": "राहूल"
             }
         },
         "numbers": {
@@ -3098,6 +3118,10 @@
             "sunday": "रविवार"
         },
         "words": {
+            "name": "नाव",
+            "inn": "डाव",
+            "runs": "धावा",
+            "teams": "संघ",
             "match": "सामना",
             "matchshort": "स",
             "sr": "स्ट्राइक रेट",
@@ -4197,6 +4221,10 @@
                 "name": "मयांक अग्रवाल",
                 "short": "अग्रवाल"
             },
+            "mayank aggarwal":{
+                "name": "मयांक अग्रवाल",
+                "short": "अग्रवाल"
+            },
             "agarwal":{
                 "name": "अग्रवाल",
                 "short": "अग्रवाल"
@@ -4602,6 +4630,10 @@
             "suryakumar yadav": {
                 "name": "सूर्यकुमार यादव",
                 "short": "सूर्यकुमार"
+            },
+            "lokesh rahul": {
+                "name": "लोकेश राहुल",
+                "short": "राहुल"
             }
         },
         "numbers": {
@@ -4654,7 +4686,11 @@
             "sunday": "रविवार"
         },
         "words": {
+            "name": "नाम",
+            "teams": "टीमें",
+            "inn": "पारी",
             "match": "मैच",
+            "runs": "रन",
             "matchshort": "म",
             "sr": "स्ट्राइक रेट",
             "avg": "औसत",

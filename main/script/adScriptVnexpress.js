@@ -136,8 +136,7 @@ var targetDivID = [
     'OV_MB_Hai_Xemthem8',
   ], //Xemthem8DivID:
 ]
-// setTimeout(function(){
-// }, 10000);
+
   // var s3 = document.createElement('script');
   // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
   // s3.async = true;
@@ -266,6 +265,8 @@ var targetDivID = [
     ]
   }
   var size_array = mappings_full_config.sizes;
+
+  setTimeout(function(){
   for(j=0;j<10;j++){
     if(document.getElementById(targetDivID[0][j])){
       ubadDiv= document.createElement('div');
@@ -309,7 +310,7 @@ var targetDivID = [
       }
     }
   }
-
+  }, 10000);
   // ======== DO NOT EDIT BELOW THIS LINE =========== //
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -405,7 +406,8 @@ var mappings = {
     renderedFlag: []
   };
 
-  function ub_checkAdRendered(adId, ub_slot, adCode){
+  setTimeout(function(){
+   function ub_checkAdRendered(adId, ub_slot, adCode){
      ub_slotNum = ub_slot[ub_slot.length-1]-1;
      if(typeof mappings.renderedFlag[ub_slotNum] || !mappings.renderedFlag[ub_slotNum]){
        adId1 = adId;
@@ -518,3 +520,4 @@ var mappings = {
    setTimeout(function() {
        initAdserver();
    }, FAILSAFE_TIMEOUT);
+  }, 10000);

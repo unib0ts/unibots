@@ -85,6 +85,8 @@ var adUnits = [
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19509368' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, /* one placementId for all sizes */
+          // { bidder: "kubient", params: { zoneid: "3752710459b1f", server: "kssp.kbntx.ch"} },
         	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
         	{ bidder: '33across', params: { siteId : 'bW0ZA8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */

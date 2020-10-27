@@ -43,6 +43,7 @@ var adUnits = [
           // { bidder: 'sovrn', params: {tagid: '738922'} },
           // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId : '22070847952'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, /* one placementId for all sizes */
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099848'} },

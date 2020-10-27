@@ -721,7 +721,7 @@ var mappings_full_hb_config = {
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983563'} },
       { bidder: 'sovrn', params: {tagid: '744052'} },
       { bidder: "kubient", params: { zoneid: "147c0b0d6df21", server: "kssp.kbntx.ch"} },
-      { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+      { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
     ]), ///1062118/MobileMasthead_ROS_300x250
     hb_full_common_bidders.concat([
       { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
@@ -783,12 +783,12 @@ var mappings_full_hb_config = {
       { bidder: 'dailyhunt', params: {placement_id: 146, publisher_id: 6, partner_name: 'sakshi'} },
       { bidder: 'sovrn', params: { tagid: '751926' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3076400'} },
-      { bidder: "kubient", params: { zoneid: "5d7531d58000d", server: "kssp.kbntx.ch"},
+      { bidder: "kubient", params: { zoneid: "5d7531d58000d", server: "kssp.kbntx.ch"} },
       { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile -> '/21959913182/sakshi_hb_320x50_top_mobile_new
     hb_full_common_bidders.concat([
       // { bidder: 'sovrn', params: { tagid: '708881' } },
-      { bidder: "kubient", params: { zoneid: "10b433b9bd2d5", server: "kssp.kbntx.ch"} },s
+      { bidder: "kubient", params: { zoneid: "10b433b9bd2d5", server: "kssp.kbntx.ch"} },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },

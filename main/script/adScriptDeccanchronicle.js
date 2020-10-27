@@ -37,7 +37,7 @@ const customConfigObjectA = {
        { bidder: 'ucfunnel', params: { adid : 'ad-34B8447B6D7AA337C84796D9BA7E7AD'} },
        { bidder: 'oftmedia', params: { placementId: '20219321' } },
        // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-       // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+       { bidder: 'emx_digital', params: { tagid: '120152' } }, /* sizeless */
        // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
        // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

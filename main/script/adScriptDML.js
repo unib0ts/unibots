@@ -2,33 +2,33 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
-// var GEO_CODE = '';
-// (function (){
-//   var request = new XMLHttpRequest();
-// 		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-// 		request.open('GET', url, true);
-// 		request.onload = function() {
-// 			if (request.status >= 200 && request.status < 400) {
-// 				var data = request.responseText;
-// 				data = JSON.parse(data);
-// 				if(data.status == "success") {
-//           GEO_CODE = data.countryCode;
-// 				}
-// 				else {
-// 					console.error("Geo Request Failed");
-// 				}
-// 			}
-// 			else {
-// 				console.error('Request failed from server');
-// 			}
-//       mainHbRun();
-// 		};
-// 		request.onerror = function() {
-// 			console.error('Request failed to Reach GEO Server');
-//       mainHbRun();
-// 		};
-// 		request.send();
-// })();
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
 
 const customConfigObjectA = {
  "buckets" : [{
@@ -85,7 +85,7 @@ var adUnits = [
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19057738' } },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },  /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },  /* one placementId for all sizes  my appnexus bidder */
         	// { bidder: 'oftmedia', params: { placementId: '19094359' } },
           // { bidder: '33across', params: { siteId : 'bhgbWQWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// //{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
@@ -115,6 +115,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+function mainHbRun(){
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
@@ -183,8 +184,14 @@ ubpbjs.que.push(function() {
     ubpbjs.requestBids({
       bidsBackHandler: initAdserver,
       timeout: PREBID_TIMEOUT,
-    });
-});
+      labels: [GEO_CODE],
+      });
+  });
+  // in case ubpbjs doesn't load
+  setTimeout(function() {
+  initAdserver();
+  }, FAILSAFE_TIMEOUT);
+}
 
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;

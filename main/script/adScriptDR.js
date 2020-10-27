@@ -66,7 +66,7 @@ var adUnits = [
           { bidder: 'sonobi', params: { placement_id: '7726245c6c9704507f8e', ad_unit: 'dailyrecruitment.in_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996026'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'nobid', params: { siteId : '21975046114'} }
         ]

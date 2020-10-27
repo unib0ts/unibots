@@ -96,7 +96,7 @@ var adUnits = [
       { bidder: 'criteo', params: {networkId: '10542'} },
       { bidder: 'criteointl', params: {networkId: '10545'} },
       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-      // { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+      // { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
       { bidder: 'ucfunnel', params: { adid : 'ad-273676769B63893A0992439E4278E9E'} },
       { bidder: 'smartadserver', params: { siteId: '371036', pageId: '1306260', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
     ]

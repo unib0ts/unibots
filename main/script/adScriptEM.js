@@ -93,7 +93,7 @@ var adUnits = [
     { bidder: '33across', params: { siteId : 'bK35s4WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
-    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, 
     { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'smartadserver', params: { siteId: '362112', pageId: '1289613', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
     { bidder: 'sonobi', params: { placement_id: 'f27aecb728bef96fcf80', ad_unit: 'eastmojo.com_NB_320x50' } },

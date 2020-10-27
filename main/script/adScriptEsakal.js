@@ -9,6 +9,34 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
+
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -142,7 +170,7 @@ const customConfigObjectA = {
          { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22125676638'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           // { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA428E67687D0B26E68793B96322'} },
          //  // { bidder: 'criteo', params: {networkId: '4902'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -177,7 +205,7 @@ const customConfigObjectA = {
          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22104180279'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA428E67687D0B26E68793B96322'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
          //  // { bidder: 'criteo', params: {networkId: '4902'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -197,6 +225,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+function mainHbRun(){
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
@@ -263,9 +292,15 @@ ubpbjs.que.push(function() {
      });
     ubpbjs.requestBids({
         bidsBackHandler: initAdserver,
-        timeout: PREBID_TIMEOUT
+        timeout: PREBID_TIMEOUT,
+        labels: [GEO_CODE],
+        });
     });
-});
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+    initAdserver();
+    }, FAILSAFE_TIMEOUT);
+  }
 
 var mappings = {
   slots: [],

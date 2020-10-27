@@ -164,7 +164,7 @@ if (mobileCheck === 'function') {
               { bidder: 'smartadserver', params: { siteId: '362117', pageId: '1289618', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
               // { bidder: 'sonobi', params: { placement_id: '56c6bce9a892aa5cffd9', ad_unit: 'freshersvoice_nb_300x250' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323698', zoneId: '1680330'} }
             ]
@@ -192,7 +192,7 @@ if (mobileCheck === 'function') {
               { bidder: 'smartadserver', params: { siteId: '362117', pageId: '1289618', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
               // { bidder: 'sonobi', params: { placement_id: '56c6bce9a892aa5cffd9', ad_unit: 'freshersvoice_nb_300x250' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323698', zoneId: '1680330'} }
             ]
@@ -252,7 +252,7 @@ if (mobileCheck === 'function') {
             { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             { bidder: 'nobid', params: { siteId : '21975045714'} },
-            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926307'} },
             { bidder: 'smartadserver', params: { siteId: '362117', pageId: '1289618', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             { bidder: 'sonobi', params: { placement_id: '7fdfb7c8346ad484e466', ad_unit: 'freshersvoice.com_NB_320x50' } },
@@ -324,7 +324,7 @@ else {
               { bidder: 'smartadserver', params: { siteId: '362117', pageId: '1289618', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
               // { bidder: 'sonobi', params: { placement_id: '56c6bce9a892aa5cffd9', ad_unit: 'freshersvoice_nb_300x250' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323698', zoneId: '1680330'} }
             ]
@@ -352,7 +352,7 @@ else {
               { bidder: 'smartadserver', params: { siteId: '362117', pageId: '1289618', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
               // { bidder: 'sonobi', params: { placement_id: '56c6bce9a892aa5cffd9', ad_unit: 'freshersvoice_nb_300x250' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323698', zoneId: '1680330'} }
             ]
@@ -412,7 +412,7 @@ else {
             { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             { bidder: 'nobid', params: { siteId : '21975045714'} },
-            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926307'} },
             { bidder: 'smartadserver', params: { siteId: '362117', pageId: '1289618', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             { bidder: 'sonobi', params: { placement_id: '7fdfb7c8346ad484e466', ad_unit: 'freshersvoice.com_NB_320x50' } },

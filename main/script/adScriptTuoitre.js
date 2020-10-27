@@ -66,6 +66,7 @@ var adUnits = [
     // { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'nobid', params: { siteId : '22070847952'} },
+    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]
 }];

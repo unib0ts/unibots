@@ -92,6 +92,7 @@ var hb_full_common_bidders = [
   // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
   { bidder: 'nobid', params: { siteId: '22070824382' } },
   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
   // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

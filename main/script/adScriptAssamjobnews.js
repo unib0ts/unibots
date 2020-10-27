@@ -95,6 +95,7 @@ var adUnits = [
     { bidder: 'smartadserver', params: { siteId: '362094', pageId: '1289595', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
     { bidder: 'sonobi', params: { placement_id: 'f0a7fb191c8b1cf20f41', ad_unit: 'assamjobnews.in_nb_320x50' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
     // { bidder: 'openx', params: {unit: '541046540', delDomain: 'yieldbird-d.openx.net'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }

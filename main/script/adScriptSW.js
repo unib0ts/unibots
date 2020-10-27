@@ -98,6 +98,7 @@ var adUnits = [
           { bidder: 'sonobi', params: { placement_id: '9556f14f37ff1c8b8ccd', ad_unit: 'scoopwhoop.com_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996045'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]

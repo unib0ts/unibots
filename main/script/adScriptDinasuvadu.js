@@ -87,6 +87,7 @@ var adUnits = [
     // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'sovrn', params: {tagid: '708891'} },
     { bidder: 'oftmedia', params: { placementId: '19679378' } },
+    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
     // { bidder: 'openx', params: {unit: '541046673', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'nobid', params: { siteId : '22049999665'} },
     { bidder: 'criteo', params: {networkId: '10542'} },

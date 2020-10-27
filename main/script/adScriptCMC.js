@@ -39,6 +39,7 @@ var adUnits = [
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'sovrn', params: {tagid: '733292'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
         	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // { bidder: 'nobid', params: { siteId : '22029514886'} },

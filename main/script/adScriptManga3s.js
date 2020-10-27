@@ -116,6 +116,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //   { bidder: 'criteointl', params: {networkId: '10545'} },
             { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
@@ -147,6 +148,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             { bidder: 'nobid', params: { siteId : '22100091150'} },
+            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
@@ -178,6 +180,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
@@ -209,6 +212,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //   { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93417', domain: 'https://prg8.smartadserver.com' } },
@@ -240,6 +244,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
              { bidder: 'nobid', params: { siteId : '22100091150'} },
+             { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93417', domain: 'https://prg8.smartadserver.com' } },
@@ -271,6 +276,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93418', domain: 'https://prg8.smartadserver.com' } },
@@ -302,6 +308,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93418', domain: 'https://prg8.smartadserver.com' } },
@@ -333,6 +340,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
@@ -364,6 +372,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
@@ -395,6 +404,7 @@ if(typeof customConfigObjectA === 'undefined'){
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22100091150'} },
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //  { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
@@ -428,6 +438,7 @@ if(typeof customConfigObjectA === 'undefined'){
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             { bidder: 'nobid', params: { siteId : '22100091150'} },
+            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
            //  { bidder: 'criteo', params: {networkId: '10542'} },
            //  { bidder: 'criteointl', params: {networkId: '10545'} },
             { bidder: 'smartadserver', params: { siteId: '369199', pageId: '1301296', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },

@@ -41,6 +41,7 @@ const customConfigObjectA = {
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22103912383'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-BE78EEB763EB248B17DB6B3D8DE669A7'} },
+        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
         { bidder: 'smartadserver', params: { siteId: '371048', pageId: '1306272', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        //  // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

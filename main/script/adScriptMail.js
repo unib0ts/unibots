@@ -74,6 +74,7 @@ if(typeof customConfigObjectA === 'undefined'){
             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926093'} },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
+            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
             { bidder: 'smartadserver', params: { siteId: '362129', pageId: '1289630', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
             { bidder: 'sonobi', params: { placement_id: 'bcda84f01d05a62ae541', ad_unit: 'mail.com_HB_300x250' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

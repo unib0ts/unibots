@@ -96,7 +96,7 @@ var adUnits = [
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934251'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, 
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }

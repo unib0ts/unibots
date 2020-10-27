@@ -8,6 +8,34 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
+
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -41,7 +69,7 @@ const customConfigObjectA = {
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22103912383'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-BE78EEB763EB248B17DB6B3D8DE669A7'} },
-        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'smartadserver', params: { siteId: '371048', pageId: '1306272', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        //  // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -61,6 +89,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+function mainHbRun(){
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
@@ -127,10 +156,16 @@ ubpbjs.que.push(function() {
      });
     ubpbjs.requestBids({
         bidsBackHandler: initAdserver,
-        timeout: PREBID_TIMEOUT
+        timeout: PREBID_TIMEOUT,
+        labels: [GEO_CODE],
     });
-});
+ });
 
+ // in case ubpbjs doesn't load
+ setTimeout(function() {
+     initAdserver();
+ }, FAILSAFE_TIMEOUT);
+}
 var mappings = {
   slots: [],
   adCode: [],

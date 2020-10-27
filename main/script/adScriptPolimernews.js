@@ -93,7 +93,7 @@ var adUnits = [
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996038'} },
-    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, 
    	{ bidder: '33across', params: { siteId : 'aMYl4wWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
   ]

@@ -2,6 +2,34 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 // var boturl = window.location.href;
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
+
 
 const customConfigObjectA = {
  "buckets" : [{
@@ -44,7 +72,7 @@ if (typeof mobileCheck === "function") {
               { bidder: 'smartadserver', params: { siteId: '362098', pageId: '1289599', formatId: '93421', domain: 'https://prg8.smartadserver.com' } },
               { bidder: 'sonobi', params: { placement_id: '968b5a1b02c52296df6d', ad_unit: 'thebetterindia.com_nb_970x250' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+              { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
             ]
@@ -78,7 +106,7 @@ if (typeof mobileCheck === "function") {
             { bidder: 'smartadserver', params: { siteId: '362098', pageId: '1289599', formatId: '93418', domain: 'https://prg8.smartadserver.com' } },
             { bidder: 'sonobi', params: { placement_id: '31e11835d4c6b0ebe19a', ad_unit: 'thebetterindia.com_nb_336x280' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+            { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -98,6 +126,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+function mainHbRun(){
 ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
@@ -156,9 +185,15 @@ ubpbjs.que.push(function() {
      });
     ubpbjs.requestBids({
         bidsBackHandler: initAdserver,
-        timeout: PREBID_TIMEOUT
+        timeout: PREBID_TIMEOUT,
+        labels: [GEO_CODE],
+        });
     });
-});
+    // in case ubpbjs doesn't load
+    setTimeout(function() {
+    initAdserver();
+    }, FAILSAFE_TIMEOUT);
+}
 
 var mappings = {
   slots: [],

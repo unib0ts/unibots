@@ -67,7 +67,7 @@ if (document.getElementById('corover-ksrtc-IP')) {
         { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
         { bidder: 'sonobi', params: { placement_id: '8113176c399bf930308e', ad_unit: 'ksrtc.in_nb_300x250' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'criteointl', params: {networkId: '10545'} }
       ]
     };
@@ -96,7 +96,7 @@ if (document.getElementById('corover-ksrtc-HP')) {
         { bidder: 'sonobi', params: { placement_id: '7a1e7f6b7d1d4a83fac9', ad_unit: 'ksrtc.in_nb_320x50' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'criteo', params: {networkId: '10542'} },
-        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'criteointl', params: {networkId: '10545'} }
       ]
     };
@@ -124,7 +124,7 @@ if (document.getElementById('corover-ad-hp')) {
             { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           { bidder: 'sonobi', params: { placement_id: '7a1e7f6b7d1d4a83fac9', ad_unit: 'ksrtc.in_nb_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         ]

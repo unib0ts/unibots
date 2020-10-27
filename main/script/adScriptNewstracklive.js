@@ -94,7 +94,7 @@ var adUnits = [
         	{ bidder: 'emx_digital', params: { tagid: '97500' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '719002'} },
           { bidder: 'nobid', params: { siteId : '22049999710'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, 
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028673'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323786', zoneId: '1680526'} }

@@ -89,7 +89,7 @@ var adUnits = [
     { bidder: 'nobid', params: { siteId : '22052735860'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
-    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} }, 
+    { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, 
     { bidder: '33across', params: { siteId : 'djXaL8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323618', zoneId: '1680026'} },
     // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */

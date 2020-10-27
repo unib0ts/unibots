@@ -97,7 +97,7 @@ var adUnits = [
           // { bidder: 'openx', params: {unit: '541046082', delDomain: 'yieldbird-d.openx.net'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+          // { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: "kubient", params: { zoneid: "b0902b1a324bd", server: "kssp.kbntx.ch"} },
           { bidder: 'smartadserver', params: { siteId: '362122', pageId: '1289623', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           { bidder: 'sonobi', params: { placement_id: '58a52a2fbb75390de3ec', ad_unit: 'ibtimes.sg_NB_320x50' } },

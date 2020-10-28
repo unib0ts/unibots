@@ -104,11 +104,11 @@ ubpbjs.que.push(function() {
     //pubcid: {expInterval: },
     //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
    });
-   ubpbjs.requestBids({
-     bidsBackHandler: initAdserver,
-     timeout: PREBID_TIMEOUT,
-     labels: [GEO_CODE],
-   });
+   // ubpbjs.requestBids({
+   //   bidsBackHandler: initAdserver,
+   //   timeout: PREBID_TIMEOUT,
+   //   labels: [GEO_CODE],
+   // });
  });
  // in case ubpbjs doesn't load
  setTimeout(function() {
@@ -257,6 +257,7 @@ function callFullHBAds(adCode, ub_slot){
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
+      labels: [GEO_CODE],
       adUnits: adUnits_full_hb,
       adUnitCodes: adCode,
       bidsBackHandler: function() {

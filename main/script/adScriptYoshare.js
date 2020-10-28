@@ -211,9 +211,15 @@ ubpbjs.que.push(function() {
      });
     ubpbjs.requestBids({
         bidsBackHandler: initAdserver,
-        timeout: PREBID_TIMEOUT
-    });
-});
+        timeout: PREBID_TIMEOUT,
+        labels: [GEO_CODE],
+      });
+  });
+  // in case ubpbjs doesn't load
+  setTimeout(function() {
+      initAdserver();
+  }, FAILSAFE_TIMEOUT);
+}
 
 var mappings = {
   slots: [],
@@ -336,6 +342,6 @@ else{
   }, 500);
 }
 
-setTimeout(function() {
-    initAdserver();
-}, FAILSAFE_TIMEOUT);
+// setTimeout(function() {
+//     initAdserver();
+// }, FAILSAFE_TIMEOUT);

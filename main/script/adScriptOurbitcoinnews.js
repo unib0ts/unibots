@@ -108,7 +108,7 @@ ubpbjs.que.push(function() {
  });
  // in case ubpbjs doesn't load
  setTimeout(function() {
-     initAdserver();
+     initAdserver_hb_full();
  }, FAILSAFE_TIMEOUT);
 }
 

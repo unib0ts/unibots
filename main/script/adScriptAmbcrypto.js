@@ -50,58 +50,63 @@ var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
 function mainHbRun(){
-ubpbjs.que.push(function() {
+  ubpbjs.que.push(function() {
 
-  ubpbjs.aliasBidder('criteo','criteointl');
-  ubpbjs.bidderSettings = {
-    'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-    'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-    'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-    'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-    'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-    'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-    'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-    'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-    'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-    'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-    //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+    ubpbjs.aliasBidder('criteo','criteointl');
+    ubpbjs.bidderSettings = {
+      'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+      'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+      'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+      'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+      'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+      'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+      'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+      'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+      //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
-    '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-    'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-    'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-    'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
-  };
-  ubpbjs.setConfig({
-    priceGranularity: customConfigObjectA,
-    userSync: {
-        iframeEnabled: true,
-        syncsPerBidder: 999, // and no more than 3 syncs at a time
-        // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-        filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-        // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-        userIds: [{
-            name: "id5Id",
-            params: {
-                partner: 438,            // change to the Partner Number you received from ID5
-            },
-            storage: {
-                type: "cookie",
-                name: "id5id.1st",       // create a cookie with this name
-                expires: 90,             // cookie lasts for 90 days
-                refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
-            }
-        }],
-        auctionDelay: 500},
-    debug: false,
-    useBidCache: true,
-    enableSendAllBids: false, // Default will be `true` as of 1.0
-    bidderSequence: 'random', // Default is random
-    publisherDomain: 'https://ambcrypto.com/',
-    bidderTimeout: PREBID_TIMEOUT+500,
-    //pubcid: {expInterval: },
-    //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
-   });
-});
+      '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+      'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+    };
+    ubpbjs.setConfig({
+      priceGranularity: customConfigObjectA,
+      userSync: {
+          iframeEnabled: true,
+          syncsPerBidder: 999, // and no more than 3 syncs at a time
+          // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+          filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+          // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+          userIds: [{
+              name: "id5Id",
+              params: {
+                  partner: 438,            // change to the Partner Number you received from ID5
+              },
+              storage: {
+                  type: "cookie",
+                  name: "id5id.1st",       // create a cookie with this name
+                  expires: 90,             // cookie lasts for 90 days
+                  refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+              }
+          }],
+          auctionDelay: 500},
+      debug: false,
+      useBidCache: true,
+      enableSendAllBids: false, // Default will be `true` as of 1.0
+      bidderSequence: 'random', // Default is random
+      publisherDomain: 'https://ambcrypto.com/',
+      bidderTimeout: PREBID_TIMEOUT+500,
+      //pubcid: {expInterval: },
+      //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+     });
+  });
+  setTimeout(function() {
+      initAdserver_hb_full();
+  }, FAILSAFE_TIMEOUT);
+}
+
 
 var mapping_full_hb = {
   slots: [],

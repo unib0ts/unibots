@@ -3,33 +3,33 @@ var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 // var ubScriptUrl = window.location.href;
 
-var GEO_CODE = '';
-(function (){
-  var request = new XMLHttpRequest();
-		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-		request.open('GET', url, true);
-		request.onload = function() {
-			if (request.status >= 200 && request.status < 400) {
-				var data = request.responseText;
-				data = JSON.parse(data);
-				if(data.status == "success") {
-          GEO_CODE = data.countryCode;
-				}
-				else {
-					console.error("Geo Request Failed");
-				}
-			}
-			else {
-				console.error('Request failed from server');
-			}
-      mainHbRun();
-		};
-		request.onerror = function() {
-			console.error('Request failed to Reach GEO Server');
-      mainHbRun();
-		};
-		request.send();
-})();
+// var GEO_CODE = '';
+// (function (){
+//   var request = new XMLHttpRequest();
+// 		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+// 		request.open('GET', url, true);
+// 		request.onload = function() {
+// 			if (request.status >= 200 && request.status < 400) {
+// 				var data = request.responseText;
+// 				data = JSON.parse(data);
+// 				if(data.status == "success") {
+//           GEO_CODE = data.countryCode;
+// 				}
+// 				else {
+// 					console.error("Geo Request Failed");
+// 				}
+// 			}
+// 			else {
+// 				console.error('Request failed from server');
+// 			}
+//       mainHbRun();
+// 		};
+// 		request.onerror = function() {
+// 			console.error('Request failed to Reach GEO Server');
+//       mainHbRun();
+// 		};
+// 		request.send();
+// })();
 
 const customConfigObjectA = {
  "buckets" : [{
@@ -49,7 +49,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
-function mainHbRun(){
+// function mainHbRun(){
   ubpbjs.que.push(function() {
 
     ubpbjs.aliasBidder('criteo','criteointl');
@@ -105,7 +105,7 @@ function mainHbRun(){
   // setTimeout(function() {
   //     initAdserver_hb_full();
   // }, FAILSAFE_TIMEOUT);
-}
+// }
 
 
 var mapping_full_hb = {
@@ -130,7 +130,7 @@ var hb_full_common_bidders = [
   { bidder: 'criteo', params: {networkId: '10542'} },
   { bidder: 'criteointl', params: {networkId: '10545'} },
   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-  { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+  // { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
 ];
 var mappings_full_hb_config_old = {
   targetUnits: [
@@ -858,7 +858,7 @@ function callFullHBAds(adCode, ub_slot){
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
-      labels: [GEO_CODE],
+      // labels: [GEO_CODE],
       adUnits: adUnits_full_hb,
       adUnitCodes: adCode,
       bidsBackHandler: function() {

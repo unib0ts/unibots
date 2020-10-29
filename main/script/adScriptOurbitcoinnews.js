@@ -107,9 +107,9 @@ ubpbjs.que.push(function() {
    // });
  });
  // in case ubpbjs doesn't load
- setTimeout(function() {
-     initAdserver_hb_full();
- }, FAILSAFE_TIMEOUT);
+ // setTimeout(function() {
+ //     initAdserver_hb_full();
+ // }, FAILSAFE_TIMEOUT);
 }
 
 var mapping_full_hb = {

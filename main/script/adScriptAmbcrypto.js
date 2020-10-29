@@ -102,9 +102,9 @@ function mainHbRun(){
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
   });
-  setTimeout(function() {
-      initAdserver_hb_full();
-  }, FAILSAFE_TIMEOUT);
+  // setTimeout(function() {
+  //     initAdserver_hb_full();
+  // }, FAILSAFE_TIMEOUT);
 }
 
 

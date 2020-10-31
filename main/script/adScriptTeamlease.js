@@ -100,7 +100,7 @@ var adUnits = [
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996049'} },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA42BD2AEE3D0B46A9A28B9D6448'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'smartadserver', params: { siteId: '371041', pageId: '1306265', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
         ]
     }

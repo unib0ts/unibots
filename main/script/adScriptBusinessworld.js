@@ -116,7 +116,7 @@ if (mobileCheck === 'function') {
            { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93416', domain: 'https://prg8.smartadserver.com' } },
            { bidder: 'sonobi', params: { placement_id: 'ed9ad9ebfd4284f280b4', ad_unit: 'businessworld.in_NB_320x100' } },
            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-           { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028653'} },
            {
              bidder: 'adsolut',
@@ -215,7 +215,7 @@ if (mobileCheck === 'function') {
           { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028654'} },
           // {
           //   bidder: 'emx_digital',
@@ -316,7 +316,7 @@ if (!mobileCheckAdSript()) {
         { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93416', domain: 'https://prg8.smartadserver.com' } },
         { bidder: 'sonobi', params: { placement_id: 'ed9ad9ebfd4284f280b4', ad_unit: 'businessworld.in_NB_320x100' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028653'} },
         // {
         //   bidder: 'emx_digital',
@@ -407,7 +407,7 @@ if (!mobileCheckAdSript()) {
         { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
         { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028654'} },
         // {
         //   bidder: 'emx_digital',

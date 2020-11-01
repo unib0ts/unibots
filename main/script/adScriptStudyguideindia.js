@@ -99,7 +99,7 @@ var adUnits = [
           { bidder: 'sonobi', params: { placement_id: 'bb129020728451ecbd91', ad_unit: 'studyguideindia_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996048'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, 
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'criteo', params: {networkId: '4902'} }
         ]

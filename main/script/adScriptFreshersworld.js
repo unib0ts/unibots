@@ -89,7 +89,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'ayW5nQBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97472' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '714087'} },
-          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           // { bidder: 'openx', params: {unit: '541046048', delDomain: 'yieldbird-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
@@ -222,7 +222,7 @@ function mainHbRun(){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://www.freshersvoice.com/',
+        publisherDomain: 'https://www.freshersworld.com/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

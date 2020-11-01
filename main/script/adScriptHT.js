@@ -71,7 +71,7 @@ if(document.getElementById('newsbot-ads')){
        // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '21987177878'} },
-        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -232,7 +232,7 @@ function mainHbRun(){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://www.thehindu.com/',
+        publisherDomain: 'https://www.hindutamil.in/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

@@ -225,7 +225,7 @@ var targetDivID = [
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://viuon.in/',
+        publisherDomain: 'https://novelcake.com/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         // "currency": {

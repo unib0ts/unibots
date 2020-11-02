@@ -117,7 +117,7 @@ var mapping_full_hb = {
 }
 
 var adUnits_full_hb = [];
-if (boturl== 'es.ambcrypto.com') {
+if (boturlbid== 'es.ambcrypto.com') {
   var hb_full_common_bidders = [
     { bidder: 'appnexus', params: { placementId: '19998799' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'oftmedia', params: { placementId: '20161846' } },
@@ -134,7 +134,7 @@ if (boturl== 'es.ambcrypto.com') {
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
   ];
 }
-else if (boturl== 'hi.ambcrypto.com') {
+else if (boturlbid== 'hi.ambcrypto.com') {
   var hb_full_common_bidders = [
     { bidder: 'appnexus', params: { placementId: '19998799' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'oftmedia', params: { placementId: '20161841' } },

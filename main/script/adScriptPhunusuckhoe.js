@@ -420,6 +420,19 @@ function googlePush(){
       });
     });
   }
+  else {
+    mappings.slotNumbers.push(1);
+    mappings.adCode.push('/21957769615/phunusuckhoe.vn_nb_320x50');
+    mappings.sizes.push(div_1_sizes);
+    mappings.adId.push('div-gpt-ad-1589865114606-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot1) {
+          ub_checkAdRendered('div-gpt-ad-1589865114606-0', ub_slot1, ['/21957769615/phunusuckhoe.vn_nb_320x50']);
+        }
+      });
+    });
+  }
  }
  if (document.getElementById('article_Inview')){
    mappings.slotNumbers.push(2);

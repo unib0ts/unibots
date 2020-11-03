@@ -604,8 +604,12 @@ for(j=0; j<targetDivID.length; j++){
      }
      else{
        setTimeout(function(){
-         googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-         googlePush();
+         googletag.cmd.push(function() {
+           googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+           googlePush();
+         });
+         // googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+         // googlePush();
        }, 500);
      }
 

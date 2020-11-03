@@ -145,6 +145,7 @@ var targetDivID = [
 
   for(j=0; j<targetDivID.length; j++){
     if(document.getElementById(targetDivID[j])){
+      console.log('test1');
       ubadDiv= document.createElement('div');
       ubadDiv.id = targetAdUnits[j];
       ubtargetDiv = document.getElementById(targetDivID[j]);
@@ -321,6 +322,7 @@ var mappings = {
    }
    for(j=0; j<targetDivID.length; j++){
      if(document.getElementById(targetDivID[j])){
+       console.log('teset2');
        mappings.slotNumbers.push(j+1);
        mappings.adCode.push(mappings_full_config.adUnitNames[j]);
        mappings.sizes.push(size_array);

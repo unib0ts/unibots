@@ -6,11 +6,11 @@ var targetAdUnits= [
   'div-gpt-ad-1604317426194-0',
 ]
 var targetDivID = [
-    'unibots1',
-    'unibots2',
-    'unibots3',
-    'unibots4',
-    'unibots5',
+    'Unibots1',
+    'Unibots2',
+    'Unibots3',
+    'Unibots4',
+    'Unibots5',
 ]
 
   // var s3 = document.createElement('script');

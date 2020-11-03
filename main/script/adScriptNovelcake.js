@@ -12,6 +12,26 @@ var targetDivID = [
     'Unibots4',
     'Unibots5',
 ]
+for(j=0; j<targetDivID.length; j++){
+  if(document.getElementById(targetDivID[j])){
+    ubadDiv= document.createElement('div');
+    ubadDiv.id = targetAdUnits[j];
+    ubtargetDiv = document.getElementById(targetDivID[j]);
+    ubtargetDiv.appendChild(ubadDiv);
+
+    // adUnitTemp = {
+    //   code: mappings_full_config.adUnitNames[j],
+    //   mediaTypes: {
+    //       banner: {
+    //           sizes: size_array
+    //       }
+    //   },
+    //   bids: mappings_full_config.bids
+    // };
+    //
+    // adUnits.push(adUnitTemp);
+  }
+}
 
   // var s3 = document.createElement('script');
   // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
@@ -71,90 +91,204 @@ var targetDivID = [
       }]
   };
 
-  // var size_array =[[300, 250], [336, 280]];
+  var size_array =[[300, 250], [336, 280]];
   var adUnits = [];
 
-  var hb_full_common_bidders = [
-    { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
-    // { bidder: 'oftmedia', params: { placementId: '19680368' } },
-    // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-    // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
-    // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-    // { bidder: 'nobid', params: { siteId: '22049996977' } },
-    { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-    // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
-    // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-    // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    // { bidder: 'criteo', params: {networkId: '10542'} },
-    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-    // { bidder: 'criteointl', params: {networkId: '10545'} },
-  ];
-  var mappings_full_config = {
-    adUnitNames: [
-      '/21957769615/novelcake.com_hb_336x280',
-      '/21957769615/novelcake.com_hb_336x280_2',
-      '/21957769615/novelcake.com_hb_336x280_3',
-      '/21957769615/novelcake.com_hb_336x280_4',
-      '/21957769615/novelcake.com_hb_336x280_5',
-    ],
-    sizes: [
-       [300, 250], [336, 280]
-    ],
-    bids: [
-      hb_full_common_bidders.concat([
-           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268941'} },
-           // { bidder: 'ucfunnel', params: { adid : 'ad-8A29A4E8342A6BA60B22EBEB98AEAB8E'} },
-         //   { bidder: 'sovrn', params: {tagid: '744064'} },
-         //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-      ]), ///21957769615/novelcake.com_hb_336x280',
-      hb_full_common_bidders.concat([
-           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268942'} },
-           // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EBA933BEEA24C7D38BBEE4B46B42'} },
-         //   { bidder: 'sovrn', params: {tagid: '744064'} },
-         //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-      ]), ///21957769615/novelcake.com_hb_336x280_2',
-      hb_full_common_bidders.concat([
-           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268943'} },
-           // { bidder: 'ucfunnel', params: { adid : 'ad-D2342DE83224EAEDFD2DD6D6E7BBA72E'} },
-         //   { bidder: 'sovrn', params: {tagid: '744064'} },
-         //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-      ]), //'//21957769615/novelcake.com_hb_336x280_3',
-      hb_full_common_bidders.concat([
-           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268944'} },
-           // { bidder: 'ucfunnel', params: { adid : 'ad-8A29A4E7296AAB7B1EAD7A4AA29EED7'} },
-         //   { bidder: 'sovrn', params: {tagid: '744064'} },
-         //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-      ]), //'/21957769615/novelcake.com_hb_336x280_4',
-      hb_full_common_bidders.concat([
-           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268945'} },
-           // { bidder: 'ucfunnel', params: { adid : 'ad-E2B4276DB6EABA99074778783A99EA4D'} },
-         //   { bidder: 'sovrn', params: {tagid: '744064'} },
-         //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-      ]), //'/21957769615/novelcake.com_hb_336x280_5',
-    ]
-  }
-  var size_array = mappings_full_config.sizes;
-
-  for(j=0; j<targetDivID.length; j++){
-    if(document.getElementById(targetDivID[j])){
-      ubadDiv= document.createElement('div');
-      ubadDiv.id = targetAdUnits[j];
-      ubtargetDiv = document.getElementById(targetDivID[j]);
-      ubtargetDiv.appendChild(ubadDiv);
-
-      adUnitTemp = {
-        code: mappings_full_config.adUnitNames[j],
+  if (document.getElementById('Unibots1')) {
+      adUnits1 =
+        {
+          code: '/21957769615/novelcake.com_hb_336x280',
+          mediaTypes: {
+              banner: {
+                  sizes: size_array
+              }
+          },
+          bids: [
+            { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'oftmedia', params: { placementId: '19680368' } },
+            // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+            // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+            // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            // { bidder: 'nobid', params: { siteId: '22049996977' } },
+            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+            // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { bidder: 'criteo', params: {networkId: '10542'} },
+            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+            // { bidder: 'criteointl', params: {networkId: '10545'} },
+          ]
+      };
+      adUnits.push(adUnits1);
+    }
+  if (document.getElementById('Unibots2')) {
+      adUnits1 =
+        {
+          code: '/21957769615/novelcake.com_hb_336x280_2',
+          mediaTypes: {
+              banner: {
+                  sizes: size_array
+              }
+          },
+          bids: [
+            { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'oftmedia', params: { placementId: '19680368' } },
+            // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+            // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+            // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            // { bidder: 'nobid', params: { siteId: '22049996977' } },
+            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+            // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { bidder: 'criteo', params: {networkId: '10542'} },
+            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+            // { bidder: 'criteointl', params: {networkId: '10545'} },
+          ]
+      };
+      adUnits.push(adUnits1);
+    }
+  if (document.getElementById('Unibots3')) {
+    adUnits1 =
+      {
+        code: '/21957769615/novelcake.com_hb_336x280_3',
         mediaTypes: {
             banner: {
                 sizes: size_array
             }
         },
-        bids: mappings_full_config.bids
-      };
-
-      adUnits.push(adUnitTemp);
-    }
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
+          // { bidder: 'oftmedia', params: { placementId: '19680368' } },
+          // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+          // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+          // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          // { bidder: 'nobid', params: { siteId: '22049996977' } },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // { bidder: 'criteointl', params: {networkId: '10545'} },
+        ]
+    };
+    adUnits.push(adUnits1);
   }
+  if (document.getElementById('Unibots4')) {
+    adUnits1 =
+      {
+        code: '/21957769615/novelcake.com_hb_336x280_4',
+        mediaTypes: {
+            banner: {
+                sizes: size_array
+            }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
+          // { bidder: 'oftmedia', params: { placementId: '19680368' } },
+          // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+          // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+          // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          // { bidder: 'nobid', params: { siteId: '22049996977' } },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // { bidder: 'criteointl', params: {networkId: '10545'} },
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.getElementById('Unibots5')) {
+    adUnits1 =
+      {
+        code: '/21957769615/novelcake.com_hb_336x280_5',
+        mediaTypes: {
+            banner: {
+                sizes: size_array
+            }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
+          // { bidder: 'oftmedia', params: { placementId: '19680368' } },
+          // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+          // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+          // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          // { bidder: 'nobid', params: { siteId: '22049996977' } },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // { bidder: 'criteointl', params: {networkId: '10545'} },
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  // var hb_full_common_bidders = [
+  //   { bidder: 'appnexus', params: { placementId: '20533524' } }, /* one placementId for all sizes  my appnexus bidder */
+  //   // { bidder: 'oftmedia', params: { placementId: '19680368' } },
+  //   // { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+  //   // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+  //   // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+  //   // { bidder: 'nobid', params: { siteId: '22049996977' } },
+  //   { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+  //   // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+  //   // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+  //   // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+  //   // { bidder: 'criteo', params: {networkId: '10542'} },
+  //   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  //   // { bidder: 'criteointl', params: {networkId: '10545'} },
+  // ];
+  // var mappings_full_config = {
+  //   adUnitNames: [
+  //     '/21957769615/novelcake.com_hb_336x280',
+  //     '/21957769615/novelcake.com_hb_336x280_2',
+  //     '/21957769615/novelcake.com_hb_336x280_3',
+  //     '/21957769615/novelcake.com_hb_336x280_4',
+  //     '/21957769615/novelcake.com_hb_336x280_5',
+  //   ],
+  //   sizes: [
+  //      [300, 250], [336, 280]
+  //   ],
+  //   bids: [
+  //     hb_full_common_bidders.concat([
+  //          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268941'} },
+  //          // { bidder: 'ucfunnel', params: { adid : 'ad-8A29A4E8342A6BA60B22EBEB98AEAB8E'} },
+  //        //   { bidder: 'sovrn', params: {tagid: '744064'} },
+  //        //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+  //     ]), ///21957769615/novelcake.com_hb_336x280',
+  //     hb_full_common_bidders.concat([
+  //          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268942'} },
+  //          // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EBA933BEEA24C7D38BBEE4B46B42'} },
+  //        //   { bidder: 'sovrn', params: {tagid: '744064'} },
+  //        //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+  //     ]), ///21957769615/novelcake.com_hb_336x280_2',
+  //     hb_full_common_bidders.concat([
+  //          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268943'} },
+  //          // { bidder: 'ucfunnel', params: { adid : 'ad-D2342DE83224EAEDFD2DD6D6E7BBA72E'} },
+  //        //   { bidder: 'sovrn', params: {tagid: '744064'} },
+  //        //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+  //     ]), //'//21957769615/novelcake.com_hb_336x280_3',
+  //     hb_full_common_bidders.concat([
+  //          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268944'} },
+  //          // { bidder: 'ucfunnel', params: { adid : 'ad-8A29A4E7296AAB7B1EAD7A4AA29EED7'} },
+  //        //   { bidder: 'sovrn', params: {tagid: '744064'} },
+  //        //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+  //     ]), //'/21957769615/novelcake.com_hb_336x280_4',
+  //     hb_full_common_bidders.concat([
+  //          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268945'} },
+  //          // { bidder: 'ucfunnel', params: { adid : 'ad-E2B4276DB6EABA99074778783A99EA4D'} },
+  //        //   { bidder: 'sovrn', params: {tagid: '744064'} },
+  //        //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+  //     ]), //'/21957769615/novelcake.com_hb_336x280_5',
+  //   ]
+  // }
+  // var size_array = mappings_full_config.sizes;
 
   // ======== DO NOT EDIT BELOW THIS LINE =========== //
   var googletag = googletag || {};

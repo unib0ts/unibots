@@ -216,7 +216,7 @@ var targetDivID = [
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://viuon.in/',
+        publisherDomain: 'https://novelcake.com/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         // "currency": {
@@ -306,7 +306,6 @@ var mappings = {
        googletag.pubads().setCentering(true);
        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
        googletag.pubads().enableSingleRequest();
-       // googletag.pubads().set("page_url",'https://vnexpress.net/');
        googletag.enableServices();
      });
    }

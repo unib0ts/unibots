@@ -71,6 +71,7 @@ var targetDivID = [
       }]
   };
 
+  // var size_array =[[300, 250], [336, 280]];
   var adUnits = [];
 
   var hb_full_common_bidders = [
@@ -241,105 +242,170 @@ var targetDivID = [
     // }, FAILSAFE_TIMEOUT);
   }
 
-var mappings = {
+  var mappings = {
     slots: [],
     adCode: [],
     slotNumbers: [],
     sizes: [],
     adId: [],
-    renderedFlag: []
-  };
+    renderedFlag: [false, false, false, false, false]
+    };
 
-   function ub_checkAdRendered(adId, ub_slot, adCode){
-     ub_slotNum = ub_slot[ub_slot.length-1]-1;
-     if(typeof mappings.renderedFlag[ub_slotNum] || !mappings.renderedFlag[ub_slotNum]){
-       adId1 = adId;
-       var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-       if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-         // setTimeout(function() {
-         //   refreshBid(ub_slot, adCode);
-         // }, REFRESH_TIMEOUT);
-         mappings.renderedFlag[ub_slotNum] = true;
-       }
+    function ub_checkAdRendered(adId, ub_slot, adCode){
+      ub_slotNum = ub_slot[ub_slot.length-1];
+      if(!mappings.renderedFlag[ub_slotNum]){
+        adId1 = adId;
+        var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+        if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+          setTimeout(function() {
+            refreshBid(ub_slot, adCode);
+          }, REFRESH_TIMEOUT);
+          mappings.renderedFlag[ub_slotNum] = true;
+        }
+      }
+    }
+
+    function refreshBid(ub_slot, adCode) {
+      ubpbjs.que.push(function(){
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: adCode,
+          bidsBackHandler: function() {
+            googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh(ub_slot);
+              });
+            });
+          }
+        });
+      });
+    }
+
+    function initAdserver() {
+        if (ubpbjs.initAdserverSet) return;
+        ubpbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh(mappings.slots);
+            });
+        });
+    }
+
+    function googleDefine(slotNumbers, adCode, sizes, adId){
+      for(var i=0; i<slotNumbers.length;i++){
+        eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+        var a = eval('ub_slot'+slotNumbers[i]);
+        a.addService(googletag.pubads());
+        mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+      }
+    }
+
+    function googlePush(){
+      googletag.cmd.push(function() {
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    }
+
+     // for(j=0; j<targetDivID.length; j++){
+     //   if(document.getElementById(targetDivID[j])){
+     //     mappings.slotNumbers.push(j+1);
+     //     mappings.adCode.push(mappings_full_config.adUnitNames[j]);
+     //     mappings.sizes.push(size_array);
+     //     mappings.adId.push(targetAdUnits[j]);
+     //     googletag.cmd.push(function() {
+     //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+     //         var ub_slots = 'ub_slot'+j+1;
+     //         if (event.slot === ub_slots) {
+     //           ub_checkAdRendered(targetAdUnits[j], ub_slots, [mappings_full_config.adUnitNames[j]]);
+     //         }
+     //       });
+     //     });
+     //   }
+     // }
+     if (document.getElementById('Unibots1')){
+      mappings.slotNumbers.push(1);
+      mappings.adCode.push('/21957769615/novelcake.com_hb_336x280');
+      mappings.sizes.push(size_array);
+      mappings.adId.push('div-gpt-ad-1604317331049-0');
+      googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_slot1) {
+              ub_checkAdRendered('div-gpt-ad-1604317331049-0', ub_slot1, ['/21957769615/novelcake.com_hb_336x280']);
+            }
+          });
+      });
      }
-   }
-   function refreshBid(ub_slot, adCode) {
-     ubpbjs.que.push(function(){
-       ubpbjs.requestBids({
-         timeout: PREBID_TIMEOUT,
-         adUnitCodes: adCode,
-         bidsBackHandler: function() {
-           googletag.cmd.push(function() {
-             ubpbjs.que.push(function() {
-                 ubpbjs.setTargetingForGPTAsync();
-                 googletag.pubads().refresh(ub_slot);
-             });
-           });
-         }
-       });
-     });
-   }
-
-   function initAdserver() {
-       if (ubpbjs.initAdserverSet) return;
-       ubpbjs.initAdserverSet = true;
+     if (document.getElementById('Unibots2')){
+      mappings.slotNumbers.push(2);
+      mappings.adCode.push('/21957769615/novelcake.com_hb_336x280_2');
+      mappings.sizes.push(size_array);
+      mappings.adId.push('div-gpt-ad-1604317355565-0');
        googletag.cmd.push(function() {
-           ubpbjs.que.push(function() {
-               ubpbjs.setTargetingForGPTAsync();
-               googletag.pubads().refresh(mappings.slots);
+           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+             if (event.slot === ub_slot2) {
+               ub_checkAdRendered('div-gpt-ad-1604317355565-0', ub_slot2, ['/21957769615/novelcake.com_hb_336x280_2']);
+             }
            });
        });
-   }
-
-   function googleDefine(slotNumbers, adCode, sizes, adId){
-     for(var i=0; i<slotNumbers.length;i++){
-       eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
-       var a = eval('ub_slot'+slotNumbers[i]);
-       a.addService(googletag.pubads());
-       mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
-     }
-   }
-
-   function googlePush(){
-     googletag.cmd.push(function() {
-       googletag.pubads().collapseEmptyDivs(true);
-       googletag.pubads().setCentering(true);
-       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-       googletag.pubads().enableSingleRequest();
-       googletag.enableServices();
-     });
-   }
-   for(j=0; j<targetDivID.length; j++){
-     if(document.getElementById(targetDivID[j])){
-       mappings.slotNumbers.push(j+1);
-       mappings.adCode.push(mappings_full_config.adUnitNames[j]);
+      }
+     if (document.getElementById('Unibots3')){
+       mappings.slotNumbers.push(3);
+       mappings.adCode.push('/21957769615/novelcake.com_hb_336x280_3');
        mappings.sizes.push(size_array);
-       mappings.adId.push(targetAdUnits[j]);
+       mappings.adId.push('div-gpt-ad-1604317380860-0');
        googletag.cmd.push(function() {
-         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           var ub_slots = 'ub_slot'+j+1;
-           if (event.slot === ub_slots) {
-             ub_checkAdRendered(targetAdUnits[j], ub_slots, [mappings_full_config.adUnitNames[j]]);
-           }
-         });
+           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+             if (event.slot === ub_slot3) {
+               ub_checkAdRendered('div-gpt-ad-1604317380860-0', ub_slot3, ['/21957769615/novelcake.com_hb_336x280_3']);
+             }
+           });
        });
-     }
-   }
-
-   if(typeof googletag.defineSlot === "function"){
-   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-   googlePush();
-   }
-   else{
-     setTimeout(function(){
+      }
+      if (document.getElementById('Unibots4')){
+       mappings.slotNumbers.push(4);
+       mappings.adCode.push('/21957769615/novelcake.com_hb_336x280_4');
+       mappings.sizes.push(size_array);
+       mappings.adId.push('div-gpt-ad-1604317405677-0');
        googletag.cmd.push(function() {
+           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+             if (event.slot === ub_slot4) {
+               ub_checkAdRendered('div-gpt-ad-1604317405677-0', ub_slot4, ['/21957769615/novelcake.com_hb_336x280_4']);
+             }
+           });
+       });
+      }
+      if (document.getElementById('Unibots5')){
+       mappings.slotNumbers.push(5);
+       mappings.adCode.push('/21957769615/novelcake.com_hb_336x280_5');
+       mappings.sizes.push(size_array);
+       mappings.adId.push('div-gpt-ad-1604317426194-0');
+        googletag.cmd.push(function() {
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+              if (event.slot === ub_slot5) {
+                ub_checkAdRendered('div-gpt-ad-1604317426194-0', ub_slot5, ['/21957769615/novelcake.com_hb_336x280_5']);
+              }
+            });
+        });
+       }
+
+     if(typeof googletag.defineSlot === "function"){
+       googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+       googlePush();
+     }
+     else{
+       setTimeout(function(){
          googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
          googlePush();
-       });
-       // googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-       // googlePush();
-     }, 500);
-   }
-   setTimeout(function() {
-       initAdserver();
-   }, FAILSAFE_TIMEOUT);
+       }, 500);
+     }
+
+     // setTimeout(function() {
+     //     initAdserver();
+     // }, FAILSAFE_TIMEOUT);
+  // }

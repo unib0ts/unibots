@@ -112,7 +112,7 @@ ubpbjs.que.push(function() {
       useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://tuoitre.vn',
+      publisherDomain: 'https://phunusuckhoe.vn/',
       bidderTimeout: PREBID_TIMEOUT+500,
       // "currency": {
       //    // enables currency feature
@@ -161,7 +161,8 @@ ubpbjs.que.push(function() {
     //     global: 'ubga'
     //   }
     // }]);
-});
+ });
+}
 
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
@@ -212,7 +213,7 @@ function send_bids_for_analytics() {
       adunit: code,
       auctionId: bid.auctionId,
       date: new Date().toLocaleDateString("en-US", {timeZone: "Asia/Kolkata"}),
-      client: 'tuoitre',
+      client: 'phunusuckhoe',
       rendered: !!winners.find(function(winner) {
         return winner.adId==bid.adId;
       })

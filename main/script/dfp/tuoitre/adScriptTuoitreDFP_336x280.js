@@ -162,7 +162,8 @@ ubpbjs.que.push(function() {
     //     global: 'ubga'
     //   }
     // }]);
-});
+ });
+}
 
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;

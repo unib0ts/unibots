@@ -106,7 +106,7 @@ if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-ri
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           // { bidder: 'openx', params: { unit: '541045935', delDomain: 'yieldbird-d.openx.net' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934210'} },
-          //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+          { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // { bidder: 'criteo', params: { networkId: '4902' } },
           { bidder: 'criteo', params: {networkId: '10542'} },

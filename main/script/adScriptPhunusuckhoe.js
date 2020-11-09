@@ -75,70 +75,71 @@ var adUnits = [];
 //         adUnits.push(adUnits1);
   }
   else {
-   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php') {
-      adUnits1 = {
-         code: '/21957769615/phunusuckhoe.vn_nb_320x50',
-         mediaTypes: {
-           native: {
-             image: {
-               // sizes: [300, 100],
-               aspect_ratios: [{
-                 min_width: 100,        /* Optional */
-                 min_height: 50,       /* Optional */
-                 ratio_width: 2,        /* Required */
-                 ratio_height: 1,       /* Required */
-               }],
-               sendId: true
-             },
-             title: {
-               len: 50,
-               sendId: true
-             },
-             sponsoredBy: {
-               required: true,
-               sendId: true
-             },
-             clickUrl: {
-               required: true,
-               sendId: true
-             }
+    adUnits1 = {
+       code: '/21957769615/phunusuckhoe.vn_nb_320x50',
+       mediaTypes: {
+         native: {
+           image: {
+             // sizes: [300, 100],
+             aspect_ratios: [{
+               min_width: 100,        /* Optional */
+               min_height: 50,       /* Optional */
+               ratio_width: 2,        /* Required */
+               ratio_height: 1,       /* Required */
+             }],
+             sendId: true
+           },
+           title: {
+             len: 50,
+             sendId: true
+           },
+           sponsoredBy: {
+             required: true,
+             sendId: true
+           },
+           clickUrl: {
+             required: true,
+             sendId: true
            }
-         },
-         bids: [
-           { bidder: 'appnexus', params: { placementId: '19287038' } },
-           { bidder: 'oftmedia', params: { placementId: '19680339' } }
-         ]
-      };
-      adUnits.push(adUnits1);
-      adUnits1 = {
-         code: '/21957769615/phunusuckhoe.vn_nb_320x50',
-         mediaTypes: {
-             banner: {
-                 sizes: div_1_sizes
-             }
-         },
-         bids: [
-          { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
-          { bidder: 'oftmedia', params: { placementId: '19680339' } },
-          { bidder: '33across', params: { siteId : 'cc-FvQWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-           { bidder: 'sovrn', params: {tagid: '727387'} },
-           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-          // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           { bidder: 'nobid', params: { siteId : '22027067866'} },
-           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932599'} },
-           { bidder: 'criteo', params: {networkId: '10542'} },
-           { bidder: 'criteointl', params: {networkId: '10545'} },
-           { bidder: 'smartadserver', params: { siteId: '362137', pageId: '1289638', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-         ]
-      };
-      adUnits.push(adUnits1);
+         }
+       },
+       bids: [
+         { bidder: 'appnexus', params: { placementId: '19287038' } },
+         { bidder: 'oftmedia', params: { placementId: '19680339' } }
+       ]
+    };
+    adUnits.push(adUnits1);
+    adUnits1 = {
+       code: '/21957769615/phunusuckhoe.vn_nb_320x50',
+       mediaTypes: {
+           banner: {
+               sizes: div_1_sizes
+           }
+       },
+       bids: [
+        { bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
+        { bidder: 'oftmedia', params: { placementId: '19680339' } },
+        { bidder: '33across', params: { siteId : 'cc-FvQWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         { bidder: 'sovrn', params: {tagid: '727387'} },
+         // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+        // { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+         { bidder: 'nobid', params: { siteId : '22027067866'} },
+         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932599'} },
+         { bidder: 'criteo', params: {networkId: '10542'} },
+         { bidder: 'criteointl', params: {networkId: '10545'} },
+         { bidder: 'smartadserver', params: { siteId: '362137', pageId: '1289638', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+         //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+       ]
+    };
+    adUnits.push(adUnits1);
+   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php') {
+    if (document.getElementById('ub-home')){
       adUnits1 = {
          code: '/21957769615/phunusuckhoe_nb_336x280_mobile_home',
          mediaTypes: {
@@ -169,72 +170,8 @@ var adUnits = [];
          ]
       };
       adUnits.push(adUnits1);
+    }
    }
-    adUnits1 =
-    {
-        code: '/21957769615/phunusuckhoe.vn_nb_320x50',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
-            },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
-        },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19287038' } },
-          { bidder: 'oftmedia', params: { placementId: '19680339' } }
-        ]
-    };
-    adUnits.push(adUnits1);
-    adUnits1= {
-        code: '/21957769615/phunusuckhoe.vn_nb_320x50',
-        mediaTypes: {
-            banner: {
-                sizes: div_1_sizes
-            }
-        },
-        bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19287038' } }, /* one placementId for all sizes  my appnexus bidder */
-        	{ bidder: 'oftmedia', params: { placementId: '19680339' } },
-        	// { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-        	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '727387'} },
-          { bidder: 'criteo', params: {networkId: '10542'} },
-          { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-        	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
-        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          { bidder: 'nobid', params: { siteId : '22027067866'} },
-          // { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932599'} },
-          { bidder: 'smartadserver', params: { siteId: '362137', pageId: '1289638', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-          //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-        ]
-    };
-    adUnits.push(adUnits1);
   }
   if (document.getElementById('article_Inview')) {
     adUnits1 = {
@@ -334,7 +271,6 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
 }
 
 function refreshBid(ub_slot, adCode) {
-  console.log('testreq');
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
@@ -396,43 +332,31 @@ function googlePush(){
    // });
  }
  else {
+   mappings.slotNumbers.push(1);
+   mappings.adCode.push('/21957769615/phunusuckhoe.vn_nb_320x50');
+   mappings.sizes.push(div_1_sizes);
+   mappings.adId.push('div-gpt-ad-1589865114606-0');
+   googletag.cmd.push(function() {
+     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+       if (event.slot === ub_slot1) {
+         ub_checkAdRendered('div-gpt-ad-1589865114606-0', ub_slot1, ['/21957769615/phunusuckhoe.vn_nb_320x50']);
+       }
+     });
+   });
   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php'){
-    mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21957769615/phunusuckhoe.vn_nb_320x50');
-    mappings.sizes.push(div_1_sizes);
-    mappings.adId.push('div-gpt-ad-1589865114606-0');
-    googletag.cmd.push(function() {
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1589865114606-0', ub_slot1, ['/21957769615/phunusuckhoe.vn_nb_320x50']);
-        }
+    if (document.getElementById('ub-home')){
+      mappings.slotNumbers.push(4);
+      mappings.adCode.push('/21957769615/phunusuckhoe_nb_336x280_mobile_home');
+      mappings.sizes.push(div_4_sizes);
+      mappings.adId.push('div-gpt-ad-1591007325662-0');
+      googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot4) {
+            ub_checkAdRendered('div-gpt-ad-1591007325662-0', ub_slot4, ['/21957769615/phunusuckhoe_nb_336x280_mobile_home']);
+          }
+        });
       });
-    });
-
-    mappings.slotNumbers.push(4);
-    mappings.adCode.push('/21957769615/phunusuckhoe_nb_336x280_mobile_home');
-    mappings.sizes.push(div_4_sizes);
-    mappings.adId.push('div-gpt-ad-1591007325662-0');
-    googletag.cmd.push(function() {
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot4) {
-          ub_checkAdRendered('div-gpt-ad-1591007325662-0', ub_slot4, ['/21957769615/phunusuckhoe_nb_336x280_mobile_home']);
-        }
-      });
-    });
-  }
-  else {
-    mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21957769615/phunusuckhoe.vn_nb_320x50');
-    mappings.sizes.push(div_1_sizes);
-    mappings.adId.push('div-gpt-ad-1589865114606-0');
-    googletag.cmd.push(function() {
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1589865114606-0', ub_slot1, ['/21957769615/phunusuckhoe.vn_nb_320x50']);
-        }
-      });
-    });
+    }
   }
  }
  if (document.getElementById('article_Inview')){

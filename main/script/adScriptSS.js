@@ -103,7 +103,7 @@ var adUnits = [
         { bidder: 'emx_digital', params: { tagid: '97515' } },
         { bidder: 'appnexus', params: { placementId: '19056673' } },
         { bidder: 'sovrn', params: { tagid: '708881' } },
-        // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
+        { bidder: 'openx', params: {unit: '543459652', delDomain: 'unibots-d.openx.net'} },
         { bidder: 'nobid', params: { siteId: '21987177881' } },
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -240,8 +240,71 @@ function initAdserver() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh([ub_slot1]);
+            var x = ubpbjs.getAllPrebidWinningBids();
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
+}
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=sakshi';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+	googletag.pubads().refresh([ub_slot1]);
 }
 
 function refreshBid(ub_slot) {
@@ -254,6 +317,17 @@ function refreshBid(ub_slot) {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh([ub_slot]);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
 		  }
@@ -304,7 +378,7 @@ var mappings_config = {
       { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
       { bidder: 'sovrn', params: {tagid: '735296'} },
       { bidder: "kubient", params: { zoneid: "aeb553306903a", server: "kssp.kbntx.ch"} },
-      // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+      { bidder: 'openx', params: {unit: '543459862', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       { bidder: 'nobid', params: { siteId: '21987177881' } },
@@ -322,7 +396,7 @@ var mappings_config = {
       { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
       { bidder: 'sovrn', params: {tagid: '738414'} },
       { bidder: "kubient", params: { zoneid: "aeb553306903a", server: "kssp.kbntx.ch"} },
-      // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+      { bidder: 'openx', params: {unit: '543459998', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
       { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       { bidder: 'nobid', params: { siteId: '21987177881' } },
@@ -396,6 +470,18 @@ function initAdserver_remnant() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh(mappings_remnant.slots);
+            var x = ubpbjs.getAllPrebidWinningBids();
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
 }
@@ -419,6 +505,17 @@ function callRemnantAds(adCode, ub_slot){
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh(ub_slot);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
       }

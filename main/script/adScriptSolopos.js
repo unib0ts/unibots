@@ -88,7 +88,7 @@ var adUnits = [
     // { bidder: 'oftmedia', params: { placementId: '19095453' } },
     { bidder: 'sovrn', params: {tagid: '708876'} },
     { bidder: 'nobid', params: { siteId : '21975045720'} },
-    // { bidder: 'openx', params: {unit: '541046677', delDomain: 'yieldbird-d.openx.net'} },
+    { bidder: 'openx', params: {unit: '543530443', delDomain: 'unibots-d.openx.net'} },
     { bidder: 'smartadserver', params: { siteId: '362149', pageId: '1289650', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
     //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -119,9 +119,73 @@ function initAdserver() {
     ubpbjs.que.push(function() {
         ubpbjs.setTargetingForGPTAsync();
         googletag.pubads().refresh([ub_slot1]);
+        var x = ubpbjs.getAllPrebidWinningBids();
+        var adsCalled = false;
+        for(var i=0;i<x.length;i++){
+          var bc = x[i].bidderCode;
+          if(bc=="openx"){
+            adsCalled = true;
+            callBotman();
+          }
+        }
+        if(!adsCalled){
+          callAdsUB();
+        }
     });
   });
 }
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=cricketnmore';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+	googletag.pubads().refresh([ub_slot1]);
+}
+
 
 var ub_slot1;
 googletag.cmd.push(function() {
@@ -148,6 +212,17 @@ function refreshBid() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh([ub_slot1]);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
 		  }

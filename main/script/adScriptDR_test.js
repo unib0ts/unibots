@@ -89,7 +89,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '701548'} },
-          { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530455', delDomain: 'unibots-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '21975046114'} },
@@ -170,9 +170,73 @@ function initAdserver() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh([ub_slot1]);
+            var x = ubpbjs.getAllPrebidWinningBids();
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
 }
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=dailyrecruitment';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+	googletag.pubads().refresh([ub_slot1]);
+}
+
 // in case ubpbjs doesn't load
 setTimeout(function() {
     initAdserver();
@@ -203,6 +267,17 @@ function refreshBid() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh([ub_slot1]);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
 		  }

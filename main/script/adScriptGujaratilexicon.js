@@ -59,6 +59,7 @@ if (document.getElementById('1')) {
         bids: [
         // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
         { bidder: 'appnexus', params: { placementId: '19352238' } },
+        { bidder: 'openx', params: {unit: '543530219', delDomain: 'unibots-d.openx.net'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'sovrn', params: {tagid: '735396'} },
@@ -88,6 +89,7 @@ if (document.getElementById('2')) {
         bids: [
           // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19352238' } },
+          { bidder: 'openx', params: {unit: '543530220', delDomain: 'unibots-d.openx.net'} },
           // { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'sovrn', params: {tagid: '735188'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
@@ -118,6 +120,7 @@ if (document.getElementById('3')) {
         bids: [
           // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19352238' } },
+          { bidder: 'openx', params: {unit: '543530221', delDomain: 'unibots-d.openx.net'} },
           // { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'sovrn', params: {tagid: '735395'} },
           { bidder: 'nobid', params: { siteId : '22049999686'} },
@@ -148,6 +151,7 @@ if (document.getElementById('4')) {
         bids: [
           // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19352238' } },
+          { bidder: 'openx', params: {unit: '543530222', delDomain: 'unibots-d.openx.net'} },
           // { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'sovrn', params: {tagid: '735397'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
@@ -179,6 +183,7 @@ if (document.getElementById('5')) {
           // { bidder: 'eplanning', params: {ci: '2cfed', ml: '1'}},
           { bidder: 'appnexus', params: { placementId: '19352238' } },
           { bidder: 'sovrn', params: {tagid: '735398'} },
+          { bidder: 'openx', params: {unit: '543530223', delDomain: 'unibots-d.openx.net'} },
           // { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'nobid', params: { siteId : '22049999686'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
@@ -210,6 +215,7 @@ if (document.getElementById('6')) {
           { bidder: 'appnexus', params: { placementId: '19352238' } },
           // { bidder: 'criteo', params: {networkId: '4902'} },
           { bidder: 'sovrn', params: {tagid: '735399'} },
+          { bidder: 'openx', params: {unit: '543530224', delDomain: 'unibots-d.openx.net'} },
           { bidder: 'nobid', params: { siteId : '22049999686'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -271,6 +277,17 @@ function refreshBid(ub_slot, adCode) {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh(ub_slot);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
       }
@@ -285,8 +302,71 @@ function initAdserver() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh(mappings.slots);
+            var x = ubpbjs.getAllPrebidWinningBids();
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
+}
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=gujratilexicon';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+	googletag.pubads().refresh(ub_slot);
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){

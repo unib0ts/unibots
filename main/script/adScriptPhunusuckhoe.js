@@ -49,7 +49,7 @@ var div_6_sizes = [300, 250];
 var adUnits = [];
 
   if (document.getElementById('MB_article_Inview')) {
-    document.getElementById('MB_article_Inview').innerHTML ='div-gpt-ad-1605764533680-0';
+    document.getElementById('MB_article_Inview').innerHTML ='<div id="div-gpt-ad-1605764533680-0"></div>';
   }
 // if (mobileCheck === 'function') {
   if (!mobileCheck()) {

@@ -46,8 +46,17 @@ var div_4_sizes = [300, 600];
 var div_5_sizes = [[970, 90], [728, 90]];
 var div_6_sizes = [[320, 50], [320, 100]];
 var div_7_sizes = [[250, 250], [300, 250]];
+var div_8_sizes = [300, 250];
+var div_9_sizes = [300, 250];
 
 var adUnits = [];
+
+if (document.getElementById('chanbai_unitbot_1')) {
+  document.getElementById('chanbai_unitbot_1').innerHTML ='<div id="div-gpt-ad-1605767139870-0"></div>';
+}
+if (document.getElementById('chanbai_unitbot_2')) {
+  document.getElementById('chanbai_unitbot_2').innerHTML ='<div id="div-gpt-ad-1605767165234-0"></div>';
+}
 
 if (typeof mobileCheck === "function") {
   if (!mobileCheck()) {
@@ -363,6 +372,70 @@ if (typeof mobileCheck === "function") {
     };
     adUnits.push(adUnits1);
   }
+  if (document.getElementById('chanbai_unitbot_1')) {
+    adUnits1 =
+      {
+        code: '/21957769615/workbank.vn_hb_300x250_2',
+        mediaTypes: {
+            banner: {
+                sizes: div_7_sizes
+            }
+        },
+        bids: [
+            { bidder: 'appnexus', params: { placementId: '19928396' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+           { bidder: 'nobid', params: { siteId : '22088461852'} },
+           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         // { bidder: 'smartadserver', params: { siteId: '369198', pageId: '1301295', formatId: '93416', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.getElementById('chanbai_unitbot_2')) {
+    adUnits1 =
+      {
+        code: '/21957769615/workbank.vn_hb_300x250_3',
+        mediaTypes: {
+            banner: {
+                sizes: div_8_sizes
+            }
+        },
+        bids: [
+            { bidder: 'appnexus', params: { placementId: '19928396' } }, /* one placementId for all sizes  my appnexus bidder */
+         // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+         //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952068'} },
+         // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+         //  { bidder: 'sovrn', params: {tagid: '736651'} },
+         //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+         // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+           { bidder: 'nobid', params: { siteId : '22088461852'} },
+           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+         //  { bidder: 'criteo', params: {networkId: '10542'} },
+         //  { bidder: 'criteointl', params: {networkId: '10545'} },
+         // { bidder: 'smartadserver', params: { siteId: '369198', pageId: '1301295', formatId: '93416', domain: 'https://prg8.smartadserver.com' } },
+         //  { bidder: 'sonobi', params: { placement_id: '7aa56dd0b957bb9d3464', ad_unit: 'beanstalkmums.com.au_nb_468x60' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
 // }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -450,7 +523,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false, false, false, false, false]
+  renderedFlag: [false, false, false, false, false, false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -643,6 +716,32 @@ if(typeof mobileCheck === "function"){
          });
      });
     }
+    if (document.getElementById('chanbai_unitbot_1')){
+      mappings.slotNumbers.push(8);
+      mappings.adCode.push('/21957769615/workbank.vn_hb_300x250_2');
+      mappings.sizes.push(div_8_sizes);
+      mappings.adId.push('div-gpt-ad-1605767139870-0');
+      googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_slot8) {
+              ub_checkAdRendered('div-gpt-ad-1605767139870-0', ub_slot8, ['/21957769615/workbank.vn_hb_300x250_2']);
+            }
+          });
+      });
+     }
+     if (document.getElementById('chanbai_unitbot_2')){
+       mappings.slotNumbers.push(9);
+       mappings.adCode.push('/21957769615/workbank.vn_hb_300x250_3');
+       mappings.sizes.push(div_9_sizes);
+       mappings.adId.push('div-gpt-ad-1605767165234-0');
+       googletag.cmd.push(function() {
+           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+             if (event.slot === ub_slot9) {
+               ub_checkAdRendered('div-gpt-ad-1605767165234-0', ub_slot9, ['/21957769615/workbank.vn_hb_300x250_3']);
+             }
+           });
+       });
+      }
 // }
 
 if(typeof googletag.defineSlot === "function"){

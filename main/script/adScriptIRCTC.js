@@ -278,9 +278,9 @@ if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
       adId1 = adId;
       var nodes = document.getElementById(adId1).childNodes[0].childNodes;
       if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        // setTimeout(function() {
-        //   refreshBid(ub_slot, adCode);
-        // }, REFRESH_TIMEOUT);
+        setTimeout(function() {
+          refreshBid(ub_slot, adCode);
+        }, REFRESH_TIMEOUT);
         mappings.renderedFlag[ub_slotNum] = true;
       }
     }

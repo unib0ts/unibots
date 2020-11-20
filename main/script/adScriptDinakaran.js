@@ -89,7 +89,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'bzAHA8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '701550'} },
-          // { bidder: 'openx', params: {unit: '541046039', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530317', delDomain: 'unibots-d.openx.net'} },
         	{ bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -123,11 +123,73 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            // googletag.pubads().refresh([ub_slot1]);
+            var x = ubpbjs.getAllPrebidWinningBids();
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
 }
 
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=dinakaran';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+	googletag.pubads().refresh([ub_slot1]);
+}
 var ub_slot1;
 googletag.cmd.push(function() {
     ub_slot1 = googletag.defineSlot('/21956033520/dinakaran.com', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
@@ -152,7 +214,18 @@ function refreshBid() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
+              // googletag.pubads().refresh([ub_slot1]);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
 		  }

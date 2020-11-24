@@ -1,9 +1,9 @@
-var s1 = document.createElement('script');
-s1.async = true;
-s1.setAttribute("id", "AV5f53b797a87256261f0b676c");
-s1.type = "text/javascript";
-s1.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5f53b797a87256261f0b676c&AV_PUBLISHERID=5f466e970d71fa6f143050a9";
-document.getElementsByTagName('head')[0].appendChild(s1);
+// var s1 = document.createElement('script');
+// s1.async = true;
+// s1.setAttribute("id", "AV5f53b797a87256261f0b676c");
+// s1.type = "text/javascript";
+// s1.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5f53b797a87256261f0b676c&AV_PUBLISHERID=5f466e970d71fa6f143050a9";
+// document.getElementsByTagName('head')[0].appendChild(s1);
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;

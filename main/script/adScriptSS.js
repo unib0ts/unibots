@@ -169,7 +169,7 @@ ubpbjs.que.push(function() {
             }
         }],
         auctionDelay: 500},
-    debug: true,
+    debug: false,
     useBidCache: true,
     enableSendAllBids: false, // Default will be `true` as of 1.0
     bidderSequence: 'random', // Default is random
@@ -239,7 +239,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            // googletag.pubads().refresh([ub_slot1]);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
@@ -520,7 +520,7 @@ function initAdserver_remnant() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings_remnant.slots);
+            // googletag.pubads().refresh(mappings_remnant.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_rem = false;
             for(var i=0;i<x.length;i++){
@@ -1109,7 +1109,7 @@ function initAdserver_hb_full() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([mapping_full_hb.slots]);
+            // googletag.pubads().refresh([mapping_full_hb.slots]);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){

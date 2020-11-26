@@ -616,6 +616,17 @@ else{
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
                   googletag.pubads().refresh([ub_slot]);
+                  var adsCalled = false;
+                  for(var i=0;i<x.length;i++){
+                    var bc = x[i].bidderCode;
+                    if(bc=="openx"){
+                      adsCalled = true;
+                      callBotman();
+                    }
+                  }
+                  if(!adsCalled){
+                    callAdsUB();
+                  }
               });
             });
     		  }

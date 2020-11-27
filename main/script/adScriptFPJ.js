@@ -98,7 +98,7 @@ var adUnits = [
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'smartadserver', params: { siteId: '362116', pageId: '1289617', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'smartadserver', params: { siteId: '362116', pageId: '1289617', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: '795c9731aacf3eb81e49', ad_unit: 'freepressjournal.in_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         ]

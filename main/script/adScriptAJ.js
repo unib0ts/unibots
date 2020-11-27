@@ -70,7 +70,7 @@ const customConfigObjectA = {
        // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22103912380'} },
-        { bidder: 'smartadserver', params: { siteId: '371032', pageId: '1306256', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+        { bidder: 'smartadserver', params: { siteId: '371032', pageId: '1306256', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
         // { bidder: 'ucfunnel', params: { adid : 'ad-E2B4227B993A8AB7F76DE224B4AADEB9'} },
        //  // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

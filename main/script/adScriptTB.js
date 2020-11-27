@@ -92,7 +92,7 @@ var adUnits = [
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'openx', params: {unit: '543530204', delDomain: 'unibots-d.openx.net'} },
           { bidder: 'nobid', params: { siteId : '22049999758'} },
-          { bidder: 'smartadserver', params: { siteId: '362151', pageId: '1289652', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'smartadserver', params: { siteId: '362151', pageId: '1289652', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: 'e5e60465663764aefd67', ad_unit: 'telugubulletin.com_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996050'} },

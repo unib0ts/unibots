@@ -99,7 +99,7 @@ var adUnits = [
           { bidder: 'criteointl', params: {networkId: '10545'} },
           // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: "kubient", params: { zoneid: "b0902b1a324bd", server: "kssp.kbntx.ch"} },
-          { bidder: 'smartadserver', params: { siteId: '362122', pageId: '1289623', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'smartadserver', params: { siteId: '362122', pageId: '1289623', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: '58a52a2fbb75390de3ec', ad_unit: 'ibtimes.sg_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'ucfunnel', params: { adid : 'ad-772877482D28A332FBD8EBE97B6EAB46'} },

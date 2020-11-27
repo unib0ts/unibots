@@ -94,7 +94,7 @@ var adUnits = [
           { bidder: 'openx', params: {unit: '543530181', delDomain: 'unibots-d.openx.net'} },
           { bidder: 'nobid', params: { siteId : '22049999737'} },
         	{ bidder: 'rhythmone', params: { placementId: '205475' } }, /* one placementId for all sizes */
-          { bidder: 'smartadserver', params: { siteId: '362147', pageId: '1289648', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'smartadserver', params: { siteId: '362147', pageId: '1289648', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: '9556f14f37ff1c8b8ccd', ad_unit: 'scoopwhoop.com_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996045'} },

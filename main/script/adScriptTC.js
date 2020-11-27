@@ -91,7 +91,7 @@ var adUnits = [
     { bidder: '33across', params: { siteId : 'ccvHyIBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97555' } }, /* sizeless */
     { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-    { bidder: 'smartadserver', params: { siteId: '372445', pageId: '1309516', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+    { bidder: 'smartadserver', params: { siteId: '372445', pageId: '1309516', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
     // { bidder: 'openx', params: {unit: '541046330', delDomain: 'yieldbird-d.openx.net'} },
     { bidder: 'nobid', params: { siteId : '22049999755'} },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028667'} },

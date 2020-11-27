@@ -97,7 +97,7 @@ var adUnits = [
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          { bidder: 'smartadserver', params: { siteId: '362115', pageId: '1289616', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'smartadserver', params: { siteId: '362115', pageId: '1289616', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"]},
           { bidder: 'sonobi', params: { placement_id: 'ab0665167561691b6ba3', ad_unit: 'filmyfocus.com_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

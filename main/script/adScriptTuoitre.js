@@ -85,7 +85,7 @@ var adUnits = [
     // {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
     { bidder: 'appnexus', params: { placementId: '19843544' } }, /* one placementId for all sizes  my appnexus bidder */
     // { bidder: 'sovrn', params: {tagid: '741305'} },
-    { bidder: 'smartadserver', params: { siteId: '362165', pageId: '1289667', formatId: '93418', domain: 'https://prg8.smartadserver.com' } },
+    { bidder: 'smartadserver', params: { siteId: '362165', pageId: '1289667', formatId: '93418', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
     //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     // { bidder: '33across', params: { siteId : 'b_XbMyWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/

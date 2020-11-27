@@ -97,7 +97,7 @@ var adUnits = [
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
     { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA7E46A3434DF4EAEB3787D27B3E'} },
-    { bidder: 'smartadserver', params: { siteId: '370920', pageId: '1306099', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+    { bidder: 'smartadserver', params: { siteId: '370920', pageId: '1306099', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
   ]
 }];
 

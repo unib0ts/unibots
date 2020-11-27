@@ -62,7 +62,7 @@ var adUnits = [
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'smartadserver', params: { siteId: '362102', pageId: '1289603', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'smartadserver', params: { siteId: '362102', pageId: '1289603', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: '7726245c6c9704507f8e', ad_unit: 'dailyrecruitment.in_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996026'} },

@@ -174,7 +174,7 @@ var mappings_full_hb_config = {
   ],
   bids: [
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099829'} },
       { bidder: 'openx', params: {unit: '543503533', delDomain: 'unibots-d.openx.net'} },
@@ -182,7 +182,7 @@ var mappings_full_hb_config = {
     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), //sakshiNew_box1_300x250
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099830'} },
       { bidder: 'openx', params: {unit: '543503618', delDomain: 'unibots-d.openx.net'} },
@@ -190,7 +190,7 @@ var mappings_full_hb_config = {
     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), //sakshiNew_box2_300x250
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099831'} },
       { bidder: 'openx', params: {unit: '543503686', delDomain: 'unibots-d.openx.net'} },
@@ -198,14 +198,14 @@ var mappings_full_hb_config = {
     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
     ]), //sakshiNew_box3_300x250
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099832'} },
         { bidder: 'openx', params: {unit: '543503750', delDomain: 'unibots-d.openx.net'} },
     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
     ]), //fullstories_300x50_firstslot
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93422', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93422', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     //   { bidder: 'sovrn', params: {tagid: '744083'} },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099833'} },
@@ -213,7 +213,7 @@ var mappings_full_hb_config = {
     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
     ]), //sakshiNew_HP
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93233', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93233', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099836'} },
       { bidder: 'openx', params: {unit: '543503895', delDomain: 'unibots-d.openx.net'} },
@@ -221,7 +221,7 @@ var mappings_full_hb_config = {
     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi', domain: 'https://prg8.smartadserver.com' } }
     ]), //1062118/sakshiNew_skin_Left
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93420', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93420', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099835'} },
       { bidder: 'openx', params: {unit: '543503971', delDomain: 'unibots-d.openx.net'} },
@@ -229,7 +229,7 @@ var mappings_full_hb_config = {
     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]), //1062118/sakshiNew_skin_right
     hb_full_common_bidders.concat([
-      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+      { bidder: 'smartadserver', params: { siteId: '362124', pageId: '1289625', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
       //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099834'} },
       { bidder: 'openx', params: {unit: '543504141', delDomain: 'unibots-d.openx.net'} },

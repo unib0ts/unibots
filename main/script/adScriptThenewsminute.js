@@ -56,7 +56,7 @@ const customConfigObjectA = {
       bids: [
        { bidder: 'appnexus', params: { placementId: '20215297' } }, /* one placementId for all sizes  my appnexus bidder */
        { bidder: 'sovrn', params: {tagid: '774108'} },
-       { bidder: 'smartadserver', params: { siteId: '371047', pageId: '1306271', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+       { bidder: 'smartadserver', params: { siteId: '371047', pageId: '1306271', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
        // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206182'} },

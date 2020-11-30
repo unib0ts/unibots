@@ -97,7 +97,7 @@ var adUnits = [
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'nobid', params: { siteId : '22049999638'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          { bidder: 'smartadserver', params: { siteId: '362093', pageId: '1289594', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362093', pageId: '1289594', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: 'bc6bf942b24fc0dd4ba7', ad_unit: 'assamtribune.com_nb_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

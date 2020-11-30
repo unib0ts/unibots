@@ -64,7 +64,7 @@ if (document.getElementById('corover-ksrtc-IP')) {
         { bidder: 'sovrn', params: {tagid: '725490'} },
       	{ bidder: '33across', params: { siteId : 'beqQPQWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
-        { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+        { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         { bidder: 'sonobi', params: { placement_id: '8113176c399bf930308e', ad_unit: 'ksrtc.in_nb_300x250' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -92,7 +92,7 @@ if (document.getElementById('corover-ksrtc-HP')) {
         { bidder: 'appnexus', params: { placementId: '19252129' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'sovrn', params: {tagid: '725491'} },
         { bidder: '33across', params: { siteId : 'beqQPQWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-          { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         { bidder: 'sonobi', params: { placement_id: '7a1e7f6b7d1d4a83fac9', ad_unit: 'ksrtc.in_nb_320x50' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -121,7 +121,7 @@ if (document.getElementById('corover-ad-hp')) {
         	{ bidder: '33across', params: { siteId : 'beqQPQWuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           // { bidder: 'oftmedia', params: { placementId: '19095403' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2975889'} },
-            { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+            { bidder: 'smartadserver', params: { siteId: '362126', pageId: '1289627', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: '7a1e7f6b7d1d4a83fac9', ad_unit: 'ksrtc.in_nb_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },

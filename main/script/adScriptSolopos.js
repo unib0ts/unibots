@@ -89,7 +89,7 @@ var adUnits = [
     { bidder: 'sovrn', params: {tagid: '708876'} },
     { bidder: 'nobid', params: { siteId : '21975045720'} },
     { bidder: 'openx', params: {unit: '543530443', delDomain: 'unibots-d.openx.net'} },
-    { bidder: 'smartadserver', params: { siteId: '362149', pageId: '1289650', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+    { bidder: 'smartadserver', params: { siteId: '362149', pageId: '1289650', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
     //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996047'} },

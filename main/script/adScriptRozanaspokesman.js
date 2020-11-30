@@ -157,7 +157,7 @@ if (botsiteurl=='www.rozanaspokesman.in') {
       bids: [
        { bidder: 'appnexus', params: { placementId: '20250875' } }, /* one placementId for all sizes  my appnexus bidder */
        { bidder: 'sovrn', params: {tagid: '777522'} },
-       { bidder: 'smartadserver', params: { siteId: '372442', pageId: '1309513', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+       { bidder: 'smartadserver', params: { siteId: '372442', pageId: '1309513', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225513'} },
@@ -191,7 +191,7 @@ else {
       bids: [
        { bidder: 'appnexus', params: { placementId: '20250876' } }, /* one placementId for all sizes  my appnexus bidder */
        { bidder: 'sovrn', params: {tagid: '777522'} },
-       { bidder: 'smartadserver', params: { siteId: '372441', pageId: '1309512', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+       { bidder: 'smartadserver', params: { siteId: '372441', pageId: '1309512', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225513'} },

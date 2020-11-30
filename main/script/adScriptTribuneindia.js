@@ -70,7 +70,7 @@ const customConfigObjectA = {
         { bidder: 'nobid', params: { siteId : '22103912383'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-BE78EEB763EB248B17DB6B3D8DE669A7'} },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-        { bidder: 'smartadserver', params: { siteId: '371048', pageId: '1306272', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAll: ["US", "CA"] },
+        { bidder: 'smartadserver', params: { siteId: '371048', pageId: '1306272', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        //  // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

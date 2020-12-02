@@ -277,6 +277,7 @@ if(typeof customConfigObjectA === 'undefined'){
     { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'adkernel', params: {zoneId: '126009', host: 'cpm.fmlabsonline.com'} },
   ];
   var mappings_full_hb_config_old = {
     targetUnits: [],

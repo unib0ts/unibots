@@ -107,6 +107,7 @@ var adUnits = [
         { bidder: 'nobid', params: { siteId: '21987177881' } },
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
+        { bidder: 'adkernel', params: {zoneId: '126007', host: 'cpm.fmlabsonline.com'} },
         // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
         //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
@@ -439,6 +440,7 @@ var mappings_config = {
       {bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'Sakshi'} },
       { bidder: 'criteointl', params: {networkId: '10545'} },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996013'} },
+      { bidder: 'adkernel', params: {zoneId: '126007', host: 'cpm.fmlabsonline.com'} },
     ],
     [
       { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
@@ -457,6 +459,7 @@ var mappings_config = {
       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
       { bidder: 'criteointl', params: {networkId: '10545'} },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996014'} },
+      { bidder: 'adkernel', params: {zoneId: '126007', host: 'cpm.fmlabsonline.com'} },
     ]
   ]
 }
@@ -597,6 +600,7 @@ var hb_full_common_bidders = [
   { bidder: 'criteo', params: {networkId: '10542'} },
   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
   { bidder: 'criteointl', params: {networkId: '10545'} },
+  { bidder: 'adkernel', params: {zoneId: '126007', host: 'cpm.fmlabsonline.com'} },
   // { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
 ];
 var mappings_full_hb_config = {

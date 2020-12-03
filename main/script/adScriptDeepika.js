@@ -280,7 +280,7 @@ if(mobileCheck === 'function'){
        googletag.cmd.push(function() {
            ubpbjs.que.push(function() {
                ubpbjs.setTargetingForGPTAsync();
-               // googletag.pubads().refresh([ub_slot2]);
+               googletag.pubads().refresh([ub_slot2]);
                var x = ubpbjs.getAllPrebidWinningBids();
                var adsCalled = false;
                for(var i=0;i<x.length;i++){
@@ -326,7 +326,7 @@ if(mobileCheck === 'function'){
            googletag.cmd.push(function() {
              ubpbjs.que.push(function() {
                  ubpbjs.setTargetingForGPTAsync();
-                 googletag.pubads().refresh([ub_slot2]);
+                 googletag.pubads().refresh([ub_slot]);
                  var adsCalled = false;
                  for(var i=0;i<x.length;i++){
                    var bc = x[i].bidderCode;
@@ -366,7 +366,7 @@ if(mobileCheck === 'function'){
        googletag.cmd.push(function() {
            ubpbjs.que.push(function() {
                ubpbjs.setTargetingForGPTAsync();
-               // googletag.pubads().refresh([ub_slot1]);
+               googletag.pubads().refresh([ub_slot1]);
                var x = ubpbjs.getAllPrebidWinningBids();
                var adsCalled = false;
                for(var i=0;i<x.length;i++){
@@ -411,7 +411,7 @@ if(mobileCheck === 'function'){
            googletag.cmd.push(function() {
              ubpbjs.que.push(function() {
                  ubpbjs.setTargetingForGPTAsync();
-                 googletag.pubads().refresh([ub_slot1]);
+                 // googletag.pubads().refresh([ub_slot]);
                  var adsCalled = false;
                  for(var i=0;i<x.length;i++){
                    var bc = x[i].bidderCode;
@@ -453,7 +453,7 @@ else {
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                // googletag.pubads().refresh([ub_slot2]);
+                googletag.pubads().refresh([ub_slot2]);
                 var x = ubpbjs.getAllPrebidWinningBids();
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
@@ -499,7 +499,7 @@ else {
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot2]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;
@@ -539,7 +539,7 @@ else {
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                // googletag.pubads().refresh([ub_slot1]);
+                googletag.pubads().refresh([ub_slot1]);
                 var x = ubpbjs.getAllPrebidWinningBids();
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
@@ -584,7 +584,7 @@ else {
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot1]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;

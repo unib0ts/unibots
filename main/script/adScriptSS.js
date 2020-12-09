@@ -240,7 +240,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh([ub_slot1]);
+            googletag.pubads().refresh([ub_slot1]);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
@@ -523,7 +523,7 @@ function initAdserver_remnant() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh(mappings_remnant.slots);
+            googletag.pubads().refresh(mappings_remnant.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_rem = false;
             for(var i=0;i<x.length;i++){
@@ -1057,6 +1057,8 @@ var mappings_extra_units_config ={
     '/1062118/sakshiNew_cinema_sports_Bussiness_box2',
     '/1062118/sakshiNew_cinema_sports_Bussiness_box5',
     '/21796214895/542194_Sakshi_block_1',
+    '/21796214895/542194_Sakshi_block_2',
+    '/21796214895/542194_Sakshi_block_3',
     '/1062118/Intersitial_640x480_Desktop_Articlepage',
     '/1062118/Intersitial_320x480_mobile_Articlepage'
   ]
@@ -1113,7 +1115,7 @@ function initAdserver_hb_full() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh([mapping_full_hb.slots]);
+            googletag.pubads().refresh(mapping_full_hb.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){
@@ -1178,7 +1180,7 @@ function callBotman_hb(){
 }
 
 function callAdsUB_hb(){
-	googletag.pubads().refresh([mapping_full_hb.slots]);
+	googletag.pubads().refresh(mapping_full_hb.slots);
 }
 function changeConfigToUSD(){
   ubpbjs.que.push(function() {

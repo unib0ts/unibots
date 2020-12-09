@@ -306,7 +306,22 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh([ub_slot]);
+  if(mobileCheck === 'function'){
+    if(mobileCheck()){
+      googletag.pubads().refresh([ub_slot1]);
+    }
+    else {
+      googletag.pubads().refresh([ub_slot2]);
+    }
+  }
+  else {
+      if(mobileCheckAdSript()){
+         googletag.pubads().refresh([ub_slot1]);
+      }
+      else {
+        googletag.pubads().refresh([ub_slot2]);
+      }
+  }
 }
 
 if(mobileCheck === 'function'){
@@ -317,7 +332,7 @@ if(mobileCheck === 'function'){
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot1]);
+                // googletag.pubads().refresh([ub_slot1]);
                 var x = ubpbjs.getAllPrebidWinningBids();
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
@@ -362,7 +377,7 @@ if(mobileCheck === 'function'){
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;
@@ -402,7 +417,7 @@ if(mobileCheck === 'function'){
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot2]);
+                // googletag.pubads().refresh([ub_slot2]);
                 var x = ubpbjs.getAllPrebidWinningBids();
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
@@ -447,7 +462,7 @@ if(mobileCheck === 'function'){
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;
@@ -489,7 +504,7 @@ else{
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot1]);
+                // googletag.pubads().refresh([ub_slot1]);
                 var x = ubpbjs.getAllPrebidWinningBids();
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
@@ -534,7 +549,7 @@ else{
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;
@@ -574,7 +589,7 @@ else{
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot2]);
+                // googletag.pubads().refresh([ub_slot2]);
                 var x = ubpbjs.getAllPrebidWinningBids();
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
@@ -619,7 +634,7 @@ else{
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;

@@ -368,7 +368,7 @@ function refreshBid(ub_slot) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh([ub_slot]);
+              googletag.pubads().refresh([ub_slot]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -558,7 +558,7 @@ function callRemnantAds(adCode, ub_slot){
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh(ub_slot);
+              googletag.pubads().refresh(ub_slot);
               var adsCalled_rem = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;

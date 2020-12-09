@@ -240,7 +240,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            // googletag.pubads().refresh([ub_slot1]);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
@@ -368,7 +368,7 @@ function refreshBid(ub_slot) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
+              // googletag.pubads().refresh([ub_slot]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -523,7 +523,7 @@ function initAdserver_remnant() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings_remnant.slots);
+            // googletag.pubads().refresh(mappings_remnant.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_rem = false;
             for(var i=0;i<x.length;i++){
@@ -558,7 +558,7 @@ function callRemnantAds(adCode, ub_slot){
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh(ub_slot);
+              // googletag.pubads().refresh(ub_slot);
               var adsCalled_rem = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -1115,7 +1115,7 @@ function initAdserver_hb_full() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mapping_full_hb.slots);
+            // googletag.pubads().refresh(mapping_full_hb.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){

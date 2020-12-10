@@ -103,6 +103,7 @@ var adUnits = [];
               //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
             	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+              { bidder: 'ucfunnel', params: { adid : 'pub-9A292626B229BA98F442B7D7BA36B39E'} },
             	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
             ]
         }
@@ -338,7 +339,7 @@ ubpbjs.que = ubpbjs.que || [];
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
+                  // googletag.pubads().refresh([ub_slot]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;

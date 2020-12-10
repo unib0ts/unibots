@@ -869,7 +869,22 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh([ub_slot]);
+  if(mobileCheck === 'function'){
+    if(mobileCheck()){
+      googletag.pubads().refresh([ub_slot1]);
+    }
+    else {
+      googletag.pubads().refresh([ub_slot2]);
+    }
+  }
+  else {
+   if(mobileCheckAdSript()){
+     googletag.pubads().refresh([ub_slot1]);
+   }
+   else {
+    googletag.pubads().refresh([ub_slot2]);
+   }
+  }
 }
 function mainHbRun(){
   ubpbjs.que.push(function() {

@@ -199,7 +199,7 @@ if (typeof mobileCheck === "function") {
        //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3099856'} },
-       { bidder: 'ucfunnel', params: { adid: 'ad-34B8BD2A79DE3896F7D374BE673E96B'} },
+       { bidder: 'ucfunnel', params: { adid: 'pub-627D74366482988416AB8DBE87EDE98'} },
        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
        // { bidder: 'criteo', params: {networkId: '10542'} },
        // { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -521,8 +521,10 @@ if(typeof googletag.defineSlot === "function"){
 }
 else{
   setTimeout(function(){
-    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-    googlePush();
+    googletag.cmd.push(function() {
+      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googlePush();
+    });
   }, 500);
 }
 setTimeout(function() {

@@ -961,7 +961,7 @@ function initAdserver_hb_full() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([mapping_full_hb.slots]);
+            googletag.pubads().refresh(mapping_full_hb.slots);
         });
     });
 }

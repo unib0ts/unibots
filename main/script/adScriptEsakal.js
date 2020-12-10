@@ -204,7 +204,7 @@ const customConfigObjectA = {
          { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22104180279'} },
-          { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA428E67687D0B26E68793B96322'} },
+          { bidder: 'ucfunnel', params: { adid : 'pub-AA7BAA37A87E329B184792A84DBEA4BE'} },
           { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
          //  // { bidder: 'criteo', params: {networkId: '4902'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

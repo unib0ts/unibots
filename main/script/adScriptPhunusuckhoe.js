@@ -290,7 +290,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false, false]
+  renderedFlag: [false, false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -516,8 +516,10 @@ if(typeof googletag.defineSlot === "function"){
 }
 else{
   setTimeout(function(){
-    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-    googlePush();
+    googletag.cmd.push(function() {
+      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googlePush();
+    });
   }, 500);
 }
 // setTimeout(function() {

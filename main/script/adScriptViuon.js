@@ -408,7 +408,7 @@ for(j=0; j<targetDivID.length; j++){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://novelcake.com/',
+        publisherDomain: 'https://viuon.in/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         // "currency": {

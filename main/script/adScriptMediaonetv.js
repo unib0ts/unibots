@@ -653,7 +653,7 @@ var mappings = {
 // }
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1];
+  ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(typeof mappings.renderedFlag[ub_slotNum] || !mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
@@ -675,7 +675,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh(ub_slot);
+              // googletag.pubads().refresh(ub_slot);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;

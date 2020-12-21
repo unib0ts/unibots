@@ -255,6 +255,19 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+function callAdsUB(){
+  if(mobileCheck === 'function'){
+    if(mobileCheck()){
+      googletag.pubads().refresh([ub_slot1]);
+    }
+  }
+  else {
+      if(mobileCheckAdSript()){
+         googletag.pubads().refresh([ub_slot1]);
+      }
+  }
+}
+
 if(mobileCheck === 'function'){
   if(mobileCheck()){
     function initAdserver() {
@@ -327,9 +340,6 @@ if(mobileCheck === 'function'){
 
     }
 
-    function callAdsUB(){
-    	googletag.pubads().refresh([ub_slot1]);
-    }
     // in case ubpbjs doesn't load
     setTimeout(function() {
         initAdserver();
@@ -359,7 +369,7 @@ if(mobileCheck === 'function'){
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot1]);
+                  // googletag.pubads().refresh([ub_slot1]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;
@@ -509,7 +519,7 @@ else{
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot1]);
+                  // googletag.pubads().refresh([ub_slot1]);
                   var adsCalled = false;
                   for(var i=0;i<x.length;i++){
                     var bc = x[i].bidderCode;

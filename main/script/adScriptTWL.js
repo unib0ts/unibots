@@ -337,8 +337,10 @@ if(typeof googletag.defineSlot === "function"){
 }
 else{
   setTimeout(function(){
-    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-    googlePush();
+    googletag.cmd.push(function() {
+      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googlePush();
+    });
   }, 500);
 }
 setTimeout(function() {

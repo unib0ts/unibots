@@ -709,20 +709,12 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: []
+  renderedFlag: [false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 };
-
-// function mainHbRun(){
-
-// // in case ubpbjs doesn't load
-// setTimeout(function() {
-//     initAdserver();
-// }, FAILSAFE_TIMEOUT);
-// }
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
-  if(typeof mappings.renderedFlag[ub_slotNum] || !mappings.renderedFlag[ub_slotNum]){
+  if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {

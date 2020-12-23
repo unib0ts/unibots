@@ -30,7 +30,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-const customConfigObjectA = {
+const customConfigObjectTest = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
@@ -618,7 +618,7 @@ ubpbjs.que.push(function() {
     };
     ubpbjs.setConfig({
 
-    	priceGranularity: customConfigObjectA,
+    	priceGranularity: customConfigObjectTest,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       userSync: {

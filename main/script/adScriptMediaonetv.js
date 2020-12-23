@@ -30,7 +30,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-const customConfigObjectTest = {
+var customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
@@ -618,7 +618,7 @@ ubpbjs.que.push(function() {
     };
     ubpbjs.setConfig({
 
-    	priceGranularity: customConfigObjectTest,
+    	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       userSync: {
@@ -680,13 +680,11 @@ var mappings = {
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
-  console.log('test1');
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        console.log('test2');
       setTimeout(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);

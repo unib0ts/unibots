@@ -833,7 +833,6 @@ if (document.getElementById('div-ub-1')){
   });
 }
 if (document.getElementById('Home_LBoad') || document.getElementById('Section_LBoad') || document.getElementById('Story_LBoad')){
-  console.log('test3');
   mappings.slotNumbers.push(2);
   mappings.adCode.push('/18643286/horizontal_responsive');
   mappings.sizes.push(div_2_sizes);

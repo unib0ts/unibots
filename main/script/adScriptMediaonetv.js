@@ -796,6 +796,7 @@ function callAdsUB(){
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
+  googletagDefineFlag =1;
   for(var i=0; i<slotNumbers.length;i++){
     eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
     var a = eval('ub_slot'+slotNumbers[i]);
@@ -1009,8 +1010,13 @@ if (document.getElementById('Story_LBoadMiddleM_02')){
 }
 
 if(typeof googletag.defineSlot === "function"){
-  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-  googlePush();
+  if(typeof googletagDefineFlag !== 'undefined' && googletagDefineFlag ==1){
+    
+  }
+  else {
+   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+   googlePush();
+  }
 }
 else{
   setTimeout(function(){

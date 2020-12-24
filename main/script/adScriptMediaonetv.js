@@ -700,10 +700,10 @@ var mappings = {
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
+  googletag.pubads().refresh(ub_slot);
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-    googletag.pubads().refresh(ub_slot);
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       setTimeout(function() {
         refreshBid(ub_slot, adCode);

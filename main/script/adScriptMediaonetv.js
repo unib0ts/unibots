@@ -30,7 +30,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-var customConfigObjectA = {
+const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
@@ -796,7 +796,6 @@ function callAdsUB(){
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
-  googletagDefineFlag =1;
   for(var i=0; i<slotNumbers.length;i++){
     eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
     var a = eval('ub_slot'+slotNumbers[i]);
@@ -1010,13 +1009,11 @@ if (document.getElementById('Story_LBoadMiddleM_02')){
 }
 
 if(typeof googletag.defineSlot === "function"){
-  if(typeof googletagDefineFlag !== 'undefined' && googletagDefineFlag ==1){
-    
+  if (typeof googletag.defineSlot() === "undefined") {
+
   }
-  else {
    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
    googlePush();
-  }
 }
 else{
   setTimeout(function(){

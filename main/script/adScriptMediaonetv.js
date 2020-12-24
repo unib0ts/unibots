@@ -54,6 +54,25 @@ var div_12_sizes = [728, 90];
 var div_13_sizes = [320, 50];
 var div_14_sizes = [300, 250];
 
+var mappings_full_hb_config = {
+  adUnitNames: [
+    '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
+    '/18643286/horizontal_responsive',
+    '/18643286/Horizontal_Responsive_Mobile',
+    '/18643286/vertical_responsive',
+    '/18643286/Mrec_01',
+    '/18643286/Mrec_02',
+    '/18643286/Mrec_03',
+    '/18643286/Mrec_04',
+    '/18643286/Mrec_05',
+    '/18643286/Mrec_06',
+    '/18643286/story_middle_responsive',
+    '/18643286/Story_Middle_Responsive_M',
+    '/18643286/Story_Middle_Responsive_01',
+    '/18643286/Story_Middle_Responsive_M_02',
+  ],
+}
+
 var adUnits = [
     {
         code: '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
@@ -796,6 +815,13 @@ function callAdsUB(){
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
+  // x = googletag.pubads().getSlots();
+  // x_len = x.length;
+  // for(i=0;i<x.length;i++){
+  //   if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
+  //
+  //   }
+  // }
   for(var i=0; i<slotNumbers.length;i++){
     eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
     var a = eval('ub_slot'+slotNumbers[i]);
@@ -930,13 +956,13 @@ if (document.getElementById('Home_Mrec_04') || document.getElementById('Section_
 }
 if (document.getElementById('Home_Mrec_05') || document.getElementById('Section_Mrec_05')){
   mappings.slotNumbers.push(9);
-  mappings.adCode.push('/18643286/Mrec_04');
+  mappings.adCode.push('/18643286/Mrec_05');
   mappings.sizes.push(div_9_sizes);
   mappings.adId.push('div-gpt-ad-1600065859532-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot9) {
-        ub_checkAdRendered('div-gpt-ad-1600065859532-0', ub_slot9, ['/18643286/Mrec_04']);
+        ub_checkAdRendered('div-gpt-ad-1600065859532-0', ub_slot9, ['/18643286/Mrec_05']);
       }
     });
   });
@@ -1009,9 +1035,6 @@ if (document.getElementById('Story_LBoadMiddleM_02')){
 }
 
 if(typeof googletag.defineSlot === "function"){
-  if (typeof googletag.defineSlot() === "undefined") {
-
-  }
    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
    googlePush();
 }

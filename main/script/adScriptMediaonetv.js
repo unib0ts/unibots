@@ -700,10 +700,6 @@ var mappings = {
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
-  console.log('test1');
-  setTimeout(function() {
-    refreshSpecificBid(ub_slot);
-  },1000 );
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
@@ -824,6 +820,7 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   for(i=0;i<x.length;i++){
     if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
       googleDefineFlag=1;
+      refreshSpecificBid();
       break;
     }
     else {
@@ -1057,6 +1054,29 @@ else{
   }, 500);
 }
 
-function refreshSpecificBid(ub_slot){
-  googletag.pubads().refresh(ub_slot);
+function refreshSpecificBid(){
+    if (document.getElementById('Home_Mrec_01') || document.getElementById('Section_Mrec_01') || document.getElementById('Story_Mrec_01')){
+      googletag.pubads().refresh([ub_slot1],[ub_slot5],[ub_slot6],[ub_slot7],[ub_slot8]);
+    }
+    if (document.getElementById('Home_LBoad') || document.getElementById('Section_LBoad') || document.getElementById('Story_LBoad')) {
+      googletag.pubads().refresh([ub_slot3]);
+    }
+    if (document.getElementById('Home_mLBoad') || document.getElementById('Section_mLBoad')|| document.getElementById('Story_mLBoad')) {
+      googletag.pubads().refresh([ub_slot2]);
+    }
+   if (document.getElementById('Home_HalfPage') || document.getElementById('Story_HalfPage')){
+      googletag.pubads().refresh([ub_slot4]);
+   }
+   if (document.getElementById('Home_Mrec_05') || document.getElementById('Section_Mrec_05')) {
+    googletag.pubads().refresh([ub_slot9]);
+  }
+  if (document.getElementById('Section_Mrec_06'))) {
+    googletag.pubads().refresh([ub_slot14]);
+  }
+  if (document.getElementById('Story_LBoadMiddle') || document.getElementById('Story_LBoadMiddle_01')) {
+    googletag.pubads().refresh([ub_slot10],[ub_slot12]);
+  }
+  if (document.getElementById('Story_LBoadMiddleM') || document.getElementById('Story_LBoadMiddleM_02')) {
+    googletag.pubads().refresh([ub_slot11],[ub_slot13]);
+  }
 }

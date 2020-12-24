@@ -1055,28 +1055,11 @@ else{
 }
 
 function refreshSpecificBid(){
-    if (document.getElementById('Home_Mrec_01') || document.getElementById('Section_Mrec_01') || document.getElementById('Story_Mrec_01')){
-      googletag.pubads().refresh([ub_slot1],[ub_slot5],[ub_slot6],[ub_slot7],[ub_slot8]);
-    }
-    // if (document.getElementById('Home_LBoad') || document.getElementById('Section_LBoad') || document.getElementById('Story_LBoad')) {
-    //   googletag.pubads().refresh([ub_slot3]);
-    // }
-    if (document.getElementById('Home_mLBoad') || document.getElementById('Section_mLBoad')|| document.getElementById('Story_mLBoad')) {
-      googletag.pubads().refresh([ub_slot2]);
-    }
-   if (document.getElementById('Home_HalfPage') || document.getElementById('Story_HalfPage')){
-      googletag.pubads().refresh([ub_slot4]);
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    for(i=0;i<mappings.slots.length;i++){
+      if (event.slot === mappings.slots[i]) {
+        googletag.pubads().refresh(mappings.slots[i]);
+      }
    }
-   if (document.getElementById('Home_Mrec_05') || document.getElementById('Section_Mrec_05')) {
-    googletag.pubads().refresh([ub_slot9]);
-  }
-  if (document.getElementById('Section_Mrec_06')) {
-    googletag.pubads().refresh([ub_slot14]);
-  }
-  // if (document.getElementById('Story_LBoadMiddle') || document.getElementById('Story_LBoadMiddle_01')) {
-  //   googletag.pubads().refresh([ub_slot10],[ub_slot12]);
-  // }
-  if (document.getElementById('Story_LBoadMiddleM') || document.getElementById('Story_LBoadMiddleM_02')) {
-    googletag.pubads().refresh([ub_slot11],[ub_slot13]);
-  }
+  });
 }

@@ -818,15 +818,20 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   x = googletag.pubads().getSlots();
   x_len = x.length;
   for(i=0;i<x.length;i++){
-    if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){}
+    if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
+      googleDefineFlag=1;
+      break;
+    }
     else {
-      console.log('test');
-      for(var i=0; i<slotNumbers.length;i++){
-        eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
-        var a = eval('ub_slot'+slotNumbers[i]);
-        a.addService(googletag.pubads());
-        mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
-      }
+      googleDefineFlag=0;
+    }
+  }
+  if (googleDefineFlag==0) {
+    for(var i=0; i<slotNumbers.length;i++){
+      eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+      var a = eval('ub_slot'+slotNumbers[i]);
+      a.addService(googletag.pubads());
+      mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
     }
   }
 }

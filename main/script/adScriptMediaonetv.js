@@ -56,20 +56,20 @@ var div_14_sizes = [300, 250];
 
 var mappings_full_hb_config = {
   adUnitNames: [
-    '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
-    '/18643286/horizontal_responsive',
-    '/18643286/Horizontal_Responsive_Mobile',
-    '/18643286/vertical_responsive',
+    // '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
+    // '/18643286/horizontal_responsive',
+    // '/18643286/Horizontal_Responsive_Mobile',
+    // '/18643286/vertical_responsive',
     '/18643286/Mrec_01',
-    '/18643286/Mrec_02',
-    '/18643286/Mrec_03',
-    '/18643286/Mrec_04',
-    '/18643286/Mrec_05',
-    '/18643286/Mrec_06',
-    '/18643286/story_middle_responsive',
-    '/18643286/Story_Middle_Responsive_M',
-    '/18643286/Story_Middle_Responsive_01',
-    '/18643286/Story_Middle_Responsive_M_02',
+    // '/18643286/Mrec_02',
+    // '/18643286/Mrec_03',
+    // '/18643286/Mrec_04',
+    // '/18643286/Mrec_05',
+    // '/18643286/Mrec_06',
+    // '/18643286/story_middle_responsive',
+    // '/18643286/Story_Middle_Responsive_M',
+    // '/18643286/Story_Middle_Responsive_01',
+    // '/18643286/Story_Middle_Responsive_M_02',
   ],
 }
 
@@ -815,18 +815,19 @@ function callAdsUB(){
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
-  // x = googletag.pubads().getSlots();
-  // x_len = x.length;
-  // for(i=0;i<x.length;i++){
-  //   if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
-  //
-  //   }
-  // }
-  for(var i=0; i<slotNumbers.length;i++){
-    eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
-    var a = eval('ub_slot'+slotNumbers[i]);
-    a.addService(googletag.pubads());
-    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+  x = googletag.pubads().getSlots();
+  x_len = x.length;
+  for(i=0;i<x.length;i++){
+    if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){}
+    else {
+      console.log('test');
+      for(var i=0; i<slotNumbers.length;i++){
+        eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+        var a = eval('ub_slot'+slotNumbers[i]);
+        a.addService(googletag.pubads());
+        mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+      }
+    }
   }
 }
 

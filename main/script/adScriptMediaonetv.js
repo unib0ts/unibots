@@ -1070,7 +1070,7 @@ function refreshSpecificBid(){
    if (document.getElementById('Home_Mrec_05') || document.getElementById('Section_Mrec_05')) {
     googletag.pubads().refresh([ub_slot9]);
   }
-  if (document.getElementById('Section_Mrec_06'))) {
+  if (document.getElementById('Section_Mrec_06')) {
     googletag.pubads().refresh([ub_slot14]);
   }
   if (document.getElementById('Story_LBoadMiddle') || document.getElementById('Story_LBoadMiddle_01')) {

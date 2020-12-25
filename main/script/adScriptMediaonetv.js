@@ -54,7 +54,8 @@ var div_12_sizes = [728, 90];
 var div_13_sizes = [320, 50];
 var div_14_sizes = [300, 250];
 
-var adUnitNames= [
+var mappings_full_hb_config = {
+  adUnitNames: [
     '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
     '/18643286/horizontal_responsive',
     '/18643286/Horizontal_Responsive_Mobile',
@@ -69,8 +70,8 @@ var adUnitNames= [
     '/18643286/Story_Middle_Responsive_M',
     '/18643286/Story_Middle_Responsive_01',
     '/18643286/Story_Middle_Responsive_M_02',
-  ];
-
+  ]
+}
 var adUnits = [
     {
         code: '/21957769615/mediaonetv.in_NB_320x50_directcampaign',
@@ -816,14 +817,20 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   x = googletag.pubads().getSlots();
   x_len = x.length;
   for(i=0;i<x.length;i++){
-    if(adUnitNames.some(slotelm => (x[i].getSlotId().getAdUnitPath()).includes(slotelm))) {
+    if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())) {
       googletag.pubads().refresh([x[i]]);
+      googleDefineFlag=1;
     }
     else {
-        eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
-        var a = eval('ub_slot'+slotNumbers[i]);
-        a.addService(googletag.pubads());
-        mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+      googleDefineFlag=0;
+    }
+  }
+  if (googleDefineFlag==0) {
+    for(i=0; i<slotNumbers.length;i++){
+      eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+      var a = eval('ub_slot'+slotNumbers[i]);
+      a.addService(googletag.pubads());
+      mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
     }
   }
 }
@@ -979,32 +986,32 @@ if (document.getElementById('Section_Mrec_06')){
   });
 }
 //story
-if (document.getElementById('Story_LBoadMiddle')){
-  mappings.slotNumbers.push(10);
-  mappings.adCode.push('/18643286/story_middle_responsive');
-  mappings.sizes.push(div_10_sizes);
-  mappings.adId.push('div-gpt-ad-1599568526962-0');
-  googletag.cmd.push(function() {
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot10) {
-        ub_checkAdRendered('div-gpt-ad-1599568526962-0', ub_slot10, ['/18643286/story_middle_responsive']);
-      }
-    });
-  });
-}
-if (document.getElementById('Story_LBoadMiddleM')){
-  mappings.slotNumbers.push(11);
-  mappings.adCode.push('/18643286/Story_Middle_Responsive_M');
-  mappings.sizes.push(div_11_sizes);
-  mappings.adId.push('div-gpt-ad-1599568464122-0');
-  googletag.cmd.push(function() {
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot11) {
-        ub_checkAdRendered('div-gpt-ad-1599568464122-0', ub_slot11, ['/18643286/Story_Middle_Responsive_M']);
-      }
-    });
-  });
-}
+// if (document.getElementById('Story_LBoadMiddle')){
+//   mappings.slotNumbers.push(10);
+//   mappings.adCode.push('/18643286/story_middle_responsive');
+//   mappings.sizes.push(div_10_sizes);
+//   mappings.adId.push('div-gpt-ad-1599568526962-0');
+//   googletag.cmd.push(function() {
+//     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//       if (event.slot === ub_slot10) {
+//         ub_checkAdRendered('div-gpt-ad-1599568526962-0', ub_slot10, ['/18643286/story_middle_responsive']);
+//       }
+//     });
+//   });
+// }
+// if (document.getElementById('Story_LBoadMiddleM')){
+//   mappings.slotNumbers.push(11);
+//   mappings.adCode.push('/18643286/Story_Middle_Responsive_M');
+//   mappings.sizes.push(div_11_sizes);
+//   mappings.adId.push('div-gpt-ad-1599568464122-0');
+//   googletag.cmd.push(function() {
+//     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//       if (event.slot === ub_slot11) {
+//         ub_checkAdRendered('div-gpt-ad-1599568464122-0', ub_slot11, ['/18643286/Story_Middle_Responsive_M']);
+//       }
+//     });
+//   });
+// }
 if (document.getElementById('Story_LBoadMiddle_01')){
   mappings.slotNumbers.push(12);
   mappings.adCode.push('/18643286/Story_Middle_Responsive_01');

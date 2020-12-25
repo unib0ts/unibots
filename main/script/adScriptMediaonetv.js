@@ -694,7 +694,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+  renderedFlag: [false, false, false, false, false, false, false, false, false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -1019,8 +1019,8 @@ if (document.getElementById('Story_LBoadMiddle_01')){
   mappings.adId.push('div-gpt-ad-1600066007017-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot12) {
-        ub_checkAdRendered('div-gpt-ad-1600066007017-0', ub_slot12, ['/18643286/Story_Middle_Responsive_01']);
+      if (event.slot === ub_slot10) {
+        ub_checkAdRendered('div-gpt-ad-1600066007017-0', ub_slot10, ['/18643286/Story_Middle_Responsive_01']);
       }
     });
   });
@@ -1032,8 +1032,8 @@ if (document.getElementById('Story_LBoadMiddleM_02')){
   mappings.adId.push('div-gpt-ad-1600066047125-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot13) {
-        ub_checkAdRendered('div-gpt-ad-1600066047125-0', ub_slot13, ['/18643286/Story_Middle_Responsive_M_02']);
+      if (event.slot === ub_slot11) {
+        ub_checkAdRendered('div-gpt-ad-1600066047125-0', ub_slot11, ['/18643286/Story_Middle_Responsive_M_02']);
       }
     });
   });

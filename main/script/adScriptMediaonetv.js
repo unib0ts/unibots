@@ -816,7 +816,7 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   x = googletag.pubads().getSlots();
   x_len = x.length;
   for(i=0;i<x.length;i++){
-    if(adUnitNames.some(slotelm => (x[i].getSlotId().getAdUnitPath()).includes(slotelm)) {
+    if(adUnitNames.some(slotelm => (x[i].getSlotId().getAdUnitPath()).includes(slotelm))) {
       googleDefineFlag=1;
       googletag.pubads().refresh([x[i]]);
       // break;

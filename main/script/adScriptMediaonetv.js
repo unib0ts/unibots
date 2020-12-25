@@ -820,12 +820,10 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
       googletag.pubads().refresh([x[i]]);
     }
     else {
-      for(var i=0; i<slotNumbers.length;i++){
         eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
         var a = eval('ub_slot'+slotNumbers[i]);
         a.addService(googletag.pubads());
         mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
-      }
     }
   }
 }

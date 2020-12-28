@@ -782,6 +782,7 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   x_len = x.length;
   for(i=0;i<x.length;i++){
     if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())) {
+      googletag.pubads().refresh([x[i]]);
       if (mappings_full_hb_config.adUnitNames[3].includes(x[i].getSlotId().getAdUnitPath())) {
         var mapping4 = googletag.sizeMapping()
         .addSize([1024, 720], [300, 600])
@@ -790,7 +791,6 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
 
         x[i].defineSizeMapping(mapping4);
       }
-      googletag.pubads().refresh([x[i]]);
       googleDefineFlag=1;
     }
     else {

@@ -71,8 +71,8 @@ if(typeof customConfigObjectA === 'undefined'){
 
   currentDate = new Date();
   currentTS = currentDate.getDate();
-    if((1<= currentTS) && (currentTS<=10)){
-      if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
+
+  if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
           adUnits1 =
           {
               code: '/21956916242/irctc.co.in_hb_320x50',
@@ -104,10 +104,7 @@ if(typeof customConfigObjectA === 'undefined'){
               ]
           };
           adUnits.push(adUnits1);
-        }
-    }
-    else if ((11<= currentTS) && (currentTS<=20)) {
-      if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
+
           adUnits1 =
           {
               code: '/22140546871/irctc.co.in_hb_320x50',
@@ -139,10 +136,7 @@ if(typeof customConfigObjectA === 'undefined'){
               ]
           };
           adUnits.push(adUnits1);
-        }
-    }
-    else {
-      if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
+
           adUnits1 =
           {
               code: '/22142075243/irctc.co.in_hb_320x50',
@@ -175,7 +169,6 @@ if(typeof customConfigObjectA === 'undefined'){
           };
           adUnits.push(adUnits1);
       }
-    }
 
   // ======== DO NOT EDIT BELOW THIS LINE =========== //
   var googletag = googletag || {};

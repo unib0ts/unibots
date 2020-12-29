@@ -1308,20 +1308,19 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
-  return false;
-  // ubpbjs.que.push(function() {
-  //   ubpbjs.requestBids({
-  //     timeout: PREBID_TIMEOUT,
-  //     adUnitCodes: adCode,
-  //     adUnits: adUnits_full_hb,
-  //     bidsBackHandler: function() {
-  //       googletag.cmd.push(function() {
-  //         ubpbjs.que.push(function() {
-  //             ubpbjs.setTargetingForGPTAsync();
-  //             googletag.pubads().refresh(ub_slot);
-  //         });
-  //       });
-  //     }
-  //   });
-  // });
+  ubpbjs.que.push(function() {
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: adCode,
+      adUnits: adUnits_full_hb,
+      bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
 }

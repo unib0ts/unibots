@@ -123,7 +123,7 @@ if (typeof mobileCheck === "function") {
            // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             { bidder: 'sovrn', params: {tagid: '736645'} },
-            // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+            { bidder: 'openx', params: {unit: '543851443', delDomain: 'unibots-d.openx.net'} },
            { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -155,7 +155,7 @@ if (typeof mobileCheck === "function") {
             	// { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
             	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
               { bidder: 'sovrn', params: {tagid: '736646'} },
-              // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+              { bidder: 'openx', params: {unit: '543851444', delDomain: 'unibots-d.openx.net'} },
             	{ bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
               { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -187,7 +187,7 @@ if (typeof mobileCheck === "function") {
          // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851441', delDomain: 'unibots-d.openx.net'} },
          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -219,7 +219,7 @@ if (typeof mobileCheck === "function") {
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '736644'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851442', delDomain: 'unibots-d.openx.net'} },
          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
          { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -251,7 +251,7 @@ if (typeof mobileCheck === "function") {
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '736651'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851445', delDomain: 'unibots-d.openx.net'} },
          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -283,7 +283,7 @@ if (typeof mobileCheck === "function") {
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '748838'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851447', delDomain: 'unibots-d.openx.net'} },
          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -315,7 +315,7 @@ if (typeof mobileCheck === "function") {
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '748839'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851448', delDomain: 'unibots-d.openx.net'} },
          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -347,7 +347,7 @@ if (typeof mobileCheck === "function") {
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '748843'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851449', delDomain: 'unibots-d.openx.net'} },
          { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22042552139'} },
@@ -472,6 +472,17 @@ function refreshBid(ub_slot, adCode) {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh(ub_slot);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
       }
@@ -485,9 +496,72 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(slots);
+            // googletag.pubads().refresh(slots);
+            var x = ubpbjs.getAllPrebidWinningBids();
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
+}
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=beanstalkmums';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+	googletag.pubads().refresh(slots);
 }
 
 function googleDefine(slotsNumbers, adCode, sizes, adId){

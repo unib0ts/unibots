@@ -961,3 +961,65 @@ function mainHbRun(){
       initAdserver();
   }, FAILSAFE_TIMEOUT);
 }
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=whyral';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+  if(!mobileCheck() && window.location.pathname == '/home') {
+    googletag.pubads().refresh([ub_slot1]);
+  }
+  else if(!mobileCheckAdSript() && window.location.pathname != '/home' && window.location.pathname != '/channels'){
+    googletag.pubads().refresh([ub_slot1, ub_slot2, ub_slot3]);
+  }
+  else if(mobileCheckAdSript() && window.location.pathname == '/home'){
+    googletag.pubads().refresh([ub_slot4]);
+  }
+  else if(mobileCheckAdSript() && window.location.pathname != '/home' && window.location.pathname != '/channels'){
+    googletag.pubads().refresh([ub_slot3, ub_slot4]);
+  }
+}

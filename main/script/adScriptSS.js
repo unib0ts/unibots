@@ -780,7 +780,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 145, publisher_id: 6, partner_name: 'sakshi'} },
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983531'} },
       { bidder: 'sovrn', params: {tagid: '744058'} },
-      // { bidder: 'openx', params: {unit: '54345592', delDomain: 'unibots-d.openx.net'} },
+      { bidder: 'openx', params: {unit: '54345592', delDomain: 'unibots-d.openx.net'} },
       { bidder: "kubient", params: { zoneid: "515bdea4396a8", server: "kssp.kbntx.ch"} },
     ]), //1062118/SakshiNew_HP_Box_300x600,
     hb_full_common_bidders.concat([

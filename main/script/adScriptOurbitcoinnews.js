@@ -123,7 +123,7 @@ var mapping_full_hb = {
 var adUnits_full_hb = [];
 var hb_full_common_bidders = [
   // { bidder: 'appnexus', params: { placementId: '19871860' } }, /* one placementId for all sizes  my appnexus bidder */
-  // { bidder: 'oftmedia', params: { placementId: '18778196' } },
+    { bidder: 'oftmedia', params: { placementId: '20846125' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
   // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/

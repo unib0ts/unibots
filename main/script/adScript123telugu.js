@@ -75,7 +75,7 @@ if(mobileCheck === 'function'){
         },
         bids: [
           { bidder: 'appnexus', params: { placementId: '19053207' } },
-          { bidder: 'oftmedia', params: { placementId: '18671514' } }
+          { bidder: 'oftmedia', params: { placementId: '20846125' } }
         ]
     },
     {
@@ -87,7 +87,7 @@ if(mobileCheck === 'function'){
         },
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19053207' } }, /* one placementId for all sizes  my appnexus bidder */
-        	{ bidder: 'oftmedia', params: { placementId: '18671514' } },
+        	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
         	{ bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '713871'} },
@@ -120,7 +120,7 @@ if(mobileCheck === 'function'){
             },
             bids: [
               { bidder: 'appnexus', params: { placementId: '19053207' } }, /* one placementId for all sizes  my appnexus bidder */
-              { bidder: 'oftmedia', params: { placementId: '18671514' } },
+              { bidder: 'oftmedia', params: { placementId: '20846125' } },
               { bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
               { bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
               { bidder: 'sovrn', params: {tagid: '724686'} },
@@ -180,7 +180,7 @@ else{
          },
          bids: [
            { bidder: 'appnexus', params: { placementId: '19053207' } },
-           { bidder: 'oftmedia', params: { placementId: '18671514' } }
+           { bidder: 'oftmedia', params: { placementId: '20846125' } }
          ]
      },
      {
@@ -192,7 +192,7 @@ else{
          },
          bids: [
            { bidder: 'appnexus', params: { placementId: '19053207' } }, /* one placementId for all sizes  my appnexus bidder */
-           { bidder: 'oftmedia', params: { placementId: '18671514' } },
+           { bidder: 'oftmedia', params: { placementId: '20846125' } },
            { bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
            { bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
            { bidder: 'sovrn', params: {tagid: '713871'} },
@@ -225,7 +225,7 @@ else{
             },
             bids: [
               { bidder: 'appnexus', params: { placementId: '19053207' } }, /* one placementId for all sizes  my appnexus bidder */
-              { bidder: 'oftmedia', params: { placementId: '18671514' } },
+              { bidder: 'oftmedia', params: { placementId: '20846125' } },
               { bidder: '33across', params: { siteId : 'bc-OPEBt8r6OkGaKkGJozW', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
               { bidder: 'emx_digital', params: { tagid: '97448' } }, /* sizeless */
               { bidder: 'sovrn', params: {tagid: '713871'} },

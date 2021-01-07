@@ -103,7 +103,7 @@ if(typeof customConfigObjectA === 'undefined'){
         //   },
         //   bids: [
         //     { bidder: 'appnexus', params: { placementId: '19056673' } },
-        //     { bidder: 'oftmedia', params: { placementId: '18778196' } }
+        //     { bidder: 'oftmedia', params: { placementId: '20846125' } }
         //   ]
         // },
         {
@@ -115,7 +115,7 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
             { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-            //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+            { bidder: 'oftmedia', params: { placementId: '20846125' } },
             // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
             // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
             // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -168,7 +168,7 @@ if(typeof customConfigObjectA === 'undefined'){
         //   },
         //   bids: [
         //     { bidder: 'appnexus', params: { placementId: '19056673' } },
-        //     { bidder: 'oftmedia', params: { placementId: '18778196' } }
+        //     { bidder: 'oftmedia', params: { placementId: '20846125' } }
         //   ]
         // },
         {
@@ -180,7 +180,7 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
             { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-            //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+            { bidder: 'oftmedia', params: { placementId: '20846125' } },
             // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
             // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
             // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -407,7 +407,7 @@ if(typeof customConfigObjectA === 'undefined'){
   var adUnits_full_hb = [];
   var hb_full_common_bidders = [
     { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-    //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+    { bidder: 'oftmedia', params: { placementId: '20846125' } },
     { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
     { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -1175,14 +1175,14 @@ if(typeof customConfigObjectA === 'undefined'){
          //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
         ]),  //1062118/hindi_mob_hp_300x250_3',
         hb_full_common_bidders.concat([
-         	{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+         	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983530'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
         ]),  //'/21959913182/sakshisamachar_nb_320x50',
         hb_full_common_bidders.concat([
-         	{ bidder: 'oftmedia', params: { placementId: '18778196' } },
+         	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983530'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },

@@ -83,7 +83,7 @@ var adUnits = [
   },
   bids: [
     // {	bidder: 'eplanning', params: {ci: '2cfed', ml: '1'} },
-    // { bidder: 'oftmedia', params: { placementId: '19679698' } },
+    { bidder: 'oftmedia', params: { placementId: '20846125' } },
     { bidder: 'appnexus', params: { placementId: '19518211' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '741306'} },
     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2973348'} },

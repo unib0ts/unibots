@@ -72,7 +72,7 @@ var adUnits = [
           }
         },
         bids: [
-          { bidder: 'oftmedia', params: { placementId: '19679641' } },
+          { bidder: 'oftmedia', params: { placementId: '20846125' } },
           { bidder: 'appnexus', params: { placementId: '19054424' } }
         ]
     },
@@ -92,7 +92,7 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999743'} },
-          { bidder: 'oftmedia', params: { placementId: '19679641' } },
+          { bidder: 'oftmedia', params: { placementId: '20846125' } },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'smartadserver', params: { siteId: '362150', pageId: '1289651', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

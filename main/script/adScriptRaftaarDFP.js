@@ -62,7 +62,7 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
             { bidder: 'appnexus', params: { placementId: '19056632' } },
-          	{ bidder: 'oftmedia', params: { placementId: '18677503' } },
+          	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
             { bidder: '33across', params: { siteId : 'btgriSWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] },
           	{ bidder: 'emx_digital', params: { tagid: '97512' } }, /* sizeless */
             { bidder: 'sovrn', params: {tagid: '736277'} },

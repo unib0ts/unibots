@@ -63,7 +63,7 @@ if(document.getElementById('newsbot-ads')){
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206178'} },
        { bidder: 'criteo', params: {networkId: '10542'} },
        { bidder: 'criteointl', params: {networkId: '10545'} },
-       { bidder: 'oftmedia', params: { placementId: '20219338' } },
+       { bidder: 'oftmedia', params: { placementId: '20846125' } },
        { bidder: '33across', params: { siteId : 'aIn2XqBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
        { bidder: 'emx_digital', params: { tagid: '97480' } }, /* sizeless */
        { bidder: 'ucfunnel', params: { adid : 'ad-273677D32327846403E4249AA9D86D2'} },

@@ -89,7 +89,7 @@ var adUnits = [
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '730856'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028656'} },
-          { bidder: 'openx', params: {unit: '543530491', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530491', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	// { bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

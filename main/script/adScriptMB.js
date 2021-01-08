@@ -92,7 +92,7 @@ var adUnits = [
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323782', zoneId: '1680518'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'openx', params: {unit: '543530179', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530179', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2928964'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'nobid', params: { siteId : '22012495560'} },

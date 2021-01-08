@@ -119,7 +119,7 @@ var adUnits = [
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '725482'} },
           { bidder: 'oftmedia', params: { placementId: '20846125' } },
-          { bidder: 'openx', params: {unit: '543530471', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530471', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           { bidder: 'emx_digital', params: { tagid: '107932' } },
@@ -186,7 +186,7 @@ if(document.getElementById('Home_mLBoad') || document.getElementById('Section_mL
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530399', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530399', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -219,7 +219,7 @@ if(document.getElementById('Home_HalfPage') || document.getElementById('Story_Ha
           { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
           { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId: '22049999704' } },
-          { bidder: 'openx', params: {unit: '543530400', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530400', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
@@ -251,7 +251,7 @@ if(document.getElementById('Home_HalfPage') || document.getElementById('Story_Ha
           { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
           { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId: '22049999704' } },
-          { bidder: 'openx', params: {unit: '543530400', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530400', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
@@ -285,7 +285,7 @@ if(document.getElementById('Home_Mrec_01') || document.getElementById('Section_M
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530405', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530405', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -322,7 +322,7 @@ if(document.getElementById('Home_Mrec_02') || document.getElementById('Section_M
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530406', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530406', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -355,7 +355,7 @@ if(document.getElementById('Home_Mrec_03') || document.getElementById('Section_M
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530407', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530407', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -387,7 +387,7 @@ if(document.getElementById('Home_Mrec_04') || document.getElementById('Section_M
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530408', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530408', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -420,7 +420,7 @@ if(document.getElementById('Home_Mrec_05') || document.getElementById('Section_M
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530409', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530409', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
@@ -451,7 +451,7 @@ if(document.getElementById('Section_Mrec_06')){
         { bidder: 'emx_digital', params: { tagid: '107932' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22049999704' } },
-        { bidder: 'openx', params: {unit: '543530410', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530410', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'criteo', params: {networkId: '10542'} },

@@ -291,7 +291,7 @@ if (typeof mobileCheck === "function") {
          { bidder: 'oftmedia', params: { placementId: '20846125' } },
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          { bidder: 'openx', params: {unit: '543507069', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543507069', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
            { bidder: 'nobid', params: { siteId : '22088461852'} },
@@ -324,7 +324,7 @@ if (typeof mobileCheck === "function") {
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
          //  { bidder: 'sovrn', params: {tagid: '736644'} },
-         { bidder: 'openx', params: {unit: '543507221', delDomain: 'unibots-d.openx.net'} },
+         { bidder: 'openx', params: {unit: '543507221', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
          { bidder: 'nobid', params: { siteId : '22088461852'} },
@@ -356,7 +356,7 @@ if (typeof mobileCheck === "function") {
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
          //  { bidder: 'sovrn', params: {tagid: '736651'} },
-         { bidder: 'openx', params: {unit: '543507153', delDomain: 'unibots-d.openx.net'} },
+         { bidder: 'openx', params: {unit: '543507153', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
            { bidder: 'nobid', params: { siteId : '22088461852'} },

@@ -85,7 +85,7 @@ if (mobileCheck === 'function') {
                tagid: '741568'
              }
            },
-           { bidder: 'openx', params: {unit: '543530480', delDomain: 'unibots-d.openx.net'} },
+           { bidder: 'openx', params: {unit: '543530480', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
            //{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
            // {
            //   bidder: 'eplanning',
@@ -205,7 +205,7 @@ if (mobileCheck === 'function') {
             }
           },
           { bidder: 'criteo', params: {networkId: '10542'} },
-          { bidder: 'openx', params: {unit: '543530482', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530482', delDomain: 'unibots-d.openx.net'} , labelAny: ["US", "CA"]},
           { bidder: 'criteointl', params: {networkId: '10545'} }, /*All sizes*/
           { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },
@@ -307,7 +307,7 @@ if (!mobileCheckAdSript()) {
           }
         },/*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
-        { bidder: 'openx', params: {unit: '543530480', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530480', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         { bidder: 'sonobi', params: { placement_id: 'ed9ad9ebfd4284f280b4', ad_unit: 'businessworld.in_NB_320x100' } },
@@ -399,7 +399,7 @@ if (!mobileCheckAdSript()) {
           }
         }, /*All sizes*/
         { bidder: 'criteo', params: {networkId: '10542'} },
-        { bidder: 'openx', params: {unit: '543530482', delDomain: 'unibots-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '543530482', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },

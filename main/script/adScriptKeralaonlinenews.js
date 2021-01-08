@@ -89,7 +89,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'cowlsGWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '727386'} },
-          { bidder: 'openx', params: {unit: '543530490', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530490', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999698'} },
@@ -307,7 +307,8 @@ function mainHbRun(){
        });
       ubpbjs.requestBids({
           bidsBackHandler: initAdserver,
-          timeout: PREBID_TIMEOUT
+          timeout: PREBID_TIMEOUT,
+          labels: [GEO_CODE],
       });
   });
 

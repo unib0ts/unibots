@@ -90,7 +90,7 @@ var adUnits = [
         	{ bidder: 'emx_digital', params: { tagid: '97512' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '716630'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          { bidder: 'openx', params: {unit: '543851452', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543851452', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	//{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // { bidder: 'criteo', params: {networkId: '4902'} },

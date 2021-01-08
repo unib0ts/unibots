@@ -94,7 +94,7 @@ var adUnits = [
           { bidder: 'nobid', params: { siteId : '22049999692'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028669'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          { bidder: 'openx', params: {unit: '543530344', delDomain: 'unibots-d.openx.net'} },
+          { bidder: 'openx', params: {unit: '543530344', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },

@@ -87,7 +87,7 @@ var adUnits = [
     {	bidder: 'emx_digital', params: {tagid: '97507'} },
     { bidder: 'appnexus', params: { placementId: '19056303' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708884'} },
-    { bidder: 'openx', params: {unit: '543530457', delDomain: 'unibots-d.openx.net'} },
+    { bidder: 'openx', params: {unit: '543530457', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
     { bidder: 'oftmedia', params: { placementId: '20846125' } },
     { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
     { bidder: 'criteo', params: {networkId: '10542'} },

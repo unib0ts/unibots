@@ -408,7 +408,7 @@ if(typeof customConfigObjectA === 'undefined'){
      //      // { bidder: 'dailyhunt', params: {placement_id: 145, publisher_id: 6, partner_name: 'sakshi'} },
      //   //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983535'} },
      //   //   { bidder: 'sovrn', params: {tagid: '744064'} },
-     //   //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+     //   //   { bidder: 'smartadserver', params: { siteId: '370913', pageId: '1306092', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
      // ]),  //'/21959913182/sakshiedu_nb_320x50'
     ]
   }

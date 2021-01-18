@@ -1345,10 +1345,10 @@ function mobileCheckHB() {
 };
 
 hb_ran = false;
-checkHBUnits();
-// if(!mobileCheckHB() || (mobileCheckHB() && window.location.href == "https://m.sakshi.com/")){
-//   checkHBUnits();
-// }
-// else{
-//   addNewBotAdMobile();
-// }
+// checkHBUnits();
+if(mobileCheckHB() && window.location.href == "https://m.sakshi.com/"){
+  addNewBotAdMobile();
+}
+else{
+  checkHBUnits();
+}

@@ -115,7 +115,7 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
             { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+            { bidder: 'oftmedia', params: { placementId: '20846125' } },
             // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
             // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
             // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -128,7 +128,7 @@ if(typeof customConfigObjectA === 'undefined'){
             // { bidder: 'criteointl', params: {networkId: '10545'} },
             // // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
             // //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265018'} },
             // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
             // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
             // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
@@ -193,7 +193,7 @@ if(typeof customConfigObjectA === 'undefined'){
             // { bidder: 'criteointl', params: {networkId: '10545'} },
             // // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
             // //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
             // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
             // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
             // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }

@@ -406,7 +406,7 @@ if(typeof customConfigObjectA === 'undefined'){
      //      { bidder: 'appnexus', params: { placementId: '20372619' } }, /* one placementId for all sizes  my appnexus bidder */
      //      { bidder: 'nobid', params: { siteId: '22103833234' } },
      //      // { bidder: 'dailyhunt', params: {placement_id: 145, publisher_id: 6, partner_name: 'sakshi'} },
-     //   //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983535'} },
+     //   //   { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3264993'} },
      //   //   { bidder: 'sovrn', params: {tagid: '744064'} },
      //   //   { bidder: 'smartadserver', params: { siteId: '370913', pageId: '1306092', formatId: '93231', domain: 'https://prg8.smartadserver.com' } }
      // ]),  //'/21959913182/sakshiedu_nb_320x50'

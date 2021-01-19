@@ -144,7 +144,7 @@ googletag.cmd.push(function() {
     });
 });
 
-function refreshBid() {
+function refreshBid(ub_slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
@@ -153,7 +153,7 @@ function refreshBid() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
+              googletag.pubads().refresh([ub_slot]);
           });
         });
 		  }
@@ -169,7 +169,7 @@ function ub_checkAdRendered(){
     if(ub_adRefreshFlag != 1){
       setInterval(function() {
         ub_adRefreshFlag = 1;
-        refreshBid();
+        refreshBid(ub_slot1);
       }, REFRESH_TIMEOUT);
     }
 	 }

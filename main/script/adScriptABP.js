@@ -51,7 +51,7 @@ function mobileCheckAdSript() {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
-if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-right-wrap') == null)) || mobileCheckAdSript()) {
+if ((!mobileCheckAdSript() && (document.querySelector('.article-text-wrap') == null)) || mobileCheckAdSript()) {
   adUnitstemp = [
     {
         code: '/21956238066/anandabazar.com_nb_320x50',
@@ -125,7 +125,7 @@ if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-ri
   adUnits.push(adUnitstemp[1]);
 }
 
-if (!mobileCheckAdSript() && document.querySelector('.abp-storypage-article-left-wrap') != null) {
+if (!mobileCheckAdSript() && document.querySelector('.article-text-wrap') != null) {
   adUnitstemp = {
       code: '/21956238066/anandabazar.com_NB_160x600',
       mediaTypes: {
@@ -311,7 +311,7 @@ function googlePush(){
   });
 }
 
-if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-right-wrap') == null)) || mobileCheckAdSript()) {
+if ((!mobileCheckAdSript() && (document.querySelector('.article-text-wrap') == null)) || mobileCheckAdSript()) {
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956238066/anandabazar.com_nb_320x50');
   mappings.sizes.push(div_1_sizes);
@@ -325,7 +325,7 @@ if ((!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-ri
   });
 }
 
-if (!mobileCheckAdSript() && (document.querySelector('.abp-storypage-article-right-wrap') != null)) {
+if (!mobileCheckAdSript() && (document.querySelector('.article-text-wrap') != null)) {
   mappings.slotNumbers.push(2);
   mappings.adCode.push('/21956238066/anandabazar.com_NB_160x600');
   mappings.sizes.push(div_2_sizes);

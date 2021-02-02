@@ -144,7 +144,7 @@ googletag.cmd.push(function() {
     });
 });
 
-function refreshBid(ub_slot) {
+function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
@@ -153,7 +153,7 @@ function refreshBid(ub_slot) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
+              googletag.pubads().refresh([ub_slot1]);
           });
         });
 		  }

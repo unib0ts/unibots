@@ -1061,7 +1061,7 @@ var mappings_extra_units_config ={
     '/21796214895/542194_Sakshi_block_3',
     '/1062118/Intersitial_640x480_Desktop_Articlepage',
     '/1062118/Intersitial_320x480_mobile_Articlepage',
-    // '/1062118/Desktop_LB_970x90_728x90'
+    '/1062118/Desktop_LB_970x90_728x90'
   ]
 }
 var mappings_extra_units = {
@@ -1220,7 +1220,7 @@ function sendAdserverRequest() {
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
         googletag.pubads().refresh(mapping_full_hb.slots);
-        googletag.pubads().refresh(mappings_extra_units.slots);
+        // googletag.pubads().refresh(mappings_extra_units.slots);
     });
 }
 function callAPStagBids(){

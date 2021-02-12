@@ -1119,20 +1119,20 @@ if(typeof customConfigObjectA === 'undefined'){
   // }, REFRESH_TIMEOUT);
 
 
-  function refreshBid(ub_slot, adCode) {
-    ubpbjs.que.push(function() {
-      ubpbjs.requestBids({
-        timeout: PREBID_TIMEOUT,
-        adUnitCodes: adCode,
-        bidsBackHandler: function() {
-          googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh(ub_slot);
-            });
-          });
-        }
-      });
-    });
-  }
+  // function refreshBid(ub_slot, adCode) {
+  //   ubpbjs.que.push(function() {
+  //     ubpbjs.requestBids({
+  //       timeout: PREBID_TIMEOUT,
+  //       adUnitCodes: adCode,
+  //       bidsBackHandler: function() {
+  //         googletag.cmd.push(function() {
+  //           ubpbjs.que.push(function() {
+  //               ubpbjs.setTargetingForGPTAsync();
+  //               googletag.pubads().refresh(ub_slot);
+  //           });
+  //         });
+  //       }
+  //     });
+  //   });
+  // }
 }

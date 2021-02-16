@@ -1,6 +1,6 @@
 var div_1_sizes = [320, 50];
-// var div_2_sizes = [300, 600];
-// var div_3_sizes = [[200, 200], [250, 250], [300, 250]];
+var div_2_sizes = [300, 250];
+var div_3_sizes = [300, 250];
 // var div_4_sizes = [300, 600];
 var adUnits = [];
 
@@ -77,6 +77,74 @@ const customConfigObjectA = {
       ]
   };
   adUnits.push(adUnits1);
+  if (document.getElementById('unibots-300x250_1')) {
+    adUnits1 =
+    {
+        code: '/21956916242/tribuneindia.com_hb_300x250_1',
+        mediaTypes: {
+            banner: {
+                sizes: div_2_sizes
+            }
+        },
+        bids: [
+        { bidder: 'appnexus', params: { placementId: '20215276' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'sovrn', params: {tagid: '777762'} },
+        // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
+        // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+        // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+        // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        // // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+        // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        //  { bidder: 'nobid', params: { siteId : '22125676635'} },
+          // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+  if (document.getElementById('unibots-300x250_2')) {
+    adUnits1 =
+    {
+        code: '/21956916242/tribuneindia.com_hb_300x250_2',
+        mediaTypes: {
+            banner: {
+                sizes: div_3_sizes
+            }
+        },
+        bids: [
+        { bidder: 'appnexus', params: { placementId: '20215276' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'sovrn', params: {tagid: '777762'} },
+        // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
+        // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+        // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+        // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        // // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+        // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        //  { bidder: 'nobid', params: { siteId : '22125676635'} },
+          // { bidder: 'criteo', params: {networkId: '4902'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
 // }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -172,7 +240,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false]
+  renderedFlag: [false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -236,6 +304,34 @@ function googlePush(){
   });
 }
 
+if (document.getElementById('unibots-300x250_1')) {
+  document.getElementById('unibots-300x250_1').innerHTML = '<div id="div-gpt-ad-1613467241228-0">';
+  mappings.slotNumbers.push(2);
+  mappings.adCode.push('/21956916242/tribuneindia.com_hb_300x250_1');
+  mappings.sizes.push(div_2_sizes);
+  mappings.adId.push('div-gpt-ad-1613467241228-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot2) {
+        ub_checkAdRendered('div-gpt-ad-1613467241228-0', ub_slot2, ['/21956916242/tribuneindia.com_hb_300x250_1']);
+      }
+    });
+  });
+}
+if (document.getElementById('unibots-300x250_2')) {
+  document.getElementById('unibots-300x250_2').innerHTML = '<div id="div-gpt-ad-1613467274863-0">';
+  mappings.slotNumbers.push(3);
+  mappings.adCode.push('/21956916242/tribuneindia.com_hb_300x250_2');
+  mappings.sizes.push(div_3_sizes);
+  mappings.adId.push('div-gpt-ad-1613467274863-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot3) {
+        ub_checkAdRendered('div-gpt-ad-1613467274863-0', ub_slot3, ['/21956916242/tribuneindia.com_hb_300x250_2']);
+      }
+    });
+  });
+}
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956916242/tribuneindia.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);

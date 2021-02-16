@@ -1220,7 +1220,7 @@ function sendAdserverRequest() {
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
         googletag.pubads().refresh(mapping_full_hb.slots);
-        // googletag.pubads().refresh(mappings_extra_units.slots);
+        googletag.pubads().refresh(mappings_extra_units.slots);
     });
 }
 function callAPStagBids(){

@@ -1286,7 +1286,7 @@ function callMapUnits(){
             // slotName: mappings_full_hb_config.adUnitNames[index],
             // sizes: mappings_full_hb_config.sizes[index]
 
-            slotID: googletag.pubads().getSlots()[0].getSlotId().getDomId(),
+            slotID: googletag.pubads().getSlots()[i].getSlotId().getDomId(),
             slotName: x[i].getSlotId().getAdUnitPath(),
             sizes: size_array
           }

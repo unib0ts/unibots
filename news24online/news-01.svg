@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <title>logo</title>
+  <path d="M59.74,40.7a30.46047,30.46047,0,0,1-2.75,6c-.25.44-.51.87-.79,1.3A31.86927,31.86927,0,0,1,42.84,59.43a46.85108,46.85108,0,0,1-14.95,4.16c-1.76.2-3.53.33-5.31.4-1.77.07-2.53-.68-2.53-2.43V58.74c0-.96-.03-1.93.01-2.89a1.07627,1.07627,0,0,0-.69-1.17,28.8069,28.8069,0,0,1-9.7-7.98A28.39481,28.39481,0,0,1,6.3,41.14c-.07-.15-.13-.29-.2-.44A28.275,28.275,0,0,1,26.55,1.61C34.43.13,41.88,1.28,48.59,5.84A28.3615,28.3615,0,0,1,60.47,23.81,31.01933,31.01933,0,0,1,59.74,40.7Z" style="fill: #17469e"/>
+  <polygon points="58.13 30 57.17 41 14.17 41 14.96 32 9.96 32 10.83 22 34.83 22 34.13 30 58.13 30" style="opacity: 0.3"/>
+  <polygon points="56.169 39 13.169 39 14.131 28 57.131 28 56.169 39" style="fill: #fff"/>
+  <polygon points="32.956 30 8.956 30 9.831 20 33.831 20 32.956 30"/>
+  <text transform="matrix(0.99619, 0, -0.08716, 0.99619, 10.94707, 27.19165)" style="font-size: 7.02673864364624px;fill: #fff;font-family: Poppins-SemiBold, Poppins;font-weight: 600">NEWS</text>
+  <text transform="matrix(0.99619, 0, -0.08716, 0.99619, 16.3521, 36.65987)" style="font-size: 7.02673864364624px;font-family: Poppins-SemiBold, Poppins;font-weight: 600">ASSISTANT</text>
+  <line x1="27" y1="45" x2="43" y2="45" style="fill: #fff;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 10"/>
+  <line x1="46" y1="45" x2="51" y2="45" style="fill: #fff;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 10"/>
+</svg>

@@ -1247,8 +1247,8 @@ function callMapUnits(){
         size_array = [];
         size_temp_array = googletag.pubads().getSlots()[i].getSizes();
         for(j=0;j<size_temp_array.length;j++){
-          length = size_temp_array[j][0];
-          height = size_temp_array[j][1];
+          length = size_temp_array[j]['m'];
+          height = size_temp_array[j]['j'];
           temp_array = [length, height];
           size_array.push(temp_array);
         }

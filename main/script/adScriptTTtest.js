@@ -30,7 +30,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-const customConfigObjectA = {
+var customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,

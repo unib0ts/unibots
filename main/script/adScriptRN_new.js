@@ -35,11 +35,11 @@
 
  function mybotubstickyad() {
    document.getElementById('ub-sticky-ad-container').style.display='none';
-}
+ }
 
  function mybotubstickyadDesk() {
    document.getElementById('ub-sticky-ad-containerdesk').style.display='none';
-}
+ }
 
 	var s0 = document.createElement('script');
 	s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
@@ -275,7 +275,7 @@ else {
           googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
+                // googletag.pubads().refresh([ub_slot]);
                 // var adsCalled = false;
                 // for(var i=0;i<x.length;i++){
                 //   var bc = x[i].bidderCode;

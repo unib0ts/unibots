@@ -1,6 +1,6 @@
 if(typeof customConfigObjectA === 'undefined'){
 
-	var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{ top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.article-ad-container{margin: 8px 0; clear:both;}';
+	var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.article-ad-container{margin: 8px 0; clear:both;}';
 	var css=document.createElement('style');
 	css.type='text/css';
 	css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -20,7 +20,7 @@ if(typeof customConfigObjectA === 'undefined'){
 		z= document.createElement('div');
 		z.id = 'ub-sticky-ad-containerdesk';
 		z.className = 'ub-sticky-ad-containerdesk';
-		z.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()">\u0078</span><div class="ub-sticky-adDesk" id="desktopsticky"></div';
+		z.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-ad" onclick="mybotubstickyadDesk()">\u0078</span><div class="ub-sticky-adDesk" id="desktopsticky"></div';
 		x = document.querySelector('body');
 		x.appendChild(z);
 		document.getElementById('desktopsticky').innerHTML=mybotcentersticky_desk;
@@ -112,7 +112,7 @@ if (mobileCheck()) {
 				{ bidder: 'appnexus', params: { placementId: '19056632' } }, /* one placementId for all sizes  my appnexus bidder */
  			 { bidder: 'oftmedia', params: { placementId: '20846125' } },
  			 // { bidder: '33across', params: { siteId : 'bKEogyBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
- 			 { bidder: 'emx_digital', params: { tagid: '97512' } }, /* sizeless */
+ 			 // { bidder: 'emx_digital', params: { tagid: '97512' } }, /* sizeless */
  			 // { bidder: 'sovrn', params: {tagid: '716630'} },
  			 { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
 			 { bidder: 'nobid', params: { siteId : '22049999728'} },
@@ -259,6 +259,7 @@ else {
       adId1 = adId;
       var nodes = document.getElementById(adId1).childNodes[0].childNodes;
       if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+				document.getElementById('close_ub-sticky-ad').style.display = 'block';
         setTimeout(function() {
           refreshBid(ub_slot, adCode);
         }, REFRESH_TIMEOUT);
@@ -385,7 +386,6 @@ else {
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
       googletag.pubads().enableSingleRequest();
-      // googletag.pubads().set("page_url",'https://www.irctc.co.in/');
       googletag.enableServices();
     });
   }
@@ -424,16 +424,9 @@ else {
     googlePush();
   }
   else{
-    setTimeout(function(){
-      googletag.cmd.push(function() {
-        googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-        googlePush();
-      });
-      // googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-      // googlePush();
-    }, 500);
+		setTimeout(function(){
+	    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+	    googlePush();
+	  }, 500);
   }
-  // setTimeout(function() {
-  //     initAdserver();
-  // }, FAILSAFE_TIMEOUT);
 }

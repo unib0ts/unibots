@@ -30,6 +30,15 @@ var GEO_CODE = '';
 		request.send();
 })();
 
+if(mobileCheck()){
+  var s4 = document.createElement('script');
+  s4.async = true;
+  s4.setAttribute("id", "AV5f72cc9b1742bf635335319a");
+  s4.type = "text/javascript";
+  s4.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5f72cc9b1742bf635335319a&AV_PUBLISHERID=5f466e970d71fa6f143050a9";
+  document.getElementsByTagName('head')[0].appendChild(s4);
+}
+
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12

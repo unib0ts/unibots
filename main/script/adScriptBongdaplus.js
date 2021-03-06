@@ -68,7 +68,7 @@ document.getElementsByTagName('head')[0].appendChild(s1);
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
+var REFRESH_TIMEOUT = 45000;
 // var boturlbid = window.location.hostname;
 
 var GEO_CODE = '';

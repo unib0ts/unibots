@@ -1,6 +1,6 @@
-var s4 = document.querySelector('script[src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021022501.js?31060314"]');
-s4.onload = function(){
-// if(typeof customConfigObjectA === 'undefined'){
+// var s4 = document.querySelector('script[src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021022501.js?31060314"]');
+// s4.onload = function(){
+if(typeof customConfigObjectA === 'undefined'){
   var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.article-ad-container{margin: 8px 0; clear:both;}';
 	var css=document.createElement('style');
 	css.type='text/css';

@@ -67,6 +67,7 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
 			bids: [
 			 { bidder: 'appnexus', params: { placementId: '21146806' } }, /* one placementId for all sizes  my appnexus bidder */
 			 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507449'} },
+			 { bidder: 'ucfunnel', params: { adid : 'ad-2736B8748AA68B4B0867E94697B93ABA'} },
 			// 	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
 			// 	// { bidder: '33across', params: { siteId : 'bKEogyBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 			// 	// { bidder: 'emx_digital', params: { tagid: '97512' } }, /* sizeless */

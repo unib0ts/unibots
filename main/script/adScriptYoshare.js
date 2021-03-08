@@ -67,7 +67,7 @@ var adUnits = [];
 //           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
 //          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
 //          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-//          //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+//          //  { bidder: 'nobid', params: { siteId : '22103833237'} },
 //          //  { bidder: 'criteo', params: {networkId: '10542'} },
 //          //   { bidder: 'criteointl', params: {networkId: '10545'} },
 //          //    { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
@@ -99,7 +99,7 @@ var adUnits = [];
 //           // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
 //          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
 //          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-//          //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+          // { bidder: 'nobid', params: { siteId : '22103833237'} },
 //          //  { bidder: 'criteo', params: {networkId: '10542'} },
 //          //   { bidder: 'criteointl', params: {networkId: '10545'} },
 //          //    { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
@@ -129,13 +129,14 @@ var adUnits = [];
            // { bidder: 'oftmedia', params: { placementId: '18671523' } },
            // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-            // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+            { bidder: 'openx', params: {unit: '543981212', delDomain: 'yieldbird-d.openx.net'} },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+            { bidder: 'nobid', params: { siteId : '22103833237'} },
+            { bidder: 'ucfunnel', params: { adid : 'ad-E2B42247E33296DAC98A8629492877E'} },
            //  { bidder: 'criteo', params: {networkId: '10542'} },
            //   { bidder: 'criteointl', params: {networkId: '10545'} },
-           //    { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
+            { bidder: 'smartadserver', params: { siteId: '370915', pageId: '1306094', formatId: '94418', domain: 'https://prg8.smartadserver.com' } },
            //   // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
              { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
              { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -164,10 +165,11 @@ var adUnits = [];
             { bidder: 'openx', params: {unit: '543530140', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
            // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+            { bidder: 'nobid', params: { siteId : '22103833237'} },
+            { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA9B43EA9A63C789BA3DD629E7E'} },
            //  { bidder: 'criteo', params: {networkId: '10542'} },
            //   { bidder: 'criteointl', params: {networkId: '10545'} },
-           //    { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
+           { bidder: 'smartadserver', params: { siteId: '370915', pageId: '1306094', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
            //   // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
              { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
              { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -196,10 +198,11 @@ var adUnits = [];
           { bidder: 'openx', params: {unit: '543530141', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
          // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-         //  { bidder: 'nobid', params: { siteId : '22042552139'} },
+          { bidder: 'nobid', params: { siteId : '22103833237'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-D234224D978D947B1D472E6BDD68A92B'} },
          //  { bidder: 'criteo', params: {networkId: '10542'} },
          //   { bidder: 'criteointl', params: {networkId: '10545'} },
-         //    { bidder: 'smartadserver', params: { siteId: '362097', pageId: '1289598', formatId: '93419', domain: 'https://prg8.smartadserver.com' } },
+         { bidder: 'smartadserver', params: { siteId: '370915', pageId: '1306094', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
          //   // { bidder: 'sonobi', params: { placement_id: 'ad2da076b5873229ffa5', ad_unit: 'beanstalkmums.com.au_nb_728x90' } },
            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -320,7 +323,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh(ub_slot);
+              googletag.pubads().refresh([ub_slot]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;

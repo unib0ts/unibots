@@ -104,7 +104,7 @@ if(typeof customConfigObjectA === 'undefined'){
             },
             bids: [
             { bidder: 'appnexus', params: { placementId: '20989718' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '777762'} },
+            { bidder: 'sovrn', params: {tagid: '858632'} },
             // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -116,7 +116,7 @@ if(typeof customConfigObjectA === 'undefined'){
             // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
             // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
             // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-            // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '543981218', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
              // { bidder: 'nobid', params: { siteId : '22125676635'} },
@@ -138,7 +138,7 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
           { bidder: 'appnexus', params: { placementId: '20989718' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '777762'} },
+          { bidder: 'sovrn', params: {tagid: '858634'} },
           // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -150,7 +150,7 @@ if(typeof customConfigObjectA === 'undefined'){
           // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
           // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '543981219', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           //  { bidder: 'nobid', params: { siteId : '22125676635'} },
@@ -282,17 +282,17 @@ if(typeof customConfigObjectA === 'undefined'){
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
                   googletag.pubads().refresh([ub_slot]);
-                  // var adsCalled = false;
-                  // for(var i=0;i<x.length;i++){
-                  //   var bc = x[i].bidderCode;
-                  //   if(bc=="openx"){
-                  //     adsCalled = true;
-                  //     callBotman();
-                  //   }
-                  // }
-                  // if(!adsCalled){
-                  //   callAdsUB();
-                  // }
+                  var adsCalled = false;
+                  for(var i=0;i<x.length;i++){
+                    var bc = x[i].bidderCode;
+                    if(bc=="openx"){
+                      adsCalled = true;
+                      callBotman();
+                    }
+                  }
+                  if(!adsCalled){
+                    callAdsUB();
+                  }
               });
             });
           }
@@ -306,73 +306,73 @@ if(typeof customConfigObjectA === 'undefined'){
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh(mappings.slots);
-                // var x = ubpbjs.getAllPrebidWinningBids();
-                // var adsCalled = false;
-                // for(var i=0;i<x.length;i++){
-                //   var bc = x[i].bidderCode;
-                //   if(bc=="openx"){
-                //     adsCalled = true;
-                //     callBotman();
-                //   }
-                // }
-                // if(!adsCalled){
-                //   callAdsUB();
-                // }
+                // googletag.pubads().refresh(mappings.slots);
+                var x = ubpbjs.getAllPrebidWinningBids();
+                var adsCalled = false;
+                for(var i=0;i<x.length;i++){
+                  var bc = x[i].bidderCode;
+                  if(bc=="openx"){
+                    adsCalled = true;
+                    callBotman();
+                  }
+                }
+                if(!adsCalled){
+                  callAdsUB();
+                }
             });
         });
     }
 
-    // var botmanCalled = false;
-    // var userStatusBM = '';
-    // function callBotman(){
-    //   if(userStatusBM == ''){
-    //     var request = new XMLHttpRequest();
-    //     var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=indianrailways';
-    //     request.open('GET', url, true);
-    //     request.onload = function() {
-    //       if (request.status >= 200 && request.status < 400) {
-    //         var data = request.responseText;
-    //         if(data != ""){
-    //           data = JSON.parse(data);
-    //           userStatusBM = data;
-    //           if(userStatusBM == "0" || userStatusBM == "3"){
-    //             callAdsUB();
-    //           }
-    //           else{
-    //             console.log('Not Valid Traffic for openx');
-    //           }
-    //         }
-    //         else{
-    //           console.error('Data not returned from server');
-    //           callAdsUB();
-    //         }
-    //       }
-    //       else {
-    //         console.error('Request failed from server');
-    //         callAdsUB();
-    //       }
-    //     };
-    //     request.onerror = function() {
-    //       console.error('Request failed to Reach Server');
-    //       callAdsUB();
-    //     };
-    //     request.send();
-    //   }
-    //   else{
-    //     if(userStatusBM == "0" || userStatusBM == "3"){
-    //       callAdsUB();
-    //     }
-    //     else{
-    //       console.log('Not Valid Traffic for openx');
-    //     }
-    //   }
-    //
-    // }
-    //
-    // function callAdsUB(){
-    // 	googletag.pubads().refresh(mappings.slots);
-    // }
+    var botmanCalled = false;
+    var userStatusBM = '';
+    function callBotman(){
+      if(userStatusBM == ''){
+        var request = new XMLHttpRequest();
+        var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=yeah1music';
+        request.open('GET', url, true);
+        request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+            var data = request.responseText;
+            if(data != ""){
+              data = JSON.parse(data);
+              userStatusBM = data;
+              if(userStatusBM == "0" || userStatusBM == "3"){
+                callAdsUB();
+              }
+              else{
+                console.log('Not Valid Traffic for openx');
+              }
+            }
+            else{
+              console.error('Data not returned from server');
+              callAdsUB();
+            }
+          }
+          else {
+            console.error('Request failed from server');
+            callAdsUB();
+          }
+        };
+        request.onerror = function() {
+          console.error('Request failed to Reach Server');
+          callAdsUB();
+        };
+        request.send();
+      }
+      else{
+        if(userStatusBM == "0" || userStatusBM == "3"){
+          callAdsUB();
+        }
+        else{
+          console.log('Not Valid Traffic for openx');
+        }
+      }
+
+    }
+
+    function callAdsUB(){
+    	googletag.pubads().refresh(mappings.slots);
+    }
 
     function googleDefine(slotNumbers, adCode, sizes, adId){
       for(var i=0; i<slotNumbers.length;i++){

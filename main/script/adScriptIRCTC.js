@@ -111,7 +111,7 @@ if(typeof customConfigObjectA === 'undefined'){
             };
             adUnits.push(adUnits1);
           }
-    if (document.getElementById('ub-banner-ad') || document.getElementById('div-gpt-ad-1613413260012-0')) {
+    if (document.getElementById('div-gpt-ad-1613413260012-0')) {
               adUnits1 =
               {
                   code: '/22140546871/irctc.co.in_cb_300x250',
@@ -179,7 +179,7 @@ if(typeof customConfigObjectA === 'undefined'){
             };
             adUnits.push(adUnits1);
           }
-    if (document.getElementById('ub-banner-ad') || document.getElementById('div-gpt-ad-1613413260012-0')) {
+    if (document.getElementById('div-gpt-ad-1613413260012-0')) {
               adUnits1 =
               {
                   code: '/22142075243/irctc.co.in_cb_300x250_1',
@@ -247,7 +247,7 @@ if(typeof customConfigObjectA === 'undefined'){
             };
             adUnits.push(adUnits1);
     }
-    if (document.getElementById('ub-banner-ad') || document.getElementById('div-gpt-ad-1613413260012-0')) {
+    if (document.getElementById('div-gpt-ad-1613413260012-0')) {
         adUnits1 =
         {
             code: '/22057354005/irctc.co.in_cb_300x250_2',
@@ -572,8 +572,8 @@ if(typeof customConfigObjectA === 'undefined'){
         });
       });
     }
-    if (document.getElementById('ub-banner-ad') || document.getElementById('div-gpt-ad-1613413260012-0')) {
-      document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad1;
+    if (document.getElementById('div-gpt-ad-1613413260012-0')) {
+      // document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad1;
       document.getElementById('div-gpt-ad-1613413260012-0').innerHTML = ub_banner_ad1;
       mappings.slotNumbers.push(4);
       mappings.adCode.push('/22140546871/irctc.co.in_cb_300x250');
@@ -604,8 +604,8 @@ if(typeof customConfigObjectA === 'undefined'){
       });
 
     }
-    if (document.getElementById('ub-banner-ad')|| document.getElementById('div-gpt-ad-1613413260012-0')) {
-      document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad2;
+    if (document.getElementById('div-gpt-ad-1613413260012-0')) {
+      // document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad2;
       document.getElementById('div-gpt-ad-1613413260012-0').innerHTML = ub_banner_ad2;
       mappings.slotNumbers.push(5);
       mappings.adCode.push('/22142075243/irctc.co.in_cb_300x250_1');
@@ -635,8 +635,8 @@ if(typeof customConfigObjectA === 'undefined'){
         });
       });
     }
-    if (document.getElementById('ub-banner-ad') || document.getElementById('div-gpt-ad-1613413260012-0')) {
-      document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad3;
+    if (document.getElementById('div-gpt-ad-1613413260012-0')) {
+      // document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad3;
       document.getElementById('div-gpt-ad-1613413260012-0').innerHTML = ub_banner_ad3;
       mappings.slotNumbers.push(6);
       mappings.adCode.push('/22057354005/irctc.co.in_cb_300x250_2');

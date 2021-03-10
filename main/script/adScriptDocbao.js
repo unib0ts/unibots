@@ -18,7 +18,7 @@ if (!mobileCheck()) {
   z.className = 'ub-left-ad';
   x = document.querySelector('body');
   parentWidth = x.offsetWidth;
-  child = document.querySelector('.layout2col');
+  child = document.querySelector('.header');
   childWidth = child.offsetWidth;
   space = (parentWidth - childWidth)/2;
   if(space > 120){
@@ -31,7 +31,7 @@ if (!mobileCheck()) {
   z.className = 'ub-right-ad';
   x = document.querySelector('body');
   parentWidth = x.offsetWidth;
-  child = document.querySelector('.layout2col');
+  child = document.querySelector('.header');
   childWidth = child.offsetWidth;
   space = (parentWidth - childWidth)/2;
   if(space > 120){

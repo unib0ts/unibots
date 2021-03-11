@@ -686,7 +686,7 @@ function callFullHBAds(adCode, ub_slot){
               // biddersBack();
               googletag.cmd.push(function() {
                   googletag.pubads().refresh(mapping_full_hb.slots);
-                  googletag.pubads().refresh(mappings_extra_units.slots);
+                  // googletag.pubads().refresh(mappings_extra_units.slots);
               });
               // googletag.pubads().refresh(ub_slot);
           });

@@ -12,19 +12,19 @@ var check = false;
 return check;
 };
 
-// if (!mobileCheck()) {
-//   z= document.createElement('div');
-//   z.id = 'ub-left-ad';
-//   z.className = 'ub-left-ad';
-//   x = document.querySelector('body');
-//   parentWidth = x.offsetWidth;
-//   child = document.querySelector('.header');
-//   childWidth = child.offsetWidth;
-//   space = (parentWidth - childWidth)/2;
-//   if(space > 120){
-//   	child.appendChild(z);
-//   	document.getElementById('ub-left-ad').innerHTML= '<div id="div-gpt-ad-1615189484195-0">';
-//   }
+if (!mobileCheck()) {
+  z= document.createElement('div');
+  z.id = 'ub-left-ad';
+  z.className = 'ub-left-ad';
+  x = document.querySelector('body');
+  parentWidth = x.offsetWidth;
+  child = document.querySelector('.header');
+  childWidth = child.offsetWidth;
+  space = (parentWidth - childWidth)/2;
+  if(space > 120){
+  	child.appendChild(z);
+  	document.getElementById('ub-left-ad').innerHTML= '<div id="div-gpt-ad-1615189484195-0">';
+  }
 //
 //   // z= document.createElement('div');
 //   // z.id = 'ub-right-ad';
@@ -38,7 +38,7 @@ return check;
 //   // 	child.appendChild(z);
 //   // 	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1615189532474-0">';
 //   // }
-// }
+}
 // else {
 //   z1= document.createElement('div');
 //   z1.id = 'ub-sticky-ad-container';

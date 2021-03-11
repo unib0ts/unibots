@@ -452,10 +452,10 @@ function callFullHBAds(adCode, ub_slot){
               ubpbjs.setTargetingForGPTAsync();
               // requestManager.prebid = true;
               // biddersBack();
-              // googletag.cmd.push(function() {
-              //     googletag.pubads().refresh(mapping_full_hb.slots);
-              //     googletag.pubads().refresh(mappings_extra_units.slots);
-              // });
+              googletag.cmd.push(function() {
+                  googletag.pubads().refresh(mapping_full_hb.slots);
+                  googletag.pubads().refresh(mappings_extra_units.slots);
+              });
               // googletag.pubads().refresh(ub_slot);
           });
         });

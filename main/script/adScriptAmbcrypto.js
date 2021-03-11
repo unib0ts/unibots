@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 2000;
+var PREBID_TIMEOUT = 1000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 var boturlbid = window.location.hostname;

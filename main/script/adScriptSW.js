@@ -265,7 +265,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot1]);
+              // googletag.pubads().refresh([ub_slot1]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;

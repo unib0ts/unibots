@@ -211,7 +211,7 @@ var mappings_full_hb_config_old = {
     'div-gpt-ad-1615189428915-0',
     'div-gpt-ad-1615189484195-0',
     // 'div-gpt-ad-1615189532474-0',
-    // 'div-gpt-ad-1615189668110-0',
+    'div-gpt-ad-1615189668110-0',
   ],
   adUnitNames: [
     '/22140546871/docbao.vn_pc_header_728x90',

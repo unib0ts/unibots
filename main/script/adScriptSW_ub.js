@@ -287,7 +287,7 @@ if(typeof customConfigObjectA === 'undefined'){
                 // }
                 // if(!adsCalled){
                 //   callAdsUB();
-                }
+                // }
             });
         });
     }

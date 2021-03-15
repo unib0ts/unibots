@@ -339,7 +339,7 @@ var mappings_full_hb_config_old = {
      [[728, 90], [1100, 90], [970, 90]],  //'/21692080761/amb_header_desk_v2',
      [320, 100],  //'/21692080761/amb_header_mob_v2',
      [[468, 60], [728, 90], [970, 90]],  //'/21692080761/amb_footer_desk_v2',
-     [320, 100]  //'/21692080761/amb_footer_mob_v2'
+     [320, 50]  //'/21692080761/amb_footer_mob_v2'
   ],
   bids: [
         hb_full_common_bidders.concat([

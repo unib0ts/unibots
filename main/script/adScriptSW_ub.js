@@ -23,7 +23,7 @@ if(typeof customConfigObjectA === 'undefined'){
     var div_2_sizes = [468, 60];
     var adUnits = [];
 
-    var PREBID_TIMEOUT = 2000;
+    var PREBID_TIMEOUT = 1200;
     var FAILSAFE_TIMEOUT = 3000;
     var REFRESH_TIMEOUT = 60000;
 

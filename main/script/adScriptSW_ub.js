@@ -107,7 +107,7 @@ if(typeof customConfigObjectA === 'undefined'){
             code: '/21956916242/scoopwhoop.com_HB_468x60',
             mediaTypes: {
                 banner: {
-                    sizes: div_1_sizes
+                    sizes: div_2_sizes
                 }
             },
             bids: [
@@ -390,7 +390,7 @@ if(typeof customConfigObjectA === 'undefined'){
         document.getElementById('unibots-468x60_Img').innerHTML = unibot2;
         mappings.slotNumbers.push(2);
         mappings.adCode.push('/21956916242/scoopwhoop.com_HB_468x60');
-        mappings.sizes.push(div_1_sizes);
+        mappings.sizes.push(div_2_sizes);
         mappings.adId.push('div-gpt-ad-1615279023113-0');
         googletag.cmd.push(function() {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {

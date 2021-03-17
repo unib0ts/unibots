@@ -12,6 +12,13 @@ return check;
 };
 
 if (!mobileCheck()) {
+  var s5 = document.createElement('script');
+  s5.async = true;
+  s5.setAttribute("id", "AV5fb77ae2fab17435261f178a");
+  s5.type = "text/javascript";
+  s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
+  document.getElementsByTagName('head')[0].appendChild(s5);
+
   z= document.createElement('div');
   z.id = 'ub-left-ad';
   z.className = 'ub-left-ad';
@@ -39,6 +46,13 @@ if (!mobileCheck()) {
   }
 }
 else {
+  var s6 = document.createElement('script');
+  s6.async = true;
+  s6.setAttribute("id", "AV60489ad3e4171b0b054618b6");
+  s6.type = "text/javascript";
+  s6.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=60489ad3e4171b0b054618b6&AV_PUBLISHERID=5fb75940e3a751708954df17";
+  document.getElementsByTagName('head')[0].appendChild(s6);
+
   z1= document.createElement('div');
   z1.id = 'ub-sticky-ad-container';
   z1.className = 'ub-sticky-ad-container';

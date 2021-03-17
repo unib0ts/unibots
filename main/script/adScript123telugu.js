@@ -104,6 +104,7 @@ if(mobileCheck === 'function'){
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'adkernel', params: {zoneId: '126000', host: 'cpm.fmlabsonline.com'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-34B844EE23D7699BC3BA6AB4479E22AD'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
         ]
     }
@@ -136,6 +137,7 @@ if(mobileCheck === 'function'){
               //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
               { bidder: 'adkernel', params: {zoneId: '126000', host: 'cpm.fmlabsonline.com'} },
+              { bidder: 'ucfunnel', params: { adid : 'ad-D2342266D22D4E78CA6E4EA8638D6D2'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
             ]
         }
@@ -209,6 +211,7 @@ else{
            //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
            { bidder: 'adkernel', params: {zoneId: '126000', host: 'cpm.fmlabsonline.com'} },
+           { bidder: 'ucfunnel', params: { adid : 'ad-34B844EE23D7699BC3BA6AB4479E22AD'} },
            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
          ]
      }
@@ -241,6 +244,7 @@ else{
               //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
               { bidder: 'adkernel', params: {zoneId: '126000', host: 'cpm.fmlabsonline.com'} },
+              { bidder: 'ucfunnel', params: { adid : 'ad-D2342266D22D4E78CA6E4EA8638D6D2'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323586', zoneId: '1679922'} }
             ]
         }

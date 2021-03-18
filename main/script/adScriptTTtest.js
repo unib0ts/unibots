@@ -65,6 +65,7 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934251'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          // { bidder: 'ucfunnel', params: { adid : 'ad-77287878477266DECB6273E2A8E4EAD7'} },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }

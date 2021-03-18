@@ -68,13 +68,13 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
 			 { bidder: 'appnexus', params: { placementId: '21146806' } }, /* one placementId for all sizes  my appnexus bidder */
 			 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507449'} },
 			 { bidder: 'ucfunnel', params: { adid : 'ad-2736B8748AA68B4B0867E94697B93ABA'} },
-			// 	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
+				{ bidder: 'oftmedia', params: { placementId: '20846125' } },
 			// 	// { bidder: '33across', params: { siteId : 'bKEogyBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 			// 	// { bidder: 'emx_digital', params: { tagid: '97512' } }, /* sizeless */
-			// 	// { bidder: 'sovrn', params: {tagid: '716630'} },
+				{ bidder: 'sovrn', params: {tagid: '867113'} },
 			{ bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
 			{ bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-			// { bidder: 'nobid', params: { siteId : '22049999728'} },
+			{ bidder: 'nobid', params: { siteId : '22315894544'} },
 			{ bidder: 'criteo', params: {networkId: '10542'} },
 			{ bidder: 'criteointl', params: {networkId: '10545'} },
 				{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
@@ -205,17 +205,17 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
                 googletag.pubads().refresh([ub_slot]);
-                // var adsCalled = false;
-                // for(var i=0;i<x.length;i++){
-                //   var bc = x[i].bidderCode;
-                //   if(bc=="openx"){
-                //     adsCalled = true;
-                //     callBotman();
-                //   }
-                // }
-                // if(!adsCalled){
-                //   callAdsUB();
-                // }
+                var adsCalled = false;
+                for(var i=0;i<x.length;i++){
+                  var bc = x[i].bidderCode;
+                  if(bc=="openx"){
+                    adsCalled = true;
+                    callBotman();
+                  }
+                }
+                if(!adsCalled){
+                  callAdsUB();
+                }
             });
           });
         }
@@ -229,74 +229,74 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
       googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh(mappings.slots);
-              // var x = ubpbjs.getAllPrebidWinningBids();
-              // var adsCalled = false;
-              // for(var i=0;i<x.length;i++){
-              //   var bc = x[i].bidderCode;
-              //   if(bc=="openx"){
-              //     adsCalled = true;
-              //     callBotman();
-              //   }
-              // }
-              // if(!adsCalled){
-              //   callAdsUB();
-              // }
+              // googletag.pubads().refresh(mappings.slots);
+              var x = ubpbjs.getAllPrebidWinningBids();
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
       });
   }
 
 
-  // var botmanCalled = false;
-  // var userStatusBM = '';
-  // function callBotman(){
-  //   if(userStatusBM == ''){
-  //     var request = new XMLHttpRequest();
-  //     var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=irctc';
-  //     request.open('GET', url, true);
-  //     request.onload = function() {
-  //       if (request.status >= 200 && request.status < 400) {
-  //         var data = request.responseText;
-  //         if(data != ""){
-  //           data = JSON.parse(data);
-  //           userStatusBM = data;
-  //           if(userStatusBM == "0" || userStatusBM == "3"){
-  //             callAdsUB();
-  //           }
-  //           else{
-  //             console.log('Not Valid Traffic for openx');
-  //           }
-  //         }
-  //         else{
-  //           console.error('Data not returned from server');
-  //           callAdsUB();
-  //         }
-  //       }
-  //       else {
-  //         console.error('Request failed from server');
-  //         callAdsUB();
-  //       }
-  //     };
-  //     request.onerror = function() {
-  //       console.error('Request failed to Reach Server');
-  //       callAdsUB();
-  //     };
-  //     request.send();
-  //   }
-  //   else{
-  //     if(userStatusBM == "0" || userStatusBM == "3"){
-  //       callAdsUB();
-  //     }
-  //     else{
-  //       console.log('Not Valid Traffic for openx');
-  //     }
-  //   }
-	//
-  // }
-	//
-  // function callAdsUB(){
-  // 	googletag.pubads().refresh(mappings.slots);
-  // }
+  var botmanCalled = false;
+  var userStatusBM = '';
+  function callBotman(){
+    if(userStatusBM == ''){
+      var request = new XMLHttpRequest();
+      var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=carandbike';
+      request.open('GET', url, true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          var data = request.responseText;
+          if(data != ""){
+            data = JSON.parse(data);
+            userStatusBM = data;
+            if(userStatusBM == "0" || userStatusBM == "3"){
+              callAdsUB();
+            }
+            else{
+              console.log('Not Valid Traffic for openx');
+            }
+          }
+          else{
+            console.error('Data not returned from server');
+            callAdsUB();
+          }
+        }
+        else {
+          console.error('Request failed from server');
+          callAdsUB();
+        }
+      };
+      request.onerror = function() {
+        console.error('Request failed to Reach Server');
+        callAdsUB();
+      };
+      request.send();
+    }
+    else{
+      if(userStatusBM == "0" || userStatusBM == "3"){
+        callAdsUB();
+      }
+      else{
+        console.log('Not Valid Traffic for openx');
+      }
+    }
+
+  }
+
+  function callAdsUB(){
+  	googletag.pubads().refresh(mappings.slots);
+  }
 
   function googleDefine(slotNumbers, adCode, sizes, adId){
     for(var i=0; i<slotNumbers.length;i++){

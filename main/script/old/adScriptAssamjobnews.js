@@ -97,6 +97,7 @@ var adUnits = [
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
     { bidder: 'openx', params: {unit: '543530218', delDomain: 'unibots-d.openx.net'} },
+    { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE24AB8E873BC79386D43AD77A4E'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]

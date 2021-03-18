@@ -115,6 +115,7 @@ var adUnits = [
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+          { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE223B3B277EF7B6E7E2A79E47E8'} },
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
         ]
     }

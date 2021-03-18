@@ -100,6 +100,7 @@ var adUnits = [
           { bidder: 'smartadserver', params: { siteId: '362146', pageId: '1289647', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'ucfunnel', params: { adid : 'ad-7728779B3D279BD40B3E878A23ADBBDD'} },
         ]
     }
 ];

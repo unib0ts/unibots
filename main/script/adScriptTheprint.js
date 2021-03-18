@@ -52,7 +52,7 @@ const customConfigObjectA = {
       },
       bids: [
        { bidder: 'appnexus', params: { placementId: '20319136' } }, /* one placementId for all sizes  my appnexus bidder */
-       // { bidder: 'sovrn', params: {tagid: '759850'} },
+       { bidder: 'sovrn', params: {tagid: '867118'} },
        // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -66,7 +66,7 @@ const customConfigObjectA = {
        { bidder: 'openx', params: {unit: '543851451', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-       //  { bidder: 'nobid', params: { siteId : '22088409884'} },
+        { bidder: 'nobid', params: { siteId : '22315894538'} },
         // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

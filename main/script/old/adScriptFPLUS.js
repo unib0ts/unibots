@@ -101,6 +101,7 @@ var adUnits = [
           { bidder: 'smartadserver', params: { siteId: '362113', pageId: '1289614', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           { bidder: 'sonobi', params: { placement_id: 'f41f7d118a611bf5769a', ad_unit: 'facultyplus.com_nb_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'ucfunnel', params: { adid : 'ad-627D22BBAB623A9D1E49E73E997B899D'} },
         ]
     },
     {

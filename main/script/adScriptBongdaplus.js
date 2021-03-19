@@ -249,7 +249,7 @@ var mappings_full_hb_config_old = {
     '/22140546871/bongdaplus.vn_pc_R5_300x600',
     '/22140546871/bongdaplus.vn_pc_fl_120x600',
     '/22140546871/bongdaplus.vn_pc_fr_120x600',
-    '/22140546871/bongdaplus.vn_mb_hot1_336x28',
+    '/22140546871/bongdaplus.vn_mb_hot1_336x280',
     '/22140546871/bongdaplus.vn_mb_hot2_300x600',
     '/22140546871/bongdaplus.vn_mb_center1_336x280',
     '/22140546871/bongdaplus.vn_mb_center2_336x280',
@@ -581,7 +581,7 @@ var mappings_full_hb_config_desktop = {
 }
 var mappings_full_hb_config_mobile = {
   adUnitNames: [
-    '/22140546871/bongdaplus.vn_mb_hot1_336x28',
+    '/22140546871/bongdaplus.vn_mb_hot1_336x280',
     '/22140546871/bongdaplus.vn_mb_hot2_300x600',
     '/22140546871/bongdaplus.vn_mb_center1_336x280',
     '/22140546871/bongdaplus.vn_mb_center2_336x280',

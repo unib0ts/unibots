@@ -298,6 +298,12 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+    if (document.getElementById(adId1).childNodes[0].style.maxWidth) {
+      document.getElementById(adId1).childNodes[0].style.maxWidth = 'unset';
+    }
+    if (document.getElementById(adId1).childNodes[0].style.border) {
+      document.getElementById(adId1).childNodes[0].style.border = 'unset';
+    }
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       setTimeout(function() {
         refreshBid(ub_slot, adCode);

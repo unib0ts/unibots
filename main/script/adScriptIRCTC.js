@@ -672,14 +672,14 @@ if(typeof customConfigObjectA === 'undefined'){
     googlePush();
   }
   else{
-    setTimeout(function(){
+    // setTimeout(function(){
       googletag.cmd.push(function() {
         googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
         googlePush();
       });
       // googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
       // googlePush();
-    }, 500);
+    // }, 500);
   }
   // setTimeout(function() {
   //     initAdserver();

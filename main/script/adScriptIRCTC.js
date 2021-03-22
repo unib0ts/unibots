@@ -4,7 +4,7 @@ if(typeof customConfigObjectA === 'undefined'){
   unibot3 = '<div id="div-gpt-ad-1602953590737-0">';
   ub_banner_ad1 = '<div id="div-gpt-ad-1610698887085-0">';
   ub_banner_ad2 = '<div id="div-gpt-ad-1613478315967-0">';
-  ub_banner_ad3 = '<div id="div-gpt-ad-1613478570078-0">';
+  ub_banner_ad3 = '<div id="div-gpt-ad-1613478315967-0">';
   // ub_sticky_ad = '<div id="div-gpt-ad-1610698846439-0">';
   // if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
   //   document.getElementById('ATD_Ad_IRCTC_320x50').innerHTML = unibot1;
@@ -248,37 +248,37 @@ if(typeof customConfigObjectA === 'undefined'){
             adUnits.push(adUnits1);
     }
     if (document.getElementById('div-gpt-ad-1613413260012-0')) {
-        adUnits1 =
-        {
-            code: '/22057354005/irctc.co.in_cb_300x250_2',
-            mediaTypes: {
-                banner: {
-                    sizes: div_2_sizes
-                }
-            },
-            bids: [
-             { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
-             // // { bidder: 'sovrn', params: {tagid: '777761'} },
-             // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309518', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-             // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3438289'} },
-             // // { bidder: 'ucfunnel', params: { adid : 'ad-AA7BA2B3DA64937EF89E83A4D6BDA938'} },
-             // { bidder: 'criteo', params: {networkId: '10542'} },
-             // { bidder: 'criteointl', params: {networkId: '10545'} },
-             // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-             // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-             // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-             // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-             // { bidder: 'openx', params: {unit: '543530412', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-             // // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
-             // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22125676635'} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-            ]
-        };
-        adUnits.push(adUnits1);
+      adUnits1 =
+      {
+          code: '/22142075243/irctc.co.in_cb_300x250_1',
+          mediaTypes: {
+              banner: {
+                  sizes: div_2_sizes
+              }
+          },
+          bids: [
+           { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
+           // // { bidder: 'sovrn', params: {tagid: '777761'} },
+           // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309518', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+           // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3438289'} },
+           // // { bidder: 'ucfunnel', params: { adid : 'ad-AA7BA2B3DA64937EF89E83A4D6BDA938'} },
+           // { bidder: 'criteo', params: {networkId: '10542'} },
+           // { bidder: 'criteointl', params: {networkId: '10545'} },
+           // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+           // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+           // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+           // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+           // { bidder: 'openx', params: {unit: '543530412', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+           // // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+           // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+           // { bidder: 'nobid', params: { siteId : '22125676635'} },
+            //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+          ]
+      };
+      adUnits.push(adUnits1);
     }
   }
   // if (document.getElementById('ub-sticky-ad')) {
@@ -639,13 +639,13 @@ if(typeof customConfigObjectA === 'undefined'){
       // document.getElementById('ub-banner-ad').innerHTML = ub_banner_ad3;
       document.getElementById('div-gpt-ad-1613413260012-0').innerHTML = ub_banner_ad3;
       mappings.slotNumbers.push(6);
-      mappings.adCode.push('/22057354005/irctc.co.in_cb_300x250_2');
+      mappings.adCode.push('/22142075243/irctc.co.in_cb_300x250_1');
       mappings.sizes.push(div_2_sizes);
-      mappings.adId.push('div-gpt-ad-1613478570078-0');
+      mappings.adId.push('div-gpt-ad-1613478315967-0');
       googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot6) {
-            ub_checkAdRendered('div-gpt-ad-1613478570078-0', ub_slot6, ['/22057354005/irctc.co.in_cb_300x250_2']);
+            ub_checkAdRendered('div-gpt-ad-1613478315967-0', ub_slot6, ['/22142075243/irctc.co.in_cb_300x250_1']);
           }
         });
       });

@@ -53,12 +53,14 @@ else {
   s6.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=60489ad3e4171b0b054618b6&AV_PUBLISHERID=5fb75940e3a751708954df17";
   document.getElementsByTagName('head')[0].appendChild(s6);
 
-  z1= document.createElement('div');
-  z1.id = 'ub-sticky-ad-container';
-  z1.className = 'ub-sticky-ad-container';
-  z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1615775641979-0"></div';
-  x1 = document.querySelector('body');
-  x1.appendChild(z1);
+  if (!document.querySelector('.artitle')) {
+    z1= document.createElement('div');
+    z1.id = 'ub-sticky-ad-container';
+    z1.className = 'ub-sticky-ad-container';
+    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1615775641979-0"></div';
+    x1 = document.querySelector('body');
+    x1.appendChild(z1);
+  }
 }
 
 function mybotubstickyad() {

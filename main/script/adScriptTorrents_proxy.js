@@ -44,28 +44,28 @@ const customConfigObjectA = {
 
   adUnits1 =
   {
-      code: '/21956916242/janmabhumi.in_NB_320x50',
+      code: '/21956916242/torrents-proxy.com_cb_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
           }
       },
       bids: [
-       { bidder: 'appnexus', params: { placementId: '21163456' } }, /* one placementId for all sizes  my appnexus bidder */
-       { bidder: 'sovrn', params: {tagid: '867117'} },
-       { bidder: 'smartadserver', params: { siteId: '399740', pageId: '1361922', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-       // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+       { bidder: 'appnexus', params: { placementId: '21267531' } }, /* one placementId for all sizes  my appnexus bidder */
+       // { bidder: 'sovrn', params: {tagid: '867117'} },
+       // { bidder: 'smartadserver', params: { siteId: '399740', pageId: '1361922', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+       // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3232632'} },
        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
        { bidder: 'criteo', params: {networkId: '10542'} },
        { bidder: 'criteointl', params: {networkId: '10545'} },
-       { bidder: 'ucfunnel', params: { adid : 'ad-77289D47D43EAB960736D28EB672EA7'} },
+       // { bidder: 'ucfunnel', params: { adid : 'ad-77289D47D43EAB960736D28EB672EA7'} },
        { bidder: 'oftmedia', params: { placementId: '20846125' } },
        // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
        // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-       { bidder: 'openx', params: {unit: '543987781', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-       { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+       // { bidder: 'openx', params: {unit: '543987781', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+       // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22316040541'} },
         // { bidder: 'criteo', params: {networkId: '4902'} },
@@ -137,7 +137,7 @@ ubpbjs.que.push(function() {
       useBidCache: true,
       enableSendAllBids: false, // Default will be `true` as of 1.0
       bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://www.janmabhumi.in/',
+      publisherDomain: 'https://torrents-proxy.com/',
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       // "currency": {
@@ -195,17 +195,17 @@ function refreshBid(ub_slot, adCode) {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh([ub_slot]);
-              var adsCalled = false;
-              for(var i=0;i<x.length;i++){
-                var bc = x[i].bidderCode;
-                if(bc=="openx"){
-                  adsCalled = true;
-                  callBotman();
-                }
-              }
-              if(!adsCalled){
-                callAdsUB();
-              }
+              // var adsCalled = false;
+              // for(var i=0;i<x.length;i++){
+              //   var bc = x[i].bidderCode;
+              //   if(bc=="openx"){
+              //     adsCalled = true;
+              //     callBotman();
+              //   }
+              // }
+              // if(!adsCalled){
+              //   callAdsUB();
+              // }
           });
         });
       }
@@ -219,74 +219,74 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh(mappings.slots);
-            var x = ubpbjs.getAllPrebidWinningBids();
-            var adsCalled = false;
-            for(var i=0;i<x.length;i++){
-              var bc = x[i].bidderCode;
-              if(bc=="openx"){
-                adsCalled = true;
-                callBotman();
-              }
-            }
-            if(!adsCalled){
-              callAdsUB();
-            }
+            googletag.pubads().refresh(mappings.slots);
+            // var x = ubpbjs.getAllPrebidWinningBids();
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
         });
     });
 }
 
 
-var botmanCalled = false;
-var userStatusBM = '';
-function callBotman(){
-  if(userStatusBM == ''){
-    var request = new XMLHttpRequest();
-    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=janmabhumi';
-    request.open('GET', url, true);
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        var data = request.responseText;
-        if(data != ""){
-          data = JSON.parse(data);
-          userStatusBM = data;
-          if(userStatusBM == "0" || userStatusBM == "3"){
-            callAdsUB();
-          }
-          else{
-            console.log('Not Valid Traffic for openx');
-          }
-        }
-        else{
-          console.error('Data not returned from server');
-          callAdsUB();
-        }
-      }
-      else {
-        console.error('Request failed from server');
-        callAdsUB();
-      }
-    };
-    request.onerror = function() {
-      console.error('Request failed to Reach Server');
-      callAdsUB();
-    };
-    request.send();
-  }
-  else{
-    if(userStatusBM == "0" || userStatusBM == "3"){
-      callAdsUB();
-    }
-    else{
-      console.log('Not Valid Traffic for openx');
-    }
-  }
-
-}
-
-function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
-}
+// var botmanCalled = false;
+// var userStatusBM = '';
+// function callBotman(){
+//   if(userStatusBM == ''){
+//     var request = new XMLHttpRequest();
+//     var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=torrentsproxy';
+//     request.open('GET', url, true);
+//     request.onload = function() {
+//       if (request.status >= 200 && request.status < 400) {
+//         var data = request.responseText;
+//         if(data != ""){
+//           data = JSON.parse(data);
+//           userStatusBM = data;
+//           if(userStatusBM == "0" || userStatusBM == "3"){
+//             callAdsUB();
+//           }
+//           else{
+//             console.log('Not Valid Traffic for openx');
+//           }
+//         }
+//         else{
+//           console.error('Data not returned from server');
+//           callAdsUB();
+//         }
+//       }
+//       else {
+//         console.error('Request failed from server');
+//         callAdsUB();
+//       }
+//     };
+//     request.onerror = function() {
+//       console.error('Request failed to Reach Server');
+//       callAdsUB();
+//     };
+//     request.send();
+//   }
+//   else{
+//     if(userStatusBM == "0" || userStatusBM == "3"){
+//       callAdsUB();
+//     }
+//     else{
+//       console.log('Not Valid Traffic for openx');
+//     }
+//   }
+//
+// }
+//
+// function callAdsUB(){
+// 	googletag.pubads().refresh(mappings.slots);
+// }
 
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
@@ -309,13 +309,13 @@ function googlePush(){
 }
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21956916242/janmabhumi.in_NB_320x50');
+  mappings.adCode.push('/21956916242/torrents-proxy.com_cb_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1615279092031-0');
+  mappings.adId.push('div-gpt-ad-1616650640886-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1615279092031-0', ub_slot1, ['/21956916242/janmabhumi.in_NB_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1616650640886-0', ub_slot1, ['/21956916242/torrents-proxy.com_cb_320x50']);
       }
     });
   });

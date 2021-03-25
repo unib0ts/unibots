@@ -72,6 +72,7 @@ if (mobileCheck === 'function') {
               // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                { bidder: 'nobid', params: { siteId : '21986996687'} },
                { bidder: 'criteo', params: {networkId: '10542'} },
+               { bidder: 'ucfunnel', params: { adid : 'ad-772877487B8678EE17897B4E6B63948'} },
                { bidder: 'criteointl', params: {networkId: '10545'} },
                { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932873'} },
                { bidder: 'smartadserver', params: { siteId: '362106', pageId: '1289607', formatId: '93417', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
@@ -137,6 +138,7 @@ if (mobileCheck === 'function') {
              { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
              // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
               { bidder: 'nobid', params: { siteId : '21986996687'} },
+              { bidder: 'ucfunnel', params: { adid : 'ad-34B844984984E7E303B7636ED3A69343'} },
               { bidder: 'criteo', params: {networkId: '10542'} },
               { bidder: 'criteointl', params: {networkId: '10545'} },
               { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932874'} },

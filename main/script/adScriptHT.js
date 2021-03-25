@@ -57,20 +57,20 @@ if(document.getElementById('newsbot-ads')){
       bids: [
        { bidder: 'appnexus', params: { placementId: '19054968' } }, /* one placementId for all sizes  my appnexus bidder */
        // { bidder: 'sovrn', params: {tagid: '701555'} },
-       // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+       { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-       // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206178'} },
        // { bidder: 'criteo', params: {networkId: '10542'} },
        // { bidder: 'criteointl', params: {networkId: '10545'} },
-       // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+       { bidder: 'oftmedia', params: { placementId: '21249043' } },
        // { bidder: '33across', params: { siteId : 'aIn2XqBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
        // { bidder: 'emx_digital', params: { tagid: '97480' } }, /* sizeless */
        // { bidder: 'ucfunnel', params: { adid : 'ad-273677D32327846403E4249AA9D86D2'} },
        // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
        // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-       //  { bidder: 'nobid', params: { siteId : '21987177878'} },
+        { bidder: 'nobid', params: { siteId : '21987177878'} },
        //  { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

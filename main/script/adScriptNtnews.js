@@ -96,6 +96,7 @@ if(mobileCheck === 'function'){
            // { bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
            { bidder: 'nobid', params: { siteId : '21986889217'} },
+            { bidder: 'ucfunnel', params: { adid : 'ad-627D2292AD6D6BAD16B83862BA2EB9A'} },
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934213'} },
            { bidder: 'criteo', params: {networkId: '10542'} },
            { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -203,6 +204,7 @@ else{
             { bidder: 'nobid', params: { siteId : '21986889217'} },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
+            { bidder: 'ucfunnel', params: { adid : 'ad-627D2292AD6D6BAD16B83862BA2EB9A'} },
             { bidder: 'smartadserver', params: { siteId: '362133', pageId: '1289634', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
             //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

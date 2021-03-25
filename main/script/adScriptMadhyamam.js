@@ -110,6 +110,7 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '719001'} },
         	{ bidder: 'rhythmone', params: { placementId: '205372'}}, /* one placementId for all sizes */
           { bidder: 'nobid', params: { siteId : '21986889043'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-34B844943976B433CD7ED346A3A2E49'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -144,6 +145,7 @@ if(window.location.href != "https://m.madhyamam.com/" && window.location.href !=
           { bidder: 'nobid', params: { siteId : '21986889043'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-D23422B27823988B0D73749A8A26A499'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2962617'} },
           { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
@@ -176,6 +178,7 @@ if(window.location.href != "https://m.madhyamam.com/" && window.location.href !=
           { bidder: 'nobid', params: { siteId : '21986889043'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-D23422B279ED29231BD787E2EB82B92'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2962618'} },
           { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

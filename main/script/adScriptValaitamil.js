@@ -93,6 +93,7 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999776'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-AA7BAA4BD8ADD97B08D4D967273A796B'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'smartadserver', params: { siteId: '362161', pageId: '1289662', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

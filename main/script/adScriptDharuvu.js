@@ -93,6 +93,7 @@ var adUnits = [
     { bidder: 'openx', params: {unit: '543530290', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
     // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323618', zoneId: '1680026'} },
     { bidder: 'criteo', params: {networkId: '10542'} },
+    { bidder: 'ucfunnel', params: { adid : 'ad-627D229D9E74EB6ECEABDD67937ED449'} },
     { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
     { bidder: 'smartadserver', params: { siteId: '362107', pageId: '1289608', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

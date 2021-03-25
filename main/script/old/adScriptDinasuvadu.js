@@ -98,6 +98,7 @@ var adUnits = [
     //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996030'} },
+    { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE242389A34D077B9DE983226377'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]

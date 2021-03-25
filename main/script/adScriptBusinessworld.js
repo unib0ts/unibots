@@ -398,6 +398,7 @@ var adUnits = [];
             productId: 'siab'
           }
         }, /*All sizes*/
+        { bidder: 'ucfunnel', params: { adid : 'ad-772877969D43E6DAF7897B4E6B6394D'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'openx', params: {unit: '543530482', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'criteointl', params: {networkId: '10545'} },

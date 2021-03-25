@@ -95,6 +95,7 @@ var adUnits = [
           { bidder: 'nobid', params: { siteId : '22049999719'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-772877BB87BEA69DC87B68A38DDD668'} },
           { bidder: 'smartadserver', params: { siteId: '362139', pageId: '1289640', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

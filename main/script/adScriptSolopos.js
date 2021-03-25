@@ -97,6 +97,7 @@ var adUnits = [
     { bidder: 'emx_digital', params: { tagid: '107916' } }, /* sizeless */
     { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
   	{ bidder: '33across', params: { siteId : 'aQdCDQWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+    { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA7ED3EB2DE6F4A986837A3D44D3'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'criteo', params: {networkId: '4902'} }
   ]

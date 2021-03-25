@@ -93,6 +93,7 @@ var adUnits = [
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'nobid', params: { siteId : '22012495551'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE6EB26628EE077B9DE98322637E'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028666'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },

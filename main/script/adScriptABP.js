@@ -99,7 +99,7 @@ if ((!mobileCheckAdSript() && (document.querySelector('.article-text-wrap') == n
         },
         bids: [
           { bidder: 'appnexus', params: { placementId: '19053343' } }, /* one placementId for all sizes  my appnexus bidder */
-          { bidder: 'oftmedia', params: { placementId: '20846125' } },
+          { bidder: 'oftmedia', params: { placementId: '21224948' } },
           // { bidder: '33across', params: { siteId: 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"]  }, /*All sizes*/
           // { bidder: 'emx_digital', params: { tagid: '115490' } }, /* sizeless */
           // { bidder: 'sovrn', params: { tagid: '716602' } },
@@ -136,7 +136,7 @@ if (!mobileCheckAdSript() && document.querySelector('.article-text-wrap') != nul
       bids: [
         { bidder: 'appnexus', params: { placementId: '19053343' } },
         // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-        { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '21224948' } },
         // { bidder: '33across', params: { siteId: 'dWICUEBt8r6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"]  },
         // { bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
         // { bidder: 'sovrn', params: { tagid: '724698' } },
@@ -147,6 +147,7 @@ if (!mobileCheckAdSript() && document.querySelector('.article-text-wrap') != nul
         // { bidder: 'criteo', params: {networkId: '10542'} },
         // { bidder: 'criteointl', params: {networkId: '10545'} },
         // { bidder: 'nobid', params: { siteId : '22049999632' } },
+        // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE2BA2239229F7B27A9722A3E2D7'} },
         // { bidder: 'smartadserver', params: { siteId: '362092', pageId: '1289593', formatId: '93417', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
         // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

@@ -108,6 +108,7 @@ var adUnits = [
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'adkernel', params: {zoneId: '126007', host: 'cpm.fmlabsonline.com'} },
+        { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE7EBE268DAD17B3BE349BE4938E'} },
         // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
         //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },

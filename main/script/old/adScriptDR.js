@@ -67,6 +67,7 @@ var adUnits = [
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996026'} },
           { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+              { bidder: 'ucfunnel', params: { adid : 'ad-273677B422B29B381D986DB2DAA2339'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'nobid', params: { siteId : '21975046114'} }
         ]

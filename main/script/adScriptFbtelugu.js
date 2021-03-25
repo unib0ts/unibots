@@ -93,6 +93,7 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999671'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-E2B42282E9679B26CB976BD2B444663'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028651'} },

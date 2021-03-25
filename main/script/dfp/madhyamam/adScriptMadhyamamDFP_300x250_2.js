@@ -55,7 +55,9 @@ var adUnits = [
           { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] }, /* one placementId for all sizes */
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'smartadserver', params: { siteId: '362128', pageId: '1289629', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-          { bidder: 'openx', params: {unit: '541046178', delDomain: 'yieldbird-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'ucfunnel', params: { adid : 'ad-772877488939B7430B9396A282D426A8'} },
+          // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'openx', params: {unit: '543530319', delDomain: 'yieldbird-d.openx.net'}, labelAny: ["US", "CA"] },
           { bidder: '33across', params: { siteId : 'c54cg8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
           { bidder: 'emx_digital', params: { tagid: '97490' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '738922'} },

@@ -125,6 +125,7 @@ var adUnits = [
           { bidder: 'emx_digital', params: { tagid: '107932' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2935802'} },
           { bidder: 'nobid', params: { siteId : '22049999704'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-34B8449868634277C846A68742734E7'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },

@@ -44,7 +44,7 @@ else {
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-container';
     z1.className = 'ub-sticky-ad-container';
-    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div';
+    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616581723395-0"></div';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
   }
@@ -214,7 +214,7 @@ var mappings_full_hb_config_old = {
     'div-gpt-ad-1615189484195-0',
     // 'div-gpt-ad-1615189532474-0',
     'div-gpt-ad-1615189668110-0',
-    'div-gpt-ad-1616569480504-0'
+    'div-gpt-ad-1616581723395-0'
   ],
   adUnitNames: [
     '/22140546871/docbao.vn_pc_header_728x90',

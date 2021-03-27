@@ -266,7 +266,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh([ub_slot1]);
+              googletag.pubads().refresh([ub_slot1]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -422,10 +422,10 @@ if(typeof googletag.defineSlot === "function"){
   googlePush();
 }
 else{
-  setTimeout(function(){
+  googletag.cmd.push(function() {
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
-  }, 500);
+  });
 }
 // setTimeout(function() {
 //     initAdserver();

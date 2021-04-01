@@ -7,7 +7,7 @@ document.getElementsByTagName('head')[0].appendChild(css);
 y1= document.createElement('div');
 y1.id = 'dragItem';
 y1.className = 'profile_div';
-y1.innerHTML ='<img class="carcImage" id="carcImage" src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/demo/ramandhapuram.png"><div class="col-hgt-ad" id="adSmall"></div>';
+y1.innerHTML ='<img class="carcImage" id="carcImage" src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/demo/thirumangalam.png"><div class="col-hgt-ad" id="adSmall"></div>';
 y2 = document.querySelector('body');
 y2.appendChild(y1);
 

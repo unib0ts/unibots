@@ -16,14 +16,14 @@ document.getElementsByTagName('head')[0].appendChild(s1);
 if (mobileCheck()) {
 	var z1= document.createElement('div');
 	z1.id = 'ub-ad';
-	z1.innerHTML = "<div id='div-gpt-ad-1617188511750-0' style='position: fixed; bottom: 0px; right:0px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1617188511750-0'); });</script></div>";
+	z1.innerHTML = "<div id='div-gpt-ad-1617188511750-0' style='position: fixed; bottom: 0px; right:0px;z-index: 2147483640;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1617188511750-0'); });</script></div>";
 	x1 = document.querySelector('body');
 	x1.appendChild(z1);
 }
 else {
 	var z1= document.createElement('div');
 	z1.id = 'ub-ad';
-	z1.innerHTML = "<div id='div-gpt-ad-1617188511750-0' style='position: fixed; bottom: 0px; right: 0px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1617188511750-0'); });</script></div>";
+	z1.innerHTML = "<div id='div-gpt-ad-1617188511750-0' style='position: fixed; bottom: 0px; right: 0px;z-index: 2147483640;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1617188511750-0'); });</script></div>";
 	x1 = document.querySelector('body');
 	x1.appendChild(z1);
 }

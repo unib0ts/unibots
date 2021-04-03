@@ -1,3 +1,5 @@
+if (window.location.hostname == "http://www.cinemapettai.com") {}
+else {
 var ub_slot1;
 var REFRESH_TIMEOUT = 30000;
 function mobileCheck() {
@@ -85,4 +87,5 @@ function ub_checkAdRendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
+ }
 }

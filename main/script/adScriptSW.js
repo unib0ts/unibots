@@ -413,7 +413,7 @@ function sendAdserverRequest() {
     }
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
-        // googletag.pubads().refresh(mappings.slots);
+        googletag.pubads().refresh(mappings.slots);
     });
 }
 

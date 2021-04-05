@@ -123,9 +123,9 @@ var adUnits = [
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
-// googletag.cmd.push(function() {
-//     googletag.pubads().disableInitialLoad();
-// });
+googletag.cmd.push(function() {
+    googletag.pubads().disableInitialLoad();
+});
 
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
@@ -187,7 +187,7 @@ function googlePush(){
     // googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-    // googletag.pubads().enableSingleRequest();
+    googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
 }
@@ -413,7 +413,7 @@ function sendAdserverRequest() {
     }
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
-        googletag.pubads().refresh(mappings.slots);
+        // googletag.pubads().refresh(mappings.slots);
     });
 }
 

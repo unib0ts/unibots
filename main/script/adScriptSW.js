@@ -123,9 +123,9 @@ var adUnits = [
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
-googletag.cmd.push(function() {
-    googletag.pubads().disableInitialLoad();
-});
+// googletag.cmd.push(function() {
+//     googletag.pubads().disableInitialLoad();
+// });
 
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];

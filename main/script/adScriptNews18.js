@@ -392,11 +392,11 @@ if(typeof customConfigObjectA === 'undefined'){
       mappings.slotNumbers.push(2);
       mappings.adCode.push('/21957769615/news18.com_quizbot_468x60');
       mappings.sizes.push(div_2_sizes);
-      mappings.adId.push('div-gpt-ad-1610698887085-0');
+      mappings.adId.push('div-gpt-ad-1617187825910-0');
       googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {
-            ub_checkAdRendered('div-gpt-ad-1610698887085-0', ub_slot2, ['/21957769615/news18.com_quizbot_468x60']);
+            ub_checkAdRendered('div-gpt-ad-1617187825910-0', ub_slot2, ['/21957769615/news18.com_quizbot_468x60']);
           }
         });
       });

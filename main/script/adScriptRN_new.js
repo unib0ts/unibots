@@ -66,6 +66,8 @@ if(typeof customConfigObjectA === 'undefined'){
     }
   }
 
+  loadAd('unibots-qw');
+
   unibot1 = '<div id="div-gpt-ad-1617705616050-0">';
   unibot2 = '<div id="div-gpt-ad-1617705660422-0">';
 
@@ -536,5 +538,28 @@ if (document.getElementById('doto-desktop')) {
 	    googlePush();
 	  }, 500);
   // }
+ }
+
+ function loadAd(id, adUnits){
+ 	var elm = document.getElementById(id);
+ 	var scripts = Array(elm.querySelectorAll("script"));
+ 	scripts = scripts[0];
+ 	for(var i=0; i<scripts.length; i++) {
+ 		oldScript = scripts[i];
+ 		const newScript = document.createElement("script");
+ 		var scriptAttr = Array(oldScript.attributes);
+ 		scriptAttr = scriptAttr[0];
+ 		for(var j=0; j<scriptAttr.length; j++) {
+ 			attr = scriptAttr[j];
+ 			newScript.setAttribute(attr.name, attr.value);
+ 		}
+     newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+ 		newScript.onload = function() {
+ 			if(adUnits !== undefined) {
+ 				smartyads.buildUnits(adUnits);
+ 			}
+ 		};
+     oldScript.parentNode.replaceChild(newScript, oldScript);
+ 	}
  }
 }

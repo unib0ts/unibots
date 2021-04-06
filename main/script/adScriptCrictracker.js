@@ -1,7 +1,12 @@
 var div_1_sizes = [320, 50];
 var div_2_sizes = [320, 50];
 var div_3_sizes =  [728, 90];
+var div_4_sizes = [320, 50];
+var div_5_sizes = [468, 60];
 var adUnits = [];
+
+unibot1 = '<div id="div-gpt-ad-1617705734682-0">';
+unibot2 = '<div id="div-gpt-ad-1617705701316-0">';
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -147,6 +152,68 @@ const customConfigObjectA = {
       };
       adUnits.push(adUnits1);
   }
+  if (document.getElementById('doto-mobile')) {
+          adUnits1 =
+          {
+              code: '/21928950349/crictracker.com_quizbot_320x50',
+              mediaTypes: {
+                  banner: {
+                      sizes: div_4_sizes
+                  }
+              },
+              bids: [
+                { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+                // { bidder: 'sovrn', params: {tagid: '872967'} },
+                { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+                // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+                { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+                { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3522347'} },
+                { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+                { bidder: 'criteo', params: {networkId: '10542'} },
+                { bidder: 'criteointl', params: {networkId: '10545'} },
+                // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
+                { bidder: 'oftmedia', params: { placementId: '20846125' } },
+                // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+                // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+                // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+                // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+                // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+                 { bidder: 'nobid', params: { siteId : '22326325034'} },
+              ]
+          };
+          adUnits.push(adUnits1);
+        }
+  if (document.getElementById('doto-desktop')) {
+              adUnits1 =
+              {
+                  code: '/21928950349/crictracker.com_quizbot_468x60',
+                  mediaTypes: {
+                      banner: {
+                          sizes: div_5_sizes
+                      }
+                  },
+                  bids: [
+                    { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+                    // { bidder: 'sovrn', params: {tagid: '872967'} },
+                    // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+                    // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+                    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+                    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3522347'} },
+                    { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+                    { bidder: 'criteo', params: {networkId: '10542'} },
+                    { bidder: 'criteointl', params: {networkId: '10545'} },
+                    // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
+                    { bidder: 'oftmedia', params: { placementId: '20846125' } },
+                    // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+                    // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+                    // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+                    // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+                    // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+                     { bidder: 'nobid', params: { siteId : '22326325034'} },
+                  ]
+              };
+              adUnits.push(adUnits1);
+          }
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -240,7 +307,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false]
+  renderedFlag: [false, false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -417,6 +484,34 @@ else {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-gpt-ad-1617354597382-0', ub_slot1, ['/21957769615/crictracker.com_cw_320x50']);
+      }
+    });
+  });
+}
+if (document.getElementById('doto-mobile')) {
+  document.getElementById('doto-mobile').innerHTML = unibot1;
+  mappings.slotNumbers.push(4);
+  mappings.adCode.push('/21928950349/crictracker.com_quizbot_320x50');
+  mappings.sizes.push(div_4_sizes);
+  mappings.adId.push('div-gpt-ad-1617705734682-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot4) {
+        ub_checkAdRendered('div-gpt-ad-1617705734682-0', ub_slot4, ['/21928950349/crictracker.com_quizbot_320x50']);
+      }
+    });
+  });
+}
+if (document.getElementById('doto-desktop')) {
+  document.getElementById('doto-desktop').innerHTML = unibot2;
+  mappings.slotNumbers.push(5);
+  mappings.adCode.push('/21928950349/crictracker.com_quizbot_468x60');
+  mappings.sizes.push(div_5_sizes);
+  mappings.adId.push('div-gpt-ad-1617705701316-0');
+  googletag.cmd.push(function() {
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot5) {
+        ub_checkAdRendered('div-gpt-ad-1617705701316-0', ub_slot5, ['/21928950349/crictracker.com_quizbot_468x60']);
       }
     });
   });

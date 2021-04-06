@@ -56,6 +56,16 @@ if(typeof customConfigObjectA === 'undefined'){
   var div_4_sizes = [468, 60];
   var adUnits = [];
 
+  //quiz code
+  if (document.getElementById('unibots-qw')) {
+    if (!mobileCheck()) {
+      document.getElementById('unibots-qw').innerHTML = "<p id='doto-quizbot'> <script>(function(w,d,s,o,f,js,fjs){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.id=o;js.src=f;js.async=1;fjs.parentNode.insertBefore(js,fjs);}(window,document,'script','_hw','https://quizbot.playdoto.com/widget.js'));_hw('init',{publisherId:'RAF',embed:true,embedElementId:'doto-quizbot',isDesktop:true,widgetPublisherTitle:'Raftaar'});</script> </p>";
+    }
+    else {
+      document.getElementById('unibots-qw').innerHTML = "<p id='doto-quizbot-m'> <script>(function(w,d,s,o,f,js,fjs){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.id=o;js.src=f;js.async=1;fjs.parentNode.insertBefore(js,fjs);}(window,document,'script','_hwm','https://quizbot.playdoto.com/widget.js'));_hwm('init',{publisherId:'RAF',embed:true,embedElementId:'doto-quizbot-m',isDesktop:false,widgetPublisherTitle:'Raftaar'});</script> </p>";
+    }
+  }
+
   unibot1 = '<div id="div-gpt-ad-1617705616050-0">';
   unibot2 = '<div id="div-gpt-ad-1617705660422-0">';
 

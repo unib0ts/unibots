@@ -299,9 +299,9 @@ if(mobileCheck === 'function'){
        });
    }
    // in case ubpbjs doesn't load
-   setTimeout(function() {
-       initAdserver();
-   }, FAILSAFE_TIMEOUT);
+   // setTimeout(function() {
+   //     initAdserver();
+   // }, FAILSAFE_TIMEOUT);
 
    var ub_slot2;
    googletag.cmd.push(function() {
@@ -385,9 +385,9 @@ if(mobileCheck === 'function'){
        });
    }
    // in case ubpbjs doesn't load
-   setTimeout(function() {
-       initAdserver();
-   }, FAILSAFE_TIMEOUT);
+   // setTimeout(function() {
+   //     initAdserver();
+   // }, FAILSAFE_TIMEOUT);
 
    var ub_slot1;
    googletag.cmd.push(function() {
@@ -472,9 +472,9 @@ else {
         });
     }
     // in case ubpbjs doesn't load
-    setTimeout(function() {
-        initAdserver();
-    }, FAILSAFE_TIMEOUT);
+    // setTimeout(function() {
+    //     initAdserver();
+    // }, FAILSAFE_TIMEOUT);
 
     var ub_slot2;
     googletag.cmd.push(function() {
@@ -558,9 +558,9 @@ else {
         });
     }
     // in case ubpbjs doesn't load
-    setTimeout(function() {
-        initAdserver();
-    }, FAILSAFE_TIMEOUT);
+    // setTimeout(function() {
+    //     initAdserver();
+    // }, FAILSAFE_TIMEOUT);
 
     var ub_slot1;
     googletag.cmd.push(function() {

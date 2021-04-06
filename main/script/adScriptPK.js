@@ -1,3 +1,17 @@
+if(typeof customConfigObjectA === 'undefined'){
+  unibot1 = '<div id="div-ub-1">';
+
+	var s0 = document.createElement('script');
+	s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+	s0.type = "text/javascript";
+	document.getElementsByTagName('head')[0].appendChild(s0);
+
+  var s1 = document.createElement('script');
+  s1.async = "async";
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s1);
+
 var div_1_sizes = [320, 50];
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -40,6 +54,7 @@ const customConfigObjectA = {
     }]
 };
 
+if (document.getElementById('unibots-ad')) {
 var adUnits = [
   {
       code: '/21956916242/punjabkesari.in_NB_320x50',
@@ -103,7 +118,7 @@ var adUnits = [
     // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323836', zoneId: '1680698'} }
   ]
 }];
-
+}
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
@@ -189,20 +204,22 @@ function callAdsUB(){
 }
 
 var ub_slot1;
-googletag.cmd.push(function() {
-  ub_slot1 = googletag.defineSlot('/21956916242/punjabkesari.in_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-  googletag.pubads().collapseEmptyDivs(true);
-  googletag.pubads().setCentering(true);
-  googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-  googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
-  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot1) {
-        ub_checkAdRendered();
-      }
+if (document.getElementById('unibots-ad')) {
+ document.getElementById('unibots-ad').innerHTML = unibot1;
+  googletag.cmd.push(function() {
+    ub_slot1 = googletag.defineSlot('/21956916242/punjabkesari.in_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    googletag.pubads().collapseEmptyDivs(true);
+    googletag.pubads().setCentering(true);
+    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot1) {
+          ub_checkAdRendered();
+        }
+    });
   });
-});
-
+}
 function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
@@ -310,4 +327,5 @@ function mainHbRun(){
   setTimeout(function() {
       initAdserver();
   }, FAILSAFE_TIMEOUT);
+}
 }

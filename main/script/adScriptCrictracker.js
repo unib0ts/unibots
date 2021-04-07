@@ -529,6 +529,7 @@ else{
     });
   }, 500);
 
+setTimeout(function(){
   if (document.getElementById('unibots-qw')) {
     if (mobileCheck()) {
       document.getElementById('widget-_hwm').childNodes[1].firstElementChild.style.margin = 'auto';
@@ -540,6 +541,7 @@ else{
       document.getElementById('doto-desktop').style.margin = 'auto';
     }
   }
+}, 500);
 }
 // setTimeout(function() {
 //     initAdserver();

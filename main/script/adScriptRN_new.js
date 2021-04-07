@@ -64,9 +64,9 @@ if(typeof customConfigObjectA === 'undefined'){
     else {
       document.getElementById('unibots-qw').innerHTML = "<p id='doto-quizbot-m'> <script>(function(w,d,s,o,f,js,fjs){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.id=o;js.src=f;js.async=1;fjs.parentNode.insertBefore(js,fjs);}(window,document,'script','_hwm','https://quizbot.playdoto.com/widget.js'));_hwm('init',{publisherId:'RAF',embed:true,embedElementId:'doto-quizbot-m',isDesktop:false,widgetPublisherTitle:'Raftaar'});</script> </p>";
     }
+    loadAd('unibots-qw');
   }
 
-  loadAd('unibots-qw');
 
   unibot1 = '<div id="div-gpt-ad-1617705616050-0">';
   unibot2 = '<div id="div-gpt-ad-1617705660422-0">';

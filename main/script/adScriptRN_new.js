@@ -540,26 +540,26 @@ if (document.getElementById('doto-desktop')) {
   // }
  }
 
- function loadAd(id, adUnits){
- 	var elm = document.getElementById(id);
- 	var scripts = Array(elm.querySelectorAll("script"));
- 	scripts = scripts[0];
- 	for(var i=0; i<scripts.length; i++) {
- 		oldScript = scripts[i];
- 		const newScript = document.createElement("script");
- 		var scriptAttr = Array(oldScript.attributes);
- 		scriptAttr = scriptAttr[0];
- 		for(var j=0; j<scriptAttr.length; j++) {
- 			attr = scriptAttr[j];
- 			newScript.setAttribute(attr.name, attr.value);
- 		}
-     newScript.appendChild(document.createTextNode(oldScript.innerHTML));
- 		newScript.onload = function() {
- 			if(adUnits !== undefined) {
- 				smartyads.buildUnits(adUnits);
- 			}
- 		};
-     oldScript.parentNode.replaceChild(newScript, oldScript);
- 	}
- }
+ // function loadAd(id, adUnits){
+ // 	var elm = document.getElementById(id);
+ // 	var scripts = Array(elm.querySelectorAll("script"));
+ // 	scripts = scripts[0];
+ // 	for(var i=0; i<scripts.length; i++) {
+ // 		oldScript = scripts[i];
+ // 		const newScript = document.createElement("script");
+ // 		var scriptAttr = Array(oldScript.attributes);
+ // 		scriptAttr = scriptAttr[0];
+ // 		for(var j=0; j<scriptAttr.length; j++) {
+ // 			attr = scriptAttr[j];
+ // 			newScript.setAttribute(attr.name, attr.value);
+ // 		}
+ //     newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+ // 		newScript.onload = function() {
+ // 			if(adUnits !== undefined) {
+ // 				smartyads.buildUnits(adUnits);
+ // 			}
+ // 		};
+ //     oldScript.parentNode.replaceChild(newScript, oldScript);
+ // 	}
+ // }
 }

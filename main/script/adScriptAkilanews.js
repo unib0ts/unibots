@@ -43,41 +43,8 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
-    // {
-    //     code: '/21928950349/marunadanmalayalee.com_ipl_320x50',
-    //     mediaTypes: {
-    //       native: {
-    //         image: {
-    //           // sizes: [300, 100],
-    //           aspect_ratios: [{
-    //             min_width: 100,        /* Optional */
-    //             min_height: 50,       /* Optional */
-    //             ratio_width: 2,        /* Required */
-    //             ratio_height: 1,       /* Required */
-    //           }],
-    //           sendId: true
-    //         },
-    //         title: {
-    //           len: 50,
-    //           sendId: true
-    //         },
-    //         sponsoredBy: {
-    //           required: true,
-    //           sendId: true
-    //         },
-    //         clickUrl: {
-    //           required: true,
-    //           sendId: true
-    //         }
-    //       }
-    //     },
-    //     bids: [
-    //       { bidder: 'appnexus', params: { placementId: '19252324' } }
-    //     //  { bidder: 'oftmedia', params: { placementId: '18671523' } }
-    //     ]
-    // },
     {
-        code: '/21928950349/marunadanmalayalee.com_ipl_320x50',
+        code: '/21928950349/akilanews.com_ipl_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -85,7 +52,7 @@ var adUnits = [
         },
         bids: [
         	// { bidder: 'appnexus', params: { placementId: '19648750' } }, /* one placementId for all sizes  my appnexus bidder */
-        	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
         	// { bidder: '33across', params: { siteId : 'cAqsGUWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
           // { bidder: 'sovrn', params: {tagid: '745671'} },
@@ -94,12 +61,12 @@ var adUnits = [
         	// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // { bidder: 'nobid', params: { siteId : '22052735848'} },
-          // { bidder: 'criteo', params: {networkId: '10542'} },
-          // { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           // { bidder: 'smartadserver', params: { siteId: '362090', pageId: '1289591', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
           // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-          // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // { bidder: 'ucfunnel', params: { adid : 'ad-47B47763AA7B63B903E898272397323'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
@@ -194,7 +161,7 @@ function callAdsUB(){
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21928950349/marunadanmalayalee.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617874979339-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21928950349/akilanews.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617874979339-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -211,7 +178,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/marunadanmalayalee.com_ipl_320x50'],
+		  adUnitCodes: ['/21928950349/akilanews.com_ipl_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

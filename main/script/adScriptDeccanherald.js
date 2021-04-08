@@ -25,24 +25,24 @@ adUnits1 =
           }
       },
       bids: [
-       { bidder: 'appnexus', params: { placementId: '20215249' } }, /* one placementId for all sizes  my appnexus bidder */
-       { bidder: 'sovrn', params: {tagid: '774099'} },
-      //  { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-       // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206176'} },
-       { bidder: 'criteo', params: {networkId: '10542'} },
-       { bidder: 'criteointl', params: {networkId: '10545'} },
-       // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-       // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-       { bidder: 'emx_digital', params: { tagid: '115487' } }, /* sizeless */
-       //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-       { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-       // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-        { bidder: 'nobid', params: { siteId : '22104180276'} },
-        { bidder: 'ucfunnel', params: { adid : 'ad-BE78EEB723B6B6D6FA7DB32D33D693D'} },
-        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        { bidder: 'smartadserver', params: { siteId: '371034', pageId: '1306258', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+      //  { bidder: 'appnexus', params: { placementId: '20215249' } }, /* one placementId for all sizes  my appnexus bidder */
+      //  { bidder: 'sovrn', params: {tagid: '774099'} },
+      // //  { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+      //  // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+      //  { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+      //  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206176'} },
+      //  { bidder: 'criteo', params: {networkId: '10542'} },
+      //  { bidder: 'criteointl', params: {networkId: '10545'} },
+      //  // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+      //  // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+      //  { bidder: 'emx_digital', params: { tagid: '115487' } }, /* sizeless */
+      //  //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+      //  { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+      //  // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      //   { bidder: 'nobid', params: { siteId : '22104180276'} },
+      //   { bidder: 'ucfunnel', params: { adid : 'ad-BE78EEB723B6B6D6FA7DB32D33D693D'} },
+      //   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+      //   { bidder: 'smartadserver', params: { siteId: '371034', pageId: '1306258', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
 
         // { bidder: 'criteo', params: {networkId: '4902'} },
         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -205,11 +205,11 @@ function googlePush(){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956916242/deccanherald.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1600589800398-0');
+  mappings.adId.push('div-gpt-ad-1617891847140-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1600589800398-0', ub_slot1, ['/21956916242/deccanherald.com_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1617891847140-0', ub_slot1, ['/21956916242/deccanherald.com_ipl_320x50']);
       }
     });
   });

@@ -44,7 +44,7 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
     {
-        code: '/21928950349/ntnews.com_ipl_320x50',
+        code: '/22126273586/ntnews.com_ipl_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -161,7 +161,7 @@ function callAdsUB(){
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21928950349/ntnews.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617955967159-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/22126273586/ntnews.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617964685400-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -178,7 +178,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/ntnews.com_ipl_320x50'],
+		  adUnitCodes: ['/22126273586/ntnews.com_ipl_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -204,7 +204,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1617955967159-0';
+	adId = 'div-gpt-ad-1617964685400-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

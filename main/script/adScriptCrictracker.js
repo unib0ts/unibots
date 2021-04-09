@@ -449,6 +449,7 @@ function googlePush(){
 
 if (document.getElementById('adSmall_728') && (window.location.href == "https://www.crictracker.com/ipl-schedule/")) {
   if (mobileCheck()) {
+    document.getElementById('adSmall_728').innerHTML='<div id="div-gpt-ad-1617354655041-0"></div>';
     mappings.slotNumbers.push(2);
     mappings.adCode.push('/21957769615/crictracker.com_sw_320x50');
     mappings.sizes.push(div_2_sizes);
@@ -462,6 +463,7 @@ if (document.getElementById('adSmall_728') && (window.location.href == "https://
     });
   }
   else {
+    document.getElementById('adSmall_728').innerHTML='<div id="div-gpt-ad-1617354698491-0"></div>';
     mappings.slotNumbers.push(3);
     mappings.adCode.push('/21957769615/crictracker.com_sw_728x90');
     mappings.sizes.push(div_3_sizes);

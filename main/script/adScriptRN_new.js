@@ -1,6 +1,6 @@
-// var s4 = document.querySelector('script[src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021022501.js?31060314"]');
-// s4.onload = function(){
-if(typeof customConfigObjectA === 'undefined'){
+var qw = document.querySelector('script[src="https://quizbot.playdoto.com/widget.js"]');
+qw.onload = function(){
+// if(typeof customConfigObjectA === 'undefined'){
   // setTimeout(function(){
   //quiz code
   // if (document.getElementById('unibots-qw')) {

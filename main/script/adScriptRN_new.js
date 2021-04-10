@@ -1,15 +1,15 @@
+//
+//   if (document.getElementById('doto-quizbot')) {
+//     var qw = document.querySelector('script[src="https://quizbot.playdoto.com/widget.js"]');
+//     qw.onload = function(){
+//       mybotRNadScript();
+//    }
+// }else {
+//   mybotRNadScript();
+// }
 
-  if (document.getElementById('doto-quizbot')) {
-    var qw = document.querySelector('script[src="https://quizbot.playdoto.com/widget.js"]');
-    qw.onload = function(){
-      mybotRNadScript();
-   }
-}else {
-  mybotRNadScript();
-}
-
-function mybotRNadScript() {
-  // if(typeof customConfigObjectA === 'undefined'){
+// function mybotRNadScript() {
+  if(typeof customConfigObjectA === 'undefined'){
     // setTimeout(function(){
     //quiz code
     // if (document.getElementById('unibots-qw')) {

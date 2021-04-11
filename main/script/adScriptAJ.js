@@ -1,4 +1,4 @@
-var div_1_sizes = [320, 50];
+var div_1_sizes = [300, 100];
 // var div_2_sizes = [300, 600];
 // var div_3_sizes = [[200, 200], [250, 250], [300, 250]];
 // var div_4_sizes = [300, 600];
@@ -47,30 +47,31 @@ const customConfigObjectA = {
 
   adUnits1 =
   {
-      code: '/21959913182/andhrajyothy.com_nb_320x50_new',
+      code: '/21928950349/andhrajyothy_300x100_ipl',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
           }
       },
       bids: [
-       { bidder: 'appnexus', params: { placementId: '20215289' } }, /* one placementId for all sizes  my appnexus bidder */
-       { bidder: 'sovrn', params: {tagid: '774103'} },
+       { bidder: 'oftmedia', params: { placementId: '20846125' } },
+       // { bidder: 'sovrn', params: {tagid: '774103'} },
        // { bidder: 'smartadserver', params: { siteId: '369197', pageId: '1301294', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
        // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206184'} },
+       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206184'} },
        { bidder: 'criteo', params: {networkId: '10542'} },
+       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        { bidder: 'criteointl', params: {networkId: '10545'} },
        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
        // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
       //  { bidder: '33across', params: { siteId : 'd0h6GkBt8r6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-       { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
+       // { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
        // //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
        // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-        { bidder: 'nobid', params: { siteId : '22103912380'} },
-        { bidder: 'smartadserver', params: { siteId: '371032', pageId: '1306256', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        // { bidder: 'nobid', params: { siteId : '22103912380'} },
+        // { bidder: 'smartadserver', params: { siteId: '371032', pageId: '1306256', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // { bidder: 'ucfunnel', params: { adid : 'ad-E2B4227B993A8AB7F76DE224B4AADEB9'} },
        //  // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -230,13 +231,13 @@ function googlePush(){
 }
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21959913182/andhrajyothy.com_nb_320x50_new');
+  mappings.adCode.push('/21928950349/andhrajyothy_300x100_ipl');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1601026720847-0');
+  mappings.adId.push('div-gpt-ad-1618055682084-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1601026720847-0', ub_slot1, ['/21959913182/andhrajyothy.com_nb_320x50_new']);
+        ub_checkAdRendered('div-gpt-ad-1618055682084-0', ub_slot1, ['/21928950349/andhrajyothy_300x100_ipl']);
       }
     });
   });

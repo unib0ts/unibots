@@ -414,11 +414,11 @@ function googlePush(){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956916242/rozanaspokesman_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1617891439210-0');
+  mappings.adId.push('div-gpt-ad-1618069044396-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1617891439210-0', ub_slot1, ['/21956916242/rozanaspokesman_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1618069044396-0', ub_slot1, ['/21956916242/rozanaspokesman_ipl_320x50']);
       }
     });
   });

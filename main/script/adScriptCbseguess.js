@@ -45,7 +45,7 @@ const customConfigObjectA = {
 // if(document.getElementById('newsbot-ads')){
   adUnits1 =
   {
-      code: '/22126273586/ntnews.com_ipl_320x50',
+      code: '/21928950349/cbseguess.com_ipl_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -157,13 +157,13 @@ function googlePush(){
 }
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/22126273586/ntnews.com_ipl_320x50');
+  mappings.adCode.push('/21928950349/cbseguess.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1617964685400-0');
+  mappings.adId.push('div-gpt-ad-1618058578571-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1617964685400-0', ub_slot1, ['/22126273586/ntnews.com_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1618058578571-0', ub_slot1, ['/21928950349/cbseguess.com_ipl_320x50']);
       }
     });
   });
@@ -228,7 +228,7 @@ function mainHbRun(){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://www.ntnews.com/',
+        publisherDomain: 'https://www.cbseguess.com/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

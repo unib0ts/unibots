@@ -154,7 +154,7 @@ const customConfigObjectA = {
     else {
       adUnits1 =
       {
-          code: '/21957769615/crictracker.com_sw_728x90',
+          code: '/21928950349/crictracker.com_pt_468x60',
           mediaTypes: {
               banner: {
                   sizes: div_5_sizes
@@ -562,13 +562,13 @@ if (document.getElementById('adpoints_468') && (window.location.href == "https:/
   else {
     document.getElementById('adpoints_468').innerHTML='<div id="div-gpt-ad-1617354698491-0"></div>';
     mappings.slotNumbers.push(7);
-    mappings.adCode.push('/21957769615/crictracker.com_sw_728x90');
+    mappings.adCode.push('/21928950349/crictracker.com_pt_468x60');
     mappings.sizes.push(div_5_sizes);
-    mappings.adId.push('div-gpt-ad-1617354698491-0');
+    mappings.adId.push('div-gpt-ad-1618217791241-0');
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot7) {
-          ub_checkAdRendered('div-gpt-ad-1617354698491-0', ub_slot7, ['/21957769615/crictracker.com_sw_728x90']);
+          ub_checkAdRendered('div-gpt-ad-1618217791241-0', ub_slot7, ['/21928950349/crictracker.com_pt_468x60']);
         }
       });
     });

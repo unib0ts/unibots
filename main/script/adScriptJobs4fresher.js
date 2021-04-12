@@ -194,7 +194,7 @@ function callAdsUB(){
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21928950349/jobs4fresher.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617895725745-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21928950349/jobs4fresher.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617896301815-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -237,7 +237,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1617895725745-0';
+	adId = 'div-gpt-ad-1617896301815-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

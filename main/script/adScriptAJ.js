@@ -45,6 +45,7 @@ const customConfigObjectA = {
     }]
 };
 
+	if (document.getElementById('unibots-ad')) {
   adUnits1 =
   {
       code: '/21928950349/andhrajyothy_300x100_ipl',
@@ -79,7 +80,7 @@ const customConfigObjectA = {
       ]
   };
   adUnits.push(adUnits1);
-// }
+}
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -230,6 +231,7 @@ function googlePush(){
   });
 }
 
+	if (document.getElementById('unibots-ad')) {
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349/andhrajyothy_300x100_ipl');
   mappings.sizes.push(div_1_sizes);
@@ -241,7 +243,7 @@ function googlePush(){
       }
     });
   });
-// }
+}
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

@@ -403,10 +403,10 @@ if(typeof googletag.defineSlot === "function"){
   googlePush();
 }
 else{
-  setTimeout(function(){
+  googletag.cmd.push(function() {
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
-  }, 500);
+  });
 }
 // setTimeout(function() {
 //     initAdserver();

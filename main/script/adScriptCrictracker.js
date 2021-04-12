@@ -560,7 +560,7 @@ if (document.getElementById('adpoints_468') && (window.location.href == "https:/
     });
   }
   else {
-    document.getElementById('adpoints_468').innerHTML='<div id="div-gpt-ad-1617354698491-0"></div>';
+    document.getElementById('adpoints_468').innerHTML='<div id="div-gpt-ad-1618217791241-0"></div>';
     mappings.slotNumbers.push(7);
     mappings.adCode.push('/21928950349/crictracker.com_pt_468x60');
     mappings.sizes.push(div_5_sizes);

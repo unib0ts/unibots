@@ -187,9 +187,9 @@ function initAdserver() {
 //
 // }
 
-function callAdsUB(){
-	googletag.pubads().refresh([ub_slot1]);
-}
+// function callAdsUB(){
+// 	googletag.pubads().refresh([ub_slot1]);
+// }
 
 
 var ub_slot1;

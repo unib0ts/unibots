@@ -625,17 +625,18 @@ else{
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
   });
-  // if (document.getElementById('unibots-qw')) {
-  //   if (mobileCheck()) {
-  //     document.getElementById('widget-_hwm').childNodes[1].firstElementChild.style.margin = 'auto';
-  //     document.getElementById('doto-mobile').style.margin = 'auto';
-  //
-  //   }
-  //   else {
-  //     document.getElementById('widget-_hw').childNodes[1].firstElementChild.style.margin = 'auto';
-  //     document.getElementById('doto-desktop').style.margin = 'auto';
-  //   }
-  // }
+}
+
+if (document.getElementById('unibots-qw')) {
+  if (mobileCheck()) {
+    document.getElementById('widget-_hwm').childNodes[1].firstElementChild.style.margin = 'auto';
+    document.getElementById('doto-mobile').style.margin = 'auto';
+
+  }
+  else {
+    document.getElementById('widget-_hw').childNodes[1].firstElementChild.style.margin = 'auto';
+    document.getElementById('doto-desktop').style.margin = 'auto';
+  }
 }
 // setTimeout(function() {
 //     initAdserver();

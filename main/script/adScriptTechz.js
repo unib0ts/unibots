@@ -148,10 +148,10 @@ var hb_full_common_bidders = [
 
 var mappings_full_hb_config_old = {
   targetUnits: [
-    'div-gpt-ad-1616574652487-0',
+    'div-gpt-ad-1618301211414-0',
   ],
   adUnitNames: [
-    '/22153349741/techz.vn_hb_336x280 ',
+    '/22142075243/techz.vn_hb_336x280',
   ],
 
   sizes: [
@@ -172,7 +172,7 @@ var mappings_full_hb_config_old = {
 
 var mappings_full_hb_config_desktop = {
   adUnitNames: [
-    '/22153349741/techz.vn_hb_336x280 ',
+    '/22142075243/techz.vn_hb_336x280',
   ],
   bids: [
      hb_full_common_bidders.concat([
@@ -188,7 +188,7 @@ var mappings_full_hb_config_desktop = {
 }
 var mappings_full_hb_config_mobile = {
   adUnitNames: [
-    '/22153349741/techz.vn_hb_336x280 ',
+    '/22142075243/techz.vn_hb_336x280',
   ],
   bids: [
     hb_full_common_bidders.concat([

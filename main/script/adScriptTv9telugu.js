@@ -391,6 +391,75 @@ if (botsiteurl == 'tv9telugu.com') {
     adUnits.push(adUnits1);
   }
 }
+if (botsiteurl == 'www.tv9bangla.com') {
+  if (mobileCheck()) {
+    if (document.getElementById('ub-ads')) {
+      adUnits1 =
+      {
+          code: '/21928950349/tv9bangla.com_ipl_300x250',
+          mediaTypes: {
+              banner: {
+                  sizes: div_2_sizes
+              }
+          },
+          bids: [
+            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+            // { bidder: 'sovrn', params: {tagid: '884556'} },
+            // { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
+            // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+            { bidder: 'criteo', params: {networkId: '10542'} },
+            { bidder: 'criteointl', params: {networkId: '10545'} },
+            // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
+            { bidder: 'oftmedia', params: { placementId: '20846125' } },
+            // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+            // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+            // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+             // { bidder: 'nobid', params: { siteId : '22111808861'} },
+            //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+          ]
+      };
+      adUnits.push(adUnits1);
+    }
+  }else {
+    adUnits1 =
+    {
+        code: '/21928950349/tv9bangla.com_ipl_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          // { bidder: 'sovrn', params: {tagid: '884557'} },
+          // { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'criteointl', params: {networkId: '10545'} },
+          // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
+          { bidder: 'oftmedia', params: { placementId: '20846125' } },
+          // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+          // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+           // { bidder: 'nobid', params: { siteId : '22111808861'} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        ]
+    };
+    adUnits.push(adUnits1);
+  }
+}
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -485,7 +554,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false, false, false, false, false, false, false, false]
+  renderedFlag: [false, false, false, false, false, false, false, false, false, false, false, false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -689,6 +758,35 @@ if (botsiteurl == 'tv9telugu.com') {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot10) {
           ub_checkAdRendered('div-gpt-ad-1618307531030-0', ub_slot10, ['/21928950349/tv9telugu.com_ipl_320x50']);
+        }
+      });
+    });
+  }
+}
+if (botsiteurl == 'www.tv9bangla.com') {
+  if (mobileCheck()) {
+    if (document.getElementById('ub-ads')) {
+      mappings.slotNumbers.push(11);
+      mappings.adCode.push('/21928950349/tv9bangla.com_ipl_300x250');
+      mappings.sizes.push(div_2_sizes);
+      mappings.adId.push('div-gpt-ad-1618386943569-0');
+      googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot11) {
+            ub_checkAdRendered('div-gpt-ad-1618386943569-0', ub_slot11, ['/21928950349/tv9bangla.com_ipl_300x250']);
+          }
+        });
+      });
+    }
+  }else {
+    mappings.slotNumbers.push(12);
+    mappings.adCode.push('/21928950349/tv9bangla.com_ipl_320x50');
+    mappings.sizes.push(div_1_sizes);
+    mappings.adId.push('div-gpt-ad-1618386989043-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot12) {
+          ub_checkAdRendered('div-gpt-ad-1618386989043-0', ub_slot12, ['/21928950349/tv9bangla.com_ipl_320x50']);
         }
       });
     });

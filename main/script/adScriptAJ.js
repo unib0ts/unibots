@@ -288,9 +288,9 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setTimeout(function() {
-        refreshBid(ub_slot, adCode);
-      }, REFRESH_TIMEOUT);
+      // setTimeout(function() {
+      //   refreshBid(ub_slot, adCode);
+      // }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;
     }
   }

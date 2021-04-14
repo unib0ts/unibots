@@ -59,7 +59,7 @@ if (botsiteurl == 'tv9gujarati.com') {
           },
           bids: [
             // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '882918'} },
+            { bidder: 'sovrn', params: {tagid: '884547'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -74,7 +74,7 @@ if (botsiteurl == 'tv9gujarati.com') {
             // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22326325034'} },
+             { bidder: 'nobid', params: { siteId : '22366315575'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -92,7 +92,7 @@ if (botsiteurl == 'tv9gujarati.com') {
         },
         bids: [
           // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '882918'} },
+          { bidder: 'sovrn', params: {tagid: '884548'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -107,7 +107,7 @@ if (botsiteurl == 'tv9gujarati.com') {
           // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22326325034'} },
+           { bidder: 'nobid', params: { siteId : '22366315575'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -128,7 +128,7 @@ if (botsiteurl == 'www.tv9hindi.com') {
           },
           bids: [
             // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '882918'} },
+            { bidder: 'sovrn', params: {tagid: '884549'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -143,7 +143,7 @@ if (botsiteurl == 'www.tv9hindi.com') {
             // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22326325034'} },
+             { bidder: 'nobid', params: { siteId : '22366416268'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -161,7 +161,7 @@ if (botsiteurl == 'www.tv9hindi.com') {
         },
         bids: [
           // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '882918'} },
+          { bidder: 'sovrn', params: {tagid: '884550'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -176,7 +176,7 @@ if (botsiteurl == 'www.tv9hindi.com') {
           // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22326325034'} },
+           { bidder: 'nobid', params: { siteId : '22366416268'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -197,7 +197,7 @@ if (botsiteurl == 'tv9kannada.com') {
           },
           bids: [
             // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '882918'} },
+            { bidder: 'sovrn', params: {tagid: '884551'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -212,7 +212,7 @@ if (botsiteurl == 'tv9kannada.com') {
             // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22326325034'} },
+             { bidder: 'nobid', params: { siteId : '22366316451'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -230,7 +230,7 @@ if (botsiteurl == 'tv9kannada.com') {
         },
         bids: [
           // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '882918'} },
+          { bidder: 'sovrn', params: {tagid: '884553'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -245,7 +245,7 @@ if (botsiteurl == 'tv9kannada.com') {
           // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22326325034'} },
+           { bidder: 'nobid', params: { siteId : '22366316451'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -266,7 +266,7 @@ if (botsiteurl == 'www.tv9marathi.com') {
           },
           bids: [
             // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '882918'} },
+            { bidder: 'sovrn', params: {tagid: '884554'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -281,7 +281,7 @@ if (botsiteurl == 'www.tv9marathi.com') {
             // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22326325034'} },
+             { bidder: 'nobid', params: { siteId : '22366316454'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -299,7 +299,7 @@ if (botsiteurl == 'www.tv9marathi.com') {
         },
         bids: [
           // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '882918'} },
+          { bidder: 'sovrn', params: {tagid: '884555'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -314,7 +314,7 @@ if (botsiteurl == 'www.tv9marathi.com') {
           // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22326325034'} },
+           { bidder: 'nobid', params: { siteId : '22366316454'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
@@ -335,8 +335,8 @@ if (botsiteurl == 'tv9telugu.com') {
           },
           bids: [
             // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '882918'} },
-            // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+            { bidder: 'sovrn', params: {tagid: '884556'} },
+            { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
@@ -350,7 +350,7 @@ if (botsiteurl == 'tv9telugu.com') {
             // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22326325034'} },
+             { bidder: 'nobid', params: { siteId : '22111808861'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -368,8 +368,8 @@ if (botsiteurl == 'tv9telugu.com') {
         },
         bids: [
           // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '882918'} },
-          // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          { bidder: 'sovrn', params: {tagid: '884557'} },
+          { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
@@ -383,7 +383,7 @@ if (botsiteurl == 'tv9telugu.com') {
           // { bidder: 'openx', params: {unit: '543993940', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22326325034'} },
+           { bidder: 'nobid', params: { siteId : '22111808861'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]

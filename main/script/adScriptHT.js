@@ -165,7 +165,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
+            // googletag.pubads().refresh(mappings.slots);
         });
     });
 }
@@ -314,7 +314,7 @@ function sendAdserverRequest() {
     }
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
-        // googletag.pubads().refresh(mappings.slots);
+        googletag.pubads().refresh(mappings.slots);
     });
 }
 

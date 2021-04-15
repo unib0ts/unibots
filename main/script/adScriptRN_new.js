@@ -512,13 +512,13 @@
   if (document.getElementById('doto-mobile')) {
     document.getElementById('doto-mobile').innerHTML = unibot1;
     mappings.slotNumbers.push(3);
-    mappings.adCode.push('/21957769615/news18.com_quizbot_320x50');
+    mappings.adCode.push('/21928950349/raftaar.in_quizbot_320x50');
     mappings.sizes.push(div_3_sizes);
     mappings.adId.push('div-gpt-ad-1617705616050-0');
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot3) {
-          ub_checkAdRendered('div-gpt-ad-1617705616050-0', ub_slot3, ['/21957769615/news18.com_quizbot_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1617705616050-0', ub_slot3, ['/21928950349/raftaar.in_quizbot_320x50']);
         }
       });
     });

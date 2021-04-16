@@ -58,12 +58,12 @@ if (botsiteurl == 'tv9gujarati.com') {
               }
           },
           bids: [
-            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '21370132' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '884547'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586031'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -91,12 +91,12 @@ if (botsiteurl == 'tv9gujarati.com') {
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '21370132' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'sovrn', params: {tagid: '884548'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586032'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -127,12 +127,12 @@ if (botsiteurl == 'www.tv9hindi.com') {
               }
           },
           bids: [
-            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '21370133' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '884549'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586033'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -160,12 +160,12 @@ if (botsiteurl == 'www.tv9hindi.com') {
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '21370133' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'sovrn', params: {tagid: '884550'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586034'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -196,12 +196,12 @@ if (botsiteurl == 'tv9kannada.com') {
               }
           },
           bids: [
-            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '21370136' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '884551'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586035'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -229,12 +229,12 @@ if (botsiteurl == 'tv9kannada.com') {
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '21370136' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'sovrn', params: {tagid: '884553'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586036'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -265,12 +265,12 @@ if (botsiteurl == 'www.tv9marathi.com') {
               }
           },
           bids: [
-            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '21370144' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '884554'} },
             // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586037'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -298,12 +298,12 @@ if (botsiteurl == 'www.tv9marathi.com') {
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '21370144' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'sovrn', params: {tagid: '884555'} },
           // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586037'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -334,12 +334,12 @@ if (botsiteurl == 'tv9telugu.com') {
               }
           },
           bids: [
-            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '20215299' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '884556'} },
             { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586039'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -367,12 +367,12 @@ if (botsiteurl == 'tv9telugu.com') {
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'appnexus', params: { placementId: '20215299' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'sovrn', params: {tagid: '884557'} },
           { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579058'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206185'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -403,8 +403,8 @@ if (botsiteurl == 'www.tv9bangla.com') {
               }
           },
           bids: [
-            // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'sovrn', params: {tagid: '884556'} },
+            { bidder: 'appnexus', params: { placementId: '21371270' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'sovrn', params: {tagid: '885029'} },
             // { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93232', domain: 'https://prg8.smartadserver.com' } },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -436,8 +436,8 @@ if (botsiteurl == 'www.tv9bangla.com') {
             }
         },
         bids: [
-          // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '884557'} },
+          { bidder: 'appnexus', params: { placementId: '21371270' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'sovrn', params: {tagid: '885030'} },
           // { bidder: 'smartadserver', params: { siteId: '371049', pageId: '1306273', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
           // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

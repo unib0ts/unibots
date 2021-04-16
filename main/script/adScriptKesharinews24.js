@@ -53,10 +53,10 @@ var adUnits = [
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '21353042' } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
-        	// { bidder: '33across', params: { siteId : 'cAqsGUWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        	{ bidder: '33across', params: { siteId : 'd4oFRINiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '882938'} },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3031244'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3586030'} },
           // { bidder: 'openx', params: {unit: '543530438', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

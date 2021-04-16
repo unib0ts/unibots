@@ -126,6 +126,8 @@ if(document.getElementById('unibot1')){
         { bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22045890860' } },
+        { bidder: 'sovrn', params: {tagid: '867134'} },
+        { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE8742646D8B17DE77BE46BE299B'} },
         { bidder: 'openx', params: {unit: '543530091', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -156,6 +158,8 @@ if(document.getElementById('unibot2')){
         { bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22045890860' } },
+        { bidder: 'sovrn', params: {tagid: '867135'} },
+        { bidder: 'ucfunnel', params: { adid : 'ad-34B8448B698A382EF3BE69782DDD4DDD'} },
         { bidder: 'openx', params: {unit: '543530092', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -186,6 +190,8 @@ if(document.getElementById('unibot3')){
         { bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22045890860' } },
+        { bidder: 'sovrn', params: {tagid: '867136'} },
+        { bidder: 'ucfunnel', params: { adid : 'ad-AA7BAAB7648D23B8184AB7E963494498'} },
         { bidder: 'openx', params: {unit: '543530094', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

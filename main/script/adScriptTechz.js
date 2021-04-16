@@ -10,7 +10,7 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-var PREBID_TIMEOUT = 1500;
+var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 45000;
 // var boturlbid = window.location.hostname;
@@ -130,7 +130,7 @@ var mapping_full_hb = {
 
 var adUnits_full_hb = [];
 var hb_full_common_bidders = [
-  // { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
+  { bidder: 'appnexus', params: { placementId: '19425351' } }, /* one placementId for all sizes  my appnexus bidder */
   { bidder: 'oftmedia', params: { placementId: '20846125' } },
   // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
   // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
@@ -165,7 +165,7 @@ var mappings_full_hb_config_old = {
       //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
       //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
       //   //   { bidder: 'sovrn', params: {tagid: '744054'} },
-      // { bidder: 'smartadserver', params: { siteId: '369187', pageId: '1301293', formatId: '93233', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+      { bidder: 'smartadserver', params: { siteId: '401900', pageId: '1366214', formatId: '93418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
       ]),
   ]
 }

@@ -6,7 +6,7 @@ var adUnits = [];
 
 var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
+var REFRESH_TIMEOUT = 45000;
 
 var GEO_CODE = '';
 (function (){

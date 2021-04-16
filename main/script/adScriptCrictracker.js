@@ -10,7 +10,7 @@ unibot2 = '<div id="div-gpt-ad-1617705701316-0">';
 
 var PREBID_TIMEOUT = 1000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
+var REFRESH_TIMEOUT = 45000;
 
 var GEO_CODE = '';
 (function (){

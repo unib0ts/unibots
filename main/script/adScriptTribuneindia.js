@@ -356,8 +356,8 @@ if (document.getElementById('unibots-300x250_2')) {
   mappings.sizes.push(div_3_sizes);
   mappings.adId.push('div-gpt-ad-1613467274863-0');
   googletag.cmd.push(function() {
-    callAPStagBids(); //Ap part
-    callAPSAds(mappings.adCode, mappings.slots);
+    // callAPStagBids(); //Ap part
+    // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot3) {
         ub_checkAdRendered('div-gpt-ad-1613467274863-0', ub_slot3, ['/21956916242/tribuneindia.com_hb_300x250_2']);
@@ -370,8 +370,8 @@ if (document.getElementById('unibots-300x250_2')) {
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1600590600607-0');
   googletag.cmd.push(function() {
-    callAPStagBids(); //Ap part
-    callAPSAds(mappings.adCode, mappings.slots);
+    // callAPStagBids(); //Ap part
+    // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-gpt-ad-1600590600607-0', ub_slot1, ['/21956916242/tribuneindia.com_ipl_320x50']);

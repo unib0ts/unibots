@@ -42,30 +42,30 @@ const customConfigObjectA = {
     }]
 };
 
-// if(document.getElementById('newsbot-ads')){
+if(document.getElementById('unibots-ad')){
   adUnits1 =
   {
-      code: '/21928950349/socialnews.xyz_ipl_320x50',
+      code: '/21928950349/vikatan.com_ipl_320x50_hb',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
           }
       },
       bids: [
-        { bidder: 'appnexus', params: { placementId: '21356510' } }, /* one placementId for all sizes  my appnexus bidder */
-         	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
-         	// { bidder: '33across', params: { siteId : 'cAqsGUWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-         	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
-           { bidder: 'sovrn', params: {tagid: '884156'} },
-           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3581651'} },
-           { bidder: 'openx', params: {unit: '544022831', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-         	// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-         	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           { bidder: 'nobid', params: { siteId : '22364664636'} },
+        // { bidder: 'appnexus', params: { placementId: '21356510' } }, /* one placementId for all sizes  my appnexus bidder */
+        //  	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
+        //  	// { bidder: '33across', params: { siteId : 'cAqsGUWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        //  	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
+        //    { bidder: 'sovrn', params: {tagid: '884156'} },
+        //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3581651'} },
+        //    { bidder: 'openx', params: {unit: '544022831', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        //  	// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+        //  	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        //    { bidder: 'nobid', params: { siteId : '22364664636'} },
            { bidder: 'criteo', params: {networkId: '10542'} },
            { bidder: 'criteointl', params: {networkId: '10545'} },
            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-           { bidder: 'smartadserver', params: { siteId: '404715', pageId: '1370499', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
+           // { bidder: 'smartadserver', params: { siteId: '404715', pageId: '1370499', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
            // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
            // { bidder: 'ucfunnel', params: { adid : 'ad-47B47763AA7B63B903E898272397323'} },
@@ -74,7 +74,7 @@ const customConfigObjectA = {
       ]
   };
   adUnits.push(adUnits1);
-// }
+}
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -185,7 +185,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
+        googletag.pubads().refresh(mappings.slots);
 }
 
 function initAdserver() {
@@ -229,17 +229,19 @@ function googlePush(){
   });
 }
 
+if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21928950349/socialnews.xyz_ipl_320x50');
+  mappings.adCode.push('/21928950349/vikatan.com_ipl_320x50_hb');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1618072401950-0');
+  mappings.adId.push('div-gpt-ad-1618835580640-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1618072401950-0', ub_slot1, ['/21928950349/socialnews.xyz_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1618835580640-0', ub_slot1, ['/21928950349/vikatan.com_ipl_320x50_hb']);
       }
     });
   });
+}
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
@@ -301,7 +303,7 @@ function mainHbRun(){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://www.socialnews.xyz/',
+        publisherDomain: 'https://www.vikatan.com/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

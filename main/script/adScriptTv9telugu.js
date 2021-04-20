@@ -115,7 +115,7 @@ if (botsiteurl == 'tv9gujarati.com') {
     adUnits.push(adUnits1);
   }
 }
-if (botsiteurl == 'www.tv9hindi.com') {
+if (botsiteurl == 'www.tv9hindi.com' || botsiteurl == 'veegam.tv9hindi.com' || botsiteurl == 'www.veegam.tv9hindi.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
       adUnits1 =
@@ -647,7 +647,7 @@ if (botsiteurl == 'tv9gujarati.com') {
     });
   }
 }
-if (botsiteurl == 'www.tv9hindi.com') {
+if (botsiteurl == 'www.tv9hindi.com' || botsiteurl == 'veegam.tv9hindi.com' || botsiteurl == 'www.veegam.tv9hindi.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
       mappings.slotNumbers.push(3);

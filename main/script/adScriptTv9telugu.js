@@ -419,7 +419,7 @@ if (botsiteurl == 'www.tv9bangla.com') {
             { bidder: 'openx', params: {unit: '544022915', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
             // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-             // { bidder: 'nobid', params: { siteId : '22111808861'} },
+             { bidder: 'nobid', params: { siteId : '22371298759'} },
             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
           ]
@@ -452,7 +452,7 @@ if (botsiteurl == 'www.tv9bangla.com') {
           { bidder: 'openx', params: {unit: '544022917', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22111808861'} },
+           { bidder: 'nobid', params: { siteId : '22371298759'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]

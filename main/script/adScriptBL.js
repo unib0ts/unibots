@@ -162,6 +162,7 @@ function callAdsUB(){
 
 var ub_slot1;
 if (document.getElementById('unibots-300x100_Img')) {
+  document.getElementById('unibots-300x100_Img').innerHTML='<div id="div-gpt-ad-1617874795105-0"></div>';
   googletag.cmd.push(function() {
       ub_slot1 = googletag.defineSlot('/21928950349/boomlive_ipl_300x100', div_1_sizes, 'div-gpt-ad-1617874795105-0').addService(googletag.pubads());
       googletag.pubads().collapseEmptyDivs(true);

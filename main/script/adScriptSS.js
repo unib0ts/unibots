@@ -606,6 +606,7 @@ var hb_full_common_bidders = [
 ];
 var mappings_full_hb_config = {
   targetUnits: [
+    'div-gpt-ad-1618912602160-0',
     'div-gpt-ad-1560233013253-0', //sakshiNew_box1_300x250
     'div-gpt-ad-1560233087431-0', //sakshiNew_box2_300x250
     'div-gpt-ad-1560233164388-0', //sakshiNew_box3_300x250
@@ -645,6 +646,7 @@ var mappings_full_hb_config = {
     'div-gpt-ad-1602146890612-0', //'/1062118/Sakshi_Cartoon_Mobile_1',
   ],
   adUnitNames: [
+    '/1062118/sakshiNew_Mobile_Inarticle2',
     '/1062118/sakshiNew_box1_300x250',
     '/1062118/sakshiNew_box2_300x250',
     '/1062118/sakshiNew_Box3_300x250',
@@ -684,6 +686,7 @@ var mappings_full_hb_config = {
     '/1062118/Sakshi_Cartoon_Mobile_1',
   ],
   sizes: [
+    [300,250],
     [300,250], //sakshiNew_box1_300x250
     [300,250], //sakshiNew_box2_300x250
     [300,250], //sakshiNew_box3_300x250
@@ -723,6 +726,14 @@ var mappings_full_hb_config = {
     [300, 250], // '/1062118/Sakshi_Cartoon_Mobile_1',
   ],
   bids: [
+    hb_full_common_bidders.concat([
+      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983534'} },
+      // { bidder: 'sovrn', params: {tagid: '744054'} },
+      // { bidder: 'openx', params: {unit: '543454990', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+      // { bidder: "kubient", params: { zoneid: "76c65728741bf", server: "kssp.kbntx.ch"} },
+      // // {bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
+      // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] }
+    ]),
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983534'} },
       { bidder: 'sovrn', params: {tagid: '744054'} },
@@ -1005,6 +1016,7 @@ var mappings_full_hb_config = {
     ]),  // '/1062118/Sakshi_Cartoon_Mobile_1',
   ],
   isAP: [
+    false,
     false, // '/1062118/sakshiNew_box1_300x250',
     false, // '/1062118/sakshiNew_box2_300x250',
     false, // '/1062118/sakshiNew_Box3_300x250',

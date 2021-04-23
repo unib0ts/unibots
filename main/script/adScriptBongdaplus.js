@@ -236,8 +236,10 @@ var hb_full_common_bidders = [
 
 var mappings_full_hb_config_old = {
   targetUnits: [
-    'div-gpt-ad-1614843621164-0', //'/21692080761/amb_es_desk_lb_1',
-    'div-gpt-ad-1614844401467-0', //'/21692080761/amb_es_mob_mpu_1',
+    'div-gpt-ad-1619183586523-0',
+    'div-gpt-ad-1619183875165-0',
+    'div-gpt-ad-1614843621164-0',
+    'div-gpt-ad-1614844401467-0',
     'div-gpt-ad-1614844501678-0',
     'div-gpt-ad-1614844652124-0',
     'div-gpt-ad-1614844767234-0',
@@ -257,6 +259,8 @@ var mappings_full_hb_config_old = {
     'div-gpt-ad-1615775720668-0',
   ],
   adUnitNames: [
+    '/22140546871/bongdaplus.vn_in-article_468x60',
+    '/22140546871/bongdaplus.vn_in-article_336x280',
     '/22140546871/bongdaplus.vn_pc_header_970x250',
     '/22140546871/bongdaplus.vn_pc_center1_970x250',
     '/22140546871/bongdaplus.vn_pc_center2_970x250',
@@ -279,6 +283,8 @@ var mappings_full_hb_config_old = {
   ],
 
   sizes: [
+      [468, 60],
+      [336, 280],
      [[970, 90], [970, 250], [728, 90]],
      [[728, 90], [970, 250], [970, 90]],
      [[970, 90], [728, 90], [970, 250]],
@@ -300,6 +306,24 @@ var mappings_full_hb_config_old = {
      [336, 280],
     ],
   bids: [
+          hb_full_common_bidders.concat([
+          //     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+          //     { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+          //     { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+          // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+          // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+          // //   //   { bidder: 'sovrn', params: {tagid: '744054'} },
+          // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          ]),
+          hb_full_common_bidders.concat([
+        //     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+        //     { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+        //     { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+        // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+        // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+        // //   //   { bidder: 'sovrn', params: {tagid: '744054'} },
+        // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        ]),
         hb_full_common_bidders.concat([
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
           { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
@@ -308,7 +332,7 @@ var mappings_full_hb_config_old = {
       //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
       //   //   { bidder: 'sovrn', params: {tagid: '744054'} },
       { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-      ]),  //  '/21692080761/amb_es_desk_lb_1',
+      ]),
      hb_full_common_bidders.concat([
        { bidder: 'openx', params: {unit: '543981163', delDomain: 'yieldbird-d.openx.net'} },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507451'} },
@@ -479,6 +503,8 @@ var mappings_full_hb_config_old = {
 
 var mappings_full_hb_config_desktop = {
   adUnitNames: [
+    '/22140546871/bongdaplus.vn_in-article_468x60',
+    '/22140546871/bongdaplus.vn_in-article_336x280',
     '/22140546871/bongdaplus.vn_pc_header_970x250',
     '/22140546871/bongdaplus.vn_pc_center1_970x250',
     '/22140546871/bongdaplus.vn_pc_center2_970x250',
@@ -492,6 +518,24 @@ var mappings_full_hb_config_desktop = {
     '/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
   ],
   bids: [
+    hb_full_common_bidders.concat([
+   //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+   //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+   //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+   // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+   // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
+   // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+   // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    ]),
+    hb_full_common_bidders.concat([
+   //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+   //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+   //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+   // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+   // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
+   // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+   // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    ]),
      hb_full_common_bidders.concat([
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
        { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
@@ -606,11 +650,15 @@ var mappings_full_hb_config_desktop = {
     true,
     true,
     true,
+    true,
+    true,
     true
   ]
 }
 var mappings_full_hb_config_mobile = {
   adUnitNames: [
+    '/22140546871/bongdaplus.vn_in-article_468x60',
+    '/22140546871/bongdaplus.vn_in-article_336x280',
     '/22140546871/bongdaplus.vn_mb_hot1_336x280',
     '/22140546871/bongdaplus.vn_mb_hot2_300x600',
     '/22140546871/bongdaplus.vn_mb_center1_336x280',
@@ -621,6 +669,24 @@ var mappings_full_hb_config_mobile = {
     // '/22140546871/bongdaplus.vn_mb_anchor_320x100',
   ],
   bids: [
+    hb_full_common_bidders.concat([
+   //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+   //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+   //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+   // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+   // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
+   // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+   // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    ]),
+    hb_full_common_bidders.concat([
+   //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+   //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+   //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+   // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+   // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
+   // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+   // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    ]),
     hb_full_common_bidders.concat([
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507460'} },
       { bidder: 'openx', params: {unit: '543981173', delDomain: 'yieldbird-d.openx.net'} },
@@ -698,6 +764,8 @@ var mappings_full_hb_config_mobile = {
    //  ]),
   ],
   isAP: [
+    true,
+    true,
     true,
     true,
     true,

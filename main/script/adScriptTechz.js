@@ -10,7 +10,7 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-var PREBID_TIMEOUT = 1200;
+var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 45000;
 // var boturlbid = window.location.hostname;
@@ -388,8 +388,8 @@ function callMapUnits(){
         size_array = [];
         size_temp_array = googletag.pubads().getSlots()[i].getSizes();
         for(j=0;j<size_temp_array.length;j++){
-          length = size_temp_array[j]['m'];
-          height = size_temp_array[j]['j'];
+          length = size_temp_array[j][Object.keys(size_temp_array[j])[0]];
+           height = size_temp_array[j][Object.keys(size_temp_array[j])[1]];
           temp_array = [length, height];
           size_array.push(temp_array);
         }

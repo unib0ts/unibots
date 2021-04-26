@@ -229,7 +229,7 @@ function googlePush(){
   });
 }
 
-if(document.getElementById('unibots-ad')){
+// if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349/vikatan.com_320x50_ipl');
   mappings.sizes.push(div_1_sizes);
@@ -241,7 +241,7 @@ if(document.getElementById('unibots-ad')){
       }
     });
   });
-}
+// }
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

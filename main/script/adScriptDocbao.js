@@ -41,7 +41,7 @@ if (!mobileCheck()) {
   ad_scrpt2.innerText= mybotadscrptChild;
   document.querySelector('.footer').appendChild(ad_scrpt2);
 
-  if (document.querySelector('.header')) {
+  // if (document.querySelector('.header')) {
     z= document.createElement('div');
     z.id = 'ub-left-ad';
     z.className = 'ub-left-ad';
@@ -67,7 +67,7 @@ if (!mobileCheck()) {
      child.appendChild(z);
      document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1615189532474-0">';
     }
-  }
+  // }
 }
 else {
   // if(!(window.location.href== "https://m.docbao.vn/") && !(window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)){

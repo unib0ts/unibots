@@ -42,7 +42,7 @@ const customConfigObjectA = {
     }]
 };
 
-// if(document.getElementById('newsbot-ads')){
+// if(document.getElementById('unibots-ad')){
   adUnits1 =
   {
       code: '/21928950349/socialnews.xyz_ipl_320x50',
@@ -185,7 +185,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
+        googletag.pubads().refresh(mappings.slots);
 }
 
 function initAdserver() {
@@ -194,7 +194,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh(mappings.slots);
+            googletag.pubads().refresh(mappings.slots);
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
               var bc = x[i].bidderCode;
@@ -229,17 +229,19 @@ function googlePush(){
   });
 }
 
+// if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349/socialnews.xyz_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1618072401950-0');
+  mappings.adId.push('div-gpt-ad-1619515885003-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1618072401950-0', ub_slot1, ['/21928950349/socialnews.xyz_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1619515885003-0', ub_slot1, ['/21928950349/socialnews.xyz_ipl_320x50']);
       }
     });
   });
+// }
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

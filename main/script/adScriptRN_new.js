@@ -543,10 +543,10 @@
       googlePush();
     }
     else{
-  		setTimeout(function(){
-  	    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-  	    googlePush();
-  	  }, 500);
+      googletag.cmd.push(function() {
+        googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+        googlePush();
+      });
     // }
    }
 

@@ -117,7 +117,7 @@ if(typeof customConfigObjectA === 'undefined'){
             // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
-            // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
+            { bidder: 'ucfunnel', params: { adid : 'ad-BE7867E47B673B42179987A2B4D82773'} },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },

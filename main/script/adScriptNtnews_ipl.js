@@ -55,7 +55,7 @@ const customConfigObjectA = {
         { bidder: 'appnexus', params: { placementId: '19056061' } }, /* one placementId for all sizes  my appnexus bidder */
          	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
          	{ bidder: '33across', params: { siteId : 'bewrXiNi0r64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-         	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
+         	{ bidder: 'emx_digital', params: { tagid: '107926' } }, /* sizeless */
            { bidder: 'sovrn', params: {tagid: '884154'} },
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3580598'} },
            { bidder: 'openx', params: {unit: '544022821', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },

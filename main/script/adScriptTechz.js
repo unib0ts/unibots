@@ -10,6 +10,12 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
+var mybotstyleSheet='#div-gpt-ad-1618301211414-0 iframe {border: unset !important;vertical-align: unset !important;}';
+var css=document.createElement('style');
+css.type='text/css';
+css.appendChild(document.createTextNode(mybotstyleSheet));
+document.getElementsByTagName('head')[0].appendChild(css);
+
 var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 45000;

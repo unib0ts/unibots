@@ -14,7 +14,7 @@ apstag.init({
 });
 apSlots = []
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 50px;left: 0px;z-index: 9000;}.ub-right-ad{width: auto !important;position: fixed;top: 50px;right: 10px;z-index: 100;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 50px;left: 0px;z-index: 9000;}.ub-right-ad{width: auto !important;position: fixed;top: 50px;right: 10px;z-index: 100; iframe{vertical-align: unset !important;border: unset !important;margin: unset !important; padding: unset !important; outline-width: unset !important; outline-style: unset !important; }';
 
 var mybotadscrpt = 'var adgf_p1="3766"; var adgf_p2="0"; var adgf_p3="0"; var adgf_p4=""; var adgf_p5=""; var adgFtSc=document.createElement("script"); adgFtSc.id="adg_pixel_footer_script"; document.body.appendChild(adgFtSc);adgFtSc.async=true;var adgScParam="p1="+adgf_p1+"&p2="+adgf_p2+"&p3="+adgf_p3+"&p4="+adgf_p4+"&p5="+adgf_p5;adgFtSc.src="//adgebra.co.in/afpf/afpf.js?"+adgScParam;';
 var mybotadscrptChild ='<iframe id="adg_footer_pixel_script" src="//adgebra.co.in/afpf/afpf?p1=3766&p2=0&p3=1&p4=&p5=" width="0" height="0" frameBorder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
@@ -32,14 +32,14 @@ return check;
 };
 
 if (!mobileCheck()) {
-  var ad_scrpt1 = document.createElement('script');
-  ad_scrpt1.type = "text/javascript";
-  ad_scrpt1.innerText= mybotadscrpt;
-  document.querySelector('.footer').appendChild(ad_scrpt1);
-
-  var ad_scrpt2 = document.createElement('noscript');
-  ad_scrpt2.innerText= mybotadscrptChild;
-  document.querySelector('.footer').appendChild(ad_scrpt2);
+  // var ad_scrpt1 = document.createElement('script');
+  // ad_scrpt1.type = "text/javascript";
+  // ad_scrpt1.innerText= mybotadscrpt;
+  // document.querySelector('.footer').appendChild(ad_scrpt1);
+  //
+  // var ad_scrpt2 = document.createElement('noscript');
+  // ad_scrpt2.innerText= mybotadscrptChild;
+  // document.querySelector('.footer').appendChild(ad_scrpt2);
 
   // if (document.querySelector('.header')) {
     z= document.createElement('div');

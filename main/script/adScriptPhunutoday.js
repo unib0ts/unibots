@@ -1,14 +1,14 @@
-// var mybotadscrpt = 'var adgf_p1="3766"; var adgf_p2="0"; var adgf_p3="0"; var adgf_p4=""; var adgf_p5=""; var adgFtSc=document.createElement("script"); adgFtSc.id="adg_pixel_footer_script"; document.body.appendChild(adgFtSc);adgFtSc.async=true;var adgScParam="p1="+adgf_p1+"&p2="+adgf_p2+"&p3="+adgf_p3+"&p4="+adgf_p4+"&p5="+adgf_p5;adgFtSc.src="//adgebra.co.in/afpf/afpf.js?"+adgScParam;';
-// var mybotadscrptChild ='<iframe id="adg_footer_pixel_script" src="//adgebra.co.in/afpf/afpf?p1=3766&p2=0&p3=1&p4=&p5=" width="0" height="0" frameBorder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
+var mybotadscrpt = 'var adgf_p1="3766"; var adgf_p2="0"; var adgf_p3="0"; var adgf_p4=""; var adgf_p5=""; var adgFtSc=document.createElement("script"); adgFtSc.id="adg_pixel_footer_script"; document.body.appendChild(adgFtSc);adgFtSc.async=true;var adgScParam="p1="+adgf_p1+"&p2="+adgf_p2+"&p3="+adgf_p3+"&p4="+adgf_p4+"&p5="+adgf_p5;adgFtSc.src="//adgebra.co.in/afpf/afpf.js?"+adgScParam;';
+var mybotadscrptChild ='<iframe id="adg_footer_pixel_script" src="//adgebra.co.in/afpf/afpf?p1=3766&p2=0&p3=1&p4=&p5=" width="0" height="0" frameBorder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
 
-// var ad_scrpt1 = document.createElement('script');
-// ad_scrpt1.type = "text/javascript";
-// ad_scrpt1.innerText= mybotadscrpt;
-// document.getElementsByTagName('footer')[0].appendChild(ad_scrpt1);
-//
-// var ad_scrpt2 = document.createElement('noscript');
-// ad_scrpt2.innerText= mybotadscrptChild;
-// document.getElementsByTagName('footer')[0].appendChild(ad_scrpt2);
+var ad_scrpt1 = document.createElement('script');
+ad_scrpt1.type = "text/javascript";
+ad_scrpt1.innerText= mybotadscrpt;
+document.getElementsByTagName('footer')[0].appendChild(ad_scrpt1);
+
+var ad_scrpt2 = document.createElement('noscript');
+ad_scrpt2.innerText= mybotadscrptChild;
+document.getElementsByTagName('footer')[0].appendChild(ad_scrpt2);
 
 var div_1_sizes = [[300, 50], [320, 50]];
 

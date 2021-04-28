@@ -32,6 +32,14 @@ return check;
 };
 
 if (!mobileCheck()) {
+  var ad_scrpt1 = document.createElement('script');
+  ad_scrpt1.type = "text/javascript";
+  ad_scrpt1.innerText= mybotadscrpt;
+  document.getElementsByTagName('body')[0].appendChild(ad_scrpt1);
+
+  var ad_scrpt2 = document.createElement('noscript');
+  ad_scrpt2.innerText= mybotadscrptChild;
+  document.getElementsByTagName('body')[0].appendChild(ad_scrpt2);
   // if (document.querySelector('.header')) {
     z= document.createElement('div');
     z.id = 'ub-left-ad';
@@ -1027,16 +1035,3 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
-
-setTimeout(function() {
-if (!mobileCheck()) {
-  var ad_scrpt1 = document.createElement('script');
-  ad_scrpt1.type = "text/javascript";
-  ad_scrpt1.innerText= mybotadscrpt;
-  document.querySelector('.footer').appendChild(ad_scrpt1);
-
-  var ad_scrpt2 = document.createElement('noscript');
-  ad_scrpt2.innerText= mybotadscrptChild;
-  document.querySelector('.footer').appendChild(ad_scrpt2);
-}
-}, 1000);

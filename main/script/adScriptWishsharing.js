@@ -1,6 +1,11 @@
   // if(typeof customConfigObjectA === 'undefined'){
-  setTimeout(function() {
+  // setTimeout(function() {
+  var mybotadscrpt = 'var adgf_p1="3766"; var adgf_p2="0"; var adgf_p3="0"; var adgf_p4=""; var adgf_p5=""; var adgFtSc=document.createElement("script"); adgFtSc.id="adg_pixel_footer_script"; document.body.appendChild(adgFtSc);adgFtSc.async=true;var adgScParam="p1="+adgf_p1+"&p2="+adgf_p2+"&p3="+adgf_p3+"&p4="+adgf_p4+"&p5="+adgf_p5;adgFtSc.src="//adgebra.co.in/afpf/afpf.js?"+adgScParam;';
 
+  var ad_scrpt1 = document.createElement('script');
+   ad_scrpt1.type = "text/javascript";
+   ad_scrpt1.innerText= mybotadscrpt;
+   document.getElementsByTagName('body')[0].appendChild(ad_scrpt1);
 
   	var s0 = document.createElement('script');
   	s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
@@ -354,6 +359,6 @@
     // }
    }
 
- },1000);
+ // },1000);
 
 // }

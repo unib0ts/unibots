@@ -414,7 +414,7 @@
     function callBotman(){
       if(userStatusBM == ''){
         var request = new XMLHttpRequest();
-        var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=irctc';
+        var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=raftaar';
         request.open('GET', url, true);
         request.onload = function() {
           if (request.status >= 200 && request.status < 400) {

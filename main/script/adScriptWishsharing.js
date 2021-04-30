@@ -20,7 +20,7 @@
     var iframe_ub = document.getElementById("dtext_22");
     // var elmnt =  (iframe_ub.contentDocument) ? iframe_ub.contentDocument : iframe_ub.contentWindow.document;
     var elmnt = iframe_ub.contentWindow;
-     var ub_elmnt = elmnt.getElementById("unibots-ad");
+     var ub_elmnt = elmnt.document.getElementById("unibots-ad");
 
     unibot1 = '<div id="div-gpt-ad-1619761940307-0">';
 
@@ -354,6 +354,6 @@
     // }
    }
 
-  },3000);
+ },1000);
 
 // }

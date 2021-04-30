@@ -1,3 +1,4 @@
+setTimeout(function() {
 
 var s0 = document.createElement('script');
 s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
@@ -177,20 +178,8 @@ var mappings_full_hb_config_old = {
 }
 
 var mappings_full_hb_config_desktop = {
-  adUnitNames: [
-    '/22142075243/techz.vn_hb_336x280',
-  ],
-  bids: [
-     hb_full_common_bidders.concat([
-       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3610283'} },
-       { bidder: 'openx', params: {unit: '544005771', delDomain: 'yieldbird-d.openx.net'} },
-       // { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
-    //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-      { bidder: 'sovrn', params: {tagid: '888205'} },
-    // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
-      { bidder: 'smartadserver', params: { siteId: '401900', pageId: '1366214', formatId: '93418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-     ]), //'/21692080761/amb_es_desk_lb_1',
-  ]
+  adUnitNames: [],
+  bids: []
 }
 var mappings_full_hb_config_mobile = {
   adUnitNames: [
@@ -503,3 +492,4 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
+}, 5000);

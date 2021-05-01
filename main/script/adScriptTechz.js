@@ -261,7 +261,7 @@ function checkHBUnits(){
   // }, FAILSAFE_TIMEOUT);
 }
 function callFullHBAds(adCode, ub_slot){
-  fillRefreshMap();
+  // fillRefreshMap();
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
@@ -301,12 +301,13 @@ function locate_googleSlot(targetId){
 }
 
 function initAdserver_hb_full() {
+  console.log('initiadd');
     if (ubpbjs.initAdserverSetHB) return;
     ubpbjs.initAdserverSetHB = true;
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh();
+            // googletag.pubads().refresh(mapping_full_hb.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){
@@ -493,4 +494,15 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
-}, 5000);
+setTimeout(refreshub, 1000);
+}, 3000);
+
+var ubpbjs = ubpbjs || {};
+ubpbjs.que = ubpbjs.que || [];
+function refreshub(){
+  googletag.cmd.push(function() {
+    ubpbjs.que.push(function() {
+          googletag.pubads().refresh();
+    });
+  });
+}

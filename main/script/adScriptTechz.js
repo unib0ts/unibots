@@ -299,13 +299,14 @@ function locate_googleSlot(targetId){
   }
   return ub_hb_slot;
 }
+
 function initAdserver_hb_full() {
     if (ubpbjs.initAdserverSetHB) return;
     ubpbjs.initAdserverSetHB = true;
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mapping_full_hb.slots);
+            googletag.pubads().refresh();
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){

@@ -305,7 +305,7 @@ function initAdserver_hb_full() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh(mapping_full_hb.slots);
+            googletag.pubads().refresh(mapping_full_hb.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){

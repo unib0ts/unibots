@@ -570,16 +570,9 @@ setTimeout(refreshub, 1000);
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 function refreshub(){
-  ubpbjs.que.push(function() {
-    ubpbjs.requestBids({
-      timeout: PREBID_TIMEOUT,
-      adUnitCodes: adCode,
-      adUnits: adUnits_full_hb,
-      bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh();
+  googletag.cmd.push(function() {
+    ubpbjs.que.push(function() {
+          googletag.pubads().refresh();
               // var adsCalled_hb = false;
               // for(var i=0;i<x.length;i++){
               //   var bc = x[i].bidderCode;
@@ -593,7 +586,4 @@ function refreshub(){
               // }
           });
         });
-      }
-    });
-  });
 }

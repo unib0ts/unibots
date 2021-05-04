@@ -285,7 +285,7 @@ function checkHBUnits(){
   // }, FAILSAFE_TIMEOUT);
 }
 function callFullHBAds(adCode, ub_slot){
-  // fillRefreshMap();
+  fillRefreshMap();
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
@@ -567,33 +567,9 @@ function refreshBid(ub_slot, adCode) {
 setTimeout(refreshub, 1000);
 }, 3000);
 
-var ubpbjs = ubpbjs || {};
-ubpbjs.que = ubpbjs.que || [];
+
 function refreshub(){
-  ubpbjs.que.push(function() {
-    ubpbjs.requestBids({
-      timeout: PREBID_TIMEOUT,
-      adUnitCodes: adCode,
-      adUnits: adUnits_full_hb,
-      bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh();
-              // var adsCalled_hb = false;
-              // for(var i=0;i<x.length;i++){
-              //   var bc = x[i].bidderCode;
-              //   if(bc=="openx"){
-              //     adsCalled_hb = true;
-              //     callBotman_hb();
-              //   }
-              // }
-              // if(!adsCalled_hb){
-              //   callAdsUB_hb();
-              // }
-          });
-        });
-      }
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh();
     });
-  });
 }

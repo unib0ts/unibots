@@ -99,9 +99,9 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-var PREBID_TIMEOUT = 1000;
+var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 45000;
+var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
 
 var GEO_CODE = '';

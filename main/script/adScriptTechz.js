@@ -33,9 +33,9 @@ css.type='text/css';
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName('head')[0].appendChild(css);
 
-var PREBID_TIMEOUT = 1300;
+var PREBID_TIMEOUT = 1400;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 45000;
+var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
 
 var GEO_CODE = '';

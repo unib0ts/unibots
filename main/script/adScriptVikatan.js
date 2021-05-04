@@ -1,3 +1,4 @@
+if(typeof customConfigObjectA === 'undefined'){
 var div_1_sizes = [320, 50];
 var adUnits = [];
 
@@ -318,4 +319,5 @@ function mainHbRun(){
   setTimeout(function() {
       initAdserver();
   }, FAILSAFE_TIMEOUT);
+}
 }

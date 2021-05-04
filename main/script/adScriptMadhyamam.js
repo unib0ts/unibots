@@ -717,13 +717,13 @@ apSlotTemp = {
   sizes: mappings.sizes,
 }
 
-var wm_mappings = {
-  targetUnits: ['HomePage_300x250_1', 'div-gpt-ad-1590738750383-0'],
-  slotNames: ['ub_slot2', 'ub_slot3'],
-  adUnitNames: ['/21957769615/madhyamam.com_wm_300x250_1', '/21957769615/madhyamam.com_wm_300x250_2'],
-  adId: ['div-ub-wm-2', 'div-ub-wm-3'],
-  sizes: [div_2_sizes, div_3_sizes]
-}
+// var wm_mappings = {
+//   targetUnits: ['HomePage_300x250_1', 'div-gpt-ad-1590738750383-0'],
+//   slotNames: ['ub_slot2', 'ub_slot3'],
+//   adUnitNames: ['/21957769615/madhyamam.com_wm_300x250_1', '/21957769615/madhyamam.com_wm_300x250_2'],
+//   adId: ['div-ub-wm-2', 'div-ub-wm-3'],
+//   sizes: [div_2_sizes, div_3_sizes]
+// }
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1];

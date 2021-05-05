@@ -1,5 +1,16 @@
-setTimeout(function() {
+var mybotubad = setInterval(ub_adscript, 1000);
 
+function ub_adscript() {
+  while (document.getElementById('div-gpt-ad-1618301211414-0')) {
+        clearInterval(mybotubad);
+        ub_ad();
+        break;
+  }
+}
+
+
+
+function ub_ad() {
   //load apstag.js library
   !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
@@ -331,7 +342,7 @@ function initAdserver_hb_full() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh(mapping_full_hb.slots);
+            googletag.pubads().refresh(mapping_full_hb.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled_hb = false;
             for(var i=0;i<x.length;i++){
@@ -564,12 +575,5 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
-setTimeout(refreshub, 1000);
-}, 3000);
-
-
-function refreshub(){
-    googletag.cmd.push(function() {
-        googletag.pubads().refresh();
-    });
+// setTimeout(refreshub, 1000);
 }

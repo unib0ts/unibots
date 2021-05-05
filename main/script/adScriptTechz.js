@@ -1,16 +1,16 @@
-var mybotubad = setInterval(ub_adscript, 1000);
+// var mybotubad = setInterval(ub_adscript, 1000);
+//
+// function ub_adscript() {
+//   while (document.getElementById('div-gpt-ad-1618301211414-0')) {
+//         clearInterval(mybotubad);
+//         ub_ad();
+//         break;
+//   }
+// }
 
-function ub_adscript() {
-  while (document.getElementById('div-gpt-ad-1618301211414-0')) {
-        clearInterval(mybotubad);
-        ub_ad();
-        break;
-  }
-}
 
 
-
-function ub_ad() {
+// function ub_ad() {
   //load apstag.js library
   !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
@@ -575,5 +575,4 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
-// setTimeout(refreshub, 1000);
-}
+// }

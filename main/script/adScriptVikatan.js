@@ -60,7 +60,7 @@ const customConfigObjectA = {
            { bidder: 'sovrn', params: {tagid: '888363'} },
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3610063'} },
            { bidder: 'openx', params: {unit: '544037180', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        //  	// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+         	{ bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         //  	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
            { bidder: 'nobid', params: { siteId : '22384861374'} },
            { bidder: 'criteo', params: {networkId: '10542'} },

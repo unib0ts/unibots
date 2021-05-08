@@ -339,9 +339,11 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
     googlePush();
   }
   else{
-		setTimeout(function(){
-	    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-	    googlePush();
-	  }, 500);
+		// setTimeout(function(){
+		googletag.cmd.push(function() {
+			googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+			googlePush();
+		});
+	  // }, 500);
   }
 }

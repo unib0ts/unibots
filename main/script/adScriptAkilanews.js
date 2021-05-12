@@ -236,7 +236,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
+	// googletag.pubads().refresh(mappings.slots);
 }
 function googleDefine(slotNumbers, adCode, sizes, adId){
   for(var i=0; i<slotNumbers.length;i++){

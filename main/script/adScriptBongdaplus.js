@@ -508,7 +508,7 @@ var mappings_full_hb_config_old = {
        // { bidder: 'ucfunnel', params: { adid : 'ad-2736B8743748ADDA08644EB83D633678'} },
     //   { bidder: "kubient", params: { zoneid: "9b094d05b54f3", server: "kssp.kbntx.ch"} },
     //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-      { bidder: 'sovrn', params: {tagid: '872968'} },
+      // { bidder: 'sovrn', params: {tagid: '872968'} },
         { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
      ]),
@@ -518,7 +518,7 @@ var mappings_full_hb_config_old = {
         { bidder: 'ucfunnel', params: { adid : 'ad-E2B43D7A863E332309E68D639A6246E'} },
      //   { bidder: "kubient", params: { zoneid: "9b094d05b54f3", server: "kssp.kbntx.ch"} },
      //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-       { bidder: 'sovrn', params: {tagid: '869656'} },
+       // { bidder: 'sovrn', params: {tagid: '869656'} },
          { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
      //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
       ]), ///21692080761/amb_eng_mob_mpu_2',,
@@ -678,7 +678,7 @@ var mappings_full_hb_config_desktop = {
        { bidder: 'ucfunnel', params: { adid : 'ad-E2B43D7A863E332309E68D639A6246E'} },
     //   { bidder: "kubient", params: { zoneid: "9b094d05b54f3", server: "kssp.kbntx.ch"} },
     //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-      { bidder: 'sovrn', params: {tagid: '869656'} },
+      // { bidder: 'sovrn', params: {tagid: '869656'} },
         { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
      ]), ///21692080761/amb_hindi_desk_lb_
@@ -804,7 +804,7 @@ var mappings_full_hb_config_mobile = {
       // { bidder: 'ucfunnel', params: { adid : 'ad-2736B8743748ADDA08644EB83D633678'} },
    //   { bidder: "kubient", params: { zoneid: "9b094d05b54f3", server: "kssp.kbntx.ch"} },
    //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-     { bidder: 'sovrn', params: {tagid: '872968'} },
+     // { bidder: 'sovrn', params: {tagid: '872968'} },
        { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
    //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
     ]),

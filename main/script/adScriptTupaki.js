@@ -54,7 +54,7 @@ var adUnits = [
         	{ bidder: 'appnexus', params: { placementId: '21352845' } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
         	{ bidder: '33across', params: { siteId : 'baIrjSNi0r64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-        	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
+        	{ bidder: 'emx_digital', params: { tagid: '147577' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '882932'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3581649'} },
           { bidder: 'openx', params: {unit: '544022781', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },

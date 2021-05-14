@@ -83,7 +83,7 @@ if(document.getElementById('newsbot-ads')){
        { bidder: 'oftmedia', params: { placementId: '21249043' } },
        { bidder: 'adyoulike', params: { placementId: 'd18f9fafd1a70851f7ed9b11c0c26f86'}, labelAll: ["US"] },
        { bidder: '33across', params: { siteId : 'cV6b5ENiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"]}, /*All sizes*/
-       { bidder: 'emx_digital', params: { tagid: '97480' } }, /* sizeless */
+       { bidder: 'emx_digital', params: { tagid: '147565' } }, /* sizeless */
        // { bidder: 'ucfunnel', params: { adid : 'ad-273677D32327846403E4249AA9D86D2'} },
        { bidder: 'openx', params: {unit: '543530422', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */

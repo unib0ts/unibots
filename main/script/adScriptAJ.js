@@ -69,7 +69,7 @@ if (document.getElementById('ub_ads')) {
          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          { bidder: '33across', params: { siteId : 'dNs7ZaNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-         // { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
+         { bidder: 'emx_digital', params: { tagid: '147573' } }, /* sizeless */
          { bidder: 'openx', params: {unit: '544022829', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
@@ -145,7 +145,7 @@ if (!mobileCheck()) {
        { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
        // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
        { bidder: '33across', params: { siteId : 'dNs7ZaNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-       // { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
+       { bidder: 'emx_digital', params: { tagid: '147573' } }, /* sizeless */
        { bidder: 'openx', params: {unit: '544022827', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
@@ -182,7 +182,7 @@ if (!mobileCheck()) {
          { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
          // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
          { bidder: '33across', params: { siteId : 'dNs7ZaNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-         // { bidder: 'emx_digital', params: { tagid: '115867' } }, /* sizeless */
+         { bidder: 'emx_digital', params: { tagid: '147573' } }, /* sizeless */
          { bidder: 'openx', params: {unit: '544022826', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

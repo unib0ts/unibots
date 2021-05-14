@@ -110,7 +110,7 @@ const customConfigObjectA = {
         { bidder: 'rhythmone', params: { placementId: '205378' } }, /* one placementId for all sizes */
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: '33across', params: { siteId : 'bzA6DYBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-        { bidder: 'emx_digital', params: { tagid: '97506' } }, /* sizeless */
+        { bidder: 'emx_digital', params: { tagid: '147575' } }, /* sizeless */
         { bidder: 'nobid', params: { siteId : '22358105088'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },

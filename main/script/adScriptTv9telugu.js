@@ -1,3 +1,18 @@
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false
+};
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+     adServer: 'googletag'
+});
+apSlots = []
+
 var div_1_sizes = [320, 50];
 var div_2_sizes = [300, 250];
 
@@ -621,11 +636,20 @@ function googlePush(){
 if (botsiteurl == 'tv9gujarati.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
+
+      apSlotTemp = {
+        slotID: 'div-gpt-ad-1618307155135-0',
+        slotName: '/21928950349/tv9gujarati.com_ipl_300x250',
+        sizes: mappings.sizes,
+      }
+      apSlots.push(apSlotTemp);
       mappings.slotNumbers.push(1);
       mappings.adCode.push('/21928950349/tv9gujarati.com_ipl_300x250');
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1618307155135-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot1) {
             ub_checkAdRendered('div-gpt-ad-1618307155135-0', ub_slot1, ['/21928950349/tv9gujarati.com_ipl_300x250']);
@@ -634,11 +658,20 @@ if (botsiteurl == 'tv9gujarati.com') {
       });
     }
   }else {
+    apSlotTemp = {
+      slotID: 'div-gpt-ad-1618307202658-0',
+      slotName: '/21928950349/tv9gujarati.com_ipl_320x50',
+      sizes: div_1_sizes,
+    }
+    apSlots.push(apSlotTemp);
+
     mappings.slotNumbers.push(2);
     mappings.adCode.push('/21928950349/tv9gujarati.com_ipl_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1618307202658-0');
     googletag.cmd.push(function() {
+      callAPStagBids(); //Ap part
+      callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot2) {
           ub_checkAdRendered('div-gpt-ad-1618307202658-0', ub_slot2, ['/21928950349/tv9gujarati.com_ipl_320x50']);
@@ -650,11 +683,20 @@ if (botsiteurl == 'tv9gujarati.com') {
 if (botsiteurl == 'www.tv9hindi.com' || botsiteurl == 'veegam.tv9hindi.com' || botsiteurl == 'www.veegam.tv9hindi.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
+      apSlotTemp = {
+        slotID: 'div-gpt-ad-1618307254033-0',
+        slotName: '/21928950349/tv9hindi.com_ipl_300x250',
+        sizes: mappings.sizes,
+      }
+      apSlots.push(apSlotTemp);
+
       mappings.slotNumbers.push(3);
       mappings.adCode.push('/21928950349/tv9hindi.com_ipl_300x250');
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1618307254033-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot3) {
             ub_checkAdRendered('div-gpt-ad-1618307254033-0', ub_slot3, ['/21928950349/tv9hindi.com_ipl_300x250']);
@@ -663,11 +705,20 @@ if (botsiteurl == 'www.tv9hindi.com' || botsiteurl == 'veegam.tv9hindi.com' || b
       });
     }
   }else {
+    apSlotTemp = {
+      slotID: 'div-gpt-ad-1618307321739-0',
+      slotName: '/21928950349/tv9hindi.com_ipl_320x50',
+      sizes: div_1_sizes,
+    }
+    apSlots.push(apSlotTemp);
+
     mappings.slotNumbers.push(4);
     mappings.adCode.push('/21928950349/tv9hindi.com_ipl_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1618307321739-0');
     googletag.cmd.push(function() {
+      callAPStagBids(); //Ap part
+      callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot4) {
           ub_checkAdRendered('div-gpt-ad-1618307321739-0', ub_slot4, ['/21928950349/tv9hindi.com_ipl_320x50']);
@@ -679,11 +730,20 @@ if (botsiteurl == 'www.tv9hindi.com' || botsiteurl == 'veegam.tv9hindi.com' || b
 if (botsiteurl == 'tv9kannada.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
+      apSlotTemp = {
+        slotID: 'div-gpt-ad-1618307365902-0',
+        slotName: '/21928950349/tv9kannada.com_ipl_300x250',
+        sizes: mappings.sizes,
+      }
+      apSlots.push(apSlotTemp);
+
       mappings.slotNumbers.push(5);
       mappings.adCode.push('/21928950349/tv9kannada.com_ipl_300x250');
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1618307365902-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot5) {
             ub_checkAdRendered('div-gpt-ad-1618307365902-0', ub_slot5, ['/21928950349/tv9kannada.com_ipl_300x250']);
@@ -692,11 +752,20 @@ if (botsiteurl == 'tv9kannada.com') {
       });
     }
   }else {
+    apSlotTemp = {
+      slotID: 'div-gpt-ad-1618307397992-0',
+      slotName: '/21928950349/tv9kannada.com_ipl_320x50',
+      sizes: div_1_sizes,
+    }
+    apSlots.push(apSlotTemp);
+
     mappings.slotNumbers.push(6);
     mappings.adCode.push('/21928950349/tv9kannada.com_ipl_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1618307397992-0');
     googletag.cmd.push(function() {
+      callAPStagBids(); //Ap part
+      callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot6) {
           ub_checkAdRendered('div-gpt-ad-1618307397992-0', ub_slot6, ['/21928950349/tv9kannada.com_ipl_320x50']);
@@ -708,11 +777,20 @@ if (botsiteurl == 'tv9kannada.com') {
 if (botsiteurl == 'www.tv9marathi.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
+      apSlotTemp = {
+        slotID: 'div-gpt-ad-1618307427794-0',
+        slotName: '/21928950349/tv9marathi.com_ipl_300x250',
+        sizes: mappings.sizes,
+      }
+      apSlots.push(apSlotTemp);
+
       mappings.slotNumbers.push(7);
       mappings.adCode.push('/21928950349/tv9marathi.com_ipl_300x250');
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1618307427794-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot7) {
             ub_checkAdRendered('div-gpt-ad-1618307427794-0', ub_slot7, ['/21928950349/tv9marathi.com_ipl_300x250']);
@@ -721,11 +799,20 @@ if (botsiteurl == 'www.tv9marathi.com') {
       });
     }
   }else {
+    apSlotTemp = {
+      slotID: 'div-gpt-ad-1618307454537-0',
+      slotName: '/21928950349/tv9marathi.com_ipl_320x50',
+      sizes: div_1_sizes,
+    }
+    apSlots.push(apSlotTemp);
+
     mappings.slotNumbers.push(8);
     mappings.adCode.push('/21928950349/tv9marathi.com_ipl_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1618307454537-0');
     googletag.cmd.push(function() {
+      callAPStagBids(); //Ap part
+      callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot8) {
           ub_checkAdRendered('div-gpt-ad-1618307454537-0', ub_slot8, ['/21928950349/tv9marathi.com_ipl_320x50']);
@@ -737,11 +824,20 @@ if (botsiteurl == 'www.tv9marathi.com') {
 if (botsiteurl == 'tv9telugu.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
+      apSlotTemp = {
+        slotID: 'div-gpt-ad-1618307494648-0',
+        slotName: '/21928950349/tv9telugu.com_ipl_300x250',
+        sizes: mappings.sizes,
+      }
+      apSlots.push(apSlotTemp);
+
       mappings.slotNumbers.push(9);
       mappings.adCode.push('/21928950349/tv9telugu.com_ipl_300x250');
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1618307494648-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot9) {
             ub_checkAdRendered('div-gpt-ad-1618307494648-0', ub_slot9, ['/21928950349/tv9telugu.com_ipl_300x250']);
@@ -750,11 +846,20 @@ if (botsiteurl == 'tv9telugu.com') {
       });
     }
   }else {
+    apSlotTemp = {
+      slotID: 'div-gpt-ad-1618307531030-0',
+      slotName: '/21928950349/tv9telugu.com_ipl_320x50',
+      sizes: div_1_sizes,
+    }
+    apSlots.push(apSlotTemp);
+
     mappings.slotNumbers.push(10);
     mappings.adCode.push('/21928950349/tv9telugu.com_ipl_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1618307531030-0');
     googletag.cmd.push(function() {
+      callAPStagBids(); //Ap part
+      callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot10) {
           ub_checkAdRendered('div-gpt-ad-1618307531030-0', ub_slot10, ['/21928950349/tv9telugu.com_ipl_320x50']);
@@ -766,11 +871,20 @@ if (botsiteurl == 'tv9telugu.com') {
 if (botsiteurl == 'www.tv9bangla.com') {
   if (mobileCheck()) {
     if (document.getElementById('ub-ads')) {
+      apSlotTemp = {
+        slotID: 'div-gpt-ad-1618386943569-0',
+        slotName: '/21928950349/tv9bangla.com_ipl_300x250',
+        sizes: mappings.sizes,
+      }
+      apSlots.push(apSlotTemp);
+
       mappings.slotNumbers.push(11);
       mappings.adCode.push('/21928950349/tv9bangla.com_ipl_300x250');
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1618386943569-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot11) {
             ub_checkAdRendered('div-gpt-ad-1618386943569-0', ub_slot11, ['/21928950349/tv9bangla.com_ipl_300x250']);
@@ -779,11 +893,20 @@ if (botsiteurl == 'www.tv9bangla.com') {
       });
     }
   }else {
+    apSlotTemp = {
+      slotID: 'div-gpt-ad-1618386989043-0',
+      slotName: '/21928950349/tv9bangla.com_ipl_320x50',
+      sizes: div_1_sizes,
+    }
+    apSlots.push(apSlotTemp);
+
     mappings.slotNumbers.push(12);
     mappings.adCode.push('/21928950349/tv9bangla.com_ipl_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1618386989043-0');
     googletag.cmd.push(function() {
+      callAPStagBids(); //Ap part
+      callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot12) {
           ub_checkAdRendered('div-gpt-ad-1618386989043-0', ub_slot12, ['/21928950349/tv9bangla.com_ipl_320x50']);
@@ -802,6 +925,55 @@ else{
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
   });
+}
+
+function callAPSAds(adCode, ub_slot){
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnits: adUnits,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        // ubpbjs.initAdserverSetHB = true;
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              requestManager.prebid = true;
+              biddersBack();
+              // googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+function callAPStagBids(){
+  apstag.fetchBids({
+    slots: apSlots,
+     timeout: 2000
+  },function(bids) {
+          googletag.cmd.push(function() {
+              apstag.setDisplayBids();
+              requestManager.aps = true;
+              biddersBack();
+          });
+      }
+  );
+}
+function biddersBack() {
+    if (requestManager.aps && requestManager.prebid) {
+        sendAdserverRequest();
+    }
+    return;
+}
+function sendAdserverRequest() {
+    if (requestManager.adserverRequestSent === true) {
+        return;
+    }
+    requestManager.adserverRequestSent = true;
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh(mappings.slots);
+    });
 }
 // setTimeout(function() {
 //     initAdserver();

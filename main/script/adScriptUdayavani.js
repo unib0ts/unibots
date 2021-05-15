@@ -183,7 +183,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh([ub_slot]);
+              googletag.pubads().refresh([ub_slot]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -250,7 +250,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh([ub_slot1]);
+	// googletag.pubads().refresh([ub_slot1]);
 }
 
 function initAdserver() {
@@ -429,10 +429,10 @@ if(typeof googletag.defineSlot === "function"){
   googlePush();
 }
 else{
-  setTimeout(function(){
+  // setTimeout(function(){
     googletag.cmd.push(function() {
       googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
       googlePush();
     });
-  }, 500);
+  // }, 500);
 }

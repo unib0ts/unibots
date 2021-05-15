@@ -223,7 +223,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-        googletag.pubads().refresh(mappings.slots);
+        // googletag.pubads().refresh(mappings.slots);
 }
 
 function initAdserver() {

@@ -1,18 +1,18 @@
-// //load apstag.js library
-// !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-//
-// var requestManager = {
-//     adserverRequestSent: false,
-//     aps: false,
-//     prebid: false
-// };
-//
-// //initialize the apstag.js library on the page to allow bidding
-// apstag.init({
-//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-//      adServer: 'googletag'
-// });
-// apSlots = []
+//load apstag.js library
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false
+};
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+     adServer: 'googletag'
+});
+apSlots = []
 
 var div_1_sizes = [320, 50];
 var div_2_sizes = [300, 250];
@@ -261,18 +261,6 @@ var mappings = {
 };
 
 
-// apSlotTemp = {
-//   // slotID: mappings_full_hb_config.targetUnits[index],
-//   // slotName: mappings_full_hb_config.adUnitNames[index],
-//   // sizes: mappings_full_hb_config.sizes[index]
-//
-//   slotID: mappings.adId,
-//   slotName: mappings.adCode,
-//   sizes: mappings.sizes,
-// }
-// apSlots.push(apSlotTemp);
-
-
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
@@ -296,7 +284,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh([ub_slot]);
+              googletag.pubads().refresh([ub_slot]);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -364,7 +352,7 @@ function callBotman(){
 
 
 function callAdsUB(){
-	googletag.pubads().refresh([ub_slot1]);
+	// googletag.pubads().refresh([ub_slot1]);
 }
 
 function initAdserver() {
@@ -411,13 +399,24 @@ function googlePush(){
 
 if (document.getElementById('unibots-300x250_1')) {
   document.getElementById('unibots-300x250_1').innerHTML = '<div id="div-gpt-ad-1613467241228-0">';
+
+  apSlotTemp = {
+    // slotID: mappings_full_hb_config.targetUnits[index],
+    // slotName: mappings_full_hb_config.adUnitNames[index],
+    // sizes: mappings_full_hb_config.sizes[index]
+
+    slotID: 'div-gpt-ad-1613467241228-0',,
+    slotName: '/21956916242/tribuneindia.com_hb_300x250_1',
+    sizes: mappings.sizes,
+  }
+  apSlots.push(apSlotTemp);
   mappings.slotNumbers.push(2);
   mappings.adCode.push('/21956916242/tribuneindia.com_hb_300x250_1');
   mappings.sizes.push(div_2_sizes);
   mappings.adId.push('div-gpt-ad-1613467241228-0');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
+    callAPStagBids(); //Ap part
+    callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot2) {
         ub_checkAdRendered('div-gpt-ad-1613467241228-0', ub_slot2, ['/21956916242/tribuneindia.com_hb_300x250_1']);
@@ -427,13 +426,20 @@ if (document.getElementById('unibots-300x250_1')) {
 }
 if (document.getElementById('unibots-300x250_2')) {
   document.getElementById('unibots-300x250_2').innerHTML = '<div id="div-gpt-ad-1613467274863-0">';
+  apSlotTemp = {
+
+    slotID: 'div-gpt-ad-1613467274863-0',,
+    slotName: '/21956916242/tribuneindia.com_hb_300x250_2',
+    sizes: mappings.sizes,
+  }
+  apSlots.push(apSlotTemp);
   mappings.slotNumbers.push(3);
   mappings.adCode.push('/21956916242/tribuneindia.com_hb_300x250_2');
   mappings.sizes.push(div_3_sizes);
   mappings.adId.push('div-gpt-ad-1613467274863-0');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
+    callAPStagBids(); //Ap part
+    callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot3) {
         ub_checkAdRendered('div-gpt-ad-1613467274863-0', ub_slot3, ['/21956916242/tribuneindia.com_hb_300x250_2']);
@@ -441,13 +447,22 @@ if (document.getElementById('unibots-300x250_2')) {
     });
   });
 }
+
+  apSlotTemp = {
+
+    slotID: 'div-gpt-ad-1600590600607-0',,
+    slotName: '/21956916242/tribuneindia.com_ipl_320x50',
+    sizes: div_1_sizes,
+  }
+  apSlots.push(apSlotTemp);
+
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21956916242/tribuneindia.com_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1600590600607-0');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
+    callAPStagBids(); //Ap part
+    callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-gpt-ad-1600590600607-0', ub_slot1, ['/21956916242/tribuneindia.com_ipl_320x50']);
@@ -456,62 +471,64 @@ if (document.getElementById('unibots-300x250_2')) {
   });
 // }
 
-// function callAPSAds(adCode, ub_slot){
-//   ubpbjs.que.push(function(){
-//     ubpbjs.requestBids({
-//       timeout: PREBID_TIMEOUT,
-//       adUnits: adUnits,
-//       adUnitCodes: adCode,
-//       bidsBackHandler: function() {
-//         // ubpbjs.initAdserverSetHB = true;
-//         googletag.cmd.push(function() {
-//           ubpbjs.que.push(function() {
-//               ubpbjs.setTargetingForGPTAsync();
-//               requestManager.prebid = true;
-//               biddersBack();
-//               // googletag.pubads().refresh(ub_slot);
-//           });
-//         });
-//       }
-//     });
-//   });
-// }
-// function callAPStagBids(){
-//   apstag.fetchBids({
-//     slots: apSlots,
-//      timeout: 2000
-//   },function(bids) {
-//           googletag.cmd.push(function() {
-//               apstag.setDisplayBids();
-//               requestManager.aps = true;
-//               biddersBack();
-//           });
-//       }
-//   );
-// }
-// function biddersBack() {
-//     if (requestManager.aps && requestManager.prebid) {
-//         sendAdserverRequest();
-//     }
-//     return;
-// }
-// function sendAdserverRequest() {
-//     if (requestManager.adserverRequestSent === true) {
-//         return;
-//     }
-//     requestManager.adserverRequestSent = true;
-//     googletag.cmd.push(function() {
-//         googletag.pubads().refresh(mappings.slots);
-//     });
-// }
+function callAPSAds(adCode, ub_slot){
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnits: adUnits,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        // ubpbjs.initAdserverSetHB = true;
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              requestManager.prebid = true;
+              biddersBack();
+              // googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+function callAPStagBids(){
+  apstag.fetchBids({
+    slots: apSlots,
+     timeout: 2000
+  },function(bids) {
+          googletag.cmd.push(function() {
+              apstag.setDisplayBids();
+              requestManager.aps = true;
+              biddersBack();
+          });
+      }
+  );
+}
+function biddersBack() {
+    if (requestManager.aps && requestManager.prebid) {
+        sendAdserverRequest();
+    }
+    return;
+}
+function sendAdserverRequest() {
+    if (requestManager.adserverRequestSent === true) {
+        return;
+    }
+    requestManager.adserverRequestSent = true;
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh(mappings.slots);
+    });
+}
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
   googlePush();
 }
 else{
-  setTimeout(function(){
-    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-    googlePush();
-  }, 500);
+  // setTimeout(function(){
+    googletag.cmd.push(function() {
+      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googlePush();
+    });
+  // }, 500);
 }

@@ -9,7 +9,7 @@ var requestManager = {
 
 //initialize the apstag.js library on the page to allow bidding
 apstag.init({
-     pubID: '5d8da970-719a-4a86-9bd0-adf1589f8c5e', //enter your unibque pub ID here as shown above, it must within quotes
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637', //enter your unibque pub ID here as shown above, it must within quotes
      adServer: 'googletag'
 });
 apSlots = []

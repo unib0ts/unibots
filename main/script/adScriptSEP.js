@@ -95,6 +95,7 @@ var adUnits = [
           { bidder: 'nobid', params: { siteId : '22049999734'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
+          { bidder: 'adkernel', params: {zoneId: '126379', host: 'cpm.fmlabsonline.com'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'smartadserver', params: { siteId: '362146', pageId: '1289647', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

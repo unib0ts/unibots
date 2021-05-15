@@ -56,6 +56,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'b_CmagBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97531' } }, /* sizeless */
           // { bidder: 'sovrn', params: {tagid: '714225'} },
+          { bidder: 'adkernel', params: {zoneId: '126003', host: 'cpm.fmlabsonline.com'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323874', zoneId: '1680772'} },

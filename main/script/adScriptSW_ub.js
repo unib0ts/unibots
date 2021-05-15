@@ -84,6 +84,7 @@ if(typeof customConfigObjectA === 'undefined'){
             { bidder: 'ucfunnel', params: { adid : 'ad-2736B4978DAD937D086382A938ED6A33'} },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
+              { bidder: 'adkernel', params: {zoneId: '126372', host: 'cpm.fmlabsonline.com'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
             // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
@@ -120,6 +121,7 @@ if(typeof customConfigObjectA === 'undefined'){
             { bidder: 'ucfunnel', params: { adid : 'ad-BE7867E47B673B42179987A2B4D82773'} },
             { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'criteointl', params: {networkId: '10545'} },
+              { bidder: 'adkernel', params: {zoneId: '126372', host: 'cpm.fmlabsonline.com'} },
             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
             // { bidder: 'oftmedia', params: { placementId: '18671523' } },
             // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/

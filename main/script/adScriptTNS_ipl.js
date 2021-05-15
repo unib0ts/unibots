@@ -88,6 +88,7 @@ const customConfigObjectA = {
         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22358103813'} },
         { bidder: 'criteo', params: {networkId: '10542'} },
+        { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
         { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'smartadserver', params: { siteId: '362153', pageId: '1289654', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},

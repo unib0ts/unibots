@@ -1,4 +1,4 @@
-// if(typeof customConfigObjectA === 'undefined'){
+if(typeof customConfigObjectA === 'undefined'){
 
 //load apstag.js library
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
@@ -52,7 +52,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-let customConfigObjectA = {
+var customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
@@ -401,4 +401,5 @@ function sendAdserverRequest() {
     googletag.cmd.push(function() {
         googletag.pubads().refresh(mappings.slots);
     });
+}
 }

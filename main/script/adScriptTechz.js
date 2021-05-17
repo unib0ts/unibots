@@ -368,7 +368,7 @@ function mainHbRun(){
      });
   });
   setTimeout(function() {
-      initAdserver_hb_full();
+      initAdserver();
   }, FAILSAFE_TIMEOUT);
 }
 

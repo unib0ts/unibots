@@ -52,7 +52,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-var customConfigObjectA = {
+const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
@@ -225,7 +225,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
+            // googletag.pubads().refresh(mappings.slots);
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
               var bc = x[i].bidderCode;

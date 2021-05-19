@@ -38,7 +38,7 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1618301211414-0 iframe {border: unset !important;vertical-align: unset !important;} .ub-popup-ad-container{width:300px;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:300px !important;height:250px !important;visibility:hidden;z-index:2147483647; max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important; position: relative !important;}.mybotpopupCloseButton{background-color:#000;color:#fff;border-radius:50px;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-45px;right:10px;font-size:30px;line-height:28px;width:30px;height:30px;text-align:center}.ub-popup-ad-container .show{visibility:visible;animation:popup .5s; animation-fill-mode: forwards;} @keyframes popup{0%{transform:scale(.1)} 100%{transform:scale(1)}}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1618301211414-0 iframe {border: unset !important;vertical-align: unset !important;} .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:250px !important;visibility:hidden;z-index:2147483647; position: relative !important;}.mybotpopupCloseButton{background-color:#000;color:#fff;border-radius:50px;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-40px;right:10px;font-size:25px;line-height:25px;width:25px;height:25px;text-align:center}.ub-popup-ad-container .show{visibility:visible;animation:popup .5s; animation-fill-mode: forwards;} @keyframes popup{0%{transform:scale(.1)} 100%{transform:scale(1)}} #div-gpt-ad-1621413483921-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -165,18 +165,18 @@ if (mobileCheck()) {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19425351' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '20846125' } },
         // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
         // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-        // { bidder: 'nobid', params: { siteId: '22049997436' } },
+        { bidder: 'nobid', params: { siteId: '22049997436' } },
         // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
         // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // // { bidder: 'criteo', params: {networkId: '10542'} },
         // // { bidder: 'criteointl', params: {networkId: '10545'} },
-        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
       ]
   };
   adUnits.push(adUnits1);

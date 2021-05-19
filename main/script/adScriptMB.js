@@ -242,7 +242,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
+	// googletag.pubads().refresh(mappings.slots);
 }
 
 mappings.slotNumbers.push(1);

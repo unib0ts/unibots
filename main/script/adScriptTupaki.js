@@ -220,7 +220,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
+            // googletag.pubads().refresh(mappings.slots);
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
               var bc = x[i].bidderCode;

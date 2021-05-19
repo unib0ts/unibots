@@ -1,17 +1,17 @@
-!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-
-var requestManager = {
-    adserverRequestSent: false,
-    aps: false,
-    prebid: false
-};
-
-//initialize the apstag.js library on the page to allow bidding
-apstag.init({
-     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-     adServer: 'googletag'
-});
-apSlots = []
+// !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+//
+// var requestManager = {
+//     adserverRequestSent: false,
+//     aps: false,
+//     prebid: false
+// };
+//
+// //initialize the apstag.js library on the page to allow bidding
+// apstag.init({
+//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+//      adServer: 'googletag'
+// });
+// apSlots = []
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -144,16 +144,16 @@ var mappings = {
 };
 
 
-apSlotTemp = {
-  // slotID: mappings_full_hb_config.targetUnits[index],
-  // slotName: mappings_full_hb_config.adUnitNames[index],
-  // sizes: mappings_full_hb_config.sizes[index]
-
-  slotID: 'div-ub-1',
-  slotName: '/21928950349/sandeshepaper.in_NB_320x50',
-  sizes: mappings.sizes,
-}
-apSlots.push(apSlotTemp);
+// apSlotTemp = {
+//   // slotID: mappings_full_hb_config.targetUnits[index],
+//   // slotName: mappings_full_hb_config.adUnitNames[index],
+//   // sizes: mappings_full_hb_config.sizes[index]
+//
+//   slotID: 'div-ub-1',
+//   slotName: '/21928950349/sandeshepaper.in_NB_320x50',
+//   sizes: mappings.sizes,
+// }
+// apSlots.push(apSlotTemp);
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
@@ -245,7 +245,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	// googletag.pubads().refresh([ub_slot1]);
+	googletag.pubads().refresh(mappings.slots);
 }
 
 function initAdserver() {
@@ -254,7 +254,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
+            // googletag.pubads().refresh(mappings.slots);
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
               var bc = x[i].bidderCode;
@@ -294,8 +294,8 @@ mappings.adCode.push('/21928950349/sandeshepaper.in_NB_320x50');
 mappings.sizes.push(div_1_sizes);
 mappings.adId.push('div-ub-1');
 googletag.cmd.push(function() {
-  callAPStagBids(); //Ap part
-  callAPSAds(mappings.adCode, mappings.slots);
+  // callAPStagBids(); //Ap part
+  // callAPSAds(mappings.adCode, mappings.slots);
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
     if (event.slot === ub_slot1) {
       ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349/sandeshepaper.in_NB_320x50']);
@@ -386,51 +386,51 @@ function mainHbRun(){
   }, FAILSAFE_TIMEOUT);
 }
 
-function callAPSAds(adCode, ub_slot){
-  ubpbjs.que.push(function(){
-    ubpbjs.requestBids({
-      timeout: PREBID_TIMEOUT,
-      adUnits: adUnits,
-      adUnitCodes: adCode,
-      bidsBackHandler: function() {
-        // ubpbjs.initAdserverSetHB = true;
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              requestManager.prebid = true;
-              biddersBack();
-              // googletag.pubads().refresh(ub_slot);
-          });
-        });
-      }
-    });
-  });
-}
-function callAPStagBids(){
-  apstag.fetchBids({
-    slots: apSlots,
-     timeout: 2000
-  },function(bids) {
-          googletag.cmd.push(function() {
-              apstag.setDisplayBids();
-              requestManager.aps = true;
-              biddersBack();
-          });
-      }
-  );
-}
-function biddersBack() {
-    if (requestManager.aps && requestManager.prebid) {
-        sendAdserverRequest();
-    }
-    return;
-}
-function sendAdserverRequest() {
-    if (requestManager.adserverRequestSent === true) {
-        return;
-    }
-    requestManager.adserverRequestSent = true;
-    googletag.cmd.push(function() {
-        googletag.pubads().refresh(mappings.slots);
-    });
-}
+// function callAPSAds(adCode, ub_slot){
+//   ubpbjs.que.push(function(){
+//     ubpbjs.requestBids({
+//       timeout: PREBID_TIMEOUT,
+//       adUnits: adUnits,
+//       adUnitCodes: adCode,
+//       bidsBackHandler: function() {
+//         // ubpbjs.initAdserverSetHB = true;
+//         googletag.cmd.push(function() {
+//           ubpbjs.que.push(function() {
+//               ubpbjs.setTargetingForGPTAsync();
+//               requestManager.prebid = true;
+//               biddersBack();
+//               // googletag.pubads().refresh(ub_slot);
+//           });
+//         });
+//       }
+//     });
+//   });
+// }
+// function callAPStagBids(){
+//   apstag.fetchBids({
+//     slots: apSlots,
+//      timeout: 2000
+//   },function(bids) {
+//           googletag.cmd.push(function() {
+//               apstag.setDisplayBids();
+//               requestManager.aps = true;
+//               biddersBack();
+//           });
+//       }
+//   );
+// }
+// function biddersBack() {
+//     if (requestManager.aps && requestManager.prebid) {
+//         sendAdserverRequest();
+//     }
+//     return;
+// }
+// function sendAdserverRequest() {
+//     if (requestManager.adserverRequestSent === true) {
+//         return;
+//     }
+//     requestManager.adserverRequestSent = true;
+//     googletag.cmd.push(function() {
+//         googletag.pubads().refresh(mappings.slots);
+//     });
+// }

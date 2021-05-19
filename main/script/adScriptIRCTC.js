@@ -665,6 +665,8 @@ if(typeof customConfigObjectA === 'undefined'){
       mappings.sizes.push(div_2_sizes);
       mappings.adId.push('div-gpt-ad-1613478315967-0');
       googletag.cmd.push(function() {
+        callAPStagBids(); //Ap part
+        callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot5) {
             ub_checkAdRendered('div-gpt-ad-1613478315967-0', ub_slot5, ['/22142075243/irctc.co.in_cb_300x250_1']);

@@ -703,9 +703,8 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: []
+  renderedFlag: [false]
 };
-
 
 apSlotTemp = {
   // slotID: mappings_full_hb_config.targetUnits[index],
@@ -871,6 +870,8 @@ if (document.getElementById('div-ub-1')){
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-ub-1');
   googletag.cmd.push(function() {
+    callAPStagBids(); //Ap part
+    callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-ub-1', ub_slot1, ['/21957769615/madhyamam.com_nb_320x50']);

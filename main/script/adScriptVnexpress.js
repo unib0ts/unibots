@@ -346,6 +346,11 @@ var mappings = {
        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
        googletag.pubads().enableSingleRequest();
        googletag.pubads().set("page_url",'https://vnexpress.net/');
+			 googletag.pubads().enableLazyLoad({
+								 fetchMarginPercent: 200,
+								 renderMarginPercent: 100,
+								 mobileScaling: 2.0
+							 });
        googletag.enableServices();
      });
    }

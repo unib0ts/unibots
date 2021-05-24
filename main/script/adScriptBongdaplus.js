@@ -14,7 +14,7 @@ apstag.init({
 });
 apSlots = []
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -16px;right: -20px;font-size: 20px;padding: 0px 5px;border-radius: 50%;color: #fff;background: #000;position: absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:250px !important;visibility:hidden;z-index:2147483647; position: fixed !important;}.mybotpopupCloseButton{background-color:#000;color:#fff;border-radius:50px;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-40px;right:10px;font-size:25px;line-height:25px;width:25px;height:25px;text-align:center}.ub-popup-ad-container .show{visibility:visible;animation:popup .5s; animation-fill-mode: forwards;} @keyframes popup{0%{transform:scale(.1)} 100%{transform:scale(1)}} #div-gpt-ad-1621413483921-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -77,6 +77,27 @@ else {
   //   x1 = document.querySelector('body');
   //   x1.appendChild(z1);
   // }
+
+  if (window.location.href == "https://bongdaplus.vn/ngoai-hang-anh/tien-thuong-ngoai-hang-anh-2020-21-top-6-dut-tui-bao-nhieu-3334432105.html") {
+    // mybotPopad = '';
+    z1= document.createElement('div');
+    z1.id = 'ub-popup-ad-container';
+    z1.className = 'ub-popup-ad-container';
+    z1.innerHTML ='<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1621413483921-0"></div>';
+    x1 = document.querySelector('body');
+    x1.appendChild(z1);
+
+    // document.querySelector('.ub-popup-ad').innerHTML=mybotPopad;
+      var mybotpopupad = document.querySelector(".ub-popup-ad");
+        mybotpopupad.classList.add("show");
+    // if(document.getElementById('div-gpt-ad-1621413483921-0').style.display == 'block') {
+    //   document.getElementById('mybotpopupCloseButton').style.display = 'block';
+    // }
+ }
+}
+
+function mybotubPopadcls() {
+  document.getElementById('ub-popup-ad-container').style.display='none';
 }
 
 function mybotubstickyad() {
@@ -102,6 +123,7 @@ var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
+var div_1_sizes = [300, 250];
 
 var GEO_CODE = '';
 (function (){
@@ -140,6 +162,36 @@ const customConfigObjectA = {
     }]
 };
 
+if (mobileCheck()) {
+  if (window.location.href == "https://bongdaplus.vn/ngoai-hang-anh/tien-thuong-ngoai-hang-anh-2020-21-top-6-dut-tui-bao-nhieu-3334432105.html") {
+var adUnits = [
+    {
+        code: '/22142075243/techz.vn_300x250_popup',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19425351' } }, /* one placementId for all sizes  my appnexus bidder */
+          { bidder: 'oftmedia', params: { placementId: '20846125' } },
+          // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+          // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          { bidder: 'nobid', params: { siteId: '22049997436' } },
+          // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // // { bidder: 'criteo', params: {networkId: '10542'} },
+          // // { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        ]
+    }
+  ];
+  }
+}
+
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
@@ -151,7 +203,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 function mainHbRun(){
   ubpbjs.que.push(function() {
-
+      ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
       'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
@@ -214,6 +266,100 @@ var mapping_full_hb = {
   slotNumbers: [],
   sizes: [],
   renderedFlag: []
+}
+
+var ub_slot1;
+function addNewsBotAd(){
+  googletag.cmd.push(function() {
+      ub_slot1 = googletag.defineSlot('/22142075243/techz.vn_300x250_popup', div_1_sizes, 'div-gpt-ad-1621413483921-0').addService(googletag.pubads());
+      googletag.pubads().collapseEmptyDivs(true);
+      googletag.pubads().setCentering(true);
+      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot.getAdUnitPath() === '/22142075243/techz.vn_300x250_popup') {
+          ub_checkAd1Rendered();
+        }
+      });
+  });
+
+  ubpbjs.que.push(function() {
+    ubpbjs.requestBids({
+      bidsBackHandler: initAdserver,
+      timeout: PREBID_TIMEOUT
+    });
+  });
+
+  // in case ubpbjs doesn't load
+  setTimeout(function() {
+      initAdserver();
+  }, FAILSAFE_TIMEOUT);
+}
+
+function initAdserver() {
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot1]);
+            // var x = ubpbjs.getAllPrebidWinningBids();
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
+        });
+    });
+}
+
+ub_ad1RefreshFlag = 0;
+function ub_checkAd1Rendered(){
+	adId1 = 'div-gpt-ad-1621413483921-0';
+	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    if(ub_ad1RefreshFlag != 1){
+      setInterval(function() {
+        ub_ad1RefreshFlag = 1;
+        refreshBidTemp(ub_slot1);
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}
+
+function refreshBidTemp(ub_slot) {
+  ubpbjs.que.push(function() {
+	  ubpbjs.requestBids({
+		  timeout: PREBID_TIMEOUT,
+		  adUnitCodes: ['/22142075243/techz.vn_300x250_popup'],
+		  bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh([ub_slot]);
+              // var adsCalled = false;
+              // for(var i=0;i<x.length;i++){
+              //   var bc = x[i].bidderCode;
+              //   if(bc=="openx"){
+              //     adsCalled = true;
+              //     callBotman();
+              //   }
+              // }
+              // if(!adsCalled){
+              //   callAdsUB();
+              // }
+          });
+        });
+		  }
+	  });
+  });
 }
 
 var adUnits_full_hb = [];
@@ -713,6 +859,7 @@ var mappings_full_hb_config_mobile = {
     '/22140546871/bongdaplus.vn_mb_ma_336x280',
     // '/22140546871/bongdaplus.vn_mb_anchor_320x50',
     // '/22140546871/bongdaplus.vn_mb_anchor_320x100',
+    '/22142075243/techz.vn_hb_300x100'
   ],
   bids: [
     hb_full_common_bidders.concat([
@@ -808,6 +955,15 @@ var mappings_full_hb_config_mobile = {
    //     { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
    // //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
    //  ]),
+   hb_full_common_bidders.concat([
+  //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+  //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'yieldbird-d.openx.net'} },
+  //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+  // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+  // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
+  // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+  // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+   ]),
   ],
   isAP: [
     true,
@@ -819,6 +975,7 @@ var mappings_full_hb_config_mobile = {
     true,
     true,
     // true
+    false,
   ]
 }
 var mappings_full_hb_config_both = {
@@ -882,6 +1039,11 @@ else{
 }
 
 function checkHBUnits(){
+  if (mobileCheck()) {
+    if (window.location.href == "https://bongdaplus.vn/ngoai-hang-anh/tien-thuong-ngoai-hang-anh-2020-21-top-6-dut-tui-bao-nhieu-3334432105.html") {
+      addNewsBotAd();
+    }
+  }
   callMapUnits();
 
   // setTimeout(function() {
@@ -1148,7 +1310,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh(ub_slot);
+                googletag.pubads().refresh([ub_slot]);
               // var adsCalled_hb = false;
               // for(var i=0;i<x.length;i++){
               //   var bc = x[i].bidderCode;

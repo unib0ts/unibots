@@ -73,7 +73,7 @@ let video_ub = () => {
    
 
   var player = videojs('content_video',{
-    fluid: true,
+    // fluid: true,
     height:300,
     width:500
   });

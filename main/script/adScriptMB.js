@@ -103,6 +103,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'beW5lABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97496' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '701560'} },
+          { bidder: 'adkernel', params: {zoneId: '126370', host: 'cpm.fmlabsonline.com'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323782', zoneId: '1680518'} },
           { bidder: 'criteo', params: {networkId: '10542'} },
           { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -241,7 +242,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh([mappings.slots]);
+	// googletag.pubads().refresh(mappings.slots);
 }
 
 mappings.slotNumbers.push(1);
@@ -268,7 +269,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh([ub_slot1]);
+              googletag.pubads().refresh(ub_slot);
               var adsCalled = false;
               for(var i=0;i<x.length;i++){
                 var bc = x[i].bidderCode;
@@ -425,8 +426,10 @@ if(typeof googletag.defineSlot === "function"){
   googlePush();
 }
 else{
-  setTimeout(function(){
+  // setTimeout(function(){
+  googletag.cmd.push(function() {
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
-  }, 500);
+  });
+  // }, 500);
 }

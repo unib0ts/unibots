@@ -414,7 +414,7 @@
     function callBotman(){
       if(userStatusBM == ''){
         var request = new XMLHttpRequest();
-        var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=irctc';
+        var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=raftaar';
         request.open('GET', url, true);
         request.onload = function() {
           if (request.status >= 200 && request.status < 400) {
@@ -512,13 +512,13 @@
   if (document.getElementById('doto-mobile')) {
     document.getElementById('doto-mobile').innerHTML = unibot1;
     mappings.slotNumbers.push(3);
-    mappings.adCode.push('/21957769615/news18.com_quizbot_320x50');
+    mappings.adCode.push('/21928950349/raftaar.in_quizbot_320x50');
     mappings.sizes.push(div_3_sizes);
     mappings.adId.push('div-gpt-ad-1617705616050-0');
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot3) {
-          ub_checkAdRendered('div-gpt-ad-1617705616050-0', ub_slot3, ['/21957769615/news18.com_quizbot_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1617705616050-0', ub_slot3, ['/21928950349/raftaar.in_quizbot_320x50']);
         }
       });
     });
@@ -543,10 +543,10 @@
       googlePush();
     }
     else{
-  		setTimeout(function(){
-  	    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-  	    googlePush();
-  	  }, 500);
+      googletag.cmd.push(function() {
+        googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+        googlePush();
+      });
     // }
    }
 

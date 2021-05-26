@@ -93,7 +93,7 @@ if(mobileCheck === 'function'){
            { bidder: 'emx_digital', params: { tagid: '107926' } }, /* sizeless */
            { bidder: 'sovrn', params: {tagid: '719003'} },
            { bidder: 'openx', params: {unit: '543530437', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-           // { bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
+           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
            { bidder: 'nobid', params: { siteId : '21986889217'} },
             { bidder: 'ucfunnel', params: { adid : 'ad-627D2292AD6D6BAD16B83862BA2EB9A'} },

@@ -265,7 +265,7 @@ if(typeof customConfigObjectA === 'undefined'){
 
   var adUnits_full_hb = [];
   var hb_full_common_bidders = [
-    { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
+    { bidder: 'appnexus', params: { placementId: '20372619' } }, /* one placementId for all sizes  my appnexus bidder */
     // { bidder: 'oftmedia', params: { placementId: '20846125' } },
     { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */

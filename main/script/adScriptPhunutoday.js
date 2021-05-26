@@ -1,3 +1,17 @@
+// var mybotadscrpt = 'var adgf_p1="3766"; var adgf_p2="0"; var adgf_p3="0"; var adgf_p4=""; var adgf_p5=""; var adgFtSc=document.createElement("script"); adgFtSc.id="adg_pixel_footer_script"; document.body.appendChild(adgFtSc);adgFtSc.async=true;var adgScParam="p1="+adgf_p1+"&p2="+adgf_p2+"&p3="+adgf_p3+"&p4="+adgf_p4+"&p5="+adgf_p5;adgFtSc.src="//adgebra.co.in/afpf/afpf.js?"+adgScParam;';
+// var mybotadscrptChild ='<iframe id="adg_footer_pixel_script" src="//adgebra.co.in/afpf/afpf?p1=3766&p2=0&p3=1&p4=&p5=" width="0" height="0" frameBorder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
+//
+// if (window.location.href !== "https://phunutoday.vn/") {
+//   var ad_scrpt1 = document.createElement('script');
+//   ad_scrpt1.type = "text/javascript";
+//   ad_scrpt1.innerText= mybotadscrpt;
+//   document.getElementsByTagName('footer')[0].appendChild(ad_scrpt1);
+//
+//   var ad_scrpt2 = document.createElement('noscript');
+//   ad_scrpt2.innerText= mybotadscrptChild;
+//   document.getElementsByTagName('footer')[0].appendChild(ad_scrpt2);
+// }
+
 var div_1_sizes = [[300, 50], [320, 50]];
 
 var PREBID_TIMEOUT = 2000;
@@ -86,14 +100,15 @@ var adUnits = [
     { bidder: 'oftmedia', params: { placementId: '20846125' } },
     { bidder: 'appnexus', params: { placementId: '19518211' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '741306'} },
+    { bidder: 'ucfunnel', params: { adid : 'ad-627D227D723B269DFEE44394D8689D39'} },
     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2973348'} },
     { bidder: '33across', params: { siteId : 'bUvLWwWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
     { bidder: 'openx', params: {unit: '543530320', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'nobid', params: { siteId : '22045890863'} },
-    { bidder: 'criteo', params: {networkId: '10542'} },
-    { bidder: 'criteointl', params: {networkId: '10545'} },
+    // { bidder: 'criteo', params: {networkId: '10542'} },
+    // { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'smartadserver', params: { siteId: '362138', pageId: '1289639', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
     //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

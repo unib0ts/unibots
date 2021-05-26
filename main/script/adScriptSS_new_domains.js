@@ -2,8 +2,8 @@ if(typeof customConfigObjectA === 'undefined'){
   var botsiteUrl = window.location.hostname;
   if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl49/script.js?cb='+cachebuster;
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshihindi/script.js?cb='+cachebuster;
+    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl49/script.js?cb='+cachebuster;
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshihindi/script.js?cb='+cachebuster;
     s3 = document.createElement('script');
     s3.src = url;
     s3.async = "async";
@@ -12,8 +12,8 @@ if(typeof customConfigObjectA === 'undefined'){
   }
   if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl50/script.js?cb='+cachebuster;
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
+    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl50/script.js?cb='+cachebuster;
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
     s3 = document.createElement('script');
     s3.src = url;
     s3.async = "async";
@@ -117,12 +117,14 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
             { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-            // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-            // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
-            // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            { bidder: 'oftmedia', params: { placementId: '18778196' } },
+            { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+            { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
+            { bidder: 'sovrn', params: {tagid: '789454'} },
+            { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            { bidder: 'ucfunnel', params: { adid : 'ad-9A2978644DBE4BE914AAD72BB23E9DD9'} },
             // { bidder: 'nobid', params: { siteId: '21987177881' } },
-            // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+            { bidder: 'openx', params: {unit: '544005774', delDomain: 'yieldbird-d.openx.net'}, labelAny: ["US", "CA"] },
             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -182,12 +184,14 @@ if(typeof customConfigObjectA === 'undefined'){
           },
           bids: [
             { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
-            // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-            // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-            // { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
-            // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            { bidder: 'oftmedia', params: { placementId: '18778196' } },
+            { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+            { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
+            { bidder: 'sovrn', params: {tagid: '789453'} },
+            { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+              { bidder: 'ucfunnel', params: { adid : 'ad-47B468D22A6D9794F698A3DA892AE34'} },
             // { bidder: 'nobid', params: { siteId: '21987177881' } },
-            // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+            { bidder: 'openx', params: {unit: '544005773', delDomain: 'yieldbird-d.openx.net'}, labelAny: ["US", "CA"] },
             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -1074,8 +1078,8 @@ if(typeof customConfigObjectA === 'undefined'){
           size_array = [];
           size_temp_array = googletag.pubads().getSlots()[i].getSizes();
           for(j=0;j<size_temp_array.length;j++){
-            length = size_temp_array[j]['m'];
-            height = size_temp_array[j]['j'];
+            length = size_temp_array[j][Object.keys(size_temp_array[j])[0]];
+             height = size_temp_array[j][Object.keys(size_temp_array[j])[1]];
             temp_array = [length, height];
             size_array.push(temp_array);
           }

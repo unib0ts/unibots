@@ -1,3 +1,19 @@
+//load apstag.js library
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false
+};
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+     adServer: 'googletag'
+});
+apSlots = []
+
 var div_1_sizes = [320, 50];
 var adUnits = [];
 
@@ -42,7 +58,7 @@ const customConfigObjectA = {
     }]
 };
 
-// if(document.getElementById('newsbot-ads')){
+// if(document.getElementById('unibots-ad')){
   adUnits1 =
   {
       code: '/21928950349/socialnews.xyz_ipl_320x50',
@@ -58,14 +74,14 @@ const customConfigObjectA = {
          	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
            { bidder: 'sovrn', params: {tagid: '884156'} },
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3581651'} },
-           // { bidder: 'openx', params: {unit: '543530438', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-         	// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+           { bidder: 'openx', params: {unit: '544022831', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+         	{ bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
          	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-           // { bidder: 'nobid', params: { siteId : '22052735848'} },
+           { bidder: 'nobid', params: { siteId : '22364664636'} },
            { bidder: 'criteo', params: {networkId: '10542'} },
            { bidder: 'criteointl', params: {networkId: '10545'} },
            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-           // { bidder: 'smartadserver', params: { siteId: '362090', pageId: '1289591', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
+           { bidder: 'smartadserver', params: { siteId: '404715', pageId: '1370499', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
            // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
            // { bidder: 'ucfunnel', params: { adid : 'ad-47B47763AA7B63B903E898272397323'} },
@@ -95,6 +111,18 @@ var mappings = {
   renderedFlag: [false]
 };
 
+
+apSlotTemp = {
+  // slotID: mappings_full_hb_config.targetUnits[index],
+  // slotName: mappings_full_hb_config.adUnitNames[index],
+  // sizes: mappings_full_hb_config.sizes[index]
+
+  slotID: 'div-gpt-ad-1619515885003-0',
+  slotName: '/21928950349/socialnews.xyz_ipl_320x50',
+  sizes: mappings.sizes,
+}
+apSlots.push(apSlotTemp);
+
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
@@ -119,11 +147,73 @@ function refreshBid(ub_slot, adCode) {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh([ub_slot]);
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
           });
         });
       }
     });
   });
+}
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=socialnews';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+    // googletag.pubads().refresh(mappings.slots);
 }
 
 function initAdserver() {
@@ -132,7 +222,18 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
+            // googletag.pubads().refresh(mappings.slots);
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
     });
 }
@@ -156,17 +257,21 @@ function googlePush(){
   });
 }
 
+// if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349/socialnews.xyz_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1618072401950-0');
+  mappings.adId.push('div-gpt-ad-1619515885003-0');
   googletag.cmd.push(function() {
+    callAPStagBids(); //Ap part
+    callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1618072401950-0', ub_slot1, ['/21928950349/socialnews.xyz_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1619515885003-0', ub_slot1, ['/21928950349/socialnews.xyz_ipl_320x50']);
       }
     });
   });
+// }
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
@@ -243,4 +348,53 @@ function mainHbRun(){
   setTimeout(function() {
       initAdserver();
   }, FAILSAFE_TIMEOUT);
+}
+
+function callAPSAds(adCode, ub_slot){
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnits: adUnits,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        // ubpbjs.initAdserverSetHB = true;
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              requestManager.prebid = true;
+              biddersBack();
+              // googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+function callAPStagBids(){
+  apstag.fetchBids({
+    slots: apSlots,
+     timeout: 2000
+  },function(bids) {
+          googletag.cmd.push(function() {
+              apstag.setDisplayBids();
+              requestManager.aps = true;
+              biddersBack();
+          });
+      }
+  );
+}
+function biddersBack() {
+    if (requestManager.aps && requestManager.prebid) {
+        sendAdserverRequest();
+    }
+    return;
+}
+function sendAdserverRequest() {
+    if (requestManager.adserverRequestSent === true) {
+        return;
+    }
+    requestManager.adserverRequestSent = true;
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh(mappings.slots);
+    });
 }

@@ -74,7 +74,7 @@ let video_ub = () => {
 
   var player = videojs('content_video',{
     // fluid: true,
-    height:300,
+    // height:300,
     width:500
   });
   player.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
@@ -90,8 +90,8 @@ let video_ub = () => {
       
   var options = {
     id: 'content_video',
-    src: '',
     adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=',
+    // adTagUrl: 'https://video.unibots.in/ads.xml?ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1'
   };
   player.ima(options);
   
@@ -185,4 +185,4 @@ if (!isPlaying) {
   player.on('pause', () => { player.logo().show(); });
 }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='<div class="ub_player"></div>';var element=document.querySelector('body');var child=document.createElement('div');var foot=document.createElement('footer');child.innerHTML=html;element.appendChild(child);element.appendChild(foot)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

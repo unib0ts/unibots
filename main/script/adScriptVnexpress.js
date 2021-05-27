@@ -1,3 +1,59 @@
+// var mybotubad = setInterval(ub_adscript, 500);
+
+var s0 = document.createElement('script');
+s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+s0.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(s0);
+
+var s1 = document.createElement('script');
+s1.async = "async";
+s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+s1.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(s1);
+
+var PREBID_TIMEOUT = 2000;
+var FAILSAFE_TIMEOUT = 3000;
+var REFRESH_TIMEOUT = 60000;
+
+var GEO_CODE = '';
+(function (){
+	var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+					GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+			mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+			mainHbRun();
+		};
+		request.send();
+})();
+
+const customConfigObjectA = {
+ "buckets" : [{
+		"precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
+		"min" : 0,
+		"max" : 20,
+		"increment" : 0.01  // from $0 to $20, 1-cent increments
+		}]
+};
+
+var adUnits = [];
+
 var hb_common_bidders = [
 	{ bidder: 'appnexus', params: { placementId: '19403759' } }, /* one placementId for all sizes  my appnexus bidder */
 	// { bidder: 'oftmedia', params: { placementId: '19680368' } },
@@ -13,6 +69,7 @@ var hb_common_bidders = [
 	// { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
 	// { bidder: 'criteointl', params: {networkId: '10545'} },
 ];
+
 var mapping_hb = {
 	targetUnits: [
 		'sis_infeed-instream1',
@@ -105,36 +162,11 @@ var mapping_hb = {
 			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
 		]), //thongtindoanhnghiepso1
 	]
-}
+};
+
 var size_array = mapping_hb.sizes;
 
-var adUnits = [];
-
-var PREBID_TIMEOUT = 2000;
-var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
-
-const customConfigObjectA = {
- "buckets" : [{
-		"precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
-		"min" : 0,
-		"max" : 20,
-		"increment" : 0.01  // from $0 to $20, 1-cent increments
-		}]
-};
-
-var mappings = {
- slots: [],
- adCode: [],
- slotNumbers: [],
- sizes: [],
- adId: [],
- renderedFlag: []
-};
-
-var mybotubad = setInterval(ub_adscript, 500);
-
-function ub_adscript() {
+// function ub_adscript() {
   for(var i=0; i<mapping_hb.targetUnits.length; i++){
 		// try {
 			while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
@@ -155,101 +187,16 @@ function ub_adscript() {
 					};
 					adUnits.push(adUnitTemp);
 
-					clearInterval(mybotubad);
-					break;
+					// clearInterval(mybotubad);
+					// break;
 			}
 		//  }
 		// catch(err) {
 		// 	console.log(err);
 		// }
   }
-	ub_ad();
-}
-
-	// var s3 = document.createElement('script');
-  // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
-  // s3.async = true;
-  // s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-  // document.getElementsByTagName('head')[0].appendChild(s3);
-function ub_ad() {
-	var s0 = document.createElement('script');
-	s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-	s0.type = "text/javascript";
-	document.getElementsByTagName('head')[0].appendChild(s0);
-
-  var s1 = document.createElement('script');
-  s1.async = "async";
-  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-  s1.type = "text/javascript";
-  document.getElementsByTagName('head')[0].appendChild(s1);
-
-
-  var GEO_CODE = '';
-  (function (){
-    var request = new XMLHttpRequest();
-  		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-  		request.open('GET', url, true);
-  		request.onload = function() {
-  			if (request.status >= 200 && request.status < 400) {
-  				var data = request.responseText;
-  				data = JSON.parse(data);
-  				if(data.status == "success") {
-            GEO_CODE = data.countryCode;
-  				}
-  				else {
-  					console.error("Geo Request Failed");
-  				}
-  			}
-  			else {
-  				console.error('Request failed from server');
-  			}
-        mainHbRun();
-  		};
-  		request.onerror = function() {
-  			console.error('Request failed to Reach GEO Server');
-        mainHbRun();
-  		};
-  		request.send();
-  })();
-
-  // ======== DO NOT EDIT BELOW THIS LINE =========== //
-
-   for(var i=0; i<mapping_hb.targetUnits.length; i++){
-		 	try {
-	       if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
-	         mappings.slotNumbers.push(i+1);
-	         mappings.adCode.push(mapping_hb.adUnitNames[i]);
-	         mappings.sizes.push(mapping_hb.sizes[i]);
-	         mappings.adId.push(mapping_hb.adId[i]);
-	         googletag.cmd.push(function() {
-						 // console.log(i);
-	           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-	             if (event.slot === mapping_hb.slotNames[i]) {
-	               ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
-	             }
-	           });
-	       });
-
-	     }
-	    }
-			catch(err) {
-				console.log(err);
-			}
-  }
-
-    if(typeof googletag.defineSlot === "function"){
-      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-      googlePush();
-    }
-    else{
-      // setTimeout(function(){
-        googletag.cmd.push(function() {
-          googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-          googlePush();
-        });
-      // }, 500);
-    }
-}
+// 	ub_ad();
+// }
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -337,6 +284,44 @@ function mainHbRun(){
 	}, FAILSAFE_TIMEOUT);
 }
 
+var mappings = {
+ slots: [],
+ adCode: [],
+ slotNumbers: [],
+ sizes: [],
+ adId: [],
+ renderedFlag: []
+};
+
+// function ub_ad() {
+
+
+
+  // ======== DO NOT EDIT BELOW THIS LINE =========== //
+
+   for(var i=0; i<mapping_hb.targetUnits.length; i++){
+		 	// try {
+	       if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
+	         mappings.slotNumbers.push(i+1);
+	         mappings.adCode.push(mapping_hb.adUnitNames[i]);
+	         mappings.sizes.push(mapping_hb.sizes[i]);
+	         mappings.adId.push(mapping_hb.adId[i]);
+	         googletag.cmd.push(function() {
+	           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	             if (event.slot === mapping_hb.slotNames[i]) {
+	               ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
+	             }
+	           });
+	       });
+
+	     }
+	    // }
+			// catch(err) {
+			// 	console.log(err);
+			// }
+  }
+// }
+
 function ub_checkAdRendered(adId, ub_slot, adCode){
 	ub_slotNum = ub_slot[ub_slot.length-1]-1;
 	if(!mappings.renderedFlag[ub_slotNum]){
@@ -402,4 +387,17 @@ function googlePush(){
 						});
 		googletag.enableServices();
 	});
+}
+
+if(typeof googletag.defineSlot === "function"){
+	googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+	googlePush();
+}
+else{
+	// setTimeout(function(){
+		googletag.cmd.push(function() {
+			googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+			googlePush();
+		});
+	// }, 500);
 }

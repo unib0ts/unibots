@@ -38,7 +38,7 @@ function listen_scripts(){
     if(!flag){
       console.log('all loaded');
       console.log(scripts);
-      video_ub();
+      video_ub();  
       clearInterval(ub_interval);
     }
   },500)
@@ -54,10 +54,11 @@ document.getElementsByTagName("body")[0].appendChild(ima);
 ima.onload = function(){
   load_player();
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
+  
 }
 
 function load_player(){
-  var myPlayer = '<video id="content_video" class="video-js vjs-layout-medium vjs-4-3" playsinline autoplay controls="true" preload="auto"></video>';
+  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small" playsinline autoplay controls="true" preload="auto"></video>';
   document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
 }
 
@@ -76,12 +77,12 @@ let video_ub = () => {
     fluid: true,
     // height:300,
     width:500,
-    responsive: true
   });
   player.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
   player.autoplay(true);
   player.muted(true);
-  
+  player.responsive(true);
+
   player.logo({
     image: 'https://unibots.in/wp-content/uploads/2019/09/unibot.png',
     position: 'top-right',
@@ -96,10 +97,10 @@ let video_ub = () => {
   };
   player.ima(options);
   
-var isPlaying = player.currentTime > 0 && !player.paused && !player.ended && player.readyState > player.HAVE_CURRENT_DATA;
-if (!isPlaying) {
-  player.play();
-}
+// var isPlaying = player.currentTime > 0 && !player.paused && !player.ended && player.readyState > player.HAVE_CURRENT_DATA;
+// if (!isPlaying) {
+//   player.play();
+// }
 
   player.on('ads-request',function(response){
     console.log('ads requeseted');
@@ -113,20 +114,19 @@ if (!isPlaying) {
   });
   
   
-  player.on("ads-manager", function(response){
-    console.log('ads-manager_loaded');
-    console.log(response.target.player.ima); 
-  });
+  // player.on("ads-manager", function(response){
+  //   console.log('ads-manager_loaded');
+  //   console.log(response.target.player.ima); 
+  // });
 
-  player.on('adstart',function(){
-      console.log('Ad Started');
-      player.ima.addEventListener(google.ima.AdEvent.Type.STARTED, function(){
-        // player.pause();
-        console.log('me clicked');
-      });  
-  });
+  // player.on('adstart',function(){
+  //     console.log('Ad Started');
+  //     player.ima.addEventListener(google.ima.AdEvent.Type.STARTED, function(){
+  //       // player.pause();
+  //       console.log('me clicked');
+  //     });  
+  // });
   
-
   var CloseButton = videojs.getComponent('CloseButton');
     videojs.registerComponent('CloseButton', CloseButton);
     player.addChild('CloseButton');
@@ -135,61 +135,40 @@ if (!isPlaying) {
         this.player().dispose();
     });
 
-  const gambitGalleryIsInView = el => {
-    const scroll = window.scrollY || window.pageYOffset
-    const boundsTop = el.getBoundingClientRect().top + scroll
-    
-    const viewport = {
-      top: scroll,
-      bottom: scroll + window.innerHeight,
-    }
-    
-    const bounds = {
-      top: boundsTop,
-      bottom: boundsTop + el.clientHeight,
-    }
-    
-    return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom ) 
-      || ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
-  }
-  
-  
-  // Usage.
-  document.addEventListener( 'DOMContentLoaded', () => {
-    const tester = document.querySelector('.ub_player')
-    const answer = document.querySelector('.answer')
-    const handler = () => raf( () => {
-      if(gambitGalleryIsInView(tester)){
-          console.log('Should play here');
-            if(player.ads.inAdBreak()){
-                  player.pause();
-            }else{
-              player.play();
-            }
-            player.ima.resumeAd();
-         }else{
-          console.log('Should pause here');
-          player.pause();
-            if(player.ads.inAdBreak()){
-                player.ima.pauseAd();
-            }
-        }
-    } )
-    
-    handler()
-    window.addEventListener( 'scroll', handler )
-  } )
-  
-  const raf = 
-      window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || 
-      function( callback ) {
-        console.log(callback);
-          window.setTimeout( callback, 1000 / 60 )
-  }
-  
-  
   player.on('play', () => { player.logo().show(); });
   player.on('pause', () => { player.logo().show(); });
-}
+   
+  // function isInViewport(el) {
+  //   const rect = el.getBoundingClientRect();
+  //   return (
+  //       rect.top >= 0 &&
+  //       rect.left >= 0 &&
+  //       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+  //       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='<div class="ub_player box out"></div>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='#videoBox{border:10px solid #212223;transition:0.5s}video{width:100%;vertical-align:bottom}#videoBox.out{position:fixed;bottom:0;right:0;width:500px;z-index:999;animation:an 0.5s}.out{position:fixed;bottom:0;right:10px;width:500px;z-index:999;animation:an 0.5s}.video-js .vjs-control.vjs-close-button{right:-12px!important;top:-2.5em!important}.ub_player{max-width:500px;margin-top:22px}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+  //   );
+  // }
+  // const box = document.querySelector('.ub_player');
+  // document.addEventListener('scroll', function () {
+  //     if(isInViewport(box)){
+  //         console.log('play --> ');
+  //           if(player.ads.inAdBreak()){
+  //                 player.pause();
+  //                 // player.ima.pauseAd();
+  //           }else{
+  //             player.play();
+  //             // player.ima.resumeAd();
+  //           }
+  //           player.ima.resumeAd();
+  //         }else{
+  //         console.log('pause -->');
+  //         player.pause();
+  //           if(player.ads.inAdBreak()){
+  //               player.ima.pauseAd();
+  //           }
+  //       }
+  // }, {
+  //     passive: true
+  // });
+}
+ function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='<div class="ub_player box out"></div>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='#videoBox{border:10px solid #212223;transition:0.5s}video{max-width:100%;vertical-align:bottom}#videoBox.out{position:fixed;bottom:0;right:0;width:500px;z-index:999;animation:an 0.5s}.out{position:fixed;bottom:0;right:10px;width:500px;z-index:999;animation:an 0.5s}.video-js .vjs-control.vjs-close-button{right:-12px!important;top:-2.5em!important}.ub_player{margin:20px 0}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){.out{width:300px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

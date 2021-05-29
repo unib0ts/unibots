@@ -1,36 +1,3 @@
-var mybotubad = setInterval(ub_adscript, 500);
-
-function ub_adscript() {
-  for(var i=0; i<mapping_hb.targetUnits.length; i++){
-		// try {
-			while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
-					targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
-					var z= document.createElement('div');
-					z.id = mapping_hb.adId[i];
-					// z.className = mapping_hb.adId[i];
-					targetUnit.appendChild(z);
-
-					adUnitTemp = {
-						code: mapping_hb.adUnitNames[i],
-						mediaTypes: {
-								banner: {
-										sizes: size_array[i]
-								}
-						},
-						bids: mapping_hb.bids[i]
-					};
-					adUnits.push(adUnitTemp);
-					break;
-			}
-		//  }
-		// catch(err) {
-		// 	console.log(err);
-		// }
-  }
-  clearInterval(mybotubad);
-	ub_ad();
-}
-
 var s0 = document.createElement('script');
 s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
 s0.type = "text/javascript";
@@ -187,6 +154,42 @@ var mappings = {
     adId: [],
     renderedFlag: []
   };
+
+  var mybotubad = setInterval(ub_adscript, 1000);
+
+  function ub_adscript() {
+    for(var i=0; i<mapping_hb.targetUnits.length; i++){
+  		// try {
+  			while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
+  					targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
+  					var z= document.createElement('div');
+  					z.id = mapping_hb.adId[i];
+  					// z.className = mapping_hb.adId[i];
+  					targetUnit.appendChild(z);
+
+  					adUnitTemp = {
+  						code: mapping_hb.adUnitNames[i],
+  						mediaTypes: {
+  								banner: {
+  										sizes: size_array[i]
+  								}
+  						},
+  						bids: mapping_hb.bids[i]
+  					};
+  					adUnits.push(adUnitTemp);
+
+            clearInterval(mybotubad);
+            ub_ad();
+  					break;
+  			}
+  		//  }
+  		// catch(err) {
+  		// 	console.log(err);
+  		// }
+    }
+
+  }
+
 
 function 	ub_ad() {
 

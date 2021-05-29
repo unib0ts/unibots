@@ -155,7 +155,7 @@ var mappings = {
     renderedFlag: []
   };
 
-  var mybotubad = setInterval(ub_adscript, 1000);
+  var mybotubad = setInterval(ub_adscript, 500);
 
   function ub_adscript() {
     for(var i=0; i<mapping_hb.targetUnits.length; i++){
@@ -179,7 +179,7 @@ var mappings = {
   					adUnits.push(adUnitTemp);
 
             clearInterval(mybotubad);
-            ub_ad();
+
   					break;
   			}
   		//  }
@@ -187,7 +187,7 @@ var mappings = {
   		// 	console.log(err);
   		// }
     }
-
+     ub_ad();
   }
 
 

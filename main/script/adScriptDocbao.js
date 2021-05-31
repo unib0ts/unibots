@@ -31,14 +31,38 @@ var check = false;
 return check;
 };
 
+var ub_divsToCheck = {
+	"unibots-video": false,
+};
+
 // setTimeout(function(){
-//   if (document.getElementById('unibots-video')) {
-    // var ub_vs = document.createElement('script');
-    // ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.js";
-    // ub_vs.type = "text/javascript";
-    // document.querySelector('body').appendChild(ub_vs);
-//   }
-// },500);
+  // if (document.getElementById('unibots-video')) {
+  var ub_interval = setInterval(() => {
+		flag = false;
+		checkFlag = false;
+		for (x in ub_divsToCheck) {
+			if (document.getElementById(x) !== null) {
+				ub_divsToCheck[x] = true;
+				checkFlag = true;
+			}
+		}
+		for (x in ub_divsToCheck) {
+			if (ub_divsToCheck[x] == false) {
+				flag = true;
+			}
+		}
+		if (!flag && checkFlag) {
+			// console.log("all loaded");
+			// console.log(ub_divsToCheck);
+			// ub_ad();
+      var ub_vs = document.createElement('script');
+      ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.js";
+      ub_vs.type = "text/javascript";
+      document.querySelector('#unibots-video').appendChild(ub_vs);
+			clearInterval(ub_interval);
+		}
+	}, 500);
+
 
 if (!mobileCheck()) {
   // var ad_scrpt1 = document.createElement('script');

@@ -31,6 +31,11 @@ var check = false;
 return check;
 };
 
+var ub_vs = document.createElement('script');
+ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.js";
+ub_vs.type = "text/javascript";
+document.querySelector('#unibots-video').appendChild(ub_vs);
+
 if (!mobileCheck()) {
   // var ad_scrpt1 = document.createElement('script');
   // ad_scrpt1.type = "text/javascript";

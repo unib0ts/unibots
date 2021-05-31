@@ -58,7 +58,7 @@ ima.onload = function(){
 }
 
 function load_player(){
-  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small" playsinline autoplay controls="true" preload="auto"></video>';
+  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small vjs-16-9" playsinline autoplay controls="true" preload="auto"></video>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
 }
@@ -76,8 +76,9 @@ let video_ub = () => {
 
   var player = videojs('content_video',{
     fluid: true,
-    // height:300,
-    width:500,
+    timeout: 7000,
+    height:225,
+    width:400
   });
   player.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
   player.autoplay(true);
@@ -94,7 +95,7 @@ let video_ub = () => {
   var options = {
     id: 'content_video',
     // adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl: 'https://video.unibots.in/ads.xml?ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1'
+    adTagUrl: 'https://video.unibots.in/ads.xml'
   };
   player.ima(options);
   

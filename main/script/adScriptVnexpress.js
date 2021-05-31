@@ -173,7 +173,7 @@ var mappings = {
   						bids: mapping_hb.bids[i]
   					};
   					adUnits.push(adUnitTemp);
-            clearInterval(mybotubad
+            clearInterval(mybotubad);
             mybotAdscriptEnabled= 1;
   					break;
   			}

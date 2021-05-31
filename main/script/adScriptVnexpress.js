@@ -1,9 +1,6 @@
-
-
 var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
-
 const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -156,6 +153,7 @@ var mappings = {
     var mybotubad = setInterval(ub_adscript, 500);
   }
   function ub_adscript() {
+    var mybotAdscriptEnabled =0;
     for(var i=0; i<mapping_hb.targetUnits.length; i++){
   		// try {
   			while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
@@ -175,9 +173,8 @@ var mappings = {
   						bids: mapping_hb.bids[i]
   					};
   					adUnits.push(adUnitTemp);
-
-            clearInterval(mybotubad);
-
+            clearInterval(mybotubad
+            mybotAdscriptEnabled= 1;
   					break;
   			}
   		//  }
@@ -185,11 +182,14 @@ var mappings = {
   		// 	console.log(err);
   		// }
     }
-     ub_ad();
+    if (mybotAdscriptEnabled) {
+       ub_ad();
+    }
   }
 
 
 function 	ub_ad() {
+  console.log('ub_ad');
   var s0 = document.createElement('script');
   s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   s0.type = "text/javascript";
@@ -259,18 +259,18 @@ function 	ub_ad() {
        ubpbjs.bidderSettings = {
          'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
          'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-         'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-         'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-         'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-         'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-         'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-         //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-
-         '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+         // 'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+         // 'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+         // 'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+         // 'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+         // 'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+         // 'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+         // //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+         //
+         // '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+         // 'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+         // 'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+         // 'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
        };
        ubpbjs.setConfig({
 

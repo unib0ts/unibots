@@ -84,15 +84,15 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
 			 { bidder: 'appnexus', params: { placementId: '21146806' } }, /* one placementId for all sizes  my appnexus bidder */
 			 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507449'} },
 			//  { bidder: 'ucfunnel', params: { adid : 'ad-2736B8748AA68B4B0867E94697B93ABA'} },
-				{ bidder: 'oftmedia', params: { placementId: '21224933' } },
-				{ bidder: 'smartadserver', params: { siteId: '399737', pageId: '1361919', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-			// // 	// { bidder: '33across', params: { siteId : 'bKEogyBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-				{ bidder: 'emx_digital', params: { tagid: '147563' } }, /* sizeless */
-				{ bidder: 'sovrn', params: {tagid: '867113'} },
-			// { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-			{ bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-			{ bidder: 'nobid', params: { siteId : '22315894544'} },
-			{ bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+			// 	{ bidder: 'oftmedia', params: { placementId: '21224933' } },
+			// 	{ bidder: 'smartadserver', params: { siteId: '399737', pageId: '1361919', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+			// // // 	// { bidder: '33across', params: { siteId : 'bKEogyBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+			// 	{ bidder: 'emx_digital', params: { tagid: '147563' } }, /* sizeless */
+			// 	{ bidder: 'sovrn', params: {tagid: '867113'} },
+			// // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+			// { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+			// { bidder: 'nobid', params: { siteId : '22315894544'} },
+			// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
 			// { bidder: 'criteo', params: {networkId: '10542'} },
 			// { bidder: 'criteointl', params: {networkId: '10545'} },
 			// 	{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
@@ -424,5 +424,5 @@ if (document.getElementById('div-gpt-ad-1612774908699-0')) {
 	        googletag.pubads().refresh(mappings.slots);
 	    });
 	}
-	
+
 }

@@ -74,18 +74,23 @@ let post_scripts =()=>{
 let video_ub = () => {
    
 
-  var player = videojs('content_video',{
+  var ubplayer = videojs('content_video',{
     fluid: true,
-    timeout: 7000,
+    timeout: 6000,
     height:225,
     width:400
   });
-  player.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
-  player.autoplay(true);
-  player.muted(true);
-  player.responsive(true);
+  // ubplayer.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
+  ubplayer.src([
+    {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/wild_feast_dance_gala_2010.mp4'},
+    {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/sotd__boca.mp4'},
+    {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/trendy_11_mins_of_tiktok_viral_dance_to_show_off.mp4'}
+  ]);
+  ubplayer.autoplay(true);
+  ubplayer.muted(true);
+  ubplayer.responsive(true);
 
-  player.logo({
+  ubplayer.logo({
     image: 'https://unibots.in/wp-content/uploads/2019/09/unibot.png',
     position: 'top-right',
     width: 80,
@@ -97,17 +102,17 @@ let video_ub = () => {
     // adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=',
     adTagUrl: 'https://video.unibots.in/clients/docbao.xml'
   };
-  player.ima(options);
+  ubplayer.ima(options);
   
-// var isPlaying = player.currentTime > 0 && !player.paused && !player.ended && player.readyState > player.HAVE_CURRENT_DATA;
+// var isPlaying = ubplayer.currentTime > 0 && !ubplayer.paused && !ubplayer.ended && ubplayer.readyState > ubplayer.HAVE_CURRENT_DATA;
 // if (!isPlaying) {
-//   player.play();
+//   ubplayer.play();
 // }
 
-  player.on('ads-request',function(response){
+  ubplayer.on('ads-request',function(response){
     console.log('ads requeseted');
     // console.log(response);
-    player.ima.addEventListener(google.ima.AdEvent.Type.LOADED,
+    ubplayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,
           event => {
             console.log('LOADED event');
                   console.log(event.getAd());
@@ -116,29 +121,29 @@ let video_ub = () => {
   });
   
   
-  // player.on("ads-manager", function(response){
+  // ubplayer.on("ads-manager", function(response){
   //   console.log('ads-manager_loaded');
-  //   console.log(response.target.player.ima); 
+  //   console.log(response.target.ubplayer.ima); 
   // });
 
-  // player.on('adstart',function(){
+  // ubplayer.on('adstart',function(){
   //     console.log('Ad Started');
-  //     player.ima.addEventListener(google.ima.AdEvent.Type.STARTED, function(){
-  //       // player.pause();
+  //     ubplayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED, function(){
+  //       // ubplayer.pause();
   //       console.log('me clicked');
   //     });  
   // });
   
   var CloseButton = videojs.getComponent('CloseButton');
     videojs.registerComponent('CloseButton', CloseButton);
-    player.addChild('CloseButton');
-    player.getChild('CloseButton').on('click', function() {
+    ubplayer.addChild('CloseButton');
+    ubplayer.getChild('CloseButton').on('click', function() {
         console.log('close');
         this.player().dispose();
     });
 
-  player.on('play', () => { player.logo().show(); });
-  player.on('pause', () => { player.logo().show(); });
+  ubplayer.on('play', () => { ubplayer.logo().show(); });
+  ubplayer.on('pause', () => { ubplayer.logo().show(); });
    
   function isInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -154,19 +159,19 @@ let video_ub = () => {
   document.addEventListener('scroll', function () {
       if(isInViewport(box)){
           console.log('play --> ');
-            if(player.ads.inAdBreak()){
-                  player.pause();
-                  // player.ima.pauseAd();
+            if(ubplayer.ads.inAdBreak()){
+                  ubplayer.pause();
+                  // ubplayer.ima.pauseAd();
             }else{
-              player.play();
-              // player.ima.resumeAd();
+              ubplayer.play();
+              // ubplayer.ima.resumeAd();
             }
-            player.ima.resumeAd();
+            ubplayer.ima.resumeAd();
           }else{
           console.log('pause -->');
-          player.pause();
-            if(player.ads.inAdBreak()){
-                player.ima.pauseAd();
+          ubplayer.pause();
+            if(ubplayer.ads.inAdBreak()){
+                ubplayer.ima.pauseAd();
             }
         }
   }, {

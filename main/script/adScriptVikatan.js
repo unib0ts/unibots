@@ -52,7 +52,7 @@ var GEO_CODE = '';
 		request.send();
 })();
 
-let customConfigObjectA = {
+const customConfigObjectA = {
  "buckets" : [{
     "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     "min" : 0,
@@ -132,7 +132,7 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setTimeout(function() {
+      setInterval(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;

@@ -837,7 +837,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-  googletag.pubads().refresh(mappings.slots);
+  // googletag.pubads().refresh(mappings.slots);
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
@@ -1105,10 +1105,12 @@ if(typeof googletag.defineSlot === "function"){
   googlePush();
 }
 else{
-  setTimeout(function(){
+  // setTimeout(function(){
+  googletag.cmd.push(function() {
     googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
     googlePush();
-  }, 500);
+  });
+  // }, 500);
 }
 
 function mainHbRun(){

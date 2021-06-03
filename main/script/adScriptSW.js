@@ -157,7 +157,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh(mappings.slots);
+              // googletag.pubads().refresh(mappings.slots);
             var x = ubpbjs.getAllPrebidWinningBids();
             var adsCalled = false;
             for(var i=0;i<x.length;i++){
@@ -241,7 +241,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	// googletag.pubads().refresh(mappings.slots);
+	googletag.pubads().refresh(mappings.slots);
 }
 
 mappings.slotNumbers.push(1);

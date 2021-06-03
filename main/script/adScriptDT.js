@@ -229,7 +229,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
+	// googletag.pubads().refresh(mappings.slots);
 }
 // var ub_slot1 = googletag.defineSlot('/21928950349/dailythanthi.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
 mappings.slotNumbers.push(1);
@@ -276,7 +276,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh(ub_slot);
+              googletag.pubads().refresh([ub_slot]);
           });
         });
       }

@@ -102,12 +102,12 @@ if (!mobileCheck()) {
   // }
 
   // if(window.location.href== "https://docbao.vn/"){
-    z1= document.createElement('div');
-    z1.id = 'ub-sticky-ad-containerdesk';
-    z1.className = 'ub-sticky-ad-containerdesk';
-    z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019421633-0"></div';
-    x1 = document.querySelector('body');
-    x1.appendChild(z1);
+    // z1= document.createElement('div');
+    // z1.id = 'ub-sticky-ad-containerdesk';
+    // z1.className = 'ub-sticky-ad-containerdesk';
+    // z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019421633-0"></div';
+    // x1 = document.querySelector('body');
+    // x1.appendChild(z1);
   // }
 }
 else {
@@ -126,9 +126,9 @@ function mybotubstickyad() {
  document.getElementById('ub-sticky-ad-container').style.display='none';
 }
 
-function mybotubstickyadDesk() {
- document.getElementById('ub-sticky-ad-containerdesk').style.display='none';
-}
+// function mybotubstickyadDesk() {
+//  document.getElementById('ub-sticky-ad-containerdesk').style.display='none';
+// }
 
 var s0 = document.createElement('script');
 s0.src = "https://www.googletagservices.com/tag/js/gpt.js";

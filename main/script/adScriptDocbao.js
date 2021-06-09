@@ -1068,7 +1068,6 @@ function fillRefreshMap(){
   googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if(mappings_final_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()}).length == 0){
-          document.getElementById('close_ub-sticky-ad').style.display = 'block';
           mappings_final_refresh.adSlots.push(event.slot);
           mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
         }
@@ -1142,4 +1141,9 @@ function refreshBid(ub_slot, adCode) {
       }
     });
   });
+}
+
+var nodes = document.getElementById('div-gpt-ad-1616581723395-0').childNodes[0].childNodes;
+if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+  document.getElementById('close_ub-sticky-ad').style.display = 'block';
 }

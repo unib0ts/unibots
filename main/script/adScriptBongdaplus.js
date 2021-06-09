@@ -1361,3 +1361,8 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
+
+var nodes = document.getElementById('div-gpt-ad-1615775641979-0').childNodes[0].childNodes;
+if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+  document.getElementById('close_ub-sticky-ad').style.display = 'block';
+}

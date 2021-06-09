@@ -1158,6 +1158,7 @@ if (mobileCheck()) {
               }
             // }
           });
+          break;
         }
       }
     });

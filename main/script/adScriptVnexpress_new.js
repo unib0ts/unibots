@@ -171,7 +171,7 @@ var mappings = {
   };
 
 function ub_render_slot(slot_id) {
- var mybotAdscriptEnabled =0;
+ // var mybotAdscriptEnabled =0;
  for(var i=0; i<mapping_hb.targetUnits.length; i++){
    if (slot_id == mapping_hb.targetUnits[i]) {
      targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
@@ -203,13 +203,13 @@ function ub_render_slot(slot_id) {
      });
 
      // ub_ad();
-    mybotAdscriptEnabled= 1;
+    // mybotAdscriptEnabled= 1;
      break;
    }
  }
- if (mybotAdscriptEnabled) {
+ // if (mybotAdscriptEnabled) {
     ub_ad();
- }
+ // }
 }
 
 

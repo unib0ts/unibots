@@ -76,8 +76,8 @@ let video_ub = () => {
 
   var ubplayer = videojs('content_video',{
     fluid: true,
-    height:225,
-    width:400
+    width:640,
+    height:360
   });
   // ubplayer.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
   ubplayer.src([
@@ -102,7 +102,7 @@ let video_ub = () => {
     // preventLateAdStart: true,
     // vastLoadTimeout: 7000,
     // adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl: 'https://video.unibots.in/clients/doc.xml',
+    adTagUrl: 'https://video.unibots.in/clients/docbao.xml',
     contribAdsSettings: {
       debug: true,
       timeout: 8000,

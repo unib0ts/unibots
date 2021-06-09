@@ -79,12 +79,12 @@ let video_ub = () => {
     width:640,
     height:360
   });
-  // ubplayer.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
-  ubplayer.src([
-    {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/wild_feast_dance_gala_2010.mp4'},
-    {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/sotd__boca.mp4'},
-    {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/trendy_11_mins_of_tiktok_viral_dance_to_show_off.mp4'}
-  ]);
+  ubplayer.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
+  // ubplayer.src([
+  //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/wild_feast_dance_gala_2010.mp4'},
+  //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/sotd__boca.mp4'},
+  //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/trendy_11_mins_of_tiktok_viral_dance_to_show_off.mp4'}
+  // ]);
   ubplayer.autoplay(true);
   ubplayer.muted(true);
   ubplayer.responsive(true);
@@ -116,18 +116,19 @@ let video_ub = () => {
 // if (!isPlaying) {
 //   ubplayer.play();
 // }
-ubplayer.on('play', () => {
-  var playPromise = ubplayer.play();
-
-  playPromise.then(() => {
-    // play succeeded
-    console.log("// ubplayer play succeeded")
-  })
-  .catch(() => {
-    // play failed
-    console.log("// ubplayer play failed")
-  });
-});
+// ubplayer.on('play', () => {
+//   var playPromise = ubplayer.play();
+//   playPromise.then(() => {
+//     // play succeeded
+//     console.log("// ubplayer play succeeded")
+//   })
+//   .catch(() => {
+//     // play failed
+//     console.log("// ubplayer play failed")
+//   });
+// });
+// ubplayer('readyforpreroll', () => )
+// ubplayer.ima.on('adBreakReady', player.ima.play);
 
 ubplayer.on('ads-request',function(response){
     console.log('ubpalyer ads requeseted');
@@ -153,14 +154,21 @@ ubplayer.on('ads-request',function(response){
   //       console.log('me clicked');
   //     });  
   // });
-  
-  var CloseButton = videojs.getComponent('CloseButton');
-    videojs.registerComponent('CloseButton', CloseButton);
-    ubplayer.addChild('CloseButton');
-    ubplayer.getChild('CloseButton').on('click', function() {
-        console.log('close');
-        this.player().dispose();
-    });
+ 
+// Close button Code
+  var button = videojs.getComponent('CloseButton');
+  var CloseButton = videojs.extend(button, {
+        constructor: function() {
+          button.apply(this, arguments);
+          this.controlText("Close Player");
+          // this.addClass('vjs-icon-cancel');
+        },
+        handleClick: function() {
+          this.player().dispose();
+        }
+      });
+  videojs.registerComponent('CloseButton', CloseButton);
+  ubplayer.addChild('CloseButton');
 
   ubplayer.on('play', () => { ubplayer.logo().show(); });
   ubplayer.on('pause', () => { ubplayer.logo().show(); });

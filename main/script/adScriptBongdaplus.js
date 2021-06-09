@@ -1370,12 +1370,13 @@ if (mobileCheck()) {
       for (i = 0; i < x_len; i++) {
         if (mapping_full_hb.adCode[i] == "/22140546871/bongdaplus.vn_mb_anchor_320x100") {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === mapping_full_hb.slotNumbers[i]) {
+            console.log(event.slot === mapping_full_hb.slotNumbers[i]);
+            // if (event.slot === mapping_full_hb.slotNumbers[i]) {
               var nodes = document.getElementById('div-gpt-ad-1615775641979-0').childNodes[0].childNodes;
               if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
                 document.getElementById('close_ub-sticky-ad').style.display = 'block';
               }
-            }
+            // }
           });
         }
       }

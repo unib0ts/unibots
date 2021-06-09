@@ -1362,7 +1362,23 @@ function refreshBid(ub_slot, adCode) {
   });
 }
 
-var nodes = document.getElementById('div-gpt-ad-1615775641979-0').childNodes[0].childNodes;
-if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-  document.getElementById('close_ub-sticky-ad').style.display = 'block';
+if (mobileCheck()) {
+  if(window.location.href== "https://bongdaplus.vn/"){
+    googletag.cmd.push(function() {
+      x = googletag.pubads().getSlots();
+      x_len = x.length;
+      for (i = 0; i < x_len; i++) {
+        if (mapping_full_hb.adCode[i] == "/22140546871/bongdaplus.vn_mb_anchor_320x100") {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === mapping_full_hb.slotNumbers[i]) {
+              var nodes = document.getElementById('div-gpt-ad-1615775641979-0').childNodes[0].childNodes;
+              if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+                document.getElementById('close_ub-sticky-ad').style.display = 'block';
+              }
+            }
+          });
+        }
+      }
+    });
+  }
 }

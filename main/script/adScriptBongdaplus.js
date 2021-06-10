@@ -14,7 +14,7 @@ apstag.init({
 });
 apSlots = []
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:block;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -10px;right:0px;width:18px;position:relative;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:250px !important;visibility:hidden;z-index:2147483647; position: fixed !important;}.mybotpopupCloseButton{background-color:#000;color:#fff;border-radius:50px;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-40px;right:10px;font-size:25px;line-height:25px;width:25px;height:25px;text-align:center}.ub-popup-ad-container .show{visibility:visible;animation:popup .5s; animation-fill-mode: forwards;} @keyframes popup{0%{transform:scale(.1)} 100%{transform:scale(1)}} #div-gpt-ad-1621413483921-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:none;top: -10px;right:0px;width:18px;position:relative;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:250px !important;visibility:hidden;z-index:2147483647; position: fixed !important;}.mybotpopupCloseButton{background-color:#000;color:#fff;border-radius:50px;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-40px;right:10px;font-size:25px;line-height:25px;width:25px;height:25px;text-align:center}.ub-popup-ad-container .show{visibility:visible;animation:popup .5s; animation-fill-mode: forwards;} @keyframes popup{0%{transform:scale(.1)} 100%{transform:scale(1)}} #div-gpt-ad-1621413483921-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -1360,4 +1360,26 @@ function refreshBid(ub_slot, adCode) {
       }
     });
   });
+}
+
+if (mobileCheck()) {
+  if(window.location.href== "https://bongdaplus.vn/"){
+    googletag.cmd.push(function() {
+      x = googletag.pubads().getSlots();
+      x_len = x.length;
+      for (i = 0; i < x_len; i++) {
+        if (mapping_full_hb.adCode[i] == "/22140546871/bongdaplus.vn_mb_anchor_320x100") {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            // if (event.slot === mapping_full_hb.slotNumbers[i]) {
+              var nodes = document.getElementById('div-gpt-ad-1615775641979-0').childNodes[0].childNodes;
+              if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+                document.getElementById('close_ub-sticky-ad').style.display = 'block';
+              }
+            // }
+          });
+           break;
+        }
+      }
+    });
+  }
 }

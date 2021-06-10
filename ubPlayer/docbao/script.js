@@ -79,7 +79,7 @@ let video_ub = () => {
     width:640,
     height:360
   });
-  ubplayer.src({type: 'video/mp4', src: 'https://storage.googleapis.com/gvabox/media/samples/android.mp4'});
+  ubplayer.src({type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/assassin_creed_iv_black_flag_for_pc.mp4'});
   // ubplayer.src([
   //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/wild_feast_dance_gala_2010.mp4'},
   //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/sotd__boca.mp4'},
@@ -105,7 +105,7 @@ let video_ub = () => {
     adTagUrl: 'https://video.unibots.in/clients/docbao.xml',
     contribAdsSettings: {
       debug: true,
-      timeout: 8000,
+      timeout: 7500,
       //prerollTimeout: 12000,
       //postrollTimeout: 12000
     }

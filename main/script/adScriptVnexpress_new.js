@@ -1,3 +1,37 @@
+
+setTimeout(function(){
+
+  var z1= document.createElement('div');
+  z1.id = 'sis_folder.tinso1';
+  var s = document.createElement("script");
+s.type = "text/javascript";
+s.innerHTML = "ub_render_slot('sis_folder.tinso1')";
+document.querySelector('body').appendChild(z1);
+  document.getElementById('sis_folder.tinso1').appendChild(s);
+}, 3000);
+//
+setTimeout(function(){
+
+  var z2= document.createElement('div');
+  z2.id = 'sis_folder.tinso2';
+  var s23 = document.createElement("script");
+s23.type = "text/javascript";
+s23.innerHTML = "ub_render_slot('sis_folder.tinso2')";
+document.querySelector('body').appendChild(z2);
+  document.getElementById('sis_folder.tinso2').appendChild(s23);
+}, 1000);
+
+setTimeout(function(){
+
+  var z2= document.createElement('div');
+  z2.id = 'sis_infeed-instream2';
+  var s23 = document.createElement("script");
+s23.type = "text/javascript";
+s23.innerHTML = "ub_render_slot('sis_infeed-instream2')";
+document.querySelector('body').appendChild(z2);
+  document.getElementById('sis_infeed-instream2').appendChild(s23);
+}, 1100);
+
 var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
@@ -62,14 +96,14 @@ adId: [
 		'div-gpt-ad-1621846937025-0',
 ],
 sizes: [
-	  [320, 50], [320, 100],
-		[320, 50], [320, 100],
-		[320, 50], [320, 100],
-		[320, 50], [320, 100],
-		[320, 50], [320, 100],
-		[320, 50], [320, 100],
-		[320, 50], [320, 100],
-		[320, 50], [320, 100],
+	  [[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
+		[[320, 50], [320, 100]],
 ],
 bids: [
 		hb_common_bidders.concat([
@@ -141,11 +175,10 @@ var mappings = {
     slotNumbers: [],
     sizes: [],
     adId: [],
-    renderedFlag: []
+    renderedFlag: [false, false, false, false, false, false, false, false]
   };
 
 function ub_render_slot(slot_id) {
- // var mybotAdscriptEnabled =0;
  for(var i=0; i<mapping_hb.targetUnits.length; i++){
    if (slot_id == mapping_hb.targetUnits[i]) {
      targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
@@ -164,25 +197,9 @@ function ub_render_slot(slot_id) {
      };
      adUnits.push(adUnitTemp);
 
-     mappings.slotNumbers.push(i+1);
-     mappings.adCode.push(mapping_hb.adUnitNames[i]);
-     mappings.sizes.push(mapping_hb.sizes[i]);
-     mappings.adId.push(mapping_hb.adId[i]);
-     googletag.cmd.push(function() {
-       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-         if (event.slot === mapping_hb.slotNames[i]) {
-           ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
-         }
-       });
-     });
-
-     // ub_ad();
-    mybotAdscriptEnabled= 1;
+     ub_ad(mapping_hb.slotNames[i], mapping_hb.adUnitNames[i], mapping_hb.sizes[i], mapping_hb.adId[i]);
      break;
    }
- }
- if (mybotAdscriptEnabled) {
-    ub_ad();
  }
 }
 
@@ -198,125 +215,138 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-function ub_ad() {
-  var GEO_CODE = '';
-  (function (){
-    var request = new XMLHttpRequest();
-      url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-      request.open('GET', url, true);
-      request.onload = function() {
-        if (request.status >= 200 && request.status < 400) {
-          var data = request.responseText;
-          data = JSON.parse(data);
-          if(data.status == "success") {
-            GEO_CODE = data.countryCode;
-          }
-          else {
-            console.error("Geo Request Failed");
-          }
-        }
-        else {
-          console.error('Request failed from server');
-        }
-        mainHbRun();
-      };
-      request.onerror = function() {
-        console.error('Request failed to Reach GEO Server');
-        mainHbRun();
-      };
-      request.send();
-  })();
-
-  // ub_checkRendered(i);
-
-  if(typeof googletag.defineSlot === "function"){
-   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-   googlePush();
-  }
-  else{
+var ub_slot;
+function ub_ad(slot, adCode, sizes, adId) {
+  // if(typeof googletag.defineSlot === "function"){
+  //  googleDefine(slot, adCode, sizes, adId);
+  //  googlePush();
+  // }
+  // else{
    // setTimeout(function(){
      googletag.cmd.push(function() {
-       googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-       googlePush();
+       eval(slot+ '= '+'googletag.defineSlot(adCode, sizes, adId)');
+       var a = eval(slot);
+       a.addService(googletag.pubads());
+       ub_slot = eval(slot);
+       mappings.slots.push(eval(slot));
+
+       googletag.pubads().collapseEmptyDivs(true);
+       googletag.pubads().setCentering(true);
+       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+       googletag.pubads().enableSingleRequest();
+      // googletag.pubads().enableLazyLoad({
+      // 					fetchMarginPercent: 200,
+      // 					renderMarginPercent: 100,
+      // 					mobileScaling: 2.0
+      // 				});
+       googletag.enableServices();
+       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+
+         if (event.slot === slot) {
+           ub_checkAdRendered(adId, slot, adCode);
+         }
+       });
+       // googleDefine(slotNumbers, adCode, sizes, adId);
+       // googlePush();
      });
    // }, 500);
-  }
+  // }
 
-  function mainHbRun(){
-   ubpbjs.que.push(function() {
-       ubpbjs.addAdUnits(adUnits);
-       ubpbjs.bidderSettings = {
-         'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-         'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-         // 'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-         // 'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-         // 'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-         // 'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         // 'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-         // 'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-         // //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         //
-         // '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         // 'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         // 'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-         // 'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
-       };
-       ubpbjs.setConfig({
 
-         priceGranularity: customConfigObjectA,
-        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
-         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
-         userSync: {
-             iframeEnabled: true,
-             syncsPerBidder: 999, // and no more than 3 syncs at a time
-             // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-             filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-             // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-             userIds: [{
-                 name: "id5Id",
-                 params: {
-                     partner: 438,            // change to the Partner Number you received from ID5
-                 },
-                 storage: {
-                     type: "cookie",
-                     name: "id5id.1st",       // create a cookie with this name
-                     expires: 90,             // cookie lasts for 90 days
-                     refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
-                 }
-             }],
-             auctionDelay: 500},
-         debug: false,
-         useBidCache: true,
-         enableSendAllBids: false, // Default will be `true` as of 1.0
-         bidderSequence: 'random', // Default is random
-         publisherDomain: 'https://vnexpress.net/',
-         bidderTimeout: PREBID_TIMEOUT+500,
-         //pubcid: {expInterval: },
-         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
-        });
-       ubpbjs.requestBids({
-         bidsBackHandler: initAdserver,
-         timeout: PREBID_TIMEOUT,
-         labels: [GEO_CODE],
-       });
-   });
-
-   // in case ubpbjs doesn't load
-   setTimeout(function() {
-       initAdserver();
-   }, FAILSAFE_TIMEOUT);
-  }
 }
 
-// function ub_checkRendered(i) {
-//   googletag.cmd.push(function() {
-//     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-//       if (event.slot === mapping_hb.slotNames[i]) {
-//         ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
-//       }
-//     });
-// });
-// }
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+    url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        data = JSON.parse(data);
+        if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+        }
+        else {
+          console.error("Geo Request Failed");
+        }
+      }
+      else {
+        console.error('Request failed from server');
+      }
+      mainHbRun();
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+    };
+    request.send();
+})();
+
+function mainHbRun(){
+ ubpbjs.que.push(function() {
+     ubpbjs.addAdUnits(adUnits);
+     ubpbjs.bidderSettings = {
+       'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+       'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+       // 'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+       // 'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+       // 'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+       // 'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+       // 'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+       // 'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+       // //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+       //
+       // '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+       // 'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+       // 'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+       // 'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+     };
+     ubpbjs.setConfig({
+
+       priceGranularity: customConfigObjectA,
+      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
+       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
+       userSync: {
+           iframeEnabled: true,
+           syncsPerBidder: 999, // and no more than 3 syncs at a time
+           // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+           filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+           // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+           userIds: [{
+               name: "id5Id",
+               params: {
+                   partner: 438,            // change to the Partner Number you received from ID5
+               },
+               storage: {
+                   type: "cookie",
+                   name: "id5id.1st",       // create a cookie with this name
+                   expires: 90,             // cookie lasts for 90 days
+                   refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+               }
+           }],
+           auctionDelay: 500},
+       debug: false,
+       useBidCache: true,
+       enableSendAllBids: false, // Default will be `true` as of 1.0
+       bidderSequence: 'random', // Default is random
+       publisherDomain: 'https://vnexpress.net/',
+       bidderTimeout: PREBID_TIMEOUT+500,
+       //pubcid: {expInterval: },
+       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+      });
+     ubpbjs.requestBids({
+       bidsBackHandler: initAdserver,
+       timeout: PREBID_TIMEOUT,
+       labels: [GEO_CODE],
+     });
+ });
+
+ // in case ubpbjs doesn't load
+ setTimeout(function() {
+     initAdserver();
+ }, FAILSAFE_TIMEOUT);
+}
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
@@ -369,32 +399,4 @@ function initAdserver() {
             googletag.pubads().refresh(mappings.slots);
         });
     });
-}
-
-function googleDefine(slotNumbers, adCode, sizes, adId){
-    var i = slotNumbers.length-1;
-    // console.log(slotNumbers.length);
-  // for(var i=0; i<slotNumbers.length;i++){
-    eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
-        // console.log(slotNumbers[i],adCode[i], sizes[i], adId[i]);
-    var a = eval('ub_slot'+slotNumbers[i]);
-    a.addService(googletag.pubads());
-
-    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
-  // }
-}
-
-function googlePush(){
-  googletag.cmd.push(function() {
-    googletag.pubads().collapseEmptyDivs(true);
-    googletag.pubads().setCentering(true);
-    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-    googletag.pubads().enableSingleRequest();
-		// googletag.pubads().enableLazyLoad({
-		// 					fetchMarginPercent: 200,
-		// 					renderMarginPercent: 100,
-		// 					mobileScaling: 2.0
-		// 				});
-    googletag.enableServices();
-  });
 }

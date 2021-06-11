@@ -1,37 +1,3 @@
-
-setTimeout(function(){
-
-  var z1= document.createElement('div');
-  z1.id = 'sis_folder.tinso1';
-  var s = document.createElement("script");
-s.type = "text/javascript";
-s.innerHTML = "ub_render_slot('sis_folder.tinso1')";
-document.querySelector('body').appendChild(z1);
-  document.getElementById('sis_folder.tinso1').appendChild(s);
-}, 3000);
-//
-setTimeout(function(){
-
-  var z2= document.createElement('div');
-  z2.id = 'sis_folder.tinso2';
-  var s23 = document.createElement("script");
-s23.type = "text/javascript";
-s23.innerHTML = "ub_render_slot('sis_folder.tinso2')";
-document.querySelector('body').appendChild(z2);
-  document.getElementById('sis_folder.tinso2').appendChild(s23);
-}, 1000);
-
-setTimeout(function(){
-
-  var z2= document.createElement('div');
-  z2.id = 'sis_infeed-instream2';
-  var s23 = document.createElement("script");
-s23.type = "text/javascript";
-s23.innerHTML = "ub_render_slot('sis_infeed-instream2')";
-document.querySelector('body').appendChild(z2);
-  document.getElementById('sis_infeed-instream2').appendChild(s23);
-}, 1100);
-
 var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;

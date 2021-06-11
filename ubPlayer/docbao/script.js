@@ -75,11 +75,11 @@ let video_ub = () => {
    
 
   var ubplayer = videojs('content_video',{
-    fluid: true,
+    // fluid: true,
     width:640,
     height:360
   });
-  ubplayer.src({type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/assassin_creed_iv_black_flag_for_pc.mp4'});
+  ubplayer.src({type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_deadpool_game_for_pc.mp4'});
   // ubplayer.src([
   //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/wild_feast_dance_gala_2010.mp4'},
   //   {type: 'video/mp4', src: 'https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/3/sotd__boca.mp4'},
@@ -102,7 +102,8 @@ let video_ub = () => {
     // preventLateAdStart: true,
     // vastLoadTimeout: 7000,
     // adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl: 'https://video.unibots.in/clients/docbao.xml',
+    // adTagUrl: 'https://video.unibots.in/clients/docbao.xml',
+    adTagUrl: 'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=docbao.vn_instream&ad_type=video&description_url=https%3A%2F%2Fwww.docbao.vn&videoad_start_delay=0&vpa=1&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=vi',
     contribAdsSettings: {
       debug: true,
       timeout: 7500,

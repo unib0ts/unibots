@@ -1,29 +1,3 @@
-setTimeout(function(){
-
-  var z1= document.createElement('div');
-  z1.id = 'sis_folder.tinso1';
-  var s = document.createElement("script");
-s.type = "text/javascript";
-s.innerHTML = "ub_render_slot('sis_folder.tinso1')";
-document.querySelector('body').appendChild(z1);
-  document.getElementById('sis_folder.tinso1').appendChild(s);
-}, 1000);
-//
-setTimeout(function(){
-
-  var z2= document.createElement('div');
-  z2.id = 'sis_folder.tinso2';
-  var s23 = document.createElement("script");
-s23.type = "text/javascript";
-s23.innerHTML = "ub_render_slot('sis_folder.tinso2')";
-document.querySelector('body').appendChild(z2);
-  document.getElementById('sis_folder.tinso2').appendChild(s23);
-}, 1000);
-
-  // z.className = mapping_hb.adId[i];
-
-
-
 var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
@@ -203,13 +177,13 @@ function ub_render_slot(slot_id) {
      });
 
      // ub_ad();
-    // mybotAdscriptEnabled= 1;
+    mybotAdscriptEnabled= 1;
      break;
    }
  }
- // if (mybotAdscriptEnabled) {
+ if (mybotAdscriptEnabled) {
     ub_ad();
- // }
+ }
 }
 
 

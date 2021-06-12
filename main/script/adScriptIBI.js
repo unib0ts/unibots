@@ -97,8 +97,8 @@ var adUnits = [
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028668'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     // { bidder: 'openx', params: {unit: '541046079', delDomain: 'yieldbird-d.openx.net'} },
-    { bidder: 'criteo', params: {networkId: '10542'} },
-    { bidder: 'criteointl', params: {networkId: '10545'} },
+    // { bidder: 'criteo', params: {networkId: '10542'} },
+    // { bidder: 'criteointl', params: {networkId: '10545'} },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'ucfunnel', params: { adid : 'ad-D23422B43A4922360DD243E4A67786D9'} },
   ]

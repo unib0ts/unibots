@@ -112,8 +112,8 @@ const customConfigObjectA = {
         { bidder: '33across', params: { siteId : 'bzA6DYBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '147575' } }, /* sizeless */
         { bidder: 'nobid', params: { siteId : '22358105088'} },
-        { bidder: 'criteo', params: {networkId: '10542'} },
-        { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-772877BB87BEA69DC87B68A38DDD668'} },
         { bidder: 'smartadserver', params: { siteId: '362139', pageId: '1289640', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },

@@ -422,9 +422,9 @@ if(typeof customConfigObjectA === 'undefined'){
     // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
     // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    { bidder: 'criteo', params: {networkId: '10542'} },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-    { bidder: 'criteointl', params: {networkId: '10545'} },
+    // { bidder: 'criteo', params: {networkId: '10542'} },
+    // { bidder: 'criteointl', params: {networkId: '10545'} },
   ];
   var mappings_full_hb_config = {
     targetUnits: [

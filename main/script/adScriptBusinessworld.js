@@ -415,9 +415,9 @@ var adUnits = [];
           }
         }, /*All sizes*/
         { bidder: 'ucfunnel', params: { adid : 'ad-772877969D43E6DAF7897B4E6B6394D'} },
-        { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'openx', params: {unit: '543530482', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'smartadserver', params: { siteId: '362100', pageId: '1289601', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         { bidder: 'sonobi', params: { placement_id: '86090d9cba508d608e20', ad_unit: 'businessworld.in_NB_320x50' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },

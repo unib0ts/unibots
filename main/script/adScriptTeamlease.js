@@ -95,8 +95,8 @@ var adUnits = [
         	{ bidder: 'rhythmone', params: { placementId: '205380' } }, /* one placementId for all sizes */
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323870', zoneId: '1680766'} },
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
-          { bidder: 'criteo', params: {networkId: '10542'} },
-          { bidder: 'criteointl', params: {networkId: '10545'} },
+          // { bidder: 'criteo', params: {networkId: '10542'} },
+          // { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996049'} },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'ucfunnel', params: { adid : 'ad-8A29AA42BD2AEE3D0B46A9A28B9D6448'} },

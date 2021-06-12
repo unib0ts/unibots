@@ -17,7 +17,7 @@ document.getElementsByTagName('head')[0].appendChild(s1);
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 10000;
+var REFRESH_TIMEOUT = 60000;
 
 var GEO_CODE = '';
 (function (){
@@ -187,11 +187,10 @@ var mappings = {
     slotNumbers: [],
     sizes: [],
     adId: [],
-    renderedFlag: [false, false, false, false, false, false]
+    renderedFlag: []
   };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
-  console.log(ub_slot);
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
@@ -335,7 +334,6 @@ for(var i=0; i<mapping_hb.targetUnits.length; i++){
       googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === mapping_hb.slotNames[i]) {
-            // console.log('tset', mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
             ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
           }
         });

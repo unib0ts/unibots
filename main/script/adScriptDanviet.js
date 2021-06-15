@@ -25,7 +25,7 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1622113773960-0 iframe {border: unset !important;vertical-align: unset !important;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1623754209575-0 iframe {border: unset !important;vertical-align: unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -42,7 +42,7 @@ if (mobileCheck()) {
   z1= document.createElement('div');
   z1.id = 'ub-sticky-ad-container';
   z1.className = 'ub-sticky-ad-container';
-  z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1622113773960-0"></div>';
+  z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1623754209575-0"></div>';
   x1 = document.querySelector('body');
   x1.appendChild(z1);
 
@@ -101,7 +101,7 @@ const customConfigObjectA = {
 if (mobileCheck()) {
 adUnits1 =
 {
-    code: '/21928950349/dantri.com.vn_mb_anchor_300x100',
+    code: '/21957769615/danviet.vn_mb_anchor_300x100',
     mediaTypes: {
         banner: {
             sizes: div_1_sizes
@@ -215,8 +215,8 @@ renderedFlag: [false]
 //   // slotName: mappings_full_hb_config.adUnitNames[index],
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
-//   slotID: 'div-gpt-ad-1622113773960-0',
-//   slotName: '/21928950349/dantri.com.vn_mb_anchor_300x100',
+//   slotID: 'div-gpt-ad-1623754209575-0',
+//   slotName: '/21957769615/danviet.vn_mb_anchor_300x100',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -360,15 +360,15 @@ googletag.cmd.push(function() {
 
 if (mobileCheck()) {
 mappings.slotNumbers.push(1);
-mappings.adCode.push('/21928950349/dantri.com.vn_mb_anchor_300x100');
+mappings.adCode.push('/21957769615/danviet.vn_mb_anchor_300x100');
 mappings.sizes.push(div_1_sizes);
-mappings.adId.push('div-gpt-ad-1622113773960-0');
+mappings.adId.push('div-gpt-ad-1623754209575-0');
 googletag.cmd.push(function() {
   // callAPStagBids(); //Ap part
   // callAPSAds(mappings.adCode, mappings.slots);
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
     if (event.slot === ub_slot1) {
-      ub_checkAdRendered('div-gpt-ad-1622113773960-0', ub_slot1, ['/21928950349/dantri.com.vn_mb_anchor_300x100']);
+      ub_checkAdRendered('div-gpt-ad-1623754209575-0', ub_slot1, ['/21957769615/danviet.vn_mb_anchor_300x100']);
     }
   });
 });

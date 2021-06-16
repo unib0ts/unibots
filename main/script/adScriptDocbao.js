@@ -645,8 +645,8 @@ var mappings_full_hb_config_desktop = {
     // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '94413', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
      ]), //'/21692080761/amb_es_desk_lb_3',
      hb_full_common_bidders.concat([
-       // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515732'} },
+       { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515732'} },
     //    { bidder: 'openx', params: {unit: '543987769', delDomain: 'yieldbird-d.openx.net'} },
     //    { bidder: 'ucfunnel', params: { adid : 'ad-AA7B264A7E449789F2783B423669EE4'} },
     // //   { bidder: "kubient", params: { zoneid: "26b5b52450e2a", server: "kssp.kbntx.ch"} },

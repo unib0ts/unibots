@@ -61,33 +61,33 @@ var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 // var boturlbid = window.location.hostname;
 
-// var GEO_CODE = '';
-// (function (){
-//   var request = new XMLHttpRequest();
-// 		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-// 		request.open('GET', url, true);
-// 		request.onload = function() {
-// 			if (request.status >= 200 && request.status < 400) {
-// 				var data = request.responseText;
-// 				data = JSON.parse(data);
-// 				if(data.status == "success") {
-//           GEO_CODE = data.countryCode;
-// 				}
-// 				else {
-// 					console.error("Geo Request Failed");
-// 				}
-// 			}
-// 			else {
-// 				console.error('Request failed from server');
-// 			}
-//       mainHbRun();
-// 		};
-// 		request.onerror = function() {
-// 			console.error('Request failed to Reach GEO Server');
-//       mainHbRun();
-// 		};
-// 		request.send();
-// })();
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
 
 const customConfigObjectA = {
 "buckets" : [{
@@ -110,12 +110,14 @@ adUnits1 =
     bids: [
       { bidder: 'appnexus', params: { placementId: '19669443' } }, /* one placementId for all sizes  my appnexus bidder */
       // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3731038'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3796457'} },
+      { bidder: 'sovrn', params: {tagid: '921072'} },
       // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
       // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
       // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
       // // { bidder: 'nobid', params: { siteId: '22049997436' } },
-      // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+      { bidder: 'openx', params: {unit: '544096397', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+      { bidder: 'ucfunnel', params: { adid : 'ad-627D33DD98DE293BFEE296D628A46DD6'} },
       // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       // // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -137,7 +139,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
-// function mainHbRun(){
+function mainHbRun(){
 ubpbjs.que.push(function() {
   ubpbjs.addAdUnits(adUnits);
   ubpbjs.aliasBidder('criteo','criteointl');
@@ -198,7 +200,7 @@ ubpbjs.que.push(function() {
 setTimeout(function() {
     initAdserver();
 }, FAILSAFE_TIMEOUT);
-// }
+}
 
 
 var mappings = {
@@ -246,17 +248,17 @@ ubpbjs.que.push(function(){
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
             googletag.pubads().refresh([ub_slot]);
-            // var adsCalled = false;
-            // for(var i=0;i<x.length;i++){
-            //   var bc = x[i].bidderCode;
-            //   if(bc=="openx"){
-            //     adsCalled = true;
-            //     callBotman();
-            //   }
-            // }
-            // if(!adsCalled){
-            //   callAdsUB();
-            // }
+            var adsCalled = false;
+            for(var i=0;i<x.length;i++){
+              var bc = x[i].bidderCode;
+              if(bc=="openx"){
+                adsCalled = true;
+                callBotman();
+              }
+            }
+            if(!adsCalled){
+              callAdsUB();
+            }
         });
       });
     }
@@ -270,74 +272,74 @@ function initAdserver() {
   googletag.cmd.push(function() {
       ubpbjs.que.push(function() {
           ubpbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh(mappings.slots);
-          // var x = ubpbjs.getAllPrebidWinningBids();
-          // var adsCalled = false;
-          // for(var i=0;i<x.length;i++){
-          //   var bc = x[i].bidderCode;
-          //   if(bc=="openx"){
-          //     adsCalled = true;
-          //     callBotman();
-          //   }
-          // }
-          // if(!adsCalled){
-          //   callAdsUB();
-          // }
+          // googletag.pubads().refresh(mappings.slots);
+          var x = ubpbjs.getAllPrebidWinningBids();
+          var adsCalled = false;
+          for(var i=0;i<x.length;i++){
+            var bc = x[i].bidderCode;
+            if(bc=="openx"){
+              adsCalled = true;
+              callBotman();
+            }
+          }
+          if(!adsCalled){
+            callAdsUB();
+          }
       });
   });
 }
 
 
-// var botmanCalled = false;
-// var userStatusBM = '';
-// function callBotman(){
-//   if(userStatusBM == ''){
-//     var request = new XMLHttpRequest();
-//     var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=techz';
-//     request.open('GET', url, true);
-//     request.onload = function() {
-//       if (request.status >= 200 && request.status < 400) {
-//         var data = request.responseText;
-//         if(data != ""){
-//           data = JSON.parse(data);
-//           userStatusBM = data;
-//           if(userStatusBM == "0" || userStatusBM == "3"){
-//             callAdsUB();
-//           }
-//           else{
-//             console.log('Not Valid Traffic for openx');
-//           }
-//         }
-//         else{
-//           console.error('Data not returned from server');
-//           callAdsUB();
-//         }
-//       }
-//       else {
-//         console.error('Request failed from server');
-//         callAdsUB();
-//       }
-//     };
-//     request.onerror = function() {
-//       console.error('Request failed to Reach Server');
-//       callAdsUB();
-//     };
-//     request.send();
-//   }
-//   else{
-//     if(userStatusBM == "0" || userStatusBM == "3"){
-//       callAdsUB();
-//     }
-//     else{
-//       console.log('Not Valid Traffic for openx');
-//     }
-//   }
-//
-// }
-//
-// function callAdsUB(){
-//   // googletag.pubads().refresh(mappings.slots);
-// }
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=danviet';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+  googletag.pubads().refresh(mappings.slots);
+}
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
 for(var i=0; i<slotNumbers.length;i++){

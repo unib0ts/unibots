@@ -26,7 +26,8 @@ var scripts = {
   "vjs": false,
   "vjs_logo": false,
   "vjs_ads": false,
-  "vjs_ima": false
+  "vjs_ima": false,
+  "can-autoplay":false
 }
 
 function listen_scripts(){
@@ -85,6 +86,7 @@ function checkUnmutedAutoplaySupport() {
       // Unmuted autoplay is not allowed.
       checkMutedAutoplaySupport();
     } else {
+      console.log('Unmuted autoplay is allowed.');
       // Unmuted autoplay is allowed.
       autoplayAllowed = true;
       autoplayRequiresMute = false;
@@ -100,6 +102,7 @@ function checkMutedAutoplaySupport() {
       autoplayAllowed = false;
       autoplayRequiresMute = false;
     } else {
+      console.log('Muted autoplay is allowed.');
       // Muted autoplay is allowed.
       autoplayAllowed = true;
       autoplayRequiresMute = true;
@@ -156,6 +159,8 @@ function initPlayer() {
       ubplayer.muted(true);
     }
     ubplayer.play();
+    // console.log('player_plays_here');
+    ubplayer.muted(true);
   }
 
   if (!autoplayAllowed) {
@@ -165,6 +170,7 @@ function initPlayer() {
       navigator.userAgent.match(/Android/i)
     ) {
       startEvent = "touchend";
+      ubplayer.muted(true);
     }
 
     wrapperDiv = document.getElementById("content_video");

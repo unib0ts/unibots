@@ -83,7 +83,7 @@ var wrapperDiv;
 
 function checkUnmutedAutoplaySupport() {
   canAutoplay
-    .video({timeout: 100, muted: false})
+    .video({timeout: 200, muted: false})
     .then(function(response) {
         if(response.result === false) {
           // Unmuted autoplay is not allowed.
@@ -99,7 +99,7 @@ function checkUnmutedAutoplaySupport() {
 
 function checkMutedAutoplaySupport() {
   canAutoplay
-    .video({timeout: 100, muted: true})
+    .video({timeout: 200, muted: true})
     .then(function(response) {
         if(response.result === false) {
           console.log("// Muted autoplay is not allowed.");
@@ -125,7 +125,7 @@ function initPlayer() {
 
   ubPlayer = videojs('content_video', vjsOptions);
   ubPlayer.src({ type: "video/mp4", src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" });
-  
+
   var imaOptions = {
     id: "content_video",
     // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
@@ -168,7 +168,7 @@ function initPlayer() {
 }
 
 function initAdDisplayContainer() {
-    player.ima.initializeAdDisplayContainer();
+    ubPlayer.ima.initializeAdDisplayContainer();
     wrapperDiv.removeEventListener(startEvent, initAdDisplayContainer);
 }
 

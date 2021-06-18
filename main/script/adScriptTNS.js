@@ -100,8 +100,8 @@ var adUnits = [];
             	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
               { bidder: 'sovrn', params: {tagid: '714235'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681032'} },
-              { bidder: 'criteo', params: {networkId: '10542'} },
-              { bidder: 'criteointl', params: {networkId: '10545'} },
+              // { bidder: 'criteo', params: {networkId: '10542'} },
+              // { bidder: 'criteointl', params: {networkId: '10545'} },
               { bidder: 'openx', params: {unit: '543530171', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               { bidder: 'nobid', params: { siteId : '22027218255'} },
               { bidder: 'smartadserver', params: { siteId: '362153', pageId: '1289654', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
@@ -608,8 +608,8 @@ function checkRemnantUnits(){
             	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
               { bidder: 'sovrn', params: {tagid: '735451'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681032'} },
-              { bidder: 'criteo', params: {networkId: '10542'} },
-              { bidder: 'criteointl', params: {networkId: '10545'} },
+              // { bidder: 'criteo', params: {networkId: '10542'} },
+              // { bidder: 'criteointl', params: {networkId: '10545'} },
               // { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
               { bidder: 'nobid', params: { siteId : '22027218255'} },
               { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -656,8 +656,8 @@ function checkRemnantUnits(){
             	{ bidder: 'emx_digital', params: { tagid: '97537' } }, /* sizeless */
               { bidder: 'sovrn', params: {tagid: '735548'} },
               // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323916', zoneId: '1681302'} },
-              { bidder: 'criteo', params: {networkId: '10542'} },
-              { bidder: 'criteointl', params: {networkId: '10545'} },
+              // { bidder: 'criteo', params: {networkId: '10542'} },
+              // { bidder: 'criteointl', params: {networkId: '10545'} },
               // { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
               { bidder: 'nobid', params: { siteId : '22027218255'} },
               { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },

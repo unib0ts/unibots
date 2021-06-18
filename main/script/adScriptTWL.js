@@ -57,8 +57,8 @@ var adUnits = [];
         	{ bidder: '33across', params: { siteId : 'ai6yU0WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '107912' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '714244'} },
-          { bidder: 'criteo', params: {networkId: '10542'} },
-          { bidder: 'criteointl', params: {networkId: '10545'} },
+          // { bidder: 'criteo', params: {networkId: '10542'} },
+          // { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'openx', params: {unit: '543530206', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926310'} },
@@ -93,8 +93,8 @@ if (document.getElementById('thirdPartyAd')) {
              // { bidder: 'openx', params: {unit: '54353020', delDomain: 'unibots-d.openx.net'} },
            	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926308'} },
-             { bidder: 'criteo', params: {networkId: '10542'} },
-             { bidder: 'criteointl', params: {networkId: '10545'} },
+             // { bidder: 'criteo', params: {networkId: '10542'} },
+             // { bidder: 'criteointl', params: {networkId: '10545'} },
              { bidder: 'nobid', params: { siteId : '22027067872'} },
              { bidder: 'adkernel', params: {zoneId: '126376', host: 'cpm.fmlabsonline.com'} },
              { bidder: 'smartadserver', params: { siteId: '362155', pageId: '1289656', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
@@ -127,8 +127,8 @@ if (document.getElementById('ubad')) {
            { bidder: 'nobid', params: { siteId : '22027067872'} },
            { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2926309'} },
-           { bidder: 'criteo', params: {networkId: '10542'} },
-           { bidder: 'criteointl', params: {networkId: '10545'} },
+           // { bidder: 'criteo', params: {networkId: '10542'} },
+           // { bidder: 'criteointl', params: {networkId: '10545'} },
            { bidder: 'adkernel', params: {zoneId: '126376', host: 'cpm.fmlabsonline.com'} },
            { bidder: 'nobid', params: { siteId : '22027067872'} },
            { bidder: 'smartadserver', params: { siteId: '362155', pageId: '1289656', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

@@ -58,7 +58,7 @@ ima.onload = function(){
 }
 
 function load_player(){
-  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small vjs-16-9" playsinline controls="true" preload="auto"></video>';
+  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small vjs-16-9" autoplay muted playsinline controls="true" preload="auto"></video>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
 }
@@ -122,6 +122,7 @@ function initPlayer() {
   var imaOptions = {
     id: "content_video",
     // vastLoadTimeout: 7000,
+    disableCustomPlaybackForIOS10Plus:true,
     adTagUrl:"https://video.unibots.in/ads.xml",
     contribAdsSettings: {
       debug: true,

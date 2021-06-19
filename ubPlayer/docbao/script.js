@@ -59,7 +59,7 @@ ima.onload = function(){
 }
 
 function load_player(){
-  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small vjs-16-9" autoplay muted playsinline controls="true" preload="auto"></video>';
+  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small vjs-16-9" playsinline controls="true" preload="auto"></video>';
   // var myPlayer = '<video id="content_video" class="video-js vjs-default-skin" poster = "../posters/bbb_poster.jpg" controls preload="auto" width="640"   height="360" playsinline><source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" ></source></video>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
@@ -116,8 +116,8 @@ function checkMutedAutoplaySupport() {
 
 function initPlayer() {
   var vjsOptions = {
-    autoplay: autoplayAllowed,
-    muted: autoplayRequiresMute,
+    autoplay: false,
+    muted: false,
     debug: true,
     width:320,
     height:240,
@@ -154,7 +154,15 @@ function initPlayer() {
       });
   videojs.registerComponent('CloseButton', CloseButton);
   ubPlayer.addChild('CloseButton');
-
+  
+  if (autoplayAllowed) {
+    if (autoplayRequiresMute) {
+      ubPlayer.muted(true);
+    }
+    ubPlayer.play();
+    ubPlayer.muted(true);
+  }
+  
   if (!autoplayAllowed) {
     if (navigator.userAgent.match(/iPhone/i) ||
         navigator.userAgent.match(/iPad/i) ||

@@ -25,7 +25,7 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483647}.ub-sticky-ad{width:100%;z-index:2147483647;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1622113773960-0 iframe {border: unset !important;vertical-align: unset !important;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:999}.ub-sticky-ad{width:100%;z-index:999;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1622113773960-0 iframe {border: unset !important;vertical-align: unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';

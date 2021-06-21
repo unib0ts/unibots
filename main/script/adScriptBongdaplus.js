@@ -98,14 +98,14 @@ else {
     x1.appendChild(z1);
   }
 
-  if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+  // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
     z1= document.createElement('div');
     z1.id = 'ub-popup-ad-container';
     z1.className = 'ub-popup-ad-container';
     z1.innerHTML ='<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
-  }
+  // }
     // document.querySelector('.ub-popup-ad').innerHTML=mybotPopad;
       // var mybotpopupad = document.querySelector(".ub-popup-ad");
       //   mybotpopupad.classList.add("show");
@@ -182,7 +182,7 @@ const customConfigObjectA = {
 };
 
 if (mobileCheck()) {
-if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+// if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
 var adUnits = [
     {
         code: '/22140546871/bongdaplus.vn_popup_fluid_336x280',
@@ -208,7 +208,7 @@ var adUnits = [
         ]
     }
   ];
-  }
+  // }
 }
 
 var googletag = googletag || {};

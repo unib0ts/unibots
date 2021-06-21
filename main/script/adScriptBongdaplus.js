@@ -1377,7 +1377,7 @@ if (mobileCheck()) {
       x = googletag.pubads().getSlots();
       x_len = x.length;
       for (i = 0; i < x_len; i++) {
-        if (mapping_full_hb.adCode[i] == "/22140546871/bongdaplus.vn_mb_anchor_320x100") {
+        if (mapping_full_hb.adCode[i] == "/22140546871/bongdaplus.vn_mb_anchor_320x50") {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             // if (event.slot === mapping_full_hb.slotNumbers[i]) {
               var nodes = document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes;

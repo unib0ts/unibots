@@ -1082,9 +1082,9 @@ else{
 
 function checkHBUnits(){
   if (mobileCheck()) {
-    if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+    // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
       addNewsBotAd();
-    }
+    // }
   }
   callMapUnits();
 

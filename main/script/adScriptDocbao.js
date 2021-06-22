@@ -1165,7 +1165,7 @@ if (mobileCheck()) {
   }
   else {
     z3= document.createElement('div');
-    z3.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span>';
+    z3.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyadPassbck()">\u0078</span>';
     x3 = document.getElementById('gpt-ub125');
     x3.appendChild(z3);
     document.getElementById('close_ub-sticky-ad').classList.add('close_ub-sticky-ad');
@@ -1180,4 +1180,9 @@ if (mobileCheck()) {
           });
     });
   }
+}
+
+
+function mybotubstickyadPassbck() {
+ document.getElementById('gpt-ub125').style.display='none';
 }

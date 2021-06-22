@@ -105,7 +105,7 @@ if (!mobileCheck()) {
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';
-    z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019421633-0"></div';
+    z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019421633-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
   }
@@ -116,7 +116,7 @@ else {
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-container';
     z1.className = 'ub-sticky-ad-container';
-    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616581723395-0"></div';
+    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616581723395-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
   }
@@ -1161,6 +1161,23 @@ if (mobileCheck()) {
           break;
         }
       }
+    });
+  }
+  else {
+    z3= document.createElement('div');
+    z3.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span>';
+    x3 = document.getElementById('gpt-ub125');
+    x3.appendChild(z3);
+    document.getElementById('close_ub-sticky-ad').classList.add('close_ub-sticky-ad');
+    googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            // if (event.slot === mapping_full_hb.slotNumbers[i]) {
+              var nodes = document.getElementById('gpt-ub125').childNodes[2].childNodes;
+              if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+                document.getElementById('close_ub-sticky-ad').style.display = 'block';
+              }
+            // }
+          });
     });
   }
 }

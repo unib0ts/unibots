@@ -93,7 +93,7 @@ else {
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-container';
     z1.className = 'ub-sticky-ad-container';
-    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1614845787563-0"></div';
+    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1614845787563-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
   }

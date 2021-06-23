@@ -59,7 +59,7 @@ ima.onload = function(){
 }
 
 function load_player(){
-  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small vjs-16-9" playsinline controls="true" preload="auto"></video>';
+  var myPlayer = '<video id="content_video" class="video-js vjs-layout-small" playsinline controls="true" preload="auto"></video>';
   // var myPlayer = '<video id="content_video" class="video-js vjs-default-skin" poster = "../posters/bbb_poster.jpg" controls preload="auto" width="640"   height="360" playsinline><source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" ></source></video>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
@@ -115,6 +115,10 @@ function checkMutedAutoplaySupport() {
 }
 
 function initPlayer() {
+
+  var video = document.getElementById('content_video');
+  videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+
   var vjsOptions = {
     autoplay: false,
     muted: false,
@@ -130,6 +134,7 @@ function initPlayer() {
     id: "content_video",
     // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
     adTagUrl:"https://video.unibots.in/ads.xml",
+    disableCustomPlaybackForIOS10Plus: true,
     contribAdsSettings: {
       debug: true,
       timeout: 8000,
@@ -159,10 +164,13 @@ function initPlayer() {
     if (autoplayRequiresMute) {
       ubPlayer.muted(true);
     }
+    ubPlayer.pause();
     ubPlayer.play();
   }
   
   if (!autoplayAllowed) {
+    ubPlayer.pause();
+    ubPlayer.play();
     if (navigator.userAgent.match(/iPhone/i) ||
         navigator.userAgent.match(/iPad/i) ||
         navigator.userAgent.match(/Android/i)) {

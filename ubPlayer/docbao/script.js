@@ -83,7 +83,7 @@ var wrapperDiv;
 
 function checkUnmutedAutoplaySupport() {
   canAutoplay
-    .video({timeout: 200, muted: false})
+    .video({timeout: 500, muted: false})
     .then(function(response) {
         if(response.result === false) {
           // Unmuted autoplay is not allowed.
@@ -99,7 +99,7 @@ function checkUnmutedAutoplaySupport() {
 
 function checkMutedAutoplaySupport() {
   canAutoplay
-    .video({timeout: 200, muted: true})
+    .video({timeout: 500, muted: true})
     .then(function(response) {
         if(response.result === false) {
           console.log("// Muted autoplay is not allowed.");
@@ -160,7 +160,6 @@ function initPlayer() {
       ubPlayer.muted(true);
     }
     ubPlayer.play();
-    ubPlayer.muted(true);
   }
   
   if (!autoplayAllowed) {

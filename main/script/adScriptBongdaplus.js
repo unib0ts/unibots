@@ -142,7 +142,7 @@ var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
-var div_1_sizes =  [[336, 280], 'fluid', [300, 250]];
+var div_1_sizes = [[300, 600], [300, 250], 'fluid', [336, 280]];
 
 var GEO_CODE = '';
 (function (){

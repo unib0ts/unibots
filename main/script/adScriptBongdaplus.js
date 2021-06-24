@@ -157,13 +157,10 @@ var ub_divsToCheck = {
 			}
 		}
 		if (!flag && checkFlag) {
-			// console.log("all loaded");
-			// console.log(ub_divsToCheck);
-			// ub_ad();
       var ub_vs = document.createElement('script');
       ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js";
       ub_vs.type = "text/javascript";
-      document.querySelector('#unibots-video-mobile').appendChild(ub_vs);
+      document.getElementsByTagName('head')[0].appendChild(ub_vs);
 			clearInterval(ub_interval);
 		}
 	}, 500);

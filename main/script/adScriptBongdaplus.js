@@ -138,6 +138,13 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
+var ubvideo = document.createElement('script');
+// s1.async = "async";
+ubvideo.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js";
+ubvideo.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(ubvideo);
+
+
 var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;

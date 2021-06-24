@@ -7,20 +7,20 @@ if(typeof customConfigObjectA === 'undefined'){
     // }
 
     //load apstag.js library
-    !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-
-    var requestManager = {
-        adserverRequestSent: false,
-        aps: false,
-        prebid: false
-    };
-
-    //initialize the apstag.js library on the page to allow bidding
-    apstag.init({
-         pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-         adServer: 'googletag'
-    });
-    apSlots = []
+    // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+    //
+    // var requestManager = {
+    //     adserverRequestSent: false,
+    //     aps: false,
+    //     prebid: false
+    // };
+    //
+    // //initialize the apstag.js library on the page to allow bidding
+    // apstag.init({
+    //      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+    //      adServer: 'googletag'
+    // });
+    // apSlots = []
 
     // var s3 = document.createElement('script');
     // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
@@ -326,17 +326,17 @@ if(typeof customConfigObjectA === 'undefined'){
               ubpbjs.que.push(function() {
                   ubpbjs.setTargetingForGPTAsync();
                   googletag.pubads().refresh([ub_slot]);
-                  var adsCalled = false;
-                  for(var i=0;i<x.length;i++){
-                    var bc = x[i].bidderCode;
-                    if(bc=="openx"){
-                      adsCalled = true;
-                      callBotman();
-                    }
-                  }
-                  if(!adsCalled){
-                    callAdsUB();
-                  }
+                  // var adsCalled = false;
+                  // for(var i=0;i<x.length;i++){
+                  //   var bc = x[i].bidderCode;
+                  //   if(bc=="openx"){
+                  //     adsCalled = true;
+                  //     callBotman();
+                  //   }
+                  // }
+                  // if(!adsCalled){
+                  //   callAdsUB();
+                  // }
               });
             });
           }
@@ -350,73 +350,73 @@ if(typeof customConfigObjectA === 'undefined'){
         googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                // googletag.pubads().refresh(mappings.slots);
-                var x = ubpbjs.getAllPrebidWinningBids();
-                var adsCalled = false;
-                for(var i=0;i<x.length;i++){
-                  var bc = x[i].bidderCode;
-                  if(bc=="openx"){
-                    adsCalled = true;
-                    callBotman();
-                  }
-                }
-                if(!adsCalled){
-                  callAdsUB();
-                }
+                googletag.pubads().refresh(mappings.slots);
+                // var x = ubpbjs.getAllPrebidWinningBids();
+                // var adsCalled = false;
+                // for(var i=0;i<x.length;i++){
+                //   var bc = x[i].bidderCode;
+                //   if(bc=="openx"){
+                //     adsCalled = true;
+                //     callBotman();
+                //   }
+                // }
+                // if(!adsCalled){
+                //   callAdsUB();
+                // }
             });
         });
     }
 
-    var botmanCalled = false;
-    var userStatusBM = '';
-    function callBotman(){
-      if(userStatusBM == ''){
-        var request = new XMLHttpRequest();
-        var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=indianrailways';
-        request.open('GET', url, true);
-        request.onload = function() {
-          if (request.status >= 200 && request.status < 400) {
-            var data = request.responseText;
-            if(data != ""){
-              data = JSON.parse(data);
-              userStatusBM = data;
-              if(userStatusBM == "0" || userStatusBM == "3"){
-                callAdsUB();
-              }
-              else{
-                console.log('Not Valid Traffic for openx');
-              }
-            }
-            else{
-              console.error('Data not returned from server');
-              callAdsUB();
-            }
-          }
-          else {
-            console.error('Request failed from server');
-            callAdsUB();
-          }
-        };
-        request.onerror = function() {
-          console.error('Request failed to Reach Server');
-          callAdsUB();
-        };
-        request.send();
-      }
-      else{
-        if(userStatusBM == "0" || userStatusBM == "3"){
-          callAdsUB();
-        }
-        else{
-          console.log('Not Valid Traffic for openx');
-        }
-      }
-
-    }
-
-    function callAdsUB(){
-    	// googletag.pubads().refresh(mappings.slots);
-    }
+    // var botmanCalled = false;
+    // var userStatusBM = '';
+    // function callBotman(){
+    //   if(userStatusBM == ''){
+    //     var request = new XMLHttpRequest();
+    //     var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=indianrailways';
+    //     request.open('GET', url, true);
+    //     request.onload = function() {
+    //       if (request.status >= 200 && request.status < 400) {
+    //         var data = request.responseText;
+    //         if(data != ""){
+    //           data = JSON.parse(data);
+    //           userStatusBM = data;
+    //           if(userStatusBM == "0" || userStatusBM == "3"){
+    //             callAdsUB();
+    //           }
+    //           else{
+    //             console.log('Not Valid Traffic for openx');
+    //           }
+    //         }
+    //         else{
+    //           console.error('Data not returned from server');
+    //           callAdsUB();
+    //         }
+    //       }
+    //       else {
+    //         console.error('Request failed from server');
+    //         callAdsUB();
+    //       }
+    //     };
+    //     request.onerror = function() {
+    //       console.error('Request failed to Reach Server');
+    //       callAdsUB();
+    //     };
+    //     request.send();
+    //   }
+    //   else{
+    //     if(userStatusBM == "0" || userStatusBM == "3"){
+    //       callAdsUB();
+    //     }
+    //     else{
+    //       console.log('Not Valid Traffic for openx');
+    //     }
+    //   }
+    //
+    // }
+    //
+    // function callAdsUB(){
+    // 	// googletag.pubads().refresh(mappings.slots);
+    // }
 
     function googleDefine(slotNumbers, adCode, sizes, adId){
       for(var i=0; i<slotNumbers.length;i++){
@@ -440,20 +440,20 @@ if(typeof customConfigObjectA === 'undefined'){
     function ubad1() {
       if (document.getElementById('ATD_Ad_IR_320x50')) {
         document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
-        apSlotTemp = {
-          slotID: 'div-gpt-ad-1601280931672-0',
-          slotName: '/21956916242/indianrailways_hb_320x50',
-          sizes: mappings.sizes,
-        }
-        apSlots.push(apSlotTemp);
+        // apSlotTemp = {
+        //   slotID: 'div-gpt-ad-1601280931672-0',
+        //   slotName: '/21956916242/indianrailways_hb_320x50',
+        //   sizes: mappings.sizes,
+        // }
+        // apSlots.push(apSlotTemp);
 
         mappings.slotNumbers.push(1);
         mappings.adCode.push('/21956916242/indianrailways_hb_320x50');
         mappings.sizes.push(div_1_sizes);
         mappings.adId.push('div-gpt-ad-1601280931672-0');
         googletag.cmd.push(function() {
-          callAPStagBids(); //Ap part
-          callAPSAds(mappings.adCode, mappings.slots);
+          // callAPStagBids(); //Ap part
+          // callAPSAds(mappings.adCode, mappings.slots);
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             if (event.slot === ub_slot1) {
               ub_checkAdRendered('div-gpt-ad-1601280931672-0', ub_slot1, ['/21956916242/indianrailways_hb_320x50']);
@@ -466,12 +466,12 @@ if(typeof customConfigObjectA === 'undefined'){
       if (document.getElementById('ATD_Ad_IR_320x50')) {
         document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot2;
 
-        apSlotTemp = {
-          slotID: 'div-gpt-ad-1602951981947-0',
-          slotName: '/22140546871/indianrailways_hb_320x50',
-          sizes: mappings.sizes,
-        }
-        apSlots.push(apSlotTemp);
+        // apSlotTemp = {
+        //   slotID: 'div-gpt-ad-1602951981947-0',
+        //   slotName: '/22140546871/indianrailways_hb_320x50',
+        //   sizes: mappings.sizes,
+        // }
+        // apSlots.push(apSlotTemp);
 
 
         mappings.slotNumbers.push(2);
@@ -479,8 +479,8 @@ if(typeof customConfigObjectA === 'undefined'){
         mappings.sizes.push(div_1_sizes);
         mappings.adId.push('div-gpt-ad-1602951981947-0');
         googletag.cmd.push(function() {
-          callAPStagBids(); //Ap part
-          callAPSAds(mappings.adCode, mappings.slots);
+          // callAPStagBids(); //Ap part
+          // callAPSAds(mappings.adCode, mappings.slots);
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             if (event.slot === ub_slot2) {
               ub_checkAdRendered('div-gpt-ad-1602951981947-0', ub_slot2, ['/22140546871/indianrailways_hb_320x50']);
@@ -493,19 +493,19 @@ if(typeof customConfigObjectA === 'undefined'){
       if (document.getElementById('ATD_Ad_IR_320x50')) {
         document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot3;
 
-        apSlotTemp = {
-          slotID: 'div-gpt-ad-1602953575560-0',
-          slotName: '/22142075243/indianrailways_hb_320x50',
-          sizes: mappings.sizes,
-        }
-        apSlots.push(apSlotTemp);
+        // apSlotTemp = {
+        //   slotID: 'div-gpt-ad-1602953575560-0',
+        //   slotName: '/22142075243/indianrailways_hb_320x50',
+        //   sizes: mappings.sizes,
+        // }
+        // apSlots.push(apSlotTemp);
         mappings.slotNumbers.push(3);
         mappings.adCode.push('/22142075243/indianrailways_hb_320x50');
         mappings.sizes.push(div_1_sizes);
         mappings.adId.push('div-gpt-ad-1602953575560-0');
         googletag.cmd.push(function() {
-          callAPStagBids(); //Ap part
-          callAPSAds(mappings.adCode, mappings.slots);
+          // callAPStagBids(); //Ap part
+          // callAPSAds(mappings.adCode, mappings.slots);
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             if (event.slot === ub_slot3) {
               ub_checkAdRendered('div-gpt-ad-1602953575560-0', ub_slot3, ['/22142075243/indianrailways_hb_320x50']);
@@ -528,54 +528,54 @@ if(typeof customConfigObjectA === 'undefined'){
   	  // }, 500);
     }
 
-    function callAPSAds(adCode, ub_slot){
-      ubpbjs.que.push(function(){
-        ubpbjs.requestBids({
-          timeout: PREBID_TIMEOUT,
-          adUnits: adUnits,
-          adUnitCodes: adCode,
-          bidsBackHandler: function() {
-            // ubpbjs.initAdserverSetHB = true;
-            googletag.cmd.push(function() {
-              ubpbjs.que.push(function() {
-                  ubpbjs.setTargetingForGPTAsync();
-                  requestManager.prebid = true;
-                  biddersBack();
-                  // googletag.pubads().refresh(ub_slot);
-              });
-            });
-          }
-        });
-      });
-    }
-    function callAPStagBids(){
-      apstag.fetchBids({
-        slots: apSlots,
-         timeout: 2000
-      },function(bids) {
-              googletag.cmd.push(function() {
-                  apstag.setDisplayBids();
-                  requestManager.aps = true;
-                  biddersBack();
-              });
-          }
-      );
-    }
-    function biddersBack() {
-        if (requestManager.aps && requestManager.prebid) {
-            sendAdserverRequest();
-        }
-        return;
-    }
-    function sendAdserverRequest() {
-        if (requestManager.adserverRequestSent === true) {
-            return;
-        }
-        requestManager.adserverRequestSent = true;
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh(mappings.slots);
-        });
-    }
+    // function callAPSAds(adCode, ub_slot){
+    //   ubpbjs.que.push(function(){
+    //     ubpbjs.requestBids({
+    //       timeout: PREBID_TIMEOUT,
+    //       adUnits: adUnits,
+    //       adUnitCodes: adCode,
+    //       bidsBackHandler: function() {
+    //         // ubpbjs.initAdserverSetHB = true;
+    //         googletag.cmd.push(function() {
+    //           ubpbjs.que.push(function() {
+    //               ubpbjs.setTargetingForGPTAsync();
+    //               requestManager.prebid = true;
+    //               biddersBack();
+    //               // googletag.pubads().refresh(ub_slot);
+    //           });
+    //         });
+    //       }
+    //     });
+    //   });
+    // }
+    // function callAPStagBids(){
+    //   apstag.fetchBids({
+    //     slots: apSlots,
+    //      timeout: 2000
+    //   },function(bids) {
+    //           googletag.cmd.push(function() {
+    //               apstag.setDisplayBids();
+    //               requestManager.aps = true;
+    //               biddersBack();
+    //           });
+    //       }
+    //   );
+    // }
+    // function biddersBack() {
+    //     if (requestManager.aps && requestManager.prebid) {
+    //         sendAdserverRequest();
+    //     }
+    //     return;
+    // }
+    // function sendAdserverRequest() {
+    //     if (requestManager.adserverRequestSent === true) {
+    //         return;
+    //     }
+    //     requestManager.adserverRequestSent = true;
+    //     googletag.cmd.push(function() {
+    //         googletag.pubads().refresh(mappings.slots);
+    //     });
+    // }
     // setTimeout(function() {
     //     initAdserver();
     // }, FAILSAFE_TIMEOUT);

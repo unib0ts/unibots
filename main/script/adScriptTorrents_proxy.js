@@ -5,6 +5,33 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
+var ub_divsToCheck = {
+	"unibots-video": false,
+};
+
+  var ub_interval = setInterval(() => {
+		flag = false;
+		checkFlag = false;
+		for (x in ub_divsToCheck) {
+			if (document.getElementById(x) !== null) {
+				ub_divsToCheck[x] = true;
+				checkFlag = true;
+			}
+		}
+		for (x in ub_divsToCheck) {
+			if (ub_divsToCheck[x] == false) {
+				flag = true;
+			}
+		}
+		if (!flag && checkFlag) {
+      var ub_vs = document.createElement('script');
+      ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/torrent-proxy/script.min.js";
+      ub_vs.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(ub_vs);
+			clearInterval(ub_interval);
+		}
+	}, 500);
+
 var GEO_CODE = '';
 (function (){
   var request = new XMLHttpRequest();

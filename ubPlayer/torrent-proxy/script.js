@@ -59,7 +59,9 @@ ima.onload = function(){
 }
 
 function load_player(){
+  //for unsticky
   // var myPlayer = '<video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video>';
+  //for Sticky
   var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
@@ -163,11 +165,20 @@ function initPlayer() {
         },
         handleClick: function() {
           this.player().dispose();
+          disposeBox();
         }
       });
   videojs.registerComponent('CloseButton', CloseButton);
   ubPlayer.addChild('CloseButton');
   
+  //close player on video end.
+  ubPlayer.on('timeupdate', function(){
+      if(ubPlayer.currentTime() == ubPlayer.duration()){
+          console.log('video is ended');
+          ubPlayer.dispose();
+      }
+  });
+
   if (autoplayAllowed) {
     if (autoplayRequiresMute) {
       ubPlayer.muted(true);
@@ -175,7 +186,7 @@ function initPlayer() {
     setInterval(()=>{
       ubPlayer.pause();
       ubPlayer.play();
-    }, 1000);
+    }, 1000); 
   }
   
   if (!autoplayAllowed) {
@@ -190,7 +201,7 @@ function initPlayer() {
     wrapperDiv = document.getElementById('content_video');
     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
   }
-
+  
   function isInViewport(el) {
       const rect = el.getBoundingClientRect();
       return  rect.bottom > 0 &&
@@ -216,6 +227,9 @@ function initPlayer() {
   // }, {
   //     passive: true
   });
+  function disposeBox(){
+    document.getElementById("ubVideo").style.display = "none";
+  }
 }
 
 function initAdDisplayContainer() {

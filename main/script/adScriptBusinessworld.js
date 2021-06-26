@@ -18,6 +18,11 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
+var ub_vs = document.createElement('script');
+ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/businessworld/script.min.js";
+ub_vs.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(ub_vs);
+
 var GEO_CODE = '';
 (function (){
   var request = new XMLHttpRequest();

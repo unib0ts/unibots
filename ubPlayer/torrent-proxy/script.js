@@ -59,7 +59,9 @@ ima.onload = function(){
 }
 
 function load_player(){
+  //for unsticky
   // var myPlayer = '<video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video>';
+  //for Sticky
   var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
@@ -163,6 +165,7 @@ function initPlayer() {
         },
         handleClick: function() {
           this.player().dispose();
+          disposeBox();
         }
       });
   videojs.registerComponent('CloseButton', CloseButton);
@@ -175,7 +178,7 @@ function initPlayer() {
     setInterval(()=>{
       ubPlayer.pause();
       ubPlayer.play();
-    }, 1000);
+    }, 1000); 
   }
   
   if (!autoplayAllowed) {
@@ -216,6 +219,9 @@ function initPlayer() {
   // }, {
   //     passive: true
   });
+  function disposeBox(){
+    document.getElementById("ubVideo").style.display = "none";
+  }
 }
 
 function initAdDisplayContainer() {

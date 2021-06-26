@@ -118,8 +118,8 @@ function checkMutedAutoplaySupport() {
 
 function initPlayer() {
 
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  // var isMobile = true;
+  // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  var isMobile = true;
 
   var video = document.getElementById('content_video');
   videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
@@ -130,20 +130,19 @@ function initPlayer() {
     // fluid:true,
     // fluid: isMobile ? true : false,
     debug: true,
-    width: isMobile ? 256 : 400,
-    height: isMobile ? 144 : 225,
+    width: isMobile ? 320 : 400,
+    height: isMobile ? 240 : 225,
   }
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
   ubPlayer.src({ type: "video/mp4", src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" });
-  // ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
   ubPlayer.responsive(true);
 
   var imaOptions = {
     id: "content_video",
     // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl:"https://video.unibots.in/clients/businessworld/ads.xml",
+    adTagUrl:"https://video.unibots.in/clients/irctc/ads.xml",
     disableCustomPlaybackForIOS10Plus: true,
     contribAdsSettings: {
       debug: true,
@@ -165,6 +164,7 @@ function initPlayer() {
         },
         handleClick: function() {
           this.player().dispose();
+          disposeBox();
         }
       });
   videojs.registerComponent('CloseButton', CloseButton);
@@ -177,7 +177,7 @@ function initPlayer() {
     setTimeout(()=>{
       ubPlayer.pause();
       ubPlayer.play();
-    }, 1000); 
+    }, 1000);
   }
   
   if (!autoplayAllowed) {
@@ -192,12 +192,7 @@ function initPlayer() {
     wrapperDiv = document.getElementById('content_video');
     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
   }
-  ubPlayer.on('timeupdate', function(){
-      if(ubPlayer.currentTime() == ubPlayer.duration()){
-          console.log('video is ended');
-          ubPlayer.dispose();
-      }
-  });
+
   // function isInViewport(el) {
   //     const rect = el.getBoundingClientRect();
   //     return  rect.bottom > 0 &&
@@ -223,6 +218,9 @@ function initPlayer() {
   // // }, {
   // //     passive: true
   // });
+  function disposeBox(){
+    document.getElementById("ubVideo").style.display = "none";
+  }
 }
 
 function initAdDisplayContainer() {
@@ -234,4 +232,4 @@ var startEvent = 'click';
 checkUnmutedAutoplaySupport();
 
 }
- function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='<div id="unibots-video"></div>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='#videoBox{border:2px solid #212223;transition:0.5s}video{max-width:100%;vertical-align:bottom}#videoBox.ubsticky{position:fixed;bottom:0;right:0;width:400px;z-index:999;animation:an 0.8s}#ubVideo{border:4px solid #212223;transition:0.5s}.ubsticky{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-20px!important;top:-3em!important}.ub_player,#unibots-video{max-width:410px;margin:20px 0}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){.ubsticky{width:256px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+ function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='<div id="unibots-video"></div>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='#videoBox{border:2px solid #212223;transition:0.5s}video{max-width:100%;vertical-align:bottom}#videoBox.ubsticky{position:fixed;bottom:0;right:0;width:400px;z-index:999;animation:an 0.8s}#ubVideo{border:4px solid #212223;transition:0.5s}.ubsticky{position:fixed;bottom:0;right:10px;width:320px;z-index:999999;animation:an 0.8s}.stikcy-out{max-width:640px}.video-js .vjs-control.vjs-close-button{right:-22px!important;top:-3em!important}.ub_player,#unibots-video{max-width:320px;margin:20px 0}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){.ubsticky{width:320px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

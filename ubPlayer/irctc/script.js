@@ -136,7 +136,7 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" });
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/unib0ts/unibots@v1.30.257/ubPlayer/irctc/irctc.mp4" });
   ubPlayer.responsive(true);
 
   var imaOptions = {
@@ -170,6 +170,14 @@ function initPlayer() {
   videojs.registerComponent('CloseButton', CloseButton);
   ubPlayer.addChild('CloseButton');
   
+  //close player on video end.
+  ubPlayer.on('timeupdate', function(){
+      if(ubPlayer.currentTime() == ubPlayer.duration()){
+          console.log('video is ended');
+          ubPlayer.dispose();
+      }
+  });
+
   if (autoplayAllowed) {
     if (autoplayRequiresMute) {
       ubPlayer.muted(true);

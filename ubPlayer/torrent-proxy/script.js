@@ -171,6 +171,14 @@ function initPlayer() {
   videojs.registerComponent('CloseButton', CloseButton);
   ubPlayer.addChild('CloseButton');
   
+  //close player on video end.
+  ubPlayer.on('timeupdate', function(){
+      if(ubPlayer.currentTime() == ubPlayer.duration()){
+          console.log('video is ended');
+          ubPlayer.dispose();
+      }
+  });
+
   if (autoplayAllowed) {
     if (autoplayRequiresMute) {
       ubPlayer.muted(true);
@@ -193,7 +201,7 @@ function initPlayer() {
     wrapperDiv = document.getElementById('content_video');
     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
   }
-
+  
   function isInViewport(el) {
       const rect = el.getBoundingClientRect();
       return  rect.bottom > 0 &&

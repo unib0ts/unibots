@@ -165,6 +165,7 @@ function initPlayer() {
         },
         handleClick: function() {
           this.player().dispose();
+          disposeBox();
         }
       });
   videojs.registerComponent('CloseButton', CloseButton);
@@ -223,6 +224,9 @@ function initPlayer() {
   // // }, {
   // //     passive: true
   // });
+  function disposeBox(){
+    document.getElementById("ubVideo").style.display = "none";
+  }
 }
 
 function initAdDisplayContainer() {

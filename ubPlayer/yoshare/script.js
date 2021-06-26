@@ -164,6 +164,7 @@ function initPlayer() {
         },
         handleClick: function() {
           this.player().dispose();
+          disposeBox();
         }
       });
   videojs.registerComponent('CloseButton', CloseButton);
@@ -191,7 +192,13 @@ function initPlayer() {
     wrapperDiv = document.getElementById('content_video');
     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
   }
-
+  //close player on video end.
+  ubPlayer.on('timeupdate', function(){
+      if(ubPlayer.currentTime() == ubPlayer.duration()){
+          console.log('video is ended');
+          ubPlayer.dispose();
+      }
+  });
   // function isInViewport(el) {
   //     const rect = el.getBoundingClientRect();
   //     return  rect.bottom > 0 &&
@@ -217,6 +224,9 @@ function initPlayer() {
   // // }, {
   // //     passive: true
   // });
+  function disposeBox(){
+    document.getElementById("ubVideo").style.display = "none";
+  }
 }
 
 function initAdDisplayContainer() {

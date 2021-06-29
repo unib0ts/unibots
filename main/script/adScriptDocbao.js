@@ -56,7 +56,7 @@ var ub_divsToCheck = {
 			// console.log(ub_divsToCheck);
 			// ub_ad();
       var ub_vs = document.createElement('script');
-      ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.js";
+      ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js";
       ub_vs.type = "text/javascript";
       document.querySelector('#unibots-video').appendChild(ub_vs);
 			clearInterval(ub_interval);

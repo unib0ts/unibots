@@ -55,7 +55,6 @@ document.getElementsByTagName("body")[0].appendChild(ima);
 ima.onload = function(){
   load_player();
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  
 }
 
 function load_player(){

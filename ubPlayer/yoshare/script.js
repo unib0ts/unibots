@@ -147,13 +147,47 @@ function initPlayer() {
     contribAdsSettings: {
       debug: true,
       timeout: 8000,
-      prerollTimeout: 12000,
+      prerollTimeout: 8000,
       //postrollTimeout: 12000
     }
   };
   ubPlayer.ima(imaOptions);
 
-  ubPlayer.on('play',()=>{ ubPlayer.muted(true); });
+  ubPlayer.on('adserror',function(err) {
+        console.log('ads error!');
+        console.log(err);
+      }.bind(ubPlayer)
+  );
+     
+
+  if (autoplayAllowed) {
+    if (autoplayRequiresMute) {
+      ubPlayer.muted(true);
+    }
+    ubPlayer.muted(true);
+    ubPlayer.autoplay(true);
+  }
+  
+  if (!autoplayAllowed) {
+    ubPlayer.muted(true);
+    ubPlayer.autoplay(true);
+
+    if (navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/Android/i)) {
+      startEvent = 'touchend';
+    }
+
+    wrapperDiv = document.getElementById('content_video');
+    wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
+  }
+
+  ubPlayer.on('play', () => { 
+    ubPlayer.volume(0.1);
+    if(!ubPlayer.muted()){
+      ubPlayer.muted(true);
+    }    
+  });
 
   var button = videojs.getComponent('CloseButton');
   var CloseButton = videojs.extend(button, {
@@ -168,29 +202,7 @@ function initPlayer() {
       });
   videojs.registerComponent('CloseButton', CloseButton);
   ubPlayer.addChild('CloseButton');
-  
-  if (autoplayAllowed) {
-    if (autoplayRequiresMute) {
-      ubPlayer.muted(true);
-    }
-    setTimeout(()=>{
-      ubPlayer.pause();
-      ubPlayer.play();
-    }, 500);
-  }
-  
-  if (!autoplayAllowed) {
-    ubPlayer.pause();
-    ubPlayer.play();
-    if (navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
-        navigator.userAgent.match(/Android/i)) {
-      startEvent = 'touchend';
-    }
 
-    wrapperDiv = document.getElementById('content_video');
-    wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
-  }
   //close player on video end.
   ubPlayer.on('timeupdate', function(){
       if(ubPlayer.currentTime() == ubPlayer.duration()){

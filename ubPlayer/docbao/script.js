@@ -135,37 +135,41 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" });
-  // ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
-  // ubPlayer.responsive(true);
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_max_payne_2_for_pc.mp4" });
 
   var imaOptions = {
     id: "content_video",
     // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl:"https://video.unibots.in/ads.xml",
+    adTagUrl:"https://video.unibots.in/clients/docbao/ads.xml",
     disableCustomPlaybackForIOS10Plus: true,
-    contribAdsSettings: {
-      debug: true,
-      timeout: 8000,
-      prerollTimeout: 12000,
-      //postrollTimeout: 12000
-    }
+    // contribAdsSettings: {
+    //   debug: true,
+    //   timeout: 8000,
+    //   prerollTimeout: 12000,
+    //   //postrollTimeout: 12000
+    // }
   };
   ubPlayer.ima(imaOptions);
+
+  ubPlayer.on('adserror',function(err) {
+        console.log('ads error!');
+        console.log(err);
+      }.bind(ubPlayer)
+  );
+     
 
   if (autoplayAllowed) {
     if (autoplayRequiresMute) {
       ubPlayer.muted(true);
     }
-    setTimeout(()=>{
-      ubPlayer.pause(); 
-      ubPlayer.play();
-    }, 500);
+    ubPlayer.muted(true);
+    ubPlayer.autoplay(true);
   }
   
   if (!autoplayAllowed) {
-    ubPlayer.pause();
-    ubPlayer.play();
+    ubPlayer.muted(true);
+    ubPlayer.autoplay(true);
+
     if (navigator.userAgent.match(/iPhone/i) ||
         navigator.userAgent.match(/iPad/i) ||
         navigator.userAgent.match(/Android/i)) {
@@ -175,11 +179,13 @@ function initPlayer() {
     wrapperDiv = document.getElementById('content_video');
     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
   }
-  
-  video.onloadeddata= (event) => {
-    document.getElementById("ubVideo").style.border = "4px solid #212223";
-    ubPlayer.muted(true);  
-  };
+
+  ubPlayer.on('play', () => { 
+    ubPlayer.volume(0.1);
+    if(!ubPlayer.muted()){
+      ubPlayer.muted(true);
+    }    
+  });
 
   var button = videojs.getComponent('CloseButton');
   var CloseButton = videojs.extend(button, {
@@ -190,7 +196,6 @@ function initPlayer() {
         },
         handleClick: function() {
           this.player().dispose();
-          disposeBox();
         }
       });
   videojs.registerComponent('CloseButton', CloseButton);
@@ -201,7 +206,6 @@ function initPlayer() {
       if(ubPlayer.currentTime() == ubPlayer.duration()){
           console.log('video is ended');
           ubPlayer.dispose();
-          disposeBox();
       }
   });
 
@@ -233,9 +237,6 @@ function initPlayer() {
     });
   }
   
-  function disposeBox(){
-    document.getElementById("ubVideo").style.display = "none";
-  }
 }
 
 function initAdDisplayContainer() {

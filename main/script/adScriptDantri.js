@@ -14,6 +14,15 @@
   // });
   // apSlots = []
 
+  mybotGACode = 'G-J9G4W35NTP';
+  mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+
+  ub_ga= document.createElement('div');
+  ub_ga.id = 'gabywa';
+  document.getElementsByTagName('head')[0].appendChild(ub_ga);
+  document.getElementById('gabywa').innerHTML=mybotgabywa;
+  loadAd('gabywa');
+
 var s0 = document.createElement('script');
 s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
 s0.type = "text/javascript";
@@ -434,3 +443,26 @@ else{
 //         googletag.pubads().refresh(mappings.slots);
 //     });
 // }
+
+function loadAd(id, adUnits){
+	var elm = document.getElementById(id);
+	var scripts = Array(elm.querySelectorAll("script"));
+	scripts = scripts[0];
+	for(var i=0; i<scripts.length; i++) {
+		oldScript = scripts[i];
+		const newScript = document.createElement("script");
+		var scriptAttr = Array(oldScript.attributes);
+		scriptAttr = scriptAttr[0];
+		for(var j=0; j<scriptAttr.length; j++) {
+			attr = scriptAttr[j];
+			newScript.setAttribute(attr.name, attr.value);
+		}
+    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+		newScript.onload = function() {
+			if(adUnits !== undefined) {
+				smartyads.buildUnits(adUnits);
+			}
+		};
+    oldScript.parentNode.replaceChild(newScript, oldScript);
+	}
+}

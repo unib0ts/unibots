@@ -52,6 +52,15 @@ if(typeof customConfigObjectA === 'undefined'){
   // var div_4_sizes = [300, 600];
   var adUnits = [];
 
+  mybotGACode = 'G-G5S8YC5DN6';
+  mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+
+  ub_ga= document.createElement('div');
+  ub_ga.id = 'gabywa';
+  document.getElementsByTagName('head')[0].appendChild(ub_ga);
+  document.getElementById('gabywa').innerHTML=mybotgabywa;
+  loadAd('gabywa');
+
   var PREBID_TIMEOUT = 1000;
   var FAILSAFE_TIMEOUT = 3000;
   var REFRESH_TIMEOUT = 45000;

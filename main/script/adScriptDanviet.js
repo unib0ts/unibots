@@ -14,6 +14,15 @@
 // });
 // apSlots = []
 
+mybotGACode = 'UA-169191914-16';
+mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+
+ub_ga= document.createElement('div');
+ub_ga.id = 'gabywa';
+document.getElementsByTagName('head')[0].appendChild(ub_ga);
+document.getElementById('gabywa').innerHTML=mybotgabywa;
+loadAd('gabywa');
+
 var s0 = document.createElement('script');
 s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
 s0.type = "text/javascript";
@@ -47,6 +56,33 @@ if (mobileCheck()) {
   x1.appendChild(z1);
 
 }
+
+// var ub_divsToCheck = {
+// 	" unibots-video": false,
+// };
+//
+//   var ub_interval = setInterval(() => {
+// 		flag = false;
+// 		checkFlag = false;
+// 		for (x in ub_divsToCheck) {
+// 			if (document.getElementById(x) !== null) {
+// 				ub_divsToCheck[x] = true;
+// 				checkFlag = true;
+// 			}
+// 		}
+// 		for (x in ub_divsToCheck) {
+// 			if (ub_divsToCheck[x] == false) {
+// 				flag = true;
+// 			}
+// 		}
+// 		if (!flag && checkFlag) {
+//       var ub_vs = document.createElement('script');
+//       ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/danviet/script.min.js";
+//       ub_vs.type = "text/javascript";
+//       document.getElementsByTagName('head')[0].appendChild(ub_vs);
+// 			clearInterval(ub_interval);
+// 		}
+// 	}, 500);
 
 function mybotubstickyad() {
 document.getElementById('ub-sticky-ad-container').style.display='none';
@@ -436,3 +472,27 @@ googletag.cmd.push(function() {
 //         googletag.pubads().refresh(mappings.slots);
 //     });
 // }
+
+
+function loadAd(id, adUnits){
+	var elm = document.getElementById(id);
+	var scripts = Array(elm.querySelectorAll("script"));
+	scripts = scripts[0];
+	for(var i=0; i<scripts.length; i++) {
+		oldScript = scripts[i];
+		const newScript = document.createElement("script");
+		var scriptAttr = Array(oldScript.attributes);
+		scriptAttr = scriptAttr[0];
+		for(var j=0; j<scriptAttr.length; j++) {
+			attr = scriptAttr[j];
+			newScript.setAttribute(attr.name, attr.value);
+		}
+    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+		newScript.onload = function() {
+			if(adUnits !== undefined) {
+				smartyads.buildUnits(adUnits);
+			}
+		};
+    oldScript.parentNode.replaceChild(newScript, oldScript);
+	}
+}

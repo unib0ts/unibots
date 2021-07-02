@@ -70,7 +70,7 @@ if(!mobileCheck()){
       //for unsticky
       // var myPlayer = '<video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video>';
       //for Sticky
-      var myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+      var myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto" poster="https://picsum.photos/seed/picsum/640/360"></video></div>';
       // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
       document.getElementById("unibots-video").innerHTML = myPlayer;
     }
@@ -135,7 +135,7 @@ if(!mobileCheck()){
       var vjsOptions = {
         autoplay: false,
         muted: false,
-        // fluid:true,
+        bigPlayButton: false,
         // fluid: isMobile ? true : false,
         debug: true,
         width: isMobile ? 400 : 640,
@@ -144,7 +144,7 @@ if(!mobileCheck()){
       console.log(vjsOptions);
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_max_payne_2_for_pc.mp4" });
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/2/recreating_my_old_photos_-_exposing-embarrassing_myself.mp4"});
       ubPlayer.responsive(true);
 
       var imaOptions = {
@@ -157,8 +157,10 @@ if(!mobileCheck()){
           timeout: 8000,
           prerollTimeout: 12000,
           //postrollTimeout: 12000
-        }
+        },
+        adsRenderingSettings: { loadVideoTimeout: 16e3 }
       };
+      
       ubPlayer.ima(imaOptions);
 
       ubPlayer.on('adserror',function(err) {

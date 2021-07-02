@@ -62,7 +62,7 @@ function load_player(){
   //for unsticky
   // var myPlayer = '<video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video>';
   //for Sticky
-  var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="false" preload="auto"></video></div>';
   // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
   document.getElementById("unibots-video").innerHTML = myPlayer;
 }
@@ -127,7 +127,7 @@ function initPlayer() {
   var vjsOptions = {
     autoplay: false,
     muted: false,
-    // fluid:true,
+    controls:false,
     // fluid: isMobile ? true : false,
     debug: true,
     width: isMobile ? 320 : 640,
@@ -136,7 +136,7 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_max_payne_2_for_pc.mp4" });
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/2/recreating_my_old_photos_-_exposing-embarrassing_myself.mp4"});
   ubPlayer.responsive(true);
 
   var imaOptions = {
@@ -144,12 +144,13 @@ function initPlayer() {
     // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
     adTagUrl:"https://video.unibots.in/clients/danviet/ads.xml",
     disableCustomPlaybackForIOS10Plus: true,
-    // contribAdsSettings: {
-    //   debug: true,
-    //   timeout: 8000,
-    //   prerollTimeout: 12000,
-    //   //postrollTimeout: 12000
-    // }
+    contribAdsSettings: {
+      debug: true,
+      timeout: 8000,
+      prerollTimeout: 12000,
+      //postrollTimeout: 12000
+    },
+    adsRenderingSettings: { loadVideoTimeout: 16e3 }
   };
   ubPlayer.ima(imaOptions);
 
@@ -247,4 +248,4 @@ var startEvent = 'click';
 checkUnmutedAutoplaySupport();
 
 }
- function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{width:fit-content;transition:0.5s}.ubsticky{position:fixed;bottom:0;left:10px;width:400px!important;z-index:999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){.ubsticky{width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+ function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{width:fit-content;transition:0.5s}.ubsticky{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important}#unibots-video{margin:30px 0}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){#unibots-video{margin:30px 0 30px 30px!important}.ubsticky{right:10px!important;left:auto!important;width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

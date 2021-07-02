@@ -39,8 +39,10 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
 mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/close.svg">';
 
-mybotadSmall = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:100px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="7535605780"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
-mybotadTarget = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079" crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:inline-block;width:125px;height:125px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="2344527279"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+// mybotadSmall = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:100px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="7535605780"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+mybotadSmall = '<div id="div-gpt-ad-1617905562342-0"></div>'
+// mybotadTarget = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079" crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:inline-block;width:125px;height:125px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="2344527279"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+mybotadTarget = '<div id="div-gpt-ad-1625226501905-0"></div>';
 
 mybotTopBarContent = '<span class="mybotPoweredByBrand">COVID-19 CASES</span>';
 mybotBottomBarContent = '<span class="mybotPoweredBy">Powered By </span><span class="mybotPoweredByBrand">Unibots</span>';
@@ -62,7 +64,7 @@ function mybotCustomFunction() {
   document.querySelector('.mybotface5').innerHTML=mybotFace5Content;
   document.querySelector('.mybotface6').innerHTML=mybotFace6Content;
   document.getElementById('adSmall').innerHTML=mybotadSmall;
- 	loadAd('adSmall');
+ 	// loadAd('adSmall');
 
  	z1 = document.createElement('div');
  	 z1.id = 'ub_ads';
@@ -76,23 +78,23 @@ function mybotCustomFunction() {
  	 for(var mybotClosebtn of mybotClose)
  	 mybotClosebtn.innerHTML =mybotClosevar;
 
- 	 setTimeout(function () {
- 			 document.getElementById('adSmall').innerHTML='<div id="div-gpt-ad-1617905562342-0"></div>';
- 				loadAdCustomUb();
- 	 }, 45000);
+ 	 // setTimeout(function () {
+ 		// 	 document.getElementById('adSmall').innerHTML='<div id="div-gpt-ad-1617905562342-0"></div>';
+ 		// 		loadAdCustomUb();
+ 	 // }, 45000);
 
- 	 document.getElementById("ub_ads").style.display = "block";
-    document.getElementById("dragItem").style.display = "none";
+ 	 // document.getElementById("ub_ads").style.display = "block";
+   //  document.getElementById("dragItem").style.display = "none";
 
- 	 setInterval(function () {
-       if (document.getElementById("dragItem").style.display == "none") {
- 				document.getElementById("ub_ads").style.display = "none";
- 				document.getElementById("dragItem").style.display = "block";
-       }else {
- 				document.getElementById("ub_ads").style.display = "block";
- 				document.getElementById("dragItem").style.display = "none";
-       }
- 	 }, 13000);
+ 	 // setInterval(function () {
+   //     if (document.getElementById("dragItem").style.display == "none") {
+ 		// 		document.getElementById("ub_ads").style.display = "none";
+ 		// 		document.getElementById("dragItem").style.display = "block";
+   //     }else {
+ 		// 		document.getElementById("ub_ads").style.display = "block";
+ 		// 		document.getElementById("dragItem").style.display = "none";
+   //     }
+ 	 // }, 13000);
 
   var mybotTopbar = document.querySelectorAll('.mybotTopBar');
   for(var mybottopbar of mybotTopbar)
@@ -116,11 +118,7 @@ function mybotCustomFunction() {
 }
 
 function loadAdCustom() {
-	  return false;
-}
-function loadAdCustomUb() {
-  // return false;
-	// if (!mobileCheck()) {
+	  // return false;
 		var s3 = document.createElement('script');
 	    s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
 	    s3.async = true;
@@ -143,10 +141,7 @@ function loadAdCustomUb() {
 		    s2.type = "text/javascript";
 		    document.getElementsByTagName('head')[0].appendChild(s2);
 		}
-	}
-	// else {
-	// 	return;
-	// }
+}
 
 // =============================================================================
 // Change the code from here
@@ -568,77 +563,84 @@ function putData(mybotDataSet) {
 
 		country_activecases = changeNumberFormat(mybotDataSet["data"].country.totalActive);
 		country_deathcases = changeNumberFormat(mybotDataSet["data"].country.deaths);
-		country_newcases = changeNumberFormat(mybotDataSet["data"].country.newActive);
+		country_newcases = changeNumberFormat(mybotDataSet["data"].country.newCases);
 		country_newdeathcases = mybotDataSet["data"].country.newDeaths;
 		country_cases = changeNumberFormat(mybotDataSet["data"].country.cases);
-		country_recovered = changeNumberFormat(mybotDataSet["data"].country.newRecovered);
+		country_newrecovered = changeNumberFormat(mybotDataSet["data"].country.newRecovered);
 		country_vaccinated = changeNumberFormat(mybotDataSet["data"].country.vaccinated);
+		country_positivity = mybotDataSet["data"].country.positivityIndia;
     country_name = mybotDataSet["data"].country.location;
 
-		mybotStatedata = mybotDataSet["data"]["states"][mybotStateName];
-		state_activecases = changeNumberFormat(mybotStatedata.totalActive);
-		state_cases = changeNumberFormat(mybotStatedata.totalConfirmed);
-		state_deathcases = changeNumberFormat(mybotStatedata.totalDeaths);
-		state_newdeathcases = mybotStatedata.newDeaths;
-		state_newcases = mybotStatedata.newActive;
-   	state_name = mybotStatedata.state_name;
-		// state_dose1 = mybotStatedata.dose1;
-		// state_dose2 = mybotStatedata.dose2;
-		state_vaccinated = changeNumberFormat(mybotStatedata.vaccinated);
+		// mybotStatedata = mybotDataSet["data"]["states"][mybotStateName];
+		// state_activecases = changeNumberFormat(mybotStatedata.totalActive);
+		// state_cases = changeNumberFormat(mybotStatedata.totalConfirmed);
+		// state_deathcases = changeNumberFormat(mybotStatedata.totalDeaths);
+		// state_newdeathcases = mybotStatedata.newDeaths;
+		// state_newcases = mybotStatedata.newActive;
+   	// state_name = mybotStatedata.state_name;
+		// // state_dose1 = mybotStatedata.dose1;
+		// // state_dose2 = mybotStatedata.dose2;
+		// state_vaccinated = changeNumberFormat(mybotStatedata.vaccinated);
 		// state_totaldoses = parseInt(state_dose2) + parseInt(state_dose2);
 		// document.getElementById('country_Vacdose1').innerText = state_dose1;
 		// document.getElementById('country_Vacdose2').innerText = state_dose2;
-		if (document.getElementById('country_activecases')) {
-			document.getElementById('country_activecases').innerText = country_activecases;
+		if (document.getElementById('country_newCases')) {
+			document.getElementById('country_newCases').innerText = country_newcases;
+			document.getElementById('country_newCasesTxt').innerText = "India New Cases" + " - ";
 		}
-		if (document.getElementById('country_deathcases')) {
-			document.getElementById('country_deathcases').innerText = country_deathcases;
+		if (document.getElementById('country_newrecovered')) {
+			document.getElementById('country_newrecovered').innerText = country_newrecovered;
+			document.getElementById('country_newrecoveredTxt').innerText = "India Recovered Today" + " - ";
 		}
-		if (document.getElementById('country_newdeathcases')) {
-			document.getElementById('country_newdeathcases').innerText = country_newdeathcases;
+		if (document.getElementById('country_totalActivecases')) {
+			document.getElementById('country_totalActivecases').innerText = country_activecases;
+			document.getElementById('country_totalActivecasesTxt').innerText = "India Active Cases" + " - ";
 		}
-		if (document.getElementById('country_activecases')) {
-      document.getElementById('country_activecases').innerText = country_newcases;
-		}
-
-		if (document.getElementById('country_recovered')) {
-			document.getElementById('country_recovered').innerText = country_recovered;
-			document.getElementById('country_vaccinated').innerText = country_vaccinated;
-		}
-    document.getElementById('country_cases').innerText = country_cases;
-
-		if (document.getElementById('state_cases')) {
-			document.getElementById('state_cases').innerText = state_cases;
-		}
-		if (document.getElementById('state_activecases')) {
-			document.getElementById('state_activecases').innerText = state_activecases;
-		}
-		if (document.getElementById('state_deathcases')) {
-			document.getElementById('state_deathcases').innerText = state_deathcases;
-		}
-		if (document.getElementById('state_newdeathcases')) {
-			document.getElementById('state_newdeathcases').innerText = state_newdeathcases;
-		}
- 	  if (document.getElementById('state_newactivecases')) {
-			document.getElementById('state_newactivecases').innerText = state_newcases;
+		if (document.getElementById('country_newdeathscases')) {
+      document.getElementById('country_newdeathscases').innerText = country_newdeathcases;
+			document.getElementById('country_newdeathscasesTxt').innerText = "India Death's Today" + " - ";
 		}
 
-		if (document.getElementById('world_cases')) {
-			document.getElementById('world_cases').innerText = world_cases;
-			document.getElementById('world_deathcases').innerText = world_deathcases;
+		if (document.getElementById('country_positivity')) {
+			document.getElementById('country_positivity').innerText = country_positivity;
+			document.getElementById('country_positivityTxt').innerText = "India Positivity Rate" + " - ";
 		}
-	  if (document.getElementById('country_activecasesTxt')) {
-			document.getElementById('country_activecasesTxt').innerText = "India Active Cases" + " - ";
-			document.getElementById('country_recoveredTxt').innerText = "India Recovered Today" + " - ";
-			document.getElementById('country_newdeathTxt').innerText = "India Death's Today" + " - ";
-			document.getElementById('country_casesTxt').innerText = "India Total Cases" + " - ";
-			document.getElementById('country_vaccinatedTxt').innerText = "India Total Vaccination" + " - ";
-			// document.getElementById('country_dose1Txt').innerText = "India - 1st Dose" + " - ";
-			// document.getElementById('country_dose2Txt').innerText = "India - 2nd Dose" + " - ";
-		  // document.getElementById('mybotStateVacdoses').innerText = state_vaccinated;
-			document.getElementById('state_activecasesTxt').innerText = state_name +" " + "Active Cases" + " - ";
-			document.getElementById('state_deathsTxt').innerText = state_name +" " + "Death's Today" + " - ";
-	  }
+		// if (document.getElementById('country_cases')) {
+		// 	document.getElementById('country_cases').innerText = country_cases;
+		// 	document.getElementById('country_casesTxt').innerText = "India Total Cases" + " - ";
+		// }
+
+		// if (document.getElementById('state_cases')) {
+		// 	document.getElementById('state_cases').innerText = state_cases;
+		// }
+		// if (document.getElementById('state_activecases')) {
+		// 	document.getElementById('state_activecases').innerText = state_activecases;
+		// }
+		// if (document.getElementById('state_deathcases')) {
+		// 	document.getElementById('state_deathcases').innerText = state_deathcases;
+		// }
+		// if (document.getElementById('state_newdeathcases')) {
+		// 	document.getElementById('state_newdeathcases').innerText = state_newdeathcases;
+		// }
+ 	  // if (document.getElementById('state_newactivecases')) {
+		// 	document.getElementById('state_newactivecases').innerText = state_newcases;
+		// }
+
+		// if (document.getElementById('world_cases')) {
+		// 	document.getElementById('world_cases').innerText = world_cases;
+		// 	document.getElementById('world_deathcases').innerText = world_deathcases;
+		// }
+	  // if (document.getElementById('country_activecasesTxt')) {
+		// 	document.getElementById('country_activecasesTxt').innerText = "India Active Cases" + " - ";
+		// 	document.getElementById('country_recoveredTxt').innerText = "India Recovered Today" + " - ";
+		// 	document.getElementById('country_newdeathTxt').innerText = "India Death's Today" + " - ";
+		// 	document.getElementById('country_vaccinatedTxt').innerText = "India Total Vaccination" + " - ";
+		// 	// document.getElementById('country_dose1Txt').innerText = "India - 1st Dose" + " - ";
+		// 	// document.getElementById('country_dose2Txt').innerText = "India - 2nd Dose" + " - ";
+		//   // document.getElementById('mybotStateVacdoses').innerText = state_vaccinated;
+		// 	// document.getElementById('state_activecasesTxt').innerText = state_name +" " + "Active Cases" + " - ";
+		// 	// document.getElementById('state_deathsTxt').innerText = state_name +" " + "Death's Today" + " - ";
+	  // }
 	}
 	else if (typeof mybotVaccineData !== 'undefined' && mybotVaccineData == 1) {
 		world_vaccinated = mybotDataSet["data"].world.people_vaccinated;
@@ -849,31 +851,32 @@ function putData(mybotDataSet) {
 	}
 	else if(typeof mybotStateData !== 'undefined' && mybotStateData == 1){
 			mybotStatedata = mybotDataSet["data"]["states"][mybotStateName];
-			state_cases = mybotStatedata.totalConfirmed;
-			state_recovered = mybotStatedata.totalRecovered;
-			state_death = mybotStatedata.totalDeaths;
+			state_cases = changeNumberFormat(mybotStatedata.totalConfirmed);
+			state_recovered = changeNumberFormat(mybotStatedata.totalRecovered);
+			state_death = changeNumberFormat(mybotStatedata.totalDeaths);
 			state_name = mybotStatedata.state_name;
+
+			if (document.getElementById('mybotStateRecovered')) {
+				document.getElementById('mybotStateRecovered').innerText = state_recovered;
+				document.getElementById('mybotStateRecoveredTxt').innerText = capitalizeFLetter(state_name)+" Recovered";
+			}
 			document.getElementById('mybotStateCases').innerText = state_cases;
-			document.getElementById('mybotStateRecovered').innerText = state_recovered;
 			document.getElementById('mybotStateCasesTxt').innerText = capitalizeFLetter(state_name)+" Cases";
-			document.getElementById('mybotStateRecoveredTxt').innerText = capitalizeFLetter(state_name)+" Recovered";
 			if (typeof mybotStateName2 !=='undefined'){
 				mybotStatedata2 = mybotDataSet["data"]["states"][mybotStateName2];
-				country_cases = mybotDataSet["data"].country.cases;
+				country_cases = changeNumberFormat(mybotDataSet["data"].country.cases);
 				country_recovered = mybotDataSet["data"].country.recovered;
 				country_name = mybotDataSet["data"].country.location;
-				state2_cases = mybotStatedata2.totalConfirmed;
-				state2_recovered = mybotStatedata2.totalRecovered;
-				state2_death = mybotStatedata2.totalDeaths;
+				state2_cases = changeNumberFormat(mybotStatedata2.totalConfirmed);
+				state2_recovered = changeNumberFormat(mybotStatedata2.totalRecovered);
+				state2_death = changeNumberFormat(mybotStatedata2.totalDeaths);
 				state2_name = mybotStatedata2.state_name;
 				document.getElementById('mybotState2Cases').innerText = state2_cases;
+				document.getElementById('mybotState2CasesTxt').innerText = capitalizeFLetter(state2_name)+" Cases";
 				if (document.getElementById('mybotState2Recovered')) {
 					document.getElementById('mybotState2Recovered').innerText = state2_recovered;
-				}
-				if (document.getElementById('mybotState2RecoveredTxt')) {
 					document.getElementById('mybotState2RecoveredTxt').innerText = capitalizeFLetter(state2_name)+" Recovered";
 				}
-				document.getElementById('mybotState2CasesTxt').innerText = capitalizeFLetter(state2_name)+" Cases";
 				document.getElementById('mybotCountryCount').innerText = country_cases;
 				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
 				if (document.getElementById('mybotCountryRecoveredTxt')) {
@@ -886,7 +889,8 @@ function putData(mybotDataSet) {
 				world_recovered = mybotDataSet["data"].world.recovered;
 				world_vaccinated = mybotDataSet["data"].world.people_vaccinated;
 				country_cases = mybotDataSet["data"].country.cases;
-				country_recovered = mybotDataSet["data"].country.recovered;
+				country_death = mybotDataSet["data"].country.deaths;
+				country_recovered = changeNumberFormat(mybotDataSet["data"].country.recovered);
 				country_name = mybotDataSet["data"].country.location;
 				if (document.getElementById('mybotWorldCount')) {
 					document.getElementById('mybotWorldCount').innerText = world_cases;
@@ -899,9 +903,16 @@ function putData(mybotDataSet) {
 					document.getElementById('mybotWorldVacTxt').innerText = 'Vaccinated In World';
 			  }
 				document.getElementById('mybotCountryCount').innerText = country_cases;
-				document.getElementById('mybotCountryRecovered').innerText = country_recovered;
 				document.getElementById('mybotCountryName').innerText = capitalizeFLetter(country_name)+" Cases";
-				document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+
+				if (document.getElementById('mybotCountryRecovered')) {
+					document.getElementById('mybotCountryRecovered').innerText = country_recovered;
+					document.getElementById('mybotCountryRecoveredTxt').innerText = capitalizeFLetter(country_name)+" Recovered";
+				}
+				if (document.getElementById('mybotCountryDeaths')) {
+					document.getElementById('mybotCountryDeaths').innerText = country_death;
+					document.getElementById('mybotCountryDeathsTxt').innerText = capitalizeFLetter(country_name)+" Deaths";
+				}
 			}
 	}
 	else if (typeof mybotOnlyTextdata !== 'undefined' && mybotOnlyTextdata ==1) {}
@@ -1448,4 +1459,4 @@ function changeNumberFormat(number, decimals, recursiveCall) {
 //     output=output[::-1]
 //     return output
 // }
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div id="dragItem"> <div class="row"> <div id="mybotstage" class="mybotstage"> <div class="mybotcubespinner"> <div class="mybotface1 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldCases"> World Cases </span> <div class="mybotCount" id="mybotWorldCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface2 mybotface"></div> <div class="mybotface3 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldDeathsCases"> World Deaths </span> <div class="mybotCount" id="mybotWorldDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface4 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName"> India Cases </span> <div class="mybotCount" id="mybotCountryCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface5 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName2"> India Deaths </span> <div class="mybotCount" id="mybotCountryDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface6 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <span class="mybotScoreLiveDot"></span> <div class="mybotSummary"> <span class="mybotLocation" id="mybotPrecautionText"> Stay Safe! </span>  </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> </div> <div class="row"> <div class="mybot-adcover" id="mybot-adcover"> <div class="mybot-ad-tag" id="mybot-ad-tag">Ad</div> <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='mybot .mybotstage{cursor:pointer;bottom:115px!important}mybot .profile_div-left,.profile_div{height:225px!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-size:13px!important;line-height:1.3!important;font-weight:600;color:#266CAE!important}.mybotBottomBar,.mybotTopBar{background:#CC222A!important;color:#fff!important;font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:10px!important}mybot .ub_ads{width:125px;position:fixed;bottom:116px;left:5px!important;right:unset!important}mybot .mybotcubespinner .mybotface6{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget189/tupaki.jpg)!important;background-size:102px 102px!important}@media screen and (max-width:635px){mybot .mybotcubespinner .mybotface6{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget189/tupaki.jpg)!important;background-size:82px 82px!important}.mybotBottomBar,.mybotTopBar{font-size:8px!important;background:#CC222A!important;color:#fff!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#266CAE!important;font-size:11px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:8px!important}mybot .ub_ads{width:125px;position:fixed;bottom:116px;right:5px!important;left:unset!important}}mybot .mybotcubespinner .mybotface1,.mybotface2,.mybotface3,.mybotface5,.mybotface4{background:#fff!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);@import url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget32/NotoSerifBengali-hinted/NotoSerifBengali-Regular.ttf);mybot{font-family:"Lato",sans-serif;font-size:14px;font-weight:400;color:#333;position:sticky;z-index:2147483640;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:326px;height:160px;cursor:default;z-index:2147483647;pointer-events:none}mybot .profile_div-left{left:0;position:fixed;bottom:0;width:326px;height:160px;cursor:default;z-index:2147483647;pointer-events:none}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}@keyframes mybotspincube{from,to{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}12%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}16%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}30%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}33%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}47%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}50%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}63%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}66%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}80%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}83%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}97%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50px 50px 0;-moz-transform-origin:50px 50px 0;-ms-transform-origin:50px 50px 0;transform-origin:50px 50px 0}mybot .mybotcubespinner .mybotface{position:absolute;width:100px;height:100px;border:.9px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 20px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(50px);-moz-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(50px);-moz-transform:rotateY(90deg) translateZ(50px);-ms-transform:rotateY(90deg) translateZ(50px);transform:rotateY(90deg) translateZ(50px);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);transform:rotateY(90deg) rotateX(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(50px);-moz-transform:rotateX(-90deg) translateZ(50px);-ms-transform:rotateX(-90deg) translateZ(50px);transform:rotateX(-90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotstage{width:100px;height:100px;bottom:60px;position:absolute;right:25px;font-size:15px;pointer-events:all}mybot .mybotstage-left{left:25px;width:100px;height:100px;bottom:60px;position:absolute;font-size:15px;pointer-events:all}.mybotTopBar{background:red;width:100px;height:15px;border-bottom:.9px solid #fff;color:#fff;text-align:center;margin:auto;line-height:15px}.mybotPoweredBy{font-size:9px;font-weight:600}.mybotPoweredByBrand{font-size:12px;font-weight:600}.mybotBottomBar{background:red;width:100px;height:15px;color:#fff;margin:auto;line-height:15px;text-align:center;bottom:0;position:absolute;font-size:12px}.mybotSummary{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;font-family:"Lato",sans-serif!important;font-weight:600}.mybotContent{color:#fff;text-align:center;overflow:hidden}@-webkit-keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}mybot .col-hgt-ad{height:50px;float:right;position:absolute;bottom:3px;left:3px;pointer-events:all}mybot .mybot-adcover{color:#fff;width:326px;height:56px;position:absolute;bottom:0;right:0;cursor:pointer}mybot .mybot-adcover-left{left:0}mybot .mybot-ad-tag{position:absolute;top:-10px;right:0;font-size:9px;z-index:1;color:#fff;cursor:pointer;background:#000;width:16px;text-align:center}mybot .mybot-ad-tag-left{left:0}@media screen and (max-width:635px){mybot .profile_div{width:326px;height:140px}mybot .mybot-adcover{color:#fff;width:326px;height:56px;bottom:0;right:0;display:flex;pointer-events:auto;align-items:center;left:50%;transform:translateX(-50%);position:fixed!important}mybot .mybot-ad-tag{display:none}.mybotSummary{font-size:12px}.mybotTopBar,.mybotBottomBar{width:80px;font-size:10px}.mybotPoweredBy{font-size:7px}.mybotPoweredByBrand{font-size:8px}mybot .mybotcubespinner .mybotface{position:absolute;width:80px;height:80px;border:.9px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 10px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotstage{width:80px;height:80px;bottom:60px;position:absolute;right:20px;font-size:15px;pointer-events:all}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(40px);-moz-transform:translateZ(40px);-ms-transform:translateZ(40px);transform:translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(40px);-moz-transform:rotateY(90deg) translateZ(40px);-ms-transform:rotateY(90deg) translateZ(40px);transform:rotateY(90deg) translateZ(40px);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);transform:rotateY(90deg) rotateX(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(40px);-moz-transform:rotateX(-90deg) translateZ(40px);-ms-transform:rotateX(-90deg) translateZ(40px);transform:rotateX(-90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:40px 40px 0;-moz-transform-origin:40px 40px 0;-ms-transform-origin:40px 40px 0;transform-origin:40px 40px 0}}mybot .closeBotFrontTop{margin-top:150px}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div id="dragItem"> <div class="row"> <div id="mybotstage" class="mybotstage"> <div class="mybotcubespinner"> <div class="mybotface1 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldCases"> World Cases </span> <div class="mybotCount" id="mybotWorldCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface2 mybotface"></div> <div class="mybotface3 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotWorldDeathsCases"> World Deaths </span> <div class="mybotCount" id="mybotWorldDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface4 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName"> India Cases </span> <div class="mybotCount" id="mybotCountryCount"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface5 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <div class="mybotSummary"> <span class="mybotLocation" id="mybotCountryName2"> India Deaths </span> <div class="mybotCount" id="mybotCountryDeaths"> </div> </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> <div class="mybotface6 mybotface"> <div class="mybotTopBar"> <span class="mybotPoweredBy"> Powered By </span> <span class="mybotPoweredByBrand"> Unibots </span> </div> <div class="mybotContent"> <span class="mybotScoreLiveDot"></span> <div class="mybotSummary"> <span class="mybotLocation" id="mybotPrecautionText"> Stay Safe! </span>  </div> </div> <div class="mybotBottomBar mybotBottomBarLive"> <span class="">COVID-19 Cases</span> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> </div> <div class="row"> <div class="mybot-adcover" id="mybot-adcover"> <div class="mybot-ad-tag" id="mybot-ad-tag">Ad</div> <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='mybot .mybotstage{cursor:pointer;bottom:115px!important}mybot .profile_div-left,.profile_div{height:225px!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-size:13px!important;line-height:1.3!important;font-weight:600;color:#266CAE!important}.mybotBottomBar,.mybotTopBar{background:#CC222A!important;color:#fff!important;font-size:10px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:10px!important}mybot .ub_ads{width:125px;position:fixed;z-index:2147483647;bottom:116px;left:5px!important;right:unset!important}mybot .mybotcubespinner .mybotface6{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget189/tupaki.jpg)!important;background-size:102px 102px!important}@media screen and (max-width:635px){mybot .mybotcubespinner .mybotface6{background:url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget189/tupaki.jpg)!important;background-size:82px 82px!important}.mybotBottomBar,.mybotTopBar{font-size:8px!important;background:#CC222A!important;color:#fff!important}.mybotSummary{font-family:"Lato",sans-serif!important;font-weight:600;color:#266CAE!important;font-size:11px!important}.mybotPoweredByBrand{font-weight:600!important;font-size:8px!important}mybot .ub_ads{width:125px;position:fixed;z-index:2147483647;bottom:116px;right:5px!important;left:unset!important}}mybot .mybotcubespinner .mybotface1,.mybotface2,.mybotface3,.mybotface5,.mybotface4{background:#fff!important}mybot .mybotAmpDragItem{height:82px!important;width:100px!important}mybot .mybotAmpStage{top:0px!important}mybot .mybotAmpadSmall{display:none!important}mybot #dragItem{z-index:2147483646!important}';var rule_common='@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap);@import url(https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget32/NotoSerifBengali-hinted/NotoSerifBengali-Regular.ttf);mybot{font-family:"Lato",sans-serif;font-size:14px;font-weight:400;color:#333;position:sticky;z-index:2147483640;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:326px;height:160px;cursor:default;z-index:2147483647;pointer-events:none}mybot .profile_div-left{left:0;position:fixed;bottom:0;width:326px;height:160px;cursor:default;z-index:2147483647;pointer-events:none}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}@keyframes mybotspincube{from,to{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}12%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-ms-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)}16%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}30%{-moz-transform:rotateY(-90deg);-ms-transform:rotateY(-90deg);transform:rotateY(-90deg)}33%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}47%{-moz-transform:rotateY(-90deg) rotateZ(90deg);-ms-transform:rotateY(-90deg) rotateZ(90deg);transform:rotateY(-90deg) rotateZ(90deg)}50%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}63%{-moz-transform:rotateY(-180deg) rotateZ(90deg);-ms-transform:rotateY(-180deg) rotateZ(90deg);transform:rotateY(-180deg) rotateZ(90deg)}66%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}80%{-moz-transform:rotateY(90deg) rotateX(90deg);-ms-transform:rotateY(90deg) rotateX(90deg);transform:rotateY(90deg) rotateX(90deg)}83%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}97%{-moz-transform:rotateX(90deg);-ms-transform:rotateX(90deg);transform:rotateX(90deg)}}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50px 50px 0;-moz-transform-origin:50px 50px 0;-ms-transform-origin:50px 50px 0;transform-origin:50px 50px 0}mybot .mybotcubespinner .mybotface{position:absolute;width:100px;height:100px;border:.9px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 20px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(50px);-moz-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(50px);-moz-transform:rotateY(90deg) translateZ(50px);-ms-transform:rotateY(90deg) translateZ(50px);transform:rotateY(90deg) translateZ(50px);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(50px);transform:rotateY(90deg) rotateX(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);transform:rotateY(180deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(50px);-moz-transform:rotateX(-90deg) translateZ(50px);-ms-transform:rotateX(-90deg) translateZ(50px);transform:rotateX(-90deg) translateZ(50px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotstage{width:100px;height:100px;bottom:60px;position:absolute;right:25px;font-size:15px;pointer-events:all}mybot .mybotstage-left{left:25px;width:100px;height:100px;bottom:60px;position:absolute;font-size:15px;pointer-events:all}.mybotTopBar{background:red;width:100px;height:15px;border-bottom:.9px solid #fff;color:#fff;text-align:center;margin:auto;line-height:15px}.mybotPoweredBy{font-size:9px;font-weight:600}.mybotPoweredByBrand{font-size:12px;font-weight:600}.mybotBottomBar{background:red;width:100px;height:15px;color:#fff;margin:auto;line-height:15px;text-align:center;bottom:0;position:absolute;font-size:12px}.mybotSummary{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;font-family:"Lato",sans-serif!important;font-weight:600}.mybotContent{color:#fff;text-align:center;overflow:hidden}@-webkit-keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes mybotpulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}mybot .col-hgt-ad{height:50px;float:right;position:absolute;bottom:3px;left:3px;pointer-events:all}mybot .mybot-adcover{color:#fff;width:326px;height:56px;position:absolute;bottom:0;right:0;cursor:pointer}mybot .mybot-adcover-left{left:0}mybot .mybot-ad-tag{position:absolute;top:-10px;right:0;font-size:9px;z-index:1;color:#fff;cursor:pointer;background:#000;width:16px;text-align:center}mybot .mybot-ad-tag-left{left:0}@media screen and (max-width:635px){mybot .profile_div{width:326px;height:140px}mybot .mybot-adcover{color:#fff;width:326px;height:56px;bottom:0;right:0;display:flex;pointer-events:auto;align-items:center;left:50%;transform:translateX(-50%);position:fixed!important}mybot .mybot-ad-tag{display:none}.mybotSummary{font-size:12px}.mybotTopBar,.mybotBottomBar{width:80px;font-size:10px}.mybotPoweredBy{font-size:7px}.mybotPoweredByBrand{font-size:8px}mybot .mybotcubespinner .mybotface{position:absolute;width:80px;height:80px;border:.9px solid #ccc;background:rgba(255,255,255,.8);box-shadow:inset 0 0 10px rgba(0,0,0,.2);text-align:center;border-radius:5px}mybot .mybotstage{width:80px;height:80px;bottom:60px;position:absolute;right:20px;font-size:15px;pointer-events:all}mybot .mybotcubespinner .mybotface1{-webkit-transform:translateZ(40px);-moz-transform:translateZ(40px);-ms-transform:translateZ(40px);transform:translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface2{-webkit-transform:rotateY(90deg) translateZ(40px);-moz-transform:rotateY(90deg) translateZ(40px);-ms-transform:rotateY(90deg) translateZ(40px);transform:rotateY(90deg) translateZ(40px);background-repeat:no-repeat;background-size:cover}mybot .mybotcubespinner .mybotface3{-webkit-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-moz-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);-ms-transform:rotateY(90deg) rotateX(90deg) translateZ(40px);transform:rotateY(90deg) rotateX(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface4{-webkit-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);transform:rotateY(180deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface5{-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-moz-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);-ms-transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);transform:rotateY(-90deg) rotateZ(90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner .mybotface6{-webkit-transform:rotateX(-90deg) translateZ(40px);-moz-transform:rotateX(-90deg) translateZ(40px);-ms-transform:rotateX(-90deg) translateZ(40px);transform:rotateX(-90deg) translateZ(40px);background:#360033;background:-webkit-linear-gradient(to top,#0b8793,#360033);background:linear-gradient(to top,#0b8793,#360033)}mybot .mybotcubespinner{-webkit-animation-name:mybotspincube;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;-webkit-animation-duration:24s;animation-name:mybotspincube;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:24s;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:40px 40px 0;-moz-transform-origin:40px 40px 0;-ms-transform-origin:40px 40px 0;transform-origin:40px 40px 0}}mybot .closeBotFrontTop{margin-top:150px}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReady();});

@@ -71,14 +71,14 @@ if (!mobileCheck()) {
   	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1614845141925-0">';
   }
 
-  // if(window.location.href== "localhost"){
-    // z1= document.createElement('div');
-    // z1.id = 'ub-sticky-ad-containerdesk';
-    // z1.className = 'ub-sticky-ad-containerdesk';
-    // z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
-    // x1 = document.querySelector('body');
-    // x1.appendChild(z1);
-  // }
+  if(!window.location.href== "https://bongdaplus.vn/"){
+    z1= document.createElement('div');
+    z1.id = 'ub-sticky-ad-containerdesk';
+    z1.className = 'ub-sticky-ad-containerdesk';
+    z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
+    x1 = document.querySelector('body');
+    x1.appendChild(z1);
+  }
 }
 else {
   // var s6 = document.createElement('script');
@@ -132,7 +132,7 @@ s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
 var ub_divsToCheck = {
-	"unibots-video-mobile": false,
+	"unibots-video": false,
 };
 
   var ub_interval = setInterval(() => {

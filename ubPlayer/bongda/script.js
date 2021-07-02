@@ -136,8 +136,8 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_max_payne_2_for_pc.mp4" });
-  ubPlayer.responsive(true);
+  ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4" });
+  // ubPlayer.responsive(true);
 
   var imaOptions = {
     id: "content_video",
@@ -147,9 +147,10 @@ function initPlayer() {
     contribAdsSettings: {
       debug: true,
       timeout: 8000,
-      prerollTimeout: 8000,
+      prerollTimeout: 12000,
       //postrollTimeout: 12000
     }
+
   };
   ubPlayer.ima(imaOptions);
 

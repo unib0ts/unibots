@@ -135,19 +135,20 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_max_payne_2_for_pc.mp4" });
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/2/recreating_my_old_photos_-_exposing-embarrassing_myself.mp4"});
 
   var imaOptions = {
     id: "content_video",
     // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
     adTagUrl:"https://video.unibots.in/clients/docbao/ads.xml",
     disableCustomPlaybackForIOS10Plus: true,
-    // contribAdsSettings: {
-    //   debug: true,
-    //   timeout: 8000,
-    //   prerollTimeout: 12000,
-    //   //postrollTimeout: 12000
-    // }
+    contribAdsSettings: {
+      debug: true,
+      timeout: 8000,
+      prerollTimeout: 12000,
+      //postrollTimeout: 12000
+    },
+    adsRenderingSettings: { loadVideoTimeout: 16e3 }
   };
   ubPlayer.ima(imaOptions);
 

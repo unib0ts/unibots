@@ -136,7 +136,7 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/download_max_payne_2_for_pc.mp4" });
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" });
   ubPlayer.responsive(true);
 
   var imaOptions = {
@@ -147,7 +147,7 @@ function initPlayer() {
     contribAdsSettings: {
       debug: true,
       timeout: 8000,
-      prerollTimeout: 8000,
+      prerollTimeout: 12000,
       //postrollTimeout: 12000
     }
   };

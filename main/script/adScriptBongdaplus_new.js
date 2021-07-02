@@ -71,7 +71,7 @@ if (!mobileCheck()) {
   	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1614845141925-0">';
   }
 
-  if(!window.location.href== "https://bongdaplus.vn/"){
+  if(!(window.location.href == "https://bongdaplus.vn/")){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';
@@ -499,7 +499,6 @@ var mappings_full_hb_config_desktop = {
      ]), ///21692080761/amb_hindi_desk_lb_
   ],
   isAP: [
-    // true,
     true,
     true,
     true,
@@ -514,7 +513,8 @@ var mappings_full_hb_config_desktop = {
     true,
     true,
     true,
-    true
+    true,
+    true,
   ]
 }
 var mappings_full_hb_config_mobile = {
@@ -672,7 +672,7 @@ var mappings_full_hb_config_mobile = {
     true,
     true,
     // true,
-    // true,
+    true,
   ]
 }
 var mappings_full_hb_config_both = {

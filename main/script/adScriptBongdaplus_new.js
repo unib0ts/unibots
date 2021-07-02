@@ -132,7 +132,7 @@ s1.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s1);
 
 var ub_divsToCheck = {
-	"unibots-video-mobile": false,
+	"unibots-video": false,
 };
 
   var ub_interval = setInterval(() => {

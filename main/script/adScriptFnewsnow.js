@@ -107,7 +107,7 @@ var mappings = {
     slotNumbers: [],
     sizes: [],
     adId: [],
-    renderedFlag: []
+    renderedFlag: [false, false, false, false]
   };
 
   function mobileCheck() {
@@ -286,6 +286,7 @@ function ub_checkRendered(i) {
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === mapping_hb.slotNames[i]) {
+        console.log('rendr');
         ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
       }
     });
@@ -293,6 +294,7 @@ function ub_checkRendered(i) {
 }
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
+  console.log(adId, ub_slot, adCode);
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){
     adId1 = adId;

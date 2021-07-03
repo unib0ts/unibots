@@ -104,7 +104,7 @@ else {
     z2= document.createElement('div');
     z2.id = 'ub-popup-ad-container';
     z2.className = 'ub-popup-ad-container';
-    z2.innerHTML ='<div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"><span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span></div>';
+    z2.innerHTML ='<div><span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div></div>';
     x2 = document.querySelector('body');
     x2.appendChild(z2);
   // }
@@ -153,7 +153,6 @@ var ub_divsToCheck = {
 			}
 		}
 		if (!flag || checkFlag) {
-      console.log('test');
       var ub_vs = document.createElement('script');
       ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js";
       ub_vs.type = "text/javascript";

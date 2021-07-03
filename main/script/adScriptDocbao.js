@@ -133,7 +133,7 @@ else {
   z2= document.createElement('div');
   z2.id = 'ub-popup-ad-container';
   z2.className = 'ub-popup-ad-container';
-  z2.innerHTML ='<div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span></div>';
+  z2.innerHTML ='<div><span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"></div></div>';
   x2 = document.querySelector('body');
   x2.appendChild(z2);
 }

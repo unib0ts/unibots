@@ -129,7 +129,6 @@ if(isMobile()){
       var vjsOptions = {
         autoplay: false,
         muted: false,
-        bigPlayButtton:false,
         // fluid:true,
         width:320,
         height:240,
@@ -137,7 +136,7 @@ if(isMobile()){
       console.log(vjsOptions);
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
 
       var imaOptions = {
         id: "content_video",

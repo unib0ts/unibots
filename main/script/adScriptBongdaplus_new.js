@@ -44,7 +44,7 @@ if (!mobileCheck()) {
   // s5.type = "text/javascript";
   // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
   // document.getElementsByTagName('head')[0].appendChild(s5);
-
+if (document.querySelector('main')) {
   z= document.createElement('div');
   z.id = 'ub-left-ad';
   z.className = 'ub-left-ad';
@@ -70,6 +70,8 @@ if (!mobileCheck()) {
   	document.querySelector('main').appendChild(z);
   	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1614845141925-0">';
   }
+}
+
 
   if(!(window.location.href == "https://bongdaplus.vn/")){
     z1= document.createElement('div');
@@ -133,6 +135,7 @@ document.getElementsByTagName('head')[0].appendChild(s1);
 
 var ub_divsToCheck = {
 	"unibots-video": false,
+  "unibots-video-mobile": false,
 };
 
   var ub_interval = setInterval(() => {
@@ -1067,12 +1070,6 @@ if (mobileCheck()) {
                 mybotpopupad.style.backgroundColor = '#000';
                 mybotpopupad.style.zIndex = '2147483647';
             }
-
-            var nodes_anchr = document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes;
-            if(nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == 'iframe') {
-              document.getElementById('close_ub-sticky-ad').style.display = 'block';
-            }
-          // }
         });
   });
 }

@@ -1,6 +1,6 @@
 function loadDynamicStyles(url){
-  var link = document.createElement('link'); 
-  link.rel = 'stylesheet'; 
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
   link.type = 'text/css';
   link.href = url;
   document.getElementsByTagName('HEAD')[0].appendChild(link);
@@ -40,7 +40,7 @@ function listen_scripts(){
     if(!flag){
       console.log('all loaded');
       console.log(scripts);
-      video_ub();  
+      video_ub();
       clearInterval(ub_interval);
     }
   },500)
@@ -55,8 +55,8 @@ document.getElementsByTagName("body")[0].appendChild(ima);
 
 ima.onload = function(){
   load_player();
-  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  
+  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);
+
 }
 
 function load_player(){
@@ -64,7 +64,7 @@ function load_player(){
   // var myPlayer = '<video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video>';
   //for Sticky
   var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="false" preload="auto"></video></div>';
-  // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer; 
+  // document.getElementsByClassName("ub_player")[0].innerHTML = myPlayer;
   document.getElementById("unibots-video").innerHTML = myPlayer;
 }
 
@@ -169,7 +169,7 @@ function initPlayer() {
         console.log(err);
       }.bind(ubPlayer)
   );
-     
+
 
   if (autoplayAllowed) {
     if (autoplayRequiresMute) {
@@ -178,7 +178,7 @@ function initPlayer() {
     ubPlayer.muted(true);
     ubPlayer.autoplay(true);
   }
-  
+
   if (!autoplayAllowed) {
     ubPlayer.muted(true);
     ubPlayer.autoplay(true);
@@ -193,11 +193,11 @@ function initPlayer() {
     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
   }
 
-  ubPlayer.on('play', () => { 
+  ubPlayer.on('play', () => {
     ubPlayer.volume(0.1);
     if(!ubPlayer.muted()){
       ubPlayer.muted(true);
-    }    
+    }
   });
 
   //close player on video end.
@@ -212,8 +212,8 @@ function initPlayer() {
   var CloseButton = videojs.extend(button, {
         constructor: function() {
           button.apply(this, arguments);
-          this.controlText("Close Player");
           // this.addClass('vjs-icon-cancel');
+          this.controlText("Close Player");
         },
         handleClick: function() {
           this.player().dispose();
@@ -221,7 +221,7 @@ function initPlayer() {
       });
   videojs.registerComponent('CloseButton', CloseButton);
   ubPlayer.addChild('CloseButton');
-  
+
   function isInViewport(el) {
       const rect = el.getBoundingClientRect();
       return  rect.bottom > 0 &&

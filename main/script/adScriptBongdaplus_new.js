@@ -24,7 +24,7 @@ document.getElementsByTagName('head')[0].appendChild(ub_ga);
 document.getElementById('gabywa').innerHTML=mybotgabywa;
 loadAd('gabywa');
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;}.mybotpopupCloseButton{background-color:#fff;color:#000;border-radius:50px;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:10px;left:25px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1624014789114-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-25px;left:5px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1624014789114-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -71,7 +71,7 @@ if (!mobileCheck()) {
   	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1614845141925-0">';
   }
 
-  if(!window.location.href== "https://bongdaplus.vn/"){
+  if(!(window.location.href == "https://bongdaplus.vn/")){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';
@@ -99,12 +99,12 @@ else {
   }
 
   // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-    z1= document.createElement('div');
-    z1.id = 'ub-popup-ad-container';
-    z1.className = 'ub-popup-ad-container';
-    z1.innerHTML ='<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
-    x1 = document.querySelector('body');
-    x1.appendChild(z1);
+    z2= document.createElement('div');
+    z2.id = 'ub-popup-ad-container';
+    z2.className = 'ub-popup-ad-container';
+    z2.innerHTML ='<div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"><span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span></div>';
+    x2 = document.querySelector('body');
+    x2.appendChild(z2);
   // }
 }
 
@@ -295,7 +295,7 @@ var hb_full_common_bidders = [
 
 var mappings_full_hb_config_desktop = {
   adUnitNames: [
-    // '/22140546871/bongdaplus.vn_pc_balloon_hb_300x600',
+    '/22140546871/bongdaplus.vn_pc_balloon_hb_300x600',
     '/22140546871/bongdaplus.vn_PC_bottom-article_300x250_1',
     '/22140546871/bongdaplus.vn_PC_bottom-article_300x250_2',
     '/22140546871/bongdaplus.vn_in-article_468x60',
@@ -313,7 +313,7 @@ var mappings_full_hb_config_desktop = {
     '/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
   ],
   adId: [
-    // 'div-gpt-ad-1622019394824-0', //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
+    'div-gpt-ad-1622019394824-0', //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
     'div-gpt-ad-1620123749103-0',  //''/22140546871/bongdaplus.vn_PC_bottom-article_300x250_1'
     'div-gpt-ad-1620123852692-0', //'/22140546871/bongdaplus.vn_PC_bottom-article_300x250_2',
     'div-gpt-ad-1619183586523-0', // '/22140546871/bongdaplus.vn_in-article_468x60',
@@ -331,7 +331,7 @@ var mappings_full_hb_config_desktop = {
     'div-gpt-ad-1615775720668-0',  //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
   ],
   sizes: [
-      // [[336, 280], [300, 250], [300, 600]],
+      [[336, 280], [300, 250]],
       [300, 250],
       [300, 250],
       [468, 60],
@@ -349,15 +349,15 @@ var mappings_full_hb_config_desktop = {
      [336, 280],
     ],
   bids: [
-    // hb_full_common_bidders.concat([
-    //      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3796451'} },
-    //  //     { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-    //  //     { bidder: 'ucfunnel', params: { adid : 'ad-34B8DD88EA288796C3E739EB77B4646B'} },
-    //  // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
-    //  // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-    //  //     { bidder: 'sovrn', params: {tagid: '919447'} },
-    //  // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-    // ]),
+    hb_full_common_bidders.concat([
+         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3796451'} },
+     //     { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+     //     { bidder: 'ucfunnel', params: { adid : 'ad-34B8DD88EA288796C3E739EB77B4646B'} },
+     // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+     // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+     //     { bidder: 'sovrn', params: {tagid: '919447'} },
+     // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    ]),
     hb_full_common_bidders.concat([
    //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
    //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
@@ -498,7 +498,6 @@ var mappings_full_hb_config_desktop = {
      ]), ///21692080761/amb_hindi_desk_lb_
   ],
   isAP: [
-    // true,
     true,
     true,
     true,
@@ -513,7 +512,8 @@ var mappings_full_hb_config_desktop = {
     true,
     true,
     true,
-    true
+    true,
+    true,
   ]
 }
 var mappings_full_hb_config_mobile = {
@@ -541,7 +541,7 @@ var mappings_full_hb_config_mobile = {
     'div-gpt-ad-1614845690965-0',  //'/22140546871/bongdaplus.vn_mb_ma_336x280',
     'div-gpt-ad-1614845787563-0',  //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
     // 'div-gpt-ad-1615775641979-0',  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
-    'div-gpt-ad-1624014789114-0',
+    'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
   ],
   sizes: [
       [468, 60],
@@ -671,7 +671,7 @@ var mappings_full_hb_config_mobile = {
     true,
     true,
     // true,
-    // true,
+    true,
   ]
 }
 var mappings_full_hb_config_both = {

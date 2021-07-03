@@ -7,7 +7,8 @@ function loadDynamicStyles(url){
 }
 
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.min.css");
-loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-logo@2.1.4/dist/videojs-logo.css");
+// loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-logo@2.1.4/dist/videojs-logo.css");
+loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-watermark@2.0.0/dist/videojs-watermark.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.css");
 
@@ -70,7 +71,8 @@ function load_player(){
 
 let post_scripts =()=>{
   console.log(scripts);
-  loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-logo@2.1.4/dist/videojs-logo.min.js", "vjs_logo");
+  // loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-logo@2.1.4/dist/videojs-logo.min.js", "vjs_logo");
+  loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-watermark@2.0.0/dist/videojs-watermark.min.js", "vjs_logo");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.js", "vjs_ads");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.js", "vjs_ima");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/can-autoplay@3.0.0/build/can-autoplay.min.js","can-autoplay");
@@ -138,6 +140,14 @@ function initPlayer() {
   ubPlayer = videojs('content_video', vjsOptions);
   ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/2/recreating_my_old_photos_-_exposing-embarrassing_myself.mp4"});
   ubPlayer.responsive(true);
+
+  ubPlayer.watermark({
+      file: 'https://unibots.in/wp-content/uploads/2019/09/unibot.png',
+      xpos: 50,
+      ypos: 50,
+      xrepeat: 0,
+      opacity: 0.5,
+  });
 
   var imaOptions = {
     id: "content_video",

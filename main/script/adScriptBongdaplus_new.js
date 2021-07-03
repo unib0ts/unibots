@@ -24,7 +24,7 @@ document.getElementsByTagName('head')[0].appendChild(ub_ga);
 document.getElementById('gabywa').innerHTML=mybotgabywa;
 loadAd('gabywa');
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:-25px;left:5px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1624014789114-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:10px;left:25px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1624014789114-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -44,7 +44,7 @@ if (!mobileCheck()) {
   // s5.type = "text/javascript";
   // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
   // document.getElementsByTagName('head')[0].appendChild(s5);
-
+if (document.querySelector('main')) {
   z= document.createElement('div');
   z.id = 'ub-left-ad';
   z.className = 'ub-left-ad';
@@ -70,6 +70,8 @@ if (!mobileCheck()) {
   	document.querySelector('main').appendChild(z);
   	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1614845141925-0">';
   }
+}
+
 
   if(!(window.location.href == "https://bongdaplus.vn/")){
     z1= document.createElement('div');
@@ -102,7 +104,7 @@ else {
     z2= document.createElement('div');
     z2.id = 'ub-popup-ad-container';
     z2.className = 'ub-popup-ad-container';
-    z2.innerHTML ='<div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"><span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span></div>';
+    z2.innerHTML ='<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
     x2 = document.querySelector('body');
     x2.appendChild(z2);
   // }
@@ -133,6 +135,7 @@ document.getElementsByTagName('head')[0].appendChild(s1);
 
 var ub_divsToCheck = {
 	"unibots-video": false,
+  "unibots-video-mobile": false,
 };
 
   var ub_interval = setInterval(() => {
@@ -149,7 +152,7 @@ var ub_divsToCheck = {
 				flag = true;
 			}
 		}
-		if (!flag && checkFlag) {
+		if (!flag || checkFlag) {
       var ub_vs = document.createElement('script');
       ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js";
       ub_vs.type = "text/javascript";
@@ -1067,12 +1070,6 @@ if (mobileCheck()) {
                 mybotpopupad.style.backgroundColor = '#000';
                 mybotpopupad.style.zIndex = '2147483647';
             }
-
-            var nodes_anchr = document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes;
-            if(nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == 'iframe') {
-              document.getElementById('close_ub-sticky-ad').style.display = 'block';
-            }
-          // }
         });
   });
 }

@@ -152,7 +152,8 @@ var ub_divsToCheck = {
 				flag = true;
 			}
 		}
-		if (!flag && checkFlag) {
+		if (!flag || checkFlag) {
+      console.log('test');
       var ub_vs = document.createElement('script');
       ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js";
       ub_vs.type = "text/javascript";

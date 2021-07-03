@@ -133,7 +133,6 @@ document.getElementsByTagName('head')[0].appendChild(s1);
 
 var ub_divsToCheck = {
 	"unibots-video": false,
-  "unibots-video-moblie": false,
 };
 
   var ub_interval = setInterval(() => {

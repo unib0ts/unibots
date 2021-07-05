@@ -49,7 +49,7 @@ if(mobileCheck()){
           video_ub();  
           clearInterval(ub_interval);
         }
-      },500)
+      },3000)
     }
 
     listen_scripts();
@@ -137,7 +137,7 @@ if(mobileCheck()){
         responsive:true,
         // fluid: isMobile ? true : false,
         width: isMobile ? 320 : 640,
-        height: isMobile ? 240 : 360,
+        height: isMobile ? 180 : 360,
       }
       console.log(vjsOptions);
 

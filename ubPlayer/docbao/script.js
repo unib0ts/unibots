@@ -5,6 +5,7 @@ function isMobile() {
 };
 
 if(isMobile()){
+  console.log("MB Script");
   function loadDynamicStyles(url){
     var link = document.createElement('link'); 
     link.rel = 'stylesheet'; 
@@ -219,7 +220,8 @@ if(isMobile()){
 
   }
 }
-else if(window.location.href == "https://docbao.vn/" &&  !isMobile()){
+else if((window.location.href == "https://docbao.vn/xa-hoi"  || window.location.href == "https://docbao.vn/") && !isMobile()){
+  console.log("Desk Script");
   function loadDynamicStyles(url){
     var link = document.createElement('link'); 
     link.rel = 'stylesheet'; 
@@ -280,10 +282,10 @@ else if(window.location.href == "https://docbao.vn/" &&  !isMobile()){
   }
 
   function load_player(){
-    var myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+    var myPlayer = '<div class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
     // document.getElementById("unibots-video").innerHTML = myPlayer;
     z1= document.createElement('div');
-    z1.id = 'unibots-video';
+    z1.id = 'ubVideo';
     z1.innerHTML = myPlayer;
     x1 = document.querySelector('body');
     x1.appendChild(z1);
@@ -385,7 +387,7 @@ else if(window.location.href == "https://docbao.vn/" &&  !isMobile()){
     
     if (!autoplayAllowed) {
       ubPlayer.muted(true);
-      // ubPlayer.autoplay(true);
+      ubPlayer.autoplay(true);
 
       if (navigator.userAgent.match(/iPhone/i) ||
           navigator.userAgent.match(/iPad/i) ||

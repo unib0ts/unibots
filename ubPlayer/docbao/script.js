@@ -65,7 +65,7 @@ if(isMobile()){
   }
 
   function load_player(){
-    var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto" poster="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/ub_poster.png"></video></div>';
+    var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
     document.getElementById("unibots-video").innerHTML = myPlayer;
   }
 
@@ -280,7 +280,7 @@ else if(window.location.href == "https://docbao.vn/" &&  !isMobile()){
   }
 
   function load_player(){
-    var myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto" poster="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/ub_poster.png"></video></div>';
+    var myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
     // document.getElementById("unibots-video").innerHTML = myPlayer;
     z1= document.createElement('div');
     z1.id = 'unibots-video';

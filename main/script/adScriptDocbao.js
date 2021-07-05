@@ -58,7 +58,7 @@ var ub_divsToCheck = {
       var ub_vs = document.createElement('script');
       ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js";
       ub_vs.type = "text/javascript";
-      document.querySelector('#unibots-video').appendChild(ub_vs);
+      document.getElementsByTagName('head')[0].appendChild(ub_vs);
 			clearInterval(ub_interval);
 		}
 	}, 500);
@@ -74,6 +74,12 @@ var ub_divsToCheck = {
 	loadAd('gabywa');
 
 if (!mobileCheck()) {
+  if(window.location.href == "https://docbao.vn/"){
+		var ub_vs = document.createElement('script');
+		ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js";
+		ub_vs.type = "text/javascript";
+		document.getElementsByTagName('head')[0].appendChild(ub_vs);
+  }
   // var ad_scrpt1 = document.createElement('script');
   // ad_scrpt1.type = "text/javascript";
   // ad_scrpt1.innerText= mybotadscrpt;

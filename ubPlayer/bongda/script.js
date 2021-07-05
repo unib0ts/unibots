@@ -66,7 +66,7 @@ if(mobileCheck()){
 
     function load_player(){
       var myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto" poster="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/ub_poster.png"></video></div>';
-      if (document.getElementById('unibots-video') ) {
+      if (document.getElementById('unibots-video')) {
         document.getElementById('unibots-video').innerHTML= myPlayer;
       }
       else{
@@ -142,7 +142,7 @@ if(mobileCheck()){
       console.log(vjsOptions);
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" });
+      ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4" });
 
       var imaOptions = {
         id: "content_video",
@@ -175,7 +175,6 @@ if(mobileCheck()){
       
       if (!autoplayAllowed) {
         ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
 
         if (navigator.userAgent.match(/iPhone/i) ||
             navigator.userAgent.match(/iPad/i) ||

@@ -43,7 +43,7 @@ function listen_scripts(){
       if(scripts[x] == false){flag=true};
     }
     if(!flag){
-      console.log('all loaded');
+      // console.log('all loaded');
       console.log(scripts);
       clearInterval(ub_interval); 
       checkUnmutedAutoplaySupport();
@@ -138,106 +138,108 @@ function initPlayer() {
   
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
-  var video = document.getElementById('content_video');
-  videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+  if(document.getElementById('unibots-video') && document.getElementById('unibots-video')){
+      var video = document.getElementById('content_video');
+      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
-  var vjsOptions = {
-    autoplay: false,
-    muted: false,
-    width: 320,
-    height: 180,
-  }
-
-  ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
-
-  var imaOptions = {
-    id: "content_video",
-    // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl:"https://video.unibots.in/clients/bongda/ads.xml",
-    disableCustomPlaybackForIOS10Plus: true,
-    contribAdsSettings: {
-      debug: true,
-      timeout: 8000,
-      prerollTimeout: 8000,
-    },
-    adsRenderingSettings: {
-      enablePreloading: true
-    }
-  };
-  ubPlayer.ima(imaOptions);
-
-  ubPlayer.on('adserror',function(err) {
-        console.log('ads error!');
-        console.log(err);
-        // ubPlayer.ima.requestAds();
-        showPlayer();
-      }.bind(ubPlayer)
-  );
-
-
-  ubPlayer.on('adsready',()=>{
-      console.log("ads ready");
-      showPlayer();
-      // setTimeout(showPlayer(), 5000);
-  }); 
-
-  ubPlayer.on('readyforpreroll',()=>{
-    ubPlayer.muted(true);
-    ubPlayer.autoplay(true);
-    // showPlayer();
-  });
-
-  if (autoplayAllowed) {
-    if (autoplayRequiresMute) {
-      ubPlayer.muted(true);
-    }
-    ubPlayer.muted(true);
-    ubPlayer.autoplay(true);
-  }
-  
-  if (!autoplayAllowed) {
-    ubPlayer.muted(true);
-    ubPlayer.autoplay(true);
-
-    if (navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
-        navigator.userAgent.match(/Android/i)) {
-      startEvent = 'touchend';
-    }
-
-    wrapperDiv = document.getElementById('content_video');
-    wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
-  }
-
-  ubPlayer.on('play', () => { 
-    ubPlayer.volume(0.1);
-    if(!ubPlayer.muted()){
-      ubPlayer.muted(true);
-    }    
-  });
-
-  var button = videojs.getComponent('CloseButton');
-  var CloseButton = videojs.extend(button, {
-        constructor: function() {
-          button.apply(this, arguments);
-          this.controlText("Close Player");
-          // this.addClass('vjs-icon-cancel');
-        },
-        handleClick: function() {
-          this.player().dispose();
-        }
-      });
-  videojs.registerComponent('CloseButton', CloseButton);
-  ubPlayer.addChild('CloseButton');
-    
-  //close player on video end.
-  ubPlayer.on('timeupdate', function(){
-      if(ubPlayer.currentTime() == ubPlayer.duration()){
-          console.log('video is ended');
-          ubPlayer.dispose();
+      var vjsOptions = {
+        autoplay: false,
+        muted: false,
+        width: 320,
+        height: 180,
       }
-  });
+
+      ubPlayer = videojs('content_video', vjsOptions);
+      ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
+
+      var imaOptions = {
+        id: "content_video",
+        // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
+        adTagUrl:"https://video.unibots.in/clients/bongda/ads.xml",
+        disableCustomPlaybackForIOS10Plus: true,
+        contribAdsSettings: {
+          debug: true,
+          timeout: 8000,
+          prerollTimeout: 8000,
+        },
+        adsRenderingSettings: {
+          enablePreloading: true
+        }
+      };
+      ubPlayer.ima(imaOptions);
+
+      ubPlayer.on('adserror',function(err) {
+            console.log('ads error!');
+            console.log(err);
+            // ubPlayer.ima.requestAds();
+            showPlayer();
+          }.bind(ubPlayer)
+      );
+
+
+      ubPlayer.on('adsready',()=>{
+          // console.log("ads ready");
+          showPlayer();
+          // setTimeout(showPlayer(), 5000);
+      }); 
+
+      ubPlayer.on('readyforpreroll',()=>{
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+        // showPlayer();
+      });
+
+      if (autoplayAllowed) {
+        if (autoplayRequiresMute) {
+          ubPlayer.muted(true);
+        }
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+      }
+      
+      if (!autoplayAllowed) {
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+
+        if (navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/Android/i)) {
+          startEvent = 'touchend';
+        }
+
+        wrapperDiv = document.getElementById('content_video');
+        wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
+      }
+
+      ubPlayer.on('play', () => { 
+        ubPlayer.volume(0.1);
+        if(!ubPlayer.muted()){
+          ubPlayer.muted(true);
+        }    
+      });
+
+      var button = videojs.getComponent('CloseButton');
+      var CloseButton = videojs.extend(button, {
+            constructor: function() {
+              button.apply(this, arguments);
+              this.controlText("Close Player");
+              // this.addClass('vjs-icon-cancel');
+            },
+            handleClick: function() {
+              this.player().dispose();
+            }
+          });
+      videojs.registerComponent('CloseButton', CloseButton);
+      ubPlayer.addChild('CloseButton');
+        
+      //close player on video end.
+      ubPlayer.on('timeupdate', function(){
+          if(ubPlayer.currentTime() == ubPlayer.duration()){
+              console.log('video is ended');
+              ubPlayer.dispose();
+          }
+      });
+    }
   // setLogo();
 }
 
@@ -295,4 +297,4 @@ if(!isMobile()){
       //     passive: true
       }); 
   }, 2000);
-}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:999;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important}#unibots-video-mobile{margin-top:35px}#unibots-video,#unibots-video-mobile{display:none}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_banner_logo{background:#fff;position:absolute;padding:2px 5px 3px 5px;right:27px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img,#ubp_banner_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{width:320px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:999;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important}#unibots-video,#unibots-video-mobile{display:none}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_banner_logo{background:#fff;position:absolute;padding:2px 5px 3px 5px;right:27px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img,#ubp_banner_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{width:320px!important}#ubVideo{margin:30px 0px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

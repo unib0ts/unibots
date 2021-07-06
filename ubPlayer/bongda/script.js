@@ -138,7 +138,7 @@ function initPlayer() {
   
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
-  if(document.getElementById('unibots-video') && document.getElementById('unibots-video')){
+  if(document.getElementById('unibots-video') || document.getElementById('unibots-video')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 

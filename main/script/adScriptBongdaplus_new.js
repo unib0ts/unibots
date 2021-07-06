@@ -38,6 +38,15 @@ return check;
 };
 
 if (!mobileCheck()) {
+  if(window.location.href == "https://bongdaplus.vn/"){
+		var cachebuster = Math.round(new Date().getTime() / 1000);
+		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb='+cachebuster;
+		ub_vs = document.createElement('script');
+		ub_vs.src = url;
+		ub_vs.type = "text/javascript";
+		document.getElementsByTagName('head')[0].appendChild(ub_vs);
+  }
+
   // var s5 = document.createElement('script');
   // s5.async = true;
   // s5.setAttribute("id", "AV5fb77ae2fab17435261f178a");
@@ -71,7 +80,6 @@ if (document.querySelector('main')) {
   	document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1614845141925-0">';
   }
 }
-
 
   if(!(window.location.href == "https://bongdaplus.vn/")){
     z1= document.createElement('div');

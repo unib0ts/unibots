@@ -77,8 +77,10 @@ var ub_divsToCheck = {
 
 if (!mobileCheck()) {
   if(window.location.href == "https://docbao.vn/"){
-		var ub_vs = document.createElement('script');
-		ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js";
+		var cachebuster = Math.round(new Date().getTime() / 1000);
+		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb='+cachebuster;
+		ub_vs = document.createElement('script');
+		ub_vs.src = url;
 		ub_vs.type = "text/javascript";
 		document.getElementsByTagName('head')[0].appendChild(ub_vs);
   }

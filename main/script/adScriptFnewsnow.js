@@ -84,7 +84,7 @@ bids: [
 
 var size_array = mapping_hb.sizes;
 
-var mybotstyleSheet='.ub-sticky-ad-containerdesk{position:fixed;width:fit-content!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.close_ub-sticky-addesk{display: none; position:absolute;margin-top:-20px;width:20px;cursor:pointer;right:-20px;z-index:2147483647;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}';
+var mybotstyleSheet='.ub-sticky-ad-containerdesk{position:fixed;width:fit-content!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.close_ub-sticky-addesk{display: none; position:absolute;margin-top:-20px;width:20px;cursor:pointer;right:-20px;z-index:2147483647;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)} #div-gpt-ad-1625037685774-0{min-width: 728px;min-height: 90px;}';
 
 var css=document.createElement('style');
 css.type='text/css';

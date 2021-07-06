@@ -153,8 +153,10 @@ var ub_divsToCheck = {
 			}
 		}
 		if (!flag || checkFlag) {
-      var ub_vs = document.createElement('script');
-      ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js";
+      var cachebuster = Math.round(new Date().getTime() / 1000);
+    	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb='+cachebuster;
+    	ub_vs = document.createElement('script');
+    	ub_vs.src = url;
       ub_vs.type = "text/javascript";
       document.getElementsByTagName('head')[0].appendChild(ub_vs);
 			clearInterval(ub_interval);

@@ -120,7 +120,7 @@ function mybotCustomFunction() {
 function loadAdCustom() {
 	  // return false;
 		var s3 = document.createElement('script');
-	    s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+	    s3.setAttribute("data-ad-client", "ca-pub-8347743608688020");
 	    s3.async = true;
 	    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
 	    document.getElementsByTagName('head')[0].appendChild(s3);
@@ -602,7 +602,7 @@ function putData(mybotDataSet) {
 		}
 
 		if (document.getElementById('country_positivity')) {
-			document.getElementById('country_positivity').innerText = country_positivity;
+			document.getElementById('country_positivity').innerText = country_positivity + " % ";
 			document.getElementById('country_positivityTxt').innerText = "India Positivity Rate" + " - ";
 		}
 		// if (document.getElementById('country_cases')) {

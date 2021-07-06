@@ -138,7 +138,7 @@ function initPlayer() {
   
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
-  if(document.getElementById('unibots-video') || document.getElementById('unibots-video')){
+  if(document.getElementById('unibots-video') || document.getElementById('unibots-video-mobile')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
@@ -267,7 +267,7 @@ function showPlayer(){
 //   e.appendChild(i);
 // }
 
-if(!isMobile()){
+if(!isMobile() && (document.getElementById('unibots-video') || document.getElementById('unibots-video-mobile'))){
   setTimeout(()=>{
       function isInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -276,7 +276,12 @@ if(!isMobile()){
                 rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
                 rect.top < (window.innerHeight || document.documentElement.clientHeight);
       }
-      const currentPlayer = document.querySelector('#unibots-video');
+      const currentPlayer = '';
+      if(document.getElementById('unibots-video')){
+        currentPlayer = document.querySelector('#unibots-video');
+      }else{
+        currentPlayer = document.querySelector('#unibots-video-mobile');
+      }
       window.addEventListener('scroll', function () {
         var targetDiv = document.getElementById("ubVideo");
 

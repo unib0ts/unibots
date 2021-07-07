@@ -274,6 +274,11 @@ function mainHbRun(){
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
+     ubpbjs.requestBids({
+         bidsBackHandler: initAdserver_hb_full,
+         timeout: PREBID_TIMEOUT,
+         labels: [GEO_CODE],
+     });
   });
   setTimeout(function() {
       initAdserver_hb_full();

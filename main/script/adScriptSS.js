@@ -1109,7 +1109,8 @@ var mappings_extra_units_config ={
   ]
 }
 var mappings_extra_units = {
-  slots: []
+  slots: [],
+  adUnitNames:[]
 }
 
 function checkHBUnits(){
@@ -1141,6 +1142,27 @@ function callFullHBAds(adCode, ub_slot){
     });
   });
 }
+function callExtraHBAds(adCode, ub_slot){
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      // adUnits: adUnits_full_hb,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        ubpbjs.initAdserverSetHB = true;
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              // requestManager.prebid = true;
+              // biddersBack();
+              googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+
 function locate_googleSlot(targetId){
   tempSlots = googletag.pubads().getSlots();
   var ub_hb_slot;
@@ -1340,6 +1362,7 @@ function callMapUnits(){
       }
       else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
         mappings_extra_units.slots.push(x[i]);
+        mappings_extra_units.adUnitNames.push(x[i]);
       }
     }
 
@@ -1380,6 +1403,7 @@ function callMapUnits(){
 
     // callAPStagBids();
     callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
+    callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
   });
 }
 

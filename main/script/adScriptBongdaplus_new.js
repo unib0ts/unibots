@@ -274,6 +274,11 @@ function mainHbRun(){
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
+     ubpbjs.requestBids({
+         bidsBackHandler: initAdserver_hb_full,
+         timeout: PREBID_TIMEOUT,
+         labels: [GEO_CODE],
+     });
   });
   setTimeout(function() {
       initAdserver_hb_full();
@@ -291,7 +296,7 @@ var mapping_full_hb = {
 
 var adUnits_full_hb = [];
 var hb_full_common_bidders = [
-  // { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
+  { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
   // { bidder: 'oftmedia', params: { placementId: '20846125' } },
   // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
   // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */

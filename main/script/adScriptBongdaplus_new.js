@@ -274,11 +274,6 @@ function mainHbRun(){
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
      });
-     ubpbjs.requestBids({
-         bidsBackHandler: initAdserver_hb_full,
-         timeout: PREBID_TIMEOUT,
-         labels: [GEO_CODE],
-     });
   });
   setTimeout(function() {
       initAdserver_hb_full();
@@ -876,13 +871,12 @@ function callMapUnits(){
     x = mappings_full_hb_config.adId;
     for(i=0;i<x.length;i++){
       if(document.getElementById(mappings_full_hb_config.adId[i])){
-        size_array = [];
 
         adUnitTemp = {
           code: mappings_full_hb_config.adUnitNames[i],
           mediaTypes: {
               banner: {
-                  sizes: size_array[i]
+                  sizes: mappings_full_hb_config.sizes[i]
               }
           },
           bids: mappings_full_hb_config.bids[i]

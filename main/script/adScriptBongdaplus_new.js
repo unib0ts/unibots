@@ -1059,18 +1059,18 @@ if (mobileCheck()) {
   if(window.location.href== "https://bongdaplus.vn/"){
     googletag.cmd.push(function() {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            // if (event.slot === mapping_full_hb.slotNumbers[i]) {
+            if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
               var nodes_anchr = document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes;
               if(nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == 'iframe') {
                 document.getElementById('close_ub-sticky-ad').style.display = 'block';
               }
-            // }
+            }
           });
     });
   }
   googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          // if (event.slot === mapping_full_hb.slotNumbers[i]) {
+          if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
             var nodes_pop = document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes;
             if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
               document.getElementById('mybotpopupCloseButton').style.display = 'block';
@@ -1079,6 +1079,7 @@ if (mobileCheck()) {
                 mybotpopupad.style.backgroundColor = '#000';
                 mybotpopupad.style.zIndex = '2147483647';
             }
+          }
         });
   });
 }

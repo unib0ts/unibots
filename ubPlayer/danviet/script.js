@@ -60,7 +60,7 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 
 ubIma.onload = function(){
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts); 
-  let myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  let myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   document.getElementById("unibots-video").innerHTML = myPlayer;
 }
 
@@ -224,4 +224,31 @@ var startEvent = 'click';
 
 function showPlayer(){
   document.getElementById("unibots-video").style.display = 'initial';
-}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;left:10px;width:320px!important;z-index:999999999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:320px!important;height:180px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important;z-index:2147483647!important}#unibots-video{margin:30px 0}#unibots-video iframe{max-width:auto!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){#unibots-video{margin:unset!important}.ubsticky{right:10px!important;left:auto!important;width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+}
+// function isInViewport(el) {
+//   const rect = el.getBoundingClientRect();
+//   return  rect.bottom > 0 &&
+//           rect.right > 0 &&
+//           rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+//           rect.top < (window.innerHeight || document.documentElement.clientHeight);
+// }
+//   const currentPlayer = document.querySelector('#unibots-video');
+//   window.addEventListener('scroll', function () {
+//     var targetDiv = document.getElementById("ubVideo");
+
+//     if(isInViewport(currentPlayer)){
+//       if(targetDiv.classList.contains("ubsticky")){
+//         targetDiv.classList.remove("ubsticky");
+//         targetDiv.removeAttribute('class');
+//       }
+//     }else{
+//       targetDiv.setAttribute('class','');
+//       if(!targetDiv.classList.contains("ubsticky")){
+//         targetDiv.classList.add("ubsticky");
+//       }
+//     }
+//   // }, {
+//   //     passive: true
+//   });
+
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;left:10px;width:320px!important;z-index:999999999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:320px!important;height:180px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important;z-index:2147483647!important}#unibots-video{margin:30px 0}#unibots-video iframe{max-width:auto!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}@media (max-width:481px){.ubsticky{right:10px!important;left:auto!important;bottom:150px;width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

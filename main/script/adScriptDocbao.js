@@ -76,7 +76,7 @@ var ub_divsToCheck = {
 	loadAd('gabywa');
 
 if (!mobileCheck()) {
-  if(window.location.href == "https://docbao.vn/"){
+  if(!(window.location.href == "https://docbao.vn/")){
 		var cachebuster = Math.round(new Date().getTime() / 1000);
 		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb='+cachebuster;
 		ub_vs = document.createElement('script');
@@ -120,7 +120,7 @@ if (!mobileCheck()) {
     }
   // }
 
-  if(!(window.location.href == "https://docbao.vn/")){
+  if(window.location.href == "https://docbao.vn/"){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';

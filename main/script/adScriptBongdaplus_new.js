@@ -38,14 +38,14 @@ return check;
 };
 
 if (!mobileCheck()) {
-  // if(window.location.href == "https://bongdaplus.vn/"){
+  if(!(window.location.href == "https://bongdaplus.vn/")){
 		var cachebuster = Math.round(new Date().getTime() / 1000);
 		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb='+cachebuster;
 		ub_vs = document.createElement('script');
 		ub_vs.src = url;
 		ub_vs.type = "text/javascript";
 		document.getElementsByTagName('head')[0].appendChild(ub_vs);
-  // }
+  }
 
   // var s5 = document.createElement('script');
   // s5.async = true;
@@ -81,14 +81,14 @@ if (document.querySelector('main')) {
   }
 }
 
-  // if(!(window.location.href == "https://bongdaplus.vn/")){
-  //   z1= document.createElement('div');
-  //   z1.id = 'ub-sticky-ad-containerdesk';
-  //   z1.className = 'ub-sticky-ad-containerdesk';
-  //   z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
-  //   x1 = document.querySelector('body');
-  //   x1.appendChild(z1);
-  // }
+  if(window.location.href == "https://bongdaplus.vn/"){
+    z1= document.createElement('div');
+    z1.id = 'ub-sticky-ad-containerdesk';
+    z1.className = 'ub-sticky-ad-containerdesk';
+    z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
+    x1 = document.querySelector('body');
+    x1.appendChild(z1);
+  }
 }
 else {
   // var s6 = document.createElement('script');

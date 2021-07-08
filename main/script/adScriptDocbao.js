@@ -120,14 +120,14 @@ if (!mobileCheck()) {
     }
   // }
 
-  if(window.location.href == "https://docbao.vn/"){
+  // if(window.location.href == "https://docbao.vn/"){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';
     z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019421633-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
-  }
+  // }
 }
 else {
   // if(!(window.location.href== "https://m.docbao.vn/") && !(window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)){
@@ -227,6 +227,7 @@ var adUnits = [
         },
         bids: [
           { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+					{ bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
           // { bidder: 'oftmedia', params: { placementId: '20846125' } },
           // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
@@ -877,7 +878,7 @@ var mappings_full_hb_config_mobile = {
   bids: [
     hb_full_common_bidders.concat([
       // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3548534'} },
+      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
    //    { bidder: 'openx', params: {unit: '544005769', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
    //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
    // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },

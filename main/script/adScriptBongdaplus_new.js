@@ -81,14 +81,14 @@ if (document.querySelector('main')) {
   }
 }
 
-  if(window.location.href == "https://bongdaplus.vn/"){
+  // if(window.location.href == "https://bongdaplus.vn/"){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';
     z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
-  }
+  // }
 }
 else {
   // var s6 = document.createElement('script');
@@ -644,7 +644,7 @@ var mappings_full_hb_config_mobile = {
     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi', domain: 'https://prg8.smartadserver.com' } }
      ]), //    '21692080761/amb_eng_mob_mpu_3',
      hb_full_common_bidders.concat([
-       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507466'} },
+       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507466'} },
        // { bidder: 'openx', params: {unit: '543981180', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        // { bidder: 'ucfunnel', params: { adid : 'ad-2736B8743748ADDA08644EB83D633678'} },
     //   { bidder: "kubient", params: { zoneid: "9b094d05b54f3", server: "kssp.kbntx.ch"} },
@@ -664,7 +664,7 @@ var mappings_full_hb_config_mobile = {
    // //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
    //  ]),
    hb_full_common_bidders.concat([
-     // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910487'} },
   //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
   //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
   // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1059,18 +1059,18 @@ if (mobileCheck()) {
   if(window.location.href== "https://bongdaplus.vn/"){
     googletag.cmd.push(function() {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
+            // if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
               var nodes_anchr = document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes;
               if(nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == 'iframe') {
                 document.getElementById('close_ub-sticky-ad').style.display = 'block';
               }
-            }
+            // }
           });
     });
   }
   googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
+          // if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
             var nodes_pop = document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes;
             if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
               document.getElementById('mybotpopupCloseButton').style.display = 'block';
@@ -1079,7 +1079,7 @@ if (mobileCheck()) {
                 mybotpopupad.style.backgroundColor = '#000';
                 mybotpopupad.style.zIndex = '2147483647';
             }
-          }
+          // }
         });
   });
 }

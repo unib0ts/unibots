@@ -38,14 +38,14 @@ return check;
 };
 
 if (!mobileCheck()) {
-  if(window.location.href == "https://bongdaplus.vn/"){
+  // if(window.location.href == "https://bongdaplus.vn/"){
 		var cachebuster = Math.round(new Date().getTime() / 1000);
 		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb='+cachebuster;
 		ub_vs = document.createElement('script');
 		ub_vs.src = url;
 		ub_vs.type = "text/javascript";
 		document.getElementsByTagName('head')[0].appendChild(ub_vs);
-  }
+  // }
 
   // var s5 = document.createElement('script');
   // s5.async = true;
@@ -81,14 +81,14 @@ if (document.querySelector('main')) {
   }
 }
 
-  if(!(window.location.href == "https://bongdaplus.vn/")){
-    z1= document.createElement('div');
-    z1.id = 'ub-sticky-ad-containerdesk';
-    z1.className = 'ub-sticky-ad-containerdesk';
-    z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
-    x1 = document.querySelector('body');
-    x1.appendChild(z1);
-  }
+  // if(!(window.location.href == "https://bongdaplus.vn/")){
+  //   z1= document.createElement('div');
+  //   z1.id = 'ub-sticky-ad-containerdesk';
+  //   z1.className = 'ub-sticky-ad-containerdesk';
+  //   z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
+  //   x1 = document.querySelector('body');
+  //   x1.appendChild(z1);
+  // }
 }
 else {
   // var s6 = document.createElement('script');
@@ -273,11 +273,6 @@ function mainHbRun(){
       bidderTimeout: PREBID_TIMEOUT+500,
       //pubcid: {expInterval: },
       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
-     });
-     ubpbjs.requestBids({
-         bidsBackHandler: initAdserver_hb_full,
-         timeout: PREBID_TIMEOUT,
-         labels: [GEO_CODE],
      });
   });
   setTimeout(function() {
@@ -876,13 +871,12 @@ function callMapUnits(){
     x = mappings_full_hb_config.adId;
     for(i=0;i<x.length;i++){
       if(document.getElementById(mappings_full_hb_config.adId[i])){
-        size_array = [];
 
         adUnitTemp = {
           code: mappings_full_hb_config.adUnitNames[i],
           mediaTypes: {
               banner: {
-                  sizes: size_array[i]
+                  sizes: mappings_full_hb_config.sizes[i]
               }
           },
           bids: mappings_full_hb_config.bids[i]

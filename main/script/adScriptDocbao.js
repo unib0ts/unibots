@@ -76,14 +76,14 @@ var ub_divsToCheck = {
 	loadAd('gabywa');
 
 if (!mobileCheck()) {
-  if(!(window.location.href == "https://docbao.vn/")){
-		var cachebuster = Math.round(new Date().getTime() / 1000);
-		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb='+cachebuster;
-		ub_vs = document.createElement('script');
-		ub_vs.src = url;
-		ub_vs.type = "text/javascript";
-		document.getElementsByTagName('head')[0].appendChild(ub_vs);
-  }
+  // if(!(window.location.href == "https://docbao.vn/")){
+	// 	var cachebuster = Math.round(new Date().getTime() / 1000);
+	// 	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb='+cachebuster;
+	// 	ub_vs = document.createElement('script');
+	// 	ub_vs.src = url;
+	// 	ub_vs.type = "text/javascript";
+	// 	document.getElementsByTagName('head')[0].appendChild(ub_vs);
+  // }
   // var ad_scrpt1 = document.createElement('script');
   // ad_scrpt1.type = "text/javascript";
   // ad_scrpt1.innerText= mybotadscrpt;

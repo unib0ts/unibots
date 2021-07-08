@@ -1051,7 +1051,7 @@ function checkHBUnits(){
   // }, FAILSAFE_TIMEOUT);
 }
 function callFullHBAds(adCode, ub_slot){
-  fillRefreshMap();
+  // fillRefreshMap();
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,

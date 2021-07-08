@@ -66,7 +66,7 @@ ubIma.onload = function(){
   if(document.getElementById("unibots-video")){
     document.getElementById("unibots-video").innerHTML = myPlayer;
   }
-  else if(!isMobile()){
+  else if(!isMobile() && window.location.href != "https://docbao.vn/"){
     let z1= document.createElement('div');
     z1.id = 'unibots-video-sticky';
     z1.innerHTML = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
@@ -262,7 +262,8 @@ function isInViewport(el) {
           rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
           rect.top < (window.innerHeight || document.documentElement.clientHeight);
 }
-if(!isMobile() && document.getElementById("unibots-video")){
+if(!isMobile() && window.location.href != "https://docbao.vn/"){
+  if(document.getElementById("unibots-video")){
     const currentPlayer = document.querySelector('#unibots-video');
     window.addEventListener('scroll', function () {
       var targetDiv = document.getElementById("ubVideo");
@@ -281,4 +282,5 @@ if(!isMobile() && document.getElementById("unibots-video")){
     // }, {
     //     passive: true
     });
+  }
 }function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo,#uboVideo{margin:35px auto;display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-28px!important}#unibots-video,#unibots-video-sticky{margin-top:35px}#uboVideo .ubo_content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#unibots-video .vjs-control-bar,#unibots-video .vjs-play-progress,#unibots-video .vjs-slider-bar,#unibots-video-sticky .vjs-control-bar,#unibots-video-sticky .vjs-play-progress,#unibots-video-sticky .vjs-slider-bar{font-family:"VIDEOJS"!important;display:flex!important;visibility:visible!important;opacity:1!important;transition:visibility .1s,opacity .1s!important;line-height:normal!important}#unibots-video .vjs-icon-placeholder,#unibots-video .vjs-control-text,#unibots-video-sticky .vjs-icon-placeholder,#unibots-video-sticky .vjs-control-text{font-family:VideoJS!important;font-size:unset!important;line-height:unset!important;color:#fff!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

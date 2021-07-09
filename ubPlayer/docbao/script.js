@@ -73,6 +73,7 @@ ubIma.onload = function(){
     let x1 = document.querySelector('body');
     x1.appendChild(z1);
   }
+  document.querySelector("#ubVideo").classList.add("ub-unloaded");
   // if((window.location.href == "https://docbao.vn/xa-hoi" || window.location.href == "https://docbao.vn/") && !isMobile()){
   //   let z1= document.createElement('div');
   //   z1.id = 'ubVideo';
@@ -86,6 +87,7 @@ ubIma.onload = function(){
   // else{
   //   document.getElementById("unibots-video").innerHTML = myPlayer;
   // }
+  
 }
 
 let post_scripts =()=>{
@@ -257,10 +259,10 @@ function initAdDisplayContainer() {
 var startEvent = 'click';
 
 function showPlayer(){
-  if(document.getElementById("ubVideo")){
-    document.getElementById("ubVideo").style.display = 'flex';
-  }
+  document.querySelector("#ubVideo").classList.remove("ub-unloaded");
+  document.querySelector("#ubVideo").classList.add("ub-loaded");
 }
+
 
 function setLogo(){
   let i = document.createElement("a");
@@ -288,10 +290,8 @@ if(!isMobile() && window.location.href != "https://docbao.vn/"){
       if(isInViewport(currentPlayer)){
         if(targetDiv.classList.contains("ubsticky_left")){
           targetDiv.classList.remove("ubsticky_left");
-          targetDiv.removeAttribute('class');
         }
       }else{
-        targetDiv.setAttribute('class','');
         if(!targetDiv.classList.contains("ubsticky_left")){
           targetDiv.classList.add("ubsticky_left");
         }
@@ -300,4 +300,5 @@ if(!isMobile() && window.location.href != "https://docbao.vn/"){
     //     passive: true
     });
   }
-}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo,#uboVideo{margin:35px auto;display:flex;justify-content:center;display:none}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-28px!important}#uboVideo .ubo_content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important;z-index:99999999999!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}#unibots-video .vjs-control-bar,#unibots-video .vjs-play-progress,#unibots-video .vjs-slider-bar,#unibots-video-sticky .vjs-control-bar,#unibots-video-sticky .vjs-play-progress,#unibots-video-sticky .vjs-slider-bar{font-family:"VIDEOJS"!important;display:flex!important;visibility:visible!important;opacity:1!important;transition:visibility 0.1s,opacity 0.1s!important;line-height:normal!important;font-size:7pt!important}#unibots-video .vjs-icon-placeholder,#unibots-video .vjs-control-text,#unibots-video-sticky .vjs-icon-placeholder,#unibots-video-sticky .vjs-control-text{font-family:VideoJS!important;font-size:unset!important;line-height:unset!important;color:#fff!important}#unibots-video #content_video_ima-ad-container>div{font-family:VideoJS!important;font-size:unset!important;line-height:unset!important;font:0px!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+}
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-28px!important}#unibots-video,#unibots-video-sticky{margin-top:35px}#uboVideo .ubo_content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}#unibots-video .vjs-control-bar,#unibots-video .vjs-play-progress,#unibots-video .vjs-slider-bar,#unibots-video-sticky .vjs-control-bar,#unibots-video-sticky .vjs-play-progress,#unibots-video-sticky .vjs-slider-bar{font-family:"VIDEOJS"!important;display:flex!important;visibility:visible!important;opacity:1!important;transition:visibility 0.1s,opacity 0.1s!important;line-height:normal!important;font-size:7pt!important}#unibots-video .vjs-icon-placeholder,#unibots-video .vjs-control-text,#unibots-video-sticky .vjs-icon-placeholder,#unibots-video-sticky .vjs-control-text{font-family:VideoJS!important;font-size:unset!important;line-height:unset!important;color:#fff!important}#unibots-video #content_video_ima-ad-container>div{font-family:VideoJS!important;font-size:unset!important;line-height:unset!important;font:0px!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

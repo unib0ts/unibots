@@ -59,7 +59,7 @@ ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
 document.getElementsByTagName("body")[0].appendChild(ubIma);
 
 ubIma.onload = function(){
-  // load_player();
+  
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
   let myPlayer = isMobile() ? '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   
@@ -69,8 +69,15 @@ ubIma.onload = function(){
     z1.innerHTML = myPlayer;
     let x1 = document.querySelector('body');
     x1.appendChild(z1);
-    // document.getElementById('unibots-video').style.position = "fixed";
+  } 
+  else if(!isMobile() && window.location.href == "https://bongdaplus.vn/"){
+    targetDiv = document.getElementsByClassName("topvideobox")[0];
+    var div = document.createElement("div");
+    div.id = "unibots-video-homePC";
+    div.innerHTML = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+    targetDiv.insertAdjacentElement('afterend',div);
   }
+
   if(document.getElementById('unibots-video')){
     document.getElementById('unibots-video').innerHTML= myPlayer;
   }
@@ -129,7 +136,7 @@ function initPlayer() {
   
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
-  if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-mobile')){
+  if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-mobile') || document.getElementById('unibots-video-homePC')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
@@ -138,6 +145,13 @@ function initPlayer() {
         muted: false,
         width: isMobile() ? 320 : 400,
         height: isMobile() ? 180 : 225,
+        loadingSpinner: false,
+        bigPlayButton: false,
+        controlBar: {
+          'liveDisplay': true,
+          'pictureInPictureToggle': false,
+          'fullscreenToggle': false
+        }
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
@@ -170,8 +184,8 @@ function initPlayer() {
 
       ubPlayer.on('adsready',()=>{
           // console.log("ads ready");
-          showPlayer();
-          // setTimeout(showPlayer(), 5000);
+          // showPlayer();
+          setTimeout(showPlayer(), 3000);
       }); 
 
       ubPlayer.on('readyforpreroll',()=>{
@@ -230,8 +244,8 @@ function initPlayer() {
               ubPlayer.dispose();
           }
       });
+      setLogo();  
     }
-  // setLogo();
 }
 
 function initAdDisplayContainer() {
@@ -242,21 +256,23 @@ function showPlayer(){
   if (document.getElementById('unibots-video')) {
       document.getElementById("unibots-video").style.display = 'initial';
   }
-  else{
+  else if(document.getElementById('unibots-video-homePC')){
+    document.getElementById("unibots-video-homePC").style.display = 'initial';
+  }
+  else if(document.getElementById("unibots-video-sticky")){
       document.getElementById("unibots-video-sticky").style.display = 'initial';
   }
 }
 
-// function setLogo(){
-//   let e = document.getElementById("ubVideo");
-//   let i = document.createElement("a");
-//   i.href = "https://unibots.in";
-//   i.target = "_blank";
-//   i.id = "ubp_banner_logo";
-//   i.classList.add = "ubp_banner_logo";
-//   i.innerHTML = '<img src="https://video.unibots.in/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
-//   e.appendChild(i);
-// }
+function setLogo(){
+  let i = document.createElement("a");
+  i.href = "https://unibots.in";
+  i.target = "_blank";
+  i.id = "ubp_logo";
+  i.classList.add = "ubp_logo";
+  i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
+  ubPlayer.el_.appendChild(i);
+}
 
 if(!isMobile() && window.location.href != "https://bongdaplus.vn/"){
   setTimeout(()=>{
@@ -289,4 +305,5 @@ if(!isMobile() && window.location.href != "https://bongdaplus.vn/"){
       //     passive: true
       }); 
   }, 2000);
-}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-sticky{display:none;z-index:2147483999!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_banner_logo{background:#fff;position:absolute;padding:2px 5px 3px 5px;right:27px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img,#ubp_banner_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{width:320px!important}#ubVideo{margin:30px 0px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+}
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-sticky,#unibots-video-homePC{display:none;z-index:2147483999!important}#unibots-video-homePC{margin-top:35px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important;z-index:99999999999!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{width:320px!important}#ubVideo{margin:30px 0px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

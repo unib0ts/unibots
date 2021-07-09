@@ -131,7 +131,7 @@ if (!mobileCheck()) {
         x1.appendChild(z1);
     }
 
-    // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+    if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
     z2 = document.createElement("div");
     z2.id = "ub-popup-ad-container";
     z2.className = "ub-popup-ad-container";
@@ -139,7 +139,7 @@ if (!mobileCheck()) {
         '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
     x2 = document.querySelector("body");
     x2.appendChild(z2);
-    // }
+    }
 }
 
 function mybotubPopadcls() {
@@ -687,7 +687,7 @@ var mappings_full_hb_config_mobile = {
         "/22140546871/bongdaplus.vn_mb_ma_336x280",
         "/22140546871/bongdaplus.vn_mb_anchor_320x50",
         // '/22140546871/bongdaplus.vn_mb_anchor_320x100',
-        // '/22140546871/bongdaplus.vn_popup_fluid_336x280'
+        '/22140546871/bongdaplus.vn_popup_fluid_336x280'
     ],
     adId: [
         "div-gpt-ad-1619183586523-0", // '/22140546871/bongdaplus.vn_in-article_468x60',
@@ -700,7 +700,7 @@ var mappings_full_hb_config_mobile = {
         "div-gpt-ad-1614845690965-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
         "div-gpt-ad-1614845787563-0", //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
         // 'div-gpt-ad-1615775641979-0',  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
-        // 'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
+        'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
     ],
     sizes: [
         [468, 60],
@@ -1339,20 +1339,22 @@ if (mobileCheck()) {
                 });
         });
     }
-    // googletag.cmd.push(function() {
-    //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    //         // if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
-    //           var nodes_pop = document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes;
-    //           if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
-    //             document.getElementById('mybotpopupCloseButton').style.display = 'block';
-    //               mybotpopupad = document.querySelector("#ub-popup-ad-container");
-    //               mybotpopupad.style.height = '100%';
-    //               mybotpopupad.style.backgroundColor = '#000';
-    //               mybotpopupad.style.zIndex = '2147483647';
-    //           }
-    //         // }
-    //       });
-    // });
+    if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+      googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            // if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
+              var nodes_pop = document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes;
+              if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
+                document.getElementById('mybotpopupCloseButton').style.display = 'block';
+                  mybotpopupad = document.querySelector("#ub-popup-ad-container");
+                  mybotpopupad.style.height = '100%';
+                  mybotpopupad.style.backgroundColor = '#000';
+                  mybotpopupad.style.zIndex = '2147483647';
+              }
+            // }
+          });
+    });
+    }
 }
 
 function loadAd(id, adUnits) {

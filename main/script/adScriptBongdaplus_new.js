@@ -120,7 +120,7 @@ if (!mobileCheck()) {
         x1.appendChild(z1);
     }
 
-    if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+    // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
     z2 = document.createElement("div");
     z2.id = "ub-popup-ad-container";
     z2.className = "ub-popup-ad-container";
@@ -128,7 +128,7 @@ if (!mobileCheck()) {
         '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
     x2 = document.querySelector("body");
     x2.appendChild(z2);
-    }
+    // }
 }
 
 function mybotubPopadcls() {
@@ -204,6 +204,41 @@ const customConfigObjectA = {
         },
     ],
 };
+
+var adUnits_full_hb = [];
+
+var div_1_sizes = [[300, 600], [300, 250], [336, 280]];
+
+if (mobileCheck()) {
+// if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+  adUnits1 =
+      {
+        code: '/22140546871/bongdaplus.vn_popup_fluid_336x280',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
+					{ bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910487'} },
+          // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+          // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+          // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+          // { bidder: 'nobid', params: { siteId: '22049997436' } },
+          // // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // // // { bidder: 'criteo', params: {networkId: '10542'} },
+          // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+          // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        ]
+    };
+  adUnits_full_hb.push(adUnits1);
+  // }
+}
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -343,7 +378,105 @@ var mapping_full_hb = {
     renderedFlag: [],
 };
 
-var adUnits_full_hb = [];
+var ub_slot1;
+function addNewsBotAd(){
+  googletag.cmd.push(function() {
+      ub_slot1 = googletag.defineSlot('/22140546871/bongdaplus.vn_popup_fluid_336x280', div_1_sizes, 'div-gpt-ad-1624014789114-0').addService(googletag.pubads());
+      googletag.pubads().collapseEmptyDivs(true);
+      googletag.pubads().setCentering(true);
+      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot.getAdUnitPath() === '/22140546871/bongdaplus.vn_popup_fluid_336x280') {
+          ub_checkAd1Rendered();
+        }
+      });
+  });
+
+  ubpbjs.que.push(function() {
+    ubpbjs.requestBids({
+      bidsBackHandler: initAdserver,
+      timeout: PREBID_TIMEOUT
+    });
+  });
+
+  // in case ubpbjs doesn't load
+  setTimeout(function() {
+      initAdserver();
+  }, FAILSAFE_TIMEOUT);
+}
+
+function initAdserver() {
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot1]);
+            // var x = ubpbjs.getAllPrebidWinningBids();
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
+        });
+    });
+}
+
+ub_ad1RefreshFlag = 0;
+function ub_checkAd1Rendered(){
+	adId1 = 'div-gpt-ad-1624014789114-0';
+	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    document.getElementById('mybotpopupCloseButton').style.display = 'block';
+      mybotpopupad = document.querySelector("#ub-popup-ad-container");
+      mybotpopupad.style.height = '100%';
+      mybotpopupad.style.backgroundColor = '#000';
+      mybotpopupad.style.zIndex = '2147483647';
+    if(ub_ad1RefreshFlag != 1){
+      setInterval(function() {
+        ub_ad1RefreshFlag = 1;
+        refreshBidTemp(ub_slot1);
+      }, REFRESH_TIMEOUT);
+    }
+	 }
+}
+
+function refreshBidTemp(ub_slot) {
+  ubpbjs.que.push(function() {
+	  ubpbjs.requestBids({
+		  timeout: PREBID_TIMEOUT,
+		  adUnitCodes: ['/22140546871/bongdaplus.vn_popup_fluid_336x280'],
+		  bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh([ub_slot]);
+              // var adsCalled = false;
+              // for(var i=0;i<x.length;i++){
+              //   var bc = x[i].bidderCode;
+              //   if(bc=="openx"){
+              //     adsCalled = true;
+              //     callBotman();
+              //   }
+              // }
+              // if(!adsCalled){
+              //   callAdsUB();
+              // }
+          });
+        });
+		  }
+	  });
+  });
+}
+
 var hb_full_common_bidders = [
     {
         bidder: "appnexus",
@@ -651,7 +784,7 @@ var mappings_full_hb_config_mobile = {
         "/22140546871/bongdaplus.vn_mb_ma_336x280",
         "/22140546871/bongdaplus.vn_mb_anchor_320x50",
         // '/22140546871/bongdaplus.vn_mb_anchor_320x100',
-        '/22140546871/bongdaplus.vn_popup_fluid_336x280'
+        // '/22140546871/bongdaplus.vn_popup_fluid_336x280'
     ],
     adId: [
         "div-gpt-ad-1619183586523-0", // '/22140546871/bongdaplus.vn_in-article_468x60',
@@ -664,7 +797,7 @@ var mappings_full_hb_config_mobile = {
         "div-gpt-ad-1614845690965-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
         "div-gpt-ad-1614845787563-0", //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
         // 'div-gpt-ad-1615775641979-0',  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
-        'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
+        // 'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
     ],
     sizes: [
         [468, 60],
@@ -695,11 +828,11 @@ var mappings_full_hb_config_mobile = {
         ],
         [320, 50],
         // [300, 100],
-        [
-            [300, 600],
-            [300, 250],
-            [336, 280],
-        ],
+        // [
+        //     [300, 600],
+        //     [300, 250],
+        //     [336, 280],
+        // ],
     ],
     bids: [
         hb_full_common_bidders.concat([
@@ -816,18 +949,18 @@ var mappings_full_hb_config_mobile = {
         // //     { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
         //  ]),
-        hb_full_common_bidders.concat([
-            {
-                bidder: "pubmatic",
-                params: { publisherId: "159448", adSlot: "3910487" },
-            },
-            //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
-            // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-            // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
-            // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
-            // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-        ]),
+        // hb_full_common_bidders.concat([
+        //     {
+        //         bidder: "pubmatic",
+        //         params: { publisherId: "159448", adSlot: "3910487" },
+        //     },
+        //     //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        //     //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
+        //     // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+        //     // // //   { bidder: 'sovrn', params: {tagid: '744064'} },
+        //     // // { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+        //     // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        // ]),
     ],
     isAP: [
         true,
@@ -840,7 +973,7 @@ var mappings_full_hb_config_mobile = {
         true,
         true,
         // true,
-        true,
+        // true,
     ],
 };
 var mappings_full_hb_config_both = {
@@ -939,11 +1072,11 @@ if (!mobileCheckAdScript()) {
 }
 
 function checkHBUnits() {
-    // if (mobileCheck()) {
-    //   // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-    //     addNewsBotAd();
-    //   // }
-    // }
+    if (mobileCheck()) {
+      // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+        addNewsBotAd();
+      // }
+    }
     callMapUnits();
 
     // setTimeout(function() {
@@ -1303,22 +1436,22 @@ if (mobileCheck()) {
                 });
         });
     }
-    if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-      googletag.cmd.push(function() {
-          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            // if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
-              var nodes_pop = document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes;
-              if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
-                document.getElementById('mybotpopupCloseButton').style.display = 'block';
-                  mybotpopupad = document.querySelector("#ub-popup-ad-container");
-                  mybotpopupad.style.height = '100%';
-                  mybotpopupad.style.backgroundColor = '#000';
-                  mybotpopupad.style.zIndex = '2147483647';
-              }
-            // }
-          });
-    });
-    }
+    // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+    //   googletag.cmd.push(function() {
+    //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //         // if (document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes) {
+    //           var nodes_pop = document.getElementById('div-gpt-ad-1624014789114-0').childNodes[0].childNodes;
+    //           if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
+    //             document.getElementById('mybotpopupCloseButton').style.display = 'block';
+    //               mybotpopupad = document.querySelector("#ub-popup-ad-container");
+    //               mybotpopupad.style.height = '100%';
+    //               mybotpopupad.style.backgroundColor = '#000';
+    //               mybotpopupad.style.zIndex = '2147483647';
+    //           }
+    //         // }
+    //       });
+    // });
+    // }
 }
 
 function loadAd(id, adUnits) {

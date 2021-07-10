@@ -125,7 +125,7 @@ if (!mobileCheck()) {
     z2.id = "ub-popup-ad-container";
     z2.className = "ub-popup-ad-container";
     z2.innerHTML =
-        '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1625911505968-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1625911505968-0);});</script></div>';
+        '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624014789114-0);});</script></div>';
     x2 = document.querySelector("body");
     x2.appendChild(z2);
     }
@@ -213,7 +213,7 @@ if (mobileCheck()) {
 // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
   adUnits1 =
       {
-        code: '/22140546871/bongdaplus_out-of-page',
+        code: '/22140546871/bongdaplus.vn_popup_fluid_336x280',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -381,14 +381,14 @@ var mapping_full_hb = {
 var ub_slot1;
 function addNewsBotAd(){
   googletag.cmd.push(function() {
-      ub_slot1 = googletag.defineOutOfPageSlot('/22140546871/bongdaplus_out-of-page','div-gpt-ad-1625911505968-0').addService(googletag.pubads());
+      ub_slot1 = googletag.defineSlot('/22140546871/bongdaplus.vn_popup_fluid_336x280', div_1_sizes, 'div-gpt-ad-1624014789114-0').addService(googletag.pubads());
       googletag.pubads().collapseEmptyDivs(true);
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot.getAdUnitPath() === '/22140546871/bongdaplus_out-of-page') {
+        if (event.slot.getAdUnitPath() === '/22140546871/bongdaplus.vn_popup_fluid_336x280') {
           ub_checkAd1Rendered();
         }
       });
@@ -432,7 +432,7 @@ function initAdserver() {
 
 ub_ad1RefreshFlag = 0;
 function ub_checkAd1Rendered(){
-	adId1 = 'div-gpt-ad-1625911505968-0';
+	adId1 = 'div-gpt-ad-1624014789114-0';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     document.getElementById('mybotpopupCloseButton').style.display = 'block';
@@ -453,7 +453,7 @@ function refreshBidTemp(ub_slot) {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/22140546871/bongdaplus_out-of-page'],
+		  adUnitCodes: ['/22140546871/bongdaplus.vn_popup_fluid_336x280'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

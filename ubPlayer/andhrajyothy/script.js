@@ -62,18 +62,19 @@ ubIma.onload = function(){
   // load_player();
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
   let myPlayer = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-  let z1= document.createElement('div');
+  let target = document.body.querySelector('script[src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/andhrajyothy/script.js"]').parentElement;
   z1.id = 'unibots-video';
   z1.innerHTML = myPlayer;
-  return zi;
+  target.appendChild(z1);
+
   // let x1 = document.querySelector('body');
   // x1.appendChild(z1);
 
-  // if(document.getElementById('unibots-video')){
-  //   document.getElementById('unibots-video').innerHTML= myPlayer;
-  //   document.querySelector("#ubVideo").classList.add("ub-unloaded");
-  // }
-  document.querySelector("#ubVideo").classList.add("ub-unloaded");
+  if(document.getElementById('unibots-video')){
+    document.getElementById('unibots-video').innerHTML= myPlayer;
+    document.querySelector("#ubVideo").classList.add("ub-unloaded");
+  }
+  // document.querySelector("#ubVideo").classList.add("ub-unloaded");
 }
 
 let post_scripts =()=>{

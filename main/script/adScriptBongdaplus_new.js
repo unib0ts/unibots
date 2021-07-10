@@ -53,17 +53,6 @@ function mobileCheck() {
 }
 
 if (!mobileCheck()) {
-    if (!(window.location.href == "https://bongdaplus.vn/")) {
-        var cachebuster = Math.round(new Date().getTime() / 1000);
-        url =
-            "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" +
-            cachebuster;
-        ub_vs = document.createElement("script");
-        ub_vs.src = url;
-        ub_vs.type = "text/javascript";
-        document.getElementsByTagName("head")[0].appendChild(ub_vs);
-    }
-
     // var s5 = document.createElement('script');
     // s5.async = true;
     // s5.setAttribute("id", "AV5fb77ae2fab17435261f178a");
@@ -167,37 +156,12 @@ s1.src =
 s1.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(s1);
 
-var ub_divsToCheck = {
-    "unibots-video": false,
-    "unibots-video-mobile": false,
-};
-
-var ub_interval = setInterval(() => {
-    flag = false;
-    checkFlag = false;
-    for (x_ub in ub_divsToCheck) {
-        if (document.getElementById(x_ub) !== null) {
-            ub_divsToCheck[x_ub] = true;
-            checkFlag = true;
-        }
-    }
-    for (x_ub in ub_divsToCheck) {
-        if (ub_divsToCheck[x_ub] == false) {
-            flag = true;
-        }
-    }
-    if (!flag || checkFlag) {
-        var cachebuster = Math.round(new Date().getTime() / 1000);
-        url =
-            "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" +
-            cachebuster;
-        ub_vs = document.createElement("script");
-        ub_vs.src = url;
-        ub_vs.type = "text/javascript";
-        document.getElementsByTagName("head")[0].appendChild(ub_vs);
-        clearInterval(ub_interval);
-    }
-}, 500);
+var cachebuster = Math.round(new Date().getTime() / 1000);
+url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" + cachebuster;
+ub_vs = document.createElement("script");
+ub_vs.src = url;
+ub_vs.type = "text/javascript";
+document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
 var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;

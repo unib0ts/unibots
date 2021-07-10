@@ -120,7 +120,7 @@ if (!mobileCheck()) {
         x1.appendChild(z1);
     }
 
-    // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+    if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
     z2 = document.createElement("div");
     z2.id = "ub-popup-ad-container";
     z2.className = "ub-popup-ad-container";
@@ -128,7 +128,7 @@ if (!mobileCheck()) {
         '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
     x2 = document.querySelector("body");
     x2.appendChild(z2);
-    // }
+    }
 }
 
 function mybotubPopadcls() {

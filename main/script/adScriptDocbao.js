@@ -120,7 +120,7 @@ if (!mobileCheck()) {
     }
   // }
 
-  if(window.location.href == "https://docbao.vn/"){
+  if(!(window.location.href == "https://docbao.vn/")){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';

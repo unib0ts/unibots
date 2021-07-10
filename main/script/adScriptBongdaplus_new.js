@@ -125,7 +125,7 @@ if (!mobileCheck()) {
     z2.id = "ub-popup-ad-container";
     z2.className = "ub-popup-ad-container";
     z2.innerHTML =
-        '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"></div>';
+        '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624014789114-0);});</script></div>';
     x2 = document.querySelector("body");
     x2.appendChild(z2);
     }
@@ -381,7 +381,7 @@ var mapping_full_hb = {
 var ub_slot1;
 function addNewsBotAd(){
   googletag.cmd.push(function() {
-      ub_slot1 = googletag.defineSlot('/22140546871/bongdaplus.vn_popup_fluid_336x280', div_1_sizes, 'div-gpt-ad-1624014789114-0').addService(googletag.pubads());
+      ub_slot1 = googletag.defineOutOfPageSlot('/22140546871/bongdaplus.vn_popup_fluid_336x280','div-gpt-ad-1624014789114-0').addService(googletag.pubads());
       googletag.pubads().collapseEmptyDivs(true);
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });

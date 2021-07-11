@@ -438,16 +438,21 @@ function ub_checkAd1Rendered(){
 	adId1 = 'div-gpt-ad-1624014789114-0';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    document.getElementById('mybotpopupCloseButton').style.display = 'block';
-      mybotpopupad = document.querySelector("#ub-popup-ad-container");
-      mybotpopupad.style.height = '100%';
-      mybotpopupad.style.backgroundColor = '#000';
-      mybotpopupad.style.zIndex = '2147483647';
-    if(ub_ad1RefreshFlag != 1){
-      setInterval(function() {
-        ub_ad1RefreshFlag = 1;
-        refreshBidTemp(ub_slot1);
-      }, REFRESH_TIMEOUT);
+    if (document.getElementById(adId1).style.display== 'none') {
+      document.querySelector("#ub-popup-ad-container").style.display= 'none';
+      // return false;
+    }else {
+      document.getElementById('mybotpopupCloseButton').style.display = 'block';
+        mybotpopupad = document.querySelector("#ub-popup-ad-container");
+        mybotpopupad.style.height = '100%';
+        mybotpopupad.style.backgroundColor = '#000';
+        mybotpopupad.style.zIndex = '2147483647';
+      if(ub_ad1RefreshFlag != 1){
+        setTimeout(function() {
+          ub_ad1RefreshFlag = 1;
+          refreshBidTemp(ub_slot1);
+        }, REFRESH_TIMEOUT);
+      }
     }
 	 }
 }

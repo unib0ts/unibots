@@ -29,7 +29,7 @@ document.getElementById("gabywa").innerHTML = mybotgabywa;
 loadAd("gabywa");
 
 var mybotstyleSheet =
-    ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:25px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1624014789114-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}";
+    '.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:100}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483647}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);}.mybotpopupCloseButton{background-color:#000;color:#fff;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:25px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1624014789114-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;} .ub-popup-ad-container::after{opacity: 0.4;content: "";}';
 
 var css = document.createElement("style");
 css.type = "text/css";
@@ -437,15 +437,17 @@ ub_ad1RefreshFlag = 0;
 function ub_checkAd1Rendered(){
 	adId1 = 'div-gpt-ad-1624014789114-0';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if (document.getElementById(adId1).style.display== 'none') {
+	if(!(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') || (document.getElementById(adId1).style.display== 'none')) {
       document.querySelector("#ub-popup-ad-container").style.display= 'none';
-      // return false;
-    }else {
+  }
+  else if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       document.getElementById('mybotpopupCloseButton').style.display = 'block';
+      document.querySelector("#ub-popup-ad-container").style.display= 'block';
         mybotpopupad = document.querySelector("#ub-popup-ad-container");
         mybotpopupad.style.height = '100%';
-        mybotpopupad.style.backgroundColor = '#000';
+        mybotpopupad.style.backgroundColor = '#fff';
+        // // mybotpopupad.style.opacity = '0.4';
+        // mybotpopupad.classList.add("popubcontainer");
         mybotpopupad.style.zIndex = '2147483647';
       if(ub_ad1RefreshFlag != 1){
         setTimeout(function() {
@@ -454,7 +456,6 @@ function ub_checkAd1Rendered(){
         }, REFRESH_TIMEOUT);
       }
     }
-	 }
 }
 
 function refreshBidTemp(ub_slot) {

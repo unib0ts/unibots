@@ -446,7 +446,7 @@ function ub_checkAd1Rendered(){
         mybotpopupad = document.querySelector("#ub-popup-ad-container");
         mybotpopupad.style.height = '100%';
         mybotpopupad.style.backgroundColor = 'rgb(255, 255, 255, 0.4)';
-        // // mybotpopupad.style.opacity = '0.4';
+        mybotpopupad.style.backdropFilter = 'blur(3px)';
         // mybotpopupad.classList.add("popubcontainer");
         mybotpopupad.style.zIndex = '2147483647';
       if(ub_ad1RefreshFlag != 1){

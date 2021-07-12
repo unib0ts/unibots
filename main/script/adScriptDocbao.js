@@ -35,8 +35,6 @@ var ub_divsToCheck = {
 	"unibots-video": false,
 };
 
-// setTimeout(function(){
-  // if (document.getElementById('unibots-video')) {
   var ub_interval = setInterval(() => {
 		flag = false;
 		checkFlag = false;

@@ -59,9 +59,8 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 ubIma.onload = function(){
   
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  // let myPlayer = isMobile() ? '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-  let myPlayer = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
- 
+  let myPlayer = isMobile() ? '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  
   if(document.getElementById('unibots-video')){
     document.getElementById('unibots-video').innerHTML= myPlayer;
     document.querySelector("#ubVideo").classList.add("ub-unloaded");
@@ -136,7 +135,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/madhyamam.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -166,7 +165,7 @@ function initPlayer() {
       ubPlayer.on('adsready',()=>{
           // console.log("ads ready");
           // showPlayer();
-          setTimeout(showPlayer(), 3000);
+          showPlayer();
       }); 
 
       ubPlayer.on('readyforpreroll',()=>{
@@ -225,36 +224,56 @@ function initPlayer() {
               ubPlayer.dispose();
           }
       });
+
+      var button = videojs.getComponent('button');
+      var clButton = videojs.extend(button, {
+            constructor: function() {
+              button.apply(this, arguments);
+              this.controlText("Subscribe");
+              this.addClass('vjs-customButton');
+            },
+            handleClick: function() {
+              window.open('https://www.youtube.com/channel/UCYMKYAtH2zhXgaCwYEmQE6A', '_blank');
+            }
+          });
+      videojs.registerComponent('Mybutton', clButton);
+      ubPlayer.addChild('Mybutton');
+
+
       setLogo();  
 
-      function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return  rect.bottom > 0 &&
-                rect.right > 0 &&
-                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-                rect.top < (window.innerHeight || document.documentElement.clientHeight);
-      }
-      const currentPlayer = document.querySelector('#unibots-video');
-      
-      window.addEventListener('scroll', function () {
-        var targetDiv = document.getElementById("ubVideo");
+      if(!isMobile()){
+          setTimeout(()=>{
+              function isInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return  rect.bottom > 0 &&
+                        rect.right > 0 &&
+                        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+                        rect.top < (window.innerHeight || document.documentElement.clientHeight);
+              }
+              const currentPlayer = document.querySelector('#unibots-video');
+              
+              window.addEventListener('scroll', function () {
+                var targetDiv = document.getElementById("ubVideo");
 
-        if(isInViewport(currentPlayer)){
-          if(targetDiv.classList.contains("ubsticky")){
-            targetDiv.classList.remove("ubsticky");
-            targetDiv.removeAttribute('class');
-          }
-        }else{
-          // console.log("out view");
-          // console.log(targetDiv.classList.contains("ubsticky"));
-          targetDiv.setAttribute('class','');
-          if(!targetDiv.classList.contains("ubsticky")){
-            targetDiv.classList.add("ubsticky");
-          }
-        }
-      // }, {
-      //     passive: true
-      }); 
+                if(isInViewport(currentPlayer)){
+                  if(targetDiv.classList.contains("ubsticky")){
+                    targetDiv.classList.remove("ubsticky");
+                    targetDiv.removeAttribute('class');
+                  }
+                }else{
+                  // console.log("out view");
+                  // console.log(targetDiv.classList.contains("ubsticky"));
+                  targetDiv.setAttribute('class','');
+                  if(!targetDiv.classList.contains("ubsticky")){
+                    targetDiv.classList.add("ubsticky");
+                  }
+                }
+              // }, {
+              //     passive: true
+              }); 
+          }, 1500);
+      }
     }
 }
 
@@ -263,8 +282,10 @@ function initAdDisplayContainer() {
     wrapperDiv.removeEventListener(startEvent, initAdDisplayContainer);
 }
 function showPlayer(){
+  setTimeout(()=>{
   document.querySelector("#ubVideo").classList.remove("ub-unloaded");
   document.querySelector("#ubVideo").classList.add("ub-loaded");
+  }, 1500);
 }
 
 function setLogo(){
@@ -278,4 +299,4 @@ function setLogo(){
 }
 
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-28px!important}#unibots-video{margin-top:35px}#ubVideo .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{width:192px!important;height:180px!important}.ubsticky .content_video-dimensions{width:192px!important;height:180px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}#ubVideo,.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;left:10px;z-index:999;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-25px!important}#unibots-video{margin:35px 0}#ubVideo .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}.vjs-customButton::before{content:"Subscribe"}.vjs-customButton{height:30px!important;border:solid 1px;width:26%!important;background-image:-webkit-linear-gradient(top,rgba(0,0,0,.8),rgba(0,0,0,.7) 40%,rgba(0,0,0,0) 99%)!important;color:#fff!important;cursor:pointer!important;display:inline-block!important;font-family:arial,sans-serif!important;font-weight:normal!important;font-size:14px!important;line-height:normal!important;padding:5px!important}@media (max-width:481px){#ubVideo{width:320px!important;height:180px!important}#ubVideo .content_video-dimensions{width:320px!important;height:180px!important}#unibots-video{display:flex;justify-content:center}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

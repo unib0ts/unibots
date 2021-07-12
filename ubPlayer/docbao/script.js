@@ -156,7 +156,7 @@ function initPlayer() {
   }
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4"});
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
 
   var imaOptions = {
     id: "content_video",
@@ -166,7 +166,7 @@ function initPlayer() {
     contribAdsSettings: {
       debug: true,
       timeout: 8000,
-      prerollTimeout: 8000,
+      prerollTimeout: 12000,
     },
     adsRenderingSettings: {
       enablePreloading: true
@@ -174,7 +174,6 @@ function initPlayer() {
   };
   ubPlayer.ima(imaOptions);
   
-  var total_try = 0;
 
   ubPlayer.on('adserror',function(err) {
         console.log('ads error!');

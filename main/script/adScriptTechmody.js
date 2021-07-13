@@ -164,6 +164,11 @@ for(var i=0; i<mapping_hb.targetUnits.length; i++){
       z.className = mapping_hb.adId[i];
       targetUnit.appendChild(z);
 
+      mappings.slotNumbers.push(i+1);
+      mappings.adCode.push(mapping_hb.adUnitNames[i]);
+      mappings.sizes.push(mapping_hb.sizes[i]);
+      mappings.adId.push(mapping_hb.adId[i]);
+
       adUnitTemp = {
         code: mapping_hb.adUnitNames[i],
         mediaTypes: {
@@ -331,20 +336,64 @@ function googlePush(){
   });
 }
 
-for(var i=0; i<mapping_hb.targetUnits.length; i++){
-    if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
-      mappings.slotNumbers.push(i+1);
-      mappings.adCode.push(mapping_hb.adUnitNames[i]);
-      mappings.sizes.push(mapping_hb.sizes[i]);
-      mappings.adId.push(mapping_hb.adId[i]);
-      googletag.cmd.push(function() {
+if (document.getElementById('techmody_unibot1_336x280_300x250_a_tag')) {
+  googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === mapping_hb.slotNames[i]) {
-            ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
+          if (event.slot === ub_slot1) {
+               ub_checkAdRendered('div-gpt-ad-1620993357512-0', ub_slot1, ['/21957769615/techmody_hb_336x280_a_tag']);
           }
         });
-    });
-  }
+  });
+}
+
+if (document.getElementById('techmody_unibot1_336x280_300x250_b_tag')) {
+  googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot2) {
+               ub_checkAdRendered('div-gpt-ad-1620993415247-0', ub_slot2, ['/21957769615/techmody_hb_336x280_b_tag']);
+          }
+        });
+  });
+}
+
+if (document.getElementById('techmody_unibot1_160x600_a_tag')) {
+  googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot3) {
+               ub_checkAdRendered('div-gpt-ad-1620993443354-0', ub_slot3, ['/21957769615/techmody_hb_160x600_a_tag']);
+          }
+        });
+  });
+}
+
+if (document.getElementById('techmody_unibot1_160x600_b_tag')) {
+  googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot4) {
+               ub_checkAdRendered('div-gpt-ad-1620993460948-0', ub_slot4, ['/21957769615/techmody_hb_160x600_b_tag']);
+          }
+        });
+  });
+}
+
+if (document.getElementById('techmody_unibot1_300x600_a_tag')) {
+  googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot5) {
+               ub_checkAdRendered('div-gpt-ad-1620993484258-0', ub_slot5, ['/21957769615/techmody_hb_300x600_a_tag']);
+          }
+        });
+  });
+}
+
+if (document.getElementById('techmody_unibot1_300x600_b_tag')) {
+  googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot6) {
+               ub_checkAdRendered('div-gpt-ad-1620993385888-0', ub_slot6, ['/21957769615/techmody_hb_300x600_b_tag']);
+          }
+        });
+  });
 }
 
 if(typeof googletag.defineSlot === "function"){

@@ -1418,6 +1418,6 @@ hb_ran = false;
 if(window.location.href == "https://m.sakshi.com/"){
   addNewBotAdMobile();
 }
-else{
+// else{
   checkHBUnits();
-}
+// }

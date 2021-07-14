@@ -74,20 +74,6 @@ ubIma.onload = function(){
     x1.appendChild(z1);
   }
   document.querySelector("#ubVideo").classList.add("ub-unloaded");
-  // if((window.location.href == "https://docbao.vn/xa-hoi" || window.location.href == "https://docbao.vn/") && !isMobile()){
-  //   let z1= document.createElement('div');
-  //   z1.id = 'ubVideo';
-  //   z1.innerHTML = myPlayer;
-  //   let x1 = document.querySelector('body');
-  //   x1.appendChild(z1);
-  // }
-  // else if(window.location.pathname.split('/')[1] == "xa-hoi" && !isMobile()){
-  //   document.getElementById("unibots-video").innerHTML = '<div id="ubVideo" class="ubsticky_left"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-  // }
-  // else{
-  //   document.getElementById("unibots-video").innerHTML = myPlayer;
-  // }
-  
 }
 
 let post_scripts =()=>{
@@ -147,16 +133,17 @@ function initPlayer() {
     autoplay: false,
     muted: false,
     loadingSpinner: false,
+    bigPlayButton:false,
     width: isMobile() ? 320 : 400,
     height: isMobile() ? 180 : 225,
     controlBar: {
-      'pictureInPictureToggle': false,
+      'pictureInPictureToggle': true,
       'fullscreenToggle': false
     }
   }
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots_short.mp4"});
 
   var imaOptions = {
     id: "content_video",
@@ -168,9 +155,7 @@ function initPlayer() {
       timeout: 8000,
       prerollTimeout: 12000,
     },
-    adsRenderingSettings: {
-      enablePreloading: true
-    }
+    adsRenderingSettings: { enablePreloading: true }
   };
   ubPlayer.ima(imaOptions);
   
@@ -299,4 +284,4 @@ function setLogo(){
   ubPlayer.el_.appendChild(i);
 }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-28px!important}#unibots-video,#unibots-video-sticky{margin-top:35px}#uboVideo .ubo_content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}#unibots-video,#unibots-video *{font-family:"VIDEOJS"!important;line-height:1;font-size:12px}#unibots-video .vjs-control-bar,#unibots-video .vjs-play-progress,#unibots-video .vjs-slider-bar,#unibots-video-sticky .vjs-control-bar,#unibots-video-sticky .vjs-play-progress,#unibots-video-sticky .vjs-slider-bar{font-family:"VIDEOJS"!important;display:flex!important;visibility:visible!important;opacity:1!important;transition:visibility 0.1s,opacity 0.1s!important;line-height:normal!important;font-size:7pt!important}#unibots-video .vjs-icon-placeholder,#unibots-video .vjs-control-text,#unibots-video-sticky .vjs-icon-placeholder,#unibots-video-sticky .vjs-control-text{font-family:VideoJS!important;font-size:unset!important;line-height:unset!important;color:#fff!important}#unibots-video{all:revert}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-28px!important}#unibots-video,#unibots-video-sticky{margin:35px 0}#uboVideo .ubo_content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

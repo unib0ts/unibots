@@ -58,21 +58,18 @@ var ub_divsToCheck = {
 var ub_interval = setInterval(() => {
 	flag = false;
 	checkFlag = false;
-	for (x in ub_divsToCheck) {
-		if (document.getElementById(x) !== null) {
-			ub_divsToCheck[x] = true;
+	for (x_ub in ub_divsToCheck) {
+		if (document.getElementById(x_ub) !== null) {
+			ub_divsToCheck[x_ub] = true;
 			checkFlag = true;
 		}
 	}
-	for (x in ub_divsToCheck) {
-		if (ub_divsToCheck[x] == false) {
+	for (x_ub in ub_divsToCheck) {
+		if (ub_divsToCheck[x_ub] == false) {
 			flag = true;
 		}
 	}
 	if (!flag && checkFlag) {
-		// console.log("all loaded");
-		// console.log(ub_divsToCheck);
-		// ub_ad();
 		var cachebuster = Math.round(new Date().getTime() / 1000);
 		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb='+cachebuster;
 		ub_vs = document.createElement('script');
@@ -138,13 +135,6 @@ if (!mobileCheck()) {
   // }
 }
 else {
-  z2= document.createElement('div');
-  z2.id = 'ub-popup-ad-container';
-  z2.className = 'ub-popup-ad-container';
-  z2.innerHTML ='<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"></div>';
-  x2 = document.querySelector('body');
-  x2.appendChild(z2);
-
   // if(!(window.location.href== "https://m.docbao.vn/") && !(window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)){
   // if(!(window.location.href== "https://m.docbao.vn/")){
     z1= document.createElement('div');
@@ -154,6 +144,13 @@ else {
     x1 = document.querySelector('body');
     x1.appendChild(z1);
   // }
+
+  z2= document.createElement('div');
+  z2.id = 'ub-popup-ad-container';
+  z2.className = 'ub-popup-ad-container';
+  z2.innerHTML ='<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0");});</script></div>';
+  x2 = document.querySelector('body');
+  x2.appendChild(z2);
 }
 
 function mybotubstickyad() {
@@ -219,7 +216,6 @@ const customConfigObjectA = {
     }]
 };
 
-
 var adUnits_full_hb = [];
 
 var div_1_sizes = [
@@ -231,15 +227,15 @@ var div_1_sizes = [
 if (mobileCheck()) {
     // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
     adUnits1 = {
-        code: '/22140546871/docbao.vn_popup_fluid_336x280',
+        code: "/22140546871/docbao.vn_popup_fluid_336x280",
         mediaTypes: {
             banner: {
-                sizes: div_1_sizes
+                sizes: div_1_sizes,
             }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-					{ bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
+          // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+					// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
           // { bidder: 'oftmedia', params: { placementId: '20846125' } },
           // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
           // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
@@ -252,7 +248,7 @@ if (mobileCheck()) {
           // // // { bidder: 'criteointl', params: {networkId: '10545'} },
           // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-        ]
+        ],
     };
     adUnits_full_hb.push(adUnits1);
     // }
@@ -406,9 +402,6 @@ function addNewsBotAd() {
                 "div-gpt-ad-1624440241552-0"
             )
             .addService(googletag.pubads());
-        // if (googletag.pubads().collapseEmptyDivs(true)) {
-        //   document.getElementById("ub-popup-ad-container").style.display = "none";
-        // }
         googletag.pubads().collapseEmptyDivs(true);
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
@@ -714,7 +707,7 @@ var mappings_full_hb_config_desktop = {
       true,
       true,
       true,
-      true
+      true,
     ]
 };
 var mappings_full_hb_config_mobile = {
@@ -845,7 +838,7 @@ var mappings_full_hb_config_mobile = {
       true,
       true,
       true,
-      true
+      true,
     ]
 };
 var mappings_full_hb_config_both = {
@@ -1260,7 +1253,7 @@ function refreshBid(ub_slot, adCode) {
                 googletag.cmd.push(function () {
                     ubpbjs.que.push(function () {
                         ubpbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh(ub_slot);
+                        googletag.pubads().refresh([ub_slot]);
                         // var adsCalled_hb = false;
                         // for(var i=0;i<x.length;i++){
                         //   var bc = x[i].bidderCode;
@@ -1282,55 +1275,15 @@ function refreshBid(ub_slot, adCode) {
 if (mobileCheck()) {
     // if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
-            googletag
-                .pubads()
-                .addEventListener("slotRenderEnded", function (event) {
+            googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                     // if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
-                    var nodes_anchr = document.getElementById(
-                        "div-gpt-ad-1625034565032-0"
-                    ).childNodes[0].childNodes;
-                    if (
-                        nodes_anchr.length &&
-                        nodes_anchr[0].nodeName.toLowerCase() == "iframe"
-                    ) {
-                        document.getElementById(
-                            "close_ub-sticky-ad"
-                        ).style.display = "block";
-                    }
+                    var nodes_anchr = document.getElementById("div-gpt-ad-1625034565032-0").childNodes[0].childNodes;
+                    if (nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == "iframe") {document.getElementById("close_ub-sticky-ad").style.display = "block";}
                     // }
                 });
         });
-    // }
-    // else {
-    //   setTimeout(function(){
-    //   if (document.getElementById('gpt-ub125')) {
-    //     z3= document.createElement('div');
-    //     z3.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyadPassbck()">\u0078</span>';
-    //     x3 = document.getElementById('gpt-ub125');
-    //     x3.appendChild(z3);
-    //
-    //     document.getElementById('close_ub-sticky-ad').classList.add('close_ub-sticky-ad');
-    //     document.getElementById('close_ub-sticky-ad').style.paddingLeft = "10px";
-    //     document.getElementById('close_ub-sticky-ad').style.zIndex = '2147483647';
-    //     document.getElementById('gpt-ub125').style.zIndex = '2147483647';
-    //     googletag.cmd.push(function() {
-    //           // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    //             // if (event.slot === mapping_full_hb.slotNumbers[i]) {
-    //               var nodes = document.getElementById('gpt-ub125').childNodes[2].childNodes;
-    //               if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    //                 document.getElementById('close_ub-sticky-ad').style.display = 'block';
-    //               }
-    //             // }
-    //           // });
-    //     });
-    //   }
-    // }, 2000);
-    // }
 }
 
-// function mybotubstickyadPassbck() {
-//  document.getElementById('gpt-ub125').style.display='none';
-// }
 
 function loadAd(id, adUnits) {
     var elm = document.getElementById(id);

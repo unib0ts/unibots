@@ -131,6 +131,11 @@
         z.className = mapping_hb.adId[i];
         targetUnit.appendChild(z);
 
+				mappings.slotNumbers.push(i+1);
+				mappings.adCode.push(mapping_hb.adUnitNames[i]);
+				mappings.sizes.push(mapping_hb.sizes[i]);
+				mappings.adId.push(mapping_hb.adId[i]);
+
         adUnitTemp = {
           code: mapping_hb.adUnitNames[i],
           mediaTypes: {
@@ -298,21 +303,35 @@
     });
   }
 
-  for(var i=0; i<mapping_hb.targetUnits.length; i++){
-      if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
-        mappings.slotNumbers.push(i+1);
-        mappings.adCode.push(mapping_hb.adUnitNames[i]);
-        mappings.sizes.push(mapping_hb.sizes[i]);
-        mappings.adId.push(mapping_hb.adId[i]);
-        googletag.cmd.push(function() {
+	if (document.getElementById('ez4mods_unibot1_336x280_300x250_a_tag')) {
+    googletag.cmd.push(function() {
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === mapping_hb.slotNames[i]) {
-              ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
+            if (event.slot === ub_slot1) {
+                 ub_checkAdRendered('div-gpt-ad-1620993620308-0', ub_slot1, ['/21957769615/ez4mods_hb_336x280_300x250_a_tag']);
             }
           });
-      });
-    }
- }
+    });
+  }
+
+	if (document.getElementById('ez4mods_unibot1_336x280_300x250_b_tag')) {
+    googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_slot2) {
+                 ub_checkAdRendered('div-gpt-ad-1620993644222-0', ub_slot2, ['/21957769615/ez4mods_hb_336x280_300x250_b_tag']);
+            }
+          });
+    });
+  }
+
+	if (document.getElementById('ez4mods_unibot1_970x250_970x90_tag')) {
+    googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if (event.slot === ub_slot3) {
+                 ub_checkAdRendered('div-gpt-ad-1620993661288-0', ub_slot3, ['/21957769615/ez4mods_hb_970x250_970x90_tag']);
+            }
+          });
+    });
+  }
 
  if(typeof googletag.defineSlot === "function"){
    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

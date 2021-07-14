@@ -68,13 +68,13 @@ ubIma.onload = function(){
     let x1 = document.querySelector('body');
     x1.appendChild(z1);
   } 
-  else if(!isMobile() && window.location.href == "https://bongdaplus.vn/"){
-    targetDiv = document.getElementsByClassName("topvideobox")[0];
-    var div = document.createElement("div");
-    div.id = "unibots-video-homePC";
-    div.innerHTML = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-    targetDiv.insertAdjacentElement('afterend',div);
-  }
+  // else if(!isMobile() && window.location.href == "https://bongdaplus.vn/"){
+  //   targetDiv = document.getElementsByClassName("topvideobox")[0];
+  //   var div = document.createElement("div");
+  //   div.id = "unibots-video-homePC";
+  //   div.innerHTML = '<div id="ubVideo"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  //   targetDiv.insertAdjacentElement('afterend',div);
+  // }
   if(document.getElementById('unibots-video')){
     document.getElementById('unibots-video').innerHTML= myPlayer;
   }

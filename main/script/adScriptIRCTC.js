@@ -1,6 +1,6 @@
 if(typeof customConfigObjectA === 'undefined'){
   unibot1 = '<div id="div-gpt-ad-1601280866524-0">';
-  unibot2 = '<div id="div-gpt-ad-1602952013756-0">';
+  unibot2 = '<div id="div-gpt-ad-1626241363418-0">';
   unibot3 = '<div id="div-gpt-ad-1602953590737-0">';
   ub_banner_ad1 = '<div id="div-gpt-ad-1610698887085-0">';
   ub_banner_ad2 = '<div id="div-gpt-ad-1613478315967-0">';
@@ -178,7 +178,7 @@ if(typeof customConfigObjectA === 'undefined'){
     if (document.getElementById('ATD_Ad_IRCTC_320x50')) {
             adUnits1 =
             {
-                code: '/22140546871/irctc.co.in_hb_320x50',
+                code: '/22153349741/irctc.co.in_hb_320x50',
                 mediaTypes: {
                     banner: {
                         sizes: div_1_sizes
@@ -641,22 +641,22 @@ if(typeof customConfigObjectA === 'undefined'){
       document.getElementById('ATD_Ad_IRCTC_320x50').innerHTML = unibot2;
 
       // apSlotTemp = {
-      //   slotID: 'div-gpt-ad-1602952013756-0',
-      //   slotName: '/22140546871/irctc.co.in_hb_320x50',
+      //   slotID: 'div-gpt-ad-1626241363418-0',
+      //   slotName: '/22153349741/irctc.co.in_hb_320x50',
       //   sizes: mappings.sizes,
       // }
       // apSlots.push(apSlotTemp);
 
       mappings.slotNumbers.push(2);
-      mappings.adCode.push('/22140546871/irctc.co.in_hb_320x50');
+      mappings.adCode.push('/22153349741/irctc.co.in_hb_320x50');
       mappings.sizes.push(div_1_sizes);
-      mappings.adId.push('div-gpt-ad-1602952013756-0');
+      mappings.adId.push('div-gpt-ad-1626241363418-0');
       googletag.cmd.push(function() {
         // callAPStagBids(); //Ap part
         // callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot2) {
-            ub_checkAdRendered('div-gpt-ad-1602952013756-0', ub_slot2, ['/22140546871/irctc.co.in_hb_320x50']);
+            ub_checkAdRendered('div-gpt-ad-1626241363418-0', ub_slot2, ['/22153349741/irctc.co.in_hb_320x50']);
           }
         });
       });

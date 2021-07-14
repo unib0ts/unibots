@@ -121,34 +121,6 @@
   ]
 }
 
-  var size_array = mapping_hb.sizes;
-
-  for(var i=0; i<mapping_hb.targetUnits.length; i++){
-      if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
-        targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
-        var z= document.createElement('div');
-        z.id = mapping_hb.adId[i];
-        z.className = mapping_hb.adId[i];
-        targetUnit.appendChild(z);
-
-				mappings.slotNumbers.push(i+1);
-				mappings.adCode.push(mapping_hb.adUnitNames[i]);
-				mappings.sizes.push(mapping_hb.sizes[i]);
-				mappings.adId.push(mapping_hb.adId[i]);
-
-        adUnitTemp = {
-          code: mapping_hb.adUnitNames[i],
-          mediaTypes: {
-              banner: {
-                  sizes: size_array[i]
-              }
-          },
-          bids: mapping_hb.bids[i]
-        };
-        adUnits.push(adUnitTemp);
-      }
-    }
-
   // ======== DO NOT EDIT BELOW THIS LINE =========== //
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -167,6 +139,32 @@
       adId: [],
       renderedFlag: []
     };
+
+	for(var i=0; i<mapping_hb.targetUnits.length; i++){
+	      if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
+	        targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
+	        var z= document.createElement('div');
+	        z.id = mapping_hb.adId[i];
+	        z.className = mapping_hb.adId[i];
+	        targetUnit.appendChild(z);
+
+					mappings.slotNumbers.push(i+1);
+					mappings.adCode.push(mapping_hb.adUnitNames[i]);
+					mappings.sizes.push(mapping_hb.sizes[i]);
+					mappings.adId.push(mapping_hb.adId[i]);
+
+	        adUnitTemp = {
+	          code: mapping_hb.adUnitNames[i],
+	          mediaTypes: {
+	              banner: {
+	                  sizes: mapping_hb.sizes[i]
+	              }
+	          },
+	          bids: mapping_hb.bids[i]
+	        };
+	        adUnits.push(adUnitTemp);
+	      }
+	    }
 
   function ub_checkAdRendered(adId, ub_slot, adCode){
     ub_slotNum = ub_slot[ub_slot.length-1]-1;

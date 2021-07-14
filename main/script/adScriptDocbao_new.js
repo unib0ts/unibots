@@ -1280,58 +1280,58 @@ function refreshBid(ub_slot, adCode) {
     });
 }
 
-// if (mobileCheck()) {
-//     if(window.location.href== "https://m.docbao.vn/" || window.location.href== "https://m.docbao.vn/test.php"){
-//         googletag.cmd.push(function () {
-//             googletag
-//                 .pubads()
-//                 .addEventListener("slotRenderEnded", function (event) {
-//                     // if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
-//                     var nodes_anchr = document.getElementById(
-//                         "div-gpt-ad-1625034565032-0"
-//                     ).childNodes[0].childNodes;
-//                     if (
-//                         nodes_anchr.length &&
-//                         nodes_anchr[0].nodeName.toLowerCase() == "iframe"
-//                     ) {
-//                         document.getElementById(
-//                             "close_ub-sticky-ad"
-//                         ).style.display = "block";
-//                     }
-//                     // }
-//                 });
-//         });
-//     }
-//     else {
-//       setTimeout(function(){
-//       if (document.getElementById('gpt-ub125')) {
-//         z3= document.createElement('div');
-//         z3.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyadPassbck()">\u0078</span>';
-//         x3 = document.getElementById('gpt-ub125');
-//         x3.appendChild(z3);
-//
-//         document.getElementById('close_ub-sticky-ad').classList.add('close_ub-sticky-ad');
-//         document.getElementById('close_ub-sticky-ad').style.paddingLeft = "10px";
-//         document.getElementById('close_ub-sticky-ad').style.zIndex = '2147483647';
-//         document.getElementById('gpt-ub125').style.zIndex = '2147483647';
-//         googletag.cmd.push(function() {
-//               // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-//                 // if (event.slot === mapping_full_hb.slotNumbers[i]) {
-//                   var nodes = document.getElementById('gpt-ub125').childNodes[2].childNodes;
-//                   if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-//                     document.getElementById('close_ub-sticky-ad').style.display = 'block';
-//                   }
-//                 // }
-//               // });
-//         });
-//       }
-//     }, 2000);
-//     }
-// }
-
-function mybotubstickyadPassbck() {
- document.getElementById('gpt-ub125').style.display='none';
+if (mobileCheck()) {
+    if(!(window.location.href== "https://m.docbao.vn/")){
+        googletag.cmd.push(function () {
+            googletag
+                .pubads()
+                .addEventListener("slotRenderEnded", function (event) {
+                    // if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
+                    var nodes_anchr = document.getElementById(
+                        "div-gpt-ad-1625034565032-0"
+                    ).childNodes[0].childNodes;
+                    if (
+                        nodes_anchr.length &&
+                        nodes_anchr[0].nodeName.toLowerCase() == "iframe"
+                    ) {
+                        document.getElementById(
+                            "close_ub-sticky-ad"
+                        ).style.display = "block";
+                    }
+                    // }
+                });
+        });
+    }
+    // else {
+    //   setTimeout(function(){
+    //   if (document.getElementById('gpt-ub125')) {
+    //     z3= document.createElement('div');
+    //     z3.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyadPassbck()">\u0078</span>';
+    //     x3 = document.getElementById('gpt-ub125');
+    //     x3.appendChild(z3);
+    //
+    //     document.getElementById('close_ub-sticky-ad').classList.add('close_ub-sticky-ad');
+    //     document.getElementById('close_ub-sticky-ad').style.paddingLeft = "10px";
+    //     document.getElementById('close_ub-sticky-ad').style.zIndex = '2147483647';
+    //     document.getElementById('gpt-ub125').style.zIndex = '2147483647';
+    //     googletag.cmd.push(function() {
+    //           // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //             // if (event.slot === mapping_full_hb.slotNumbers[i]) {
+    //               var nodes = document.getElementById('gpt-ub125').childNodes[2].childNodes;
+    //               if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+    //                 document.getElementById('close_ub-sticky-ad').style.display = 'block';
+    //               }
+    //             // }
+    //           // });
+    //     });
+    //   }
+    // }, 2000);
+    // }
 }
+
+// function mybotubstickyadPassbck() {
+//  document.getElementById('gpt-ub125').style.display='none';
+// }
 
 function loadAd(id, adUnits) {
     var elm = document.getElementById(id);

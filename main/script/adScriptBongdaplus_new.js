@@ -1441,7 +1441,7 @@ function refreshBid(ub_slot, adCode) {
 }
 
 if (mobileCheck()) {
-    if (window.location.href == "https://bongdaplus.vn/") {
+    if (!(window.location.href == "https://bongdaplus.vn/")) {
         googletag.cmd.push(function () {
             googletag
                 .pubads()

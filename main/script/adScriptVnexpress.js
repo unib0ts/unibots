@@ -122,8 +122,6 @@ bids: [
 	]
 }
 
-var size_array = mapping_hb.sizes;
-
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -172,7 +170,7 @@ var mappings = {
   						code: mapping_hb.adUnitNames[i],
   						mediaTypes: {
   								banner: {
-  										sizes: size_array[i]
+  										sizes: mapping_hb.sizes[i]
   								}
   						},
   						bids: mapping_hb.bids[i]

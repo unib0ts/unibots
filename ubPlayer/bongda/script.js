@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 ubIma.onload = function(){
   
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded ubsticky-center"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ub-unloaded ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ub-unloaded ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   
   if(!isMobile() && window.location.href != "https://bongdaplus.vn/" && !document.getElementById('unibots-video') && !document.getElementById('unibots-video-mobile')){
     let z1= document.createElement('div');
@@ -243,45 +243,45 @@ function initPlayer() {
 
       setLogo();  
 
-      function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return  rect.bottom > 0 &&
-                rect.right > 0 &&
-                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-                rect.top < (window.innerHeight || document.documentElement.clientHeight);
-      }
+      // function isInViewport(el) {
+      //   const rect = el.getBoundingClientRect();
+      //   return  rect.bottom > 0 &&
+      //           rect.right > 0 &&
+      //           rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+      //           rect.top < (window.innerHeight || document.documentElement.clientHeight);
+      // }
       
-      if(isMobile() && window.location.href != "https://bongdaplus.vn/"){
-          setTimeout(()=>{
-            let currentPlayer = "";
-            if(document.getElementById('unibots-video')){
-              currentPlayer = document.querySelector('#unibots-video');
-              console.log(currentPlayer);
-            }
-            else if(document.getElementById('unibots-video-mobile')){
-              currentPlayer = document.querySelector('#unibots-video-mobile');
-              console.log(currentPlayer);
-            }
+      // if(isMobile() && window.location.href != "https://bongdaplus.vn/"){
+      //     setTimeout(()=>{
+      //       let currentPlayer = "";
+      //       if(document.getElementById('unibots-video')){
+      //         currentPlayer = document.querySelector('#unibots-video');
+      //         console.log(currentPlayer);
+      //       }
+      //       else if(document.getElementById('unibots-video-mobile')){
+      //         currentPlayer = document.querySelector('#unibots-video-mobile');
+      //         console.log(currentPlayer);
+      //       }
       
-            window.addEventListener('scroll', function () {
-              var targetDiv = document.getElementById("ubVideo");
+      //       window.addEventListener('scroll', function () {
+      //         var targetDiv = document.getElementById("ubVideo");
       
-              if(isInViewport(currentPlayer)){
-                if(targetDiv.classList.contains("ubsticky-center")){
-                  targetDiv.classList.remove("ubsticky-center");
-                }
-              }else{
-                // console.log("out view");
-                // console.log(targetDiv.classList.contains("ubsticky"));
-                if(!targetDiv.classList.contains("ubsticky-center")){
-                  targetDiv.classList.add("ubsticky-center");
-                }
-              }
-            // }, {
-            //     passive: true
-            });
-          },2000);
-      }
+      //         if(isInViewport(currentPlayer)){
+      //           if(targetDiv.classList.contains("ubsticky-center")){
+      //             targetDiv.classList.remove("ubsticky-center");
+      //           }
+      //         }else{
+      //           // console.log("out view");
+      //           // console.log(targetDiv.classList.contains("ubsticky"));
+      //           if(!targetDiv.classList.contains("ubsticky-center")){
+      //             targetDiv.classList.add("ubsticky-center");
+      //           }
+      //         }
+      //       // }, {
+      //       //     passive: true
+      //       });
+      //     },2000);
+      // }
     }
 }
 

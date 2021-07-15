@@ -110,7 +110,7 @@ if (!mobileCheck()) {
         z1.id = "ub-sticky-ad-container";
         z1.className = "ub-sticky-ad-container";
         z1.innerHTML =
-            '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
+            '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
         x1 = document.querySelector("body");
         x1.appendChild(z1);
     }
@@ -707,7 +707,8 @@ var mappings_full_hb_config_mobile = {
       "/22140546871/docbao.vn_gpt_mobile_center5_300x250",
       "/22140546871/docbao.vn_gpt_mobile_bottom_300x250",
       "/22140546871/docbao.vn_mobile_home_center_6",
-      "/22140546871/docbao.vn_mb_anchor_320x50",
+      // "/22140546871/docbao.vn_mb_anchor_320x50",
+      "/22140546871/docbao.vn_mb_anchor_320x100",
     ],
     adId: [
       "div-gpt-ad-1617722423692-0", //'/22140546871/docbao.vn_gpt_mobile_home_300x100',
@@ -717,7 +718,8 @@ var mappings_full_hb_config_mobile = {
       "div-gpt-ad-1617722626196-0", //'/22140546871/docbao.vn_gpt_mobile_center5_300x250',
       "div-gpt-ad-1617722685215-0", //'/22140546871/docbao.vn_gpt_mobile_bottom_300x250',
       "div-gpt-ad-1620991472253-0", //'/22140546871/docbao.vn_mobile_home_center_6',
-      "div-gpt-ad-1625034565032-0", //'/22140546871/docbao.vn_mb_anchor_320x50',
+      // "div-gpt-ad-1625034565032-0", //'/22140546871/docbao.vn_mb_anchor_320x50',
+      "div-gpt-ad-1616569480504-0",
     ],
     sizes: [
       [300, 100], // '/22140546871/docbao.vn_gpt_mobile_home_300x100',
@@ -727,7 +729,8 @@ var mappings_full_hb_config_mobile = {
       [300, 250], // '/22140546871/docbao.vn_gpt_mobile_center5_300x250',
       [300, 250], // '/22140546871/docbao.vn_gpt_mobile_bottom_300x250',
       [300, 250], // '/22140546871/docbao.vn_mobile_home_center_6',
-      [320, 50],
+      // [320, 50],
+      [300,100],
     ],
     bids: [
       hb_full_common_bidders.concat([
@@ -806,17 +809,28 @@ var mappings_full_hb_config_mobile = {
           // { bidder: 'sovrn', params: {tagid: '867505'} },
           // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
       ]),  //  '/21692080761/amb_es_desk_lb_1',
-      hb_full_common_bidders.concat([
-        // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
-     //    { bidder: 'openx', params: {unit: '544005769', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-     //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
-     // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
-     // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-     // //   { bidder: 'sovrn', params: {tagid: '889023'} },
-     // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-     //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
-      ]),
+     //  hb_full_common_bidders.concat([
+     //    // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+     //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
+     // //    { bidder: 'openx', params: {unit: '544005769', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+     // //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
+     // // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
+     // // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
+     // // //   { bidder: 'sovrn', params: {tagid: '889023'} },
+     // // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+     // //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
+     //  ]),
+     hb_full_common_bidders.concat([
+       // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3548534'} },
+    //    { bidder: 'openx', params: {unit: '544005769', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+    //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
+    // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
+    // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
+    // //   { bidder: 'sovrn', params: {tagid: '889023'} },
+    // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
+     ]),
     ],
     isAP: [
       true,
@@ -1272,7 +1286,7 @@ if (mobileCheck()) {
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                     // if (document.getElementById('div-gpt-ad-1625034565032-0').childNodes[0].childNodes) {
-                    var nodes_anchr = document.getElementById("div-gpt-ad-1625034565032-0").childNodes[0].childNodes;
+                    var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                         document.getElementById("close_ub-sticky-ad").style.display = "block";
                     }

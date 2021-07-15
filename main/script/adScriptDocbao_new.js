@@ -105,7 +105,7 @@ if (!mobileCheck()) {
     x1.appendChild(z1);
   // }
 } else {
-      // if(!(window.location.href== "https://m.docbao.vn/")){
+      if(!(window.location.href== "https://m.docbao.vn/")){
         z1 = document.createElement("div");
         z1.id = "ub-sticky-ad-container";
         z1.className = "ub-sticky-ad-container";
@@ -113,7 +113,7 @@ if (!mobileCheck()) {
             '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
         x1 = document.querySelector("body");
         x1.appendChild(z1);
-    // }
+    }
 
 
     z2 = document.createElement("div");
@@ -1268,27 +1268,18 @@ function refreshBid(ub_slot, adCode) {
 }
 
 if (mobileCheck()) {
-    // if (!(window.location.href == "https://bongdaplus.vn/")) {
+    if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
-            googletag
-                .pubads()
-                .addEventListener("slotRenderEnded", function (event) {
+            googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                     // if (document.getElementById('div-gpt-ad-1625034565032-0').childNodes[0].childNodes) {
-                    var nodes_anchr = document.getElementById(
-                        "div-gpt-ad-1625034565032-0"
-                    ).childNodes[0].childNodes;
-                    if (
-                        nodes_anchr.length &&
-                        nodes_anchr[0].nodeName.toLowerCase() == "iframe"
-                    ) {
-                        document.getElementById(
-                            "close_ub-sticky-ad"
-                        ).style.display = "block";
+                    var nodes_anchr = document.getElementById("div-gpt-ad-1625034565032-0").childNodes[0].childNodes;
+                    if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
+                        document.getElementById("close_ub-sticky-ad").style.display = "block";
                     }
                     // }
                 });
         });
-    // }
+    }
     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
     //   googletag.cmd.push(function() {
     //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {

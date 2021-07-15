@@ -380,10 +380,10 @@ var mapping_full_hb = {
     renderedFlag: [],
 };
 
-var ub_slot1;
+var ub_slotp;
 function addNewsBotAd() {
     googletag.cmd.push(function () {
-        ub_slot1 = googletag
+        ub_slotp = googletag
             .defineSlot(
                 "/22140546871/bongdaplus.vn_popup_fluid_336x280",
                 div_1_sizes,
@@ -429,7 +429,7 @@ function initAdserver() {
     googletag.cmd.push(function () {
         ubpbjs.que.push(function () {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh([ub_slot1]);
+            googletag.pubads().refresh([ub_slotp]);
             // var x = ubpbjs.getAllPrebidWinningBids();
             // var adsCalled = false;
             // for(var i=0;i<x.length;i++){
@@ -469,7 +469,7 @@ function ub_checkAd1Rendered() {
         if (ub_ad1RefreshFlag != 1) {
             setTimeout(function () {
                 ub_ad1RefreshFlag = 1;
-                refreshBidTemp(ub_slot1);
+                refreshBidTemp(ub_slotp);
             }, REFRESH_TIMEOUT);
         }
     }
@@ -1421,7 +1421,7 @@ function refreshBid(ub_slot, adCode) {
                 googletag.cmd.push(function () {
                     ubpbjs.que.push(function () {
                         ubpbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh(ub_slot);
+                        googletag.pubads().refresh([ub_slot]);
                         // var adsCalled_hb = false;
                         // for(var i=0;i<x.length;i++){
                         //   var bc = x[i].bidderCode;

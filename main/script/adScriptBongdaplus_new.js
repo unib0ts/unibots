@@ -809,7 +809,7 @@ var mappings_full_hb_config_mobile = {
         "/22140546871/bongdaplus.vn_mb_center3_336x280",
         "/22140546871/bongdaplus.vn_mb_ma_336x280",
         "/22140546871/bongdaplus.vn_mb_anchor_320x50",
-        // '/22140546871/bongdaplus.vn_mb_anchor_320x100',
+        // "/22140546871/bongdaplus.vn_mb_anchor_320x100",
         // '/22140546871/bongdaplus.vn_popup_fluid_336x280'
     ],
     adId: [
@@ -822,7 +822,7 @@ var mappings_full_hb_config_mobile = {
         "div-gpt-ad-1614845628694-0", //'/22140546871/bongdaplus.vn_mb_center3_336x280',
         "div-gpt-ad-1614845690965-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
         "div-gpt-ad-1614845787563-0", //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
-        // 'div-gpt-ad-1615775641979-0',  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
+        // "div-gpt-ad-1615775641979-0",  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
         // 'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
     ],
     sizes: [
@@ -966,7 +966,7 @@ var mappings_full_hb_config_mobile = {
             //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
         ]), //  /22140546871/bongdaplus.vn_mb_anchor_320x50',,
         //  hb_full_common_bidders.concat([
-        //    // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3522364'} },
+        //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3522364'} },
         // //    { bidder: 'openx', params: {unit: '543993938', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         // //    // { bidder: 'ucfunnel', params: { adid : 'ad-2736B8743748ADDA08644EB83D633678'} },
         // // //   { bidder: "kubient", params: { zoneid: "9b094d05b54f3", server: "kssp.kbntx.ch"} },

@@ -1285,7 +1285,7 @@ if (mobileCheck()) {
     if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100")
+              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
                     var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                         document.getElementById("close_ub-sticky-ad").style.display = "block";

@@ -5,8 +5,8 @@ function isMobile() {
 };
 
 function loadDynamicStyles(url){
-  var link = document.createElement('link'); 
-  link.rel = 'stylesheet'; 
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
   link.type = 'text/css';
   link.href = url;
   document.getElementsByTagName('HEAD')[0].appendChild(link);
@@ -43,7 +43,7 @@ function listen_scripts(){
     if(!flag){
       // console.log('all loaded');
       console.log(scripts);
-      clearInterval(ub_interval); 
+      clearInterval(ub_interval);
       checkUnmutedAutoplaySupport();
     }
   },500)
@@ -57,10 +57,10 @@ ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
 document.getElementsByTagName("body")[0].appendChild(ubIma);
 
 ubIma.onload = function(){
-  
-  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
+
+  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);
   let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ub-unloaded ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-  
+
   if(!isMobile() && window.location.href != "https://bongdaplus.vn/" && !document.getElementById('unibots-video') && !document.getElementById('unibots-video-mobile')){
     let z1= document.createElement('div');
     z1.id = 'unibots-video-sticky';
@@ -84,7 +84,7 @@ ubIma.onload = function(){
 }
 
 let post_scripts =()=>{
-  
+
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.js", "vjs_ads");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.js", "vjs_ima");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/can-autoplay@3.0.0/build/can-autoplay.min.js","can-autoplay");
@@ -129,7 +129,7 @@ function checkMutedAutoplaySupport() {
 }
 
 function initPlayer() {
-  
+
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
   if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-mobile') || document.getElementById('unibots-video-homePC')){
@@ -151,7 +151,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet_720.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -182,7 +182,7 @@ function initPlayer() {
           // console.log("ads ready");
           // showPlayer();
         showPlayer();
-      }); 
+      });
 
       ubPlayer.on('readyforpreroll',()=>{
         ubPlayer.muted(true);
@@ -197,7 +197,7 @@ function initPlayer() {
         ubPlayer.muted(true);
         ubPlayer.autoplay(true);
       }
-      
+
       if (!autoplayAllowed) {
         ubPlayer.muted(true);
         ubPlayer.autoplay(true);
@@ -212,11 +212,11 @@ function initPlayer() {
         wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
       }
 
-      ubPlayer.on('play', () => { 
+      ubPlayer.on('play', () => {
         ubPlayer.volume(0.1);
         if(!ubPlayer.muted()){
           ubPlayer.muted(true);
-        }    
+        }
       });
 
       var button = videojs.getComponent('CloseButton');
@@ -232,7 +232,7 @@ function initPlayer() {
           });
       videojs.registerComponent('CloseButton', CloseButton);
       ubPlayer.addChild('CloseButton');
-        
+
       //close player on video end.
       ubPlayer.on('timeupdate', function(){
           if(ubPlayer.currentTime() == ubPlayer.duration()){
@@ -241,7 +241,7 @@ function initPlayer() {
           }
       });
 
-      setLogo();  
+      setLogo();
 
       // function isInViewport(el) {
       //   const rect = el.getBoundingClientRect();
@@ -250,7 +250,7 @@ function initPlayer() {
       //           rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
       //           rect.top < (window.innerHeight || document.documentElement.clientHeight);
       // }
-      
+
       // if(isMobile() && window.location.href != "https://bongdaplus.vn/"){
       //     setTimeout(()=>{
       //       let currentPlayer = "";
@@ -262,10 +262,10 @@ function initPlayer() {
       //         currentPlayer = document.querySelector('#unibots-video-mobile');
       //         console.log(currentPlayer);
       //       }
-      
+
       //       window.addEventListener('scroll', function () {
       //         var targetDiv = document.getElementById("ubVideo");
-      
+
       //         if(isInViewport(currentPlayer)){
       //           if(targetDiv.classList.contains("ubsticky-center")){
       //             targetDiv.classList.remove("ubsticky-center");

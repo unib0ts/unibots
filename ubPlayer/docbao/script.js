@@ -67,7 +67,7 @@ ubIma.onload = function(){
   else if(!isMobile() && window.location.href != "https://docbao.vn/"){
     let z1= document.createElement('div');
     z1.id = 'unibots-video-sticky';
-    z1.innerHTML = '<div id="ubVideo" class="ubsticky"><video id="content_video" class="ub_video-js" playsinline controls="true" preload="auto"></video></div>';
+    z1.innerHTML = '<div id="ubVideo" class="ubsticky-left"><video id="content_video" class="ub_video-js" playsinline controls="true" preload="auto"></video></div>';
     let x1 = document.querySelector('body');
     x1.appendChild(z1);
   }
@@ -120,149 +120,149 @@ function checkMutedAutoplaySupport() {
 
 function initPlayer() {
   
-  //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  //  var isMobile = true;
-  var video = document.getElementById('content_video');
-  videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+  if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky')){
+      var video = document.getElementById('content_video');
+      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
-  var vjsOptions = {
-    autoplay: false,
-    muted: false,
-    loadingSpinner: false,
-    bigPlayButton:false,
-    width: isMobile() ? 344 : 400,
-    height: isMobile() ? 258 : 225,
-    controlBar: {
-      volumePanel: {
-        inline: false,
-        vertical: true
-      },
-      'pictureInPictureToggle': false,
-      'fullscreenToggle': false,
-    }
-  }
-
-  ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
-
-  var imaOptions = {
-    id: "content_video",
-    // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
-    adTagUrl:"https://video.unibots.in/clients/docbao/ads.xml",
-    disableCustomPlaybackForIOS10Plus: true,
-    contribAdsSettings: {
-      debug: true,
-      timeout: 8000,
-      prerollTimeout: 12000,
-    },
-    adsRenderingSettings: { enablePreloading: true }
-  };
-  ubPlayer.ima(imaOptions);
-  
-
-  ubPlayer.on('adserror',function(err) {
-        console.log('ads error!');
-        console.log(err);
-        // ubPlayer.ima.requestAds();
-        showPlayer();
-      }.bind(ubPlayer)
-  );
-
-  ubPlayer.on('ads-request', ()=>{
-    document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
-  });
-
-  ubPlayer.on('adsready',()=>{
-      console.log("ads ready");
-      setTimeout(showPlayer(), 2000);
-  }); 
-
-  ubPlayer.on('readyforpreroll',()=>{
-    ubPlayer.muted(true);
-    ubPlayer.autoplay(true);
-    // showPlayer();
-  });
-
-  if (autoplayAllowed) {
-    if (autoplayRequiresMute) {
-      ubPlayer.muted(true);
-    }
-    ubPlayer.muted(true);
-    ubPlayer.autoplay(true);
-  }
-  
-  if (!autoplayAllowed) {
-    ubPlayer.muted(true);
-    ubPlayer.autoplay(true);
-
-    if (navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
-        navigator.userAgent.match(/Android/i)) {
-      startEvent = 'touchend';
-    }
-
-    wrapperDiv = document.getElementById('content_video');
-    wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
-  }
-
-  ubPlayer.on('play', () => { 
-    ubPlayer.volume(0.1);
-    if(!ubPlayer.muted()){
-      ubPlayer.muted(true);
-    }    
-  });
-
-  var button = videojs.getComponent('CloseButton');
-  var CloseButton = videojs.extend(button, {
-        constructor: function() {
-          button.apply(this, arguments);
-          this.controlText("Close Player");
-          // this.addClass('vjs-icon-cancel');
-        },
-        handleClick: function() {
-          this.player().dispose();
+      var vjsOptions = {
+        autoplay: false,
+        muted: false,
+        loadingSpinner: false,
+        bigPlayButton:false,
+        width: isMobile() ? 344 : 400,
+        height: isMobile() ? 258 : 225,
+        controlBar: {
+          volumePanel: {
+            inline: false,
+            vertical: true
+          },
+          'pictureInPictureToggle': false,
+          'fullscreenToggle': false,
         }
+      }
+
+      ubPlayer = videojs('content_video', vjsOptions);
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
+
+      var imaOptions = {
+        id: "content_video",
+        // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
+        adTagUrl:"https://video.unibots.in/clients/docbao/ads.xml",
+        disableCustomPlaybackForIOS10Plus: true,
+        contribAdsSettings: {
+          debug: true,
+          timeout: 8000,
+          prerollTimeout: 12000,
+        },
+        adsRenderingSettings: { enablePreloading: true }
+      };
+      ubPlayer.ima(imaOptions);
+      
+
+      ubPlayer.on('adserror',function(err) {
+            console.log('ads error!');
+            console.log(err);
+            // ubPlayer.ima.requestAds();
+            showPlayer();
+          }.bind(ubPlayer)
+      );
+
+      ubPlayer.on('ads-request', ()=>{
+        document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
       });
-  videojs.registerComponent('CloseButton', CloseButton);
-  ubPlayer.addChild('CloseButton');
-    
-  //close player on video end.
-  ubPlayer.on('timeupdate', function(){
-      if(ubPlayer.currentTime() == ubPlayer.duration()){
-          console.log('video is ended');
-          ubPlayer.dispose();
+
+      ubPlayer.on('adsready',()=>{
+          console.log("ads ready");
+          setTimeout(showPlayer(), 2000);
+      }); 
+
+      ubPlayer.on('readyforpreroll',()=>{
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+        // showPlayer();
+      });
+
+      if (autoplayAllowed) {
+        if (autoplayRequiresMute) {
+          ubPlayer.muted(true);
+        }
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
       }
-  });
-  setLogo();
+      
+      if (!autoplayAllowed) {
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
 
-  
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return  rect.bottom > 0 &&
-            rect.right > 0 &&
-            rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-            rect.top < (window.innerHeight || document.documentElement.clientHeight);
-  }
-  if(!isMobile() && window.location.href != "https://docbao.vn/"){
-      if(document.getElementById("unibots-video")){
-        const currentPlayer = document.querySelector('#unibots-video');
-        window.addEventListener('scroll', function () {
-          var targetDiv = document.getElementById("ubVideo");
+        if (navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/Android/i)) {
+          startEvent = 'touchend';
+        }
 
-          if(isInViewport(currentPlayer)){
-            if(targetDiv.classList.contains("ubsticky_left")){
-              targetDiv.classList.remove("ubsticky_left");
+        wrapperDiv = document.getElementById('content_video');
+        wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
+      }
+
+      ubPlayer.on('play', () => { 
+        ubPlayer.volume(0.1);
+        if(!ubPlayer.muted()){
+          ubPlayer.muted(true);
+        }    
+      });
+
+      var button = videojs.getComponent('CloseButton');
+      var CloseButton = videojs.extend(button, {
+            constructor: function() {
+              button.apply(this, arguments);
+              this.controlText("Close Player");
+              // this.addClass('vjs-icon-cancel');
+            },
+            handleClick: function() {
+              this.player().dispose();
             }
-          }else{
-            if(!targetDiv.classList.contains("ubsticky_left")){
-              targetDiv.classList.add("ubsticky_left");
-            }
+          });
+      videojs.registerComponent('CloseButton', CloseButton);
+      ubPlayer.addChild('CloseButton');
+        
+      //close player on video end.
+      ubPlayer.on('timeupdate', function(){
+          if(ubPlayer.currentTime() == ubPlayer.duration()){
+              console.log('video is ended');
+              ubPlayer.dispose();
           }
-        // }, {
-        //     passive: true
-        });
+      });
+      setLogo();
+
+      
+      function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return  rect.bottom > 0 &&
+                rect.right > 0 &&
+                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+                rect.top < (window.innerHeight || document.documentElement.clientHeight);
       }
-    }
+      if(!isMobile() && window.location.href != "https://docbao.vn/"){
+          if(document.getElementById("unibots-video")){
+            const currentPlayer = document.querySelector('#unibots-video');
+            window.addEventListener('scroll', function () {
+              var targetDiv = document.getElementById("ubVideo");
+
+              if(isInViewport(currentPlayer)){
+                if(targetDiv.classList.contains("ubsticky_left")){
+                  targetDiv.classList.remove("ubsticky_left");
+                }
+              }else{
+                if(!targetDiv.classList.contains("ubsticky_left")){
+                  targetDiv.classList.add("ubsticky_left");
+                }
+              }
+            // }, {
+            //     passive: true
+            });
+          }
+        }
+    }    
 }
 
 function initAdDisplayContainer() {

@@ -169,9 +169,9 @@ function initPlayer() {
           }.bind(ubPlayer)
       );
 
-      ubPlayer.on('ads-request', ()=>{
-        document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
-      });
+      // ubPlayer.on('ads-request', ()=>{
+      //   document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
+      // });
 
       ubPlayer.on('adsready',()=>{
           console.log("ads ready");

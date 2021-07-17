@@ -154,6 +154,11 @@ sizes: [
 ]
 }
 
+var mappings_final_refresh = {
+    adUnitNames: [],
+    adSlots: [],
+};
+
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -199,19 +204,19 @@ for(var i=0; i<mapping_hb.targetUnits.length; i++){
       }
     }
 
-function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1]-1;
-  if(!mappings.renderedFlag[ub_slotNum]){
-    adId1 = adId;
-    var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-    if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setTimeout(function() {
-        refreshBid(ub_slot, adCode);
-      }, REFRESH_TIMEOUT);
-      mappings.renderedFlag[ub_slotNum] = true;
-    }
-  }
-}
+// function ub_checkAdRendered(adId, ub_slot, adCode){
+//   ub_slotNum = ub_slot[ub_slot.length-1]-1;
+//   if(!mappings.renderedFlag[ub_slotNum]){
+//     adId1 = adId;
+//     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+//     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+//       setTimeout(function() {
+//         refreshBid(ub_slot, adCode);
+//       }, REFRESH_TIMEOUT);
+//       mappings.renderedFlag[ub_slotNum] = true;
+//     }
+//   }
+// }
 
 function refreshBid(ub_slot, adCode) {
   ubpbjs.que.push(function(){
@@ -334,66 +339,6 @@ function googlePush(){
   });
 }
 
-if (document.getElementById('techmody_unibot1_336x280_300x250_a_tag')) {
-  googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot1) {
-               ub_checkAdRendered('div-gpt-ad-1620993357512-0', ub_slot1, ['/21957769615/techmody_hb_336x280_a_tag']);
-          }
-        });
-  });
-}
-
-if (document.getElementById('techmody_unibot1_336x280_300x250_b_tag')) {
-  googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot2) {
-               ub_checkAdRendered('div-gpt-ad-1620993415247-0', ub_slot2, ['/21957769615/techmody_hb_336x280_b_tag']);
-          }
-        });
-  });
-}
-
-if (document.getElementById('techmody_unibot1_160x600_a_tag')) {
-  googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot3) {
-               ub_checkAdRendered('div-gpt-ad-1620993443354-0', ub_slot3, ['/21957769615/techmody_hb_160x600_a_tag']);
-          }
-        });
-  });
-}
-
-if (document.getElementById('techmody_unibot1_160x600_b_tag')) {
-  googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot4) {
-               ub_checkAdRendered('div-gpt-ad-1620993460948-0', ub_slot4, ['/21957769615/techmody_hb_160x600_b_tag']);
-          }
-        });
-  });
-}
-
-if (document.getElementById('techmody_unibot1_300x600_a_tag')) {
-  googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot5) {
-               ub_checkAdRendered('div-gpt-ad-1620993484258-0', ub_slot5, ['/21957769615/techmody_hb_300x600_a_tag']);
-          }
-        });
-  });
-}
-
-if (document.getElementById('techmody_unibot1_300x600_b_tag')) {
-  googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot6) {
-               ub_checkAdRendered('div-gpt-ad-1620993385888-0', ub_slot6, ['/21957769615/techmody_hb_300x600_b_tag']);
-          }
-        });
-  });
-}
-
 if(typeof googletag.defineSlot === "function"){
  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
  googlePush();
@@ -406,6 +351,19 @@ else{
    });
  // }, 500);
 }
+
+googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if(mapping_hb.adUnitNames.includes(event.slot.getAdUnitPath())){
+            mappings_final_refresh.adSlots.push(event.slot);
+            mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+          }
+        });
+  });
+
+setTimeout(function() {
+  refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+}, REFRESH_TIMEOUT);
 
 function mainHbRun(){
  ubpbjs.que.push(function() {

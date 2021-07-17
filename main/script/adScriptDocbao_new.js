@@ -1181,6 +1181,7 @@ function fillRefreshMap() {
                 var el = document.getElementById(event.slot.getSlotId().getDomId());
                 if (el != null) {
                     var temp = setInterval(function () {
+                      console.log('setInterval_test');
                         if (isInViewSpace(el)) {
                             timer -= 1;
                             if (timer <= 0) {
@@ -1212,6 +1213,7 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
+  console.log('refrsh_test');
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,

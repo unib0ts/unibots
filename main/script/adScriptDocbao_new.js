@@ -398,7 +398,7 @@ function addNewsBotAd() {
         googletag.pubads().collapseEmptyDivs(true);
         googletag.pubads().setCentering(true);
         googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
-        googletag.pubads().enableSingleRequest();
+        // googletag.pubads().enableSingleRequest();
         googletag.enableServices();
         googletag
             .pubads()

@@ -1088,6 +1088,7 @@ var mappings_full_hb_config = {
 }
 var mappings_extra_units_config ={
   adUnitNames: [
+    '/1062118/Mobile_home_LB2_300x250',
     '/1062118/1x1_Sakshi.com_Live_Outstream_Desktop',
     '/1062118/1x1_Sakshi.com_Live_Outstream_Mobile',
     '/1062118/Intersitial_640x480_Desktop',

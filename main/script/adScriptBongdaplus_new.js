@@ -1443,23 +1443,14 @@ function refreshBid(ub_slot, adCode) {
 if (mobileCheck()) {
     // if (!(window.location.href == "https://bongdaplus.vn/")) {
         googletag.cmd.push(function () {
-            googletag
-                .pubads()
-                .addEventListener("slotRenderEnded", function (event) {
-                    // if (document.getElementById('div-gpt-ad-1614845787563-0').childNodes[0].childNodes) {
-                    var nodes_anchr = document.getElementById(
-                        "div-gpt-ad-1614845787563-0"
-                    ).childNodes[0].childNodes;
-                    if (
-                        nodes_anchr.length &&
-                        nodes_anchr[0].nodeName.toLowerCase() == "iframe"
-                    ) {
-                        document.getElementById(
-                            "close_ub-sticky-ad"
-                        ).style.display = "block";
+            googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+                  if (event.slot.getAdUnitPath() ==="/22140546871/bongdaplus.vn_mb_anchor_320x50"){
+                    var nodes_anchr = document.getElementById("div-gpt-ad-1614845787563-0").childNodes[0].childNodes;
+                    if (nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
+                        document.getElementById("close_ub-sticky-ad").style.display = "block";
                     }
-                    // }
-                });
+                  }
+           });
         });
     // }
     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){

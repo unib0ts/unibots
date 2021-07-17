@@ -96,14 +96,14 @@ if (!mobileCheck()) {
     }
   // }
 
-  // if(!(window.location.href == "https://docbao.vn/")){
+  if(!(window.location.href == "https://docbao.vn/")){
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-containerdesk';
     z1.className = 'ub-sticky-ad-containerdesk';
     z1.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019421633-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
-  // }
+  }
 } else {
       if(!(window.location.href== "https://m.docbao.vn/")){
         z1 = document.createElement("div");
@@ -361,6 +361,11 @@ function mainHbRun() {
             bidderTimeout: PREBID_TIMEOUT + 500,
             //pubcid: {expInterval: },
             //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+        });
+        ubpbjs.requestBids({
+            bidsBackHandler: initAdserver_hb_full,
+            timeout: PREBID_TIMEOUT,
+            labels: [GEO_CODE],
         });
     });
     setTimeout(function () {
@@ -881,11 +886,6 @@ var mappings_extra_units = {
     slots: [],
 };
 
-var mappings_final_refresh = {
-    adUnitNames: [],
-    adSlots: [],
-};
-
 function mobileCheckAdScript() {
     var check = false;
     (function (a) {
@@ -953,29 +953,29 @@ function checkHBUnits() {
 
 function callFullHBAds(adCode, ub_slot) {
     fillRefreshMap();
-    ubpbjs.que.push(function () {
-        ubpbjs.requestBids({
-            timeout: PREBID_TIMEOUT,
-            labels: [GEO_CODE],
-            adUnits: adUnits_full_hb,
-            adUnitCodes: adCode,
-            bidsBackHandler: function () {
-                ubpbjs.initAdserverSetHB = true;
-                googletag.cmd.push(function () {
-                    ubpbjs.que.push(function () {
-                        ubpbjs.setTargetingForGPTAsync();
-                        // requestManager.prebid = true;
-                        // biddersBack();
-                        googletag.cmd.push(function () {
-                            googletag.pubads().refresh(mapping_full_hb.slots);
-                            // googletag.pubads().refresh(mappings_extra_units.slots);
-                        });
-                        // googletag.pubads().refresh(ub_slot);
-                    });
-                });
-            },
-        });
-    });
+    // ubpbjs.que.push(function () {
+    //     ubpbjs.requestBids({
+    //         timeout: PREBID_TIMEOUT,
+    //         labels: [GEO_CODE],
+    //         adUnits: adUnits_full_hb,
+    //         adUnitCodes: adCode,
+    //         bidsBackHandler: function () {
+    //             ubpbjs.initAdserverSetHB = true;
+    //             googletag.cmd.push(function () {
+    //                 ubpbjs.que.push(function () {
+    //                     ubpbjs.setTargetingForGPTAsync();
+    //                     // requestManager.prebid = true;
+    //                     // biddersBack();
+    //                     googletag.cmd.push(function () {
+    //                         googletag.pubads().refresh(mapping_full_hb.slots);
+    //                         // googletag.pubads().refresh(mappings_extra_units.slots);
+    //                     });
+    //                     // googletag.pubads().refresh(ub_slot);
+    //                 });
+    //             });
+    //         },
+    //     });
+    // });
 }
 
 function initAdserver_hb_full() {
@@ -1176,64 +1176,24 @@ function googlePush() {
 
 function fillRefreshMap() {
     googletag.cmd.push(function () {
-        googletag
-            .pubads()
-            .addEventListener("slotRenderEnded", function (event) {
-                if (
-                    mappings_final_refresh["adUnitNames"].filter(function (
-                        val
-                    ) {
-                        return val == event.slot.getSlotId().getAdUnitPath();
-                    }).length == 0
-                ) {
-                    mappings_final_refresh.adSlots.push(event.slot);
-                    mappings_final_refresh.adUnitNames.push(
-                        event.slot.getSlotId().getAdUnitPath()
-                    );
-                }
-            });
-    });
-    googletag.cmd.push(function () {
-        googletag
-            .pubads()
-            .addEventListener("slotRenderEnded", function (event) {
+        googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                 var timer = REFRESH_TIMEOUT / 1000;
-                var el = document.getElementById(
-                    event.slot.getSlotId().getDomId()
-                );
+                var el = document.getElementById(event.slot.getSlotId().getDomId());
                 if (el != null) {
                     var temp = setInterval(function () {
+                      console.log('setInterval_test');
                         if (isInViewSpace(el)) {
                             timer -= 1;
                             if (timer <= 0) {
-                                refreshBid(
-                                    [event.slot],
-                                    [event.slot.getSlotId().getAdUnitPath()]
-                                );
+                                refreshBid([event.slot],[event.slot.getSlotId().getAdUnitPath()]);
                                 clearInterval(temp);
                             }
                         }
                     }, 1000);
                 }
-                if (
-                    mappings_final_refresh["adUnitNames"].filter(function (
-                        val
-                    ) {
-                        return val == event.slot.getSlotId().getAdUnitPath();
-                    }).length == 0
-                ) {
-                    mappings_final_refresh.adSlots.push(event.slot);
-                    mappings_final_refresh.adUnitNames.push(
-                        event.slot.getSlotId().getAdUnitPath()
-                    );
-                }
             });
     });
 }
-
-// setInterval(function() {
-//   refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-// }, REFRESH_TIMEOUT);
 
 function isInViewSpace(el) {
     var rect = el.getBoundingClientRect();
@@ -1253,6 +1213,7 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
+  console.log('refrsh_test');
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,
@@ -1294,22 +1255,6 @@ if (mobileCheck()) {
             });
         });
     }
-    // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-    //   googletag.cmd.push(function() {
-    //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    //         // if (document.getElementById('div-gpt-ad-1624440241552-0').childNodes[0].childNodes) {
-    //           var nodes_pop = document.getElementById('div-gpt-ad-1624440241552-0').childNodes[0].childNodes;
-    //           if(nodes_pop.length && nodes_pop[0].nodeName.toLowerCase() == 'iframe') {
-    //             document.getElementById('mybotpopupCloseButton').style.display = 'block';
-    //               mybotpopupad = document.querySelector("#ub-popup-ad-container");
-    //               mybotpopupad.style.height = '100%';
-    //               mybotpopupad.style.backgroundColor = '#000';
-    //               mybotpopupad.style.zIndex = '2147483647';
-    //           }
-    //         // }
-    //       });
-    // });
-    // }
 }
 
 function loadAd(id, adUnits) {

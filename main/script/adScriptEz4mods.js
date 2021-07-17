@@ -140,6 +140,11 @@
       renderedFlag: []
     };
 
+		var mappings_final_refresh = {
+		    adUnitNames: [],
+		    adSlots: [],
+		};
+
 	for(var i=0; i<mapping_hb.targetUnits.length; i++){
 	      if (document.getElementById(mapping_hb.targetUnits[i]) != null) {
 	        targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
@@ -189,7 +194,7 @@
           googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh([ub_slot]);
+                googletag.pubads().refresh(ub_slot);
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
                   var bc = x[i].bidderCode;
@@ -301,35 +306,6 @@
     });
   }
 
-	if (document.getElementById('ez4mods_unibot1_336x280_300x250_a_tag')) {
-    googletag.cmd.push(function() {
-          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === ub_slot1) {
-                 ub_checkAdRendered('div-gpt-ad-1620993620308-0', ub_slot1, ['/21957769615/ez4mods_hb_336x280_300x250_a_tag']);
-            }
-          });
-    });
-  }
-
-	if (document.getElementById('ez4mods_unibot1_336x280_300x250_b_tag')) {
-    googletag.cmd.push(function() {
-          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === ub_slot2) {
-                 ub_checkAdRendered('div-gpt-ad-1620993644222-0', ub_slot2, ['/21957769615/ez4mods_hb_336x280_300x250_b_tag']);
-            }
-          });
-    });
-  }
-
-	if (document.getElementById('ez4mods_unibot1_970x250_970x90_tag')) {
-    googletag.cmd.push(function() {
-          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === ub_slot3) {
-                 ub_checkAdRendered('div-gpt-ad-1620993661288-0', ub_slot3, ['/21957769615/ez4mods_hb_970x250_970x90_tag']);
-            }
-          });
-    });
-  }
 
  if(typeof googletag.defineSlot === "function"){
    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
@@ -343,6 +319,19 @@
      });
    // }, 500);
  }
+
+ googletag.cmd.push(function() {
+         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+           if(mapping_hb.adUnitNames.includes(event.slot.getAdUnitPath())){
+             mappings_final_refresh.adSlots.push(event.slot);
+             mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+           }
+         });
+   });
+
+ setTimeout(function() {
+   refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+ }, REFRESH_TIMEOUT);
 
  function mainHbRun(){
    ubpbjs.que.push(function() {

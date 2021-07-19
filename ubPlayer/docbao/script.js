@@ -128,8 +128,8 @@ function initPlayer() {
         muted: false,
         loadingSpinner: false,
         bigPlayButton:false,
-        width: isMobile() ? 320 : 400,
-        height: isMobile() ? 180 : 225,
+        width: isMobile() ? 360 : 400,
+        height: isMobile() ? 203 : 225,
         controlBar: {
           volumePanel: {
             inline: false,
@@ -141,7 +141,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -244,26 +244,26 @@ function initPlayer() {
                 rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
                 rect.top < (window.innerHeight || document.documentElement.clientHeight);
       }
-      // if(!isMobile() && window.location.href != "https://docbao.vn/"){
-      //     if(document.getElementById("unibots-video")){
-      //       const currentPlayer = document.querySelector('#unibots-video');
-      //       window.addEventListener('scroll', function () {
-      //         var targetDiv = document.getElementById("ubVideo");
-      //
-      //         if(isInViewport(currentPlayer)){
-      //           if(targetDiv.classList.contains("ubsticky_left")){
-      //             targetDiv.classList.remove("ubsticky_left");
-      //           }
-      //         }else{
-      //           if(!targetDiv.classList.contains("ubsticky_left")){
-      //             targetDiv.classList.add("ubsticky_left");
-      //           }
-      //         }
-      //       // }, {
-      //       //     passive: true
-      //       });
-      //     }
-      //   }
+      if(!isMobile() && window.location.href != "https://docbao.vn/"){
+          if(document.getElementById("unibots-video")){
+            const currentPlayer = document.querySelector('#unibots-video');
+            window.addEventListener('scroll', function () {
+              var targetDiv = document.getElementById("ubVideo");
+      
+              if(isInViewport(currentPlayer)){
+                if(targetDiv.classList.contains("ubsticky_left")){
+                  targetDiv.classList.remove("ubsticky_left");
+                }
+              }else{
+                if(!targetDiv.classList.contains("ubsticky_left")){
+                  targetDiv.classList.add("ubsticky_left");
+                }
+              }
+            // }, {
+            //     passive: true
+            });
+          }
+        }
     }
 }
 

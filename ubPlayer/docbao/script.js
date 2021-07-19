@@ -5,8 +5,8 @@ function isMobile() {
 };
 
 function loadDynamicStyles(url){
-  var link = document.createElement('link'); 
-  link.rel = 'stylesheet'; 
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
   link.type = 'text/css';
   link.href = url;
   document.getElementsByTagName('HEAD')[0].appendChild(link);
@@ -43,7 +43,7 @@ function listen_scripts(){
     if(!flag){
       console.log('all loaded');
       console.log(scripts);
-      clearInterval(ub_interval); 
+      clearInterval(ub_interval);
       checkUnmutedAutoplaySupport();
     }
   },500)
@@ -58,9 +58,9 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 
 ubIma.onload = function(){
   // load_player();
-  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
+  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);
   let myPlayer = '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="ub_video-js" playsinline controls="true" preload="auto"></video></div>';
-  
+
   if(document.getElementById("unibots-video")){
     document.getElementById("unibots-video").innerHTML = myPlayer;
   }
@@ -118,10 +118,10 @@ function checkMutedAutoplaySupport() {
 }
 
 function initPlayer() {
-  
+
   if(document.getElementById('unibots-video')){
       var video = document.getElementById('content_video');
-      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : ''; 
+      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
       var vjsOptions = {
         autoplay: false,
@@ -159,7 +159,7 @@ function initPlayer() {
         vastLoadTimeout: 2e4,
       };
       ubPlayer.ima(imaOptions);
-      
+
 
       ubPlayer.on('adserror',function(err) {
             console.log('ads error!');
@@ -176,7 +176,7 @@ function initPlayer() {
       ubPlayer.on('adsready',()=>{
           console.log("ads ready");
           setTimeout(showPlayer(), 2000);
-      }); 
+      });
 
       ubPlayer.on('readyforpreroll',()=>{
         ubPlayer.muted(true);
@@ -191,7 +191,7 @@ function initPlayer() {
         ubPlayer.muted(true);
         ubPlayer.autoplay(true);
       }
-      
+
       if (!autoplayAllowed) {
         ubPlayer.muted(true);
         ubPlayer.autoplay(true);
@@ -206,11 +206,11 @@ function initPlayer() {
         wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
       }
 
-      ubPlayer.on('play', () => { 
+      ubPlayer.on('play', () => {
         ubPlayer.volume(0.1);
         if(!ubPlayer.muted()){
           ubPlayer.muted(true);
-        }    
+        }
       });
 
       var button = videojs.getComponent('CloseButton');
@@ -226,7 +226,7 @@ function initPlayer() {
           });
       videojs.registerComponent('CloseButton', CloseButton);
       ubPlayer.addChild('CloseButton');
-        
+
       //close player on video end.
       ubPlayer.on('timeupdate', function(){
           if(ubPlayer.currentTime() == ubPlayer.duration()){
@@ -236,7 +236,7 @@ function initPlayer() {
       });
       setLogo();
 
-      
+
       function isInViewport(el) {
         const rect = el.getBoundingClientRect();
         return  rect.bottom > 0 &&
@@ -244,27 +244,27 @@ function initPlayer() {
                 rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
                 rect.top < (window.innerHeight || document.documentElement.clientHeight);
       }
-      if(!isMobile() && window.location.href != "https://docbao.vn/"){
-          if(document.getElementById("unibots-video")){
-            const currentPlayer = document.querySelector('#unibots-video');
-            window.addEventListener('scroll', function () {
-              var targetDiv = document.getElementById("ubVideo");
-
-              if(isInViewport(currentPlayer)){
-                if(targetDiv.classList.contains("ubsticky_left")){
-                  targetDiv.classList.remove("ubsticky_left");
-                }
-              }else{
-                if(!targetDiv.classList.contains("ubsticky_left")){
-                  targetDiv.classList.add("ubsticky_left");
-                }
-              }
-            // }, {
-            //     passive: true
-            });
-          }
-        }
-    }    
+      // if(!isMobile() && window.location.href != "https://docbao.vn/"){
+      //     if(document.getElementById("unibots-video")){
+      //       const currentPlayer = document.querySelector('#unibots-video');
+      //       window.addEventListener('scroll', function () {
+      //         var targetDiv = document.getElementById("ubVideo");
+      //
+      //         if(isInViewport(currentPlayer)){
+      //           if(targetDiv.classList.contains("ubsticky_left")){
+      //             targetDiv.classList.remove("ubsticky_left");
+      //           }
+      //         }else{
+      //           if(!targetDiv.classList.contains("ubsticky_left")){
+      //             targetDiv.classList.add("ubsticky_left");
+      //           }
+      //         }
+      //       // }, {
+      //       //     passive: true
+      //       });
+      //     }
+      //   }
+    }
 }
 
 function initAdDisplayContainer() {

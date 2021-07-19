@@ -58,14 +58,14 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 
 ubIma.onload = function(){
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-  // if(!isMobile() && window.location.href != "https://bongdaplus.vn/" && !document.getElementById('unibots-video') && !document.getElementById('unibots-video-mobile')){
-  //   let z1= document.createElement('div');
-  //   z1.id = 'unibots-video-sticky';
-  //   z1.innerHTML = myPlayer;
-  //   let x1 = document.querySelector('body');
-  //   x1.appendChild(z1);
-  // }
+  let myPlayer ='<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  if(!isMobile() && window.location.href != "https://bongdaplus.vn/" && !document.getElementById('unibots-video') && !document.getElementById('unibots-video-mobile')){
+    let z1= document.createElement('div');
+    z1.id = 'unibots-video-sticky';
+    z1.innerHTML =  '<div id="ubVideo" class="ub-unloaded ubsticky"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+    let x1 = document.querySelector('body');
+    x1.appendChild(z1);
+  }
   // else if(!isMobile() && window.location.href == "https://bongdaplus.vn/"){
   //   targetDiv = document.getElementsByClassName("topvideobox")[0];
   //   var div = document.createElement("div");
@@ -156,7 +156,7 @@ function initPlayer() {
         adTagUrl:"https://video.unibots.in/clients/bongda/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
         contribAdsSettings: {
-          debug: true,
+          debug: false,
           timeout: 8000,
           prerollTimeout: 10000,
         },
@@ -248,7 +248,7 @@ function initPlayer() {
                 rect.top < (window.innerHeight || document.documentElement.clientHeight);
       }
       
-      if(!isMobile() && window.location.href != "https://bongdaplus.vn/"){
+      if(!isMobile() && window.location.href != "https://bongdaplus.vn/" && (document.getElementById('unibots-video') || document.getElementById('unibots-video-mobile'))){
           setTimeout(()=>{
             let currentPlayer = "";
             if(document.getElementById('unibots-video')){

@@ -1334,24 +1334,24 @@ function googlePush() {
 }
 
 function fillRefreshMap() {
-    googletag.cmd.push(function () {
-        googletag
-            .pubads()
-            .addEventListener("slotRenderEnded", function (event) {
-                if (
-                    mappings_final_refresh["adUnitNames"].filter(function (
-                        val
-                    ) {
-                        return val == event.slot.getSlotId().getAdUnitPath();
-                    }).length == 0
-                ) {
-                    mappings_final_refresh.adSlots.push(event.slot);
-                    mappings_final_refresh.adUnitNames.push(
-                        event.slot.getSlotId().getAdUnitPath()
-                    );
-                }
-            });
-    });
+    // googletag.cmd.push(function () {
+    //     googletag
+    //         .pubads()
+    //         .addEventListener("slotRenderEnded", function (event) {
+    //             if (
+    //                 mappings_final_refresh["adUnitNames"].filter(function (
+    //                     val
+    //                 ) {
+    //                     return val == event.slot.getSlotId().getAdUnitPath();
+    //                 }).length == 0
+    //             ) {
+    //                 mappings_final_refresh.adSlots.push(event.slot);
+    //                 mappings_final_refresh.adUnitNames.push(
+    //                     event.slot.getSlotId().getAdUnitPath()
+    //                 );
+    //             }
+    //         });
+    // });
     googletag.cmd.push(function () {
         googletag
             .pubads()
@@ -1374,18 +1374,18 @@ function fillRefreshMap() {
                         }
                     }, 1000);
                 }
-                if (
-                    mappings_final_refresh["adUnitNames"].filter(function (
-                        val
-                    ) {
-                        return val == event.slot.getSlotId().getAdUnitPath();
-                    }).length == 0
-                ) {
-                    mappings_final_refresh.adSlots.push(event.slot);
-                    mappings_final_refresh.adUnitNames.push(
-                        event.slot.getSlotId().getAdUnitPath()
-                    );
-                }
+                // if (
+                //     mappings_final_refresh["adUnitNames"].filter(function (
+                //         val
+                //     ) {
+                //         return val == event.slot.getSlotId().getAdUnitPath();
+                //     }).length == 0
+                // ) {
+                //     mappings_final_refresh.adSlots.push(event.slot);
+                //     mappings_final_refresh.adUnitNames.push(
+                //         event.slot.getSlotId().getAdUnitPath()
+                //     );
+                // }
             });
     });
 }

@@ -89,15 +89,15 @@ if (!mobileCheck()) {
         }
     }
 
-    if (window.location.href == "https://bongdaplus.vn/") {
-        z1 = document.createElement("div");
-        z1.id = "ub-sticky-ad-containerdesk";
-        z1.className = "ub-sticky-ad-containerdesk";
-        z1.innerHTML =
-            '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
-        x1 = document.querySelector("body");
-        x1.appendChild(z1);
-    }
+    // if (window.location.href == "https://bongdaplus.vn/") {
+    //     z1 = document.createElement("div");
+    //     z1.id = "ub-sticky-ad-containerdesk";
+    //     z1.className = "ub-sticky-ad-containerdesk";
+    //     z1.innerHTML =
+    //         '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
+    //     x1 = document.querySelector("body");
+    //     x1.appendChild(z1);
+    // }
 } else {
     // var s6 = document.createElement('script');
     // s6.async = true;
@@ -107,7 +107,7 @@ if (!mobileCheck()) {
     // document.getElementsByTagName('head')[0].appendChild(s6);
     //
     // if (!document.querySelector('.artitle')) {
-    // if (!(window.location.href == "https://bongdaplus.vn/" )) {
+    if (!(window.location.href == "https://bongdaplus.vn/" )) {
         z1 = document.createElement("div");
         z1.id = "ub-sticky-ad-container";
         z1.className = "ub-sticky-ad-container";
@@ -115,7 +115,7 @@ if (!mobileCheck()) {
             '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1614845787563-0"></div>';
         x1 = document.querySelector("body");
         x1.appendChild(z1);
-    // }
+    }
 
     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
     z2 = document.createElement("div");
@@ -524,7 +524,7 @@ var hb_full_common_bidders = [
 
 var mappings_full_hb_config_desktop = {
     adUnitNames: [
-        "/22140546871/bongdaplus.vn_pc_balloon_hb_300x600",
+        // "/22140546871/bongdaplus.vn_pc_balloon_hb_300x600",
         // '/22140546871/bongdaplus.vn_PC_bottom-article_300x250_1',
         // '/22140546871/bongdaplus.vn_PC_bottom-article_300x250_2',
         // '/22140546871/bongdaplus.vn_in-article_468x60',
@@ -542,7 +542,7 @@ var mappings_full_hb_config_desktop = {
         "/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280",
     ],
     adId: [
-        "div-gpt-ad-1622019394824-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
+        // "div-gpt-ad-1622019394824-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
         // 'div-gpt-ad-1620123749103-0',  //''/22140546871/bongdaplus.vn_PC_bottom-article_300x250_1'
         // 'div-gpt-ad-1620123852692-0', //'/22140546871/bongdaplus.vn_PC_bottom-article_300x250_2',
         // 'div-gpt-ad-1619183586523-0', // '/22140546871/bongdaplus.vn_in-article_468x60',
@@ -560,10 +560,10 @@ var mappings_full_hb_config_desktop = {
         "div-gpt-ad-1615775720668-0", //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
     ],
     sizes: [
-        [
-            [336, 280],
-            [300, 250],
-        ],
+        // [
+        //     [336, 280],
+        //     [300, 250],
+        // ],
         // [300, 250],
         // [300, 250],
         // [468, 60],
@@ -598,18 +598,18 @@ var mappings_full_hb_config_desktop = {
         [336, 280],
     ],
     bids: [
-        hb_full_common_bidders.concat([
-            {
-                bidder: "pubmatic",
-                params: { publisherId: "159448", adSlot: "3796451" },
-            },
-            //     { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            //     { bidder: 'ucfunnel', params: { adid : 'ad-34B8DD88EA288796C3E739EB77B4646B'} },
-            // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
-            // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-            //     { bidder: 'sovrn', params: {tagid: '919447'} },
-            // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-        ]),
+        // hb_full_common_bidders.concat([
+        //     {
+        //         bidder: "pubmatic",
+        //         params: { publisherId: "159448", adSlot: "3796451" },
+        //     },
+        //     //     { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        //     //     { bidder: 'ucfunnel', params: { adid : 'ad-34B8DD88EA288796C3E739EB77B4646B'} },
+        //     // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+        //     // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+        //     //     { bidder: 'sovrn', params: {tagid: '919447'} },
+        //     // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        // ]),
         //  hb_full_common_bidders.concat([
         // //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
         // //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
@@ -1441,7 +1441,7 @@ function refreshBid(ub_slot, adCode) {
 }
 
 if (mobileCheck()) {
-    // if (!(window.location.href == "https://bongdaplus.vn/")) {
+    if (!(window.location.href == "https://bongdaplus.vn/")) {
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                   if (event.slot.getAdUnitPath() ==="/22140546871/bongdaplus.vn_mb_anchor_320x50"){
@@ -1452,7 +1452,7 @@ if (mobileCheck()) {
                   }
            });
         });
-    // }
+    }
     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
     //   googletag.cmd.push(function() {
     //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {

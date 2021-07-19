@@ -475,7 +475,7 @@ function ub_checkAd1Rendered() {
     }
 }
 
-function refreshBidTemp(ub_slot) {
+function refreshBidTemp(ub_slotp) {
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,
@@ -484,7 +484,7 @@ function refreshBidTemp(ub_slot) {
                 googletag.cmd.push(function () {
                     ubpbjs.que.push(function () {
                         ubpbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh([ub_slot]);
+                        googletag.pubads().refresh(ub_slotp);
                         // var adsCalled = false;
                         // for(var i=0;i<x.length;i++){
                         //   var bc = x[i].bidderCode;

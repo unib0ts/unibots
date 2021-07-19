@@ -139,6 +139,7 @@ function initPlayer() {
       var vjsOptions = {
         autoplay: false,
         muted: false,
+        // fluid:true,
         width: isMobile() ? 344 : 400,
         height: isMobile() ? 258 : 225,
         loadingSpinner: false,
@@ -151,7 +152,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -159,9 +160,9 @@ function initPlayer() {
         adTagUrl:"https://video.unibots.in/clients/bongda/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
         contribAdsSettings: {
-          debug: true,
+          debug: false,
           timeout: 8000,
-          prerollTimeout: 10000,
+          prerollTimeout: 8000,
         },
         adsRenderingSettings: {
           enablePreloading: true
@@ -243,45 +244,45 @@ function initPlayer() {
 
       setLogo();
 
-      function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return  rect.bottom > 0 &&
-                rect.right > 0 &&
-                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-                rect.top < (window.innerHeight || document.documentElement.clientHeight);
-      }
+      // function isInViewport(el) {
+      //   const rect = el.getBoundingClientRect();
+      //   return  rect.bottom > 0 &&
+      //           rect.right > 0 &&
+      //           rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+      //           rect.top < (window.innerHeight || document.documentElement.clientHeight);
+      // }
 
-      if(!isMobile() && window.location.href != "https://bongdaplus.vn/"){
-          setTimeout(()=>{
-            let currentPlayer = "";
-            if(document.getElementById('unibots-video')){
-              currentPlayer = document.querySelector('#unibots-video');
-              // console.log(currentPlayer);
-            }
-            else if(document.getElementById('unibots-video-mobile')){
-              currentPlayer = document.querySelector('#unibots-video-mobile');
-              // console.log(currentPlayer);
-            }
+      // if(!isMobile() && window.location.href != "https://bongdaplus.vn/"){
+      //     setTimeout(()=>{
+      //       let currentPlayer = "";
+      //       if(document.getElementById('unibots-video')){
+      //         currentPlayer = document.querySelector('#unibots-video');
+      //         // console.log(currentPlayer);
+      //       }
+      //       else if(document.getElementById('unibots-video-mobile')){
+      //         currentPlayer = document.querySelector('#unibots-video-mobile');
+      //         // console.log(currentPlayer);
+      //       }
 
-            // window.addEventListener('scroll', function () {
-            //   var targetDiv = document.getElementById("ubVideo");
-            //
-            //   if(isInViewport(currentPlayer)){
-            //               if(targetDiv.classList.contains("ubsticky")){
-            //                 targetDiv.classList.remove("ubsticky");
-            //               }
-            //             }else{
-            //               // console.log("out view");
-            //               // console.log(targetDiv.classList.contains("ubsticky"));
-            //               if(!targetDiv.classList.contains("ubsticky")){
-            //                 targetDiv.classList.add("ubsticky");
-            //               }
-            //             }
-            //           // }, {
-            //           //     passive: true
-            //   });
-          },2000);
-      }
+      //       window.addEventListener('scroll', function () {
+      //         var targetDiv = document.getElementById("ubVideo");
+            
+      //         if(isInViewport(currentPlayer)){
+      //                     if(targetDiv.classList.contains("ubsticky")){
+      //                       targetDiv.classList.remove("ubsticky");
+      //                     }
+      //                   }else{
+      //                     // console.log("out view");
+      //                     // console.log(targetDiv.classList.contains("ubsticky"));
+      //                     if(!targetDiv.classList.contains("ubsticky")){
+      //                       targetDiv.classList.add("ubsticky");
+      //                     }
+      //                   }
+      //                 // }, {
+      //                 //     passive: true
+      //         });
+      //     },2000);
+      // }
     }
 }
 

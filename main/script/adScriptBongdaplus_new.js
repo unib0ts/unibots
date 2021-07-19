@@ -1103,7 +1103,8 @@ function checkHBUnits() {
         addNewsBotAd();
         // }
     }
-    callMapUnits();
+      var mybotubad = setTimeout(callMapUnits, 500);
+    // callMapUnits();
 
     // setTimeout(function() {
     //     initAdserver_hb_full();
@@ -1240,6 +1241,7 @@ function callMapUnits() {
             //   apSlots.push(apSlotTemp);
             // }
         }
+        clearTimeout(callMapUnits);
         // else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
         //   mappings_extra_units.slots.push(x[i]);
         // }

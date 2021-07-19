@@ -152,11 +152,11 @@ function initPlayer() {
         showControlsForJSAds: !1,
         showCountdown: !1,
         contribAdsSettings: {
-          debug: true,
-          timeout: 8000,
-          prerollTimeout: 12000,
-        },
-        vastLoadTimeout: 2e4,
+          debug: true
+          // timeout: 8000,
+          // prerollTimeout: 12000,
+        }
+        // vastLoadTimeout: 2e4,
       };
       ubPlayer.ima(imaOptions);
 

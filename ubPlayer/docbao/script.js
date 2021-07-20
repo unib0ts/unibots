@@ -128,8 +128,8 @@ function initPlayer() {
         muted: false,
         loadingSpinner: false,
         bigPlayButton:false,
-        width: isMobile() ? 360 : 400,
-        height: isMobile() ? 203 : 225,
+        width: isMobile() ? 400 : 400,
+        height: isMobile() ? 225 : 225,
         controlBar: {
           volumePanel: {
             inline: false,

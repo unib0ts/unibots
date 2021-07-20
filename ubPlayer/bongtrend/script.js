@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 ubIma.onload = function(){
 
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);
-  let myPlayer = isMobile() ? '' : '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  let myPlayer = '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
 
   if(document.getElementById('unibots-video')){
     document.getElementById('unibots-video').innerHTML= myPlayer;
@@ -115,16 +115,16 @@ function initPlayer() {
 
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
-  if(document.getElementById('unibots-video') && !isMobile()){
+  if(document.getElementById('unibots-video')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
       var vjsOptions = {
         autoplay: false,
         muted: false,
-        // fluid:true,
-        width: isMobile() ? 360 : 400,
-        height: isMobile() ? 203 : 225,
+        fluid: isMobile() ? true : false,
+        width: isMobile() ? 320 : 400,
+        height: isMobile() ? 180 : 225,
         loadingSpinner: false,
         bigPlayButton: false,
         controlBar: {
@@ -135,7 +135,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -147,6 +147,7 @@ function initPlayer() {
           // timeout: 8000,
           // prerollTimeout: 8000,
         },
+        vastLoadTimeout: 2e4,
         adsRenderingSettings: {
           enablePreloading: true
         }

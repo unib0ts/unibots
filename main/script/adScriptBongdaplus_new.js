@@ -484,7 +484,7 @@ function refreshBidTemp(ub_slotp) {
                 googletag.cmd.push(function () {
                     ubpbjs.que.push(function () {
                         ubpbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh(ub_slotp);
+                        googletag.pubads().refresh([ub_slotp]);
                         // var adsCalled = false;
                         // for(var i=0;i<x.length;i++){
                         //   var bc = x[i].bidderCode;
@@ -1103,7 +1103,8 @@ function checkHBUnits() {
         addNewsBotAd();
         // }
     }
-    callMapUnits();
+      var mybotubad = setTimeout(callMapUnits, 500);
+    // callMapUnits();
 
     // setTimeout(function() {
     //     initAdserver_hb_full();
@@ -1240,6 +1241,7 @@ function callMapUnits() {
             //   apSlots.push(apSlotTemp);
             // }
         }
+        clearTimeout(mybotubad);
         // else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
         //   mappings_extra_units.slots.push(x[i]);
         // }

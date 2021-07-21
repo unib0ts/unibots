@@ -107,7 +107,7 @@ if (!mobileCheck()) {
     // document.getElementsByTagName('head')[0].appendChild(s6);
     //
     // if (!document.querySelector('.artitle')) {
-    if (!(window.location.href == "https://bongdaplus.vn/" )) {
+    if (window.location.href == "https://bongdaplus.vn/" ) {
         z1 = document.createElement("div");
         z1.id = "ub-sticky-ad-container";
         z1.className = "ub-sticky-ad-container";

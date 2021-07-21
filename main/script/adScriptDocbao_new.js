@@ -468,12 +468,12 @@ function ub_checkAd1Rendered() {
         // mybotpopupad.style.backdropFilter = 'blur(3px)';
         // mybotpopupad.classList.add("popubcontainer");
         mybotpopupad.style.zIndex = "2147483647";
-        if (ub_ad1RefreshFlag != 1) {
-            setTimeout(function () {
-                ub_ad1RefreshFlag = 1;
-                refreshBidTemp(ub_slotp);
-            }, REFRESH_TIMEOUT);
-        }
+        // if (ub_ad1RefreshFlag != 1) {
+        //     setTimeout(function () {
+        //         ub_ad1RefreshFlag = 1;
+        //         refreshBidTemp(ub_slotp);
+        //     }, REFRESH_TIMEOUT);
+        // }
     }
 }
 

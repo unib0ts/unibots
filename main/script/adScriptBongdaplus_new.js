@@ -137,8 +137,7 @@ function mybotubstickyad() {
 }
 
 function mybotubstickyadDesk() {
-    document.getElementById("ub-sticky-ad-containerdesk").style.display =
-        "none";
+    document.getElementById("ub-sticky-ad-containerdesk").style.display = "none";
 }
 
 var s0 = document.createElement("script");
@@ -1441,7 +1440,7 @@ function refreshBid(ub_slot, adCode) {
 }
 
 if (mobileCheck()) {
-    if (!(window.location.href == "https://bongdaplus.vn/")) {
+    if (window.location.href == "https://bongdaplus.vn/") {
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                   if (event.slot.getAdUnitPath() ==="/22140546871/bongdaplus.vn_mb_anchor_320x50"){

@@ -1258,6 +1258,8 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
+  if (adCode== '/22140546871/docbao.vn_popup_fluid_336x280') {}
+  else {
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,
@@ -1284,6 +1286,7 @@ function refreshBid(ub_slot, adCode) {
             },
         });
     });
+  }
 }
 
 if (mobileCheck()) {

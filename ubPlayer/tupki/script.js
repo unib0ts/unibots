@@ -121,6 +121,7 @@ function initPlayer() {
       var vjsOptions = {
         autoplay: false,
         muted: false,
+        preload: true,
         // fluid: isMobile() ? true : false,
         width: 640,
         height: 340,
@@ -162,9 +163,8 @@ function initPlayer() {
       );
 
 
-      ubPlayer.on('adsready',()=>{
+      ubPlayer.on('loadedmetadata',()=>{
           // console.log("ads ready");
-          // showPlayer();
         showPlayer();
       });
 

@@ -164,7 +164,7 @@ function initPlayer() {
       );
 
 
-      ubPlayer.on('adsready',()=>{
+      ubPlayer.on('loadedmetadata',()=>{
           // console.log("ads ready");
           showPlayer();
       });

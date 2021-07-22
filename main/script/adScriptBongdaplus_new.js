@@ -107,7 +107,7 @@ if (!mobileCheck()) {
     // document.getElementsByTagName('head')[0].appendChild(s6);
     //
     // if (!document.querySelector('.artitle')) {
-    if (!(window.location.href == "https://bongdaplus.vn/" )) {
+    if (window.location.href == "https://bongdaplus.vn/" ) {
         z1 = document.createElement("div");
         z1.id = "ub-sticky-ad-container";
         z1.className = "ub-sticky-ad-container";
@@ -137,8 +137,7 @@ function mybotubstickyad() {
 }
 
 function mybotubstickyadDesk() {
-    document.getElementById("ub-sticky-ad-containerdesk").style.display =
-        "none";
+    document.getElementById("ub-sticky-ad-containerdesk").style.display = "none";
 }
 
 var s0 = document.createElement("script");
@@ -466,12 +465,12 @@ function ub_checkAd1Rendered() {
         // mybotpopupad.style.backdropFilter = 'blur(3px)';
         // mybotpopupad.classList.add("popubcontainer");
         mybotpopupad.style.zIndex = "2147483647";
-        if (ub_ad1RefreshFlag != 1) {
-            setTimeout(function () {
-                ub_ad1RefreshFlag = 1;
-                refreshBidTemp(ub_slotp);
-            }, REFRESH_TIMEOUT);
-        }
+        // if (ub_ad1RefreshFlag != 1) {
+        //     setTimeout(function () {
+        //         ub_ad1RefreshFlag = 1;
+        //         refreshBidTemp(ub_slotp);
+        //     }, REFRESH_TIMEOUT);
+        // }
     }
 }
 
@@ -1412,6 +1411,8 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
+  if(adCode == '/22140546871/bongdaplus.vn_popup_fluid_336x280'){}
+  else {
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,
@@ -1438,10 +1439,11 @@ function refreshBid(ub_slot, adCode) {
             },
         });
     });
+  }
 }
 
 if (mobileCheck()) {
-    if (!(window.location.href == "https://bongdaplus.vn/")) {
+    if (window.location.href == "https://bongdaplus.vn/") {
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                   if (event.slot.getAdUnitPath() ==="/22140546871/bongdaplus.vn_mb_anchor_320x50"){

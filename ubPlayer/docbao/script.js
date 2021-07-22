@@ -155,8 +155,8 @@ function initPlayer() {
           debug: true
           // timeout: 8000,
           // prerollTimeout: 12000,
-        }
-        // vastLoadTimeout: 2e4,
+        },
+        vastLoadTimeout: 2e4,
       };
       ubPlayer.ima(imaOptions);
 
@@ -173,8 +173,8 @@ function initPlayer() {
       //   document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
       // });
 
-      ubPlayer.on('adsready',()=>{
-          console.log("ads ready");
+      ubPlayer.on('loadedmetadata',()=>{
+          // console.log("ads ready");
           setTimeout(showPlayer(), 2000);
       });
 

@@ -115,7 +115,7 @@ function initPlayer() {
 
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
-  if(document.getElementById('unibots-video') && isMobile()){
+  if(document.getElementById('unibots-video')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
@@ -123,8 +123,8 @@ function initPlayer() {
         autoplay: false,
         muted: false,
         fluid: isMobile() ? true : false,
-        width: isMobile() ? 320 : '',
-        height: isMobile() ? 180 : '',
+        width: isMobile() ? 320 : 640,
+        height: isMobile() ? 180 : 360,
         loadingSpinner: false,
         bigPlayButton: false,
         controlBar: {
@@ -140,7 +140,7 @@ function initPlayer() {
       var imaOptions = {
         id: "content_video",
         // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
-        adTagUrl:"https://video.unibots.in/clients/laodong/ads.xml",
+        adTagUrl:"https://video.unibots.in/clients/songdep/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
         locale: "vn",
         contribAdsSettings: {
@@ -204,19 +204,19 @@ function initPlayer() {
         }
       });
 
-      // var button = videojs.getComponent('CloseButton');
-      // var CloseButton = videojs.extend(button, {
-      //       constructor: function() {
-      //         button.apply(this, arguments);
-      //         this.controlText("Close Player");
-      //         this.addClass('ubp-dispose');
-      //       },
-      //       handleClick: function() {
-      //         this.player().dispose();
-      //       }
-      //     });
-      // videojs.registerComponent('CloseButton', CloseButton);
-      // ubPlayer.addChild('CloseButton');
+      var button = videojs.getComponent('CloseButton');
+      var CloseButton = videojs.extend(button, {
+            constructor: function() {
+              button.apply(this, arguments);
+              this.controlText("Close Player");
+              this.addClass('ubp-dispose');
+            },
+            handleClick: function() {
+              this.player().dispose();
+            }
+          });
+      videojs.registerComponent('CloseButton', CloseButton);
+      ubPlayer.addChild('CloseButton');
 
       //close player on video end.
       ubPlayer.on('timeupdate', function(){
@@ -282,4 +282,4 @@ function setLogo(){
   ubPlayer.el_.appendChild(i);
 }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky-center{position:fixed;bottom:0;left:50%;transform:translate(-50%,0);z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-sticky{z-index:2147483999!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){#unibots-video{margin:15px 5px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky-center{position:fixed;bottom:0;left:50%;transform:translate(-50%,0);z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-sticky{z-index:2147483999!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

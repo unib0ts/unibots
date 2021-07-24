@@ -1258,8 +1258,7 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
-  if (adCode== '/22140546871/docbao.vn_popup_fluid_336x280') {}
-  else {
+  if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,

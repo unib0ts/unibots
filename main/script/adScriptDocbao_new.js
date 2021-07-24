@@ -1258,7 +1258,37 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
-  if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
+  if (mobileCheck() && (window.location.hostname == "m.docbao.vn")) {
+    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
+      ubpbjs.que.push(function () {
+          ubpbjs.requestBids({
+              timeout: PREBID_TIMEOUT,
+              adUnitCodes: adCode,
+              adUnits: adUnits_full_hb,
+              bidsBackHandler: function () {
+                  googletag.cmd.push(function () {
+                      ubpbjs.que.push(function () {
+                          ubpbjs.setTargetingForGPTAsync();
+                          googletag.pubads().refresh(ub_slot);
+                          // var adsCalled_hb = false;
+                          // for(var i=0;i<x.length;i++){
+                          //   var bc = x[i].bidderCode;
+                          //   if(bc=="openx"){
+                          //     adsCalled_hb = true;
+                          //     callBotman_hb();
+                          //   }
+                          // }
+                          // if(!adsCalled_hb){
+                          //   callAdsUB_hb();
+                          // }
+                      });
+                  });
+              },
+          });
+      });
+    }
+  }
+  else {
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,

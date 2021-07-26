@@ -205,7 +205,7 @@ var adUnits = [];
        ]
     };
     adUnits.push(adUnits1);
-   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php') {
+   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php' || boturl = 'https://phunusuckhoe.giadinhonline.vn/') {
     if (document.getElementById('ub-home')){
       adUnits1 = {
          code: '/21957769615/phunusuckhoe_nb_336x280_mobile_home',
@@ -481,7 +481,7 @@ function googlePush(){
        }
      });
    });
-  if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php'){
+  if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php' || boturl == 'https://phunusuckhoe.giadinhonline.vn/'){
     if (document.getElementById('ub-home')){
       mappings.slotNumbers.push(4);
       mappings.adCode.push('/21957769615/phunusuckhoe_nb_336x280_mobile_home');
@@ -496,7 +496,7 @@ function googlePush(){
       });
     }
   }
-  
+
   if (document.getElementById('MB_article_Inview')){
    mappings.slotNumbers.push(5);
    mappings.adCode.push('/21957769615/phunusuckhoe.vn_hb_320x50_MB_article_inview');

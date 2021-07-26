@@ -159,7 +159,7 @@ ub_vs.src = url;
 ub_vs.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
-var PREBID_TIMEOUT = 1300;
+var PREBID_TIMEOUT = 1800;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 
@@ -1258,7 +1258,36 @@ function isInViewSpace(el) {
 }
 
 function refreshBid(ub_slot, adCode) {
-  if (adCode== '/22140546871/docbao.vn_popup_fluid_336x280') {}
+  if (mobileCheck() && (window.location.hostname == "m.docbao.vn")) {
+    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
+      ubpbjs.que.push(function () {
+          ubpbjs.requestBids({
+              timeout: PREBID_TIMEOUT,
+              adUnitCodes: adCode,
+              adUnits: adUnits_full_hb,
+              bidsBackHandler: function () {
+                  googletag.cmd.push(function () {
+                      ubpbjs.que.push(function () {
+                          ubpbjs.setTargetingForGPTAsync();
+                          googletag.pubads().refresh(ub_slot);
+                          // var adsCalled_hb = false;
+                          // for(var i=0;i<x.length;i++){
+                          //   var bc = x[i].bidderCode;
+                          //   if(bc=="openx"){
+                          //     adsCalled_hb = true;
+                          //     callBotman_hb();
+                          //   }
+                          // }
+                          // if(!adsCalled_hb){
+                          //   callAdsUB_hb();
+                          // }
+                      });
+                  });
+              },
+          });
+      });
+    }
+  }
   else {
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({

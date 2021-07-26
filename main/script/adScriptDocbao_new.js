@@ -159,7 +159,7 @@ ub_vs.src = url;
 ub_vs.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
-var PREBID_TIMEOUT = 1300;
+var PREBID_TIMEOUT = 1800;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 

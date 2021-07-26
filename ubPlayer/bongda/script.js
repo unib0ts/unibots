@@ -97,7 +97,7 @@ var wrapperDiv;
 
 function checkUnmutedAutoplaySupport() {
   canAutoplay
-    .video({timeout: 500, muted: false})
+    .video({timeout: 800, muted: false})
     .then(function(response) {
         if(response.result === false) {
           // Unmuted autoplay is not allowed.
@@ -113,7 +113,7 @@ function checkUnmutedAutoplaySupport() {
 
 function checkMutedAutoplaySupport() {
   canAutoplay
-    .video({timeout: 500, muted: true})
+    .video({timeout: 800, muted: true})
     .then(function(response) {
         if(response.result === false) {
           console.log("// Muted autoplay is not allowed.");
@@ -159,10 +159,11 @@ function initPlayer() {
         // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
         adTagUrl:"https://video.unibots.in/clients/bongda/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
+        locale: "vn",
         contribAdsSettings: {
-          debug: false,
-          timeout: 8000,
-          prerollTimeout: 8000,
+          debug: true,
+          // timeout: 8000,
+          // prerollTimeout: 8000,
         },
         vastLoadTimeout: 2e4,
         adsRenderingSettings: {
@@ -180,7 +181,7 @@ function initPlayer() {
       );
 
 
-      ubPlayer.on('adsready',()=>{
+      ubPlayer.on('loadedmetadata',()=>{
           // console.log("ads ready");
           // showPlayer();
         showPlayer();

@@ -141,7 +141,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -155,6 +155,10 @@ function initPlayer() {
           debug: true
           // timeout: 8000,
           // prerollTimeout: 12000,
+        },
+        vastLoadTimeout: 2e4,
+        adsRenderingSettings: {
+          enablePreloading: true
         }
       };
       ubPlayer.ima(imaOptions);
@@ -169,8 +173,7 @@ function initPlayer() {
       );
 
       ubPlayer.on('loadedmetadata',()=>{
-          // console.log("ads ready");
-          setTimeout(showPlayer(), 2000);
+          showPlayer();
       });
 
       ubPlayer.on('readyforpreroll',()=>{
@@ -232,13 +235,13 @@ function initPlayer() {
       setLogo();
 
 
-      function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return  rect.bottom > 0 &&
-                rect.right > 0 &&
-                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-                rect.top < (window.innerHeight || document.documentElement.clientHeight);
-      }
+      // function isInViewport(el) {
+      //   const rect = el.getBoundingClientRect();
+      //   return  rect.bottom > 0 &&
+      //           rect.right > 0 &&
+      //           rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+      //           rect.top < (window.innerHeight || document.documentElement.clientHeight);
+      // }
       // if(!isMobile() && window.location.href != "https://docbao.vn/"){
       //     if(document.getElementById("unibots-video")){
       //       const currentPlayer = document.querySelector('#unibots-video');

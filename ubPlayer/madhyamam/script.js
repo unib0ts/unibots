@@ -128,8 +128,7 @@ function initPlayer() {
         loadingSpinner: false,
         bigPlayButton: false,
         controlBar: {
-          'liveDisplay': true,
-          'pictureInPictureToggle': false,
+            'pictureInPictureToggle': false,
           'fullscreenToggle': false
         }
       }
@@ -145,7 +144,7 @@ function initPlayer() {
         contribAdsSettings: {
           debug: true,
           timeout: 8000,
-          prerollTimeout: 8000,
+          prerollTimeout: 12000,
         },
         adsRenderingSettings: {
           enablePreloading: true
@@ -161,13 +160,7 @@ function initPlayer() {
           }.bind(ubPlayer)
       );
       
-      ubPlayer.on('ads-request', ()=>{
-        document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
-      });
-
-      ubPlayer.on('adsready',()=>{
-          // console.log("ads ready");
-          // showPlayer();
+      ubPlayer.on('loadedmetadata',()=>{
           showPlayer();
       }); 
 

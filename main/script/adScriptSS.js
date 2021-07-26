@@ -1416,9 +1416,9 @@ function mobileCheckHB() {
 
 hb_ran = false;
 // checkHBUnits();
-if(window.location.href == "https://m.sakshi.com/"){
+// if(window.location.href == "https://m.sakshi.com/"){
   addNewBotAdMobile();
-}
+// }
 // else{
   checkHBUnits();
 // }

@@ -122,7 +122,7 @@ function initPlayer() {
       var vjsOptions = {
         autoplay: false,
         muted: false,
-        fluid: isMobile() ? true : false,
+        // fluid: isMobile() ? true : false,
         width: isMobile() ? 320 : 400,
         height: isMobile() ? 180 : 225,
         loadingSpinner: false,

@@ -205,7 +205,7 @@ var adUnits = [];
        ]
     };
     adUnits.push(adUnits1);
-   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php' || boturl = 'https://phunusuckhoe.giadinhonline.vn/') {
+   if (boturl== 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php' || boturl == 'https://phunusuckhoe.giadinhonline.vn/') {
     if (document.getElementById('ub-home')){
       adUnits1 = {
          code: '/21957769615/phunusuckhoe_nb_336x280_mobile_home',

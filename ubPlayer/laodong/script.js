@@ -118,15 +118,15 @@ function initPlayer() {
   if(document.getElementById('unibots-video') && isMobile()){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+      document.getElementById("ubVideo").click();
 
       var vjsOptions = {
         autoplay: false,
         muted: false,
-        fluid: isMobile() ? true : false,
         width: isMobile() ? 320 : '',
         height: isMobile() ? 180 : '',
         loadingSpinner: false,
-        bigPlayButton: false,
+        // bigPlayButton: false,
         controlBar: {
           // 'liveDisplay': true,
           'pictureInPictureToggle': false,
@@ -135,7 +135,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/solo_trip.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -169,11 +169,11 @@ function initPlayer() {
           showPlayer();
       });
 
-      ubPlayer.on('readyforpreroll',()=>{
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-        // showPlayer();
-      });
+      // ubPlayer.on('readyforpreroll',()=>{
+      //   ubPlayer.muted(true);
+      //   ubPlayer.autoplay(true);
+      //   // showPlayer();
+      // });
 
       if (autoplayAllowed) {
         if (autoplayRequiresMute) {

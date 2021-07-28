@@ -1,3 +1,55 @@
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksBongdaplus.json';
+mybotBlockedClientName = 'bongdaplus';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          mybotVideoAd();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      mybotVideoAd();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    mybotVideoAd();
+  };
+  request.send();
+}
+else{
+  mybotVideoAd();
+}
+
+
+function mybotVideoAd() {
+  var cachebuster = Math.round(new Date().getTime() / 1000);
+  url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" + cachebuster;
+  ub_vs = document.createElement("script");
+  ub_vs.src = url;
+  ub_vs.type = "text/javascript";
+  document.getElementsByTagName("head")[0].appendChild(ub_vs);
+}
+
 //load apstag.js library
 // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 //
@@ -151,15 +203,6 @@ s1.src =
     "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
 s1.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(s1);
-
-var cachebuster = Math.round(new Date().getTime() / 1000);
-url =
-    "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" +
-    cachebuster;
-ub_vs = document.createElement("script");
-ub_vs.src = url;
-ub_vs.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
 var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;

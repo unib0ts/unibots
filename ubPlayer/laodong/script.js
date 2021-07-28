@@ -49,7 +49,48 @@ function listen_scripts(){
   },500)
 }
 
-listen_scripts();
+//url blocked for playerlaod
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksLaodong.json';
+mybotBlockedClientName = 'laodong';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          listen_scripts();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      listen_scripts();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    listen_scripts();
+  };
+  request.send();
+}
+else{
+  listen_scripts();
+}
 
 
 let ubIma = document.createElement("script");
@@ -241,7 +282,7 @@ function initPlayer() {
       //       let currentPlayer = document.querySelector('#unibots-video');
       //       window.addEventListener('scroll', function () {
       //         var targetDiv = document.getElementById("ubVideo");
-            
+
       //         if(isInViewport(currentPlayer)){
       //               if(targetDiv.classList.contains("ubsticky")){
       //                 targetDiv.classList.remove("ubsticky");

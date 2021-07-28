@@ -5,8 +5,8 @@ function isMobile() {
 };
 
 function loadDynamicStyles(url){
-  var link = document.createElement('link'); 
-  link.rel = 'stylesheet'; 
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
   link.type = 'text/css';
   link.href = url;
   document.getElementsByTagName('HEAD')[0].appendChild(link);
@@ -43,13 +43,54 @@ function listen_scripts(){
     if(!flag){
       console.log('all loaded');
       console.log(scripts);
-      clearInterval(ub_interval); 
+      clearInterval(ub_interval);
       checkUnmutedAutoplaySupport();
     }
   },500)
 }
 
-listen_scripts();
+//url blocked for playerlaod
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksDanviet.json';
+mybotBlockedClientName = 'danviet';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          listen_scripts();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      listen_scripts();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    listen_scripts();
+  };
+  request.send();
+}
+else{
+  listen_scripts();
+}
 
 
 let ubIma = document.createElement("script");
@@ -57,7 +98,7 @@ ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
 document.getElementsByTagName("body")[0].appendChild(ubIma);
 
 ubIma.onload = function(){
-  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts); 
+  loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);
   let myPlayer = '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
 
   if(document.getElementById("unibots-video")){
@@ -142,7 +183,7 @@ function initPlayer() {
         }
       };
       ubPlayer.ima(imaOptions);
-      
+
       ubPlayer.on('adserror',function(err) {
             console.log('ads error!');
             console.log(err);
@@ -170,7 +211,7 @@ function initPlayer() {
         ubPlayer.muted(true);
         ubPlayer.autoplay(true);
       }
-      
+
       if (!autoplayAllowed) {
         ubPlayer.muted(true);
         ubPlayer.autoplay(true);
@@ -185,11 +226,11 @@ function initPlayer() {
         wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
       }
 
-      ubPlayer.on('play', () => { 
+      ubPlayer.on('play', () => {
         ubPlayer.volume(0.1);
         if(!ubPlayer.muted()){
           ubPlayer.muted(true);
-        }    
+        }
       });
 
       setLogo();
@@ -207,7 +248,7 @@ function initPlayer() {
           });
       videojs.registerComponent('CloseButton', CloseButton);
       ubPlayer.addChild('CloseButton');
-        
+
       //close player on video end.
       ubPlayer.on('timeupdate', function(){
           if(ubPlayer.currentTime() == ubPlayer.duration()){
@@ -265,4 +306,5 @@ function setLogo(){
   i.classList.add = "ubp_logo";
   i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
   ubPlayer.el_.appendChild(i);
-}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;left:10px;width:320px!important;z-index:999999999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:320px!important;height:180px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important;z-index:2147483647!important}#unibots-video{margin:30px 0}#unibots-video iframe{min-height:auto}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{right:10px!important;left:auto!important;bottom:150px;width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+}
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;left:10px;width:320px!important;z-index:999999999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:320px!important;height:180px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important;z-index:2147483647!important}#unibots-video{margin:30px 0}#unibots-video iframe{min-height:auto}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{right:10px!important;left:auto!important;bottom:150px;width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

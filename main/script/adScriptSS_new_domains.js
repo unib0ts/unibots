@@ -313,7 +313,7 @@ if(typeof customConfigObjectA === 'undefined'){
     });
     }
 
-    function refreshBid(ub_slot) {
+    function refreshBidTemp1(ub_slot) {
       ubpbjs.que.push(function() {
       ubpbjs.requestBids({
        timeout: PREBID_TIMEOUT,
@@ -338,7 +338,7 @@ if(typeof customConfigObjectA === 'undefined'){
       if(ub_ad1RefreshFlag != 1){
         setInterval(function() {
           ub_ad1RefreshFlag = 1;
-          refreshBid(ub_slot1);
+          refreshBidTemp1(ub_slot1);
         }, REFRESH_TIMEOUT);
       }
     }
@@ -373,7 +373,7 @@ if(typeof customConfigObjectA === 'undefined'){
         });
     }
 
-    function refreshBid(ub_slot) {
+    function refreshBidTemp2(ub_slot) {
       ubpbjs.que.push(function() {
     	  ubpbjs.requestBids({
     		  timeout: PREBID_TIMEOUT,
@@ -398,7 +398,7 @@ if(typeof customConfigObjectA === 'undefined'){
         if(ub_ad1RefreshFlag != 1){
           setInterval(function() {
             ub_ad1RefreshFlag = 1;
-            refreshBid(ub_slot2);
+            refreshBidTemp2(ub_slot2);
           }, REFRESH_TIMEOUT);
         }
     	 }
@@ -1022,7 +1022,7 @@ if(typeof customConfigObjectA === 'undefined'){
     }, FAILSAFE_TIMEOUT);
   }
   function callFullHBAds(adCode, ub_slot){
-    fillRefreshMap();
+    // fillRefreshMap();
     ubpbjs.que.push(function(){
       ubpbjs.requestBids({
         timeout: PREBID_TIMEOUT,
@@ -1035,10 +1035,10 @@ if(typeof customConfigObjectA === 'undefined'){
                 ubpbjs.setTargetingForGPTAsync();
                 // requestManager.prebid = true;
                 // biddersBack();
-                googletag.cmd.push(function() {
-                    googletag.pubads().refresh(mapping_full_hb.slots);
-                    googletag.pubads().refresh(mappings_extra_units.slots);
-                });
+                // googletag.cmd.push(function() {
+                    googletag.pubads().refresh(ub_slot);
+                    // googletag.pubads().refresh(mappings_extra_units.slots);
+                // });
                 // googletag.pubads().refresh(ub_slot);
             });
           });
@@ -1065,7 +1065,7 @@ if(typeof customConfigObjectA === 'undefined'){
       googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([mapping_full_hb.slots]);
+              googletag.pubads().refresh(mapping_full_hb.slots);
           });
       });
   }
@@ -1112,35 +1112,48 @@ if(typeof customConfigObjectA === 'undefined'){
   checkHBUnits();
 
   function fillRefreshMap(){
-    googletag.cmd.push(function() {
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if(mappings_final_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()}).length == 0){
-            mappings_final_refresh.adSlots.push(event.slot);
-            mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
-          }
-        });
+    googletag.cmd.push(function () {
+        googletag
+            .pubads()
+            .addEventListener("slotRenderEnded", function (event) {
+                var timer = REFRESH_TIMEOUT / 1000;
+                var el = document.getElementById(
+                    event.slot.getSlotId().getDomId()
+                );
+                if (el != null) {
+                    var temp = setInterval(function () {
+                        if (isInViewSpace(el)) {
+                            timer -= 1;
+                            if (timer <= 0) {
+                                refreshBid(
+                                    [event.slot],
+                                    [event.slot.getSlotId().getAdUnitPath()]
+                                );
+                                clearInterval(temp);
+                            }
+                        }
+                    }, 1000);
+                }
+            });
     });
   }
 
-  // setInterval(function() {
-  //   refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-  // }, REFRESH_TIMEOUT);
+  function refreshBid(ub_slot, adCode) {
+      ubpbjs.que.push(function () {
+          ubpbjs.requestBids({
+              timeout: PREBID_TIMEOUT,
+              adUnitCodes: adCode,
+              adUnits: adUnits_full_hb,
+              bidsBackHandler: function () {
+                  googletag.cmd.push(function () {
+                      ubpbjs.que.push(function () {
+                          ubpbjs.setTargetingForGPTAsync();
+                          googletag.pubads().refresh(ub_slot);
+                      });
+                  });
+              },
+          });
+      });
+  }
 
-
-  // function refreshBid(ub_slot, adCode) {
-  //   ubpbjs.que.push(function() {
-  //     ubpbjs.requestBids({
-  //       timeout: PREBID_TIMEOUT,
-  //       adUnitCodes: adCode,
-  //       bidsBackHandler: function() {
-  //         googletag.cmd.push(function() {
-  //           ubpbjs.que.push(function() {
-  //               ubpbjs.setTargetingForGPTAsync();
-  //               googletag.pubads().refresh(ub_slot);
-  //           });
-  //         });
-  //       }
-  //     });
-  //   });
-  // }
 }

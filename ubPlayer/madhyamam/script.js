@@ -138,7 +138,7 @@ function initPlayer() {
         bigPlayButton: false,
         controlBar: {
             'pictureInPictureToggle': false,
-          'fullscreenToggle': false
+            'fullscreenToggle': false
         }
       }
       
@@ -152,9 +152,10 @@ function initPlayer() {
         disableCustomPlaybackForIOS10Plus: true,
         contribAdsSettings: {
           debug: true,
-          timeout: 8000,
-          prerollTimeout: 12000,
+          // timeout: 8000,
+          // prerollTimeout: 12000,
         },
+        vastLoadTimeout: 2e4,
         adsRenderingSettings: {
           enablePreloading: true
         }
@@ -172,41 +173,6 @@ function initPlayer() {
       ubPlayer.on('loadedmetadata',()=>{
           showPlayer();
       }); 
-
-      ubPlayer.on('readyforpreroll',()=>{
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-        // showPlayer();
-      });
-
-      if (autoplayAllowed) {
-        if (autoplayRequiresMute) {
-          ubPlayer.muted(true);
-        }
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-      }
-      
-      if (!autoplayAllowed) {
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-
-        if (navigator.userAgent.match(/iPhone/i) ||
-            navigator.userAgent.match(/iPad/i) ||
-            navigator.userAgent.match(/Android/i)) {
-          startEvent = 'touchend';
-        }
-
-        wrapperDiv = document.getElementById('content_video');
-        wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
-      }
-
-      ubPlayer.on('play', () => { 
-        ubPlayer.volume(0.1);
-        if(!ubPlayer.muted()){
-          ubPlayer.muted(true);
-        }    
-      });
 
       var button = videojs.getComponent('CloseButton');
       var CloseButton = videojs.extend(button, {
@@ -243,6 +209,37 @@ function initPlayer() {
           });
       videojs.registerComponent('ubpButton', SbButton);
       ubPlayer.addChild('ubpButton');
+
+      if (autoplayAllowed) {
+        if (autoplayRequiresMute) {
+          ubPlayer.muted(true);
+        }
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+      }
+      
+      if (!autoplayAllowed) {
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+
+        if (navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/Android/i)) {
+          startEvent = 'touchend';
+        }
+
+        wrapperDiv = document.getElementById('content_video');
+        wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
+      }
+
+      ubPlayer.on('play', () => { 
+        ubPlayer.volume(0.1);
+        if(!ubPlayer.muted()){
+          ubPlayer.muted(true);
+        }    
+      });
+
+      
 
 
       setLogo();  
@@ -282,6 +279,9 @@ function initAdDisplayContainer() {
     ubPlayer.ima.initializeAdDisplayContainer();
     wrapperDiv.removeEventListener(startEvent, initAdDisplayContainer);
 }
+
+var startEvent = 'click';
+
 function showPlayer(){
   setTimeout(()=>{
   document.querySelector("#ubVideo").classList.remove("ub-unloaded");

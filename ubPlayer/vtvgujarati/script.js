@@ -135,14 +135,13 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/solo_trip.mp4"});
 
       var imaOptions = {
         id: "content_video",
         // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
         adTagUrl:"https://video.unibots.in/clients/examdays/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
-        locale: "en",
         contribAdsSettings: {
           debug: false,
           // timeout: 8000,

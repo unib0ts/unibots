@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 ubIma.onload = function(){
   
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>' : '<div id="ubVideo" class="ubsticky ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true1" preload="auto"></video></div>' : '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   
   if(document.getElementById('unibots-video')){
     document.getElementById('unibots-video').innerHTML= myPlayer;
@@ -77,6 +77,7 @@ var autoplayAllowed = false;
 var autoplayRequiresMute = false;
 var ubPlayer;
 var wrapperDiv;
+var Inread_view = 1;
 
 function checkUnmutedAutoplaySupport() {
   canAutoplay
@@ -111,6 +112,14 @@ function checkMutedAutoplaySupport() {
     })
 }
 
+var ubPlayer_src = [
+        "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/madhyamam/madhyamam_2.mp4",
+        "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/madhyamam/madhyamam_3.mp4",
+        "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/madhyamam/madhyamam_4.mp4"
+];
+var src_index = Math.floor(Math.random()*(2))+1;
+// console.log(src_index,ubPlayer_src[src_index]);
+
 function initPlayer() {
   
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -132,9 +141,9 @@ function initPlayer() {
           'fullscreenToggle': false
         }
       }
-
+      
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/madhyamam.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: ubPlayer_src[src_index]});
 
       var imaOptions = {
         id: "content_video",
@@ -237,9 +246,8 @@ function initPlayer() {
 
 
       setLogo();  
-
+      
       if(!isMobile()){
-          setTimeout(()=>{
               function isInViewport(el) {
                 const rect = el.getBoundingClientRect();
                 return  rect.bottom > 0 &&
@@ -253,21 +261,19 @@ function initPlayer() {
                 var targetDiv = document.getElementById("ubVideo");
 
                 if(isInViewport(currentPlayer)){
+                  Inread_view++;
                   if(targetDiv.classList.contains("ubsticky")){
                     targetDiv.classList.remove("ubsticky");
-                    
                   }
                 }else{
                   // console.log("out view");
-                  // console.log(targetDiv.classList.contains("ubsticky"));
-                  if(!targetDiv.classList.contains("ubsticky")){
+                  if(!targetDiv.classList.contains("ubsticky") && Inread_view > 1){
                     targetDiv.classList.add("ubsticky");
                   }
                 }
               // }, {
               //     passive: true
               }); 
-          }, 1500);
       }
     }
 }

@@ -133,8 +133,8 @@ function initPlayer() {
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
   if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-mobile') || document.getElementById('unibots-video-homePC')){
-      var video = document.getElementById('content_video');
-      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+      // var video = document.getElementById('content_video');
+      // videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
       var vjsOptions = {
         autoplay: false,

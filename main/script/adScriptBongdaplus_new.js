@@ -21,26 +21,26 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
           return false;
         }
         else{
-          mybotVideoAd();
+          ubadScript();
         }
       }
     }
     else {
       console.log('Block Check Request failed');
-      mybotVideoAd();
+      ubadScript();
     }
   };
   request.onerror = function() {
     console.log('Request failed');
-    mybotVideoAd();
+    ubadScript();
   };
   request.send();
 }
 else{
-  mybotVideoAd();
+  ubadScript();
 }
 
-function mybotVideoAd() {
+function ubadScript() {
   var cachebuster = Math.round(new Date().getTime() / 1000);
   url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" + cachebuster;
   ub_vs = document.createElement("script");
@@ -48,6 +48,8 @@ function mybotVideoAd() {
   ub_vs.type = "text/javascript";
   document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
+  checkHBUnits();
+}
 
   //load apstag.js library
   // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
@@ -1537,4 +1539,3 @@ function mybotVideoAd() {
           oldScript.parentNode.replaceChild(newScript, oldScript);
       }
   }
-}

@@ -21,26 +21,26 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
           return false;
         }
         else{
-          mybotVideoAd();
+          ubadScript();
         }
       }
     }
     else {
       console.log('Block Check Request failed');
-      mybotVideoAd();
+      ubadScript();
     }
   };
   request.onerror = function() {
     console.log('Request failed');
-    mybotVideoAd();
+    ubadScript();
   };
   request.send();
 }
 else{
-  mybotVideoAd();
+  ubadScript();
 }
 
-function mybotVideoAd() {
+function ubadScript() {
   var cachebuster = Math.round(new Date().getTime() / 1000);
   url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb=" + cachebuster;
   ub_vs = document.createElement("script");
@@ -48,6 +48,8 @@ function mybotVideoAd() {
   ub_vs.type = "text/javascript";
   document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
+  checkHBUnits();
+}
 
   //load apstag.js library
   // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
@@ -119,7 +121,7 @@ function mybotVideoAd() {
     // var ad_scrpt2 = document.createElement('noscript');
     // ad_scrpt2.innerText= mybotadscrptChild;
     // document.getElementsByTagName('body')[0].appendChild(ad_scrpt2);
-    // if (document.querySelector('.header')) {
+    if (document.querySelector('.header')) {
       z= document.createElement('div');
       z.id = 'ub-left-ad';
       z.className = 'ub-left-ad';
@@ -145,7 +147,7 @@ function mybotVideoAd() {
        child.appendChild(z);
        document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1615189532474-0">';
       }
-    // }
+    }
 
     // if(!(window.location.href == "https://docbao.vn/")){
     //   z1= document.createElement('div');
@@ -1158,7 +1160,7 @@ function mybotVideoAd() {
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
   }
-  checkHBUnits();
+  // checkHBUnits();
 
   // function callAPStagBids(){
   //   apstag.fetchBids({
@@ -1396,5 +1398,4 @@ function mybotVideoAd() {
         };
         oldScript.parentNode.replaceChild(newScript, oldScript);
     }
-}
 }

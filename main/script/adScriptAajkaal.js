@@ -307,6 +307,25 @@ function mainHbRun(){
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        });
+       ubpbjs.setBidderConfig({
+        bidders: ['emxdigital'],   // can list more bidders here if they share the same config
+        config: {
+           schain: {
+             validation: "relaxed",
+             config: {
+               ver:"1.0",
+               complete: 1,
+               nodes: [
+                 {
+                   asi:"EMXDGT.com",
+                   sid:"1504",
+                   hp:1
+                 }
+               ]
+             }
+           }
+         }
+       });
        ubpbjs.requestBids({
            bidsBackHandler: initAdserver,
            timeout: PREBID_TIMEOUT,

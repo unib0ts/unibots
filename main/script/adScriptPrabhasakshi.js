@@ -9,8 +9,20 @@ var requestManager = {
 
 //initialize the apstag.js library on the page to allow bidding
 apstag.init({
+
      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-     adServer: 'googletag'
+     adServer: 'googletag',
+     schain: {
+          complete: 1,
+          ver:'1.0',
+          nodes: [
+            {
+               asi:'aps.amazon.com',
+               sid:'8282b9c6-324d-4939-b1ea-958d67a9e637', // Same seller_id for the publisher in sellers.json
+               hp:1
+             }
+          ],
+     }
 });
 apSlots = []
 

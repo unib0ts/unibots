@@ -1,3 +1,45 @@
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDantri.json';
+mybotBlockedClientName = 'dantri';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          mybotubScript();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      mybotubScript();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    mybotubScript();
+  };
+  request.send();
+}
+else{
+  mybotubScript();
+}
+
   //load apstag.js library
   // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
   //
@@ -22,17 +64,6 @@
   document.getElementsByTagName('head')[0].appendChild(ub_ga);
   document.getElementById('gabywa').innerHTML=mybotgabywa;
   loadAd('gabywa');
-
-var s0 = document.createElement('script');
-s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-s0.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(s0);
-
-var s1 = document.createElement('script');
-s1.async = "async";
-s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-s1.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(s1);
 
 var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:999}.ub-sticky-ad{width:100%;z-index:999;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1624268341453-0 iframe {border: unset !important;vertical-align: unset !important;}';
 
@@ -146,70 +177,6 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
-// function mainHbRun(){
-  ubpbjs.que.push(function() {
-    ubpbjs.addAdUnits(adUnits);
-    ubpbjs.aliasBidder('criteo','criteointl');
-    ubpbjs.bidderSettings = {
-      'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-      'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-      'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-      'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-      'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-      'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-      'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-      'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-      //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-
-      '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-      'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
-    };
-    ubpbjs.setConfig({
-      priceGranularity: customConfigObjectA,
-      userSync: {
-          iframeEnabled: true,
-          syncsPerBidder: 999, // and no more than 3 syncs at a time
-          // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
-          filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-          // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
-          userIds: [{
-              name: "id5Id",
-              params: {
-                  partner: 438,            // change to the Partner Number you received from ID5
-              },
-              storage: {
-                  type: "cookie",
-                  name: "id5id.1st",       // create a cookie with this name
-                  expires: 90,             // cookie lasts for 90 days
-                  refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
-              }
-          }],
-          auctionDelay: 500},
-      debug: false,
-      useBidCache: true,
-      enableSendAllBids: false, // Default will be `true` as of 1.0
-      bidderSequence: 'random', // Default is random
-      publisherDomain: 'https://dantri.com.vn/',
-      bidderTimeout: PREBID_TIMEOUT+500,
-      //pubcid: {expInterval: },
-      //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
-     });
-    ubpbjs.requestBids({
-          bidsBackHandler: initAdserver,
-          timeout: PREBID_TIMEOUT,
-          // labels: [GEO_CODE],
-      });
-  });
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-// }
-
-
 var mappings = {
   slots: [],
   adCode: [],
@@ -229,6 +196,111 @@ var mappings = {
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
+
+
+
+function mybotubScript() {
+  var s0 = document.createElement('script');
+  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  var s1 = document.createElement('script');
+  s1.async = "async";
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s1);
+
+  // function mainHbRun(){
+    ubpbjs.que.push(function() {
+      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.aliasBidder('criteo','criteointl');
+      ubpbjs.bidderSettings = {
+        'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
+        'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
+        'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
+        'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+        'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+
+        '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+        'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+      };
+      ubpbjs.setConfig({
+        priceGranularity: customConfigObjectA,
+        userSync: {
+            iframeEnabled: true,
+            syncsPerBidder: 999, // and no more than 3 syncs at a time
+            // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+            filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+            // enableOverride: true // publisher will call `ubpbjs.triggerUserSyncs()'
+            userIds: [{
+                name: "id5Id",
+                params: {
+                    partner: 438,            // change to the Partner Number you received from ID5
+                },
+                storage: {
+                    type: "cookie",
+                    name: "id5id.1st",       // create a cookie with this name
+                    expires: 90,             // cookie lasts for 90 days
+                    refreshInSeconds: 8*3600 // refresh ID every 8 hours to ensure it is fresh
+                }
+            }],
+            auctionDelay: 500},
+        debug: false,
+        useBidCache: true,
+        enableSendAllBids: false, // Default will be `true` as of 1.0
+        bidderSequence: 'random', // Default is random
+        publisherDomain: 'https://dantri.com.vn/',
+        bidderTimeout: PREBID_TIMEOUT+500,
+        //pubcid: {expInterval: },
+        //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+       });
+      ubpbjs.requestBids({
+            bidsBackHandler: initAdserver,
+            timeout: PREBID_TIMEOUT,
+            // labels: [GEO_CODE],
+        });
+    });
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+  // }
+  if (mobileCheck()) {
+    mappings.slotNumbers.push(1);
+    mappings.adCode.push('/21928950349/dantri.com.vn_mb_anchor_320x50');
+    mappings.sizes.push(div_1_sizes);
+    mappings.adId.push('div-gpt-ad-1624268341453-0');
+    googletag.cmd.push(function() {
+      // callAPStagBids(); //Ap part
+      // callAPSAds(mappings.adCode, mappings.slots);
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot1) {
+          ub_checkAdRendered('div-gpt-ad-1624268341453-0', ub_slot1, ['/21928950349/dantri.com.vn_mb_anchor_320x50']);
+        }
+      });
+    });
+  }
+
+  if(typeof googletag.defineSlot === "function"){
+    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+    googlePush();
+  }
+  else{
+    googletag.cmd.push(function() {
+      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googlePush();
+    });
+  // }
+  }
+}
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
@@ -365,34 +437,6 @@ function googlePush(){
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
-}
-
-if (mobileCheck()) {
-  mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21928950349/dantri.com.vn_mb_anchor_320x50');
-  mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1624268341453-0');
-  googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1624268341453-0', ub_slot1, ['/21928950349/dantri.com.vn_mb_anchor_320x50']);
-      }
-    });
-  });
-}
-
-if(typeof googletag.defineSlot === "function"){
-  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-  googlePush();
-}
-else{
-  googletag.cmd.push(function() {
-    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-    googlePush();
-  });
-// }
 }
 
 // function callAPSAds(adCode, ub_slot){

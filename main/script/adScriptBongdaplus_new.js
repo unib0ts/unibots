@@ -1313,7 +1313,7 @@ function ubadScript() {
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
   }
-  checkHBUnits();
+  // checkHBUnits();
 
   // function callAPStagBids(){
   //   apstag.fetchBids({

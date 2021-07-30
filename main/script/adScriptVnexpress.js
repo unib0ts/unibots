@@ -1,5 +1,5 @@
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksVNE.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksVNE.json';
 mybotBlockedClientName = 'vnexpress';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){

@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 ubIma.onload = function(){
 
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);
-  let myPlayer = '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  let myPlayer = '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" controls="true" preload="auto"></video></div>';
 
 // (!isMobile() && window.location.href != "https://bongdaplus.vn/" && !document.getElementById('unibots-video') && !document.getElementById('unibots-video-mobile')){
   //   let z1= document.createElement('div');
@@ -133,8 +133,9 @@ function initPlayer() {
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
   if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-mobile') || document.getElementById('unibots-video-homePC')){
-      // var video = document.getElementById('content_video');
-      // videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+      var video = document.getElementById('content_video');
+      videojs.browser.IS_IOS ? video.setAttribute('playsinline', 'playsinline') : '';
+      video.setAttribute('webkit-playsinline', 'webkit-playsinline');
 
       var vjsOptions = {
         autoplay: false,

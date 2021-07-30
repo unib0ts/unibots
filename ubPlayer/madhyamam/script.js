@@ -152,8 +152,8 @@ function initPlayer() {
         disableCustomPlaybackForIOS10Plus: true,
         contribAdsSettings: {
           debug: true,
-          // timeout: 8000,
-          // prerollTimeout: 12000,
+          timeout: 8000,
+          prerollTimeout: 12000,
         },
         vastLoadTimeout: 2e4,
         adsRenderingSettings: {

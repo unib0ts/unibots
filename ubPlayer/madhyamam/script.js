@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(ubIma);
 ubIma.onload = function(){
   
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js", "vjs", post_scripts);  
-  let myPlayer = isMobile() ? '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true1" preload="auto"></video></div>' : '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+  let myPlayer = '<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
   
   if(document.getElementById('unibots-video')){
     document.getElementById('unibots-video').innerHTML= myPlayer;
@@ -134,7 +134,7 @@ function initPlayer() {
         // fluid:true,
         width: isMobile() ? 320 : 640,
         height: isMobile() ? 180 : 360,
-        loadingSpinner: false,
+        loadingSpinner: true,
         bigPlayButton: false,
         controlBar: {
             'pictureInPictureToggle': false,
@@ -172,9 +172,38 @@ function initPlayer() {
       
       ubPlayer.on('loadedmetadata',()=>{
           showPlayer();
-      }); 
+      });
 
-      var button = videojs.getComponent('CloseButton');
+      if (autoplayAllowed) {
+        if (autoplayRequiresMute) {
+          ubPlayer.muted(true);
+        }
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+      }
+      
+      if (!autoplayAllowed) {
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+
+        if (navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/Android/i)) {
+          startEvent = 'touchend';
+        }
+
+        wrapperDiv = document.getElementById('content_video');
+        wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
+      }
+
+      ubPlayer.on('play', () => { 
+        ubPlayer.volume(0.1);
+        if(!ubPlayer.muted()){
+          ubPlayer.muted(true);
+        }    
+      });
+
+       var button = videojs.getComponent('CloseButton');
       var CloseButton = videojs.extend(button, {
             constructor: function() {
               button.apply(this, arguments);
@@ -209,38 +238,6 @@ function initPlayer() {
           });
       videojs.registerComponent('ubpButton', SbButton);
       ubPlayer.addChild('ubpButton');
-
-      if (autoplayAllowed) {
-        if (autoplayRequiresMute) {
-          ubPlayer.muted(true);
-        }
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-      }
-      
-      if (!autoplayAllowed) {
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-
-        if (navigator.userAgent.match(/iPhone/i) ||
-            navigator.userAgent.match(/iPad/i) ||
-            navigator.userAgent.match(/Android/i)) {
-          startEvent = 'touchend';
-        }
-
-        wrapperDiv = document.getElementById('content_video');
-        wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
-      }
-
-      ubPlayer.on('play', () => { 
-        ubPlayer.volume(0.1);
-        if(!ubPlayer.muted()){
-          ubPlayer.muted(true);
-        }    
-      });
-
-      
-
 
       setLogo();  
       

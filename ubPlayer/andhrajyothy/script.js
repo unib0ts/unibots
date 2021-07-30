@@ -81,7 +81,7 @@ var post_scripts =()=>{
 
 var autoplayAllowed = false;
 var autoplayRequiresMute = false;
-var ubPlayer;
+var ubPlayer; var video;
 var wrapperDiv;
 
 function checkUnmutedAutoplaySupport() {
@@ -122,8 +122,8 @@ function initPlayer() {
   //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   //  var isMobile = true;
   if(document.getElementById('unibots-video')){
-      var video = document.getElementById('content_video');
-      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+      video = document.getElementById('content_video');
+      videojs.browser.IS_IOS ? video.setAttribute('playsinline', 'playsinline') : '';
 
       var vjsOptions = {
         autoplay: false,
@@ -146,8 +146,6 @@ function initPlayer() {
         // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
         adTagUrl:"https://video.unibots.in/clients/andhrajyothy/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
-        playerType: 'unibots-player',
-        autoPlayAdBreaks: true,
         contribAdsSettings: {
           debug: true,
           // timeout: 10000,
@@ -167,15 +165,9 @@ function initPlayer() {
       );
 
       ubPlayer.on('loadedmetadata',()=>{
-          console.log("ads ready");
-          setTimeout(showPlayer(), 2000);
+          // console.log("ads ready");
+          showPlayer();
       }); 
-
-      ubPlayer.on('readyforpreroll',()=>{
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
-        // showPlayer();
-      });
 
       if (autoplayAllowed) {
         if (autoplayRequiresMute) {

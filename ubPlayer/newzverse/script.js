@@ -125,7 +125,7 @@ function initPlayer() {
         // fluid:true,
         width: isMobile() ? 360 : 400,
         height: isMobile() ? 203 : 225,
-        loadingSpinner: false,
+        loadingSpinner: true,
         bigPlayButton: false,
         controlBar: {
           // 'liveDisplay': true,
@@ -135,7 +135,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/solo_trip.mp4"});
 
       var imaOptions = {
         id: "content_video",
@@ -143,10 +143,11 @@ function initPlayer() {
         adTagUrl:"https://video.unibots.in/clients/newzverse/ads.xml",
         disableCustomPlaybackForIOS10Plus: true,
         contribAdsSettings: {
-          debug: false,
-          timeout: 8000,
-          prerollTimeout: 8000,
+          debug: true,
+//           timeout: 8000,
+//           prerollTimeout: 12000,
         },
+        vastLoadTimeout: 2e4,
         adsRenderingSettings: {
           enablePreloading: true
         }
@@ -162,15 +163,12 @@ function initPlayer() {
       );
 
 
-      ubPlayer.on('adsready',()=>{
-          // console.log("ads ready");
-          // showPlayer();
+      ubPlayer.on('loadedmetadata',()=>{
         showPlayer();
       });
 
-      ubPlayer.on('readyforpreroll',()=>{
-        ubPlayer.muted(true);
-        ubPlayer.autoplay(true);
+      ubPlayer.on('adtimeout',()=>{
+        console.log("ads timout");
         // showPlayer();
       });
 

@@ -4,7 +4,7 @@ mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvid
 mybotBlockedClientName = 'newzverse';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname;
+  urlToCheck = window.location.host+window.location.pathname+window.location.search;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;
@@ -179,50 +179,6 @@ function ubPlayer_scripts() {
           }
         }
 
-<<<<<<< HEAD
-function initPlayer() {
-
-  //  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  //  var isMobile = true;
-  if(document.getElementById('unibots-video')){
-      var video = document.getElementById('content_video');
-      videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
-
-      var vjsOptions = {
-        autoplay: false,
-        muted: false,
-        // fluid:true,
-        width: isMobile() ? 360 : 400,
-        height: isMobile() ? 203 : 225,
-        loadingSpinner: true,
-        bigPlayButton: false,
-        controlBar: {
-          // 'liveDisplay': true,
-          'pictureInPictureToggle': false,
-          'fullscreenToggle': false
-        }
-      }
-
-      ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/solo_trip.mp4"});
-
-      var imaOptions = {
-        id: "content_video",
-        // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
-        adTagUrl:"https://video.unibots.in/clients/newzverse/ads.xml",
-        disableCustomPlaybackForIOS10Plus: true,
-        contribAdsSettings: {
-          debug: true,
-//           timeout: 8000,
-//           prerollTimeout: 12000,
-        },
-        vastLoadTimeout: 2e4,
-        adsRenderingSettings: {
-          enablePreloading: true
-        }
-      };
-      ubPlayer.ima(imaOptions);
-=======
         ubPlayer = videojs('content_video', vjsOptions);
         ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/solo_trip.mp4"});
 
@@ -250,26 +206,12 @@ function initPlayer() {
               showPlayer();
             }.bind(ubPlayer)
         );
->>>>>>> 5a34c1cc556549b39e0813a3ad48c8fd1c4d6b38
 
 
         ubPlayer.on('loadedmetadata',()=>{
           showPlayer();
         });
 
-<<<<<<< HEAD
-      ubPlayer.on('loadedmetadata',()=>{
-        showPlayer();
-      });
-
-      ubPlayer.on('adtimeout',()=>{
-        console.log("ads timout");
-        // showPlayer();
-      });
-
-      if (autoplayAllowed) {
-        if (autoplayRequiresMute) {
-=======
         ubPlayer.on('adtimeout',()=>{
           console.log("ads timout");
           // showPlayer();
@@ -279,7 +221,6 @@ function initPlayer() {
           if (autoplayRequiresMute) {
             ubPlayer.muted(true);
           }
->>>>>>> 5a34c1cc556549b39e0813a3ad48c8fd1c4d6b38
           ubPlayer.muted(true);
           ubPlayer.autoplay(true);
         }

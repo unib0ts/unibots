@@ -317,8 +317,9 @@ function mainHbRun(){
                complete: 1,
                nodes: [
                  {
-                   asi:"EMXDGT.com",
+                   asi:"emxdigital.com",
                    sid:"1504",
+                   rid: "73921627578122922433w1",
                    hp:1
                  }
                ]

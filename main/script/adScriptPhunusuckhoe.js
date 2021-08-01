@@ -431,86 +431,89 @@ function googlePush(){
 }
 
 // if(mobileCheck === 'function'){
- if (!mobileCheck()){
-   if (document.getElementById('article_Inview')){
-     mappings.slotNumbers.push(2);
-     mappings.adCode.push('/21957769615/phunusuckhoe_nb_300x250');
-     mappings.sizes.push(div_2_sizes);
-     mappings.adId.push('div-gpt-ad-1590396447843-0');
-     googletag.cmd.push(function() {
-       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-         if (event.slot === ub_slot2) {
-           ub_checkAdRendered('div-gpt-ad-1590396447843-0', ub_slot2, ['/21957769615/phunusuckhoe_nb_300x250']);
-         }
-       });
-     });
-
-     mappings.slotNumbers.push(3);
-     mappings.adCode.push('/21957769615/phunusuckhoe_nb_300x250_2');
-     mappings.sizes.push(div_5_sizes);
-     mappings.adId.push('div-gpt-ad-1591008999017-0');
-     googletag.cmd.push(function() {
-       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-         if (event.slot === ub_slot3) {
-           ub_checkAdRendered('div-gpt-ad-1591008999017-0', ub_slot3, ['/21957769615/phunusuckhoe_nb_300x250_2']);
-         }
-       });
-     });
-    }
-   // mappings.slotNumbers.push(5);
-   // mappings.adCode.push('/21957769615/phunusuckhoe_nb_320x100_desktop');
-   // mappings.sizes.push(div_3_sizes);
-   // mappings.adId.push('div-gpt-ad-1590395809874-0');
-   // googletag.cmd.push(function() {
-   //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-   //     if (event.slot === ub_slot3) {
-   //       ub_checkAdRendered('div-gpt-ad-1590395809874-0', ub_slot3, ['/21957769615/phunusuckhoe_nb_320x100_desktop']);
-   //     }
-   //   });
-   // });
- }
- else {
-   mappings.slotNumbers.push(1);
-   mappings.adCode.push('/21957769615/phunusuckhoe.vn_nb_320x50');
-   mappings.sizes.push(div_1_sizes);
-   mappings.adId.push('div-gpt-ad-1589865114606-0');
-   googletag.cmd.push(function() {
-     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-       if (event.slot === ub_slot1) {
-         ub_checkAdRendered('div-gpt-ad-1589865114606-0', ub_slot1, ['/21957769615/phunusuckhoe.vn_nb_320x50']);
-       }
-     });
-   });
-  if (boturl == 'https://phunusuckhoe.vn/' || boturl =='http://localhost/cric/newsbot/build_test.php' || boturl == 'https://phunusuckhoe.giadinhonline.vn/'){
-    if (document.getElementById('ub-home')){
-      mappings.slotNumbers.push(4);
-      mappings.adCode.push('/21957769615/phunusuckhoe_nb_336x280_mobile_home');
-      mappings.sizes.push(div_4_sizes);
-      mappings.adId.push('div-gpt-ad-1591007325662-0');
+if (window.location.hostname == "phunusuckhoe.vn") {}
+else {
+  if (!mobileCheck()){
+    if (document.getElementById('article_Inview')){
+      mappings.slotNumbers.push(2);
+      mappings.adCode.push('/21957769615/phunusuckhoe_nb_300x250');
+      mappings.sizes.push(div_2_sizes);
+      mappings.adId.push('div-gpt-ad-1590396447843-0');
       googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-          if (event.slot === ub_slot4) {
-            ub_checkAdRendered('div-gpt-ad-1591007325662-0', ub_slot4, ['/21957769615/phunusuckhoe_nb_336x280_mobile_home']);
+          if (event.slot === ub_slot2) {
+            ub_checkAdRendered('div-gpt-ad-1590396447843-0', ub_slot2, ['/21957769615/phunusuckhoe_nb_300x250']);
           }
         });
       });
-    }
-  }
 
-  if (document.getElementById('MB_article_Inview')){
-   mappings.slotNumbers.push(5);
-   mappings.adCode.push('/21957769615/phunusuckhoe.vn_hb_320x50_MB_article_inview');
-   mappings.sizes.push(div_6_sizes);
-   mappings.adId.push('div-gpt-ad-1605764533680-0');
-   googletag.cmd.push(function() {
-     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-       if (event.slot === ub_slot5) {
-         ub_checkAdRendered('div-gpt-ad-1605764533680-0', ub_slot5, ['/21957769615/phunusuckhoe.vn_hb_320x50_MB_article_inview']);
-       }
-     });
-   });
- }
- }
+      mappings.slotNumbers.push(3);
+      mappings.adCode.push('/21957769615/phunusuckhoe_nb_300x250_2');
+      mappings.sizes.push(div_5_sizes);
+      mappings.adId.push('div-gpt-ad-1591008999017-0');
+      googletag.cmd.push(function() {
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot3) {
+            ub_checkAdRendered('div-gpt-ad-1591008999017-0', ub_slot3, ['/21957769615/phunusuckhoe_nb_300x250_2']);
+          }
+        });
+      });
+     }
+    // mappings.slotNumbers.push(5);
+    // mappings.adCode.push('/21957769615/phunusuckhoe_nb_320x100_desktop');
+    // mappings.sizes.push(div_3_sizes);
+    // mappings.adId.push('div-gpt-ad-1590395809874-0');
+    // googletag.cmd.push(function() {
+    //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //     if (event.slot === ub_slot3) {
+    //       ub_checkAdRendered('div-gpt-ad-1590395809874-0', ub_slot3, ['/21957769615/phunusuckhoe_nb_320x100_desktop']);
+    //     }
+    //   });
+    // });
+  }
+  else {
+    mappings.slotNumbers.push(1);
+    mappings.adCode.push('/21957769615/phunusuckhoe.vn_nb_320x50');
+    mappings.sizes.push(div_1_sizes);
+    mappings.adId.push('div-gpt-ad-1589865114606-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot1) {
+          ub_checkAdRendered('div-gpt-ad-1589865114606-0', ub_slot1, ['/21957769615/phunusuckhoe.vn_nb_320x50']);
+        }
+      });
+    });
+   if (boturl =='http://localhost/cric/newsbot/build_test.php' || boturl == 'https://phunusuckhoe.giadinhonline.vn/'){
+     if (document.getElementById('ub-home')){
+       mappings.slotNumbers.push(4);
+       mappings.adCode.push('/21957769615/phunusuckhoe_nb_336x280_mobile_home');
+       mappings.sizes.push(div_4_sizes);
+       mappings.adId.push('div-gpt-ad-1591007325662-0');
+       googletag.cmd.push(function() {
+         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+           if (event.slot === ub_slot4) {
+             ub_checkAdRendered('div-gpt-ad-1591007325662-0', ub_slot4, ['/21957769615/phunusuckhoe_nb_336x280_mobile_home']);
+           }
+         });
+       });
+     }
+   }
+
+   if (document.getElementById('MB_article_Inview')){
+    mappings.slotNumbers.push(5);
+    mappings.adCode.push('/21957769615/phunusuckhoe.vn_hb_320x50_MB_article_inview');
+    mappings.sizes.push(div_6_sizes);
+    mappings.adId.push('div-gpt-ad-1605764533680-0');
+    googletag.cmd.push(function() {
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if (event.slot === ub_slot5) {
+          ub_checkAdRendered('div-gpt-ad-1605764533680-0', ub_slot5, ['/21957769615/phunusuckhoe.vn_hb_320x50_MB_article_inview']);
+        }
+      });
+    });
+  }
+  }
+}
 // }
 
 if(typeof googletag.defineSlot === "function"){

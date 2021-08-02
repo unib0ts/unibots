@@ -107,7 +107,7 @@ if(typeof customConfigObjectA === 'undefined'){
 
 
   if((1<= currentTS) && (currentTS<=10)){
-    if (document.getElementById('')) {
+    if (document.getElementById('ATD_Ad_IR_320x50')) {
             adUnits1 =
             {
                 code: '/21956916242/irctc.co.in_hb_320x50',
@@ -175,7 +175,7 @@ if(typeof customConfigObjectA === 'undefined'){
           }
   }
   else if ((11<= currentTS) && (currentTS<=20)) {
-    if (document.getElementById('')) {
+    if (document.getElementById('ATD_Ad_IR_320x50')) {
             adUnits1 =
             {
                 code: '/22153349741/irctc.co.in_hb_320x50',

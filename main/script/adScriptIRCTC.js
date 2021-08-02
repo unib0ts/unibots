@@ -243,7 +243,7 @@ if(typeof customConfigObjectA === 'undefined'){
           }
   }
   else {
-    if (document.getElementById('')) {
+    if (document.getElementById('ATD_Ad_IR_320x50')) {
             adUnits1 =
             {
                 code: '/22142075243/irctc.co.in_hb_320x50',

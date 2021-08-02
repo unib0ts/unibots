@@ -163,6 +163,51 @@ function ubPlayer_scripts() {
     var video = document.getElementById('content_video');
     videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 
+<<<<<<< HEAD
+      ubPlayer = videojs('content_video', vjsOptions);
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+
+      var imaOptions = {
+        id: "content_video",
+        // adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=',
+        adTagUrl:"https://video.unibots.in/clients/docbao/ads.xml",
+        disableCustomPlaybackForIOS10Plus: true,
+        disableAdControls: !1,
+        showControlsForJSAds: !1,
+        showCountdown: !1,
+        contribAdsSettings: {
+          debug: true
+          // timeout: 8000,
+          // prerollTimeout: 12000,
+        }, 
+        vastLoadTimeout: 2e4,
+      };
+      ubPlayer.ima(imaOptions);
+
+
+      ubPlayer.on('adserror',function(err) {
+            console.log('ads error!');
+            console.log(err);
+            // ubPlayer.ima.requestAds();
+            showPlayer();
+          }.bind(ubPlayer)
+      );
+
+      // ubPlayer.on('ads-request', ()=>{
+      //   document.querySelector('#ubVideo > #content_video > div.vjs-control-bar').style.zIndex = 11111
+      // });
+
+      ubPlayer.on('loadedmetadata',()=>{
+          // console.log("ads ready");
+          setTimeout(showPlayer(), 2000);
+      });
+
+      ubPlayer.on('readyforpreroll',()=>{
+        ubPlayer.muted(true);
+        ubPlayer.autoplay(true);
+        // showPlayer();
+      });
+=======
     var vjsOptions = {
       autoplay: false,
       muted: false,
@@ -170,6 +215,7 @@ function ubPlayer_scripts() {
       width: isMobile() ? 320 : 640,
       height: isMobile() ? 180 : 360,
     }
+>>>>>>> 2ff6d761652e49cc0f4836268351b08e012920c8
 
     ubPlayer = videojs('content_video', vjsOptions);
     ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/top_indian_sweet.mp4"});

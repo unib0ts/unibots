@@ -4,7 +4,7 @@ mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvid
 mybotBlockedClientName = 'laodong';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+  urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;
@@ -179,7 +179,7 @@ function ubPlayer_scripts() {
         }
 
         ubPlayer = videojs('content_video', vjsOptions);
-        ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/solo_trip.mp4"});
+        ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/yoga.mp4"});
 
         var imaOptions = {
           id: "content_video",

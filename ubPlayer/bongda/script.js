@@ -141,8 +141,8 @@ function initPlayer() {
         autoplay: false,
         muted: false,
         // fluid: isMobile() ? true : false,
-        width: isMobile() ? 344 : 400,
-        height: isMobile() ? 258 : 225,
+        width: isMobile() ? 400 : 400,
+        height: isMobile() ? 225 : 225,
         loadingSpinner: false,
         bigPlayButton: false,
         controlBar: {

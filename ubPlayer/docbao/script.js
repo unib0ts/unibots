@@ -142,7 +142,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/yoga.mp4"});
 
       if(window.location.href == "https://docbao.vn/xa-hoi/trua-315-them-68-ca-mac-covid-19-bac-giang-va-bac-ninh-co-52-ca-tintuc761701"){
           xml_path = "https://video.unibots.in/clients/docbao/ads_normal.xml";

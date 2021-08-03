@@ -153,7 +153,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/yoga.mp4"});
 
       var imaOptions = {
         id: "content_video",

@@ -141,8 +141,8 @@ function initPlayer() {
         autoplay: false,
         muted: false,
         // fluid: isMobile() ? true : false,
-        width: isMobile() ? 344 : 400,
-        height: isMobile() ? 258 : 225,
+        width: isMobile() ? 400 : 400,
+        height: isMobile() ? 225 : 225,
         loadingSpinner: false,
         bigPlayButton: false,
         controlBar: {
@@ -153,7 +153,7 @@ function initPlayer() {
       }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/unibots.mp4"});
+      ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/ubVids/video-library@latest/dist/yoga.mp4"});
 
       var imaOptions = {
         id: "content_video",

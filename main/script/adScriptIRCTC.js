@@ -2,7 +2,7 @@ if(typeof customConfigObjectA === 'undefined'){
   unibot1 = '<div id="div-gpt-ad-1601280866524-0">';
   unibot2 = '<div id="div-gpt-ad-1626241363418-0">';
   unibot3 = '<div id="div-gpt-ad-1602953590737-0">';
-  ub_banner_ad1 = '<div id="div-gpt-ad-1610698887085-0">';
+  ub_banner_ad1 = '<div id="div-gpt-ad-1613478315967-0">';
   ub_banner_ad2 = '<div id="div-gpt-ad-1613478315967-0">';
   ub_banner_ad3 = '<div id="div-gpt-ad-1613478315967-0">';
   // ub_sticky_ad = '<div id="div-gpt-ad-1610698846439-0">';
@@ -143,7 +143,7 @@ if(typeof customConfigObjectA === 'undefined'){
     if (document.getElementById('div-gpt-ad-1613413260012-0')) {
               adUnits1 =
               {
-                  code: '/22140546871/irctc.co.in_cb_300x250',
+                  code: '/22142075243/irctc.co.in_cb_300x250_1',
                   mediaTypes: {
                       banner: {
                           sizes: div_2_sizes
@@ -622,15 +622,15 @@ if(typeof customConfigObjectA === 'undefined'){
       // apSlots.push(apSlotTemp);
 
       mappings.slotNumbers.push(4);
-      mappings.adCode.push('/22140546871/irctc.co.in_cb_300x250');
+      mappings.adCode.push('/22142075243/irctc.co.in_cb_300x250_1');
       mappings.sizes.push(div_2_sizes);
-      mappings.adId.push('div-gpt-ad-1610698887085-0');
+      mappings.adId.push('div-gpt-ad-1613478315967-0');
       googletag.cmd.push(function() {
         // callAPStagBids(); //Ap part
         // callAPSAds(mappings.adCode, mappings.slots);
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot4) {
-            ub_checkAdRendered('div-gpt-ad-1610698887085-0', ub_slot4, ['/22140546871/irctc.co.in_cb_300x250']);
+            ub_checkAdRendered('div-gpt-ad-1613478315967-0', ub_slot4, ['/22142075243/irctc.co.in_cb_300x250_1']);
           }
         });
       });

@@ -171,7 +171,7 @@ function initPlayer() {
         ubPlayer = videojs("content_video", vjsOptions);
         ubPlayer.src({
             type: "video/mp4",
-            src: "https://unibots.b-cdn.net/yoga.mp4",
+            src: "https://video-library.s3.filebase.com/yoga.mp4",
         });
 
         if (

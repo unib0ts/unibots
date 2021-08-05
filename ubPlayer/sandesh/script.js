@@ -160,7 +160,7 @@ let video_ub = () => {
         ubPlayer = videojs("content_video", vjsOptions);
         ubPlayer.src({
             type: "video/mp4",
-            src: "https://unibots.b-cdn.net/top_indian_sweet.mp4",
+            src: "https://video-library.s3.filebase.com/top_indian_sweet.mp4",
         });
         ubPlayer.responsive(true);
 

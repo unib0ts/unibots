@@ -139,9 +139,9 @@ function checkMutedAutoplaySupport() {
 }
 
 var ubPlayer_src = [
-    "https://video-library.s3.filebase.com/madhyamam_2.mp4",
-    "https://video-library.s3.filebase.com/madhyamam_3.mp4",
-    "https://video-library.s3.filebase.com/madhyamam_4.mp4",
+    "https://cdn.unibots.in/madhyamam_2.mp4",
+    "https://cdn.unibots.in/madhyamam_3.mp4",
+    "https://cdn.unibots.in/madhyamam_4.mp4",
 ];
 var src_index = Math.floor(Math.random() * 2) + 1;
 // console.log(src_index,ubPlayer_src[src_index]);

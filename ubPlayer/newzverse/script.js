@@ -218,7 +218,7 @@ function ubPlayer_scripts() {
             ubPlayer = videojs("content_video", vjsOptions);
             ubPlayer.src({
                 type: "video/mp4",
-                src: "https://video-library.s3.filebase.com/solo_trip.mp4",
+                src: "https://cdn.unibots.in/solo_trip.mp4",
             });
 
             var imaOptions = {

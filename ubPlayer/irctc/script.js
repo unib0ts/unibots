@@ -161,7 +161,7 @@ let video_ub = () => {
         ubPlayer = videojs("content_video", vjsOptions);
         ubPlayer.src({
             type: "video/mp4",
-            src: "https://video-library.s3.filebase.com/irctc.mp4",
+            src: "https://cdn.unibots.in/irctc.mp4",
         });
         ubPlayer.responsive(true);
 

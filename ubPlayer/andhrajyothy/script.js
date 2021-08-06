@@ -222,7 +222,7 @@ function ubPlayer_scripts() {
             ubPlayer = videojs("content_video", vjsOptions);
             ubPlayer.src({
                 type: "video/mp4",
-                src: "https://video-library.s3.filebase.com/allegations_on_ap_financial_situation.mp4",
+                src: "https://cdn.unibots.in/allegations_on_ap_financial_situation.mp4",
             });
 
             var imaOptions = {

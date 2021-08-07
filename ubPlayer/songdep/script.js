@@ -161,7 +161,7 @@ function initPlayer() {
         ubPlayer = videojs("content_video", vjsOptions);
         ubPlayer.src({
             type: "video/mp4",
-            src: "https://unibots.b-cdn.net/top_indian_sweet.mp4",
+            src: "https://cdn.unibots.in/top_indian_sweet.mp4",
         });
 
         var imaOptions = {

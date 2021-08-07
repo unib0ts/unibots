@@ -170,7 +170,7 @@ function ubadScript() {
           x1.appendChild(z1);
       // }
 
-    if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2))){
+    if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
       z2 = document.createElement("div");
       z2.id = "ub-popup-ad-container";
       z2.className = "ub-popup-ad-container";
@@ -256,7 +256,7 @@ function ubadScript() {
   ];
 
   if (mobileCheck()) {
-    if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2))){
+    if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
       adUnits1 = {
           code: "/22140546871/bongdaplus.vn_popup_fluid_336x280",
           mediaTypes: {
@@ -1142,7 +1142,7 @@ function ubadScript() {
 
   function checkHBUnits() {
       if (mobileCheck()) {
-        if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2))){
+        if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
           addNewsBotAd();
         }
       }

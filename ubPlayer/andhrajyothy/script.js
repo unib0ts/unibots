@@ -156,7 +156,8 @@ function initPlayer() {
       }
 
       ts = + new Date();
-      let desc_url = encodeURIComponent(window.location.href);
+      // let desc_url = encodeURIComponent(window.location.href);
+      let desc_url = "https%3A%2F%2Fandhrajyothy.com";
 
       let adsArray = [
         {

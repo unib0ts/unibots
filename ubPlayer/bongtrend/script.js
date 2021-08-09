@@ -1,7 +1,7 @@
 //url blocked for playerlaod
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl =
-    "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksBongtrend.json";
+    "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksBongtrend.json";
 mybotBlockedClientName = "bongtrend";
 
 if (

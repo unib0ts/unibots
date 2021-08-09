@@ -18,7 +18,7 @@ loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.
 
 
 function loadDynamicScript(url, tag, callback) {
-  let s1 = document.createElement("script");
+  var s1 = document.createElement("script");
   s1.setAttribute("src", url);
   document.getElementsByTagName('body')[0].appendChild(s1);
   s1.onload = function () {
@@ -53,7 +53,7 @@ function listen_scripts() {
 listen_scripts();
 
 
-let ubIma = document.createElement("script");
+var ubIma = document.createElement("script");
 ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
 document.getElementsByTagName("body")[0].appendChild(ubIma);
 
@@ -75,7 +75,7 @@ ubIma.onload = function () {
   // document.querySelector("#ubVideo").classList.add("ub-unloaded");
 };
 
-let post_scripts = () => {
+var post_scripts = () => {
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.js", "vjs_ads");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.js", "vjs_ima");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/can-autoplay@3.0.0/build/can-autoplay.min.js", "can-autoplay");
@@ -86,10 +86,10 @@ var autoplayRequiresMute = false;
 var ubPlayer;
 var wrapperDiv;
 var xml_path;
-let nearViewportFlag = false;
-let viewportfirstFlag = false;
-let checkFiftyViewportOne = false;
-let checkFiftyViewportTwo = false;
+var nearViewportFlag = false;
+var viewportfirstFlag = false;
+var checkFiftyViewportOne = false;
+var checkFiftyViewportTwo = false;
 
 function checkUnmutedAutoplaySupport() {
   canAutoplay
@@ -157,9 +157,9 @@ function initPlayer() {
 
       ts = + new Date();
       // let desc_url = encodeURIComponent(window.location.href);
-      let desc_url = "https%3A%2F%2Fandhrajyothy.com";
+      var desc_url = "https%3A%2F%2Fandhrajyothy.com";
 
-      let adsArray = [
+      var adsArray = [
         {
           ads: [
             'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
@@ -306,18 +306,18 @@ function initPlayer() {
         }
       ];
 
-      let makePrerollRequestNew = (index, singleAdStructure = false) => {
+      var makePrerollRequestNew = (index, singleAdStructure = false) => {
           return adsArray[index]["ads"][0]
       }
 
       
-      let ubPlayer_src = [
+      var ubPlayer_src = [
           "https://cdn.unibots.in/abn/cgjg.mp4",
           "https://cdn.unibots.in/abn/changes_in_ap_bjp.mp4",
           "https://cdn.unibots.in/abn/debut.mp4",
           "https://cdn.unibots.in/abn/forest_officer_vs_potu_rangarao.mp4"
       ];
-      let src_index = Math.floor(Math.random() * 3) + 1;
+      var src_index = Math.floor(Math.random() * 3) + 1;
 
 
       ubPlayer = videojs('content_video', vjsOptions);

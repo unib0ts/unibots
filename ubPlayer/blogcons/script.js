@@ -149,7 +149,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -157,7 +157,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -165,7 +165,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -181,7 +181,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -189,7 +189,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -197,7 +197,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 20,
@@ -205,7 +205,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -213,7 +213,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=blogcons.com_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=blogcons.com_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&sdmax=18000000&adsafe=low&hl=en',
           ],
           type: 'preroll',
           delay: 15,
@@ -221,7 +221,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -229,7 +229,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -245,7 +245,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=blogcons.com_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=blogcons.com_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&sdmax=18000000&adsafe=low&hl=en',
           ],
           type: 'preroll',
           delay: 30,
@@ -261,7 +261,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -269,7 +269,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -277,7 +277,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpta_preroll&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -285,7 +285,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -315,7 +315,7 @@ function initPlayer() {
 
       var imaOptions = {
           id: "content_video",
-          adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+          adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/blogcons.com_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=256x144%7C384x216%7C400x225%7C640x360&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           disableCustomPlaybackForIOS10Plus: true,
           contribAdsSettings: {
               debug: true,
@@ -372,8 +372,8 @@ function initPlayer() {
       ubPlayer.ima(imaOptions);
       
       let newIMA = (adsIndex) => {
+        ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
           setTimeout(() => {
-              ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
               ubPlayer.ima.requestAds();
           }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
       }

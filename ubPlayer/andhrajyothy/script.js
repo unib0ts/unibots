@@ -186,7 +186,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=130000000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
           ],
           type: 'preroll',
           delay: 0,
@@ -226,7 +226,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=130000000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
           ],
           type: 'preroll',
           delay: 15,
@@ -250,7 +250,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=130000000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
           ],
           type: 'preroll',
           delay: 0,
@@ -258,7 +258,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=130000000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
           ],
           type: 'preroll',
           delay: 30,
@@ -266,7 +266,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=130000000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
           ],
           type: 'preroll',
           delay: 0,
@@ -315,9 +315,9 @@ function initPlayer() {
           "https://cdn.unibots.in/abn/cgjg.mp4",
           "https://cdn.unibots.in/abn/changes_in_ap_bjp.mp4",
           "https://cdn.unibots.in/abn/debut.mp4",
-          "https://cdn.unibots.in/abn/forest_officer_vs_potu_rangarao.mp4"
+          // "https://cdn.unibots.in/abn/forest_officer_vs_potu_rangarao.mp4"
       ];
-      var src_index = Math.floor(Math.random() * 3) + 1;
+      var src_index = Math.floor(Math.random() * 2) + 1;
 
 
       ubPlayer = videojs('content_video', vjsOptions);
@@ -358,8 +358,8 @@ function initPlayer() {
       ubPlayer.ima(imaOptions);
       
       let newIMA = (adsIndex) => {
+        ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
           setTimeout(() => {
-              ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
               ubPlayer.ima.requestAds();
           }, adsArray[adsIndex].delay * 1000);
       }

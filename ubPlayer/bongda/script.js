@@ -365,8 +365,8 @@ function initPlayer() {
       ubPlayer.ima(imaOptions);
       
       let newIMA = (adsIndex) => {
+        ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
           setTimeout(() => {
-              ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
               ubPlayer.ima.requestAds();
           }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
       }

@@ -1377,33 +1377,16 @@ function ubadScript() {
   }
 
   function fillRefreshMap() {
-      // googletag.cmd.push(function () {
-      //     googletag
-      //         .pubads()
-      //         .addEventListener("slotRenderEnded", function (event) {
-      //             if (
-      //                 mappings_final_refresh["adUnitNames"].filter(function (
-      //                     val
-      //                 ) {
-      //                     return val == event.slot.getSlotId().getAdUnitPath();
-      //                 }).length == 0
-      //             ) {
-      //                 mappings_final_refresh.adSlots.push(event.slot);
-      //                 mappings_final_refresh.adUnitNames.push(
-      //                     event.slot.getSlotId().getAdUnitPath()
-      //                 );
-      //             }
-      //         });
-      // });
       googletag.cmd.push(function () {
           googletag
               .pubads()
               .addEventListener("slotRenderEnded", function (event) {
                   var timer = REFRESH_TIMEOUT / 1000;
-                  var el = document.getElementById(
-                      event.slot.getSlotId().getDomId()
-                  );
-                  if (el != null) {
+                  var el = document.getElementById(event.slot.getSlotId().getDomId());
+                  var nodes = el.childNodes[0].childNodes;
+                  var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
+                  // console.log(ubifame);
+                  if (ubifame == 'iframe') {
                       var temp = setInterval(function () {
                           if (isInViewSpace(el)) {
                               timer -= 1;
@@ -1417,18 +1400,6 @@ function ubadScript() {
                           }
                       }, 1000);
                   }
-                  // if (
-                  //     mappings_final_refresh["adUnitNames"].filter(function (
-                  //         val
-                  //     ) {
-                  //         return val == event.slot.getSlotId().getAdUnitPath();
-                  //     }).length == 0
-                  // ) {
-                  //     mappings_final_refresh.adSlots.push(event.slot);
-                  //     mappings_final_refresh.adUnitNames.push(
-                  //         event.slot.getSlotId().getAdUnitPath()
-                  //     );
-                  // }
               });
       });
   }

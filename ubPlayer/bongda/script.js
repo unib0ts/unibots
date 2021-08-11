@@ -62,12 +62,36 @@ ubIma.onload = function () {
   loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js","vjs",post_scripts);
 
   var myPlayer ='<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
-  if(document.getElementById('unibots-video')){
-    document.getElementById('unibots-video').innerHTML= myPlayer;
-  }
-  if(document.getElementById('unibots-video-mobile')){
-    document.getElementById('unibots-video-mobile').innerHTML= myPlayer;
-  }
+
+  var ub_divsToCheck = {
+      "unibots-video": false,
+  };
+
+  var ub_interval = setInterval(() => {
+          flag = false;
+          checkFlag = false;
+          for (x in ub_divsToCheck) {
+              if (document.getElementById(x) !== null) {
+                  ub_divsToCheck[x] = true;
+                  checkFlag = true;
+              }
+          }
+          for (x in ub_divsToCheck) {
+              if (ub_divsToCheck[x] == false) {
+                  flag = true;
+              }
+          }
+          if (!flag && checkFlag) {
+            if(document.getElementById('unibots-video')){
+              document.getElementById('unibots-video').innerHTML= myPlayer;
+            }
+            if(document.getElementById('unibots-video-mobile')){
+              document.getElementById('unibots-video-mobile').innerHTML= myPlayer;
+            }
+              clearInterval(ub_interval);
+          }
+  }, 500);
+
 };
 
 var post_scripts = () => {
@@ -363,12 +387,12 @@ function initPlayer() {
           }
       };
       ubPlayer.ima(imaOptions);
-      
+
       let newIMA = (adsIndex) => {
         ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
           setTimeout(() => {
               ubPlayer.ima.requestAds();
-          }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
+          }, adsArray[adsIndex].delay * 200); //While using Defined ad dealy
       }
 
       ubPlayer.on('adserror', function (err) {
@@ -484,9 +508,9 @@ function initPlayer() {
           });
       // }
 
-          
-       //end of if statement   
-      } 
+
+       //end of if statement
+      }
 
       // window.addEventListener('scroll', function () {
       //     if(checkfifty(document.querySelector("#unibots-video"))){
@@ -495,7 +519,7 @@ function initPlayer() {
       //             checkFiftyViewportOne = true;
       //             checkFiftyViewportTwo = true;
       //             ubPlayer.autoplay(true);
-      //             ubPlayer.play();                  
+      //             ubPlayer.play();
       //             if(ubPlayer.ads.inAdBreak()){
       //                   ubPlayer.ima.resumeAd();
       //             }
@@ -566,7 +590,7 @@ function isInViewport(el) {
 //       }
 //       if (!(entries[0].isIntersecting)) {
 //             if(!viewportfirstFlag){
-//               ubPlayer.pause();                  
+//               ubPlayer.pause();
 //               if(ubPlayer.ads.inAdBreak()){
 //                 ubPlayer.ima.pauseAd();
 //               }
@@ -579,10 +603,10 @@ function isInViewport(el) {
 
 function checkfifty(el) {
   const rect = el.getBoundingClientRect();
-  
+
   return rect.top + (rect.height/2) > 0 &&
       rect.left + (rect.width/2) > 0 &&
-      rect.top + (rect.height/2) < (window.innerHeight || document.documentElement.clientHeight) && 
+      rect.top + (rect.height/2) < (window.innerHeight || document.documentElement.clientHeight) &&
       rect.left + (rect.width/2) < (window.innerWidth || document.documentElement.clientWidth);
 }
 
@@ -613,4 +637,5 @@ function setLogo() {
   i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
   ubPlayer.el_.appendChild(i);
 }
+
 function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

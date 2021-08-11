@@ -44,13 +44,14 @@ function listen_scripts() {
           console.log('all loaded');
           console.log(scripts);
           clearInterval(ub_interval);
-          checkUnmutedAutoplaySupport();
+          checkPlayerIsInView();
+          // checkUnmutedAutoplaySupport();
           // isNearViewport(document.querySelector('#unibots-video'));
       }
   }, 500);
 }
 
-listen_scripts();
+// listen_scripts();
 
 
 var ubIma = document.createElement("script");
@@ -67,7 +68,7 @@ ubIma.onload = function () {
       "unibots-video": false,
   };
 
-  var ub_interval = setInterval(() => {
+  var ub_interval_div_check = setInterval(() => {
           flag = false;
           checkFlag = false;
           for (x in ub_divsToCheck) {
@@ -84,11 +85,13 @@ ubIma.onload = function () {
           if (!flag && checkFlag) {
             if(document.getElementById('unibots-video')){
               document.getElementById('unibots-video').innerHTML= myPlayer;
+              listen_scripts();
             }
-            if(document.getElementById('unibots-video-mobile')){
+            else if(document.getElementById('unibots-video-mobile')){
               document.getElementById('unibots-video-mobile').innerHTML= myPlayer;
+              listen_scripts();
             }
-              clearInterval(ub_interval);
+            clearInterval(ub_interval_div_check);
           }
   }, 500);
 
@@ -106,6 +109,7 @@ var ubPlayer;
 var wrapperDiv;
 var xml_path;
 var stickyFlag = false;
+var isPlayerViewedOnce = false;
 var nearViewportFlag = false;
 var viewportfirstFlag = false;
 var checkFiftyViewportOne = false;
@@ -184,15 +188,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
-          ],
-          type: 'preroll',
-          delay: 0,
-          src: 'gpt'
-        },
-        {
-          ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -208,7 +204,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -216,7 +212,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -288,7 +284,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -304,7 +300,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -392,7 +388,7 @@ function initPlayer() {
         ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
           setTimeout(() => {
               ubPlayer.ima.requestAds();
-          }, adsArray[adsIndex].delay * 200); //While using Defined ad dealy
+          }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
       }
 
       ubPlayer.on('adserror', function (err) {
@@ -406,14 +402,14 @@ function initPlayer() {
           else {
               console.log(err.data.AdError.getMessage());
           }
-              showPlayer();
-              runVideo();
+          //Autorun Video Player
+          runVideo();
           }.bind(ubPlayer)
       );
 
       ubPlayer.on('loadedmetadata', () => {
-          // console.log("ads ready");
-          showPlayer();
+        //Show Player on Content meta data Load
+        showPlayer();
       });
 
       const runVideo = () => {
@@ -450,9 +446,7 @@ function initPlayer() {
           }
 
       }
-      ubPlayer.on('adsready', () => {
-          runVideo();
-      })
+      ubPlayer.on('adsready', () => {  runVideo(); });
 
       ubPlayer.on('play', () => {
           ubPlayer.volume(0.1);
@@ -541,6 +535,21 @@ function initPlayer() {
 
   }
 }
+
+
+function checkPlayerIsInView(){
+  window.addEventListener('scroll', function () {
+    if(!isPlayerViewedOnce){
+      if(isInViewport(document.querySelector('#unibots-video'))){
+        checkUnmutedAutoplaySupport();
+        isPlayerViewedOnce = true;
+      }
+    }
+  });
+}
+
+              
+
 const toggleSticky = () => {
   if(!isMobile()){
     let currentPlayer = document.querySelector('#unibots-video');

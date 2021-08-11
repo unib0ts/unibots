@@ -368,7 +368,7 @@ function initPlayer() {
         ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
           setTimeout(() => {
               ubPlayer.ima.requestAds();
-          }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
+          }, adsArray[adsIndex].delay * 200); //While using Defined ad dealy
       }
 
       ubPlayer.on('adserror', function (err) {

@@ -359,7 +359,7 @@ function initPlayer() {
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
                     // console.log("AD LOADED \n",e);
                     stickyFlag = true;
-                    showPlayer();
+                    // showPlayer();
                     ubPlayer.autoplay(true);
                     ubPlayer.play();
                     ubPlayer.ima.resumeAd();
@@ -411,10 +411,10 @@ function initPlayer() {
           }.bind(ubPlayer)
       );
 
-      // ubPlayer.on('loadedmetadata', () => {
-      //     // console.log("ads ready");
-      //     showPlayer();
-      // });
+      ubPlayer.on('loadedmetadata', () => {
+          // console.log("ads ready");
+          showPlayer();
+      });
 
       const runVideo = () => {
           if (firstFlag) {

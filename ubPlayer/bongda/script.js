@@ -44,8 +44,7 @@ function listen_scripts() {
           console.log('all loaded');
           console.log(scripts);
           clearInterval(ub_interval);
-          checkPlayerIsInView();
-          // checkUnmutedAutoplaySupport();
+          isMobile() ? isNearViewport(document.querySelector('#unibots-video')) : checkUnmutedAutoplaySupport();
           // isNearViewport(document.querySelector('#unibots-video'));
       }
   }, 500);
@@ -161,8 +160,8 @@ function initPlayer() {
           muted: false,
           loadingSpinner: false,
           bigPlayButton: false,
-          width: 400,
-          height: 225,
+          width: isMobile() ? 344 : 640,
+          height: isMobile()? 258 : 360,
           controlBar: {
               volumePanel: {
                   inline: false,
@@ -180,7 +179,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -188,7 +187,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -196,7 +195,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongdaplus.vn_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongdaplus.vn_preroll_adx1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&videoad_start_delay=0&vpmute=0&vpa=click&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -204,7 +203,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -212,7 +211,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -220,7 +219,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 20,
@@ -228,7 +227,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -236,7 +235,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongdaplus.vn_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongdaplus.vn_preroll_adx2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&videoad_start_delay=0&vpmute=0&vpa=click&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -244,7 +243,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -252,7 +251,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -260,7 +259,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongdaplus.vn_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongdaplus.vn_preroll_adx1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&videoad_start_delay=0&vpmute=0&vpa=click&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -276,7 +275,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongdaplus.vn_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongdaplus.vn_preroll_adx1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&videoad_start_delay=0&vpmute=0&vpa=click&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -284,7 +283,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -292,7 +291,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -300,7 +299,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -308,7 +307,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -371,24 +370,33 @@ function initPlayer() {
                       newIMA(adsIndex++);
                     }
                 });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED, () => {
+                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED, () =>{
+                    playerPPChecker();
                     ubPlayer.ima.getAdsManager().destroy();
                     ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
                     // ubPlayer.ima.AdsLoader.contentComplete();
                     if (adsIndex < adsArray.length) {
-                      console.log(adsIndex);
-                      newIMA(adsIndex++);
+                      newIMA(adsIndex++,true);
                     }
                 });
           }
       };
       ubPlayer.ima(imaOptions);
 
-      let newIMA = (adsIndex) => {
-        ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
-          setTimeout(() => {
-              ubPlayer.ima.requestAds();
-          }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
+      let newIMA = (adsIndex,isSkipped = false) => {
+        // console.log(checkPlayerPlaying(),adsIndex);
+        if(checkPlayerPlaying() || (adsIndex <= 1)){
+            ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
+            setTimeout(() => {
+                ubPlayer.ima.requestAds();
+            }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
+        }
+        else if(isSkipped){
+            ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex++));
+              setTimeout(() => {
+                  ubPlayer.ima.requestAds();
+              }, adsArray[adsIndex].delay * 1000);
+            }
       }
 
       ubPlayer.on('adserror', function (err) {
@@ -460,31 +468,18 @@ function initPlayer() {
           constructor: function () {
               button.apply(this, arguments);
               this.controlText("Close Player");
-              // this.addClass('vjs-icon-cancel');
+              this.addClass('ubp-close');
           },
           handleClick: function () {
-              this.player().dispose();
+              // this.player().dispose();
           }
       });
       videojs.registerComponent('CloseButton', CloseButton);
       ubPlayer.addChild('CloseButton');
 
-      // var button = videojs.getComponent("button");
-      // var clButton = videojs.extend(button, {
-      //     constructor: function () {
-      //         button.apply(this, arguments);
-      //         this.controlText("View More");
-      //         this.addClass("vjs-customButton");
-      //     },
-      //     handleClick: function () {
-      //         window.open(
-      //             "https://www.youtube.com/channel/UC_2irx_BQR7RsBKmUV9fePQ",
-      //             "_blank"
-      //         );
-      //     },
-      // });
-      // videojs.registerComponent("Mybutton", clButton);
-      // ubPlayer.addChild("Mybutton");
+      var closeButton = document.getElementsByClassName("ubp-close")[0];
+      closeButton.addEventListener('click',()=>{ ubPlayer.dispose(); });
+
 
       //close player on video end.
       ubPlayer.on('timeupdate', function () {
@@ -496,16 +491,20 @@ function initPlayer() {
       setLogo();
 
       // if (!isMobile() && window.location.href != "https://docbao.vn/") {
-      if (document.getElementById("unibots-video") && !isMobile()) {
+      if (document.getElementById("unibots-video")) {
           window.addEventListener('scroll', function () {
+            // if(!stickyFlag) { stickyFlag = true; }
               toggleSticky();
           });
-      // }
+      }
 
 
        //end of if statement
-      }
-
+      // }
+      
+      /*
+      ***Enable only if player is in half viewport inread and don't want to initialize player and ima before player div is in viewport
+      */
       // window.addEventListener('scroll', function () {
       //     if(checkfifty(document.querySelector("#unibots-video"))){
       //         // console.log("inviewport");
@@ -532,10 +531,17 @@ function initPlayer() {
       //     }
       // });
       // isNearViewport(document.querySelector('#unibots-video'));
-
   }
 }
 
+function checkPlayerPlaying(){
+  return ubPlayer.paused() ? false : true;
+}
+
+function playerPPChecker(){
+  ubPlayer.on('play',()=>{ console.log("Player Play's")});
+  ubPlayer.on('pause',()=>{ console.log("Player paused")});
+}  
 
 function checkPlayerIsInView(){
   window.addEventListener('scroll', function () {
@@ -546,8 +552,11 @@ function checkPlayerIsInView(){
       }
     }
   });
+  if(isInViewport(document.querySelector('#unibots-video'))){
+    checkUnmutedAutoplaySupport();
+    isPlayerViewedOnce = true;
+  }
 }
-
               
 
 const toggleSticky = () => {
@@ -558,22 +567,30 @@ const toggleSticky = () => {
     if (isInViewport(currentPlayer)) {
         if (targetDiv.classList.contains("ubsticky_left")) {
             targetDiv.classList.remove("ubsticky_left");
+            resizeAds(640,360);
         }
     } else {
         if (stickyFlag) {
             if (!targetDiv.classList.contains("ubsticky_left")) {
                 targetDiv.classList.add("ubsticky_left");
+                resizeAds(400,225);
             }
         }
         else {
             if (targetDiv.classList.contains("ubsticky_left")) {
                 targetDiv.classList.remove("ubsticky_left");
+                resizeAds(640,360);
             }
         }
     }
   }
 }
 
+function resizeAds(raWidth,raHeight){
+  if(ubPlayer.ads.inAdBreak() && !isMobile()){
+    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+  }
+}
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
@@ -583,41 +600,41 @@ function isInViewport(el) {
       rect.top < (window.innerHeight || document.documentElement.clientHeight);
 }
 
-// function isNearViewport(el) {
-//   let observer = new IntersectionObserver(function (entries) {
-//       if (entries[0].isIntersecting) {
-//           if (!viewportfirstFlag) {
-//               // checkUnmutedAutoplaySupport();
-//             viewportfirstFlag = true;
-//             ubPlayer.play();
-//             if(ubPlayer.ads.inAdBreak()){
-//                 ubPlayer.ima.resumeAd();
-//             }
-//           }
-//           nearViewportFlag = true;
+function isNearViewport(el) {
+  let observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+          if (!viewportfirstFlag) {
+              checkUnmutedAutoplaySupport();
+            viewportfirstFlag = true;
+            // ubPlayer.play();
+            // if(ubPlayer.ads.inAdBreak()){
+            //     ubPlayer.ima.resumeAd();
+            // }
+          }
+          nearViewportFlag = true;
 
-//       }
-//       if (!(entries[0].isIntersecting)) {
-//             if(!viewportfirstFlag){
-//               ubPlayer.pause();
-//               if(ubPlayer.ads.inAdBreak()){
-//                 ubPlayer.ima.pauseAd();
-//               }
-//             }
-//            nearViewportFlag = false;
-//       }
-//   }, { threshold: [0], rootMargin: "640px 0px 640px 0px" });
-//   observer.observe(el);
-// }
-
-function checkfifty(el) {
-  const rect = el.getBoundingClientRect();
-
-  return rect.top + (rect.height/2) > 0 &&
-      rect.left + (rect.width/2) > 0 &&
-      rect.top + (rect.height/2) < (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.left + (rect.width/2) < (window.innerWidth || document.documentElement.clientWidth);
+      }
+      // if (!(entries[0].isIntersecting)) {
+      //       if(!viewportfirstFlag){
+      //         ubPlayer.pause();
+      //         if(ubPlayer.ads.inAdBreak()){
+      //           ubPlayer.ima.pauseAd();
+      //         }
+      //       }
+      //      nearViewportFlag = false;
+      // }
+  }, { threshold: [0], rootMargin: "640px 0px 640px 0px" });
+  observer.observe(el);
 }
+
+// function checkfifty(el) {
+//   const rect = el.getBoundingClientRect();
+
+//   return rect.top + (rect.height/2) > 0 &&
+//       rect.left + (rect.width/2) > 0 &&
+//       rect.top + (rect.height/2) < (window.innerHeight || document.documentElement.clientHeight) &&
+//       rect.left + (rect.width/2) < (window.innerWidth || document.documentElement.clientWidth);
+// }
 
 
 function initAdDisplayContainer() {
@@ -646,5 +663,4 @@ function setLogo() {
   i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
   ubPlayer.el_.appendChild(i);
 }
-
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

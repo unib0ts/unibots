@@ -1141,11 +1141,11 @@ function ubadScript() {
   }
 
   function checkHBUnits() {
-      if (mobileCheck()) {
-        if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-          addNewsBotAd();
-        }
-      }
+      // if (mobileCheck()) {
+      //   if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
+      //     addNewsBotAd();
+      //   }
+      // }
       // callMapUnits();
   setTimeout(function(){ callMapUnits(); }, 500);
       // setTimeout(function() {

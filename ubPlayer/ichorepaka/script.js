@@ -86,10 +86,6 @@ ubIma.onload = function () {
               document.getElementById('unibots-video').innerHTML= myPlayer;
               listen_scripts();
             }
-            // else if(document.getElementById('unibots-video')){
-            //   document.getElementById('unibots-video').innerHTML= myPlayer;
-            //   listen_scripts();
-            // }
             clearInterval(ub_interval_div_check);
           }
   }, 500);
@@ -179,7 +175,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 1,
@@ -187,7 +183,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 5,
@@ -195,7 +191,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adx_preroll&ad_type=video&description_url='+desc_url+'&videoad_start_delay=0&hl=en&vpmute=0&vpa=auto&adsafe=low',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=ichorepaka_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -203,7 +199,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 5,
@@ -211,7 +207,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -219,7 +215,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 20,
@@ -227,7 +223,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -235,7 +231,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=ichorepaka_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -243,7 +239,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -251,7 +247,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -259,7 +255,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adx_preroll&ad_type=video&description_url='+desc_url+'&videoad_start_delay=0&hl=en&vpmute=0&vpa=auto&adsafe=low',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=ichorepaka_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -267,7 +263,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=ichorepaka_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
           ],
           type: 'preroll',
           delay: 30,
@@ -275,7 +271,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adx_preroll&ad_type=video&description_url='+desc_url+'&videoad_start_delay=0&hl=en&vpmute=0&vpa=auto&adsafe=low',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=ichorepaka_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -283,7 +279,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -291,7 +287,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -299,7 +295,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -307,7 +303,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/ichorepaka_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -590,10 +586,9 @@ function checkPlayerIsInView(){
 
 
 const toggleSticky = () => {
-
-    let currentPlayer = document.querySelector('#unibots-video');
-    let targetDiv = document.getElementById("ubVideo");
     if(!isMobile()){
+      let currentPlayer = document.querySelector('#unibots-video');
+      let targetDiv = document.getElementById("ubVideo");
       if (isInViewport(currentPlayer)) {
           if (targetDiv.classList.contains("ubsticky_left")) {
               targetDiv.classList.remove("ubsticky_left");
@@ -610,27 +605,6 @@ const toggleSticky = () => {
               if (targetDiv.classList.contains("ubsticky_left")) {
                   targetDiv.classList.remove("ubsticky_left");
                   resizeAds(640,360);
-              }
-          }
-      }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(330,186);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(165,93);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(330,186);
               }
           }
       }

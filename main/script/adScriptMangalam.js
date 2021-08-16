@@ -546,33 +546,57 @@ function mainHbRun(){
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        });
-       ubpbjs.setBidderConfig({
-        bidders: ['emxdigital'],   // can list more bidders here if they share the same config
-        config: {
-           schain: {
-             validation: "relaxed",
-             config: {
-               ver:"1.0",
-               complete: 1,
-               nodes: [
-                 {
-                   asi:"emxdigital.com",
-                   sid:"1504",
-                   rid: "73921627578122922433w1",
-                   hp:1
-                 },
-                {
-                  asi:"unibots.in",
-                  sid:"38",
-                  // rid:"BidRequest2",
-                  hp:1
-                }
-               ]
-             }
-           }
-         }
-       });
+       // ubpbjs.setBidderConfig({
+       //  bidders: ['emxdigital'],   // can list more bidders here if they share the same config
+       //  config: {
+       //     schain: {
+       //       validation: "relaxed",
+       //       config: {
+       //         ver:"1.0",
+       //         complete: 1,
+       //         nodes: [
+       //           {
+       //             asi:"emxdgt.com",   //directseller
+       //             sid:"1504",     //seller_id
+       //             // rid: "73921627578122922433w1",
+       //             hp:1
+       //           },
+       //          {
+       //            asi:"unibots.in",   //reseller
+       //            sid:"38",          //seller_id
+       //            // rid:"BidRequest2",
+       //            hp:1
+       //          }
+       //         ]
+       //       }
+       //     }
+       //   }
+       // });
        ubpbjs.requestBids({
+           bidders: ['emxdigital'],   // can list more bidders here if they share the same config
+           config: {
+              schain: {
+                validation: "relaxed",
+                config: {
+                  ver:"1.0",
+                  complete: 1,
+                  nodes: [
+                    {
+                      asi:"emxdgt.com",   //directseller
+                      sid:"1504",     //seller_id
+                      // rid: "73921627578122922433w1",
+                      hp:1
+                    },
+                   {
+                     asi:"unibots.in",   //reseller
+                     sid:"38",          //seller_id
+                     // rid:"BidRequest2",
+                     hp:1
+                   }
+                  ]
+                }
+              }
+            },
            bidsBackHandler: initAdserver,
            timeout: PREBID_TIMEOUT,
            labels: [GEO_CODE],

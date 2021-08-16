@@ -158,7 +158,7 @@ function ubadScript() {
       x1.appendChild(z1);
     // }
   } else {
-        // if(!(window.location.href== "https://m.docbao.vn/")){
+        if(!(window.location.href== "https://m.docbao.vn/")){
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-container";
           z1.className = "ub-sticky-ad-container";
@@ -166,7 +166,7 @@ function ubadScript() {
               '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
           x1 = document.querySelector("body");
           x1.appendChild(z1);
-      // }
+      }
 
 
       z2 = document.createElement("div");
@@ -1333,7 +1333,7 @@ function ubadScript() {
 }
 
  if (mobileCheck()) {
-    // if(!(window.location.href== "https://m.docbao.vn/")){
+    if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
               if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
@@ -1344,7 +1344,7 @@ function ubadScript() {
               }
             });
         });
-    // }
+    }
 }
 
  function loadAd(id, adUnits) {

@@ -50,9 +50,6 @@ function listen_scripts() {
   }, 500);
 }
 
-listen_scripts();
-
-
 var ubIma = document.createElement("script");
 ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
 document.getElementsByTagName("body")[0].appendChild(ubIma);
@@ -69,10 +66,36 @@ ubIma.onload = function () {
   // z1.innerHTML = myPlayer;
   // target.appendChild(z1);
 
-  if (document.getElementById("unibots-video")) {
-    document.getElementById("unibots-video").innerHTML = myPlayer;
-  }
-  // document.querySelector("#ubVideo").classList.add("ub-unloaded");
+    var ub_divsToCheck = {
+        "unibots-video": false,
+    };
+
+    var ub_interval_div_check = setInterval(() => {
+      flag = false;
+      checkFlag = false;
+      for (x in ub_divsToCheck) {
+          if (document.getElementById(x) !== null) {
+              ub_divsToCheck[x] = true;
+              checkFlag = true;
+          }
+      }
+      for (x in ub_divsToCheck) {
+          if (ub_divsToCheck[x] == false) {
+              flag = true;
+          }
+      }
+      if (!flag && checkFlag) {
+        if(document.getElementById('unibots-video')){
+          document.getElementById('unibots-video').innerHTML= myPlayer;
+          listen_scripts();
+        }
+        else if(document.getElementById('unibots-video-mobile')){
+          document.getElementById('unibots-video-mobile').innerHTML= myPlayer;
+          listen_scripts();
+        }
+        clearInterval(ub_interval_div_check);
+      }
+    }, 500);
 };
 
 var post_scripts = () => {
@@ -86,10 +109,13 @@ var autoplayRequiresMute = false;
 var ubPlayer;
 var wrapperDiv;
 var xml_path;
+var stickyFlag = false;
+var isPlayerViewedOnce = false;
 var nearViewportFlag = false;
 var viewportfirstFlag = false;
 var checkFiftyViewportOne = false;
 var checkFiftyViewportTwo = false;
+var atleastOneAdServed = false;
 
 function checkUnmutedAutoplaySupport() {
   canAutoplay
@@ -129,14 +155,11 @@ function getRandomInt(max) {
 
 function initPlayer() {
 
-  if (document.getElementById('unibots-video')) {
+  if(document.getElementById('unibots-video')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
-      let stickyFlag = false;
       let adsIndex = 1;
       let firstFlag = true;
-
-
 
       var vjsOptions = {
           autoplay: false,
@@ -156,7 +179,7 @@ function initPlayer() {
       }
 
       ts = + new Date();
-      // let desc_url = encodeURIComponent(window.location.href);
+      // var desc_url = encodeURIComponent(window.location.href);
       var desc_url = "https%3A%2F%2Fandhrajyothy.com";
 
       var adsArray = [
@@ -165,7 +188,7 @@ function initPlayer() {
             'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
-          delay: 0,
+          delay: 1,
           src: 'gpt'
         },
         {
@@ -306,26 +329,46 @@ function initPlayer() {
         }
       ];
 
-      var makePrerollRequestNew = (index, singleAdStructure = false) => {
-          return adsArray[index]["ads"][0]
+      let makePrerollRequest = (index, singleAdStructure = false) => {
+      let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
+      let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+                              <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+                                  <vmap:AdTagURI templateType="vast3">
+                                  <![CDATA[${adsArray[index]["ads"][0]}]]>
+                                  </vmap:AdTagURI>
+                              </vmap:AdSource>
+                            </vmap:AdBreak>`;
+      let respEnd = `</vmap:VMAP>`;
+      if (!singleAdStructure) {
+        let respSecondChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+                              <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+                                  <vmap:AdTagURI templateType="vast3">
+                                  <![CDATA[${adsArray[index]["ads"][1]}]]>
+                                  </vmap:AdTagURI>
+                              </vmap:AdSource>
+                            </vmap:AdBreak>`;
+
+        let finalResponse = resp + respFirstChild + respSecondChild + respEnd;
+        return finalResponse;
       }
-
-      
-      var ubPlayer_src = [
-          "https://cdn.unibots.in/abn/cgjg.mp4",
-          "https://cdn.unibots.in/abn/changes_in_ap_bjp.mp4",
-          "https://cdn.unibots.in/abn/debut.mp4",
-          // "https://cdn.unibots.in/abn/forest_officer_vs_potu_rangarao.mp4"
-      ];
-      var src_index = Math.floor(Math.random() * 2) + 1;
-
+      else {
+        let finalResponse = resp + respFirstChild + respEnd;
+        return finalResponse;
+      }
+      }
+      // var makePrerollRequestNew = (index, singleAdStructure = false) => {
+      //     return adsArray[index]["ads"][0]
+      // }
 
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({ type: "video/mp4", src: ubPlayer_src[src_index] });
+      ubPlayer.src({
+          type: "video/mp4",
+          src: "https://cdn.unibots.in/yoga.mp4",
+      });
 
       var imaOptions = {
           id: "content_video",
-          adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+          adsResponse: makePrerollRequest(0, true),
           disableCustomPlaybackForIOS10Plus: true,
           contribAdsSettings: {
               debug: true,
@@ -333,40 +376,77 @@ function initPlayer() {
           // autoPlayAdBreaks: false,
           vastLoadTimeout: 2e4,
           adsManagerLoadedCallback: () => {
-              ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
-                      ubPlayer.ima.getAdsManager().destroy();
-                      ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
-                      // ubPlayer.ima.AdsLoader.contentComplete();
-                      if (adsIndex < adsArray.length) {
-                          console.log(adsIndex);
-                          newIMA(adsIndex++);
-                      }
-                  }
-              );
-              ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED, () => {
-                      ubPlayer.ima.getAdsManager().destroy();
-                      ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
-                      // ubPlayer.ima.AdsLoader.contentComplete();
-                      if (adsIndex < adsArray.length) {
-                          console.log(adsIndex);
-                          newIMA(adsIndex++);
-                      }
-                  }
-              );
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
+                //     // console.log("ad completed");
+                //     stickyFlag = false;
+                //     // console.log(`Triggered ${stickyFlag}`)
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
+                //     // console.log("ads SKIPPED");
+                //     stickyFlag = false;
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
+                //     // console.log("ads started");
+                //     stickyFlag = true;
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
+                //     // console.log("AD LOADED \n",e);
+                //     stickyFlag = true;
+                //     // showPlayer();
+                //     ubPlayer.autoplay(true);
+                //     ubPlayer.play();
+                //     ubPlayer.ima.resumeAd();
+                //     // toggleSticky();
+                // });
+
+                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
+                    ubPlayer.ima.getAdsManager().destroy();
+                    ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
+                    // ubPlayer.ima.AdsLoader.contentComplete();
+                    if (adsIndex < adsArray.length) {
+                      // console.log(adsIndex);
+                      newIMA(adsIndex++);
+                    }
+                });
+                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED, () =>{
+                    ubPlayer.ima.getAdsManager().destroy();
+                    ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
+                    ubPlayer.ima.changeAdTag(null);
+                    // ubPlayer.ima.AdsLoader.contentComplete();
+                    if (adsIndex < adsArray.length) {
+                      newIMA(adsIndex++,true);
+                    }
+                });
           }
       };
       ubPlayer.ima(imaOptions);
-      
-      let newIMA = (adsIndex) => {
-        ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
-          setTimeout(() => {
-              ubPlayer.ima.requestAds();
-          }, adsArray[adsIndex].delay * 1000);
+
+      let newIMA = (adsIndex,isSkipped = false) => {
+        // console.log(checkPlayerPlaying(),adsIndex);
+        if(checkPlayerPlaying() || (adsIndex <= 1)){
+            // ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
+          ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
+
+            setTimeout(() => {
+                ubPlayer.ima.requestAds();
+            }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
+        }
+        else if(isSkipped){
+            // ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex++));
+            ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
+              setTimeout(() => {
+                  ubPlayer.ima.requestAds();
+              }, adsArray[adsIndex].delay * 1000);
+            }
       }
 
       ubPlayer.on('adserror', function (err) {
           if (err.data.AdError.getErrorCode() == 1009) {
               ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
+              ubPlayer.ima.changeAdTag(null);
               // ubPlayer.ima.AdsLoader.contentComplete();
               if (adsIndex < adsArray.length) {
                   newIMA(adsIndex++);
@@ -375,14 +455,14 @@ function initPlayer() {
           else {
               console.log(err.data.AdError.getMessage());
           }
-              showPlayer();
-              runVideo();
+          //Autorun Video Player
+          runVideo();
           }.bind(ubPlayer)
       );
 
       ubPlayer.on('loadedmetadata', () => {
-          // console.log("ads ready");
-          showPlayer();
+        //Show Player on Content meta data Load
+        showPlayer();
       });
 
       const runVideo = () => {
@@ -419,9 +499,7 @@ function initPlayer() {
           }
 
       }
-      ubPlayer.on('adsready', () => {
-          runVideo();
-      })
+      ubPlayer.on('adsready', () => {  runVideo(); });
 
       ubPlayer.on('play', () => {
           ubPlayer.volume(0.1);
@@ -435,7 +513,7 @@ function initPlayer() {
           constructor: function () {
               button.apply(this, arguments);
               this.controlText("Close Player");
-              // this.addClass('vjs-icon-cancel');
+              // this.addClass('ubp-close');
           },
           handleClick: function () {
               this.player().dispose();
@@ -444,22 +522,6 @@ function initPlayer() {
       videojs.registerComponent('CloseButton', CloseButton);
       ubPlayer.addChild('CloseButton');
 
-      var button = videojs.getComponent("button");
-      var clButton = videojs.extend(button, {
-          constructor: function () {
-              button.apply(this, arguments);
-              this.controlText("View More");
-              this.addClass("vjs-customButton");
-          },
-          handleClick: function () {
-              window.open(
-                  "https://www.youtube.com/channel/UC_2irx_BQR7RsBKmUV9fePQ",
-                  "_blank"
-              );
-          },
-      });
-      videojs.registerComponent("Mybutton", clButton);
-      ubPlayer.addChild("Mybutton");
 
       //close player on video end.
       ubPlayer.on('timeupdate', function () {
@@ -470,61 +532,128 @@ function initPlayer() {
       });
       setLogo();
 
+      checkPlayerIsInView();
+
       // if (!isMobile() && window.location.href != "https://docbao.vn/") {
       // if (document.getElementById("unibots-video")) {
       //     window.addEventListener('scroll', function () {
+      //       // if(!stickyFlag) { stickyFlag = true; }
       //         toggleSticky();
       //     });
       // }
 
-      // const toggleSticky = () => {
-      //     let currentPlayer = document.querySelector('#unibots-video');
-      //     let targetDiv = document.getElementById("ubVideo");
 
-      //     if (isInViewport(currentPlayer)) {
-      //         if (targetDiv.classList.contains("ubsticky_left")) {
-      //             targetDiv.classList.remove("ubsticky_left");
-      //         }
-      //     } else {
-      //         if (stickyFlag) {
-      //             if (!targetDiv.classList.contains("ubsticky_left")) {
-      //                 targetDiv.classList.add("ubsticky_left");
+       //end of if statement
+      // }
+      
+      /*
+      ***Enable only if player is in half viewport inread and don't want to initialize player and ima before player div is in viewport
+      */
+      // window.addEventListener('scroll', function () {
+      //     if(checkfifty(document.querySelector("#unibots-video"))){
+      //         // console.log("inviewport");
+      //         if(!checkFiftyViewportOne){
+      //             checkFiftyViewportOne = true;
+      //             checkFiftyViewportTwo = true;
+      //             ubPlayer.autoplay(true);
+      //             ubPlayer.play();
+      //             if(ubPlayer.ads.inAdBreak()){
+      //                   ubPlayer.ima.resumeAd();
       //             }
       //         }
-      //         else {
-      //             if (targetDiv.classList.contains("ubsticky_left")) {
-      //                 targetDiv.classList.remove("ubsticky_left");
-      //             }
+      //     }else{
+      //         // console.log("outofview");
+      //         if(!checkFiftyViewportTwo){
+      //             ubPlayer.on('ready',()=>{
+      //                 ubPlayer.autoplay(true);
+      //                 ubPlayer.pause();
+      //                 if(ubPlayer.ads.inAdBreak()){
+      //                     ubPlayer.ima.pauseAd();
+      //                 }
+      //             });
       //         }
       //     }
-      // }
-      // }
+      // });
+      // isNearViewport(document.querySelector('#unibots-video'));
+  }
+}
 
-      window.addEventListener('scroll', function () {
-          if(checkfifty(document.querySelector("#unibots-video"))){
-              // console.log("inviewport");
-              if(!checkFiftyViewportOne){
-                  checkFiftyViewportOne = true;
-                  checkFiftyViewportTwo = true;
-                  ubPlayer.autoplay(true);
-                  ubPlayer.play();                  
-                  if(ubPlayer.ads.inAdBreak()){
-                        ubPlayer.ima.resumeAd();
-                  }
-              }
-          }else{
-              // console.log("outofview");
-              if(!checkFiftyViewportTwo){
-                  ubPlayer.on('ready',()=>{
-                      ubPlayer.autoplay(true);
-                      ubPlayer.pause();
-                      if(ubPlayer.ads.inAdBreak()){
-                          ubPlayer.ima.pauseAd();
-                      }
-                  });
-              }
-          }
-      });
+function checkPlayerPlaying(){
+  return ubPlayer.paused() ? false : true;
+}
+
+function playerPPChecker(){
+  ubPlayer.on('play',()=>{ console.log("Player Play's")});
+  ubPlayer.on('pause',()=>{ console.log("Player paused")});
+}  
+
+function checkPlayerIsInView(){
+  window.addEventListener('scroll', function () {
+    if(!isPlayerViewedOnce){
+      if(isInViewport(document.querySelector('#unibots-video'))){
+          console.log('isinviewport');
+          ubPlayer.autoplay(true);
+          ubPlayer.play();
+          // if(ubPlayer.ads.inAdBreak()){
+          //     ubPlayer.ima.resumeAd();
+          // }
+        isPlayerViewedOnce = true;
+      }
+    }
+  });
+  if(isInViewport(document.querySelector('#unibots-video'))){
+    checkUnmutedAutoplaySupport();
+    isPlayerViewedOnce = true;
+    setTimeout(()=>{ ubPlayer.autoplay(true); ubPlayer.play(); showPlayer(); },200);
+  }
+}
+
+// function checkPlayerIsInView(){
+//   window.addEventListener('scroll', function () {
+//     if(!isPlayerViewedOnce){
+//       if(isInViewport(document.querySelector('#unibots-video'))){
+//         checkUnmutedAutoplaySupport();
+//         isPlayerViewedOnce = true;
+//       }
+//     }
+//   });
+//   if(isInViewport(document.querySelector('#unibots-video'))){
+//     checkUnmutedAutoplaySupport();
+//     isPlayerViewedOnce = true;
+//   }
+// }
+              
+
+// const toggleSticky = () => {
+//   if(!isMobile()){
+//     let currentPlayer = document.querySelector('#unibots-video');
+//     let targetDiv = document.getElementById("ubVideo");
+
+//     if (isInViewport(currentPlayer)) {
+//         if (targetDiv.classList.contains("ubsticky")) {
+//             targetDiv.classList.remove("ubsticky");
+//             resizeAds(640,360);
+//         }
+//     } else {
+//         if (stickyFlag) {
+//             if (!targetDiv.classList.contains("ubsticky")) {
+//                 targetDiv.classList.add("ubsticky");
+//                 resizeAds(320,180);
+//             }
+//         }
+//         else {
+//             if (targetDiv.classList.contains("ubsticky")) {
+//                 targetDiv.classList.remove("ubsticky");
+//                 resizeAds(640,360);
+//             }
+//         }
+//     }
+//   }
+// }
+
+function resizeAds(raWidth,raHeight){
+  if(ubPlayer.ads.inAdBreak() && !isMobile()){
+    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
   }
 }
 
@@ -541,25 +670,36 @@ function isNearViewport(el) {
       if (entries[0].isIntersecting) {
           if (!viewportfirstFlag) {
               checkUnmutedAutoplaySupport();
-              viewportfirstFlag = true;
+            viewportfirstFlag = true;
+            // ubPlayer.play();
+            // if(ubPlayer.ads.inAdBreak()){
+            //     ubPlayer.ima.resumeAd();
+            // }
           }
           nearViewportFlag = true;
+
       }
-      if (!(entries[0].isIntersecting)) {
-          nearViewportFlag = false;
-      }
+      // if (!(entries[0].isIntersecting)) {
+      //       if(!viewportfirstFlag){
+      //         ubPlayer.pause();
+      //         if(ubPlayer.ads.inAdBreak()){
+      //           ubPlayer.ima.pauseAd();
+      //         }
+      //       }
+      //      nearViewportFlag = false;
+      // }
   }, { threshold: [0], rootMargin: "640px 0px 640px 0px" });
   observer.observe(el);
 }
 
-function checkfifty(el) {
-  const rect = el.getBoundingClientRect();
-  
-  return rect.top + (rect.height/2) > 0 &&
-      rect.left + (rect.width/2) > 0 &&
-      rect.top + (rect.height/2) < (window.innerHeight || document.documentElement.clientHeight) && 
-      rect.left + (rect.width/2) < (window.innerWidth || document.documentElement.clientWidth);
-}
+// function checkfifty(el) {
+//   const rect = el.getBoundingClientRect();
+
+//   return rect.top + (rect.height/2) > 0 &&
+//       rect.left + (rect.width/2) > 0 &&
+//       rect.top + (rect.height/2) < (window.innerHeight || document.documentElement.clientHeight) &&
+//       rect.left + (rect.width/2) < (window.innerWidth || document.documentElement.clientWidth);
+// }
 
 
 function initAdDisplayContainer() {
@@ -573,11 +713,11 @@ function showPlayer() {
   document.querySelector("#ubVideo").classList.remove("ub-unloaded");
   document.querySelector("#ubVideo").classList.add("ub-loaded");
 }
+
 function hidePlayer() {
   document.querySelector("#ubVideo").classList.remove("ub-loaded");
   document.querySelector("#ubVideo").classList.add("ub-unloaded");
 }
-
 
 function setLogo() {
   let i = document.createElement("a");
@@ -587,5 +727,4 @@ function setLogo() {
   i.classList.add = "ubp_logo";
   i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
   ubPlayer.el_.appendChild(i);
-}
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important}#unibots-video,#unibots-video-sticky{margin:35px 0}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}.vjs-customButton::before{content:"View More"}.vjs-customButton{height:30px!important;border:solid 1px;width:26%!important;background-image:-webkit-linear-gradient(top,rgba(0,0,0,.8),rgba(0,0,0,.7) 40%,rgba(0,0,0,0) 99%)!important;color:#fff!important;cursor:pointer!important;display:inline-block!important;font-family:arial,sans-serif!important;font-weight:normal!important;font-size:14px!important;line-height:normal!important;padding:5px!important}@media (max-width:481px){.ubsticky{width:320px!important}#ubVideo{margin:30px 0px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+}function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important}#unibots-video,#unibots-video-sticky{margin:35px 0}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}.vjs-customButton::before{content:"View More"}.vjs-customButton{height:30px!important;border:solid 1px;width:26%!important;background-image:-webkit-linear-gradient(top,rgba(0,0,0,.8),rgba(0,0,0,.7) 40%,rgba(0,0,0,0) 99%)!important;color:#fff!important;cursor:pointer!important;display:inline-block!important;font-family:arial,sans-serif!important;font-weight:normal!important;font-size:14px!important;line-height:normal!important;padding:5px!important}@media (max-width:481px){.ubsticky{width:320px!important}#ubVideo{margin:30px 0px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

@@ -204,74 +204,59 @@ else{
   return check;
   };
 
-  // var mybotubad;
-  //
-  // function mybotubScript() {
-  //   if (mobileCheck()) {
-  //     mybotubad = setInterval(ub_adscript, 500);
-  //   }
-  // }
+  var mybotubad;
+
   function mybotubScript() {
-    // var mybotAdscriptEnabled =0;
     if (mobileCheck()) {
-    for(var j=0; j< googTagCode.display.length; j++){
-      for(var i=0; i< mapping_hb.targetUnits.length; i++){
-        if (googTagCode.display[j] ==  mapping_hb.targetUnits[i]) {
-          targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
-          var z= document.createElement('div');
-          z.id = mapping_hb.adId[i];
-          targetUnit.appendChild(z);
-
-          mappings.slotNumbers.push(i+1);
-          mappings.adCode.push(mapping_hb.adUnitNames[i]);
-          mappings.sizes.push(mapping_hb.sizes[i]);
-          mappings.adId.push(mapping_hb.adId[i]);
-
-          adUnitTemp = {
-            code: mapping_hb.adUnitNames[i],
-            mediaTypes: {
-                banner: {
-                    sizes: mapping_hb.sizes[i]
-                }
-            },
-            bids: mapping_hb.bids[i]
-          };
-          adUnits.push(adUnitTemp);
-        }
-      }
+      mybotubad = setInterval(ub_adscript, 500);
     }
-    ub_ad();
-  		// try {
-  			// while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
-  			// 		targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
-  			// 		var z= document.createElement('div');
-  			// 		z.id = mapping_hb.adId[i];
-  			// 		targetUnit.appendChild(z);
-        //
-        //     mappings.slotNumbers.push(i+1);
-        //     mappings.adCode.push(mapping_hb.adUnitNames[i]);
-        //     mappings.sizes.push(mapping_hb.sizes[i]);
-        //     mappings.adId.push(mapping_hb.adId[i]);
-        //
-  			// 		adUnitTemp = {
-  			// 			code: mapping_hb.adUnitNames[i],
-  			// 			mediaTypes: {
-  			// 					banner: {
-  			// 							sizes: mapping_hb.sizes[i]
-  			// 					}
-  			// 			},
-  			// 			bids: mapping_hb.bids[i]
-  			// 		};
-  			// 		adUnits.push(adUnitTemp);
-        //
-        //     clearInterval(mybotubad);
-        //     mybotAdscriptEnabled= 1;
-  			// 		break;
-  			// }
-          // }
-    // if (mybotAdscriptEnabled) {
-    //    ub_ad();
-    // }
+  }
+  function ub_adscript() {
+      var mybotAdscriptEnabled =0;
+    if (mobileCheck()) {
+      // try {
+          // for(var j=0; j< googTagCode.display.length; j++){
+          //   for(var i=0; i< mapping_hb.targetUnits.length; i++){
+          //     console.log(googTagCode.display[j] ==  mapping_hb.targetUnits[i]);
+          //     if (googTagCode.display[j] ==  mapping_hb.targetUnits[i]) {
+          var mybotAdscriptEnabled =0;
+          for(var i=0; i<mapping_hb.targetUnits.length; i++){
+              while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
+                targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
+                var z= document.createElement('div');
+                z.id = mapping_hb.adId[i];
+                targetUnit.appendChild(z);
+
+                mappings.slotNumbers.push(i+1);
+                mappings.adCode.push(mapping_hb.adUnitNames[i]);
+                mappings.sizes.push(mapping_hb.sizes[i]);
+                mappings.adId.push(mapping_hb.adId[i]);
+
+                adUnitTemp = {
+                  code: mapping_hb.adUnitNames[i],
+                  mediaTypes: {
+                      banner: {
+                          sizes: mapping_hb.sizes[i]
+                      }
+                  },
+                  bids: mapping_hb.bids[i]
+                };
+                adUnits.push(adUnitTemp);
+
+                clearInterval(mybotubad);
+                mybotAdscriptEnabled= 1;
+                break;
+          //     }
+            }
+          }
+          if (mybotAdscriptEnabled) {
+             ub_ad();
+          }
+
+     // }
+     // catch (Ex) {
+     //    console.log('target div not present');
+     // }
     }
   }
 

@@ -235,7 +235,7 @@ function initPlayer() {
         },
         {
           ads: [
-            ''https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
           ],
           type: 'preroll',
           delay: 15,

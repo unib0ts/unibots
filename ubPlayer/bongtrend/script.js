@@ -188,15 +188,12 @@ function ubPlayer_scripts() {
             initPlayer();
         })
   }
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
   
   function initPlayer() {
   
     if(document.getElementById('unibots-video')){
-        var video = document.getElementById('content_video');
-        videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
+        // var video = document.getElementById('content_video');
+        // videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
         let adsIndex = 1;
         let firstFlag = true;
   
@@ -366,6 +363,40 @@ function ubPlayer_scripts() {
             src: 'gpt'
           }
         ];
+        // var adsArray = [
+        //     {
+        //       ads: [
+        //         'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+        //       ],
+        //       type: 'preroll',
+        //       delay: 1,
+        //       src: 'gpt'
+        //     },
+        //     {
+        //       ads: [
+        //         'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+        //       ],
+        //       type: 'preroll',
+        //       delay: 0,
+        //       src: 'gpt'
+        //     },
+        //     {
+        //       ads: [
+        //         'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+        //       ],
+        //       type: 'preroll',
+        //       delay: 5,
+        //       src: 'gpt'
+        //     },
+        //     {
+        //       ads: [
+        //         'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+        //       ],
+        //       type: 'preroll',
+        //       delay: 0,
+        //       src: 'gpt'
+        //     },
+        //   ];
         let makePrerollRequest = (index, singleAdStructure = false) => {
           let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
           let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
@@ -437,6 +468,7 @@ function ubPlayer_scripts() {
                   ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
                       ubPlayer.ima.getAdsManager().destroy();
                       ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
+                      ubPlayer.ima.changeAdTag(null);
                       // ubPlayer.ima.AdsLoader.contentComplete();
                       if (adsIndex < adsArray.length) {
                         newIMA(adsIndex++);
@@ -456,7 +488,6 @@ function ubPlayer_scripts() {
         ubPlayer.ima(imaOptions);
   
         let newIMA = (adsIndex,isSkipped = false) => {
-          // console.log(checkPlayerPlaying(),adsIndex);
           if(checkPlayerPlaying() || (adsIndex <= 1)){
               // ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
             ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
@@ -464,12 +495,13 @@ function ubPlayer_scripts() {
                   ubPlayer.ima.requestAds();
               }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
           }
-          else if(isSkipped){
-          ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
-            setTimeout(() => {
-                ubPlayer.ima.requestAds();
-            }, adsArray[adsIndex].delay * 1000);
-          }
+          // else if(isSkipped){
+          //   console.log("me triggered");
+          //   ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
+          //     setTimeout(() => {
+          //         ubPlayer.ima.requestAds();
+          //     }, adsArray[adsIndex].delay * 1000);
+          //   }
         }
   
         ubPlayer.on('adserror', function (err) {
@@ -503,13 +535,13 @@ function ubPlayer_scripts() {
                     }
                     ubPlayer.muted(true);
                     // Autoplay work on script load for PC only 
-                    isMobile() ? '' : ubplay(true);
+                    isMobile() ? ubplay() : ubplay(true);
                 }
   
                 if (!autoplayAllowed) {
                     ubPlayer.muted(true);
                     // Autoplay work on script load for PC only 
-                    isMobile() ? '' : ubplay(true);
+                    isMobile() ? ubplay() : ubplay(true);
   
                     if (navigator.userAgent.match(/iPhone/i) ||
                         navigator.userAgent.match(/iPad/i) ||
@@ -520,10 +552,14 @@ function ubPlayer_scripts() {
                     wrapperDiv = document.getElementById('content_video');
                     wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
                 }
-                //only if page loaded with player inviewport
+                //only if page loaded with player in viewport already then below function will work
                 if(isInViewport(document.querySelector('#unibots-video'))){
-                    isMobile() ? '' : ubplay(true);
+                    ubplay(true);
+                    isPlayerViewedOnce = true;
+                }else{
+                  ubplay();
                 }
+                //endshere
             }
   
         }
@@ -561,40 +597,11 @@ function ubPlayer_scripts() {
        
 
         window.addEventListener('scroll', function () {
-        playerandAdsShouldRuninViewport(true);
+          playerandAdsShouldRuninViewport(true);
           // if(!stickyFlag) { stickyFlag = true; }
-            toggleSticky();
+          toggleSticky();
         });
         
-        /*
-        ***Enable only if player is in half viewport inread and don't want to initialize player and ima before player div is in viewport
-        */
-        // window.addEventListener('scroll', function () {
-        //     if(checkfifty(document.querySelector("#unibots-video"))){
-        //         // console.log("inviewport");
-        //         if(!checkFiftyViewportOne){
-        //             checkFiftyViewportOne = true;
-        //             checkFiftyViewportTwo = true;
-        //             ubPlayer.autoplay(true);
-        //             ubPlayer.play();
-        //             if(ubPlayer.ads.inAdBreak()){
-        //                   ubPlayer.ima.resumeAd();
-        //             }
-        //         }
-        //     }else{
-        //         // console.log("outofview");
-        //         if(!checkFiftyViewportTwo){
-        //             ubPlayer.on('ready',()=>{
-        //                 ubPlayer.autoplay(true);
-        //                 ubPlayer.pause();
-        //                 if(ubPlayer.ads.inAdBreak()){
-        //                     ubPlayer.ima.pauseAd();
-        //                 }
-        //             });
-        //         }
-        //     }
-        // });
-        // isNearViewport(document.querySelector('#unibots-video'));
         ubPlayer.on('play',()=>{ console.log("Player Play's")});
         ubPlayer.on('pause',()=>{ console.log("Player paused")});
     }
@@ -748,5 +755,4 @@ function ubPlayer_scripts() {
     ubPlayer.el_.appendChild(i);
   }
 }
-
 function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-sticky{z-index:2147483999!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions{width:360px!important;height:203px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

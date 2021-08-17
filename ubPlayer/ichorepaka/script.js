@@ -586,9 +586,9 @@ function checkPlayerIsInView(){
 
 
 const toggleSticky = () => {
+  let currentPlayer = document.querySelector('#unibots-video');
+  let targetDiv = document.getElementById("ubVideo");
     if(!isMobile()){
-      let currentPlayer = document.querySelector('#unibots-video');
-      let targetDiv = document.getElementById("ubVideo");
       if (isInViewport(currentPlayer)) {
           if (targetDiv.classList.contains("ubsticky_left")) {
               targetDiv.classList.remove("ubsticky_left");
@@ -605,6 +605,27 @@ const toggleSticky = () => {
               if (targetDiv.classList.contains("ubsticky_left")) {
                   targetDiv.classList.remove("ubsticky_left");
                   resizeAds(640,360);
+              }
+          }
+      }
+    }
+    else {
+      if (isInViewport(currentPlayer)) {
+          if (targetDiv.classList.contains("ubsticky_left")) {
+              targetDiv.classList.remove("ubsticky_left");
+              resizeAds(330,186);
+          }
+      } else {
+          if (stickyFlag) {
+              if (!targetDiv.classList.contains("ubsticky_left")) {
+                  targetDiv.classList.add("ubsticky_left");
+                  resizeAds(192,108);
+              }
+          }
+          else {
+              if (targetDiv.classList.contains("ubsticky_left")) {
+                  targetDiv.classList.remove("ubsticky_left");
+                  resizeAds(330,186);
               }
           }
       }

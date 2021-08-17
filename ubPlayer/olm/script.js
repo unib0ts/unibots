@@ -608,11 +608,19 @@ const toggleSticky = () => {
     // }
 }
 
+<<<<<<< HEAD
 // function resizeAds(raWidth,raHeight){
 //   if(ubPlayer.ads.inAdBreak()){
 //     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
 //   }
 // }
+=======
+function resizeAds(raWidth,raHeight){
+  if(ubPlayer.ads.inAdBreak()){
+    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+  }
+}
+>>>>>>> d605f00e28797331ee5f5f9609e16fde6b97fcb6
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();

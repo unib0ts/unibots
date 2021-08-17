@@ -209,7 +209,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=te',
           ],
           type: 'preroll',
           delay: 0,
@@ -249,7 +249,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=te',
           ],
           type: 'preroll',
           delay: 15,
@@ -273,7 +273,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=te',
           ],
           type: 'preroll',
           delay: 0,
@@ -281,7 +281,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=andhrajyothy.com_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=te',
           ],
           type: 'preroll',
           delay: 30,
@@ -289,7 +289,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=te',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=andhrajyothy.com_preroll_adx1&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=te',
           ],
           type: 'preroll',
           delay: 0,

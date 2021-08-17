@@ -145,7 +145,7 @@ function getRandomInt(max) {
 
 function initPlayer() {
 
-  if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-homePC')){
+  if(document.getElementById('unibots-video')){
       var video = document.getElementById('content_video');
       videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
       let adsIndex = 1;
@@ -231,7 +231,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=olm.vn_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=olm.vn_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -263,7 +263,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=olm.vn_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=olm.vn_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 30,
@@ -310,33 +310,33 @@ function initPlayer() {
           src: 'gpt'
         }
       ];
-let makePrerollRequest = (index, singleAdStructure = false) => {
-let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
-let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
-                        <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
-                            <vmap:AdTagURI templateType="vast3">
-                            <![CDATA[${adsArray[index]["ads"][0]}]]>
-                            </vmap:AdTagURI>
-                        </vmap:AdSource>
-                      </vmap:AdBreak>`;
-let respEnd = `</vmap:VMAP>`;
-if (!singleAdStructure) {
-  let respSecondChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
-                        <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
-                            <vmap:AdTagURI templateType="vast3">
-                            <![CDATA[${adsArray[index]["ads"][1]}]]>
-                            </vmap:AdTagURI>
-                        </vmap:AdSource>
-                      </vmap:AdBreak>`;
+      let makePrerollRequest = (index, singleAdStructure = false) => {
+        let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
+        let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+                                <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+                                    <vmap:AdTagURI templateType="vast3">
+                                    <![CDATA[${adsArray[index]["ads"][0]}]]>
+                                    </vmap:AdTagURI>
+                                </vmap:AdSource>
+                              </vmap:AdBreak>`;
+        let respEnd = `</vmap:VMAP>`;
+        if (!singleAdStructure) {
+          let respSecondChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+                                <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+                                    <vmap:AdTagURI templateType="vast3">
+                                    <![CDATA[${adsArray[index]["ads"][1]}]]>
+                                    </vmap:AdTagURI>
+                                </vmap:AdSource>
+                              </vmap:AdBreak>`;
 
-  let finalResponse = resp + respFirstChild + respSecondChild + respEnd;
-  return finalResponse;
-}
-else {
-  let finalResponse = resp + respFirstChild + respEnd;
-  return finalResponse;
-}
-}
+          let finalResponse = resp + respFirstChild + respSecondChild + respEnd;
+          return finalResponse;
+        }
+        else {
+          let finalResponse = resp + respFirstChild + respEnd;
+          return finalResponse;
+        }
+      }
       // var makePrerollRequestNew = (index, singleAdStructure = false) => {
       //     return adsArray[index]["ads"][0]
       // }
@@ -588,55 +588,31 @@ function checkPlayerIsInView(){
 const toggleSticky = () => {
   let currentPlayer = document.querySelector('#unibots-video');
   let targetDiv = document.getElementById("ubVideo");
-    if(!isMobile()){
+    // if(!isMobile()){
       if (isInViewport(currentPlayer)) {
           if (targetDiv.classList.contains("ubsticky_left")) {
               targetDiv.classList.remove("ubsticky_left");
-              resizeAds(640,360);
           }
       } else {
           if (stickyFlag) {
               if (!targetDiv.classList.contains("ubsticky_left")) {
                   targetDiv.classList.add("ubsticky_left");
-                  resizeAds(320,180);
               }
           }
           else {
               if (targetDiv.classList.contains("ubsticky_left")) {
                   targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(640,360);
               }
           }
       }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(368,207);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(192,108);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(368,207);
-              }
-          }
-      }
-    }
+    // }
 }
 
-function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak() && !isMobile()){
-    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-  }
-}
+// function resizeAds(raWidth,raHeight){
+//   if(ubPlayer.ads.inAdBreak()){
+//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+//   }
+// }
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
@@ -710,4 +686,4 @@ function setLogo() {
   ubPlayer.el_.appendChild(i);
 }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}.ubsticky_left .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

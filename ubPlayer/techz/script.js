@@ -195,7 +195,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=techz.vn_preroll_1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=techz.vn_preroll_1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -235,7 +235,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=techz.vn_preroll_2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=techz.vn_preroll_2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -259,7 +259,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=techz.vn_preroll_1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=techz.vn_preroll_1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -267,7 +267,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=techz.vn_preroll_2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=techz.vn_preroll_2&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 30,
@@ -275,7 +275,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=techz.vn_preroll_1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=techz.vn_preroll_1&ad_type=video&description_url=' + desc_url + '&max_ad_duration=300000&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -563,15 +563,6 @@ function initPlayer() {
   }
 }
 
-function checkPlayerPlaying(){
-  return ubPlayer.paused() ? false : true;
-}
-
-function playerPPChecker(){
-  ubPlayer.on('play',()=>{ console.log("Player Play's")});
-  ubPlayer.on('pause',()=>{ console.log("Player paused")});
-}  
-
 function checkPlayerIsInView(){
   window.addEventListener('scroll', function () {
     if(!isPlayerViewedOnce){
@@ -675,6 +666,34 @@ function isNearViewport(el) {
       // }
   }, { threshold: [0], rootMargin: "640px 0px 640px 0px" });
   observer.observe(el);
+}
+function playerandAdsShouldRuninViewport(workingFlag = false){
+  if(isMobile() && (workingFlag && !isPlayerViewedOnce)){
+    if(isInViewport(PlayerSelector)){
+        isPlayerViewedOnce = true;
+        ubplay(true);
+        if(ubPlayer.ads.inAdBreak()){
+            ubPlayer.ima.resumeAd();
+        }
+    }else{
+        ubplay();
+        if(ubPlayer.ads.inAdBreak()){
+          ubPlayer.ima.pauseAd();
+        }
+    }
+  } 
+}
+function ubplay(flag = false){
+  if(flag){
+    ubPlayer.autoplay(true);
+    ubPlayer.play();
+  }
+  else{
+    ubPlayer.pause();
+  }
+}
+function checkPlayerPlaying(){
+  return ubPlayer.paused() ? false : true;
 }
 
 // function checkfifty(el) {

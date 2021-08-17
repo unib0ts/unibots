@@ -267,7 +267,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongdaplus.vn_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongdaplus.vn_preroll_adx2&ad_type=video&description_url=' + desc_url + '&sdmax=120000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 30,

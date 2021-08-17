@@ -636,6 +636,9 @@ function resizeAds(raWidth,raHeight){
   if(ubPlayer.ads.inAdBreak() && !isMobile()){
     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
   }
+  else if (ubPlayer.ads.inAdBreak() && isMobile()) {
+     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+  }
 }
 
 function isInViewport(el) {

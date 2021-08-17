@@ -201,7 +201,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -217,7 +217,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -225,7 +225,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -265,7 +265,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -297,7 +297,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -313,7 +313,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/22082859479/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/andhrajyothy.com_preroll_gpt2&description_url=' + desc_url + '&vpos=preroll&tfcd=0&npa=0&sz=344x258&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,

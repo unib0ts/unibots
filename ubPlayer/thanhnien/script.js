@@ -172,7 +172,7 @@ function ubPlayer_scripts() {
     }
 
     ubPlayer = videojs('content_video', vjsOptions);
-    ubPlayer.src({ type: "video/mp4", src: "https://cdn.unibots.in/top_indian_sweet.mp4"});
+    ubPlayer.src({ type: "video/mp4", src: "https://cdn.unibots.in/yoga.mp4"});
 
     var imaOptions = {
       id: "content_video",

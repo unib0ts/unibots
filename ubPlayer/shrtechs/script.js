@@ -175,7 +175,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 1,
@@ -183,7 +183,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 5,
@@ -191,7 +191,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=olm.vn_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=shrtechs.com_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -199,7 +199,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 5,
@@ -207,7 +207,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -215,7 +215,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 20,
@@ -223,7 +223,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -231,7 +231,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=olm.vn_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=shrtechs.com_adx1a_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -239,7 +239,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -247,7 +247,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -255,7 +255,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=olm.vn_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=shrtechs.com_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -263,7 +263,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=olm.vn_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=shrtechs.com_adx1a_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
           ],
           type: 'preroll',
           delay: 30,
@@ -271,7 +271,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=olm.vn_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=shrtechs.com_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -279,7 +279,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -287,7 +287,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -295,7 +295,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -303,7 +303,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/olm.vn_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,

@@ -1,6 +1,6 @@
 //url blocked for playerlaod
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksDanviet.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDanviet.json';
 mybotBlockedClientName = 'danviet';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
@@ -49,6 +49,14 @@ function ubPlayer_scripts() {
     return check;
   };
 
+  mybotGACode = "G-G9PY5DQMQB";
+  mybotgabyub ='<script async src="https://www.googletagmanager.com/gtag/js?id=' +mybotGACode +'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "' + mybotGACode +'");</script>';
+
+  ub_ga = document.createElement("div");
+  ub_ga.id = "gabyub";
+  document.getElementsByTagName("head")[0].appendChild(ub_ga);
+  document.getElementById("gabyub").innerHTML = mybotgabyub;
+
   function loadDynamicStyles(url){
     var link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -95,7 +103,7 @@ function ubPlayer_scripts() {
   }
 
   listen_scripts();
-
+  loadUbga("gabyub");
 
   let ubIma = document.createElement("script");
   ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
@@ -187,7 +195,7 @@ function ubPlayer_scripts() {
           }
         };
         ubPlayer.ima(imaOptions);
-      
+
       ubPlayer.on('adserror',function(err) {
             console.log('ads error!');
             console.log(err);
@@ -310,6 +318,29 @@ function ubPlayer_scripts() {
     i.classList.add = "ubp_logo";
     i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
     ubPlayer.el_.appendChild(i);
+  }
+
+  function loadUbga(id, adUnits) {
+      var elm = document.getElementById(id);
+      var scripts = Array(elm.querySelectorAll("script"));
+      scripts = scripts[0];
+      for (var i = 0; i < scripts.length; i++) {
+          oldScript = scripts[i];
+          const newScript = document.createElement("script");
+          var scriptAttr = Array(oldScript.attributes);
+          scriptAttr = scriptAttr[0];
+          for (var j = 0; j < scriptAttr.length; j++) {
+              attr = scriptAttr[j];
+              newScript.setAttribute(attr.name, attr.value);
+          }
+          newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+          newScript.onload = function () {
+              if (adUnits !== undefined) {
+                  smartyads.buildUnits(adUnits);
+              }
+          };
+          oldScript.parentNode.replaceChild(newScript, oldScript);
+      }
   }
 }
 function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}#ubVideo{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;left:10px;width:320px!important;z-index:999999999;animation:an 0.8s}.ubsticky .content_video-dimensions{width:320px!important;height:180px!important}.video-js .vjs-control.vjs-close-button{right:-15px!important;top:-25px!important;z-index:2147483647!important}#unibots-video{margin:30px 0}#unibots-video iframe{min-height:auto}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky{right:10px!important;left:auto!important;bottom:150px;width:192px!important;height:108px!important}.ubsticky .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

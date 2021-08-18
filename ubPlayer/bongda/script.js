@@ -160,8 +160,8 @@ function initPlayer() {
           muted: false,
           loadingSpinner: false,
           bigPlayButton: false,
-          width: isMobile() ? 344 : 400,
-          height: isMobile()? 258 : 225,
+          width: isMobile() ? 344 : 528,
+          height: isMobile()? 258 : 297,
           controlBar: {
               volumePanel: {
                   inline: false,
@@ -179,7 +179,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 1,
@@ -187,7 +187,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -203,7 +203,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 5,
@@ -211,7 +211,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 0,
@@ -219,7 +219,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 20,
@@ -227,7 +227,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -243,7 +243,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -251,7 +251,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -283,7 +283,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -291,7 +291,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -299,7 +299,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt2_new&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s',
           ],
           type: 'preroll',
           delay: 10,
@@ -307,7 +307,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongdaplus.vn_preroll_gpt1&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C528x297&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,

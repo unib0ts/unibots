@@ -218,14 +218,14 @@ function ubPlayer_scripts() {
         var desc_url = encodeURIComponent(window.location.href);
 
         var adsArray = [
-          {
-            ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
-            ],
-            type: 'preroll',
-            delay: 1,
-            src: 'gpt'
-          },
+        //   {
+        //     ads: [
+        //       'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+        //     ],
+        //     type: 'preroll',
+        //     delay: 1,
+        //     src: 'gpt'
+        //   },
           {
             ads: [
               'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
@@ -397,37 +397,37 @@ function ubPlayer_scripts() {
         //       src: 'gpt'
         //     },
         //   ];
-        let makePrerollRequest = (index, singleAdStructure = false) => {
-          let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
-          let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
-                                  <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
-                                      <vmap:AdTagURI templateType="vast3">
-                                      <![CDATA[${adsArray[index]["ads"][0]}]]>
-                                      </vmap:AdTagURI>
-                                  </vmap:AdSource>
-                                </vmap:AdBreak>`;
-          let respEnd = `</vmap:VMAP>`;
-          if (!singleAdStructure) {
-            let respSecondChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
-                                  <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
-                                      <vmap:AdTagURI templateType="vast3">
-                                      <![CDATA[${adsArray[index]["ads"][1]}]]>
-                                      </vmap:AdTagURI>
-                                  </vmap:AdSource>
-                                </vmap:AdBreak>`;
-
-            let finalResponse = resp + respFirstChild + respSecondChild + respEnd;
-            return finalResponse;
-          }
-          else {
-            let finalResponse = resp + respFirstChild + respEnd;
-            return finalResponse;
-          }
-        }
-        // var makePrerollRequestNew = (index, singleAdStructure = false) => {
-        //     return adsArray[index]["ads"][0]
+        // let makePrerollRequest = (index, singleAdStructure = false) => {
+        //   let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
+        //   let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+        //                           <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+        //                               <vmap:AdTagURI templateType="vast3">
+        //                               <![CDATA[${adsArray[index]["ads"][0]}]]>
+        //                               </vmap:AdTagURI>
+        //                           </vmap:AdSource>
+        //                         </vmap:AdBreak>`;
+        //   let respEnd = `</vmap:VMAP>`;
+        //   if (!singleAdStructure) {
+        //     let respSecondChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+        //                           <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+        //                               <vmap:AdTagURI templateType="vast3">
+        //                               <![CDATA[${adsArray[index]["ads"][1]}]]>
+        //                               </vmap:AdTagURI>
+        //                           </vmap:AdSource>
+        //                         </vmap:AdBreak>`;
+          
+        //     let finalResponse = resp + respFirstChild + respSecondChild + respEnd;
+        //     return finalResponse;
+        //   }
+        //   else {
+        //     let finalResponse = resp + respFirstChild + respEnd;
+        //     return finalResponse;
+        //   }
         // }
-
+        var makePrerollRequestNew = (index, singleAdStructure = false) => {
+            return adsArray[index]["ads"][0]
+        }
+  
         ubPlayer = videojs('content_video', vjsOptions);
         ubPlayer.src({
             type: "video/mp4",
@@ -436,7 +436,8 @@ function ubPlayer_scripts() {
 
         var imaOptions = {
             id: "content_video",
-            adsResponse: makePrerollRequest(0, true),
+            adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            // adsResponse: makePrerollRequest(0, true),
             disableCustomPlaybackForIOS10Plus: true,
             contribAdsSettings: {
                 debug: true,
@@ -458,13 +459,7 @@ function ubPlayer_scripts() {
                       stickyFlag = true;
                       toggleSticky();
                   });
-                  ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
-                      // console.log("AD LOADED \n",e);
-                      // stickyFlag = true;
-                      // showPlayer();
-
-                  });
-
+  
                   ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
                       ubPlayer.ima.getAdsManager().destroy();
                       ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
@@ -489,8 +484,8 @@ function ubPlayer_scripts() {
 
         let newIMA = (adsIndex,isSkipped = false) => {
           if(checkPlayerPlaying() || (adsIndex <= 1)){
-              // ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
-            ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
+              ubPlayer.ima.changeAdTag(makePrerollRequestNew(adsIndex));
+            // ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
               setTimeout(() => {
                   ubPlayer.ima.requestAds();
               }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
@@ -557,7 +552,7 @@ function ubPlayer_scripts() {
                     ubplay(true);
                     isPlayerViewedOnce = true;
                 }else{
-                  ubplay();
+                    ubplay();
                 }
                 //endshere
             }
@@ -718,10 +713,12 @@ function ubPlayer_scripts() {
               ubPlayer.ima.resumeAd();
           }
       }else{
+        if(!isPlayerViewedOnce){  
           ubplay();
           if(ubPlayer.ads.inAdBreak()){
             ubPlayer.ima.pauseAd();
           }
+        }
       }
     }
   }

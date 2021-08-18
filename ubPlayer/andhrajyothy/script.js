@@ -582,16 +582,10 @@ function checkPlayerPlaying(){
   return ubPlayer.paused() ? false : true;
 }
 
-function playerPPChecker(){
-  ubPlayer.on('play',()=>{ console.log("Player Play's")});
-  ubPlayer.on('pause',()=>{ console.log("Player paused")});
-}  
-
 function checkPlayerIsInView(){
   window.addEventListener('scroll', function () {
     if(!isPlayerViewedOnce){
       if(isInViewport(document.querySelector('#unibots-video'))){
-          console.log('isinviewport');
           ubPlayer.autoplay(true);
           ubPlayer.play();
           // if(ubPlayer.ads.inAdBreak()){
@@ -601,11 +595,11 @@ function checkPlayerIsInView(){
       }
     }
   });
-  if(isInViewport(document.querySelector('#unibots-video'))){
-    checkUnmutedAutoplaySupport();
-    isPlayerViewedOnce = true;
-    setTimeout(()=>{ ubPlayer.autoplay(true); ubPlayer.play(); showPlayer(); },200);
-  }
+  // if(isInViewport(document.querySelector('#unibots-video')) && !isPlayerViewedOnce){
+  //   checkUnmutedAutoplaySupport();
+  //   isPlayerViewedOnce = true;
+  //   setTimeout(()=>{ ubPlayer.autoplay(true); ubPlayer.play(); showPlayer(); },200);
+  // }
 }
 
 // function checkPlayerIsInView(){
@@ -651,11 +645,11 @@ function checkPlayerIsInView(){
 //   }
 // }
 
-function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak() && !isMobile()){
-    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-  }
-}
+// function resizeAds(raWidth,raHeight){
+//   if(ubPlayer.ads.inAdBreak() && !isMobile()){
+//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+//   }
+// }
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();

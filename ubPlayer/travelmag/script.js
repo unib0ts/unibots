@@ -4,6 +4,14 @@ function isMobile() {
   return check;
 };
 
+mybotGACode = "G-01W7W1L891";
+mybotgabyub ='<script async src="https://www.googletagmanager.com/gtag/js?id=' +mybotGACode +'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "' + mybotGACode +'");</script>';
+
+ub_ga = document.createElement("div");
+ub_ga.id = "gabyub";
+document.getElementsByTagName("head")[0].appendChild(ub_ga);
+document.getElementById("gabyub").innerHTML = mybotgabyub;
+
 function loadDynamicStyles(url) {
   var link = document.createElement('link');
   link.rel = 'stylesheet';
@@ -11,14 +19,6 @@ function loadDynamicStyles(url) {
   link.href = url;
   document.getElementsByTagName('HEAD')[0].appendChild(link);
 }
-
-mybotGACode = "G-4DDMTD3T1P";
-mybotgabyub ='<script async src="https://www.googletagmanager.com/gtag/js?id=' +mybotGACode +'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "' + mybotGACode +'");</script>';
-
-ub_ga = document.createElement("div");
-ub_ga.id = "gabyub";
-document.getElementsByTagName("head")[0].appendChild(ub_ga);
-document.getElementById("gabyub").innerHTML = mybotgabyub;
 
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.min.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.css");
@@ -58,8 +58,6 @@ function listen_scripts() {
   }, 500);
 }
 
-// listen_scripts();
-
 
 var ubIma = document.createElement("script");
 ubIma.setAttribute("src", "https://imasdk.googleapis.com/js/sdkloader/ima3.js");
@@ -95,10 +93,6 @@ ubIma.onload = function () {
               loadUbga("gabyub");
               listen_scripts();
             }
-            // else if(document.getElementById('unibots-video')){
-            //   document.getElementById('unibots-video').innerHTML= myPlayer;
-            //   listen_scripts();
-            // }
             clearInterval(ub_interval_div_check);
           }
   }, 500);
@@ -169,8 +163,8 @@ function initPlayer() {
           muted: false,
           loadingSpinner: false,
           bigPlayButton: false,
-          width: isMobile() ? 330 : 640,
-          height: isMobile()? 186 : 360,
+          width: isMobile() ? 368 : 640,
+          height: isMobile()? 207 : 360,
           controlBar: {
               volumePanel: {
                   inline: false,
@@ -188,7 +182,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 1,
@@ -196,7 +190,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 5,
@@ -204,7 +198,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adx_preroll&ad_type=video&description_url='+desc_url+'&videoad_start_delay=0&hl=en&vpmute=0&vpa=auto&adsafe=low',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=travelmag_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -212,7 +206,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 5,
@@ -220,7 +214,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -228,7 +222,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 20,
@@ -236,7 +230,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -244,7 +238,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=travelmag_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -252,7 +246,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -260,7 +254,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -268,7 +262,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adx_preroll&ad_type=video&description_url='+desc_url+'&videoad_start_delay=0&hl=en&vpmute=0&vpa=auto&adsafe=low',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=travelmag_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -276,7 +270,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adxa1_preroll&ad_type=video&description_url=' + desc_url + '&videoad_start_delay=0&vpa=auto&vpmute=0&max_ad_duration=18000000&sdmax=18000000&adsafe=low&hl=en',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=travelmag_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 30,
@@ -284,7 +278,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=kalyanpanelchart.in_adx_preroll&ad_type=video&description_url='+desc_url+'&videoad_start_delay=0&hl=en&vpmute=0&vpa=auto&adsafe=low',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=travelmag_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
           ],
           type: 'preroll',
           delay: 0,
@@ -292,7 +286,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -300,7 +294,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
@@ -308,7 +302,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpta_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 10,
@@ -316,14 +310,14 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/kalyanpanelchart.in_gpt_preroll&description_url='+desc_url+'&vpos=preroll&tfcd=0&npa=0&sz=330x186%7C400x225%7C640x360%7C165x93&max_ad_duration=360000000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/travelmag_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x240%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
           ],
           type: 'preroll',
           delay: 0,
           src: 'gpt'
         }
       ];
-let makePrerollRequest = (index, singleAdStructure = false) => {
+      let makePrerollRequest = (index, singleAdStructure = false) => {
 let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
 let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
                         <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
@@ -371,31 +365,31 @@ else {
           // autoPlayAdBreaks: false,
           vastLoadTimeout: 2e4,
           adsManagerLoadedCallback: () => {
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
-                    // console.log("ad completed");
-                    stickyFlag = false;
-                    // console.log(`Triggered ${stickyFlag}`)
-                    toggleSticky();
-                });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
-                    // console.log("ads SKIPPED");
-                    stickyFlag = false;
-                    toggleSticky();
-                });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
-                    // console.log("ads started");
-                    stickyFlag = true;
-                    toggleSticky();
-                });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
-                    // console.log("AD LOADED \n",e);
-                    stickyFlag = true;
-                    // showPlayer();
-                    ubPlayer.autoplay(true);
-                    ubPlayer.play();
-                    ubPlayer.ima.resumeAd();
-                    toggleSticky();
-                });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
+                //     // console.log("ad completed");
+                //     stickyFlag = false;
+                //     // console.log(`Triggered ${stickyFlag}`)
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
+                //     // console.log("ads SKIPPED");
+                //     stickyFlag = false;
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
+                //     // console.log("ads started");
+                //     stickyFlag = true;
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
+                //     // console.log("AD LOADED \n",e);
+                //     stickyFlag = true;
+                //     // showPlayer();
+                //     ubPlayer.autoplay(true);
+                //     ubPlayer.play();
+                //     ubPlayer.ima.resumeAd();
+                //     toggleSticky();
+                // });
 
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
                     ubPlayer.ima.getAdsManager().destroy();
@@ -530,12 +524,12 @@ else {
       setLogo();
 
       // if (!isMobile() && window.location.href != "https://docbao.vn/") {
-      if (document.getElementById("unibots-video")) {
-          window.addEventListener('scroll', function () {
-            // if(!stickyFlag) { stickyFlag = true; }
-              toggleSticky();
-          });
-      }
+      // if (document.getElementById("unibots-video")) {
+      //     window.addEventListener('scroll', function () {
+      //       // if(!stickyFlag) { stickyFlag = true; }
+      //         toggleSticky();
+      //     });
+      // }
 
 
        //end of if statement
@@ -597,57 +591,55 @@ function checkPlayerIsInView(){
   }
 }
 
-
-const toggleSticky = () => {
-
-    let currentPlayer = document.querySelector('#unibots-video');
-    let targetDiv = document.getElementById("ubVideo");
-    if(!isMobile()){
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(640,360);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(400,225);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(640,360);
-              }
-          }
-      }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(330,186);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(165,93);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(330,186);
-              }
-          }
-      }
-    }
-}
+// const toggleSticky = () => {
+//   let currentPlayer = document.querySelector('#unibots-video');
+//   let targetDiv = document.getElementById("ubVideo");
+//     if(!isMobile()){
+//       if (isInViewport(currentPlayer)) {
+//           if (targetDiv.classList.contains("ubsticky_left")) {
+//               targetDiv.classList.remove("ubsticky_left");
+//               resizeAds(640,360);
+//           }
+//       } else {
+//           if (stickyFlag) {
+//               if (!targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.add("ubsticky_left");
+//                   resizeAds(320,180);
+//               }
+//           }
+//           else {
+//               if (targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.remove("ubsticky_left");
+//                   resizeAds(640,360);
+//               }
+//           }
+//       }
+//     }
+//     else {
+//       if (isInViewport(currentPlayer)) {
+//           if (targetDiv.classList.contains("ubsticky_left")) {
+//               targetDiv.classList.remove("ubsticky_left");
+//               resizeAds(368,207);
+//           }
+//       } else {
+//           if (stickyFlag) {
+//               if (!targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.add("ubsticky_left");
+//                   resizeAds(192,108);
+//               }
+//           }
+//           else {
+//               if (targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.remove("ubsticky_left");
+//                   resizeAds(368,207);
+//               }
+//           }
+//       }
+//     }
+// }
 
 function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak() && !isMobile()){
+  if(ubPlayer.ads.inAdBreak()){
     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
   }
 }
@@ -724,6 +716,7 @@ function setLogo() {
   ubPlayer.el_.appendChild(i);
 }
 
+
 function loadUbga(id, adUnits) {
     var elm = document.getElementById(id);
     var scripts = Array(elm.querySelectorAll("script"));
@@ -747,4 +740,4 @@ function loadUbga(id, adUnits) {
     }
 }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}.ubsticky_left .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

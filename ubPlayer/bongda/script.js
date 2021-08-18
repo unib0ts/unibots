@@ -597,28 +597,19 @@ const toggleSticky = () => {
     if (isInViewport(currentPlayer)) {
         if (targetDiv.classList.contains("ubsticky_left")) {
             targetDiv.classList.remove("ubsticky_left");
-            resizeAds(640,360);
         }
     } else {
         if (stickyFlag) {
             if (!targetDiv.classList.contains("ubsticky_left")) {
                 targetDiv.classList.add("ubsticky_left");
-                resizeAds(400,225);
             }
         }
         else {
             if (targetDiv.classList.contains("ubsticky_left")) {
                 targetDiv.classList.remove("ubsticky_left");
-                resizeAds(640,360);
             }
         }
     }
-  }
-}
-
-function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak() && !isMobile()){
-    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
   }
 }
 

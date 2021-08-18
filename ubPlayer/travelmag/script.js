@@ -8,9 +8,9 @@ mybotGACode = "G-01W7W1L891";
 mybotgabyub ='<script async src="https://www.googletagmanager.com/gtag/js?id=' +mybotGACode +'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "' + mybotGACode +'");</script>';
 
 ub_ga = document.createElement("div");
-ub_ga.id = "mybotgabyub";
+ub_ga.id = "gabyub";
 document.getElementsByTagName("head")[0].appendChild(ub_ga);
-document.getElementById("mybotgabyub").innerHTML = mybotgabyub;
+document.getElementById("gabyub").innerHTML = mybotgabyub;
 
 function loadDynamicStyles(url) {
   var link = document.createElement('link');
@@ -90,7 +90,7 @@ ubIma.onload = function () {
           if (!flag && checkFlag) {
             if(document.getElementById('unibots-video')){
               document.getElementById('unibots-video').innerHTML= myPlayer;
-              loadUbga("mybotgabyub");
+              loadUbga("gabyub");
               listen_scripts();
             }
             clearInterval(ub_interval_div_check);

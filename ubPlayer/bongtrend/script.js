@@ -139,10 +139,6 @@ function ubPlayer_scripts() {
                 loadUbga("gabyub");
                 listen_scripts();
               }
-              // else if(document.getElementById('unibots-video-mobile')){
-              //   document.getElementById('unibots-video-mobile').innerHTML= myPlayer;
-              //   listen_scripts();
-              // }
               clearInterval(ub_interval_div_check);
             }
     }, 500);
@@ -446,6 +442,7 @@ function ubPlayer_scripts() {
         var imaOptions = {
             id: "content_video",
             adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            // adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
             // adsResponse: makePrerollRequest(0, true),
             disableCustomPlaybackForIOS10Plus: true,
             contribAdsSettings: {
@@ -499,13 +496,6 @@ function ubPlayer_scripts() {
                   ubPlayer.ima.requestAds();
               }, adsArray[adsIndex].delay * 1000); //While using Defined ad dealy
           }
-          // else if(isSkipped){
-          //   console.log("me triggered");
-          //   ubPlayer.ima.controller.settings.adsResponse = makePrerollRequest(adsIndex, true);
-          //     setTimeout(() => {
-          //         ubPlayer.ima.requestAds();
-          //     }, adsArray[adsIndex].delay * 1000);
-          //   }
         }
 
         ubPlayer.on('adserror', function (err) {
@@ -531,218 +521,161 @@ function ubPlayer_scripts() {
         });
 
         const runVideo = () => {
-            if (firstFlag) {
-                firstFlag = false;
-                if (autoplayAllowed) {
-                    if (autoplayRequiresMute) {
-                        ubPlayer.muted(true);
-                    }
-                    ubPlayer.muted(true);
-                    // Autoplay work on script load for PC only
-                    isMobile() ? ubplay() : ubplay(true);
-                }
+          if (firstFlag) {
+              firstFlag = false;
+              if (autoplayAllowed) {
+                  if (autoplayRequiresMute) {
+                      ubPlayer.muted(true);
+                  }
+                  ubPlayer.muted(true);
+                  ubPlayer.autoplay(true);
+                  ubPlayer.play();
+                  // Autoplay work on script load for PC only
+                  // isMobile() ? '' : ubplay(true);
+              }
 
-                if (!autoplayAllowed) {
-                    ubPlayer.muted(true);
-                    // Autoplay work on script load for PC only
-                    isMobile() ? ubplay() : ubplay(true);
+              if (!autoplayAllowed) {
+                  ubPlayer.muted(true);
+                  ubPlayer.autoplay(true);
+                  ubPlayer.play();
+                  // Autoplay work on script load for PC only
+                  // isMobile() ? '' : ubplay(true);
 
-                    if (navigator.userAgent.match(/iPhone/i) ||
-                        navigator.userAgent.match(/iPad/i) ||
-                        navigator.userAgent.match(/Android/i)) {
-                        startEvent = 'touchend';
-                    }
+                  if (navigator.userAgent.match(/iPhone/i) ||
+                      navigator.userAgent.match(/iPad/i) ||
+                      navigator.userAgent.match(/Android/i)) {
+                      startEvent = 'touchend';
+                  }
 
-                    wrapperDiv = document.getElementById('content_video');
-                    wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
-                }
-                //only if page loaded with player in viewport already then below function will work
-                if(isInViewport(document.querySelector('#unibots-video'))){
-                    ubplay(true);
-                    isPlayerViewedOnce = true;
-                }else{
-                    ubplay();
-                }
-                //endshere
-            }
+                  wrapperDiv = document.getElementById('content_video');
+                  wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
+              }
+              //only if page loaded with player in viewport already then below function will work
+              // if(isInViewport(document.querySelector('#unibots-video'))){
+              //     ubplay(true);
+              //     isPlayerViewedOnce = true;
+              // }else{
+              //     ubplay();
+              // }
+              //endshere
+          }
 
-        }
-        ubPlayer.on('adsready', () => {  runVideo(); });
+      }
+      ubPlayer.on('adsready', () => {  runVideo(); });
 
-        ubPlayer.on('play', () => {
-            ubPlayer.volume(0.1);
-            if (!ubPlayer.muted()) {
-                ubPlayer.muted(true);
-            }
-        });
+      ubPlayer.on('play', () => {
+          ubPlayer.volume(0.1);
+          if (!ubPlayer.muted()) {
+              ubPlayer.muted(true);
+          }
+      });
 
-        var button = videojs.getComponent('CloseButton');
-        var CloseButton = videojs.extend(button, {
-            constructor: function () {
-                button.apply(this, arguments);
-                this.controlText("Close Player");
-                this.addClass('ubp-close');
-            },
-            handleClick: function () {
-                this.player().dispose();
-            }
-        });
-        videojs.registerComponent('CloseButton', CloseButton);
-        ubPlayer.addChild('CloseButton');
+      var button = videojs.getComponent('CloseButton');
+      var CloseButton = videojs.extend(button, {
+          constructor: function () {
+              button.apply(this, arguments);
+              this.controlText("Close Player");
+              // this.addClass('ubp-close');
+          },
+          handleClick: function () {
+              this.player().dispose();
+          }
+      });
+      videojs.registerComponent('CloseButton', CloseButton);
+      ubPlayer.addChild('CloseButton');
 
-        //close player on video end.
-        ubPlayer.on('timeupdate', function () {
-            if (ubPlayer.currentTime() == ubPlayer.duration()) {
-                console.log('video is ended');
-                ubPlayer.dispose();
-            }
-        });
-        setLogo();
+      //close player on video end.
+      ubPlayer.on('timeupdate', function () {
+          if (ubPlayer.currentTime() == ubPlayer.duration()) {
+              console.log('video is ended');
+              ubPlayer.dispose();
+          }
+      });
+      setLogo();
 
+      // PlayerPlaysonlyInView(true); // Set to true if player should play only in view for mobile
+      
+   checkPlayerIsInView();
 
-        window.addEventListener('scroll', function () {
-          playerandAdsShouldRuninViewport(true);
-          // if(!stickyFlag) { stickyFlag = true; }
-          toggleSticky();
-        });
-
-        ubPlayer.on('play',()=>{ console.log("Player Play's")});
-        ubPlayer.on('pause',()=>{ console.log("Player paused")});
-    }
+      ubPlayer.on('play',()=>{ console.log("Player Play's")});
+      ubPlayer.on('pause',()=>{ console.log("Player paused")});
   }
+}
 
-  // Code for intialize IMA and Video player only when player is in Viewport
+// Code for intialize IMA and Video player only when player is in Viewport
 
-  // function checkPlayerIsInView(){
-  //   window.addEventListener('scroll', function () {
-  //     if(!isPlayerViewedOnce){
-  //       if(isInViewport(document.querySelector('#unibots-video'))){
-  //         checkUnmutedAutoplaySupport();
-  //         isPlayerViewedOnce = true;
-  //       }
+function checkPlayerIsInView(){
+  window.addEventListener('scroll', function () {
+  //   if(!isPlayerViewedOnce){
+  //     if(isInViewport(document.querySelector('#unibots-video'))){
+  //       checkUnmutedAutoplaySupport();
+  //       isPlayerViewedOnce = true;
   //     }
-  //   });
-  //   if(isInViewport(document.querySelector('#unibots-video'))){
-  //     checkUnmutedAutoplaySupport();
-  //     isPlayerViewedOnce = true;
   //   }
+    toggleSticky();
+  });
+  // if(isInViewport(document.querySelector('#unibots-video')) && !isPlayerViewedOnce){
+  //   // ubplay(true);
+  //   checkUnmutedAutoplaySupport();
+  //   isPlayerViewedOnce = true;
   // }
+}
 
 
-  const toggleSticky = () => {
-    let currentPlayer = document.querySelector('#unibots-video');
-    let targetDiv = document.getElementById("ubVideo");
+const toggleSticky = () => {
+  let currentPlayer = document.querySelector('#unibots-video');
+  let targetDiv = document.getElementById("ubVideo");
 
-    if(!isMobile()){
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              // resizeAds(640,360);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  // resizeAds(400,225);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  // resizeAds(640,360);
-              }
-          }
-      }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(320,180);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(192,108);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(320,180);
-              }
-          }
-      }
-    }
-  }
-
-  function resizeAds(raWidth,raHeight){
-    if(ubPlayer.ads.inAdBreak()){
-      ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-    }
-  }
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.bottom > 0 &&
-        rect.right > 0 &&
-        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-        rect.top < (window.innerHeight || document.documentElement.clientHeight);
-  }
-  function isNearViewport(el) {
-    let observer = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) {
-            if (!viewportfirstFlag) {
-                checkUnmutedAutoplaySupport();
-              viewportfirstFlag = true;
+  // if(!isMobile()){
+    if (isInViewport(currentPlayer)) {
+        if (targetDiv.classList.contains("ubsticky_left")) {
+            targetDiv.classList.remove("ubsticky_left");
+        }
+    } else {
+        if (stickyFlag) {
+            if (!targetDiv.classList.contains("ubsticky_left")) {
+                targetDiv.classList.add("ubsticky_left");
             }
-            nearViewportFlag = true;
-
         }
-        // if (!(entries[0].isIntersecting)) {
-        //       if(!viewportfirstFlag){
-        //         ubPlayer.pause();
-        //         if(ubPlayer.ads.inAdBreak()){
-        //           ubPlayer.ima.pauseAd();
-        //         }
-        //       }
-        //      nearViewportFlag = false;
-        // }
-    }, { threshold: [0], rootMargin: "640px 0px 640px 0px" });
-    observer.observe(el);
-  }
-
-  function playerandAdsShouldRuninViewport(workingFlag = false){
-    if(isMobile() && (workingFlag && !isPlayerViewedOnce)){
-      if(isInViewport(PlayerSelector)){
-          isPlayerViewedOnce = true;
-          ubplay(true);
-          if(ubPlayer.ads.inAdBreak()){
-              ubPlayer.ima.resumeAd();
-          }
-      }else{
-        if(!isPlayerViewedOnce){  
-          ubplay();
-          if(ubPlayer.ads.inAdBreak()){
-            ubPlayer.ima.pauseAd();
-          }
+        else {
+            if (targetDiv.classList.contains("ubsticky_left")) {
+                targetDiv.classList.remove("ubsticky_left");
+            }
         }
+    }
+  // }
+}
+
+// function resizeAds(raWidth,raHeight){
+//   if(ubPlayer.ads.inAdBreak()){
+//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+//   }
+// }
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.bottom > 0 &&
+      rect.right > 0 &&
+      rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+      rect.top < (window.innerHeight || document.documentElement.clientHeight);
+}
+
+function isNearViewport(el) {
+  let observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+          if (!viewportfirstFlag) {
+              checkUnmutedAutoplaySupport();
+            viewportfirstFlag = true;
+          }
+          nearViewportFlag = true;
       }
-    }
-  }
-  function ubplay(flag = false){
-    if(flag){
-      ubPlayer.autoplay(true);
-      ubPlayer.play();
-    }
-    else{
-      ubPlayer.pause();
-    }
-  }
-  function checkPlayerPlaying(){
+  }, { threshold: [0], rootMargin: "140px 0px 140px 0px" });
+  observer.observe(el);
+}
+ 
+function checkPlayerPlaying(){
     return ubPlayer.paused() ? false : true;
-  }
+}
 
   // function checkfifty(el) {
   //   const rect = el.getBoundingClientRect();

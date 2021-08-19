@@ -329,6 +329,41 @@ function initPlayer() {
         }
       ];
 
+      // var adsArray = [
+      //   {
+      //     ads: [
+      //       'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+      //     ],
+      //     type: 'preroll',
+      //     delay: 1,
+      //     src: 'gpt'
+      //   },
+      //   {
+      //     ads: [
+      //       'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+      //     ],
+      //     type: 'preroll',
+      //     delay: 0,
+      //     src: 'gpt'
+      //   },
+      //   {
+      //     ads: [
+      //       'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+      //     ],
+      //     type: 'preroll',
+      //     delay: 5,
+      //     src: 'gpt'
+      //   },
+      //   {
+      //     ads: [
+      //       'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+      //     ],
+      //     type: 'preroll',
+      //     delay: 0,
+      //     src: 'gpt'
+      //   },
+      // ];
+
       let makePrerollRequest = (index, singleAdStructure = false) => {
       let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
       let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
@@ -360,11 +395,17 @@ function initPlayer() {
       //     return adsArray[index]["ads"][0]
       // }
 
+      let ubPlayer_src = [
+          "https://unibots.b-cdn.net/abn/1629199483.4458594.mp4",
+          "https://cdn.unibots.in/abn/1629219671.4344683.mp4",
+          // "https://cdn.unibots.in/abn/cgjg.mp4",
+          "https://cdn.unibots.in/abn/Car_Hits_Lorry:_Horrific_Road_Mishap_At_Kamaredd_final.mp4"
+      ];
+      let src_index = Math.floor(Math.random() * 2) + 1;
+
+
       ubPlayer = videojs('content_video', vjsOptions);
-      ubPlayer.src({
-          type: "video/mp4",
-          src: "https://cdn.unibots.in/allegations_on_ap_financial_situation.mp4",
-      });
+      ubPlayer.src({ type: "video/mp4", src: ubPlayer_src[src_index] });
 
       var imaOptions = {
           id: "content_video",
@@ -473,14 +514,14 @@ function initPlayer() {
                       ubPlayer.muted(true);
                   }
                   ubPlayer.muted(true);
-                  // ubPlayer.autoplay(true);
-                  // ubPlayer.play();
+                  ubPlayer.autoplay(true);
+                  ubPlayer.play();
               }
 
               if (!autoplayAllowed) {
                   ubPlayer.muted(true);
-                  // ubPlayer.autoplay(true);
-                  // ubPlayer.play();
+                  ubPlayer.autoplay(true);
+                  ubPlayer.play();
 
                   if (navigator.userAgent.match(/iPhone/i) ||
                       navigator.userAgent.match(/iPad/i) ||
@@ -492,10 +533,10 @@ function initPlayer() {
                   wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
               }
               //only if page loaded with player inviewport
-              if(isInViewport(document.querySelector('#unibots-video'))){
-                  ubPlayer.autoplay(true);
-                  ubPlayer.play();
-              }
+              // if(isInViewport(document.querySelector('#unibots-video'))){
+              //     ubPlayer.autoplay(true);
+              //     ubPlayer.play();
+              // }
           }
 
       }
@@ -532,7 +573,7 @@ function initPlayer() {
       });
       setLogo();
 
-      checkPlayerIsInView();
+      // checkPlayerIsInView();
 
       // if (!isMobile() && window.location.href != "https://docbao.vn/") {
       // if (document.getElementById("unibots-video")) {
@@ -582,41 +623,18 @@ function checkPlayerPlaying(){
   return ubPlayer.paused() ? false : true;
 }
 
-function checkPlayerIsInView(){
-  window.addEventListener('scroll', function () {
-    if(!isPlayerViewedOnce){
-      if(isInViewport(document.querySelector('#unibots-video'))){
-          ubPlayer.autoplay(true);
-          ubPlayer.play();
-          // if(ubPlayer.ads.inAdBreak()){
-          //     ubPlayer.ima.resumeAd();
-          // }
-        isPlayerViewedOnce = true;
-      }
-    }
-  });
-  // if(isInViewport(document.querySelector('#unibots-video')) && !isPlayerViewedOnce){
-  //   checkUnmutedAutoplaySupport();
-  //   isPlayerViewedOnce = true;
-  //   setTimeout(()=>{ ubPlayer.autoplay(true); ubPlayer.play(); showPlayer(); },200);
-  // }
-}
-
 // function checkPlayerIsInView(){
 //   window.addEventListener('scroll', function () {
-//     if(!isPlayerViewedOnce){
-//       if(isInViewport(document.querySelector('#unibots-video'))){
-//         checkUnmutedAutoplaySupport();
-//         isPlayerViewedOnce = true;
-//       }
-//     }
+//   //   if(!isPlayerViewedOnce){
+//   //     if(isInViewport(document.querySelector('#unibots-video'))){
+//   //       checkUnmutedAutoplaySupport();
+//   //       isPlayerViewedOnce = true;
+//   //     }
+//   //   }
+//     toggleSticky();
 //   });
-//   if(isInViewport(document.querySelector('#unibots-video'))){
-//     checkUnmutedAutoplaySupport();
-//     isPlayerViewedOnce = true;
-//   }
 // }
-              
+
 
 // const toggleSticky = () => {
 //   if(!isMobile()){
@@ -682,7 +700,7 @@ function isNearViewport(el) {
       //       }
       //      nearViewportFlag = false;
       // }
-  }, { threshold: [0], rootMargin: "640px 0px 640px 0px" });
+  }, { threshold: [0], rootMargin: "140px 0px 140px 0px" });
   observer.observe(el);
 }
 

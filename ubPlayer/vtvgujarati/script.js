@@ -168,8 +168,8 @@ function initPlayer() {
           muted: false,
           loadingSpinner: false,
           bigPlayButton: false,
-          width: isMobile() ? 320 : 320,
-          height: isMobile() ? 180 : 180,
+          width: isMobile() ? 320 : 640,
+          height: isMobile() ? 180 : 360,
           controlBar: {
               volumePanel: {
                   inline: false,
@@ -596,7 +596,7 @@ const toggleSticky = () => {
       if (isInViewport(currentPlayer)) {
           if (targetDiv.classList.contains("ubsticky")) {
               targetDiv.classList.remove("ubsticky");
-              resizeAds(320,180);
+              resizeAds(640,360);
           }
       } else {
           if (stickyFlag) {
@@ -608,7 +608,7 @@ const toggleSticky = () => {
           else {
               if (targetDiv.classList.contains("ubsticky")) {
                   targetDiv.classList.remove("ubsticky");
-                  resizeAds(320,180);
+                  resizeAds(640,360);
               }
           }
       }

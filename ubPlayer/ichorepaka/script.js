@@ -50,6 +50,14 @@ function ubPlayer_scripts() {
     return check;
   };
 
+  mybotGACode = "G-QPVFSFT4J4";
+  mybotgabyub ='<script async src="https://www.googletagmanager.com/gtag/js?id=' +mybotGACode +'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "' + mybotGACode +'");</script>';
+
+  ub_ga = document.createElement("div");
+  ub_ga.id = "gabyub";
+  document.getElementsByTagName("head")[0].appendChild(ub_ga);
+  document.getElementById("gabyub").innerHTML = mybotgabyub;
+
   function loadDynamicStyles(url) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';

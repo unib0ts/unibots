@@ -597,55 +597,34 @@ function checkPlayerIsInView(){
 const toggleSticky = () => {
   let currentPlayer = document.querySelector('#unibots-video');
   let targetDiv = document.getElementById("ubVideo");
-    if(!isMobile()){
+    // if(!isMobile()){
       if (isInViewport(currentPlayer)) {
           if (targetDiv.classList.contains("ubsticky_left")) {
               targetDiv.classList.remove("ubsticky_left");
-              resizeAds(640,360);
+              // resizeAds(640,360);
           }
       } else {
           if (stickyFlag) {
               if (!targetDiv.classList.contains("ubsticky_left")) {
                   targetDiv.classList.add("ubsticky_left");
-                  resizeAds(320,180);
+                  // resizeAds(320,180);
               }
           }
           else {
               if (targetDiv.classList.contains("ubsticky_left")) {
                   targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(640,360);
+                  // resizeAds(640,360);
               }
           }
       }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(368,207);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(192,108);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(368,207);
-              }
-          }
-      }
-    }
+    // }
 }
 
-function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak()){
-    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-  }
-}
+// function (raWidth,raHeight){
+//   if(ubPlayer.ads.inAdBreak()){
+//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+//   }
+// }
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();

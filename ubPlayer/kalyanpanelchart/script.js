@@ -602,55 +602,32 @@ const toggleSticky = () => {
 
     let currentPlayer = document.querySelector('#unibots-video');
     let targetDiv = document.getElementById("ubVideo");
-    if(!isMobile()){
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(640,360);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(400,225);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(640,360);
-              }
-          }
-      }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              resizeAds(330,186);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  resizeAds(165,93);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  resizeAds(330,186);
-              }
-          }
-      }
+    if (isInViewport(currentPlayer)) {
+        if (targetDiv.classList.contains("ubsticky_left")) {
+            targetDiv.classList.remove("ubsticky_left");
+            // resizeAds(640,360);
+        }
+    } else {
+        if (stickyFlag) {
+            if (!targetDiv.classList.contains("ubsticky_left")) {
+                targetDiv.classList.add("ubsticky_left");
+                // resizeAds(400,225);
+            }
+        }
+        else {
+            if (targetDiv.classList.contains("ubsticky_left")) {
+                targetDiv.classList.remove("ubsticky_left");
+                // resizeAds(640,360);
+            }
+        }
     }
 }
 
-function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak() && !isMobile()){
-    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-  }
-}
+// function resizeAds(raWidth,raHeight){
+//   if(ubPlayer.ads.inAdBreak() && !isMobile()){
+//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+//   }
+// }
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();

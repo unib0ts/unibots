@@ -371,17 +371,17 @@ else {
                     // console.log("ad completed");
                     stickyFlag = false;
                     // console.log(`Triggered ${stickyFlag}`)
-                    toggleSticky();
+                    ubtoggleSticky();
                 });
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
                     // console.log("ads SKIPPED");
                     stickyFlag = false;
-                    toggleSticky();
+                    ubtoggleSticky();
                 });
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
                     // console.log("ads started");
                     stickyFlag = true;
-                    toggleSticky();
+                    ubtoggleSticky();
                 });
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
                     // console.log("AD LOADED \n",e);
@@ -390,7 +390,7 @@ else {
                     ubPlayer.autoplay(true);
                     ubPlayer.play();
                     ubPlayer.ima.resumeAd();
-                    toggleSticky();
+                    ubtoggleSticky();
                 });
 
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
@@ -529,7 +529,7 @@ else {
       if (document.getElementById("unibots-video")) {
           window.addEventListener('scroll', function () {
             // if(!stickyFlag) { stickyFlag = true; }
-              toggleSticky();
+              ubtoggleSticky();
           });
       }
 
@@ -594,7 +594,7 @@ function checkPlayerIsInView(){
 }
 
 
-const toggleSticky = () => {
+const ubtoggleSticky = () => {
   let currentPlayer = document.querySelector('#unibots-video');
   let targetDiv = document.getElementById("ubVideo");
     // if(!isMobile()){

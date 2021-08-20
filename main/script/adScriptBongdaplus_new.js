@@ -175,7 +175,7 @@ function ubadScript() {
     //   z2.id = "ub-popup-ad-container";
     //   z2.className = "ub-popup-ad-container";
     //   z2.innerHTML =
-    //       '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
+    //       '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624014789114-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624014789114-0);});</script></div>';
     //   x2 = document.querySelector("body");
     //   x2.appendChild(z2);
     // }

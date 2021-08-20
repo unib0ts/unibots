@@ -124,7 +124,7 @@ function ubadScript() {
           if (space > 120) {
               document.querySelector("main").appendChild(z);
               document.getElementById("ub-left-ad").innerHTML =
-                  '<div id="div-gpt-ad-1629456951127-0">';
+                  '<div id="div-gpt-ad-1614845055882-0">';
           }
 
           z = document.createElement("div");
@@ -138,7 +138,7 @@ function ubadScript() {
           if (space > 120) {
               document.querySelector("main").appendChild(z);
               document.getElementById("ub-right-ad").innerHTML =
-                  '<div id="div-gpt-ad-1629456984219-0">';
+                  '<div id="div-gpt-ad-1614845141925-0">';
           }
       }
 
@@ -147,7 +147,7 @@ function ubadScript() {
           z1.id = "ub-sticky-ad-containerdesk";
           z1.className = "ub-sticky-ad-containerdesk";
           z1.innerHTML =
-              '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1629456718562-0"></div';
+              '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
           x1 = document.querySelector("body");
           x1.appendChild(z1);
       // }
@@ -165,7 +165,7 @@ function ubadScript() {
           z1.id = "ub-sticky-ad-container";
           z1.className = "ub-sticky-ad-container";
           z1.innerHTML =
-              '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1629455633030-0"></div>';
+              '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1614845787563-0"></div>';
           x1 = document.querySelector("body");
           x1.appendChild(z1);
       // }
@@ -566,6 +566,24 @@ function ubadScript() {
   ];
 
   var mappings_full_hb_config_desktop = {
+    //   targetUnits: [
+    //     "div-gpt-ad-1622019394824-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
+    //     // 'div-gpt-ad-1620123749103-0',  //''/22140546871/bongdaplus.vn_PC_bottom-article_300x250_1'
+    //     // 'div-gpt-ad-1620123852692-0', //'/22140546871/bongdaplus.vn_PC_bottom-article_300x250_2',
+    //     // 'div-gpt-ad-1619183586523-0', // '/22140546871/bongdaplus.vn_in-article_468x60',
+    //     "div-gpt-ad-1619183875165-0", //'/22140546871/bongdaplus.vn_in-article_336x280',
+    //     // 'div-gpt-ad-1614843621164-0',  //'/22140546871/bongdaplus.vn_pc_header_970x250',
+    //     "div-gpt-ad-1614844401467-0", //'/22140546871/bongdaplus.vn_pc_center1_970x250',
+    //     "div-gpt-ad-1614844501678-0", //'/22140546871/bongdaplus.vn_pc_center2_970x250',
+    //     "div-gpt-ad-1614844652124-0", //'/22140546871/bongdaplus.vn_pc_R1_300x250',
+    //     "div-gpt-ad-1614844767234-0", //'/22140546871/bongdaplus.vn_pc_R2_300x250',
+    //     "div-gpt-ad-1614844828905-0", //'/22140546871/bongdaplus.vn_pc_R3_300x600',
+    //     "div-gpt-ad-1614844910453-0", //'/22140546871/bongdaplus.vn_pc_R4_300x600',
+    //     "div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
+    //     "div-gpt-ad-1614845055882-0", //'/22140546871/bongdaplus.vn_pc_fl_120x600',
+    //     "div-gpt-ad-1614845141925-0", //'/22140546871/bongdaplus.vn_pc_fr_120x600',
+    //     "div-gpt-ad-1615775720668-0", //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
+    // ],
       adUnitNames: [
           "/22057354005/bongdaplus.vn_pc_balloon_hb_300x600",
           // '/22057354005/bongdaplus.vn_PC_bottom-article_300x250_1',
@@ -585,22 +603,39 @@ function ubadScript() {
           "/22057354005/bongdaplus.vn_pc_centerarticlepc_336x280",
       ],
       adId: [
-          "div-gpt-ad-1629456718562-0", //'/22057354005/bongdaplus.vn_pc_balloon_hb_300x600'
-          // 'div-gpt-ad-1629456756868-0',  //''/22057354005/bongdaplus.vn_PC_bottom-article_300x250_1'
-          // 'div-gpt-ad-1629456794698-0', //'/22057354005/bongdaplus.vn_PC_bottom-article_300x250_2',
-          // 'div-gpt-ad-1629455549972-0', // '/22057354005/bongdaplus.vn_in-article_468x60',
-          "div-gpt-ad-1629455527851-0", //'/22057354005/bongdaplus.vn_in-article_336x280',
-          // 'div-gpt-ad-1629457019318-0',  //'/22057354005/bongdaplus.vn_pc_header_970x250',
-          "div-gpt-ad-1629456827053-0", //'/22057354005/bongdaplus.vn_pc_center1_970x250',
-          "div-gpt-ad-1629456866816-0", //'/22057354005/bongdaplus.vn_pc_center2_970x250',
-          "div-gpt-ad-1629457048042-0", //'/22057354005/bongdaplus.vn_pc_R1_300x250',
-          "div-gpt-ad-1629457073149-0", //'/22057354005/bongdaplus.vn_pc_R2_300x250',
-          "div-gpt-ad-1629457094678-0", //'/22057354005/bongdaplus.vn_pc_R3_300x600',
-          "div-gpt-ad-1629457217769-0", //'/22057354005/bongdaplus.vn_pc_R4_300x600',
-          "div-gpt-ad-1629457264337-0", //'/22057354005/bongdaplus.vn_pc_R5_300x600',
-          "div-gpt-ad-1629456951127-0", //'/22057354005/bongdaplus.vn_pc_fl_120x600',
-          "div-gpt-ad-1629456984219-0", //'/22057354005/bongdaplus.vn_pc_fr_120x600',
-          "div-gpt-ad-1629456895452-0", //'/22057354005/bongdaplus.vn_pc_centerarticlepc_336x280',
+            "div-gpt-ad-1622019394824-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
+            // 'div-gpt-ad-1620123749103-0',  //''/22140546871/bongdaplus.vn_PC_bottom-article_300x250_1'
+            // 'div-gpt-ad-1620123852692-0', //'/22140546871/bongdaplus.vn_PC_bottom-article_300x250_2',
+            // 'div-gpt-ad-1619183586523-0', // '/22140546871/bongdaplus.vn_in-article_468x60',
+            "div-gpt-ad-1619183875165-0", //'/22140546871/bongdaplus.vn_in-article_336x280',
+            // 'div-gpt-ad-1614843621164-0',  //'/22140546871/bongdaplus.vn_pc_header_970x250',
+            "div-gpt-ad-1614844401467-0", //'/22140546871/bongdaplus.vn_pc_center1_970x250',
+            "div-gpt-ad-1614844501678-0", //'/22140546871/bongdaplus.vn_pc_center2_970x250',
+            "div-gpt-ad-1614844652124-0", //'/22140546871/bongdaplus.vn_pc_R1_300x250',
+            "div-gpt-ad-1614844767234-0", //'/22140546871/bongdaplus.vn_pc_R2_300x250',
+            "div-gpt-ad-1614844828905-0", //'/22140546871/bongdaplus.vn_pc_R3_300x600',
+            "div-gpt-ad-1614844910453-0", //'/22140546871/bongdaplus.vn_pc_R4_300x600',
+            "div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
+            "div-gpt-ad-1614845055882-0", //'/22140546871/bongdaplus.vn_pc_fl_120x600',
+            "div-gpt-ad-1614845141925-0", //'/22140546871/bongdaplus.vn_pc_fr_120x600',
+            "div-gpt-ad-1615775720668-0", //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
+
+          // "div-gpt-ad-1629456718562-0", //'/22057354005/bongdaplus.vn_pc_balloon_hb_300x600'
+          // // 'div-gpt-ad-1629456756868-0',  //''/22057354005/bongdaplus.vn_PC_bottom-article_300x250_1'
+          // // 'div-gpt-ad-1629456794698-0', //'/22057354005/bongdaplus.vn_PC_bottom-article_300x250_2',
+          // // 'div-gpt-ad-1629455549972-0', // '/22057354005/bongdaplus.vn_in-article_468x60',
+          // "div-gpt-ad-1629455527851-0", //'/22057354005/bongdaplus.vn_in-article_336x280',
+          // // 'div-gpt-ad-1629457019318-0',  //'/22057354005/bongdaplus.vn_pc_header_970x250',
+          // "div-gpt-ad-1629456827053-0", //'/22057354005/bongdaplus.vn_pc_center1_970x250',
+          // "div-gpt-ad-1629456866816-0", //'/22057354005/bongdaplus.vn_pc_center2_970x250',
+          // "div-gpt-ad-1629457048042-0", //'/22057354005/bongdaplus.vn_pc_R1_300x250',
+          // "div-gpt-ad-1629457073149-0", //'/22057354005/bongdaplus.vn_pc_R2_300x250',
+          // "div-gpt-ad-1629457094678-0", //'/22057354005/bongdaplus.vn_pc_R3_300x600',
+          // "div-gpt-ad-1629457217769-0", //'/22057354005/bongdaplus.vn_pc_R4_300x600',
+          // "div-gpt-ad-1629457264337-0", //'/22057354005/bongdaplus.vn_pc_R5_300x600',
+          // "div-gpt-ad-1629456951127-0", //'/22057354005/bongdaplus.vn_pc_fl_120x600',
+          // "div-gpt-ad-1629456984219-0", //'/22057354005/bongdaplus.vn_pc_fr_120x600',
+          // "div-gpt-ad-1629456895452-0", //'/22057354005/bongdaplus.vn_pc_centerarticlepc_336x280',
       ],
       sizes: [
           [
@@ -842,6 +877,19 @@ function ubadScript() {
       ],
   };
   var mappings_full_hb_config_mobile = {
+    //   targetUnits: [
+    //   "div-gpt-ad-1619183586523-0", // '/22140546871/bongdaplus.vn_in-article_468x60',
+    //     "div-gpt-ad-1619183875165-0", //'/22140546871/bongdaplus.vn_in-article_336x280',
+    //     "div-gpt-ad-1614845286577-0", //'/22140546871/bongdaplus.vn_mb_hot1_336x280',
+    //     "div-gpt-ad-1614845393134-0", //'/22140546871/bongdaplus.vn_mb_hot2_300x600',
+    //     "div-gpt-ad-1614845452435-0", //'/22140546871/bongdaplus.vn_mb_center1_336x280',
+    //     "div-gpt-ad-1614845556049-0", //'/22140546871/bongdaplus.vn_mb_center2_336x280',
+    //     "div-gpt-ad-1614845628694-0", //'/22140546871/bongdaplus.vn_mb_center3_336x280',
+    //     "div-gpt-ad-1614845690965-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
+    //     "div-gpt-ad-1614845787563-0", //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
+    //     // "div-gpt-ad-1615775641979-0",  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
+    //     // 'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
+    // ],
       adUnitNames: [
           "/22057354005/bongdaplus.vn_in-article_468x60",
           "/22057354005/bongdaplus.vn_in-article_336x280",
@@ -856,17 +904,29 @@ function ubadScript() {
           // '/22057354005/bongdaplus.vn_popup_fluid_336x280'
       ],
       adId: [
-          "div-gpt-ad-1629455549972-0", // '/22057354005/bongdaplus.vn_in-article_468x60',
-          "div-gpt-ad-1629455527851-0", //'/22057354005/bongdaplus.vn_in-article_336x280',
-          "div-gpt-ad-1629455748915-0", //'/22057354005/bongdaplus.vn_mb_hot1_336x280',
-          "div-gpt-ad-1629455769520-0", //'/22057354005/bongdaplus.vn_mb_hot2_300x600',
-          "div-gpt-ad-1629455662160-0", //'/22057354005/bongdaplus.vn_mb_center1_336x280',
-          "div-gpt-ad-1629455687394-0", //'/22057354005/bongdaplus.vn_mb_center2_336x280',
-          "div-gpt-ad-1629455720028-0", //'/22057354005/bongdaplus.vn_mb_center3_336x280',
-          "div-gpt-ad-1629455812132-0", //'/22057354005/bongdaplus.vn_mb_ma_336x280',
-          "div-gpt-ad-1629455633030-0", //'/22057354005/bongdaplus.vn_mb_anchor_320x50',
-          // "div-gpt-ad-1629455598483-0",  //'/22057354005/bongdaplus.vn_mb_anchor_320x100',
-          // 'div-gpt-ad-1629457284866-0',  //  '/22057354005/bongdaplus.vn_popup_fluid_336x280'
+          "div-gpt-ad-1619183586523-0", // '/22140546871/bongdaplus.vn_in-article_468x60',
+            "div-gpt-ad-1619183875165-0", //'/22140546871/bongdaplus.vn_in-article_336x280',
+            "div-gpt-ad-1614845286577-0", //'/22140546871/bongdaplus.vn_mb_hot1_336x280',
+            "div-gpt-ad-1614845393134-0", //'/22140546871/bongdaplus.vn_mb_hot2_300x600',
+            "div-gpt-ad-1614845452435-0", //'/22140546871/bongdaplus.vn_mb_center1_336x280',
+            "div-gpt-ad-1614845556049-0", //'/22140546871/bongdaplus.vn_mb_center2_336x280',
+            "div-gpt-ad-1614845628694-0", //'/22140546871/bongdaplus.vn_mb_center3_336x280',
+            "div-gpt-ad-1614845690965-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
+            "div-gpt-ad-1614845787563-0", //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
+            // "div-gpt-ad-1615775641979-0",  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
+            // 'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'
+
+          // "div-gpt-ad-1629455549972-0", // '/22057354005/bongdaplus.vn_in-article_468x60',
+          // "div-gpt-ad-1629455527851-0", //'/22057354005/bongdaplus.vn_in-article_336x280',
+          // "div-gpt-ad-1629455748915-0", //'/22057354005/bongdaplus.vn_mb_hot1_336x280',
+          // "div-gpt-ad-1629455769520-0", //'/22057354005/bongdaplus.vn_mb_hot2_300x600',
+          // "div-gpt-ad-1629455662160-0", //'/22057354005/bongdaplus.vn_mb_center1_336x280',
+          // "div-gpt-ad-1629455687394-0", //'/22057354005/bongdaplus.vn_mb_center2_336x280',
+          // "div-gpt-ad-1629455720028-0", //'/22057354005/bongdaplus.vn_mb_center3_336x280',
+          // "div-gpt-ad-1629455812132-0", //'/22057354005/bongdaplus.vn_mb_ma_336x280',
+          // "div-gpt-ad-1629455633030-0", //'/22057354005/bongdaplus.vn_mb_anchor_320x50',
+          // // "div-gpt-ad-1629455598483-0",  //'/22057354005/bongdaplus.vn_mb_anchor_320x100',
+          // // 'div-gpt-ad-1629457284866-0',  //  '/22057354005/bongdaplus.vn_popup_fluid_336x280'
       ],
       sizes: [
           [468, 60],
@@ -1051,6 +1111,7 @@ function ubadScript() {
       isAP: [],
   };
   var mappings_full_hb_config = {
+      targetUnits: [],
       adUnitNames: [],
       adId: [],
       sizes: [],
@@ -1105,25 +1166,16 @@ function ubadScript() {
   }
 
   if (!mobileCheckAdScript()) {
-      mappings_full_hb_config.adUnitNames =
-          mappings_full_hb_config_desktop.adUnitNames.concat(
-              mappings_full_hb_config_both.adUnitNames
-          );
-      mappings_full_hb_config.bids = mappings_full_hb_config_desktop.bids.concat(
-          mappings_full_hb_config_both.bids
-      );
-      mappings_full_hb_config.isAP = mappings_full_hb_config_desktop.isAP.concat(
-          mappings_full_hb_config_both.isAP
-      );
+      // mappings_full_hb_config.targetUnits =  mappings_full_hb_config_desktop.targetUnits;
+      mappings_full_hb_config.adUnitNames = mappings_full_hb_config_desktop.adUnitNames.concat(mappings_full_hb_config_both.adUnitNames);
+      mappings_full_hb_config.bids = mappings_full_hb_config_desktop.bids.concat(mappings_full_hb_config_both.bids);
+      mappings_full_hb_config.isAP = mappings_full_hb_config_desktop.isAP.concat(mappings_full_hb_config_both.isAP);
       mappings_full_hb_config.adId = mappings_full_hb_config_desktop.adId;
       mappings_full_hb_config.sizes = mappings_full_hb_config_desktop.sizes;
-      mappings_extra_units_config.adUnitNames =
-          mappings_extra_units_config_desktop.adUnitNames.concat(
-              mappings_extra_units_config_both.adUnitNames
-          );
+      mappings_extra_units_config.adUnitNames = mappings_extra_units_config_desktop.adUnitNames.concat(mappings_extra_units_config_both.adUnitNames);
   } else {
-      mappings_full_hb_config.adUnitNames =
-          mappings_full_hb_config_mobile.adUnitNames.concat(
+      // mappings_full_hb_config.targetUnits = mappings_full_hb_config_mobile.targetUnits;
+      mappings_full_hb_config.adUnitNames = mappings_full_hb_config_mobile.adUnitNames.concat(
               mappings_full_hb_config_both.adUnitNames
           );
       mappings_full_hb_config.bids = mappings_full_hb_config_mobile.bids.concat(
@@ -1134,8 +1186,7 @@ function ubadScript() {
       );
       mappings_full_hb_config.adId = mappings_full_hb_config_mobile.adId;
       mappings_full_hb_config.sizes = mappings_full_hb_config_mobile.sizes;
-      mappings_extra_units_config.adUnitNames =
-          mappings_extra_units_config_mobile.adUnitNames.concat(
+      mappings_extra_units_config.adUnitNames = mappings_extra_units_config_mobile.adUnitNames.concat(
               mappings_extra_units_config_both.adUnitNames
           );
   }

@@ -36,19 +36,19 @@ if (mobileCheck()) {
         '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629453325625-0"></div>';
     x2 = document.querySelector("body");
     x2.appendChild(z2);
+    
+    var ub_slotp;
+    googletag.cmd.push(function() {
+      ub_slotp = googletag.defineSlot("/21928950349/livelaw.in_nb1_300x250", [300, 250], "div-gpt-ad-1629453325625-0").addService(googletag.pubads());
+      googletag.pubads().collapseEmptyDivs(true);
+      googletag.pubads().setCentering(true);
+      googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+      googletag.pubads().refresh([ub_slotp]);
+    });
 }
 
 function mybotubPopadcls() {
     document.getElementById("ub-popup-ad-container").style.display = "none";
 }
-
-var ub_slotp;
-googletag.cmd.push(function() {
-  ub_slotp = googletag.defineSlot("/21928950349/livelaw.in_nb1_300x250", [300, 250], "div-gpt-ad-1629453325625-0").addService(googletag.pubads());
-  googletag.pubads().collapseEmptyDivs(true);
-  googletag.pubads().setCentering(true);
-  googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
-  googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
-  googletag.pubads().refresh([ub_slotp]);
-});

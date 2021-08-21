@@ -4,7 +4,7 @@ function isMobile() {
   return check;
 };
 
-mybotGACode = "G-QE2MK408ZR";
+mybotGACode = "G-SYBTNHR5P4";
 mybotgabyub ='<script async src="https://www.googletagmanager.com/gtag/js?id=' +mybotGACode +'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "' + mybotGACode +'");</script>';
 
 ub_ga = document.createElement("div");
@@ -57,8 +57,6 @@ function listen_scripts() {
       }
   }, 500);
 }
-
-// listen_scripts();
 
 
 var ubIma = document.createElement("script");
@@ -165,8 +163,8 @@ function initPlayer() {
           muted: false,
           loadingSpinner: false,
           bigPlayButton: false,
-          width: isMobile() ? 368 : 640,
-          height: isMobile()? 207 : 360,
+          width: isMobile() ? 400 : 640,
+          height: isMobile()? 225 : 360,
           controlBar: {
               volumePanel: {
                   inline: false,
@@ -184,7 +182,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 1,
@@ -192,7 +190,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 5,
@@ -200,7 +198,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=shrtechs.com_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=vietjack_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -208,7 +206,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 5,
@@ -216,7 +214,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -224,7 +222,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 20,
@@ -232,7 +230,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -240,7 +238,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=shrtechs.com_adx1a_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=vietjack_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 15,
@@ -248,7 +246,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -256,7 +254,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -264,7 +262,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=shrtechs.com_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=vietjack_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -272,7 +270,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=shrtechs.com_adx1a_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=vietjack_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 30,
@@ -280,7 +278,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=shrtechs.com_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=vietjack_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
           ],
           type: 'preroll',
           delay: 0,
@@ -288,7 +286,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -296,7 +294,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -304,7 +302,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1a_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -312,14 +310,14 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/shrtechs.com_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=320x180%7C368x207%7C640x360%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
           src: 'gpt'
         }
       ];
-let makePrerollRequest = (index, singleAdStructure = false) => {
+      let makePrerollRequest = (index, singleAdStructure = false) => {
 let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`
 let respFirstChild = `<vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
                         <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
@@ -367,31 +365,31 @@ else {
           // autoPlayAdBreaks: false,
           vastLoadTimeout: 2e4,
           adsManagerLoadedCallback: () => {
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
-                    // console.log("ad completed");
-                    stickyFlag = false;
-                    // console.log(`Triggered ${stickyFlag}`)
-                    toggleSticky();
-                });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
-                    // console.log("ads SKIPPED");
-                    stickyFlag = false;
-                    toggleSticky();
-                });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
-                    // console.log("ads started");
-                    stickyFlag = true;
-                    toggleSticky();
-                });
-                ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
-                    // console.log("AD LOADED \n",e);
-                    stickyFlag = true;
-                    // showPlayer();
-                    ubPlayer.autoplay(true);
-                    ubPlayer.play();
-                    ubPlayer.ima.resumeAd();
-                    toggleSticky();
-                });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
+                //     // console.log("ad completed");
+                //     stickyFlag = false;
+                //     // console.log(`Triggered ${stickyFlag}`)
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
+                //     // console.log("ads SKIPPED");
+                //     stickyFlag = false;
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
+                //     // console.log("ads started");
+                //     stickyFlag = true;
+                //     toggleSticky();
+                // });
+                // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
+                //     // console.log("AD LOADED \n",e);
+                //     stickyFlag = true;
+                //     // showPlayer();
+                //     ubPlayer.autoplay(true);
+                //     ubPlayer.play();
+                //     ubPlayer.ima.resumeAd();
+                //     toggleSticky();
+                // });
 
                 ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
                     ubPlayer.ima.getAdsManager().destroy();
@@ -526,12 +524,12 @@ else {
       setLogo();
 
       // if (!isMobile() && window.location.href != "https://docbao.vn/") {
-      if (document.getElementById("unibots-video")) {
-          window.addEventListener('scroll', function () {
-            // if(!stickyFlag) { stickyFlag = true; }
-              toggleSticky();
-          });
-      }
+      // if (document.getElementById("unibots-video")) {
+      //     window.addEventListener('scroll', function () {
+      //       // if(!stickyFlag) { stickyFlag = true; }
+      //         toggleSticky();
+      //     });
+      // }
 
 
        //end of if statement
@@ -593,38 +591,58 @@ function checkPlayerIsInView(){
   }
 }
 
-
-const toggleSticky = () => {
-  let currentPlayer = document.querySelector('#unibots-video');
-  let targetDiv = document.getElementById("ubVideo");
-    // if(!isMobile()){
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky_left")) {
-              targetDiv.classList.remove("ubsticky_left");
-              // resizeAds(640,360);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.add("ubsticky_left");
-                  // resizeAds(320,180);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  // resizeAds(640,360);
-              }
-          }
-      }
-    // }
-}
-
-// function (raWidth,raHeight){
-//   if(ubPlayer.ads.inAdBreak()){
-//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-//   }
+// const toggleSticky = () => {
+//   let currentPlayer = document.querySelector('#unibots-video');
+//   let targetDiv = document.getElementById("ubVideo");
+//     if(!isMobile()){
+//       if (isInViewport(currentPlayer)) {
+//           if (targetDiv.classList.contains("ubsticky_left")) {
+//               targetDiv.classList.remove("ubsticky_left");
+//               resizeAds(640,360);
+//           }
+//       } else {
+//           if (stickyFlag) {
+//               if (!targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.add("ubsticky_left");
+//                   resizeAds(320,180);
+//               }
+//           }
+//           else {
+//               if (targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.remove("ubsticky_left");
+//                   resizeAds(640,360);
+//               }
+//           }
+//       }
+//     }
+//     else {
+//       if (isInViewport(currentPlayer)) {
+//           if (targetDiv.classList.contains("ubsticky_left")) {
+//               targetDiv.classList.remove("ubsticky_left");
+//               resizeAds(368,207);
+//           }
+//       } else {
+//           if (stickyFlag) {
+//               if (!targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.add("ubsticky_left");
+//                   resizeAds(192,108);
+//               }
+//           }
+//           else {
+//               if (targetDiv.classList.contains("ubsticky_left")) {
+//                   targetDiv.classList.remove("ubsticky_left");
+//                   resizeAds(368,207);
+//               }
+//           }
+//       }
+//     }
 // }
+
+function resizeAds(raWidth,raHeight){
+  if(ubPlayer.ads.inAdBreak()){
+    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+  }
+}
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
@@ -697,6 +715,7 @@ function setLogo() {
   i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
   ubPlayer.el_.appendChild(i);
 }
+
 
 function loadUbga(id, adUnits) {
     var elm = document.getElementById(id);

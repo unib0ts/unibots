@@ -562,16 +562,24 @@ function initPlayer() {
       setLogo();
 
 
-      window.addEventListener('scroll', function () {
-        playerandAdsShouldRuninViewport(true);
-        // if(!stickyFlag) { stickyFlag = true; }
-        toggleSticky();
-      });
+      // window.addEventListener('scroll', function () {
+      //   playerandAdsShouldRuninViewport(true);
+      //   // if(!stickyFlag) { stickyFlag = true; }
+      //   toggleSticky();
+      // });
 
+      checkPlayerIsInView();
       // ubPlayer.on('play',()=>{ console.log("Player Play's")});
       // ubPlayer.on('pause',()=>{ console.log("Player paused")});
   }
 }
+
+
+function checkPlayerIsInView(){
+    window.addEventListener('scroll', function () {
+      toggleSticky();
+    });
+  }
 // function checkPlayerIsInView(){
 //   window.addEventListener('scroll', function () {
 //     if(!isPlayerViewedOnce){
@@ -592,55 +600,55 @@ const toggleSticky = () => {
     let currentPlayer = document.querySelector('#unibots-video');
     let targetDiv = document.getElementById("ubVideo");
 
-    if(!isMobile()){
+    // if(!isMobile()){
       if (isInViewport(currentPlayer)) {
           if (targetDiv.classList.contains("ubsticky")) {
               targetDiv.classList.remove("ubsticky");
-              resizeAds(640,360);
+              // resizeAds(640,360);
           }
       } else {
           if (stickyFlag) {
               if (!targetDiv.classList.contains("ubsticky")) {
                   targetDiv.classList.add("ubsticky");
-                  resizeAds(320,180);
+                  // resizeAds(320,180);
               }
           }
           else {
               if (targetDiv.classList.contains("ubsticky")) {
                   targetDiv.classList.remove("ubsticky");
-                  resizeAds(640,360);
+                  // resizeAds(640,360);
               }
           }
       }
-    }
-    else {
-      if (isInViewport(currentPlayer)) {
-          if (targetDiv.classList.contains("ubsticky")) {
-              targetDiv.classList.remove("ubsticky");
-              resizeAds(320,180);
-          }
-      } else {
-          if (stickyFlag) {
-              if (!targetDiv.classList.contains("ubsticky")) {
-                  targetDiv.classList.add("ubsticky");
-                  resizeAds(192,108);
-              }
-          }
-          else {
-              if (targetDiv.classList.contains("ubsticky")) {
-                  targetDiv.classList.remove("ubsticky");
-                  resizeAds(320,180);
-              }
-          }
-      }
-    }
+    // }
+    // else {
+    //   if (isInViewport(currentPlayer)) {
+    //       if (targetDiv.classList.contains("ubsticky")) {
+    //           targetDiv.classList.remove("ubsticky");
+    //           // resizeAds(320,180);
+    //       }
+    //   } else {
+    //       if (stickyFlag) {
+    //           if (!targetDiv.classList.contains("ubsticky")) {
+    //               targetDiv.classList.add("ubsticky");
+    //               // resizeAds(192,108);
+    //           }
+    //       }
+    //       else {
+    //           if (targetDiv.classList.contains("ubsticky")) {
+    //               targetDiv.classList.remove("ubsticky");
+    //               // resizeAds(320,180);
+    //           }
+    //       }
+    //   }
+    // }
 }
 
-function resizeAds(raWidth,raHeight){
-  if(ubPlayer.ads.inAdBreak() && !isMobile()){
-    ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
-  }
-}
+// function resizeAds(raWidth,raHeight){
+//   if(ubPlayer.ads.inAdBreak() && !isMobile()){
+//     ubPlayer.ima.getAdsManager().resize(raWidth,raHeight,google.ima.ViewMode.NORMAL);
+//   }
+// }
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();

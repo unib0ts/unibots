@@ -158,7 +158,8 @@ function ubadScript() {
       x1.appendChild(z1);
     // }
   } else {
-        if(!(window.location.href== "https://m.docbao.vn/")){
+        // if(!(window.location.href== "https://m.docbao.vn/")){
+      if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-container";
           z1.className = "ub-sticky-ad-container";
@@ -1333,7 +1334,7 @@ function ubadScript() {
 }
 
  if (mobileCheck()) {
-    if(!(window.location.href== "https://m.docbao.vn/")){
+    if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
               if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){

@@ -1164,7 +1164,8 @@ function ubadScript() {
       //   }
       // }
       // callMapUnits();
-  setTimeout(function(){ callMapUnits(); }, 500);
+      changeConfigToHB();
+      setTimeout(function(){ callMapUnits(); }, 500);
       // setTimeout(function() {
       //     initAdserver_hb_full();
       // }, FAILSAFE_TIMEOUT);
@@ -1510,4 +1511,17 @@ function ubadScript() {
           };
           oldScript.parentNode.replaceChild(newScript, oldScript);
       }
+  }
+
+  function changeConfigToHB(){
+    ubpbjs.que.push(function() {
+      ubpbjs.setConfig({
+        "currency": {
+           "adServerCurrency": "INR",
+           "granularityMultiplier":75 ,
+           "conversionRateFile": 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
+           "defaultRates": { "USD": { "INR": 75 }}
+         }
+       });
+    });
   }

@@ -225,7 +225,7 @@ function ubPlayer_scripts() {
         var adsArray = [
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 1,
@@ -233,7 +233,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 0,
@@ -241,7 +241,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-2',
             ],
             type: 'preroll',
             delay: 5,
@@ -249,7 +249,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongtrend_adx1_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongtrend_adx1_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben&cust_params=Testkey%3DTestkey-3',
             ],
             type: 'preroll',
             delay: 0,
@@ -257,7 +257,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-2',
             ],
             type: 'preroll',
             delay: 5,
@@ -265,7 +265,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-2',
             ],
             type: 'preroll',
             delay: 0,
@@ -273,7 +273,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 20,
@@ -281,7 +281,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 0,
@@ -289,7 +289,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongtrend_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongtrend_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn&cust_params=Testkey%3DTestkey-4',
             ],
             type: 'preroll',
             delay: 15,
@@ -297,7 +297,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 0,
@@ -305,7 +305,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 10,
@@ -313,7 +313,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongtrend_adx1_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongtrend_adx1_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben&cust_params=Testkey%3DTestkey-3',
             ],
             type: 'preroll',
             delay: 0,
@@ -321,7 +321,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongtrend_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn',
+              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=bongtrend_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=low&hl=vn&cust_params=Testkey%3DTestkey-4',
             ],
             type: 'preroll',
             delay: 30,
@@ -329,7 +329,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongtrend_adx1_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben',
+              'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=bongtrend_adx1_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=ben&cust_params=Testkey%3DTestkey-3',
             ],
             type: 'preroll',
             delay: 0,
@@ -337,7 +337,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-2',
             ],
             type: 'preroll',
             delay: 10,
@@ -345,7 +345,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 0,
@@ -353,7 +353,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt2_preroll&description_url=' + desc_url + '&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-2',
             ],
             type: 'preroll',
             delay: 10,
@@ -361,7 +361,7 @@ function ubPlayer_scripts() {
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/bongtrend_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=344x258%7C400x225%7C640x360%7C320x180%7C192x108&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&cust_params=Testkey%3DTestkey-1',
             ],
             type: 'preroll',
             delay: 0,

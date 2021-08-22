@@ -417,16 +417,12 @@ function ubPlayer_scripts(VideoSrc = 'https://cdn.unibots.in/yoga.mp4') {
                   ubPlayer.muted(true);
                   ubPlayer.autoplay(true);
                   ubPlayer.play();
-                  // Autoplay work on script load for PC only
-                  // isMobile() ? '' : ubplay(true);
               }
 
               if (!autoplayAllowed) {
                   ubPlayer.muted(true);
                   ubPlayer.autoplay(true);
                   ubPlayer.play();
-                  // Autoplay work on script load for PC only
-                  // isMobile() ? '' : ubplay(true);
 
                   if (navigator.userAgent.match(/iPhone/i) ||
                       navigator.userAgent.match(/iPad/i) ||
@@ -437,14 +433,6 @@ function ubPlayer_scripts(VideoSrc = 'https://cdn.unibots.in/yoga.mp4') {
                   wrapperDiv = document.getElementById('content_video');
                   wrapperDiv.addEventListener(startEvent, initAdDisplayContainer);
               }
-              //only if page loaded with player in viewport already then below function will work
-              // if(isInViewport(document.querySelector('#unibots-video'))){
-              //     ubplay(true);
-              //     isPlayerViewedOnce = true;
-              // }else{
-              //     ubplay();
-              // }
-              //endshere
           }
 
       }

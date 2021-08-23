@@ -527,7 +527,7 @@ else {
               ubPlayer.dispose();
           }
       });
-      setLogo();
+      // setLogo();
 
       // if (!isMobile() && window.location.href != "https://docbao.vn/") {
       if (document.getElementById("unibots-video")) {

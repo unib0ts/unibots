@@ -7,7 +7,6 @@ function loadDynamicStyles(url){
 }
 
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.min.css");
-loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-logo@2.1.4/dist/videojs-logo.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.css");
 
@@ -24,7 +23,6 @@ function loadDynamicScript(url, tag, callback){
 
 var scripts = {
   "vjs": false,
-  "vjs_logo": false,
   "vjs_ads": false,
   "vjs_ima": false,
   "can-autoplay": false
@@ -70,7 +68,6 @@ function load_player(){
 
 let post_scripts =()=>{
   console.log(scripts);
-  loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-logo@2.1.4/dist/videojs-logo.min.js", "vjs_logo");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.js", "vjs_ads");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.js", "vjs_ima");
   loadDynamicScript("https://cdn.jsdelivr.net/npm/can-autoplay@3.0.0/build/can-autoplay.min.js","can-autoplay");
@@ -120,7 +117,6 @@ function initPlayer() {
 
   // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   var isMobile = true;
-
   var video = document.getElementById('content_video');
   videojs.browser.IS_IOS ? video.setAttribute('playsinline', '') : '';
 

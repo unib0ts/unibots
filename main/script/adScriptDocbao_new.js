@@ -257,7 +257,7 @@ function ubadScript() {
   if (mobileCheck()) {
       // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
       adUnits1 = {
-          code: "/22140546871/docbao.vn_popup_fluid_336x280",
+          code: "/22057354005/docbao.vn_popup_fluid_336x280",
           mediaTypes: {
               banner: {
                   sizes: div_1_sizes,
@@ -432,7 +432,7 @@ function ubadScript() {
       googletag.cmd.push(function () {
           ub_slotp = googletag
               .defineSlot(
-                  "/22140546871/docbao.vn_popup_fluid_336x280",
+                  "/22057354005/docbao.vn_popup_fluid_336x280",
                   div_1_sizes,
                   "div-gpt-ad-1624440241552-0"
               )
@@ -450,7 +450,7 @@ function ubadScript() {
               .addEventListener("slotRenderEnded", function (event) {
                   if (
                       event.slot.getAdUnitPath() ===
-                      "/22140546871/docbao.vn_popup_fluid_336x280"
+                      "/22057354005/docbao.vn_popup_fluid_336x280"
                   ) {
                       ub_checkAd1Rendered();
                   }
@@ -526,7 +526,7 @@ function ubadScript() {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
-              adUnitCodes: ["/22140546871/docbao.vn_popup_fluid_336x280"],
+              adUnitCodes: ["/22057354005/docbao.vn_popup_fluid_336x280"],
               bidsBackHandler: function () {
                   googletag.cmd.push(function () {
                       ubpbjs.que.push(function () {
@@ -568,46 +568,46 @@ function ubadScript() {
 
   var mappings_full_hb_config_desktop = {
       adUnitNames: [
-          "/22140546871/docbao.vn_pc_balloon_hb_300x600",
-          "/22140546871/docbao.vn_pc_bottom_336x280",
-          "/22140546871/docbao.vn_pc_inreadbanner-1_300x250",
-          "/22140546871/docbao.vn_pc_inreadbanner-2_300x250",
-          "/22140546871/docbao.vn_pc_header_728x90",
-          "/22140546871/docbao.vn_pc_R1_300x250",
-          "/22140546871/docbao.vn_pc_R2_300x250",
-          "/22140546871/docbao.vn_pc_R5_300x600",
-          "/22140546871/docbao.vn_pc_fl_120x600",
-          "/22140546871/docbao.vn_pc_fr1_120x600",
-          "/22140546871/docbao.vn_pc_fr_120x600",
-          "/22140546871/docbao_pc_sticky_300x600",
+          "/22057354005/docbao.vn_pc_balloon_hb_300x600",
+          "/22057354005/docbao.vn_pc_bottom_336x280",
+          "/22057354005/docbao.vn_pc_inreadbanner-1_300x250",
+          "/22057354005/docbao.vn_pc_inreadbanner-2_300x250",
+          "/22057354005/docbao.vn_pc_header_728x90",
+          "/22057354005/docbao.vn_pc_R1_300x250",
+          "/22057354005/docbao.vn_pc_R2_300x250",
+          "/22057354005/docbao.vn_pc_R5_300x600",
+          "/22057354005/docbao.vn_pc_fl_120x600",
+          "/22057354005/docbao.vn_pc_fr1_120x600",
+          // "/22140546871/docbao.vn_pc_fr_120x600",
+          "/22057354005/docbao_pc_sticky_300x600",
       ],
       adId: [
-        "div-gpt-ad-1622019421633-0", //'/22140546871/docbao.vn_pc_balloon_hb_300x600',
-        "div-gpt-ad-1619189202147-0", //'/22140546871/docbao.vn_pc_bottom_336x280',
-        "div-gpt-ad-1614845452435-0", //'/22140546871/docbao.vn_pc_inreadbanner-1_300x250',
-        "div-gpt-ad-1618215713954-0", //'/22140546871/docbao.vn_pc_inreadbanner-2_300x250',
-        "div-gpt-ad-1615188864095-0", //''/22140546871/docbao.vn_pc_header_728x90',
-        "div-gpt-ad-1615188969422-0", //'/22140546871/docbao.vn_pc_R1_300x250',
-        "div-gpt-ad-1615189017367-0", //'/22140546871/docbao.vn_pc_R2_300x250',
-        "div-gpt-ad-1615189428915-0", //'/22140546871/docbao.vn_pc_R5_300x600',
-        "div-gpt-ad-1615189484195-0", //'/22140546871/docbao.vn_pc_fl_120x600',
-        "div-gpt-ad-1615189532474-0", //'/22140546871/docbao.vn_pc_fr1_120x600',
-        "div-gpt-ad-1615189668110-0", //'/22140546871/docbao.vn_pc_fr_120x600',
-        "div-gpt-ad-1617446297082-0", //'/22140546871/docbao_pc_sticky_300x600',
+        "div-gpt-ad-1622019421633-0", //'/22057354005/docbao.vn_pc_balloon_hb_300x600',
+        "div-gpt-ad-1619189202147-0", //'/22057354005/docbao.vn_pc_bottom_336x280',
+        "div-gpt-ad-1614845452435-0", //'/22057354005/docbao.vn_pc_inreadbanner-1_300x250',
+        "div-gpt-ad-1618215713954-0", //'/22057354005/docbao.vn_pc_inreadbanner-2_300x250',
+        "div-gpt-ad-1615188864095-0", //''/22057354005/docbao.vn_pc_header_728x90',
+        "div-gpt-ad-1615188969422-0", //'/22057354005/docbao.vn_pc_R1_300x250',
+        "div-gpt-ad-1615189017367-0", //'/22057354005/docbao.vn_pc_R2_300x250',
+        "div-gpt-ad-1615189428915-0", //'/22057354005/docbao.vn_pc_R5_300x600',
+        "div-gpt-ad-1615189484195-0", //'/22057354005/docbao.vn_pc_fl_120x600',
+        "div-gpt-ad-1615189532474-0", //'/22057354005/docbao.vn_pc_fr1_120x600',
+        // "div-gpt-ad-1615189668110-0", //'/22140546871/docbao.vn_pc_fr_120x600',
+        "div-gpt-ad-1617446297082-0", //'/22057354005/docbao_pc_sticky_300x600',
       ],
       sizes: [
-        [ [336, 280], [300, 250] ], // '/22140546871/docbao.vn_pc_balloon_hb_300x600',
-        [336, 280],  // '/22140546871/docbao.vn_pc_bottom_336x280',
-        [300, 250],    // '/22140546871/docbao.vn_pc_inreadbanner-1_300x250',
-        [300, 250], // '/22140546871/docbao.vn_pc_inreadbanner-2_300x250',
-        [728, 90],  // '/22140546871/docbao.vn_pc_header_728x90',
-        [300, 250], // '/22140546871/docbao.vn_pc_R1_300x250',
-        [300, 250], // '/22140546871/docbao.vn_pc_R2_300x250',
-        [300, 600], // '/22140546871/docbao.vn_pc_R5_300x600',
-        [120, 600], // '/22140546871/docbao.vn_pc_fl_120x600',
-        [120, 600], // '/22140546871/docbao.vn_pc_fr1_120x600',
-        [300, 250], // '/22140546871/docbao.vn_pc_fr_120x600',
-        [300, 600],  // '/22140546871/docbao_pc_sticky_300x600',
+        [ [336, 280], [300, 250] ], // '/22057354005/docbao.vn_pc_balloon_hb_300x600',
+        [336, 280],  // '/22057354005/docbao.vn_pc_bottom_336x280',
+        [300, 250],    // '/22057354005/docbao.vn_pc_inreadbanner-1_300x250',
+        [300, 250], // '/22057354005/docbao.vn_pc_inreadbanner-2_300x250',
+        [728, 90],  // '/22057354005/docbao.vn_pc_header_728x90',
+        [300, 250], // '/22057354005/docbao.vn_pc_R1_300x250',
+        [300, 250], // '/22057354005/docbao.vn_pc_R2_300x250',
+        [300, 600], // '/22057354005/docbao.vn_pc_R5_300x600',
+        [120, 600], // '/22057354005/docbao.vn_pc_fl_120x600',
+        [120, 600], // '/22057354005/docbao.vn_pc_fr1_120x600',
+        // [300, 250], // '/22140546871/docbao.vn_pc_fr_120x600',
+        [300, 600],  // '/22057354005/docbao_pc_sticky_300x600',
       ],
       bids: [
         hb_full_common_bidders.concat([
@@ -710,17 +710,17 @@ function ubadScript() {
       // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '94413', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
       //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi', domain: 'https://prg8.smartadserver.com' } }
        ]), //  '/21692080761/amb_es_mob_mpu_3',
-       hb_full_common_bidders.concat([
-         // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515733'} },
-      //    { bidder: 'openx', params: {unit: '543987773', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-      //    { bidder: 'ucfunnel', params: { adid : 'ad-47B463A77DBED993069EEE96AD4BE4D'} },
-      // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
-      // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-      //   { bidder: 'sovrn', params: {tagid: '867508'} },
-      // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-      //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
-       ]), //    '/21692080761/amb_es_mob_mpu_4',
+      //  hb_full_common_bidders.concat([
+      //    // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+      //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515733'} },
+      // //    { bidder: 'openx', params: {unit: '543987773', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+      // //    { bidder: 'ucfunnel', params: { adid : 'ad-47B463A77DBED993069EEE96AD4BE4D'} },
+      // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
+      // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
+      // //   { bidder: 'sovrn', params: {tagid: '867508'} },
+      // // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+      // //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
+      //  ]), //    '/21692080761/amb_es_mob_mpu_4',
        hb_full_common_bidders.concat([
          // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515733'} },
@@ -744,41 +744,41 @@ function ubadScript() {
         true,
         true,
         true,
-        true,
+        // true,
         true,
       ],
   };
   var mappings_full_hb_config_mobile = {
       adUnitNames: [
-        "/22140546871/docbao.vn_gpt_mobile_home_300x100",
-        "/22140546871/docbao.vn_gpt_mobile_center2_300x250",
-        "/22140546871/docbao.vn_gpt_mobile_center3_300x600",
-        "/22140546871/docbao.vn_gpt_mobile_center4_300x250",
-        "/22140546871/docbao.vn_gpt_mobile_center5_300x250",
-        "/22140546871/docbao.vn_gpt_mobile_bottom_300x250",
-        "/22140546871/docbao.vn_mobile_home_center_6",
-        // "/22140546871/docbao.vn_mb_anchor_320x50",
-        "/22140546871/docbao.vn_mb_anchor_320x100",
+        "/22057354005/docbao.vn_gpt_mobile_home_300x100",
+        "/22057354005/docbao.vn_gpt_mobile_center2_300x250",
+        "/22057354005/docbao.vn_gpt_mobile_center3_300x600",
+        "/22057354005/docbao.vn_gpt_mobile_center4_300x250",
+        "/22057354005/docbao.vn_gpt_mobile_center5_300x250",
+        "/22057354005/docbao.vn_gpt_mobile_bottom_300x250",
+        "/22057354005/docbao.vn_mobile_home_center_6",
+        // "/22057354005/docbao.vn_mb_anchor_320x50",
+        "/22057354005/docbao.vn_mb_anchor_300x100",
       ],
       adId: [
-        "div-gpt-ad-1617722423692-0", //'/22140546871/docbao.vn_gpt_mobile_home_300x100',
-        "div-gpt-ad-1617722328302-0", //'/22140546871/docbao.vn_gpt_mobile_center2_300x250',
-        "div-gpt-ad-1617722500738-0", //'/22140546871/docbao.vn_gpt_mobile_center3_300x600',
-        "div-gpt-ad-1617722573994-0", //'/22140546871/docbao.vn_gpt_mobile_center4_300x250',
-        "div-gpt-ad-1617722626196-0", //'/22140546871/docbao.vn_gpt_mobile_center5_300x250',
-        "div-gpt-ad-1617722685215-0", //'/22140546871/docbao.vn_gpt_mobile_bottom_300x250',
-        "div-gpt-ad-1620991472253-0", //'/22140546871/docbao.vn_mobile_home_center_6',
-        // "div-gpt-ad-1625034565032-0", //'/22140546871/docbao.vn_mb_anchor_320x50',
+        "div-gpt-ad-1617722423692-0", //'/22057354005/docbao.vn_gpt_mobile_home_300x100',
+        "div-gpt-ad-1617722328302-0", //'/22057354005/docbao.vn_gpt_mobile_center2_300x250',
+        "div-gpt-ad-1617722500738-0", //'/22057354005/docbao.vn_gpt_mobile_center3_300x600',
+        "div-gpt-ad-1617722573994-0", //'/22057354005/docbao.vn_gpt_mobile_center4_300x250',
+        "div-gpt-ad-1617722626196-0", //'/22057354005/docbao.vn_gpt_mobile_center5_300x250',
+        "div-gpt-ad-1617722685215-0", //'/22057354005/docbao.vn_gpt_mobile_bottom_300x250',
+        "div-gpt-ad-1620991472253-0", //'/22057354005/docbao.vn_mobile_home_center_6',
+        // "div-gpt-ad-1625034565032-0", //'/22057354005/docbao.vn_mb_anchor_320x50',
         "div-gpt-ad-1616569480504-0",
       ],
       sizes: [
-        [300, 100], // '/22140546871/docbao.vn_gpt_mobile_home_300x100',
-        [300, 250], // '/22140546871/docbao.vn_gpt_mobile_center2_300x250',
-        [300, 600], // '/22140546871/docbao.vn_gpt_mobile_center3_300x600',
-        [300, 250], // '/22140546871/docbao.vn_gpt_mobile_center4_300x250',
-        [300, 250], // '/22140546871/docbao.vn_gpt_mobile_center5_300x250',
-        [300, 250], // '/22140546871/docbao.vn_gpt_mobile_bottom_300x250',
-        [300, 250], // '/22140546871/docbao.vn_mobile_home_center_6',
+        [300, 100], // '/22057354005/docbao.vn_gpt_mobile_home_300x100',
+        [300, 250], // '/22057354005/docbao.vn_gpt_mobile_center2_300x250',
+        [300, 600], // '/22057354005/docbao.vn_gpt_mobile_center3_300x600',
+        [300, 250], // '/22057354005/docbao.vn_gpt_mobile_center4_300x250',
+        [300, 250], // '/22057354005/docbao.vn_gpt_mobile_center5_300x250',
+        [300, 250], // '/22057354005/docbao.vn_gpt_mobile_bottom_300x250',
+        [300, 250], // '/22057354005/docbao.vn_mobile_home_center_6',
         // [320, 50],
         [300,100],
       ],
@@ -1274,7 +1274,7 @@ function ubadScript() {
 
  function refreshBid(ub_slot, adCode) {
   if (mobileCheck() && (window.location.hostname == "m.docbao.vn")) {
-    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
+    if (adCode == '/22057354005/docbao.vn_mb_anchor_300x100') {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1337,7 +1337,7 @@ function ubadScript() {
     if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
+              if (event.slot.getAdUnitPath() ==="/22057354005/docbao.vn_mb_anchor_300x100"){
                     var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                         document.getElementById("close_ub-sticky-ad").style.display = "block";

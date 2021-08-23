@@ -194,19 +194,19 @@ function initPlayer() {
         }
     });
 
-    // var button = videojs.getComponent("CloseButton");
-    // var CloseButton = videojs.extend(button, {
-    //     constructor: function () {
-    //         button.apply(this, arguments);
-    //         this.controlText("Close Player");
-    //         // this.addClass('vjs-icon-cancel');
-    //     },
-    //     handleClick: function () {
-    //         this.player().dispose();
-    //     },
-    // });
-    // videojs.registerComponent("CloseButton", CloseButton);
-    // ubPlayer.addChild("CloseButton");
+    var button = videojs.getComponent("CloseButton");
+    var CloseButton = videojs.extend(button, {
+        constructor: function () {
+            button.apply(this, arguments);
+            this.controlText("Close Player");
+            // this.addClass('vjs-icon-cancel');
+        },
+        handleClick: function () {
+            this.player().dispose();
+        },
+    });
+    videojs.registerComponent("CloseButton", CloseButton);
+    ubPlayer.addChild("CloseButton");
 
     //close player on video end.
     ubPlayer.on("timeupdate", function () {

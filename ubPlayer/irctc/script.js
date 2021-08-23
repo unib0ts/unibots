@@ -136,7 +136,7 @@ function initPlayer() {
   console.log(vjsOptions);
 
   ubPlayer = videojs('content_video', vjsOptions);
-  ubPlayer.src({ type: "video/mp4", src: "https://cdn.jsdelivr.net/gh/unib0ts/unibots@v1.30.257/ubPlayer/irctc/irctc.mp4" });
+  ubPlayer.src({ type: "video/mp4", src: "https://cdn.unibots.in/irctc.mp4" });
   ubPlayer.responsive(true);
 
   var imaOptions = {

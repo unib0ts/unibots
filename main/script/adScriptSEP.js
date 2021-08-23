@@ -108,7 +108,7 @@ var adUnits = [];
           { bidder: 'sovrn', params: {tagid: '714175'} },
           { bidder: 'openx', params: {unit: '543530215', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	{  bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-        	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999734'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'adkernel', params: {zoneId: '126379', host: 'cpm.fmlabsonline.com'} },

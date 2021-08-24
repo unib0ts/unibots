@@ -579,7 +579,7 @@ function ubadScript() {
           "/22057354005/docbao.vn_pc_R5_300x600",
           "/22057354005/docbao.vn_pc_fl_120x600",
           "/22057354005/docbao.vn_pc_fr1_120x600",
-          // "/22140546871/docbao.vn_pc_fr_120x600",
+          "/22057354005/docbao.vn_pc_fr_300x250",
           "/22057354005/docbao_pc_sticky_300x600",
       ],
       adId: [
@@ -593,7 +593,7 @@ function ubadScript() {
         "div-gpt-ad-1615189428915-0", //'/22057354005/docbao.vn_pc_R5_300x600',
         "div-gpt-ad-1615189484195-0", //'/22057354005/docbao.vn_pc_fl_120x600',
         "div-gpt-ad-1615189532474-0", //'/22057354005/docbao.vn_pc_fr1_120x600',
-        // "div-gpt-ad-1615189668110-0", //'/22140546871/docbao.vn_pc_fr_120x600',
+        "div-gpt-ad-1615189668110-0", //'/22057354005/docbao.vn_pc_fr_300x250',
         "div-gpt-ad-1617446297082-0", //'/22057354005/docbao_pc_sticky_300x600',
       ],
       sizes: [
@@ -607,7 +607,7 @@ function ubadScript() {
         [300, 600], // '/22057354005/docbao.vn_pc_R5_300x600',
         [120, 600], // '/22057354005/docbao.vn_pc_fl_120x600',
         [120, 600], // '/22057354005/docbao.vn_pc_fr1_120x600',
-        // [300, 250], // '/22140546871/docbao.vn_pc_fr_120x600',
+        [300, 250], // '/22057354005/docbao.vn_pc_fr_300x250',
         [300, 600],  // '/22057354005/docbao_pc_sticky_300x600',
       ],
       bids: [
@@ -711,17 +711,17 @@ function ubadScript() {
       // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '94413', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
       //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi', domain: 'https://prg8.smartadserver.com' } }
        ]), //  '/21692080761/amb_es_mob_mpu_3',
-      //  hb_full_common_bidders.concat([
-      //    // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-      //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515733'} },
-      // //    { bidder: 'openx', params: {unit: '543987773', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-      // //    { bidder: 'ucfunnel', params: { adid : 'ad-47B463A77DBED993069EEE96AD4BE4D'} },
-      // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
-      // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-      // //   { bidder: 'sovrn', params: {tagid: '867508'} },
-      // // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-      // //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
-      //  ]), //    '/21692080761/amb_es_mob_mpu_4',
+       hb_full_common_bidders.concat([
+         // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515733'} },
+      //    { bidder: 'openx', params: {unit: '543987773', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+      //    { bidder: 'ucfunnel', params: { adid : 'ad-47B463A77DBED993069EEE96AD4BE4D'} },
+      // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
+      // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
+      //   { bidder: 'sovrn', params: {tagid: '867508'} },
+      // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+      //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
+       ]), //    '/21692080761/amb_es_mob_mpu_4',
        hb_full_common_bidders.concat([
          // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515733'} },
@@ -745,7 +745,7 @@ function ubadScript() {
         true,
         true,
         true,
-        // true,
+        true,
         true,
       ],
   };

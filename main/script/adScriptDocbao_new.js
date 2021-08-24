@@ -104,7 +104,7 @@ function ubadScript() {
       return check;
   }
 
-  if (!mobileCheck()) {
+    if (!mobileCheck() && (window.screen.availWidth > 1024)) {
     // if(!(window.location.href == "https://docbao.vn/")){
     // 	var cachebuster = Math.round(new Date().getTime() / 1000);
     // 	url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/docbao/script.min.js?cb='+cachebuster;
@@ -909,18 +909,18 @@ function ubadScript() {
 
   var mappings_extra_units_config_desktop = {
       adUnitNames: [
-          // '/21692080761/amb_eng_desk_lb_1',
+          '/22057354005/docbao_native_fluid',
           // '/21692080761/amb_eng_header_desk_v2'  //  { bidder: "kubient", params: { zoneid: "728eb6f0a4102", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_mobile = {
       adUnitNames: [
-          // '/21692080761/amb_eng_mob_mpu_1', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
+          '/22057354005/docbao_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_both = {
       adUnitNames: [
-          // '/21692080761/amb_eng_mob_mpu_4', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
+          '/22057354005/docbao_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
       ],
   };
 
@@ -1134,9 +1134,9 @@ function ubadScript() {
               //   apSlots.push(apSlotTemp);
               // }
           }
-          // else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
-          //   mappings_extra_units.slots.push(x[i]);
-          // }
+          else if(mappings_extra_units_config.adUnitNames.includes(document.getElementById('div-gpt-ad-1629790932543-0'))){
+            // mappings_extra_units.slots.push(x[i]);
+          }
       }
 
       if (typeof googletag.defineSlot === "function") {

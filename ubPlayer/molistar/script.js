@@ -163,8 +163,8 @@ function initPlayer() {
           muted: false,
           loadingSpinner: false,
           bigPlayButton: false,
-          width: isMobile() ? 320 : 640,
-          height: isMobile()? 240 : 360,
+          width: isMobile() ? 400 : 640,
+          height: isMobile()? 225 : 360,
           controlBar: {
               volumePanel: {
                   inline: false,
@@ -180,142 +180,142 @@ function initPlayer() {
       // var desc_url = "https%3A%2F%2Fandhrajyothy.com";
 
       var adsArray = [
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 1,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 5,
-        //   src: 'adx'
-        // },
-        // {
-        //   ads: [
-        //     'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=vietjack_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'adx'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 5,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 20,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=vietjack_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 15,
-        //   src: 'mixed'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'mixed'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 10,
-        //   src: 'mixedReverse'
-        // },
-        // {
-        //   ads: [
-        //     'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=vietjack_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'mixedReverse'
-        // },
-        // {
-        //   ads: [
-        //     'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=vietjack_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 30,
-        //   src: 'adx'
-        // },
-        // {
-        //   ads: [
-        //     'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=vietjack_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'adx'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 10,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 10,
-        //   src: 'gpt'
-        // },
-        // {
-        //   ads: [
-        //     'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/vietjack_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
-        //   ],
-        //   type: 'preroll',
-        //   delay: 0,
-        //   src: 'gpt'
-        // }
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 1,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 5,
+          src: 'adx'
+        },
+        {
+          ads: [
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=molistar_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'adx'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 5,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 20,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=molistar_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+          ],
+          type: 'preroll',
+          delay: 15,
+          src: 'mixed'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'mixed'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 10,
+          src: 'mixedReverse'
+        },
+        {
+          ads: [
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=molistar_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'mixedReverse'
+        },
+        {
+          ads: [
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=molistar_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+          ],
+          type: 'preroll',
+          delay: 30,
+          src: 'adx'
+        },
+        {
+          ads: [
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=molistar_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'adx'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 10,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 10,
+          src: 'gpt'
+        },
+        {
+          ads: [
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+          ],
+          type: 'preroll',
+          delay: 0,
+          src: 'gpt'
+        }
       ];
       let makePrerollRequest = (index, singleAdStructure = false) => {
 let resp = `<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">`

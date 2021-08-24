@@ -1089,23 +1089,25 @@ function ubadScript() {
 
   var mappings_extra_units_config_desktop = {
       adUnitNames: [
-          '/22057354005/bongdaplus_native_fluid',
+          // '/22057354005/bongdaplus_native_fluid',
           // '/21692080761/amb_eng_header_desk_v2'  //  { bidder: "kubient", params: { zoneid: "728eb6f0a4102", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_mobile = {
       adUnitNames: [
-          '/22057354005/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
+          // '/22057354005/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_both = {
       adUnitNames: [
-          '/22057354005/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
+          // '/22057354005/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
       ],
   };
 
   var mappings_extra_units_config = {
-      adUnitNames: [],
+      adUnitNames: [
+        '/22057354005/bongdaplus_native_fluid',
+      ],
   };
 
   var mappings_extra_units = {
@@ -1140,7 +1142,7 @@ function ubadScript() {
       mappings_full_hb_config.isAP = mappings_full_hb_config_desktop.isAP.concat(mappings_full_hb_config_both.isAP);
       mappings_full_hb_config.adId = mappings_full_hb_config_desktop.adId;
       mappings_full_hb_config.sizes = mappings_full_hb_config_desktop.sizes;
-      mappings_extra_units_config.adUnitNames = mappings_extra_units_config_desktop.adUnitNames.concat(mappings_extra_units_config_both.adUnitNames);
+      // mappings_extra_units_config.adUnitNames = mappings_extra_units_config_desktop.adUnitNames.concat(mappings_extra_units_config_both.adUnitNames);
   } else {
       mappings_full_hb_config.adUnitNames = mappings_full_hb_config_mobile.adUnitNames.concat(
               mappings_full_hb_config_both.adUnitNames
@@ -1153,9 +1155,9 @@ function ubadScript() {
       );
       mappings_full_hb_config.adId = mappings_full_hb_config_mobile.adId;
       mappings_full_hb_config.sizes = mappings_full_hb_config_mobile.sizes;
-      mappings_extra_units_config.adUnitNames = mappings_extra_units_config_mobile.adUnitNames.concat(
-              mappings_extra_units_config_both.adUnitNames
-          );
+      // mappings_extra_units_config.adUnitNames = mappings_extra_units_config_mobile.adUnitNames.concat(
+      //         mappings_extra_units_config_both.adUnitNames
+      //     );
   }
 
   function checkHBUnits() {
@@ -1302,15 +1304,19 @@ function ubadScript() {
               //   apSlots.push(apSlotTemp);
               // }
           }
-          else if(mappings_extra_units_config.adUnitNames.includes(document.getElementById('div-gpt-ad-1629790829948-0'))){
-            // mappings_extra_units.slots.push(x[i]);
-            // mappings_extra_units.adUnitNames.push(x[i]);
-          }
           // else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
           //   mappings_extra_units.slots.push(x[i]);
           // }
       }
 
+      x_ub = googletag.pubads().getSlots();
+      x_ublen = x_ub.length;
+      for (var j = 0; j < x_ublen; j++) {
+         if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
+           mappings_extra_units.slots.push(x_ub[j]);
+           mappings_extra_units.adUnitNames.push(x_ub[j]);
+         }
+      }
       if (typeof googletag.defineSlot === "function") {
           googleDefine(
               mapping_full_hb.slotNumbers,
@@ -1335,6 +1341,7 @@ function ubadScript() {
 
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
+      callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
   }
   // checkHBUnits();
 
@@ -1425,6 +1432,27 @@ function ubadScript() {
                   }
               });
       });
+  }
+
+  function callExtraHBAds(adCode, ub_slot){
+    ubpbjs.que.push(function(){
+      ubpbjs.requestBids({
+        timeout: PREBID_TIMEOUT,
+        // adUnits: adUnits_full_hb,
+        adUnitCodes: adCode,
+        bidsBackHandler: function() {
+          ubpbjs.initAdserverSetHB = true;
+          googletag.cmd.push(function() {
+            ubpbjs.que.push(function() {
+                ubpbjs.setTargetingForGPTAsync();
+                // requestManager.prebid = true;
+                // biddersBack();
+                googletag.pubads().refresh(ub_slot);
+            });
+          });
+        }
+      });
+    });
   }
 
   // setInterval(function() {

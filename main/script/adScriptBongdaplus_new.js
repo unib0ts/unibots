@@ -1413,10 +1413,10 @@ function ubadScript() {
               .addEventListener("slotRenderEnded", function (event) {
                   var timer = REFRESH_TIMEOUT / 1000;
                   var el = document.getElementById(event.slot.getSlotId().getDomId());
-                  var nodes = el.childNodes[0].childNodes;
-                  var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
-                  // console.log(ubifame);
-                  if (ubifame == 'iframe') {
+                  // var nodes = el.childNodes[0].childNodes;
+                  // var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
+                  // if (ubifame == 'iframe') {
+                  if (el != null) {
                       var temp = setInterval(function () {
                           if (isInViewSpace(el)) {
                               timer -= 1;

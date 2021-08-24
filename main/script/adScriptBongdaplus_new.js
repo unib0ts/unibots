@@ -105,14 +105,14 @@ function ubadScript() {
       return check;
   }
 
-  if (!mobileCheck()) {
+  if (!mobileCheck() && (window.screen.availWidth > 1024)) {
       // var s5 = document.createElement('script');
       // s5.async = true;
       // s5.setAttribute("id", "AV5fb77ae2fab17435261f178a");
       // s5.type = "text/javascript";
       // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
       // document.getElementsByTagName('head')[0].appendChild(s5);
-      if (document.querySelector("main") && (window.screen.availWidth > 1024)) {
+      if (document.querySelector("main")) {
           z = document.createElement("div");
           z.id = "ub-left-ad";
           z.className = "ub-left-ad";

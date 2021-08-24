@@ -531,7 +531,7 @@ else {
 
        //end of if statement
       // }
-      
+
       /*
       ***Enable only if player is in half viewport inread and don't want to initialize player and ima before player div is in viewport
       */
@@ -571,7 +571,7 @@ function checkPlayerPlaying(){
 function playerPPChecker(){
   ubPlayer.on('play',()=>{ console.log("Player Play's")});
   ubPlayer.on('pause',()=>{ console.log("Player paused")});
-}  
+}
 
 function checkPlayerIsInView(){
   window.addEventListener('scroll', function () {
@@ -587,10 +587,10 @@ function checkPlayerIsInView(){
     isPlayerViewedOnce = true;
   }
 }
-              
+
 
 const toggleSticky = () => {
-  if(!isMobile()){
+  if(!isMobile() && (window.screen.availWidth > 1024)){
     let currentPlayer = document.querySelector('#unibots-video');
     let targetDiv = document.getElementById("ubVideo");
 

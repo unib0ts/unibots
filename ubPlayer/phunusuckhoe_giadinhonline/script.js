@@ -185,7 +185,7 @@
         var adsArray = [
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 1,
@@ -193,7 +193,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 5,
@@ -209,7 +209,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 5,
@@ -217,7 +217,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 0,
@@ -225,7 +225,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 20,
@@ -233,7 +233,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 0,
@@ -249,7 +249,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 0,
@@ -257,7 +257,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 10,
@@ -289,7 +289,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 10,
@@ -297,7 +297,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 0,
@@ -305,7 +305,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 10,
@@ -313,7 +313,7 @@
           },
           {
             ads: [
-              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+              'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/phunusuckhoe.giadinhonline_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
             ],
             type: 'preroll',
             delay: 0,

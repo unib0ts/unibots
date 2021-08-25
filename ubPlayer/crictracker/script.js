@@ -24,17 +24,17 @@ loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.mi
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.css");
 
-let url = 'https://newsbot.unibots.in/get_videos/crictracker';
-fetch(url).then((res) => {
-    res.json().then((result) => {
-        // console.log(result.data[0].links[0])
-        // resolve(result.data[0].links[0]);
-        VideoSrc = result.data[0].links[0];
-    })
-}).catch((error) => {
-    console.log(error);
-    // resolve(process.env.VIDEO_SRC_DEFAULT)
-});
+// let url = 'https://newsbot.unibots.in/get_videos/crictracker';
+// fetch(url).then((res) => {
+//     res.json().then((result) => {
+//       console.log(result.data[0]);
+//         ubvideos_length = result.data[0].links.length;
+//         i = Math.floor(Math.random()*(ubvideos_length))+1;
+//         VideoSrc = result.data[0].links[i];
+//     })
+// }).catch((error) => {
+//     console.log(error);
+// });
 
 function loadDynamicScript(url, tag, callback) {
   var s1 = document.createElement("script");
@@ -161,6 +161,12 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+var ubPlayer_src = [
+  "https://unibots.b-cdn.net/crictracker/Ipl_team.mp4",
+  "https://unibots.b-cdn.net/crictracker/video.mp4",
+];
+var src_index = Math.floor(Math.random()*(2));
+
 function initPlayer() {
 
   if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-homePC')){
@@ -201,7 +207,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 5,
@@ -217,7 +223,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 5,
@@ -225,7 +231,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -297,7 +303,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -313,7 +319,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -362,7 +368,7 @@ else {
       ubPlayer = videojs('content_video', vjsOptions);
       ubPlayer.src({
           type: "video/mp4",
-          src: VideoSrc,
+          src: ubPlayer_src[src_index],
       });
 
       var imaOptions = {

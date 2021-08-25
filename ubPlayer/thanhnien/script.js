@@ -45,9 +45,9 @@ function getVideoSrc(){
   let url = 'https://newsbot.unibots.in/get_videos/thanhnien';
   fetch(url).then((res) => {
       res.json().then((result) => {
-          // console.log(result.data[0].links[0])
-          // resolve(result.data[0].links[0]);
-          ubPlayer_scripts(vdoSrc = result.data[0].links[0]);
+          ubvideos_length = result.data[0].links.length;
+          i = Math.floor(Math.random()*(ubvideos_length))+1;
+          ubPlayer_scripts(vdoSrc = result.data[0].links[i]);
       })
   }).catch((error) => {
       console.log(error);

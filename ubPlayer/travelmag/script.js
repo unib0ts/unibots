@@ -52,8 +52,8 @@ function listen_scripts() {
           console.log('all loaded');
           console.log(scripts);
           clearInterval(ub_interval);
-          isMobile() ? isNearViewport(document.querySelector('#unibots-video')) : checkUnmutedAutoplaySupport();
-          // isNearViewport(document.querySelector('#unibots-video'));
+          // isMobile() ? isNearViewport(document.querySelector('#unibots-video')) : checkUnmutedAutoplaySupport();
+          isNearViewport(document.querySelector('#unibots-video'));
       }
   }, 500);
 }

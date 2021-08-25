@@ -72,7 +72,7 @@
     var myPlayer ='<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
 
     var ub_divsToCheck = {
-        "unibots-video": false,
+        "article-body": false,
     };
 
     var ub_interval_div_check = setInterval(() => {
@@ -90,8 +90,12 @@
                 }
             }
             if (!flag && checkFlag) {
-              if(document.getElementById('unibots-video')){
-                document.getElementById('unibots-video').innerHTML= myPlayer;
+              if(document.getElementById('article-body')){
+                z1 = document.createElement("div");
+                z1.id = "unibots-video";
+                z1.innerHTML = myPlayer;
+                x1 = document.getElementById("article-body");
+                x1.childNodes[3].appendChild(z1);
                 loadUbga("gabyub");
                 listen_scripts();
               }

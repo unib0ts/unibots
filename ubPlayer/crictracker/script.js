@@ -24,6 +24,17 @@ loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.mi
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.css");
 loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.css");
 
+let url = 'https://newsbot.unibots.in/get_videos/crictracker';
+fetch(url).then((res) => {
+    res.json().then((result) => {
+        // console.log(result.data[0].links[0])
+        // resolve(result.data[0].links[0]);
+        VideoSrc = result.data[0].links[0];
+    })
+}).catch((error) => {
+    console.log(error);
+    // resolve(process.env.VIDEO_SRC_DEFAULT)
+});
 
 function loadDynamicScript(url, tag, callback) {
   var s1 = document.createElement("script");
@@ -182,7 +193,7 @@ function initPlayer() {
       var adsArray = [
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 1,
@@ -190,7 +201,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
           ],
           type: 'preroll',
           delay: 5,
@@ -198,7 +209,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=molistar_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=crictracker_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=en',
           ],
           type: 'preroll',
           delay: 0,
@@ -206,7 +217,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
           ],
           type: 'preroll',
           delay: 5,
@@ -214,7 +225,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -222,7 +233,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 20,
@@ -230,7 +241,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -238,7 +249,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=molistar_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=crictracker_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=en',
           ],
           type: 'preroll',
           delay: 15,
@@ -246,7 +257,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -254,7 +265,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -262,7 +273,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=molistar_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=crictracker_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=en',
           ],
           type: 'preroll',
           delay: 0,
@@ -270,7 +281,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=molistar_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-5200956238394958&slotname=crictracker_adx2_preroll&ad_type=video&description_url=' + desc_url + '&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=en',
           ],
           type: 'preroll',
           delay: 30,
@@ -278,7 +289,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=molistar_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=vn',
+            'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-2730263451308801&slotname=crictracker_adx1_preroll&ad_type=video&description_url='+desc_url+'&max_ad_duration=350000000&sdmax=350000000&videoad_start_delay=0&vpmute=0&vpa=auto&adsafe=medium&hl=en',
           ],
           type: 'preroll',
           delay: 0,
@@ -286,7 +297,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -294,7 +305,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -302,7 +313,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt2_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=ar&adsafe=medium',
           ],
           type: 'preroll',
           delay: 10,
@@ -310,7 +321,7 @@ function initPlayer() {
         },
         {
           ads: [
-            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/molistar_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=vn&adsafe=medium',
+            'https://pubads.g.doubleclick.net/gampad/ads?iu=/21928950349/crictracker_gpt1_preroll&description_url='+desc_url+'&tfcd=0&npa=0&sz=192x108%7C320x180%7C400x225%7C640x360&gdfp_req=1&output=xml_vast4&unviewed_position_start=1&env=vp&impl=s&vpos=preroll&hl=en&adsafe=medium',
           ],
           type: 'preroll',
           delay: 0,
@@ -351,7 +362,7 @@ else {
       ubPlayer = videojs('content_video', vjsOptions);
       ubPlayer.src({
           type: "video/mp4",
-          src: "https://youtu.be/Pn7zYAtquBk",
+          src: VideoSrc,
       });
 
       var imaOptions = {
@@ -513,6 +524,19 @@ else {
       var closeButton = document.getElementsByClassName("ubp-close")[0];
       closeButton.addEventListener('click',()=>{ ubPlayer.dispose(); });
 
+      var button = videojs.getComponent('button');
+      var SbButton = videojs.extend(button, {
+            constructor: function() {
+              button.apply(this, arguments);
+              this.controlText("Subscribe");
+              this.addClass('ubp-cbutton');
+            },
+            handleClick: function() {
+              window.open('https://www.youtube.com/channel/UC5oTaFLOFlLNeAJt_dt5rBw', '_blank');
+            }
+          });
+      videojs.registerComponent('ubpButton', SbButton);
+      ubPlayer.addChild('ubpButton');
 
       //close player on video end.
       ubPlayer.on('timeupdate', function () {
@@ -740,4 +764,4 @@ function loadUbga(id, adUnits) {
     }
 }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}.ubsticky_left .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:2147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video,#unibots-video-mobile,#unibots-video-sticky,#unibots-video-homePC{z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}.ubp-cbutton::before{content:"Subscribe"}.ubp-cbutton{height:30px!important;border:solid 1px;width:26%!important;background-image:-webkit-linear-gradient(top,rgba(0,0,0,.8),rgba(0,0,0,.7) 40%,rgba(0,0,0,0) 99%)!important;color:#fff!important;cursor:pointer!important;display:inline-block!important;font-family:arial,sans-serif!important;font-weight:normal!important;font-size:14px!important;line-height:normal!important;padding:5px!important;top:0}@media (max-width:481px){.ubsticky .content_video-dimensions,.ubsticky-center .content_video-dimensions{width:344px!important;height:358px!important}#ubVideo{padding:0 20px}.ubsticky_left .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

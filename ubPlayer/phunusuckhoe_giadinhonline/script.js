@@ -20,7 +20,8 @@
     document.getElementsByTagName('HEAD')[0].appendChild(link);
   }
 
-  loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.min.css");
+  // loadDynamicStyles("https://cdn.jsdelivr.net/npm/video.js@7.11.8/dist/video-js.min.css");
+  loadDynamicStyles("https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/css/videojs.css");
   loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.8.0/dist/videojs.ads.css");
   loadDynamicStyles("https://cdn.jsdelivr.net/npm/videojs-ima@1.11.0/dist/videojs.ima.css");
 
@@ -69,7 +70,7 @@
     // load_player();
     loadDynamicScript("https://vjs.zencdn.net/7.11.4/video.min.js","vjs",post_scripts);
 
-    var myPlayer ='<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
+    let myPlayer = '<din id="ubVideo" class="ub-unloaded"><video id="content_video" class="ub_video-js" playsinline controls="true" preload="auto"></video></div>';
 
     var ub_divsToCheck = {
         "unibots-video": false,
@@ -171,7 +172,7 @@
             controlBar: {
                 volumePanel: {
                     inline: false,
-                    vertical: true
+                    vertical: false
                 },
                 'pictureInPictureToggle': false,
                 'fullscreenToggle': false,
@@ -365,6 +366,7 @@
             contribAdsSettings: {
                 debug: true,
             },
+            disableAdControls: true,
             // autoPlayAdBreaks: false,
             vastLoadTimeout: 2e4,
             adsManagerLoadedCallback: () => {
@@ -709,4 +711,4 @@
       }
   }
 
-function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;z-index:3147489999!important;animation:an 0.8s}.ubsticky_left{position:fixed;bottom:0;left:5px;z-index:3147489999!important;animation:an 0.8s}.ubsticky_left .content_video-dimensions{width:400px!important;height:225px!important}.video-js .vjs-control.vjs-close-button{right:-17px!important;top:-26px!important;z-index:2147483999!important}#unibots-video{font-size:1.8em!important;line-height:1.67!important;font-family:VideoJS!important;font-weight:400;font-style:normal;z-index:2147483999!important;margin:35px 0px!important}.video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}@media (max-width:481px){#ubVideo{padding:0 20px}.ubsticky_left .content_video-dimensions{width:192px!important;height:108px!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});
+function ready(fn){if(document.readyState!='loading'){fn()}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn)}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn()})}}window.ready(function(){var html='';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='video{max-width:100%;vertical-align:bottom}.ub-unloaded{display:none}.ub-loaded{display:flex;justify-content:center}.ubsticky{position:fixed;bottom:0;right:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}.ubsticky_left{position:fixed;bottom:0;left:10px;width:400px;z-index:999;animation:an 0.8s;margin:0px!important}#unibots-video,#unibots-video-sticky{margin:35px 0}.ub_video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,.vjs-icon-cancel:before{color:black!important}#ubp_logo{background:#fff;position:absolute;padding:3px 5px 2px 5px;right:0px!important;bottom:35px!important;width:40px!important;border-top-left-radius:8px;border-bottom-left-radius:8px;transition:bottom 0.4s ease-in-out;height:11px!important;font-size:10px;box-sizing:content-box!important;line-height:11px!important}#ubp_logo img{margin:0px!important;box-shadow:none!important;border-radius:0px!important;padding:0px!important;width:100%!important;height:11px!important;object-fit:unset!important;border:none!important}#unibots-video,#unibots-video *,.ub_video-js{font-family:"VideoJS"!important;font-size:10px!important}#unibots-video #ubVideo .ub_video-js .content_video_ima-ad-container>.content_video_ima-controls-div{font-family:"VideoJS"!important}.ub_video-js .ima-play-pause-div,.ub_video-js .ima-mute-div,.ub_video-js .ima-slider-div,.ub_video-js .ima-fullscreen-div{font-size:1.5em!important;line-height:2}.ub_video-js .vjs-control-bar{font-size:10px!important;height:8%!important}.ub_video-js .vjs-time-control{font-size:1.2em!important;line-height:4em;margin-top:-4px}.ub_video-js .vjs-progress-holder .vjs-play-progress,.ub_video-js .vjs-progress-holder .vjs-load-progress,.ub_video-js .vjs-progress-holder .vjs-load-progress div,.ub_video-js .vjs-progress-control{display:none!important}.vjs-remaining-time-display{line-height:3;font-size:1em!important}.ub_video-js .vjs-control.vjs-close-button{right:-17px!important;top:-23px!important}.ub_video-js button.vjs-close-button.vjs-control.vjs-button{font-size:12px!important}@media (max-width:481px){.ub_video-js .vjs-time-control{font-size:1.2em!important;line-height:4em;margin-top:-11px!important}.ub_video-js .vjs-control-bar{font-size:10px!important}.ub_video-js span.vjs-icon-placeholder,.ub_video-js span.vjs-remaining-time-display{color:#fff!important}}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule}else{css.appendChild(document.createTextNode(rule))}document.getElementsByTagName('head')[0].appendChild(css)});

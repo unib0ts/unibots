@@ -1312,14 +1312,15 @@ function ubadScript() {
           // }
       }
 
-      x_ub = googletag.pubads().getSlots();
-      x_ublen = x_ub.length;
-      for (var j = 0; j < x_ublen; j++) {
-         if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
-           mappings_extra_units.slots.push(x_ub[j]);
-           mappings_extra_units.adUnitNames.push(x_ub[j]);
-         }
-      }
+      // x_ub = googletag.pubads().getSlots();
+      // x_ublen = x_ub.length;
+      // for (var j = 0; j < x_ublen; j++) {
+      //    if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
+      //      mappings_extra_units.slots.push(x_ub[j]);
+      //      mappings_extra_units.adUnitNames.push(x_ub[j]);
+      //    }
+      // }
+
       if (typeof googletag.defineSlot === "function") {
           googleDefine(
               mapping_full_hb.slotNumbers,
@@ -1344,7 +1345,7 @@ function ubadScript() {
 
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
-      callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
+      // callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
   }
   // checkHBUnits();
 

@@ -45,9 +45,9 @@ function getVideoSrc(){
   let url = 'https://newsbot.unibots.in/get_videos/thanhnien';
   fetch(url).then((res) => {
       res.json().then((result) => {
-          // console.log(result.data[0].links[0])
-          // resolve(result.data[0].links[0]);
-          ubPlayer_scripts(vdoSrc = result.data[0].links[0]);
+          ubvideos_length = result.data[0].links.length;
+          i = Math.floor(Math.random()*(ubvideos_length))+1;
+          ubPlayer_scripts(vdoSrc = result.data[0].links[i]);
       })
   }).catch((error) => {
       console.log(error);
@@ -104,8 +104,8 @@ function ubPlayer_scripts(VideoSrc = 'https://cdn.unibots.in/yoga.mp4') {
             // console.log('all loaded');
             console.log(scripts);
             clearInterval(ub_interval);
-            // isMobile() ? isNearViewport(document.querySelector('#unibots-video')) : checkUnmutedAutoplaySupport();
-            isNearViewport(document.querySelector('#unibots-video'));
+            isMobile() ? isNearViewport(document.querySelector('#unibots-video')) : checkUnmutedAutoplaySupport();
+            // isNearViewport(document.querySelector('#unibots-video'));
         }
     }, 500);
   }
@@ -123,45 +123,32 @@ function ubPlayer_scripts(VideoSrc = 'https://cdn.unibots.in/yoga.mp4') {
 
     var myPlayer ='<div id="ubVideo" class="ub-unloaded"><video id="content_video" class="video-js" playsinline controls="true" preload="auto"></video></div>';
 
-    // var ub_divsToCheck = {
-    //     "unibots-video": false,
-    // };
-    //
-    // var ub_interval_div_check = setInterval(() => {
-    //         flag = false;
-    //         checkFlag = false;
-    //         for (x in ub_divsToCheck) {
-    //             if (document.getElementById(x) !== null) {
-    //                 ub_divsToCheck[x] = true;
-    //                 checkFlag = true;
-    //             }
-    //         }
-    //         for (x in ub_divsToCheck) {
-    //             if (ub_divsToCheck[x] == false) {
-    //                 flag = true;
-    //             }
-    //         }
-    //         if (!flag && checkFlag) {
-    //           if(document.getElementById('unibots-video')){
-    //             document.getElementById('unibots-video').innerHTML= myPlayer;
-    //             listen_scripts();
-    //           }
-    //           clearInterval(ub_interval_div_check);
-    //         }
-    // }, 500);
-    if (document.getElementById("article-body")) {
-      z1 = document.createElement("div");
-      z1.id = "unibots-video";
-      z1.innerHTML = myPlayer;
-      x1 = document.getElementById("article-body");
-      x1.childNodes[3].appendChild(z1);
-    }else {
-      if (document.getElementById('unibots-video')) {
-        document.getElementById('unibots-video').innerHTML= myPlayer;
-      }
-    }
-    listen_scripts();
+    var ub_divsToCheck = {
+        "unibots-video": false,
+    };
 
+    var ub_interval_div_check = setInterval(() => {
+            flag = false;
+            checkFlag = false;
+            for (x in ub_divsToCheck) {
+                if (document.getElementById(x) !== null) {
+                    ub_divsToCheck[x] = true;
+                    checkFlag = true;
+                }
+            }
+            for (x in ub_divsToCheck) {
+                if (ub_divsToCheck[x] == false) {
+                    flag = true;
+                }
+            }
+            if (!flag && checkFlag) {
+              if(document.getElementById('unibots-video')){
+                document.getElementById('unibots-video').innerHTML= myPlayer;
+                listen_scripts();
+              }
+              clearInterval(ub_interval_div_check);
+            }
+    }, 500);
   };
 
   var post_scripts = () => {

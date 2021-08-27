@@ -1313,6 +1313,7 @@ function ubadScript() {
       }
       if(typeof googletag != 'undefined') {
           if (!(window.location.href == "https://bongdaplus.vn/")) {
+            if(document.getElementById('div-gpt-ad-1629980995009-0')) {
             x_ub = googletag.pubads().getSlots();
             x_ublen = x_ub.length;
             for (var j = 0; j < x_ublen; j++) {
@@ -1322,7 +1323,8 @@ function ubadScript() {
                }
             }
             callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
-        }
+         }
+       }
       }
 
       if (typeof googletag.defineSlot === "function") {

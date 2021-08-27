@@ -170,13 +170,13 @@ function ubadScript() {
       }
 
 
-      z2 = document.createElement("div");
-      z2.id = "ub-popup-ad-container";
-      z2.className = "ub-popup-ad-container";
-      z2.innerHTML =
-          '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
-      x2 = document.querySelector("body");
-      x2.appendChild(z2);
+      // z2 = document.createElement("div");
+      // z2.id = "ub-popup-ad-container";
+      // z2.className = "ub-popup-ad-container";
+      // z2.innerHTML =
+      //     '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
+      // x2 = document.querySelector("body");
+      // x2.appendChild(z2);
   }
 
   function mybotubPopadcls() {
@@ -254,35 +254,35 @@ function ubadScript() {
       [336, 280],
   ];
 
-  if (mobileCheck()) {
-      // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-      adUnits1 = {
-          code: "/22057354005/docbao.vn_popup_fluid_336x280",
-          mediaTypes: {
-              banner: {
-                  sizes: div_1_sizes,
-              },
-          },
-          bids: [
-            // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-  					// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
-            // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-            // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-            // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
-            // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-            // { bidder: 'nobid', params: { siteId: '22049997436' } },
-            // // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-            // // // { bidder: 'criteo', params: {networkId: '10542'} },
-            // // // { bidder: 'criteointl', params: {networkId: '10545'} },
-            // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          ],
-      };
-      adUnits_full_hb.push(adUnits1);
-      // }
-  }
+  // if (mobileCheck()) {
+  //     // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+  //     adUnits1 = {
+  //         code: "/22057354005/docbao.vn_popup_fluid_336x280",
+  //         mediaTypes: {
+  //             banner: {
+  //                 sizes: div_1_sizes,
+  //             },
+  //         },
+  //         bids: [
+  //           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+  // 					// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
+  //           // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+  //           // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+  //           // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+  //           // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+  //           // { bidder: 'nobid', params: { siteId: '22049997436' } },
+  //           // // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+  //           // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+  //           // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+  //           // // // { bidder: 'criteo', params: {networkId: '10542'} },
+  //           // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+  //           // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  //           // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+  //         ],
+  //     };
+  //     adUnits_full_hb.push(adUnits1);
+  //     // }
+  // }
 
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -909,27 +909,31 @@ function ubadScript() {
 
   var mappings_extra_units_config_desktop = {
       adUnitNames: [
-          '/22057354005/docbao_native_fluid',
+          // '/22057354005/docbao_native_fluid',
           // '/21692080761/amb_eng_header_desk_v2'  //  { bidder: "kubient", params: { zoneid: "728eb6f0a4102", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_mobile = {
       adUnitNames: [
-          '/22057354005/docbao_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
+          // '/22057354005/docbao_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_both = {
       adUnitNames: [
-          '/22057354005/docbao_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
+          // '/22057354005/docbao_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
       ],
   };
 
   var mappings_extra_units_config = {
-      adUnitNames: [],
+      adUnitNames: [
+        '/22057354005/docbao_native_fluid',
+        '/22057354005/docbao_ub_vignette',
+      ],
   };
 
   var mappings_extra_units = {
-      slots: [],
+    slots: [],
+    adUnitNames:[]
   };
 
   var mappings_final_refresh = {
@@ -966,10 +970,10 @@ function ubadScript() {
       );
       mappings_full_hb_config.adId = mappings_full_hb_config_desktop.adId;
       mappings_full_hb_config.sizes = mappings_full_hb_config_desktop.sizes;
-      mappings_extra_units_config.adUnitNames =
-          mappings_extra_units_config_desktop.adUnitNames.concat(
-              mappings_extra_units_config_both.adUnitNames
-          );
+      // mappings_extra_units_config.adUnitNames =
+      //     mappings_extra_units_config_desktop.adUnitNames.concat(
+      //         mappings_extra_units_config_both.adUnitNames
+      //     );
   } else {
       mappings_full_hb_config.adUnitNames =
           mappings_full_hb_config_mobile.adUnitNames.concat(
@@ -983,18 +987,18 @@ function ubadScript() {
       );
       mappings_full_hb_config.adId = mappings_full_hb_config_mobile.adId;
       mappings_full_hb_config.sizes = mappings_full_hb_config_mobile.sizes;
-      mappings_extra_units_config.adUnitNames =
-          mappings_extra_units_config_mobile.adUnitNames.concat(
-              mappings_extra_units_config_both.adUnitNames
-          );
+      // mappings_extra_units_config.adUnitNames =
+      //     mappings_extra_units_config_mobile.adUnitNames.concat(
+      //         mappings_extra_units_config_both.adUnitNames
+      //     );
   }
 
   function checkHBUnits() {
-      if (mobileCheck()) {
-          // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-          addNewsBotAd();
-          // }
-      }
+      // if (mobileCheck()) {
+      //     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+      //     addNewsBotAd();
+      //     // }
+      // }
 
       changeConfigToHB();
       callMapUnits();
@@ -1053,6 +1057,28 @@ function ubadScript() {
           });
       });
   }
+
+
+  function callExtraHBAds(adCode, ub_slot){
+      ubpbjs.que.push(function(){
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          // adUnits: adUnits_full_hb,
+          adUnitCodes: adCode,
+          bidsBackHandler: function() {
+            ubpbjs.initAdserverSetHB = true;
+            googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  // requestManager.prebid = true;
+                  // biddersBack();
+                  googletag.pubads().refresh(ub_slot);
+              });
+            });
+          }
+        });
+      });
+    }
 
   // var botmanCalled = false;
   // var userStatusBM_hb = '';
@@ -1134,10 +1160,22 @@ function ubadScript() {
               //   apSlots.push(apSlotTemp);
               // }
           }
-          else if(mappings_extra_units_config.adUnitNames.includes(document.getElementById('div-gpt-ad-1629790932543-0'))){
-            // mappings_extra_units.slots.push(x[i]);
-          }
+          // else if(mappings_extra_units_config.adUnitNames.includes(document.getElementById('div-gpt-ad-1629790932543-0'))){
+          //   // mappings_extra_units.slots.push(x[i]);
+          // }
       }
+
+      if(typeof googletag != 'undefined') {
+            x_ub = googletag.pubads().getSlots();
+            x_ublen = x_ub.length;
+            for (var j = 0; j < x_ublen; j++) {
+               if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
+                 mappings_extra_units.slots.push(x_ub[j]);
+                 mappings_extra_units.adUnitNames.push(x_ub[j]);
+               }
+            }
+            callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
+          }
 
       if (typeof googletag.defineSlot === "function") {
           googleDefine(

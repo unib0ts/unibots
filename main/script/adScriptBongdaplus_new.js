@@ -1311,15 +1311,17 @@ function ubadScript() {
           //   mappings_extra_units.slots.push(x[i]);
           // }
       }
-
-      // x_ub = googletag.pubads().getSlots();
-      // x_ublen = x_ub.length;
-      // for (var j = 0; j < x_ublen; j++) {
-      //    if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
-      //      mappings_extra_units.slots.push(x_ub[j]);
-      //      mappings_extra_units.adUnitNames.push(x_ub[j]);
-      //    }
-      // }
+      if(typeof googletag != 'undefined') {
+            x_ub = googletag.pubads().getSlots();
+            x_ublen = x_ub.length;
+            for (var j = 0; j < x_ublen; j++) {
+               if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
+                 mappings_extra_units.slots.push(x_ub[j]);
+                 mappings_extra_units.adUnitNames.push(x_ub[j]);
+               }
+            }
+            callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
+          }
 
       if (typeof googletag.defineSlot === "function") {
           googleDefine(
@@ -1345,7 +1347,6 @@ function ubadScript() {
 
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
-      // callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
   }
   // checkHBUnits();
 

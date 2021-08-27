@@ -1166,6 +1166,7 @@ function ubadScript() {
       }
 
       if(typeof googletag != 'undefined') {
+        if (!(window.location.href== "https://m.docbao.vn/" || window.location.href == "https://docbao.vn/")) {
             x_ub = googletag.pubads().getSlots();
             x_ublen = x_ub.length;
             for (var j = 0; j < x_ublen; j++) {
@@ -1176,6 +1177,7 @@ function ubadScript() {
             }
             callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
           }
+     }
 
       if (typeof googletag.defineSlot === "function") {
           googleDefine(

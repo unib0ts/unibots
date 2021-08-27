@@ -510,7 +510,7 @@ function ubadScript() {
           mybotpopupad.style.backgroundColor = "rgb(0, 0, 0)";
           // mybotpopupad.style.backdropFilter = 'blur(3px)';
           // mybotpopupad.classList.add("popubcontainer");
-          mybotpopupad.style.zIndex = "2147483640";
+          mybotpopupad.style.zIndex = "2147483647";
           // if (ub_ad1RefreshFlag != 1) {
           //     setTimeout(function () {
           //         ub_ad1RefreshFlag = 1;

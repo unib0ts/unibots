@@ -1010,29 +1010,29 @@ function ubadScript() {
 
   function callFullHBAds(adCode, ub_slot) {
       fillRefreshMap();
-      // ubpbjs.que.push(function () {
-      //     ubpbjs.requestBids({
-      //         timeout: PREBID_TIMEOUT,
-      //         labels: [GEO_CODE],
-      //         adUnits: adUnits_full_hb,
-      //         adUnitCodes: adCode,
-      //         bidsBackHandler: function () {
-      //             ubpbjs.initAdserverSetHB = true;
-      //             googletag.cmd.push(function () {
-      //                 ubpbjs.que.push(function () {
-      //                     ubpbjs.setTargetingForGPTAsync();
-      //                     // requestManager.prebid = true;
-      //                     // biddersBack();
-      //                     googletag.cmd.push(function () {
-      //                         googletag.pubads().refresh(mapping_full_hb.slots);
-      //                         // googletag.pubads().refresh(mappings_extra_units.slots);
-      //                     });
-      //                     // googletag.pubads().refresh(ub_slot);
-      //                 });
-      //             });
-      //         },
-      //     });
-      // });
+      ubpbjs.que.push(function () {
+          ubpbjs.requestBids({
+              timeout: PREBID_TIMEOUT,
+              labels: [GEO_CODE],
+              adUnits: adUnits_full_hb,
+              adUnitCodes: adCode,
+              bidsBackHandler: function () {
+                  ubpbjs.initAdserverSetHB = true;
+                  googletag.cmd.push(function () {
+                      ubpbjs.que.push(function () {
+                          ubpbjs.setTargetingForGPTAsync();
+                          // requestManager.prebid = true;
+                          // biddersBack();
+                          googletag.cmd.push(function () {
+                              googletag.pubads().refresh(mapping_full_hb.slots);
+                              // googletag.pubads().refresh(mappings_extra_units.slots);
+                          });
+                          // googletag.pubads().refresh(ub_slot);
+                      });
+                  });
+              },
+          });
+      });
   }
 
   function initAdserver_hb_full() {

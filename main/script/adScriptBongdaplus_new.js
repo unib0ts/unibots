@@ -1311,21 +1311,6 @@ function ubadScript() {
           //   mappings_extra_units.slots.push(x[i]);
           // }
       }
-      if(typeof googletag != 'undefined') {
-          if (!(window.location.href == "https://bongdaplus.vn/")) {
-            if(document.getElementById('div-gpt-ad-1629980995009-0')) {
-            x_ub = googletag.pubads().getSlots();
-            x_ublen = x_ub.length;
-            for (var j = 0; j < x_ublen; j++) {
-               if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
-                 mappings_extra_units.slots.push(x_ub[j]);
-                 mappings_extra_units.adUnitNames.push(x_ub[j]);
-               }
-            }
-            callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
-         }
-       }
-      }
 
       if (typeof googletag.defineSlot === "function") {
           googleDefine(
@@ -1352,6 +1337,40 @@ function ubadScript() {
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
   }
+
+  var ub_divsToCheck = {
+      "div-gpt-ad-1629980995009-0": false,
+  };
+
+  var ub_interval_div_check = setInterval(() => {
+          flag = false;
+          checkFlag = false;
+          for (x in ub_divsToCheck) {
+              if (document.getElementById(x) !== null) {
+                  ub_divsToCheck[x] = true;
+                  checkFlag = true;
+              }
+          }
+          for (x in ub_divsToCheck) {
+              if (ub_divsToCheck[x] == false) {
+                  flag = true;
+              }
+          }
+          if (!flag && checkFlag) {
+          if(document.getElementById('div-gpt-ad-1629980995009-0')) {
+          x_ub = googletag.pubads().getSlots();
+          x_ublen = x_ub.length;
+            for (var j = 0; j < x_ublen; j++) {
+               if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
+                 mappings_extra_units.slots.push(x_ub[j]);
+                 mappings_extra_units.adUnitNames.push(x_ub[j]);
+               }
+            }
+            callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
+          }
+            clearInterval(ub_interval_div_check);
+          }
+  }, 500);
   // checkHBUnits();
 
   // function callAPStagBids(){

@@ -1010,29 +1010,29 @@ function ubadScript() {
 
   function callFullHBAds(adCode, ub_slot) {
       fillRefreshMap();
-      // ubpbjs.que.push(function () {
-      //     ubpbjs.requestBids({
-      //         timeout: PREBID_TIMEOUT,
-      //         labels: [GEO_CODE],
-      //         adUnits: adUnits_full_hb,
-      //         adUnitCodes: adCode,
-      //         bidsBackHandler: function () {
-      //             ubpbjs.initAdserverSetHB = true;
-      //             googletag.cmd.push(function () {
-      //                 ubpbjs.que.push(function () {
-      //                     ubpbjs.setTargetingForGPTAsync();
-      //                     // requestManager.prebid = true;
-      //                     // biddersBack();
-      //                     googletag.cmd.push(function () {
-      //                         googletag.pubads().refresh(mapping_full_hb.slots);
-      //                         // googletag.pubads().refresh(mappings_extra_units.slots);
-      //                     });
-      //                     // googletag.pubads().refresh(ub_slot);
-      //                 });
-      //             });
-      //         },
-      //     });
-      // });
+      ubpbjs.que.push(function () {
+          ubpbjs.requestBids({
+              timeout: PREBID_TIMEOUT,
+              labels: [GEO_CODE],
+              adUnits: adUnits_full_hb,
+              adUnitCodes: adCode,
+              bidsBackHandler: function () {
+                  ubpbjs.initAdserverSetHB = true;
+                  googletag.cmd.push(function () {
+                      ubpbjs.que.push(function () {
+                          ubpbjs.setTargetingForGPTAsync();
+                          // requestManager.prebid = true;
+                          // biddersBack();
+                          googletag.cmd.push(function () {
+                              googletag.pubads().refresh(mapping_full_hb.slots);
+                              // googletag.pubads().refresh(mappings_extra_units.slots);
+                          });
+                          // googletag.pubads().refresh(ub_slot);
+                      });
+                  });
+              },
+          });
+      });
   }
 
   function initAdserver_hb_full() {
@@ -1165,22 +1165,6 @@ function ubadScript() {
           // }
       }
 
-      if(typeof googletag != 'undefined') {
-        if (!(window.location.href== "https://m.docbao.vn/" || window.location.href == "https://docbao.vn/")) {
-          if (document.getElementById('div-gpt-ad-1629790932543-0')) {
-            x_ub = googletag.pubads().getSlots();
-            x_ublen = x_ub.length;
-            for (var j = 0; j < x_ublen; j++) {
-               if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
-                 mappings_extra_units.slots.push(x_ub[j]);
-                 mappings_extra_units.adUnitNames.push(x_ub[j]);
-               }
-            }
-            callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
-          }
-        }
-     }
-
       if (typeof googletag.defineSlot === "function") {
           googleDefine(
               mapping_full_hb.slotNumbers,
@@ -1206,6 +1190,40 @@ function ubadScript() {
       // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
   }
+
+  var ub_divsToCheck = {
+      "div-gpt-ad-1629790932543-0": false,
+  };
+
+  var ub_interval_div_check = setInterval(() => {
+          flag = false;
+          checkFlag = false;
+          for (x in ub_divsToCheck) {
+              if (document.getElementById(x) !== null) {
+                  ub_divsToCheck[x] = true;
+                  checkFlag = true;
+              }
+          }
+          for (x in ub_divsToCheck) {
+              if (ub_divsToCheck[x] == false) {
+                  flag = true;
+              }
+          }
+          if (!flag && checkFlag) {
+          if(document.getElementById('div-gpt-ad-1629790932543-0')) {
+          x_ub = googletag.pubads().getSlots();
+          x_ublen = x_ub.length;
+            for (var j = 0; j < x_ublen; j++) {
+               if(mappings_extra_units_config.adUnitNames.includes(x_ub[j].getSlotId().getAdUnitPath())){
+                 mappings_extra_units.slots.push(x_ub[j]);
+                 mappings_extra_units.adUnitNames.push(x_ub[j]);
+               }
+            }
+            callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
+          }
+            clearInterval(ub_interval_div_check);
+          }
+  }, 500);
   // checkHBUnits();
 
   // function callAPStagBids(){

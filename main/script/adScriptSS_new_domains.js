@@ -134,7 +134,7 @@ if(typeof customConfigObjectA === 'undefined'){
             // // { bidder: 'criteointl', params: {networkId: '10545'} },
             // // // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
             // // //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265018'} },
+            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265018'} },
             { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
             // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
             // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -202,7 +202,7 @@ if(typeof customConfigObjectA === 'undefined'){
             // // { bidder: 'criteointl', params: {networkId: '10545'} },
             // // // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
             // // //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
+            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
             { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
             // // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
             // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
@@ -971,14 +971,14 @@ if(typeof customConfigObjectA === 'undefined'){
         hb_full_common_bidders.concat([
          	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
-          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265018'} },
+          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265018'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
         ]),  //'/21959913182/sakshisamachar_nb_320x50',
         hb_full_common_bidders.concat([
          	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
-          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
+          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
         ]),  //'/21959913182/sakshipost_nb_320x50'

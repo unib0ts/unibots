@@ -167,7 +167,7 @@ function ubadScript() {
               '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
           x1 = document.querySelector("body");
           x1.appendChild(z1);
-      }
+      // }
 
     if(!(window.location.href== "https://m.docbao.vn/")){
       z2 = document.createElement("div");

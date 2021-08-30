@@ -1397,7 +1397,7 @@ function ubadScript() {
 }
 
  if (mobileCheck()) {
-    if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
+    // if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
               if (event.slot.getAdUnitPath() ==="/22057354005/docbao.vn_mb_anchor_300x100"){
@@ -1408,7 +1408,7 @@ function ubadScript() {
               }
             });
         });
-    }
+    // }
 }
 
  function loadAd(id, adUnits) {

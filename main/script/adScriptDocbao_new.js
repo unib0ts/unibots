@@ -404,7 +404,7 @@ function ubadScript() {
               useBidCache: true,
               enableSendAllBids: false, // Default will be `true` as of 1.0
               bidderSequence: "random", // Default is random
-              publisherDomain: "https://bongdaplus.vn/",
+              publisherDomain: "https://docbao.vn/",
               bidderTimeout: PREBID_TIMEOUT + 500,
               //pubcid: {expInterval: },
               //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

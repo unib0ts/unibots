@@ -1497,12 +1497,10 @@ function ubadScript() {
               });
       });
 
-      // console.log(mappings_final_refresh.adUnitNames);
-      // refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-
       setInterval(function() {
-        // console.log(mappings_final_refresh.adUnitNames);
-        refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+        if (!mappings_final_refresh.adSlots == '') {
+          refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+        }
       }, REFRESH_TIMEOUT);
   }
 
@@ -1552,7 +1550,7 @@ function ubadScript() {
     // console.log(ub_slot,adCode);
     // if(adCode == '/22057354005/bongdaplus.vn_popup_fluid_336x280' || '/22057354005/bongdaplus_native_fluid'){}
     // else {
-      console.log('test');
+      // console.log('test');
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,

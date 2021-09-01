@@ -371,31 +371,31 @@
             // autoPlayAdBreaks: false,
             vastLoadTimeout: 2e4,
             adsManagerLoadedCallback: () => {
-                  ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
-                      // console.log("ad completed");
-                      stickyFlag = false;
-                      // console.log(`Triggered ${stickyFlag}`)
-                      toggleSticky();
-                  });
-                  ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
-                      // console.log("ads SKIPPED");
-                      stickyFlag = false;
-                      toggleSticky();
-                  });
-                  ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
-                      // console.log("ads started");
-                      stickyFlag = true;
-                      toggleSticky();
-                  });
-                  ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
-                      // console.log("AD LOADED \n",e);
-                      stickyFlag = true;
-                      // showPlayer();
-                      ubPlayer.autoplay(true);
-                      ubPlayer.play();
-                      ubPlayer.ima.resumeAd();
-                      toggleSticky();
-                  });
+                  // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE,() => {
+                  //     // console.log("ad completed");
+                  //     stickyFlag = false;
+                  //     // console.log(`Triggered ${stickyFlag}`)
+                  //     toggleSticky();
+                  // });
+                  // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED,() => {
+                  //     // console.log("ads SKIPPED");
+                  //     stickyFlag = false;
+                  //     toggleSticky();
+                  // });
+                  // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.STARTED,() => {
+                  //     // console.log("ads started");
+                  //     stickyFlag = true;
+                  //     toggleSticky();
+                  // });
+                  // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.LOADED,(e) => {
+                  //     // console.log("AD LOADED \n",e);
+                  //     stickyFlag = true;
+                  //     // showPlayer();
+                  //     ubPlayer.autoplay(true);
+                  //     ubPlayer.play();
+                  //     ubPlayer.ima.resumeAd();
+                  //     toggleSticky();
+                  // });
 
                   ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, () => {
                       ubPlayer.ima.getAdsManager().destroy();
@@ -406,15 +406,15 @@
                         newIMA(adsIndex++);
                       }
                   });
-                  ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED, () =>{
-                      ubPlayer.ima.getAdsManager().destroy();
-                      ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
-                      ubPlayer.ima.changeAdTag(null);
-                      // ubPlayer.ima.AdsLoader.contentComplete();
-                      if (adsIndex < adsArray.length) {
-                        newIMA(adsIndex++,true);
-                      }
-                  });
+                  // ubPlayer.ima.addEventListener(google.ima.AdEvent.Type.SKIPPED, () =>{
+                  //     ubPlayer.ima.getAdsManager().destroy();
+                  //     ubPlayer.ima.controller.sdkImpl.adsLoader.contentComplete();
+                  //     ubPlayer.ima.changeAdTag(null);
+                  //     // ubPlayer.ima.AdsLoader.contentComplete();
+                  //     if (adsIndex < adsArray.length) {
+                  //       newIMA(adsIndex++,true);
+                  //     }
+                  // });
             }
         };
         ubPlayer.ima(imaOptions);
@@ -527,15 +527,15 @@
                 ubPlayer.dispose();
             }
         });
-        setLogo();
+        // setLogo();
 
         // if (!isMobile() && window.location.href != "https://docbao.vn/") {
-        if (document.getElementById("unibots-video")) {
-            window.addEventListener('scroll', function () {
-              // if(!stickyFlag) { stickyFlag = true; }
-                toggleSticky();
-            });
-        }
+        // if (document.getElementById("unibots-video")) {
+        //     window.addEventListener('scroll', function () {
+        //       // if(!stickyFlag) { stickyFlag = true; }
+        //         toggleSticky();
+        //     });
+        // }
 
 
          //end of if statement
@@ -598,31 +598,31 @@
   }
 
 
-  const toggleSticky = () => {
-     if(!isMobile()){
-      let currentPlayer = document.querySelector('#unibots-video');
-      let targetDiv = document.getElementById("ubVideo");
-          if (isInViewport(currentPlayer)) {
-              if (targetDiv.classList.contains("ubsticky_left")) {
-                  targetDiv.classList.remove("ubsticky_left");
-                  // resizeAds(640,360);
-              }
-          } else {
-              if (stickyFlag) {
-                  if (!targetDiv.classList.contains("ubsticky_left")) {
-                      targetDiv.classList.add("ubsticky_left");
-                      // resizeAds(400,225);
-                  }
-              }
-              else {
-                  if (targetDiv.classList.contains("ubsticky_left")) {
-                      targetDiv.classList.remove("ubsticky_left");
-                      // resizeAds(640,360);
-                  }
-              }
-          }
-    }
-  }
+  // const toggleSticky = () => {
+  //    if(!isMobile()){
+  //     let currentPlayer = document.querySelector('#unibots-video');
+  //     let targetDiv = document.getElementById("ubVideo");
+  //         if (isInViewport(currentPlayer)) {
+  //             if (targetDiv.classList.contains("ubsticky_left")) {
+  //                 targetDiv.classList.remove("ubsticky_left");
+  //                 // resizeAds(640,360);
+  //             }
+  //         } else {
+  //             if (stickyFlag) {
+  //                 if (!targetDiv.classList.contains("ubsticky_left")) {
+  //                     targetDiv.classList.add("ubsticky_left");
+  //                     // resizeAds(400,225);
+  //                 }
+  //             }
+  //             else {
+  //                 if (targetDiv.classList.contains("ubsticky_left")) {
+  //                     targetDiv.classList.remove("ubsticky_left");
+  //                     // resizeAds(640,360);
+  //                 }
+  //             }
+  //         }
+  //     }
+  //   }
 
   // function resizeAds(raWidth,raHeight){
   //   if(ubPlayer.ads.inAdBreak()){
@@ -691,15 +691,15 @@
     document.querySelector("#ubVideo").classList.add("ub-unloaded");
   }
 
-  function setLogo() {
-    let i = document.createElement("a");
-    i.href = "https://unibots.in";
-    i.target = "_blank";
-    i.id = "ubp_logo";
-    i.classList.add = "ubp_logo";
-    i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
-    ubPlayer.el_.appendChild(i);
-  }
+  // function setLogo() {
+  //   let i = document.createElement("a");
+  //   i.href = "https://unibots.in";
+  //   i.target = "_blank";
+  //   i.id = "ubp_logo";
+  //   i.classList.add = "ubp_logo";
+  //   i.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/ub/logo.svg" alt="Unibots.in" style="vertical-align:middle;height:11px">';
+  //   ubPlayer.el_.appendChild(i);
+  // }
 
   function loadUbga(id, adUnits) {
       var elm = document.getElementById(id);

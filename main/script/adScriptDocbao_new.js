@@ -259,7 +259,7 @@ function ubadScript() {
       // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
     if(!(window.location.href== "https://m.docbao.vn/")){
       adUnits1 = {
-          code: "/22057354005/docbao.vn_popup_fluid_336x280",
+          code: "/22140546871/docbao.vn_popup_fluid_336x280",
           mediaTypes: {
               banner: {
                   sizes: div_1_sizes,
@@ -435,7 +435,7 @@ function ubadScript() {
       googletag.cmd.push(function () {
           ub_slotp = googletag
               .defineSlot(
-                  "/22057354005/docbao.vn_popup_fluid_336x280",
+                  "/22140546871/docbao.vn_popup_fluid_336x280",
                   div_1_sizes,
                   "div-gpt-ad-1624440241552-0"
               )
@@ -453,7 +453,7 @@ function ubadScript() {
               .addEventListener("slotRenderEnded", function (event) {
                   if (
                       event.slot.getAdUnitPath() ===
-                      "/22057354005/docbao.vn_popup_fluid_336x280"
+                      "/22140546871/docbao.vn_popup_fluid_336x280"
                   ) {
                       ub_checkAd1Rendered();
                   }
@@ -529,7 +529,7 @@ function ubadScript() {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
-              adUnitCodes: ["/22057354005/docbao.vn_popup_fluid_336x280"],
+              adUnitCodes: ["/22140546871/docbao.vn_popup_fluid_336x280"],
               bidsBackHandler: function () {
                   googletag.cmd.push(function () {
                       ubpbjs.que.push(function () {
@@ -765,6 +765,7 @@ function ubadScript() {
   };
   var mappings_full_hb_config_mobile = {
       adUnitNames: [
+        ////"/22057354005/docbao.vn_popup_fluid_336x280",
         // "/22057354005/docbao.vn_gpt_mobile_home_300x100",
         // "/22057354005/docbao.vn_gpt_mobile_center2_300x250",
         // "/22057354005/docbao.vn_gpt_mobile_center3_300x600",
@@ -775,6 +776,7 @@ function ubadScript() {
         // // "/22057354005/docbao.vn_mb_anchor_320x50",
         // "/22057354005/docbao.vn_mb_anchor_300x100",
 
+        //"/22140546871/docbao.vn_popup_fluid_336x280"
         "/22140546871/docbao.vn_gpt_mobile_home_300x100",
         "/22140546871/docbao.vn_gpt_mobile_center2_300x250",
         "/22140546871/docbao.vn_gpt_mobile_center3_300x600",

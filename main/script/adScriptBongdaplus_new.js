@@ -1118,6 +1118,38 @@ function ubadScript() {
     adUnitNames:[]
   };
 
+  var mappings_final_refresh_list = {
+      adUnitNames: [
+        "/22057354005/bongdaplus.vn_pc_balloon_hb_300x600",
+        // '/22057354005/bongdaplus.vn_PC_bottom-article_300x250_1',
+        // '/22057354005/bongdaplus.vn_PC_bottom-article_300x250_2',
+        // '/22057354005/bongdaplus.vn_in-article_468x60',
+        "/22057354005/bongdaplus.vn_in-article_336x280",
+        // '/22057354005/bongdaplus.vn_pc_header_970x250',
+        "/22057354005/bongdaplus.vn_pc_center1_970x250",
+        "/22057354005/bongdaplus.vn_pc_center2_970x250",
+        "/22057354005/bongdaplus.vn_pc_R1_300x250",
+        "/22057354005/bongdaplus.vn_pc_R2_300x250",
+        "/22057354005/bongdaplus.vn_pc_R3_300x600",
+        "/22057354005/bongdaplus.vn_pc_R4_300x600",
+        "/22057354005/bongdaplus.vn_pc_R5_300x600",
+        "/22057354005/bongdaplus.vn_pc_fl_120x600",
+        "/22057354005/bongdaplus.vn_pc_fr_120x600",
+        "/22057354005/bongdaplus.vn_pc_centerarticlepc_336x280",
+        "/22057354005/bongdaplus.vn_in-article_468x60",
+        "/22057354005/bongdaplus.vn_in-article_336x280",
+        "/22057354005/bongdaplus.vn_mb_hot1_336x280",
+        "/22057354005/bongdaplus.vn_mb_hot2_300x600",
+        "/22057354005/bongdaplus.vn_mb_center1_336x280",
+        "/22057354005/bongdaplus.vn_mb_center2_336x280",
+        "/22057354005/bongdaplus.vn_mb_center3_336x280",
+        "/22057354005/bongdaplus.vn_mb_ma_336x280",
+        "/22057354005/bongdaplus.vn_mb_anchor_320x50",
+        // "/22057354005/bongdaplus.vn_mb_anchor_320x100",
+        // '/22057354005/bongdaplus.vn_popup_fluid_336x280'
+      ],
+  };
+
   var mappings_final_refresh = {
       adUnitNames: [],
       adSlots: [],
@@ -1440,27 +1472,36 @@ function ubadScript() {
           googletag
               .pubads()
               .addEventListener("slotRenderEnded", function (event) {
-                  var timer = REFRESH_TIMEOUT / 1000;
+                  // var timer = REFRESH_TIMEOUT / 1000;
                   var el = document.getElementById(event.slot.getSlotId().getDomId());
-                  // var nodes = el.childNodes[0].childNodes;
-                  // var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
-                  // if (ubifame == 'iframe') {
+                  var nodes = el.childNodes[0].childNodes;
+                  var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
+                  if (ubifame == 'iframe') {
                   if (el != null) {
-                      var temp = setInterval(function () {
+                      // var temp = setInterval(function () {
                           if (isInViewSpace(el)) {
-                              timer -= 1;
-                              if (timer <= 0) {
-                                  refreshBid(
-                                      [event.slot],
-                                      [event.slot.getSlotId().getAdUnitPath()]
-                                  );
-                                  clearInterval(temp);
-                              }
+                              // timer -= 1;
+                              // if (timer <= 0) {
+                                if(mappings_final_refresh_list["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
+                                  mappings_final_refresh.adSlots.push(event.slot);
+                                  mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+                                }
+                                  // console.log(mappings_final_refresh.adUnitNames);
+                                  // refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+                                  // clearInterval(temp);
+                              // }
                           }
-                      }, 1000);
+                      // }, 1000);
                   }
+                }
               });
       });
+
+      setInterval(function() {
+        if (!mappings_final_refresh.adSlots == '') {
+          refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+        }
+      }, REFRESH_TIMEOUT);
   }
 
   function callExtraHBAds(adCode, ub_slot){
@@ -1506,8 +1547,10 @@ function ubadScript() {
   }
 
   function refreshBid(ub_slot, adCode) {
-    if(adCode == '/22057354005/bongdaplus.vn_popup_fluid_336x280'){}
-    else {
+    // console.log(ub_slot,adCode);
+    // if(adCode == '/22057354005/bongdaplus.vn_popup_fluid_336x280' || '/22057354005/bongdaplus_native_fluid'){}
+    // else {
+      // console.log('test');
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1534,7 +1577,7 @@ function ubadScript() {
               },
           });
       });
-    }
+    // }
   }
 
   if (mobileCheck()) {

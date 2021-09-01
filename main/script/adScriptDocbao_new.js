@@ -259,7 +259,7 @@ function ubadScript() {
       // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
     if(!(window.location.href== "https://m.docbao.vn/")){
       adUnits1 = {
-          code: "/22057354005/docbao.vn_popup_fluid_336x280",
+          code: "/22140546871/docbao.vn_popup_fluid_336x280",
           mediaTypes: {
               banner: {
                   sizes: div_1_sizes,
@@ -431,11 +431,11 @@ function ubadScript() {
 
   var ub_slotp;
   function addNewsBotAd() {
-      changeConfigToHB();
+      // changeConfigToHB();
       googletag.cmd.push(function () {
           ub_slotp = googletag
               .defineSlot(
-                  "/22057354005/docbao.vn_popup_fluid_336x280",
+                  "/22140546871/docbao.vn_popup_fluid_336x280",
                   div_1_sizes,
                   "div-gpt-ad-1624440241552-0"
               )
@@ -453,7 +453,7 @@ function ubadScript() {
               .addEventListener("slotRenderEnded", function (event) {
                   if (
                       event.slot.getAdUnitPath() ===
-                      "/22057354005/docbao.vn_popup_fluid_336x280"
+                      "/22140546871/docbao.vn_popup_fluid_336x280"
                   ) {
                       ub_checkAd1Rendered();
                   }
@@ -529,7 +529,7 @@ function ubadScript() {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
-              adUnitCodes: ["/22057354005/docbao.vn_popup_fluid_336x280"],
+              adUnitCodes: ["/22140546871/docbao.vn_popup_fluid_336x280"],
               bidsBackHandler: function () {
                   googletag.cmd.push(function () {
                       ubpbjs.que.push(function () {
@@ -571,18 +571,30 @@ function ubadScript() {
 
   var mappings_full_hb_config_desktop = {
       adUnitNames: [
-          "/22057354005/docbao.vn_pc_balloon_hb_300x600",
-          "/22057354005/docbao.vn_pc_bottom_336x280",
-          "/22057354005/docbao.vn_pc_inreadbanner-1_300x250",
-          "/22057354005/docbao.vn_pc_inreadbanner-2_300x250",
-          "/22057354005/docbao.vn_pc_header_728x90",
-          "/22057354005/docbao.vn_pc_R1_300x250",
-          "/22057354005/docbao.vn_pc_R2_300x250",
-          "/22057354005/docbao.vn_pc_R5_300x600",
-          "/22057354005/docbao.vn_pc_fl_120x600",
-          "/22057354005/docbao.vn_pc_fr1_120x600",
-          "/22057354005/docbao.vn_pc_fr_300x250",
-          "/22057354005/docbao_pc_sticky_300x600",
+          // "/22057354005/docbao.vn_pc_balloon_hb_300x600",
+          // "/22057354005/docbao.vn_pc_bottom_336x280",
+          // "/22057354005/docbao.vn_pc_inreadbanner-1_300x250",
+          // "/22057354005/docbao.vn_pc_inreadbanner-2_300x250",
+          // "/22057354005/docbao.vn_pc_header_728x90",
+          // "/22057354005/docbao.vn_pc_R1_300x250",
+          // "/22057354005/docbao.vn_pc_R2_300x250",
+          // "/22057354005/docbao.vn_pc_R5_300x600",
+          // "/22057354005/docbao.vn_pc_fl_120x600",
+          // "/22057354005/docbao.vn_pc_fr1_120x600",
+          // "/22057354005/docbao.vn_pc_fr_300x250",
+          // "/22057354005/docbao_pc_sticky_300x600",
+          "/22140546871/docbao.vn_pc_balloon_hb_300x600",
+          "/22140546871/docbao.vn_pc_bottom_336x280",
+          "/22140546871/docbao.vn_pc_inreadbanner-1_300x25",
+          "/22140546871/docbao.vn_pc_inreadbanner-2_300x250",
+          "/22140546871/docbao.vn_pc_header_728x90",
+          "/22140546871/docbao.vn_pc_R1_300x250",
+          "/22140546871/docbao.vn_pc_R2_300x250",
+          "/22140546871/docbao.vn_pc_R5_300x600",
+          "/22140546871/docbao.vn_pc_fl_120x600",
+          "/22140546871/docbao.vn_pc_fr1_120x600",
+          "/22140546871/docbao.vn_pc_fr_120x600",
+          "/22140546871/docbao_pc_sticky_300x600",
       ],
       adId: [
         "div-gpt-ad-1622019421633-0", //'/22057354005/docbao.vn_pc_balloon_hb_300x600',
@@ -753,15 +765,26 @@ function ubadScript() {
   };
   var mappings_full_hb_config_mobile = {
       adUnitNames: [
-        "/22057354005/docbao.vn_gpt_mobile_home_300x100",
-        "/22057354005/docbao.vn_gpt_mobile_center2_300x250",
-        "/22057354005/docbao.vn_gpt_mobile_center3_300x600",
-        "/22057354005/docbao.vn_gpt_mobile_center4_300x250",
-        "/22057354005/docbao.vn_gpt_mobile_center5_300x250",
-        "/22057354005/docbao.vn_gpt_mobile_bottom_300x250",
-        "/22057354005/docbao.vn_mobile_home_center_6",
-        // "/22057354005/docbao.vn_mb_anchor_320x50",
-        "/22057354005/docbao.vn_mb_anchor_300x100",
+        ////"/22057354005/docbao.vn_popup_fluid_336x280",
+        // "/22057354005/docbao.vn_gpt_mobile_home_300x100",
+        // "/22057354005/docbao.vn_gpt_mobile_center2_300x250",
+        // "/22057354005/docbao.vn_gpt_mobile_center3_300x600",
+        // "/22057354005/docbao.vn_gpt_mobile_center4_300x250",
+        // "/22057354005/docbao.vn_gpt_mobile_center5_300x250",
+        // "/22057354005/docbao.vn_gpt_mobile_bottom_300x250",
+        // "/22057354005/docbao.vn_mobile_home_center_6",
+        // // "/22057354005/docbao.vn_mb_anchor_320x50",
+        // "/22057354005/docbao.vn_mb_anchor_300x100",
+
+        //"/22140546871/docbao.vn_popup_fluid_336x280"
+        "/22140546871/docbao.vn_gpt_mobile_home_300x100",
+        "/22140546871/docbao.vn_gpt_mobile_center2_300x250",
+        "/22140546871/docbao.vn_gpt_mobile_center3_300x600",
+        "/22140546871/docbao.vn_gpt_mobile_center4_300x250",
+        "/22140546871/docbao.vn_gpt_mobile_center5_300x250",
+        "/22140546871/docbao.vn_gpt_mobile_bottom_300x250",
+        "/22140546871/docbao.vn_mobile_home_center_6",
+        "/22140546871/docbao.vn_mb_anchor_320x100",
       ],
       adId: [
         "div-gpt-ad-1617722423692-0", //'/22057354005/docbao.vn_gpt_mobile_home_300x100',
@@ -1003,7 +1026,7 @@ function ubadScript() {
           }
       }
 
-      changeConfigToHB();
+      // changeConfigToHB();
       callMapUnits();
 
       // setTimeout(function() {
@@ -1437,15 +1460,15 @@ function ubadScript() {
     }
 }
 
-function changeConfigToHB(){
-  ubpbjs.que.push(function() {
-    ubpbjs.setConfig({
-      "currency": {
-         "adServerCurrency": "INR",
-         "granularityMultiplier":75 ,
-         "conversionRateFile": 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
-         "defaultRates": { "USD": { "INR": 75 }}
-       }
-     });
-  });
-}
+// function changeConfigToHB(){
+//   ubpbjs.que.push(function() {
+//     ubpbjs.setConfig({
+//       "currency": {
+//          "adServerCurrency": "INR",
+//          "granularityMultiplier":75 ,
+//          "conversionRateFile": 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
+//          "defaultRates": { "USD": { "INR": 75 }}
+//        }
+//      });
+//   });
+// }

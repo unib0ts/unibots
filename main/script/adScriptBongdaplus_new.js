@@ -1506,7 +1506,7 @@ function ubadScript() {
   }
 
   function refreshBid(ub_slot, adCode) {
-    if(adCode == '/22057354005/bongdaplus.vn_popup_fluid_336x280'){}
+    if(adCode == '/22057354005/bongdaplus.vn_popup_fluid_336x280' || '/22057354005/bongdaplus_native_fluid'){}
     else {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({

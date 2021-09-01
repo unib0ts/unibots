@@ -431,7 +431,7 @@ function ubadScript() {
 
   var ub_slotp;
   function addNewsBotAd() {
-      changeConfigToHB();
+      // changeConfigToHB();
       googletag.cmd.push(function () {
           ub_slotp = googletag
               .defineSlot(
@@ -1026,7 +1026,7 @@ function ubadScript() {
           }
       }
 
-      changeConfigToHB();
+      // changeConfigToHB();
       callMapUnits();
 
       // setTimeout(function() {
@@ -1460,15 +1460,15 @@ function ubadScript() {
     }
 }
 
-function changeConfigToHB(){
-  ubpbjs.que.push(function() {
-    ubpbjs.setConfig({
-      "currency": {
-         "adServerCurrency": "INR",
-         "granularityMultiplier":75 ,
-         "conversionRateFile": 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
-         "defaultRates": { "USD": { "INR": 75 }}
-       }
-     });
-  });
-}
+// function changeConfigToHB(){
+//   ubpbjs.que.push(function() {
+//     ubpbjs.setConfig({
+//       "currency": {
+//          "adServerCurrency": "INR",
+//          "granularityMultiplier":75 ,
+//          "conversionRateFile": 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
+//          "defaultRates": { "USD": { "INR": 75 }}
+//        }
+//      });
+//   });
+// }

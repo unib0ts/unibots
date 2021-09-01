@@ -209,7 +209,7 @@ function ubadScript() {
 
   var PREBID_TIMEOUT = 1300;
   var FAILSAFE_TIMEOUT = 3000;
-  var REFRESH_TIMEOUT = 30000;
+  var REFRESH_TIMEOUT = 60000;
 
   var GEO_CODE = "";
   (function () {

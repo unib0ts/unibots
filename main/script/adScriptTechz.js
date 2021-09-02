@@ -203,6 +203,13 @@ else{
   apSlots.push(apSlotTemp);
 
 function mybotubScript() {
+  var cachebuster = Math.round(new Date().getTime() / 1000);
+  url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/techz/script.min.js?cb=" + cachebuster;
+  ub_vs = document.createElement("script");
+  ub_vs.src = url;
+  ub_vs.type = "text/javascript";
+  document.getElementsByTagName("head")[0].appendChild(ub_vs);
+
   var s0 = document.createElement('script');
   s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   s0.type = "text/javascript";

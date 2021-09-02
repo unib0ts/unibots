@@ -1363,7 +1363,7 @@ function ubadScript() {
 
  function refreshBid(ub_slot, adCode) {
   if (mobileCheck() && (window.location.hostname == "m.docbao.vn")) {
-    if (adCode == '/22057354005/docbao.vn_mb_anchor_300x100') {
+    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1426,7 +1426,7 @@ function ubadScript() {
     // if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-              if (event.slot.getAdUnitPath() ==="/22057354005/docbao.vn_mb_anchor_300x100"){
+              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
                     var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                         document.getElementById("close_ub-sticky-ad").style.display = "block";

@@ -51,6 +51,73 @@ if (!mobileCheck()) {
   var space = (parentWidth - childWidth)/2;
 }
 
+adUnits = [
+    {
+        code: '/21957769615/deepika.com_nb_320x50',
+        mediaTypes: {
+          native: {
+            image: {
+              // sizes: [300, 100],
+              aspect_ratios: [{
+                min_width: 100,        /* Optional */
+                min_height: 50,       /* Optional */
+                ratio_width: 2,        /* Required */
+                ratio_height: 1,       /* Required */
+              }],
+              sendId: true
+            },
+            title: {
+              len: 50,
+              sendId: true
+            },
+            sponsoredBy: {
+              required: true,
+              sendId: true
+            },
+            clickUrl: {
+              required: true,
+              sendId: true
+            }
+          }
+        },
+        bids: [
+          { bidder: 'appnexus', params: { placementId: '19054472' } },
+          { bidder: 'oftmedia', params: { placementId: '20846125' } }
+        ]
+    },
+    {
+        code: '/21957769615/deepika.com_nb_320x50',
+        mediaTypes: {
+            banner: {
+                sizes: div_1_sizes
+            }
+        },
+        bids: [
+         { bidder: 'appnexus', params: { placementId: '19054472' } }, /* one placementId for all sizes  my appnexus bidder */
+         { bidder: 'oftmedia', params: { placementId: '20846125' } },
+         { bidder: '33across', params: { siteId : 'bN_pSIWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+         { bidder: 'emx_digital', params: { tagid: '147569' } }, /* sizeless */
+          { bidder: 'sovrn', params: {tagid: '711906'} },
+          { bidder: 'openx', params: {unit: '543530328', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+         { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          { bidder: 'nobid', params: { siteId : '21986996687'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-34B844984984E7E303B7636ED3A69343'} },
+          // { bidder: 'criteo', params: {networkId: '10542'} },
+          // { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932874'} },
+          { bidder: 'smartadserver', params: { siteId: '362106', pageId: '1289607', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          { bidder: 'adkernel', params: {zoneId: '126017', host: 'cpm.fmlabsonline.com'} },
+          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          { bidder: "kubient", params: { zoneid: "e375f84e074df", server: "kssp.kbntx.ch"} },
+          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
+        ]
+    }
+];
+
 if (mobileCheck === 'function') {
   if (!mobileCheck() && (space > 160)) {
        adUnits = [
@@ -86,74 +153,6 @@ if (mobileCheck === 'function') {
              ]
          }
      ];}
-  else {
-    adUnits = [
-        {
-            code: '/21957769615/deepika.com_nb_320x50',
-            mediaTypes: {
-              native: {
-                image: {
-                  // sizes: [300, 100],
-                  aspect_ratios: [{
-                    min_width: 100,        /* Optional */
-                    min_height: 50,       /* Optional */
-                    ratio_width: 2,        /* Required */
-                    ratio_height: 1,       /* Required */
-                  }],
-                  sendId: true
-                },
-                title: {
-                  len: 50,
-                  sendId: true
-                },
-                sponsoredBy: {
-                  required: true,
-                  sendId: true
-                },
-                clickUrl: {
-                  required: true,
-                  sendId: true
-                }
-              }
-            },
-            bids: [
-              { bidder: 'appnexus', params: { placementId: '19054472' } },
-              { bidder: 'oftmedia', params: { placementId: '20846125' } }
-            ]
-        },
-        {
-            code: '/21957769615/deepika.com_nb_320x50',
-            mediaTypes: {
-                banner: {
-                    sizes: div_1_sizes
-                }
-            },
-            bids: [
-             { bidder: 'appnexus', params: { placementId: '19054472' } }, /* one placementId for all sizes  my appnexus bidder */
-             { bidder: 'oftmedia', params: { placementId: '20846125' } },
-             { bidder: '33across', params: { siteId : 'bN_pSIWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-             { bidder: 'emx_digital', params: { tagid: '147569' } }, /* sizeless */
-              { bidder: 'sovrn', params: {tagid: '711906'} },
-              { bidder: 'openx', params: {unit: '543530328', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-             { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              { bidder: 'nobid', params: { siteId : '21986996687'} },
-              { bidder: 'ucfunnel', params: { adid : 'ad-34B844984984E7E303B7636ED3A69343'} },
-              // { bidder: 'criteo', params: {networkId: '10542'} },
-              // { bidder: 'criteointl', params: {networkId: '10545'} },
-              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932874'} },
-              { bidder: 'smartadserver', params: { siteId: '362106', pageId: '1289607', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-              //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-              { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adkernel', params: {zoneId: '126017', host: 'cpm.fmlabsonline.com'} },
-              { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-              { bidder: "kubient", params: { zoneid: "e375f84e074df", server: "kssp.kbntx.ch"} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
-            ]
-        }
-    ];
-  }
 }
 else {
   function mobileCheckAdSript() {
@@ -194,73 +193,73 @@ else {
              ]
          }
      ];}
-  else {
-    adUnits = [
-        {
-            code: '/21957769615/deepika.com_nb_320x50',
-            mediaTypes: {
-              native: {
-                image: {
-                  // sizes: [300, 100],
-                  aspect_ratios: [{
-                    min_width: 100,        /* Optional */
-                    min_height: 50,       /* Optional */
-                    ratio_width: 2,        /* Required */
-                    ratio_height: 1,       /* Required */
-                  }],
-                  sendId: true
-                },
-                title: {
-                  len: 50,
-                  sendId: true
-                },
-                sponsoredBy: {
-                  required: true,
-                  sendId: true
-                },
-                clickUrl: {
-                  required: true,
-                  sendId: true
-                }
-              }
-            },
-            bids: [
-              { bidder: 'appnexus', params: { placementId: '19054472' } },
-              { bidder: 'oftmedia', params: { placementId: '20846125' } }
-            ]
-        },
-        {
-            code: '/21957769615/deepika.com_nb_320x50',
-            mediaTypes: {
-                banner: {
-                    sizes: div_1_sizes
-                }
-            },
-            bids: [
-             { bidder: 'appnexus', params: { placementId: '19054472' } }, /* one placementId for all sizes  my appnexus bidder */
-             { bidder: 'oftmedia', params: { placementId: '20846125' } },
-             { bidder: '33across', params: { siteId : 'bN_pSIWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-             { bidder: 'emx_digital', params: { tagid: '147569' } }, /* sizeless */
-              { bidder: 'sovrn', params: {tagid: '711906'} },
-              { bidder: 'openx', params: {unit: '543530328', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-             { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-              { bidder: 'nobid', params: { siteId : '21986996687'} },
-              // { bidder: 'criteo', params: {networkId: '10542'} },
-              // { bidder: 'criteointl', params: {networkId: '10545'} },
-              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932874'} },
-              { bidder: 'smartadserver', params: { siteId: '362106', pageId: '1289607', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-              //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-              { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'adkernel', params: {zoneId: '126017', host: 'cpm.fmlabsonline.com'} },
-              { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-              { bidder: "kubient", params: { zoneid: "e375f84e074df", server: "kssp.kbntx.ch"} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
-            ]
-        }
-    ];
-  }
+  // else {
+  //   adUnits = [
+  //       {
+  //           code: '/21957769615/deepika.com_nb_320x50',
+  //           mediaTypes: {
+  //             native: {
+  //               image: {
+  //                 // sizes: [300, 100],
+  //                 aspect_ratios: [{
+  //                   min_width: 100,        /* Optional */
+  //                   min_height: 50,       /* Optional */
+  //                   ratio_width: 2,        /* Required */
+  //                   ratio_height: 1,       /* Required */
+  //                 }],
+  //                 sendId: true
+  //               },
+  //               title: {
+  //                 len: 50,
+  //                 sendId: true
+  //               },
+  //               sponsoredBy: {
+  //                 required: true,
+  //                 sendId: true
+  //               },
+  //               clickUrl: {
+  //                 required: true,
+  //                 sendId: true
+  //               }
+  //             }
+  //           },
+  //           bids: [
+  //             { bidder: 'appnexus', params: { placementId: '19054472' } },
+  //             { bidder: 'oftmedia', params: { placementId: '20846125' } }
+  //           ]
+  //       },
+  //       {
+  //           code: '/21957769615/deepika.com_nb_320x50',
+  //           mediaTypes: {
+  //               banner: {
+  //                   sizes: div_1_sizes
+  //               }
+  //           },
+  //           bids: [
+  //            { bidder: 'appnexus', params: { placementId: '19054472' } }, /* one placementId for all sizes  my appnexus bidder */
+  //            { bidder: 'oftmedia', params: { placementId: '20846125' } },
+  //            { bidder: '33across', params: { siteId : 'bN_pSIWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+  //            { bidder: 'emx_digital', params: { tagid: '147569' } }, /* sizeless */
+  //             { bidder: 'sovrn', params: {tagid: '711906'} },
+  //             { bidder: 'openx', params: {unit: '543530328', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+  //            { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+  //            // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+  //             { bidder: 'nobid', params: { siteId : '21986996687'} },
+  //             // { bidder: 'criteo', params: {networkId: '10542'} },
+  //             // { bidder: 'criteointl', params: {networkId: '10545'} },
+  //             { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932874'} },
+  //             { bidder: 'smartadserver', params: { siteId: '362106', pageId: '1289607', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+  //             //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+  //             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  //             { bidder: 'adkernel', params: {zoneId: '126017', host: 'cpm.fmlabsonline.com'} },
+  //             { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+  //             { bidder: "kubient", params: { zoneid: "e375f84e074df", server: "kssp.kbntx.ch"} },
+  //             //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+  //             // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323610', zoneId: '1680018'} }
+  //           ]
+  //       }
+  //   ];
+  // }
 }
 
 
@@ -361,91 +360,6 @@ if(mobileCheck === 'function'){
       }
    }
  }
- else {
-   function initAdserver() {
-       if (ubpbjs.initAdserverSet) return;
-       ubpbjs.initAdserverSet = true;
-       googletag.cmd.push(function() {
-           ubpbjs.que.push(function() {
-               ubpbjs.setTargetingForGPTAsync();
-               // googletag.pubads().refresh([ub_slot1]);
-               var x = ubpbjs.getAllPrebidWinningBids();
-               var adsCalled = false;
-               for(var i=0;i<x.length;i++){
-                 var bc = x[i].bidderCode;
-                 if(bc=="openx"){
-                   adsCalled = true;
-                   callBotman();
-                 }
-               }
-               if(!adsCalled){
-                 callAdsUB();
-               }
-           });
-       });
-   }
-   // in case ubpbjs doesn't load
-   // setTimeout(function() {
-   //     initAdserver();
-   // }, FAILSAFE_TIMEOUT);
-
-   var ub_slot1;
-   googletag.cmd.push(function() {
-       ub_slot1 = googletag.defineSlot('/21957769615/deepika.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-       googletag.pubads().collapseEmptyDivs(true);
-       googletag.pubads().setCentering(true);
-       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-       googletag.pubads().enableSingleRequest();
-       googletag.enableServices();
-       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-           if (event.slot === ub_slot1) {
-             ub_checkAd1Rendered();
-           }
-       });
-   });
-
-   function refreshBid(ub_slot) {
-     ubpbjs.que.push(function() {
-   	  ubpbjs.requestBids({
-   		  timeout: PREBID_TIMEOUT,
-   		  adUnitCodes: ['/21957769615/deepika.com_nb_320x50'],
-   		  bidsBackHandler: function() {
-           googletag.cmd.push(function() {
-             ubpbjs.que.push(function() {
-                 ubpbjs.setTargetingForGPTAsync();
-                 // googletag.pubads().refresh([ub_slot]);
-                 var adsCalled = false;
-                 for(var i=0;i<x.length;i++){
-                   var bc = x[i].bidderCode;
-                   if(bc=="openx"){
-                     adsCalled = true;
-                     callBotman();
-                   }
-                 }
-                 if(!adsCalled){
-                   callAdsUB();
-                 }
-             });
-           });
-   		  }
-   	  });
-     });
-   }
-
-   ub_ad1RefreshFlag = 0;
-   function ub_checkAd1Rendered(){
-   	adId1 = 'div-ub-1';
-   	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-   	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-       if(ub_ad1RefreshFlag != 1){
-         setInterval(function() {
-           ub_ad1RefreshFlag = 1;
-           refreshBid(ub_slot1);
-         }, REFRESH_TIMEOUT);
-       }
-   	 }
-   }
- }
 }
 else {
   if (!mobileCheckAdSript() && (space > 160)){
@@ -534,15 +448,145 @@ else {
        }
     }
   }
-  else {
-    function initAdserver() {
-        if (ubpbjs.initAdserverSet) return;
-        ubpbjs.initAdserverSet = true;
-        googletag.cmd.push(function() {
+  // else {
+  //   function initAdserver() {
+  //       if (ubpbjs.initAdserverSet) return;
+  //       ubpbjs.initAdserverSet = true;
+  //       googletag.cmd.push(function() {
+  //           ubpbjs.que.push(function() {
+  //               ubpbjs.setTargetingForGPTAsync();
+  //               // googletag.pubads().refresh([ub_slot1]);
+  //               var x = ubpbjs.getAllPrebidWinningBids();
+  //               var adsCalled = false;
+  //               for(var i=0;i<x.length;i++){
+  //                 var bc = x[i].bidderCode;
+  //                 if(bc=="openx"){
+  //                   adsCalled = true;
+  //                   callBotman();
+  //                 }
+  //               }
+  //               if(!adsCalled){
+  //                 callAdsUB();
+  //               }
+  //           });
+  //       });
+  //   }
+  //   // in case ubpbjs doesn't load
+  //   // setTimeout(function() {
+  //   //     initAdserver();
+  //   // }, FAILSAFE_TIMEOUT);
+  //
+  //   var ub_slot1;
+  //   googletag.cmd.push(function() {
+  //       ub_slot1 = googletag.defineSlot('/21957769615/deepika.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+  //       googletag.pubads().collapseEmptyDivs(true);
+  //       googletag.pubads().setCentering(true);
+  //       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+  //       googletag.pubads().enableSingleRequest();
+  //       googletag.enableServices();
+  //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+  //           if (event.slot === ub_slot1) {
+  //             ub_checkAd1Rendered();
+  //           }
+  //       });
+  //   });
+  //
+  //   function refreshBid(ub_slot) {
+  //     ubpbjs.que.push(function() {
+  //       ubpbjs.requestBids({
+  //         timeout: PREBID_TIMEOUT,
+  //         adUnitCodes: ['/21957769615/deepika.com_nb_320x50'],
+  //         bidsBackHandler: function() {
+  //           googletag.cmd.push(function() {
+  //             ubpbjs.que.push(function() {
+  //                 ubpbjs.setTargetingForGPTAsync();
+  //                 // googletag.pubads().refresh([ub_slot]);
+  //                 var adsCalled = false;
+  //                 for(var i=0;i<x.length;i++){
+  //                   var bc = x[i].bidderCode;
+  //                   if(bc=="openx"){
+  //                     adsCalled = true;
+  //                     callBotman();
+  //                   }
+  //                 }
+  //                 if(!adsCalled){
+  //                   callAdsUB();
+  //                 }
+  //             });
+  //           });
+  //         }
+  //       });
+  //     });
+  //   }
+  //
+  //   ub_ad1RefreshFlag = 0;
+  //   function ub_checkAd1Rendered(){
+  //     adId1 = 'div-ub-1';
+  //     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+  //     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+  //       if(ub_ad1RefreshFlag != 1){
+  //         setInterval(function() {
+  //           ub_ad1RefreshFlag = 1;
+  //           refreshBid(ub_slot1);
+  //         }, REFRESH_TIMEOUT);
+  //       }
+  //      }
+  //   }
+  // }
+}
+
+  function initAdserver() {
+      if (ubpbjs.initAdserverSet) return;
+      ubpbjs.initAdserverSet = true;
+      googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              // googletag.pubads().refresh([ub_slot1]);
+              var x = ubpbjs.getAllPrebidWinningBids();
+              var adsCalled = false;
+              for(var i=0;i<x.length;i++){
+                var bc = x[i].bidderCode;
+                if(bc=="openx"){
+                  adsCalled = true;
+                  callBotman();
+                }
+              }
+              if(!adsCalled){
+                callAdsUB();
+              }
+          });
+      });
+  }
+  // in case ubpbjs doesn't load
+  // setTimeout(function() {
+  //     initAdserver();
+  // }, FAILSAFE_TIMEOUT);
+
+  var ub_slot1;
+  googletag.cmd.push(function() {
+      ub_slot1 = googletag.defineSlot('/21957769615/deepika.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+      googletag.pubads().collapseEmptyDivs(true);
+      googletag.pubads().setCentering(true);
+      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot === ub_slot1) {
+            ub_checkAd1Rendered();
+          }
+      });
+  });
+
+  function refreshBid(ub_slot) {
+    ubpbjs.que.push(function() {
+     ubpbjs.requestBids({
+       timeout: PREBID_TIMEOUT,
+       adUnitCodes: ['/21957769615/deepika.com_nb_320x50'],
+       bidsBackHandler: function() {
+          googletag.cmd.push(function() {
             ubpbjs.que.push(function() {
                 ubpbjs.setTargetingForGPTAsync();
-                // googletag.pubads().refresh([ub_slot1]);
-                var x = ubpbjs.getAllPrebidWinningBids();
+                // googletag.pubads().refresh([ub_slot]);
                 var adsCalled = false;
                 for(var i=0;i<x.length;i++){
                   var bc = x[i].bidderCode;
@@ -555,71 +599,25 @@ else {
                   callAdsUB();
                 }
             });
-        });
-    }
-    // in case ubpbjs doesn't load
-    // setTimeout(function() {
-    //     initAdserver();
-    // }, FAILSAFE_TIMEOUT);
-
-    var ub_slot1;
-    googletag.cmd.push(function() {
-        ub_slot1 = googletag.defineSlot('/21957769615/deepika.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-        googletag.pubads().collapseEmptyDivs(true);
-        googletag.pubads().setCentering(true);
-        googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === ub_slot1) {
-              ub_checkAd1Rendered();
-            }
-        });
-    });
-
-    function refreshBid(ub_slot) {
-      ubpbjs.que.push(function() {
-        ubpbjs.requestBids({
-          timeout: PREBID_TIMEOUT,
-          adUnitCodes: ['/21957769615/deepika.com_nb_320x50'],
-          bidsBackHandler: function() {
-            googletag.cmd.push(function() {
-              ubpbjs.que.push(function() {
-                  ubpbjs.setTargetingForGPTAsync();
-                  // googletag.pubads().refresh([ub_slot]);
-                  var adsCalled = false;
-                  for(var i=0;i<x.length;i++){
-                    var bc = x[i].bidderCode;
-                    if(bc=="openx"){
-                      adsCalled = true;
-                      callBotman();
-                    }
-                  }
-                  if(!adsCalled){
-                    callAdsUB();
-                  }
-              });
-            });
-          }
-        });
-      });
-    }
-
-    ub_ad1RefreshFlag = 0;
-    function ub_checkAd1Rendered(){
-      adId1 = 'div-ub-1';
-      var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-        if(ub_ad1RefreshFlag != 1){
-          setInterval(function() {
-            ub_ad1RefreshFlag = 1;
-            refreshBid(ub_slot1);
-          }, REFRESH_TIMEOUT);
-        }
+          });
        }
+     });
+    });
+  }
+
+  ub_ad1RefreshFlag = 0;
+  function ub_checkAd1Rendered(){
+   adId1 = 'div-ub-1';
+   var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+   if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+      if(ub_ad1RefreshFlag != 1){
+        setInterval(function() {
+          ub_ad1RefreshFlag = 1;
+          refreshBid(ub_slot1);
+        }, REFRESH_TIMEOUT);
+      }
     }
   }
-}
 
 var botmanCalled = false;
 var userStatusBM = '';
@@ -669,20 +667,15 @@ function callBotman(){
 }
 
 function callAdsUB(){
+  googletag.pubads().refresh([ub_slot1]);
   if(mobileCheck === 'function'){
    if (!mobileCheck() && (space > 160)){
      googletag.pubads().refresh([ub_slot2]);
-   }
-   else {
-    googletag.pubads().refresh([ub_slot1]);
    }
  }
   else {
      if (!mobileCheckAdSript() && (space > 160)){
        googletag.pubads().refresh([ub_slot2]);
-     }
-     else {
-       googletag.pubads().refresh([ub_slot1]);
      }
  }
 }

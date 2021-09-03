@@ -417,6 +417,7 @@ function ub_passback() {
   ub_sticky = document.getElementById('adSmall');
   ub_sticky.appendChild(ub_passback);
 
+    var ub_passback_slot1;
     googletag.cmd.push(function() {
     ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'gpt-passback5').addService(googletag.pubads());
     googletag.pubads().set("page_url",'sandesh.com');
@@ -1438,7 +1439,7 @@ function callMapUnits(){
       ]
     }
     adUnits_full_hb.push(adUnitTemp1);
-    // 
+    //
     // callAPStagBids();
     callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
     callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)

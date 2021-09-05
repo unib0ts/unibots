@@ -1144,7 +1144,45 @@ var mappings_extra_units_config ={
     '/21796214895/542194_Sakshi_block_3',
     '/1062118/Intersitial_640x480_Desktop_Articlepage',
     '/1062118/Intersitial_320x480_mobile_Articlepage',
-    '/1062118/Desktop_LB_970x90_728x90'
+    '/1062118/Desktop_LB_970x90_728x90',
+    '/1062118/sakshiNew_Mobile_Inarticle2',
+    '/1062118/sakshiNew_box1_300x250',
+    '/1062118/sakshiNew_box2_300x250',
+    '/1062118/sakshiNew_Box3_300x250',
+    '/1062118/fullstories_300x50_firstslot',
+    '/1062118/sakshiNew_HP',
+    '/1062118/sakshiNew_skin_Left',
+    '/1062118/sakshiNew_skin_right',
+    '/1062118/SakshiNew_HP_Box_300x600',
+    '/1062118/Desktop_HP_300x100',
+    '/1062118/sakshiNew_Artclepage_LB',
+    '/1062118/sakshiNew_Artclepage_Skin_Left',
+    '/1062118/sakshiNew_Artclepage_skin_right',
+    '/1062118/sakshiNew_Artclepage_300x600',
+    '/1062118/sakshiNew_Artclepage_box1',
+    '/1062118/sakshiNew_Artclepage_Box2',
+    '/1062118/sakshiNew_Artclepage_INarticle',
+    '/1062118/Sakshi-Anchor_Ad',
+    '/1062118/Sakshi_Moblile_LB',
+    '/1062118/sakshiNEw_resp_Box2',
+    '/1062118/sakshiNEw_resp_Box3',
+    '/1062118/sakshiNEw_resp_Box4',
+    '/1062118/sakshiNEw_resp_Box5',
+    '/1062118/MobileMasthead_ROS_300x250',
+    '/1062118/sakshiNew_article_Box2',
+    '/1062118/sakshiNew_article_Box3',
+    '/1062118/sakshiNew_article_Box4',
+    '/1062118/sakshiNew_article_Box5',
+    '/1062118/320x50_Mobile_LB_New',
+    '/1062118/sakshinew_resp_Box1_entertainment_300x250',
+    '/1062118/MobileMasthead_HP_300x250',
+    '/21959913182/sakshi.com_NB_320x50',
+    '/21959913182/sakshi_hb_320x50_top_mobile_new',
+    // '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
+    '/1062118/Mobile_Articlepage_adslot3',
+    '/1062118/Sakshi_Photos_Mobile_1',
+    '/1062118/Sakshi_Videos_Mobile_1',
+    '/1062118/Sakshi_Cartoon_Mobile_1',
   ]
 }
 var mappings_extra_units = {
@@ -1161,27 +1199,27 @@ function checkHBUnits(){
       initAdserver_hb_full();
   }, FAILSAFE_TIMEOUT);
 }
-function callFullHBAds(adCode, ub_slot){
-  googletag.pubads().refresh(ub_slot);
-  // ubpbjs.que.push(function(){
-  //   ubpbjs.requestBids({
-  //     timeout: PREBID_TIMEOUT,
-  //     adUnits: adUnits_full_hb,
-  //     adUnitCodes: adCode,
-  //     bidsBackHandler: function() {
-  //       ubpbjs.initAdserverSetHB = true;
-  //       googletag.cmd.push(function() {
-  //         ubpbjs.que.push(function() {
-  //             ubpbjs.setTargetingForGPTAsync();
-  //             // requestManager.prebid = true;
-  //             // biddersBack();
-  //             googletag.pubads().refresh(ub_slot);
-  //         });
-  //       });
-  //     }
-  //   });
-  // });
-}
+// function callFullHBAds(adCode, ub_slot){
+//   googletag.pubads().refresh(ub_slot);
+//   // ubpbjs.que.push(function(){
+//   //   ubpbjs.requestBids({
+//   //     timeout: PREBID_TIMEOUT,
+//   //     adUnits: adUnits_full_hb,
+//   //     adUnitCodes: adCode,
+//   //     bidsBackHandler: function() {
+//   //       ubpbjs.initAdserverSetHB = true;
+//   //       googletag.cmd.push(function() {
+//   //         ubpbjs.que.push(function() {
+//   //             ubpbjs.setTargetingForGPTAsync();
+//   //             // requestManager.prebid = true;
+//   //             // biddersBack();
+//   //             googletag.pubads().refresh(ub_slot);
+//   //         });
+//   //       });
+//   //     }
+//   //   });
+//   // });
+// }
 function callExtraHBAds(adCode, ub_slot){
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
@@ -1349,58 +1387,58 @@ function callMapUnits(){
     x = googletag.pubads().getSlots();
     x_len = x.length;
     for(i=0;i<x.length;i++){
-      if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
-        index = mappings_full_hb_config.adUnitNames.indexOf(x[i].getSlotId().getAdUnitPath());
-        size_array = [];
-        size_temp_array = googletag.pubads().getSlots()[i].getSizes();
-        for(j=0;j<size_temp_array.length;j++){
-          length = size_temp_array[j][Object.keys(size_temp_array[j])[0]];
-           height = size_temp_array[j][Object.keys(size_temp_array[j])[1]];
-          temp_array = [length, height];
-          size_array.push(temp_array);
-        }
-
-        adUnitTemp = {
-          code: x[i].getSlotId().getAdUnitPath(),
-          mediaTypes: {
-              banner: {
-                  sizes: size_array
-              }
-          },
-          bids: mappings_full_hb_config.bids[index]
-        };
-        // adUnitTemp = {
-        //   code: mappings_full_hb_config.adUnitNames[index],
-        //   mediaTypes: {
-        //       banner: {
-        //           sizes: mappings_full_hb_config.sizes[index]
-        //       }
-        //   },
-        //   bids: mappings_full_hb_config.bids[index]
-        // };
-        adUnits_full_hb.push(adUnitTemp);
-        mapping_full_hb.slots.push(x[i]);
-        mapping_full_hb.slotNumbers.push(i+1);
-        // mapping_full_hb.slotNumbers.push(index+1);
-        mapping_full_hb.adCode.push(x[i].getSlotId().getAdUnitPath());
-        // mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[index]);
-        // mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[index]);
-        mapping_full_hb.sizes.push(size_array);
-
-        // if(mappings_full_hb_config.isAP[index]){
-        //   apSlotTemp = {
-        //     // slotID: mappings_full_hb_config.targetUnits[index],
-        //     // slotName: mappings_full_hb_config.adUnitNames[index],
-        //     // sizes: mappings_full_hb_config.sizes[index]
-        //
-        //     slotID: googletag.pubads().getSlots()[i].getSlotId().getDomId(),
-        //     slotName: x[i].getSlotId().getAdUnitPath(),
-        //     sizes: size_array
-        //   }
-        //   apSlots.push(apSlotTemp);
-        // }
-      }
-      else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
+      // if(mappings_full_hb_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
+      //   index = mappings_full_hb_config.adUnitNames.indexOf(x[i].getSlotId().getAdUnitPath());
+      //   size_array = [];
+      //   size_temp_array = googletag.pubads().getSlots()[i].getSizes();
+      //   for(j=0;j<size_temp_array.length;j++){
+      //     length = size_temp_array[j][Object.keys(size_temp_array[j])[0]];
+      //      height = size_temp_array[j][Object.keys(size_temp_array[j])[1]];
+      //     temp_array = [length, height];
+      //     size_array.push(temp_array);
+      //   }
+      //
+      //   adUnitTemp = {
+      //     code: x[i].getSlotId().getAdUnitPath(),
+      //     mediaTypes: {
+      //         banner: {
+      //             sizes: size_array
+      //         }
+      //     },
+      //     bids: mappings_full_hb_config.bids[index]
+      //   };
+      //   // adUnitTemp = {
+      //   //   code: mappings_full_hb_config.adUnitNames[index],
+      //   //   mediaTypes: {
+      //   //       banner: {
+      //   //           sizes: mappings_full_hb_config.sizes[index]
+      //   //       }
+      //   //   },
+      //   //   bids: mappings_full_hb_config.bids[index]
+      //   // };
+      //   adUnits_full_hb.push(adUnitTemp);
+      //   mapping_full_hb.slots.push(x[i]);
+      //   mapping_full_hb.slotNumbers.push(i+1);
+      //   // mapping_full_hb.slotNumbers.push(index+1);
+      //   mapping_full_hb.adCode.push(x[i].getSlotId().getAdUnitPath());
+      //   // mapping_full_hb.adCode.push(mappings_full_hb_config.adUnitNames[index]);
+      //   // mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[index]);
+      //   mapping_full_hb.sizes.push(size_array);
+      //
+      //   // if(mappings_full_hb_config.isAP[index]){
+      //   //   apSlotTemp = {
+      //   //     // slotID: mappings_full_hb_config.targetUnits[index],
+      //   //     // slotName: mappings_full_hb_config.adUnitNames[index],
+      //   //     // sizes: mappings_full_hb_config.sizes[index]
+      //   //
+      //   //     slotID: googletag.pubads().getSlots()[i].getSlotId().getDomId(),
+      //   //     slotName: x[i].getSlotId().getAdUnitPath(),
+      //   //     sizes: size_array
+      //   //   }
+      //   //   apSlots.push(apSlotTemp);
+      //   // }
+      // }
+       if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
         mappings_extra_units.slots.push(x[i]);
         mappings_extra_units.adUnitNames.push(x[i]);
       }
@@ -1442,7 +1480,7 @@ function callMapUnits(){
     adUnits_full_hb.push(adUnitTemp1);
     //
     // callAPStagBids();
-    callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
+    // callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
     callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots)
   });
 }

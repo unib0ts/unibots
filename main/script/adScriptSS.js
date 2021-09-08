@@ -413,17 +413,18 @@ function ub_passback() {
   document.getElementsByTagName('head')[0].appendChild(s0_passback);
 
   ub_passback = document.createElement("div");
-  ub_passback.id = "gpt-passback5";
+  ub_passback.id = "div-gpt-ad-1631082764240-0";
   ub_sticky = document.getElementById('adSmall');
   ub_sticky.appendChild(ub_passback);
 
     var ub_passback_slot1;
     googletag.cmd.push(function() {
-    ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'gpt-passback5').addService(googletag.pubads());
-    googletag.pubads().set("page_url",'sandesh.com');
+    ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'div-gpt-ad-1631082764240-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    // googletag.pubads().set("page_url",'sandesh.com');
     googletag.enableServices();
     googletag.pubads().refresh([ub_passback_slot1]);
-    googletag.display('gpt-passback5');
+    // googletag.display('gpt-passback5');
    });
 }
 

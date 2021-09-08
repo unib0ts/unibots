@@ -492,6 +492,32 @@ function mainHbRun(){
   ubpbjs.que.push(function() {
       ubpbjs.addAdUnits(adUnits);
       ubpbjs.aliasBidder('criteo','criteointl');
+      ubpbjs.setBidderConfig({
+       bidders: ['emx_digital'],   // can list more bidders here if they share the same config
+       config: {
+          schain: {
+            validation: "relaxed",
+            config: {
+              ver:"1.0",
+              complete: 0,
+              nodes: [
+                {
+                  asi:"unibots.in",   //directseller
+                  sid:"1504",     //seller_id
+                  // rid: "73921627578122922433w1",
+                  hp:1
+                },
+               // {
+               //   asi:"unibots.in",   //reseller
+               //   sid:"38",          //seller_id
+               //   // rid:"BidRequest2",
+               //   hp:1
+               // }
+              ]
+            }
+          }
+        }
+      });
       ubpbjs.bidderSettings = {
         'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
         'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
@@ -546,57 +572,8 @@ function mainHbRun(){
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        });
-       // ubpbjs.setBidderConfig({
-       //  bidders: ['emxdigital'],   // can list more bidders here if they share the same config
-       //  config: {
-       //     schain: {
-       //       validation: "relaxed",
-       //       config: {
-       //         ver:"1.0",
-       //         complete: 1,
-       //         nodes: [
-       //           {
-       //             asi:"emxdgt.com",   //directseller
-       //             sid:"1504",     //seller_id
-       //             // rid: "73921627578122922433w1",
-       //             hp:1
-       //           },
-       //          {
-       //            asi:"unibots.in",   //reseller
-       //            sid:"38",          //seller_id
-       //            // rid:"BidRequest2",
-       //            hp:1
-       //          }
-       //         ]
-       //       }
-       //     }
-       //   }
-       // });
+
        ubpbjs.requestBids({
-           bidders: ['emxdigital'],   // can list more bidders here if they share the same config
-           config: {
-              schain: {
-                validation: "relaxed",
-                config: {
-                  ver:"1.0",
-                  complete: 1,
-                  nodes: [
-                    {
-                      asi:"emxdgt.com",   //directseller
-                      sid:"1504",     //seller_id
-                      // rid: "73921627578122922433w1",
-                      hp:1
-                    },
-                   {
-                     asi:"unibots.in",   //reseller
-                     sid:"38",          //seller_id
-                     // rid:"BidRequest2",
-                     hp:1
-                   }
-                  ]
-                }
-              }
-            },
            bidsBackHandler: initAdserver,
            timeout: PREBID_TIMEOUT,
            labels: [GEO_CODE],

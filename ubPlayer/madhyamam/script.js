@@ -114,7 +114,7 @@ function checkMutedAutoplaySupport() {
 
 var ubPlayer_src = [
   "https://cdn.unibots.in/madhyamam_3.mp4",
-  "https://cdn.unibots.inmadhyamam_4.mp4",
+  "https://cdn.unibots.in/madhyamam_4.mp4",
 ];
 var src_index = Math.floor(Math.random()*(2));
 

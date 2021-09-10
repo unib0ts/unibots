@@ -784,7 +784,8 @@ function ubadScript() {
         "/22140546871/docbao.vn_gpt_mobile_center5_300x250",
         "/22140546871/docbao.vn_gpt_mobile_bottom_300x250",
         "/22140546871/docbao.vn_mobile_home_center_6",
-        "/22140546871/docbao.vn_mb_anchor_320x100",
+        // "/22140546871/docbao.vn_mb_anchor_320x100",
+        "/22140546871/docbao.vn_mb_anchor_320x50"
       ],
       adId: [
         "div-gpt-ad-1617722423692-0", //'/22057354005/docbao.vn_gpt_mobile_home_300x100',
@@ -805,8 +806,8 @@ function ubadScript() {
         [300, 250], // '/22057354005/docbao.vn_gpt_mobile_center5_300x250',
         [300, 250], // '/22057354005/docbao.vn_gpt_mobile_bottom_300x250',
         [300, 250], // '/22057354005/docbao.vn_mobile_home_center_6',
-        // [320, 50],
-        [300,100],
+        [320, 50],
+        // [300,100],
       ],
       bids: [
         hb_full_common_bidders.concat([
@@ -1363,7 +1364,7 @@ function ubadScript() {
 
  function refreshBid(ub_slot, adCode) {
   if (mobileCheck() && (window.location.hostname == "m.docbao.vn")) {
-    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x100') {
+    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x50') {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1426,7 +1427,7 @@ function ubadScript() {
     // if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
+              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x50"){
                     var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                         document.getElementById("close_ub-sticky-ad").style.display = "block";

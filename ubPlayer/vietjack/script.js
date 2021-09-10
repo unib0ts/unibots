@@ -150,6 +150,15 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+var ubPlayer_src = [
+  "https://unibots.b-cdn.net/vietjack/vietjack1.mp4",
+  "https://unibots.b-cdn.net/vietjack/vietjack2.mp4",
+  "https://unibots.b-cdn.net/vietjack/vietjack3.mp4",
+  "https://unibots.b-cdn.net/vietjack/vietjack4.mp4",
+  "https://unibots.b-cdn.net/vietjack/vietjack5.mp4",
+];
+var src_index = Math.floor(Math.random()*(5));
+
 function initPlayer() {
 
   if(document.getElementById('unibots-video') || document.getElementById('unibots-video-sticky') || document.getElementById('unibots-video-homePC')){
@@ -351,7 +360,7 @@ else {
       ubPlayer = videojs('content_video', vjsOptions);
       ubPlayer.src({
           type: "video/mp4",
-          src: "https://cdn.unibots.in/yoga.mp4",
+          src: ubPlayer_src[src_index],
       });
 
       var imaOptions = {

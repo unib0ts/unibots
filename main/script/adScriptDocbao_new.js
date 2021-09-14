@@ -165,23 +165,24 @@ function ubadScript() {
       x1.appendChild(z1);
     // }
   } else {
+      if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2){}else {
         if(!(window.location.href== "https://m.docbao.vn/")){
-      // if(!(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2)){
-          z1 = document.createElement("div");
-          z1.id = "ub-sticky-ad-container";
-          z1.className = "ub-sticky-ad-container";
-          z1.innerHTML =
-              '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
-          x1 = document.querySelector("body");
-          x1.appendChild(z1);
-      }else {
-          z1 = document.createElement("div");
-          z1.id = "ub-sticky-ad-container";
-          z1.className = "ub-sticky-ad-container";
-          z1.innerHTML =
-              '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
-          x1 = document.querySelector("body");
-          x1.appendChild(z1);
+            z1 = document.createElement("div");
+            z1.id = "ub-sticky-ad-container";
+            z1.className = "ub-sticky-ad-container";
+            z1.innerHTML =
+                '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
+            x1 = document.querySelector("body");
+            x1.appendChild(z1);
+        }else {
+            z1 = document.createElement("div");
+            z1.id = "ub-sticky-ad-container";
+            z1.className = "ub-sticky-ad-container";
+            z1.innerHTML =
+                '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
+            x1 = document.querySelector("body");
+            x1.appendChild(z1);
+        }
       }
 
     if(!(window.location.href== "https://m.docbao.vn/")){
@@ -1440,6 +1441,7 @@ function ubadScript() {
 }
 
  if (mobileCheck()) {
+   if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2){}else {
     if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
@@ -1463,6 +1465,7 @@ function ubadScript() {
           });
       });
     }
+  }
 }
 
  function loadAd(id, adUnits) {

@@ -161,7 +161,7 @@ function ubadScript() {
       //
       // if (!document.querySelector('.artitle')) {
       // if (!(window.location.href == "https://bongdaplus.vn/")) {
-      if(!((window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) || (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2) || (window.location.href.split('https://bongdaplus.vn/futsal').length == 2))){
+      if(!((window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) || (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2))){
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-container";
           z1.className = "ub-sticky-ad-container";
@@ -1582,7 +1582,7 @@ function ubadScript() {
 
   if (mobileCheck()) {
       // if (!(window.location.href == "https://bongdaplus.vn/")) {
-        if(!((window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) || (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2) || (window.location.href.split('https://bongdaplus.vn/futsal').length == 2))){
+        if(!((window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) || (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2))){
           googletag.cmd.push(function () {
               googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                     if (event.slot.getAdUnitPath() ==="/22057354005/bongdaplus.vn_mb_anchor_320x50"){

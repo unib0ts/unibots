@@ -142,7 +142,7 @@ function ubadScript() {
           }
       }
 
-      if (!(window.location.href == "https://bongdaplus.vn/")) {
+      // if (!(window.location.href == "https://bongdaplus.vn/")) {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-containerdesk";
           z1.className = "ub-sticky-ad-containerdesk";
@@ -150,7 +150,7 @@ function ubadScript() {
               '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
           x1 = document.querySelector("body");
           x1.appendChild(z1);
-      }
+      // }
   } else {
       // var s6 = document.createElement('script');
       // s6.async = true;

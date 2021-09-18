@@ -40,13 +40,36 @@ else{
   ubadScript();
 }
 
+var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/v-league').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/hang-nhat-quoc-gia').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/cup-quoc-gia').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2)  ||
+  (window.location.href.split('https://bongdaplus.vn/bong-da-nu-viet-nam').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/u17-viet-nam').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/u19-viet-nam').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/u21-viet-nam').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/futsal').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/bong-da-phong-trao').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/cac-doi-tuyen-tre-viet-nam').length == 2) ||
+  (window.location.href.split('https://bongdaplus.vn/ket-nghia-anh-em').length == 2);
+
 function ubadScript() {
-  var cachebuster = Math.round(new Date().getTime() / 1000);
-  url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/bongda/script.min.js?cb=" + cachebuster;
-  ub_vs = document.createElement("script");
-  ub_vs.src = url;
-  ub_vs.type = "text/javascript";
-  document.getElementsByTagName("head")[0].appendChild(ub_vs);
+  if(!(bong_vietnamcatg)){
+    var cachebuster = Math.round(new Date().getTime() / 1000);
+    url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js?cb=" + cachebuster;
+    ub_vs = document.createElement("script");
+    ub_vs.src = url;
+    ub_vs.type = "text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(ub_vs);
+
+    ub_vs.onload=function(){
+      window.unibots = window.unibots || { cmd: [] };
+      unibots.cmd.push(function(){
+          unibotsPlayer("bongda");
+      });
+    }
+  }
 
   checkHBUnits();
 }
@@ -161,7 +184,7 @@ function ubadScript() {
       //
       // if (!document.querySelector('.artitle')) {
       // if (!(window.location.href == "https://bongdaplus.vn/")) {
-      if(!((window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) || (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2))){
+        if(!(bong_vietnamcatg)){
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-container";
           z1.className = "ub-sticky-ad-container";
@@ -1475,33 +1498,33 @@ function ubadScript() {
                   var timer = REFRESH_TIMEOUT / 1000;
                   var el = document.getElementById(event.slot.getSlotId().getDomId());
                   var nodes = el.childNodes[0].childNodes;
-                  // var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
-                  // if (ubifame == 'iframe') {
+                  var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
+                  if (ubifame == 'iframe') {
                   if (el != null) {
-                      var temp = setInterval(function () {
+                      // var temp = setInterval(function () {
                           if (isInViewSpace(el)) {
-                              timer -= 1;
-                              if (timer <= 0) {
-                                // if(mappings_final_refresh_list["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
-                                //   mappings_final_refresh.adSlots.push(event.slot);
-                                //   mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
-                                // }
+                              // timer -= 1;
+                              // if (timer <= 0) {
+                                if(mappings_final_refresh_list["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
+                                  mappings_final_refresh.adSlots.push(event.slot);
+                                  mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+                                }
                                   // console.log(mappings_final_refresh.adUnitNames);
-                                  refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-                                  clearInterval(temp);
-                              }
+                                  // refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+                                  // clearInterval(temp);
+                              // }
                           }
-                      }, 1000);
+                      // }, 1000);
                   }
-                // }
+                }
               });
       });
 
-      // setInterval(function() {
-      //   if (!mappings_final_refresh.adSlots == '') {
-      //     refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
-      //   }
-      // }, REFRESH_TIMEOUT);
+      setInterval(function() {
+        if (!mappings_final_refresh.adSlots == '') {
+          refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+        }
+      }, REFRESH_TIMEOUT);
   }
 
   function callExtraHBAds(adCode, ub_slot){
@@ -1582,7 +1605,7 @@ function ubadScript() {
 
   if (mobileCheck()) {
       // if (!(window.location.href == "https://bongdaplus.vn/")) {
-        if(!((window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) || (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2))){
+          if(!(bong_vietnamcatg)){
           googletag.cmd.push(function () {
               googletag.pubads().addEventListener("slotRenderEnded", function (event) {
                     if (event.slot.getAdUnitPath() ==="/22057354005/bongdaplus.vn_mb_anchor_320x50"){

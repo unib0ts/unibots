@@ -206,6 +206,18 @@ googletag.cmd.push(function() {
     });
 });
 
+window.googletag = window.googletag || {cmd: []};
+      var interstitialSlot;
+
+      googletag.cmd.push(function() {
+        interstitialSlot = googletag.defineOutOfPageSlot(
+            '/22082859479/test_interstitial',
+            googletag.enums.OutOfPageFormat.INTERSTITIAL);
+        interstitialSlot.addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+
 function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({

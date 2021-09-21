@@ -484,7 +484,7 @@ if(typeof customConfigObjectA === 'undefined'){
     console.log('test2');
     ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
     ub_passback = document.createElement('a');
-    ub_passback.setAttribute('href',"http://irctc.co.in/");
+    ub_passback.setAttribute('href',"https://irctc.co.in/");
     ub_passback.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/irctc320x50.gif">';
     ub_sticky.appendChild(ub_passback);
   }

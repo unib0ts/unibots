@@ -3,7 +3,7 @@ mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/block
 mybotBlockedClientName = 'vnexpress';
 
 
-var mybotstyleSheet='.text_ads{width:100%;float:left;margin-bottom:8px;font:400 11px arial;color:#828282;text-align:center;position:relative} .text_ads .txt_qc{display:inline-block;position:relative;padding-left:21px} .text_ads .txt_qc:before{width:16px;height:16px;background:url("https://s1cdn.vnecdn.net/vnexpress/restruct/c/v825/v2/mobile_redesign/images/graphics/Advertising.svg") no-repeat 0 0;content:"";position:absolute;top:-1px;left:0}';
+var mybotstyleSheet='.ubtext_ads{width:100%;margin-bottom:8px;font:400 11px arial;color:#828282;text-align:center;position:relative} .ubtext_ads .ubtxt_qc{display:inline-block;position:relative;padding-left:21px} .ubtext_ads .ubtxt_qc:before{width:16px;height:16px;background:url("https://s1cdn.vnecdn.net/vnexpress/restruct/c/v825/v2/mobile_redesign/images/graphics/Advertising.svg") no-repeat 0 0;content:"";position:absolute;top:-1px;left:0}';
 
 var css = document.createElement("style");
 css.type = "text/css";
@@ -226,10 +226,13 @@ else{
   			while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
   					targetUnit = document.getElementById(mapping_hb.targetUnits[i]);
   					var z= document.createElement('div');
-            z.innerHTML = '<span class="text_ads"><span class="txt_qc">Quảng cáo</span></span>'
-  					z.id = mapping_hb.adId[i];
-  					// z.className = mapping_hb.adId[i];
-  					targetUnit.appendChild(z);
+            z.innerHTML = '<span class="ubtxt_qc">Quảng cáo</span>';
+  					// z.id = mapping_hb.adId[i];
+  					z.className = 'ubtext_ads';
+            targetUnit.insertBefore(z,targetUnit.childNodes[1]);
+            var z1= document.createElement('div');
+            z1.id = mapping_hb.adId[i];
+  					targetUnit.appendChild(z1);
 
             mappings.slotNumbers.push(i+1);
             mappings.adCode.push(mapping_hb.adUnitNames[i]);

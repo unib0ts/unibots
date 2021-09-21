@@ -460,7 +460,61 @@ if(typeof customConfigObjectA === 'undefined'){
         }, REFRESH_TIMEOUT);
         mappings.renderedFlag[ub_slotNum] = true;
       }
+      else {
+        ub_psbcRandom = Math.floor(Math.random() * 3);
+          eval('ub_passback1'+ub_psbcRandom+'()');
+      }
     }
+  }
+
+  function ub_passback1() {
+    console.log('test1');
+    var s0_passback = document.createElement('script');
+    s0_passback.src = "https://click.nativclick.com/loading/?handle=7562";
+    s0_passback.async = true;
+    document.getElementsByTagName('head')[0].appendChild(s0_passback);
+
+    ub_passback = document.createElement("div");
+    ub_passback.id = "eb46c61f91aab8c2b002b288485fc118";
+    ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+    ub_sticky.appendChild(ub_passback);
+
+      // var ub_passback_slot1;
+      // googletag.cmd.push(function() {
+      // ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'div-gpt-ad-1631082764240-0').addService(googletag.pubads());
+      // googletag.pubads().enableSingleRequest();
+      // // googletag.pubads().set("page_url",'sandesh.com');
+      // googletag.enableServices();
+      // googletag.pubads().refresh([ub_passback_slot1]);
+      // googletag.display('gpt-passback5');
+     // });
+  }
+
+  function ub_passback2() {
+    console.log('test2');
+    ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+    s0_passback = document.createElement('a');
+    s0_passback.setAttribute('href',"http://irctc.co.in/");
+    s0_passback.innerHTML = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/irctc320x50.gif">';
+    ub_sticky.appendChild(ub_passback);
+  }
+
+  function ub_passback3() {
+    console.log('test3');
+    s0_passback = document.createElement('script');
+    s0_passback.src = "https://assets.revcontent.com/master/delivery.js";
+    s0_passback.defer = "defer";
+    document.getElementsByTagName('head')[0].appendChild(s0_passback);
+
+    ub_passback = document.createElement("div");
+    ub_passback.setAttribute("id", "widget-pl-226459");
+    ub_passback.setAttribute("data-widget-host", "habitat");
+    ub_passback.setAttribute("data-endpoint", "trends.revcontent.com");
+    ub_passback.setAttribute("data-widget-id", "226459");
+    ub_passback.setAttribute("data-banner-size", "320x50");
+    // ub_passback.id = "eb46c61f91aab8c2b002b288485fc118";
+    ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+    ub_sticky.appendChild(ub_passback);
   }
 
   function refreshBid(ub_slot, adCode) {

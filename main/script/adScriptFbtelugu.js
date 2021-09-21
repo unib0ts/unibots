@@ -206,6 +206,11 @@ googletag.cmd.push(function() {
     });
 });
 
+var s0_passback = document.createElement('script');
+s0_passback.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+s0_passback.async = true;
+document.getElementsByTagName('head')[0].appendChild(s0_passback);
+
 window.googletag = window.googletag || {cmd: []};
       var interstitialSlot;
 

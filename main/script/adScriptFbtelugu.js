@@ -221,7 +221,7 @@ window.googletag = window.googletag || {cmd: []};
         interstitialSlot.addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
-        googletag.pubads().refresh(interstitialSlot);
+        googletag.pubads().refresh([interstitialSlot]);
       });
 
 function refreshBid() {

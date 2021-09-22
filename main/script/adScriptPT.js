@@ -136,7 +136,7 @@ googletag.cmd.push(function() {
         // Enable SRA and services.
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
-        googletag.pubads().refresh([interstitialSlot]);
+        googletag.pubads().refresh([anchorSlot]);
 });
 
 

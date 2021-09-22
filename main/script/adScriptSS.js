@@ -400,33 +400,34 @@ function ub_checkAd1Rendered(){
         refreshBid(ub_slot1);
       }, REFRESH_TIMEOUT);
     }
-  }else {
-    ub_passback();
   }
+  // else {
+  //   ub_passback();
+  // }
 }
 
-function ub_passback() {
-  var s0_passback = document.createElement('script');
-  s0_passback.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-  s0_passback.type = "text/javascript";
-  s0_passback.async = true;
-  document.getElementsByTagName('head')[0].appendChild(s0_passback);
-
-  ub_passback = document.createElement("div");
-  ub_passback.id = "div-gpt-ad-1631082764240-0";
-  ub_sticky = document.getElementById('adSmall');
-  ub_sticky.appendChild(ub_passback);
-
-    var ub_passback_slot1;
-    googletag.cmd.push(function() {
-    ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'div-gpt-ad-1631082764240-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    // googletag.pubads().set("page_url",'sandesh.com');
-    googletag.enableServices();
-    googletag.pubads().refresh([ub_passback_slot1]);
-    // googletag.display('gpt-passback5');
-   });
-}
+// function ub_passback() {
+//   var s0_passback = document.createElement('script');
+//   s0_passback.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+//   s0_passback.type = "text/javascript";
+//   s0_passback.async = true;
+//   document.getElementsByTagName('head')[0].appendChild(s0_passback);
+//
+//   ub_passback = document.createElement("div");
+//   ub_passback.id = "div-gpt-ad-1631082764240-0";
+//   ub_sticky = document.getElementById('adSmall');
+//   ub_sticky.appendChild(ub_passback);
+//
+//     var ub_passback_slot1;
+//     googletag.cmd.push(function() {
+//     ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'div-gpt-ad-1631082764240-0').addService(googletag.pubads());
+//     googletag.pubads().enableSingleRequest();
+//     // googletag.pubads().set("page_url",'sandesh.com');
+//     googletag.enableServices();
+//     googletag.pubads().refresh([ub_passback_slot1]);
+//     // googletag.display('gpt-passback5');
+//    });
+// }
 
 // setTimeout(function(){
 //   checkRemnantUnits();

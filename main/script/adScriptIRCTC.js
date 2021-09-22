@@ -497,7 +497,8 @@ if(typeof customConfigObjectA === 'undefined'){
     document.getElementsByTagName('head')[0].appendChild(s0_passback);
 
     ub_passback = document.createElement("div");
-    ub_passback.setAttribute("id", "widget-pl-226459");
+    // ub_passback.setAttribute("id", "widget-pl-"226459");
+    ub_passback.setAttribute("data-widget-placement", "");
     ub_passback.setAttribute("data-widget-host", "habitat");
     ub_passback.setAttribute("data-endpoint", "trends.revcontent.com");
     ub_passback.setAttribute("data-widget-id", "226459");

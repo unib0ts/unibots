@@ -116,6 +116,25 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
+// var s0_passback = document.createElement('script');
+// s0_passback.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+// s0_passback.async = true;
+// document.getElementsByTagName('head')[0].appendChild(s0_passback);
+//
+// window.googletag = window.googletag || {cmd: []};
+// var ub_anchorSlot;
+//
+// googletag.cmd.push(function() {
+//         // anchorSlot = googletag.defineOutOfPageSlot(
+//         //     '/21928950349/anchor_test_gam', googletag.enums.OutOfPageFormat.TOP_ANCHOR);
+//         ub_anchorSlot = googletag.defineOutOfPageSlot('/21928950349/anchor_test_gam', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+//         ub_anchorSlot.addService(googletag.pubads());
+//         googletag.pubads().enableSingleRequest();
+//         googletag.enableServices();
+//         googletag.pubads().refresh([ub_anchorSlot]);
+// });
+
+
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
     ubpbjs.initAdserverSet = true;

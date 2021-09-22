@@ -498,7 +498,7 @@ function mainHbRun(){
             validation: "relaxed",
             config: {
               ver:"1.0",
-              complete: 0,
+              complete: 1,
               nodes: [
                 {
                   asi:"unibots.in",   //directseller

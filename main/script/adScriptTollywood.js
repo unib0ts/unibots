@@ -44,7 +44,7 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
     // {
-    //     code: '/21956916242/tollywood.net_ub_320x50',
+    //     code: '/22126273586/tollywood.net_ipl_320x50',
     //     mediaTypes: {
     //       native: {
     //         image: {
@@ -77,19 +77,19 @@ var adUnits = [
     //     ]
     // },
     {
-        code: '/21956916242/tollywood.net_ub_320x50',
+        code: '/22126273586/tollywood.net_ipl_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	// { bidder: 'appnexus', params: { placementId: '21786127' } }, /* one placementId for all sizes  my appnexus bidder */
+        	{ bidder: 'appnexus', params: { placementId: '22652909' } }, /* one placementId for all sizes  my appnexus bidder */
         	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
         	// { bidder: '33across', params: { siteId : 'dTDY7cNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	// // { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
           // { bidder: 'sovrn', params: {tagid: '882931'} },
-          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910484'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4051398'} },
           // { bidder: 'openx', params: {unit: '544096396', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	// // // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         	// // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
@@ -194,7 +194,7 @@ function callAdsUB(){
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956916242/tollywood.net_ub_320x50', div_1_sizes, 'div-gpt-ad-1625486839838-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/22126273586/tollywood.net_ipl_320x50', div_1_sizes, 'div-gpt-ad-1632141731305-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -211,7 +211,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956916242/tollywood.net_ub_320x50'],
+		  adUnitCodes: ['/22126273586/tollywood.net_ipl_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
@@ -237,7 +237,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-gpt-ad-1625486839838-0';
+	adId = 'div-gpt-ad-1632141731305-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){

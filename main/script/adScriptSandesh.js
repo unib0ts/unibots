@@ -170,7 +170,8 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;
     }else {
-      ub_passback();
+      ub_psbckRandom = Math.floor(Math.random() * 2);
+        eval('ub_passback'+ub_psbckRandom+'()');
     }
   }
 }
@@ -295,25 +296,33 @@ function googlePush(){
   });
 }
 
-function ub_passback() {
+function ub_passback0() {
   var s0_passback = document.createElement('script');
-  s0_passback.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-  s0_passback.type = "text/javascript";
+  s0_passback.src = "https://click.nativclick.com/loading/?handle=7563";
   s0_passback.async = true;
   document.getElementsByTagName('head')[0].appendChild(s0_passback);
 
   ub_passback = document.createElement("div");
-  ub_passback.id = "gpt-passback5";
+  ub_passback.id = "0ce98f53e3aa229aa2f31b16e5dcbb4b";
   ub_sticky = document.getElementById('adSmall');
   ub_sticky.appendChild(ub_passback);
+}
 
-    googletag.cmd.push(function() {
-    ub_passback_slot1= googletag.defineSlot('/22082859479/sandesh.com_nb_passback_test', [320, 50], 'gpt-passback5').addService(googletag.pubads());
-    googletag.pubads().set("page_url",'sandesh.com');
-    googletag.enableServices();
-    googletag.pubads().refresh([ub_passback_slot1]);
-    googletag.display('gpt-passback5');
-   });
+function ub_passback1() {
+  var colombia = colombia || {};
+  colombia.fns = colombia.fns || [];
+  var cads = document.createElement("script");
+  cads.async = true;
+  cads.type = "text/javascript";
+  cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+  document.getElementsByTagName('head')[0].appendChild(cads);
+
+  ub_sticky = document.getElementById('adSmall');
+  if (!mobileCheck()) {
+      ub_sticky.innerHTML = '<div id="div-clmb-ctn-459128-1" style="float:left;min-height:2px;width:100%;" data-slot="459128" data-position="1" data-section="StroyPage" data-ua="D" class="colombia"></div>';
+  }else {
+      ub_sticky.innerHTML = '<div id="div-clmb-ctn-459114-1" style="float:left;min-height:2px;width:100%;" data-slot="459114" data-position="1" data-section="StroyPage" data-ua="D" class="colombia"></div>';
+  }
 }
 
 mappings.slotNumbers.push(1);

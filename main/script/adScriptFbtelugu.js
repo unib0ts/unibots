@@ -206,6 +206,23 @@ googletag.cmd.push(function() {
     });
 });
 
+// var s0_passback = document.createElement('script');
+// s0_passback.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+// s0_passback.async = true;
+// document.getElementsByTagName('head')[0].appendChild(s0_passback);
+//
+// window.googletag = window.googletag || {cmd: []};
+// var interstitialSlot;
+// googletag.cmd.push(function() {
+//   interstitialSlot = googletag.defineOutOfPageSlot(
+//       '/22082859479/test_interstitial',
+//       googletag.enums.OutOfPageFormat.INTERSTITIAL);
+//   interstitialSlot.addService(googletag.pubads());
+//   googletag.pubads().enableSingleRequest();
+//   googletag.enableServices();
+//   googletag.pubads().refresh([interstitialSlot]);
+// });
+
 function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({

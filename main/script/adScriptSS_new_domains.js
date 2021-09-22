@@ -2,8 +2,8 @@ if(typeof customConfigObjectA === 'undefined'){
   var botsiteUrl = window.location.hostname;
   if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl49/script.js?cb='+cachebuster;
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshihindi/script.js?cb='+cachebuster;
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl49/script.js?cb='+cachebuster;
+    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshihindi/script.js?cb='+cachebuster;
     // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/olympicWidget12/script.js?cb='+cachebuster;
     s3 = document.createElement('script');
     s3.src = url;
@@ -13,8 +13,8 @@ if(typeof customConfigObjectA === 'undefined'){
   }
   if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl50/script.js?cb='+cachebuster;
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl50/script.js?cb='+cachebuster;
+    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
     // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/olympicWidget13/script.js?cb='+cachebuster;
     s3 = document.createElement('script');
     s3.src = url;

@@ -167,7 +167,7 @@ function ubadScript() {
       x1.appendChild(z1);
     // }
   } else {
-      if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2){}else {
+      if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href.split('https://m.docbao.vn/kinh-te').length == 2){}else {
         if(!(window.location.href== "https://m.docbao.vn/")){
             z1 = document.createElement("div");
             z1.id = "ub-sticky-ad-container";

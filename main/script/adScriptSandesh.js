@@ -317,7 +317,7 @@ function ub_passback1() {
   cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
   document.getElementsByTagName('head')[0].appendChild(cads);
 
-  ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+  ub_sticky = document.getElementById('adSmall');
   if (!mobileCheck()) {
       ub_sticky.innerHTML = '<div id="div-clmb-ctn-459128-1" style="float:left;min-height:2px;width:100%;" data-slot="459128" data-position="1" data-section="StroyPage" data-ua="D" class="colombia"></div>';
   }else {

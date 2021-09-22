@@ -122,16 +122,23 @@ s0_passback.async = true;
 document.getElementsByTagName('head')[0].appendChild(s0_passback);
 
 window.googletag = window.googletag || {cmd: []};
-var interstitialSlot;
+var anchorSlot;
+
 googletag.cmd.push(function() {
-  interstitialSlot = googletag.defineOutOfPageSlot(
-      '/21928950349/test_interstitial',
-      googletag.enums.OutOfPageFormat.INTERSTITIAL);
-  interstitialSlot.addService(googletag.pubads());
-  googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
-  googletag.pubads().refresh([interstitialSlot]);
+        // anchorSlot = googletag.defineOutOfPageSlot(
+        //     '/6355419/Travel', googletag.enums.OutOfPageFormat.TOP_ANCHOR);
+
+        // Define an anchor ad slot at the bottom of the viewport.
+        anchorSlot = googletag.defineOutOfPageSlot(
+            '/21928950349/anchor_test_gam', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+
+          anchorSlot.addService(googletag.pubads());
+        // Enable SRA and services.
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().refresh([interstitialSlot]);
 });
+
 
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;

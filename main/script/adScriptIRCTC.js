@@ -477,8 +477,9 @@ if(typeof customConfigObjectA === 'undefined'){
         mappings.renderedFlag[ub_slotNum] = true;
       }
       else {
-        ub_psbckRandom = Math.floor(Math.random() * 3);
-          eval('ub_passback'+ub_psbckRandom+'()');
+        // ub_psbckRandom = Math.floor(Math.random() * 3);
+        //   eval('ub_passback'+ub_psbckRandom+'()');
+        ub_passback1();
       }
     }
   }
@@ -497,19 +498,35 @@ if(typeof customConfigObjectA === 'undefined'){
   }
 
   function ub_passback1() {
+    if(typeof colombia == 'undefined'){
     var colombia = colombia || {};
     colombia.fns = colombia.fns || [];
-    var cads = document.createElement("script");
-    cads.async = true;
-    cads.type = "text/javascript";
-    cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
-    document.getElementsByTagName('head')[0].appendChild(cads);
+      (function() {
+          var cads = document.createElement("script");
+          cads.async = true;
+          cads.type = "text/javascript";
+          cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+          document.getElementsByTagName('head')[0].appendChild(cads);
+      })();
+    }
 
-    ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+    ub_passback = document.createElement("div");
+    ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
+    ub_passback.setAttribute("data-position", "1");
+    ub_passback.setAttribute("data-section", "StroyPage");
+    ub_passback.setAttribute("data-ua", "D");
+    ub_passback.setAttribute("class", "colombia");
+
     if (!mobileCheck()) {
-        ub_sticky.innerHTML = '<div id="div-clmb-ctn-459127-1" style="float:left;min-height:2px;width:100%;" data-slot="459127" data-position="1" data-section="StroyPage" data-ua="D" class="colombia"></div>';
+        ub_passback.setAttribute("data-slot", "459127");
+        ub_passback.setAttribute("id", "div-clmb-ctn-459127-1");
+        ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+        ub_sticky.appendChild(ub_passback);
     }else {
-        ub_sticky.innerHTML = '<div id="div-clmb-ctn-459117-1" style="float:left;min-height:2px;width:100%;" data-slot="459117" data-position="1" data-section="StroyPage" data-ua="D" class="colombia"></div>';
+      ub_passback.setAttribute("data-slot", "459117");
+      ub_passback.setAttribute("id", "div-clmb-ctn-459117-1");
+      ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+      ub_sticky.appendChild(ub_passback);
     }
   }
 

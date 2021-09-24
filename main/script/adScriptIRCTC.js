@@ -477,9 +477,9 @@ if(typeof customConfigObjectA === 'undefined'){
         mappings.renderedFlag[ub_slotNum] = true;
       }
       else {
-        // ub_psbckRandom = Math.floor(Math.random() * 3);
-        //   eval('ub_passback'+ub_psbckRandom+'()');
-        ub_passback1();
+        ub_psbckRandom = Math.floor(Math.random() * 3);
+          eval('ub_passback'+ub_psbckRandom+'()');
+        // ub_passback1();
       }
     }
   }

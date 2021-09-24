@@ -514,15 +514,16 @@ if(typeof customConfigObjectA === 'undefined'){
     ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
     ub_passback.setAttribute("data-position", "1");
     ub_passback.setAttribute("data-section", "StroyPage");
-    ub_passback.setAttribute("data-ua", "D");
     ub_passback.setAttribute("class", "colombia");
 
     if (!mobileCheck()) {
+        ub_passback.setAttribute("data-ua", "D");
         ub_passback.setAttribute("data-slot", "459127");
         ub_passback.setAttribute("id", "div-clmb-ctn-459127-1");
         ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
         ub_sticky.appendChild(ub_passback);
     }else {
+      ub_passback.setAttribute("data-ua", "M");
       ub_passback.setAttribute("data-slot", "459117");
       ub_passback.setAttribute("id", "div-clmb-ctn-459117-1");
       ub_sticky = document.getElementById('ATD_Ad_IR_320x50');

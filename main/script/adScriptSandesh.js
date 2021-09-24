@@ -324,15 +324,16 @@ function ub_passback1() {
   ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
   ub_passback.setAttribute("data-position", "1");
   ub_passback.setAttribute("data-section", "StroyPage");
-  ub_passback.setAttribute("data-ua", "D");
   ub_passback.setAttribute("class", "colombia");
 
   if (!mobileCheck()) {
+      ub_passback.setAttribute("data-ua", "D");
       ub_passback.setAttribute("data-slot", "459128");
       ub_passback.setAttribute("id", "div-clmb-ctn-459128-1");
       ub_sticky = document.getElementById('adSmall');
       ub_sticky.appendChild(ub_passback);
   }else {
+    ub_passback.setAttribute("data-ua", "M");
     ub_passback.setAttribute("data-slot", "459114");
     ub_passback.setAttribute("id", "div-clmb-ctn-459114-1");
     ub_sticky = document.getElementById('adSmall');

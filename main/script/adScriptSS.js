@@ -1147,7 +1147,7 @@ var mappings_extra_units_config ={
     '/1062118/Intersitial_640x480_Desktop_Articlepage',
     '/1062118/Intersitial_320x480_mobile_Articlepage',
     '/1062118/Desktop_LB_970x90_728x90',
-    // '/1062118/masthead_2_inarticle_300x250',
+    '/1062118/masthead_2_inarticle_300x250',
     '/1062118/AMP_Top_header_300x250'
   ]
 }

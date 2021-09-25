@@ -4,34 +4,34 @@ var div_3_sizes = [125, 125];
 var div_4_sizes = [200, 200];
 var adUnits = [];
 
-var ub_divsToCheck = {
-	"unibots-video": false,
-};
-
-var ub_interval = setInterval(() => {
-	flag = false;
-	checkFlag = false;
-	for (x in ub_divsToCheck) {
-		if (document.getElementById(x) !== null) {
-			ub_divsToCheck[x] = true;
-			checkFlag = true;
-		}
-	}
-	for (x in ub_divsToCheck) {
-		if (ub_divsToCheck[x] == false) {
-			flag = true;
-		}
-	}
-	if (!flag && checkFlag) {
-		var cachebuster = Math.round(new Date().getTime() / 1000);
-		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/andhrajyothy/script.min.js?cb='+cachebuster;
-		ub_vs = document.createElement('script');
-		ub_vs.src = url;
-    ub_vs.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(ub_vs);
-		clearInterval(ub_interval);
-	}
-}, 500);
+// var ub_divsToCheck = {
+// 	"unibots-video": false,
+// };
+//
+// var ub_interval = setInterval(() => {
+// 	flag = false;
+// 	checkFlag = false;
+// 	for (x in ub_divsToCheck) {
+// 		if (document.getElementById(x) !== null) {
+// 			ub_divsToCheck[x] = true;
+// 			checkFlag = true;
+// 		}
+// 	}
+// 	for (x in ub_divsToCheck) {
+// 		if (ub_divsToCheck[x] == false) {
+// 			flag = true;
+// 		}
+// 	}
+// 	if (!flag && checkFlag) {
+// 		var cachebuster = Math.round(new Date().getTime() / 1000);
+// 		url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/andhrajyothy/script.min.js?cb='+cachebuster;
+// 		ub_vs = document.createElement('script');
+// 		ub_vs.src = url;
+//     ub_vs.type = "text/javascript";
+//     document.getElementsByTagName('head')[0].appendChild(ub_vs);
+// 		clearInterval(ub_interval);
+// 	}
+// }, 500);
 
 var PREBID_TIMEOUT = 1200;
 var FAILSAFE_TIMEOUT = 3000;

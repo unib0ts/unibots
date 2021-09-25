@@ -603,7 +603,7 @@ function ubadScript() {
           // "/22057354005/docbao_pc_sticky_300x600",
           "/22140546871/docbao.vn_pc_balloon_hb_300x600",
           "/22140546871/docbao.vn_pc_bottom_336x280",
-          "/22140546871/docbao.vn_pc_inreadbanner-1_300x25",
+          "/22140546871/docbao.vn_pc_inreadbanner-1_300x250",
           "/22140546871/docbao.vn_pc_inreadbanner-2_300x250",
           "/22140546871/docbao.vn_pc_header_728x90",
           "/22140546871/docbao.vn_pc_R1_300x250",

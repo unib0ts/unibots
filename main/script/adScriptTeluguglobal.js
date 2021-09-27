@@ -86,7 +86,7 @@ var adUnits = [
     { bidder: 'appnexus', params: { placementId: '19057714' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '744368'} },
     { bidder: 'oftmedia', params: { placementId: '20846125' } },
-    // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2971089'} },
+    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4052955'} },
     { bidder: 'nobid', params: { siteId : '22052735863'} },
     // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323618', zoneId: '1680026'} },
     { bidder: 'rhythmone', params: { placementId: '205377'}}, /* one placementId for all sizes */

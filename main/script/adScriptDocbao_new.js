@@ -1,9 +1,9 @@
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDocbao.json';
+mybotBlockedUrl = 'http://localhost/unibots/main/blocks/blocksDocbao.json';
 mybotBlockedClientName = 'docbao';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+  urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;
@@ -16,6 +16,7 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
       data = data[mybotBlockedClientName];
       if(data) {
         data = data.urls;
+        console.log(data);
         if(data.includes(urlToCheck)){
           // mybotdiv1 = '';
           return false;

@@ -101,33 +101,33 @@ var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
 
-// var GEO_CODE = '';
-// (function (){
-//   var request = new XMLHttpRequest();
-// 		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-// 		request.open('GET', url, true);
-// 		request.onload = function() {
-// 			if (request.status >= 200 && request.status < 400) {
-// 				var data = request.responseText;
-// 				data = JSON.parse(data);
-// 				if(data.status == "success") {
-//           GEO_CODE = data.countryCode;
-// 				}
-// 				else {
-// 					console.error("Geo Request Failed");
-// 				}
-// 			}
-// 			else {
-// 				console.error('Request failed from server');
-// 			}
-//       mainHbRun();
-// 		};
-// 		request.onerror = function() {
-// 			console.error('Request failed to Reach GEO Server');
-//       mainHbRun();
-// 		};
-// 		request.send();
-// })();
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
 
 const customConfigObjectA = {
  "buckets" : [{
@@ -211,7 +211,7 @@ function mybotubScript() {
   s1.type = "text/javascript";
   document.getElementsByTagName('head')[0].appendChild(s1);
 
-  // function mainHbRun(){
+  function mainHbRun(){
     ubpbjs.que.push(function() {
       ubpbjs.addAdUnits(adUnits);
       ubpbjs.aliasBidder('criteo','criteointl');
@@ -272,7 +272,7 @@ function mybotubScript() {
     setTimeout(function() {
         initAdserver();
     }, FAILSAFE_TIMEOUT);
-  // }
+  }
   if (mobileCheck()) {
     mappings.slotNumbers.push(1);
     mappings.adCode.push('/21928950349/dantri.com.vn_mb_anchor_320x50');

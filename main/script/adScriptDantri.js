@@ -266,7 +266,7 @@ function mybotubScript() {
       ubpbjs.requestBids({
             bidsBackHandler: initAdserver,
             timeout: PREBID_TIMEOUT,
-            // labels: [GEO_CODE],
+            labels: [GEO_CODE],
         });
     });
     setTimeout(function() {

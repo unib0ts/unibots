@@ -101,33 +101,33 @@ var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
 
-// var GEO_CODE = '';
-// (function (){
-//   var request = new XMLHttpRequest();
-// 		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-// 		request.open('GET', url, true);
-// 		request.onload = function() {
-// 			if (request.status >= 200 && request.status < 400) {
-// 				var data = request.responseText;
-// 				data = JSON.parse(data);
-// 				if(data.status == "success") {
-//           GEO_CODE = data.countryCode;
-// 				}
-// 				else {
-// 					console.error("Geo Request Failed");
-// 				}
-// 			}
-// 			else {
-// 				console.error('Request failed from server');
-// 			}
-//       mainHbRun();
-// 		};
-// 		request.onerror = function() {
-// 			console.error('Request failed to Reach GEO Server');
-//       mainHbRun();
-// 		};
-// 		request.send();
-// })();
+var GEO_CODE = '';
+(function (){
+  var request = new XMLHttpRequest();
+		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.status == "success") {
+          GEO_CODE = data.countryCode;
+				}
+				else {
+					console.error("Geo Request Failed");
+				}
+			}
+			else {
+				console.error('Request failed from server');
+			}
+      mainHbRun();
+		};
+		request.onerror = function() {
+			console.error('Request failed to Reach GEO Server');
+      mainHbRun();
+		};
+		request.send();
+})();
 
 const customConfigObjectA = {
  "buckets" : [{
@@ -154,14 +154,14 @@ if (mobileCheck()) {
         // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
         // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-        // // { bidder: 'nobid', params: { siteId: '22049997436' } },
+        { bidder: 'nobid', params: { siteId: '22604439723' } },
         // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
         // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // // { bidder: 'criteo', params: {networkId: '10542'} },
         // // { bidder: 'criteointl', params: {networkId: '10545'} },
         // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        { bidder: 'adyoulike', params: { placement: '4ac3ad3cf9e003e748d80cb65f7642c6'}, labelAll: ["US"] },
       ]
   };
   adUnits.push(adUnits1);
@@ -211,7 +211,7 @@ function mybotubScript() {
   s1.type = "text/javascript";
   document.getElementsByTagName('head')[0].appendChild(s1);
 
-  // function mainHbRun(){
+  function mainHbRun(){
     ubpbjs.que.push(function() {
       ubpbjs.addAdUnits(adUnits);
       ubpbjs.aliasBidder('criteo','criteointl');
@@ -266,13 +266,13 @@ function mybotubScript() {
       ubpbjs.requestBids({
             bidsBackHandler: initAdserver,
             timeout: PREBID_TIMEOUT,
-            // labels: [GEO_CODE],
+            labels: [GEO_CODE],
         });
     });
     setTimeout(function() {
         initAdserver();
     }, FAILSAFE_TIMEOUT);
-  // }
+  }
   if (mobileCheck()) {
     mappings.slotNumbers.push(1);
     mappings.adCode.push('/21928950349/dantri.com.vn_mb_anchor_320x50');

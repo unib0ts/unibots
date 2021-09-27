@@ -1,9 +1,9 @@
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDocbao.json';
+mybotBlockedUrl = 'http://localhost/unibots/main/blocks/blocksDocbao.json';
 mybotBlockedClientName = 'docbao';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+  urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;
@@ -16,6 +16,7 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
       data = data[mybotBlockedClientName];
       if(data) {
         data = data.urls;
+        console.log(data);
         if(data.includes(urlToCheck)){
           // mybotdiv1 = '';
           return false;
@@ -167,8 +168,8 @@ function ubadScript() {
       x1.appendChild(z1);
     // }
   } else {
-      if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
-        // if(!(window.location.href== "https://m.docbao.vn/")){
+      // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
+        if(!(window.location.href== "https://m.docbao.vn/")){
             z1 = document.createElement("div");
             z1.id = "ub-sticky-ad-container";
             z1.className = "ub-sticky-ad-container";
@@ -176,16 +177,16 @@ function ubadScript() {
                 '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
             x1 = document.querySelector("body");
             x1.appendChild(z1);
-        // }else {
-        //     z1 = document.createElement("div");
-        //     z1.id = "ub-sticky-ad-container";
-        //     z1.className = "ub-sticky-ad-container";
-        //     z1.innerHTML =
-        //         '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
-        //     x1 = document.querySelector("body");
-        //     x1.appendChild(z1);
-        // // }
-      }
+        }else {
+            z1 = document.createElement("div");
+            z1.id = "ub-sticky-ad-container";
+            z1.className = "ub-sticky-ad-container";
+            z1.innerHTML =
+                '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
+            x1 = document.querySelector("body");
+            x1.appendChild(z1);
+        }
+      // }
 
     if(!(window.location.href== "https://m.docbao.vn/")){
       z2 = document.createElement("div");
@@ -655,7 +656,7 @@ function ubadScript() {
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515727'} },
-            // { bidder: 'openx', params: {unit: '543987770', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // { bidder: 'openx', params: {unit: '544096414', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         //       { bidder: 'ucfunnel', params: { adid : 'ad-34B8937646E48374C3B67334A6E892D8'} },
         // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
         // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -665,7 +666,7 @@ function ubadScript() {
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515727'} },
-            // { bidder: 'openx', params: {unit: '543987770', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // { bidder: 'openx', params: {unit: '544096410', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         //   { bidder: 'ucfunnel', params: { adid : 'ad-27369ED47B326AEB087272D9242BD929'} },
         // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
         // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -675,7 +676,7 @@ function ubadScript() {
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3515727'} },
-          // { bidder: 'openx', params: {unit: '543987770', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          // { bidder: 'openx', params: {unit: '544096412', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         //       { bidder: 'ucfunnel', params: { adid : 'ad-77284E6D79EAE24BFB384D4BD89AE486'} },
         // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
         // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1443,8 +1444,8 @@ function ubadScript() {
 }
 
  if (mobileCheck()) {
-   if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
-    // if(!(window.location.href== "https://m.docbao.vn/")){
+   // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
+    if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
               if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x50"){
@@ -1455,19 +1456,19 @@ function ubadScript() {
               }
             });
         });
-    // }else {
-      // googletag.cmd.push(function () {
-      //     googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-      //       if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
-      //             var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
-      //             if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
-      //                 document.getElementById("close_ub-sticky-ad").style.display = "block";
-      //             }
-      //       }
-      //     });
-      // });
-    // }
-  }
+    }else {
+      googletag.cmd.push(function () {
+          googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+            if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
+                  var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
+                  if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
+                      document.getElementById("close_ub-sticky-ad").style.display = "block";
+                  }
+            }
+          });
+      });
+    }
+  // }
 }
 
  function loadAd(id, adUnits) {

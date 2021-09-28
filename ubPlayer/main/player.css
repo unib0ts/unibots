@@ -34,7 +34,7 @@ video {
 }
 #unibots-video{
     z-index: 2147483999 !important;
-    margin: 35px 0px !important;
+    margin: 5px 0px !important;
 }
 .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,
 .vjs-icon-cancel:before {

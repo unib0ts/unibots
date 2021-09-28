@@ -3,7 +3,7 @@ mybotBlockedUrl = 'http://localhost/unibots/main/blocks/blocksDocbao.json';
 mybotBlockedClientName = 'docbao';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname;
+  urlToCheck = window.location.host+window.location.pathname+window.location.search;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;

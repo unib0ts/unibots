@@ -121,9 +121,10 @@ if (mobileCheck()) {
           }
       },
       bids: [
-        // { bidder: 'appnexus', params: { placementId: '21687222' } }, /* one placementId for all sizes  my appnexus bidder */
+        { bidder: 'appnexus', params: { placementId: '21687222' } }, /* one placementId for all sizes  my appnexus bidder */
         // { bidder: 'oftmedia', params: { placementId: '20846125' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3854136'} },
+        { bidder: 'sovrn', params: {tagid: '957020'} },
         // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
         // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */

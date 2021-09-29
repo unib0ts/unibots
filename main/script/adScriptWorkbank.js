@@ -288,7 +288,7 @@ if (typeof mobileCheck === "function") {
           { bidder: 'appnexus', params: { placementId: '19928396' } }, /* one placementId for all sizes  my appnexus bidder */
           { bidder: 'sovrn', params: {tagid: '867139'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-AA7BAA9E3A297B4402B89264233399B'} },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4052959'} },
          { bidder: 'oftmedia', params: { placementId: '20846125' } },
          // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
@@ -322,7 +322,7 @@ if (typeof mobileCheck === "function") {
             { bidder: 'appnexus', params: { placementId: '19928396' } }, /* one placementId for all sizes  my appnexus bidder */
          { bidder: 'oftmedia', params: { placementId: '20846125' } },
          { bidder: 'ucfunnel', params: { adid : 'ad-AA7BAA9E3B276E8B0B2DB8AE9894D28'} },
-         //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952065'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4052962'} },
          // // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
          // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '867140'} },

@@ -1,5 +1,5 @@
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'http://localhost/unibots/main/blocks/blocksDocbao.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDocbao.json';
 mybotBlockedClientName = 'docbao';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){

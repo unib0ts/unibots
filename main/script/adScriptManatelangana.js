@@ -43,67 +43,66 @@ var div_1_sizes = [320, 50];
 
 
 var adUnits = [
+    // {
+    //     code: '/22126273586/tollywood.net_ipl_320x50',
+    //     mediaTypes: {
+    //       native: {
+    //         image: {
+    //           // sizes: [300, 100],
+    //           aspect_ratios: [{
+    //             min_width: 100,        /* Optional */
+    //             min_height: 50,       /* Optional */
+    //             ratio_width: 2,        /* Required */
+    //             ratio_height: 1,       /* Required */
+    //           }],
+    //           sendId: true
+    //         },
+    //         title: {
+    //           len: 50,
+    //           sendId: true
+    //         },
+    //         sponsoredBy: {
+    //           required: true,
+    //           sendId: true
+    //         },
+    //         clickUrl: {
+    //           required: true,
+    //           sendId: true
+    //         }
+    //       }
+    //     },
+    //     bids: [
+    //       { bidder: 'appnexus', params: { placementId: '19252324' } }
+    //     //  { bidder: 'oftmedia', params: { placementId: '18671523' } }
+    //     ]
+    // },
     {
-        code: '/21956033520/dinakaran.com',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
-            },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
-          }
-        },
-        bids: [
-          { bidder: 'appnexus', params: { placementId: '19054505' } },
-          { bidder: 'oftmedia', params: { placementId: '20846125' } }
-        ]
-    },
-    {
-        code: '/21956033520/dinakaran.com',
+        code: '/22126273586/tollywood.net_ipl_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19054505' } }, /* one placementId for all sizes  my appnexus bidder */
-        	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
-        	{ bidder: '33across', params: { siteId : 'bzAHA8WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-        	// { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '701550'} },
-          { bidder: 'openx', params: {unit: '543530317', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        	{ bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        	{ bidder: 'appnexus', params: { placementId: '22652909' } }, /* one placementId for all sizes  my appnexus bidder */
+        	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        	// { bidder: '33across', params: { siteId : 'dTDY7cNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        	// // { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
+          // { bidder: 'sovrn', params: {tagid: '882931'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4051398'} },
+          // { bidder: 'openx', params: {unit: '544096396', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        	// // // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+        	// // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // // { bidder: 'nobid', params: { siteId : '22012436374'} },
+          // // // { bidder: 'criteo', params: {networkId: '10542'} },
+          // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+          // // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          // // { bidder: 'smartadserver', params: { siteId: '404710', pageId: '1370494', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
+          // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+          // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // { bidder: 'ucfunnel', params: { adid : 'ad-47B4EE44D3BD49431ED47D4424E762E6'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          { bidder: 'nobid', params: { siteId : '22049999659'} },
-          { bidder: 'ucfunnel', params: { adid : 'ad-77287748A82D872ACBD726A2EDA68336'} },
-          // { bidder: 'criteo', params: {networkId: '10542'} },
-          // { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          { bidder: 'smartadserver', params: { siteId: '362108', pageId: '1289609', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-          //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996028'} },
-          // { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323630', zoneId: '1680030'} }
+          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
     }
 ];
@@ -124,19 +123,19 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh([ub_slot1]);
-            var x = ubpbjs.getAllPrebidWinningBids();
-            var adsCalled = false;
-            for(var i=0;i<x.length;i++){
-              var bc = x[i].bidderCode;
-              if(bc=="openx"){
-                adsCalled = true;
-                callBotman();
-              }
-            }
-            if(!adsCalled){
-              callAdsUB();
-            }
+            googletag.pubads().refresh([ub_slot1]);
+            // var x = ubpbjs.getAllPrebidWinningBids();
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
         });
     });
 }
@@ -146,7 +145,7 @@ var userStatusBM = '';
 function callBotman(){
   if(userStatusBM == ''){
     var request = new XMLHttpRequest();
-    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=dinakaran';
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=sumantv';
     request.open('GET', url, true);
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
@@ -191,9 +190,11 @@ function callBotman(){
 function callAdsUB(){
 	googletag.pubads().refresh([ub_slot1]);
 }
+
+
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21956033520/dinakaran.com', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/22126273586/tollywood.net_ipl_320x50', div_1_sizes, 'div-gpt-ad-1632141731305-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -210,23 +211,23 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21956033520/dinakaran.com'],
+		  adUnitCodes: ['/22126273586/tollywood.net_ipl_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              // googletag.pubads().refresh([ub_slot1]);
-              var adsCalled = false;
-              for(var i=0;i<x.length;i++){
-                var bc = x[i].bidderCode;
-                if(bc=="openx"){
-                  adsCalled = true;
-                  callBotman();
-                }
-              }
-              if(!adsCalled){
-                callAdsUB();
-              }
+              googletag.pubads().refresh([ub_slot1]);
+              // var adsCalled = false;
+              // for(var i=0;i<x.length;i++){
+              //   var bc = x[i].bidderCode;
+              //   if(bc=="openx"){
+              //     adsCalled = true;
+              //     callBotman();
+              //   }
+              // }
+              // if(!adsCalled){
+              //   callAdsUB();
+              // }
           });
         });
 		  }
@@ -236,7 +237,7 @@ function refreshBid() {
 
 ub_adRefreshFlag = 0;
 function ub_checkAdRendered(){
-	adId = 'div-ub-1';
+	adId = 'div-gpt-ad-1632141731305-0';
 	var nodes = document.getElementById(adId).childNodes[0].childNodes;
 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
     if(ub_adRefreshFlag != 1){
@@ -272,14 +273,14 @@ function ub_passback() {
 
   if (!mobileCheck()) {
       ub_passback.setAttribute("data-ua", "D");
-      ub_passback.setAttribute("data-slot", "460185");
-      ub_passback.setAttribute("id", "div-clmb-ctn-460185-1");
+      ub_passback.setAttribute("data-slot", "460173");
+      ub_passback.setAttribute("id", "div-clmb-ctn-460173-1");
       ub_sticky = document.getElementById('adSmall');
       ub_sticky.appendChild(ub_passback);
   }else {
     ub_passback.setAttribute("data-ua", "M");
-    ub_passback.setAttribute("data-slot", "460186");
-    ub_passback.setAttribute("id", "div-clmb-ctn-460186-1");
+    ub_passback.setAttribute("data-slot", "460174");
+    ub_passback.setAttribute("id", "div-clmb-ctn-460174-1");
     ub_sticky = document.getElementById('adSmall');
     ub_sticky.appendChild(ub_passback);
   }
@@ -337,16 +338,16 @@ function mainHbRun(){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'http://www.dinakaran.com/',
+        publisherDomain: 'https://www.tollywood.net/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        });
-      ubpbjs.requestBids({
-        bidsBackHandler: initAdserver,
-        timeout: PREBID_TIMEOUT,
-        labels: [GEO_CODE],
-      });
+       ubpbjs.requestBids({
+           bidsBackHandler: initAdserver,
+           timeout: PREBID_TIMEOUT,
+           labels: [GEO_CODE],
+       });
   });
   // in case ubpbjs doesn't load
   setTimeout(function() {

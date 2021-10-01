@@ -257,6 +257,43 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;
     }
+    else {
+      ub_passback();
+    }
+  }
+}
+
+function ub_passback() {
+  if(typeof colombia == 'undefined'){
+  var colombia = colombia || {};
+  colombia.fns = colombia.fns || [];
+    (function() {
+        var cads = document.createElement("script");
+        cads.async = true;
+        cads.type = "text/javascript";
+        cads.src = "https://static.clmbtech.com/ase/91170/3748/c1.js";
+        document.getElementsByTagName('head')[0].appendChild(cads);
+    })();
+  }
+
+  ub_passback = document.createElement("div");
+  ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
+  ub_passback.setAttribute("data-position", "1");
+  ub_passback.setAttribute("data-section", "StroyPage");
+  ub_passback.setAttribute("class", "colombia");
+
+  if (!mobileCheck()) {
+      ub_passback.setAttribute("data-ua", "D");
+      ub_passback.setAttribute("data-slot", "460177");
+      ub_passback.setAttribute("id", "div-clmb-ctn-460177-1");
+      ub_sticky = document.getElementById('adSmall');
+      ub_sticky.appendChild(ub_passback);
+  }else {
+    ub_passback.setAttribute("data-ua", "M");
+    ub_passback.setAttribute("data-slot", "460178");
+    ub_passback.setAttribute("id", "div-clmb-ctn-460178-1");
+    ub_sticky = document.getElementById('adSmall');
+    ub_sticky.appendChild(ub_passback);
   }
 }
 

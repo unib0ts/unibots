@@ -55,7 +55,7 @@ var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong
   (window.location.href.split('https://bongdaplus.vn/ket-nghia-anh-em').length == 2);
 
 function ubadScript() {
-  if(!(bong_vietnamcatg)){
+  // if(!(bong_vietnamcatg)){
     var cachebuster = Math.round(new Date().getTime() / 1000);
     url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js?cb=" + cachebuster;
     ub_vs = document.createElement("script");
@@ -69,7 +69,7 @@ function ubadScript() {
           unibotsPlayer("bongda");
       });
     }
-  }
+  // }
 
   checkHBUnits();
 }

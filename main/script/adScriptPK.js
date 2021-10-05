@@ -324,6 +324,25 @@ if (document.getElementById('unibots-ad')) {
 
 function mainHbRun(){
   ubpbjs.que.push(function() {
+      ubpbjs.setBidderConfig({
+      bidders: ['emx_digital'],   // can list more bidders here if they share the same config
+      config: {
+        schain: {
+          validation: "relaxed",
+          config: {
+            ver:"1.0",
+            complete: 1,
+            nodes: [
+              {
+                asi:"unibots.in",   //directseller
+                sid:"1504",     //seller_id
+                hp:1
+              },
+            ]
+          }
+        }
+      }
+      });
       ubpbjs.addAdUnits(adUnits);
       ubpbjs.bidderSettings = {
         'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },

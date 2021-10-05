@@ -261,6 +261,25 @@ var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 function mainHbRun(){
 ubpbjs.que.push(function() {
+		// ubpbjs.setBidderConfig({
+		// bidders: ['emx_digital'],   // can list more bidders here if they share the same config
+		// config: {
+		//   schain: {
+		//     validation: "relaxed",
+		//     config: {
+		//       ver:"1.0",
+		//       complete: 1,
+		//       nodes: [
+		//         {
+		//           asi:"unibots.in",   //directseller
+		//           sid:"1504",     //seller_id
+		//           hp:1
+		//         },
+		//       ]
+		//     }
+		//   }
+		// }
+		// });
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {

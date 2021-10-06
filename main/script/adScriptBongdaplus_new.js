@@ -642,7 +642,7 @@ function ubadScript() {
             "AR02",// "div-gpt-ad-1614844767234-0", //'/22140546871/bongdaplus.vn_pc_R2_300x250',
             "AR03",// "div-gpt-ad-1614844828905-0", //'/22140546871/bongdaplus.vn_pc_R3_300x600',
             "AR04",//"div-gpt-ad-1614844910453-0", //'/22140546871/bongdaplus.vn_pc_R4_300x600',
-            "AR05",//"div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
+            // "AR05",//"div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
             "div-gpt-ad-1614845055882-0", //'/22140546871/bongdaplus.vn_pc_fl_120x600',
             "div-gpt-ad-1614845141925-0", //'/22140546871/bongdaplus.vn_pc_fr_120x600',
             "div-gpt-ad-1615775720668-0", //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
@@ -694,10 +694,10 @@ function ubadScript() {
               [300, 600],
               [300, 250],
           ],
-          [
-              [300, 250],
-              [300, 600],
-          ],
+          // [
+          //     [300, 250],
+          //     [300, 600],
+          // ],
           [120, 600],
           [120, 600],
           [336, 280],
@@ -833,18 +833,18 @@ function ubadScript() {
               // // { bidder: "kubient", params: { zoneid: "9ca7f60b018ca", server: "kssp.kbntx.ch"} },
               //    { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93422', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]), //    '/21692080761/amb_eng_desk_lb_2',
-          hb_full_common_bidders.concat([
-              {
-                  bidder: "pubmatic",
-                  params: { publisherId: "159448", adSlot: "3507457" },
-              },
-              //    { bidder: 'openx', params: {unit: '543981169', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-              //    { bidder: 'ucfunnel', params: { adid : 'ad-2736B878D24E7BAB0936948368E83B8'} },
-              // //   { bidder: "kubient", params: { zoneid: "728eb6f0a4102", server: "kssp.kbntx.ch"} },
-              // //   {bidder: 'coinzilla', params: {placementId: '6615d088e603b6be232'} },
-              // // //   { bidder: 'sovrn', params: {tagid: '744067'} },
-              //    { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93422', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-          ]), // '/21692080761/amb_eng_header_desk_v2',
+          // hb_full_common_bidders.concat([
+          //     {
+          //         bidder: "pubmatic",
+          //         params: { publisherId: "159448", adSlot: "3507457" },
+          //     },
+          //     //    { bidder: 'openx', params: {unit: '543981169', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          //     //    { bidder: 'ucfunnel', params: { adid : 'ad-2736B878D24E7BAB0936948368E83B8'} },
+          //     // //   { bidder: "kubient", params: { zoneid: "728eb6f0a4102", server: "kssp.kbntx.ch"} },
+          //     // //   {bidder: 'coinzilla', params: {placementId: '6615d088e603b6be232'} },
+          //     // // //   { bidder: 'sovrn', params: {tagid: '744067'} },
+          //     //    { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '93422', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          // ]), // '/21692080761/amb_eng_header_desk_v2',
           hb_full_common_bidders.concat([
               //   {bidder: 'coinzilla', params: {placementId: '6615d088e603b6be232'} },
               //   { bidder: "kubient", params: { zoneid: "28c8efcc75bcb", server: "kssp.kbntx.ch"} },
@@ -1353,14 +1353,15 @@ function ubadScript() {
   // function callAdsUB_hb(){
   // 	googletag.pubads().refresh(mapping_full_hb.slots);
   // }
-  
+
   function callMapUnits() {
       x = mappings_full_hb_config.adId;
       for (i = 0; i < x.length; i++) {
-        if ((document.getElementById(mappings_full_hb_config.adId[i]) == "AR05") && (window.location.href == "https://bongdaplus.vn/")){
-            continue;
-        }
-        else if (document.getElementById(mappings_full_hb_config.adId[i])) {
+        // if ((document.getElementById(mappings_full_hb_config.adId[i])) && (window.location.href == "https://bongdaplus.vn/")){
+        //     continue;
+        // }
+       if (document.getElementById(mappings_full_hb_config.adId[i])) {
+            console.log('TEST123');
               adUnitTemp = {
                   code: mappings_full_hb_config.adUnitNames[i],
                   mediaTypes: {

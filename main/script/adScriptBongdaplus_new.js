@@ -1353,11 +1353,14 @@ function ubadScript() {
   // function callAdsUB_hb(){
   // 	googletag.pubads().refresh(mapping_full_hb.slots);
   // }
-
+  
   function callMapUnits() {
       x = mappings_full_hb_config.adId;
       for (i = 0; i < x.length; i++) {
-          if (document.getElementById(mappings_full_hb_config.adId[i])) {
+        if ((document.getElementById(mappings_full_hb_config.adId[i]) == "AR05") && (window.location.href == "https://bongdaplus.vn/")){
+            continue;
+        }
+        else if (document.getElementById(mappings_full_hb_config.adId[i])) {
               adUnitTemp = {
                   code: mappings_full_hb_config.adUnitNames[i],
                   mediaTypes: {

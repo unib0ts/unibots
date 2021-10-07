@@ -132,6 +132,7 @@ function ubadScript() {
     // ad_scrpt2.innerText= mybotadscrptChild;
     // document.getElementsByTagName('body')[0].appendChild(ad_scrpt2);
     // if (document.querySelector('.header')) {
+    if(!(window.location.href.split('https://docbao.vn/sao-360').length == 2 || window.location.href.split('https://docbao.vn/gia-dinh').length == 2 || window.location.href.split('https://docbao.vn/giai-tri').length == 2)){
       z= document.createElement('div');
       z.id = 'ub-left-ad';
       z.className = 'ub-left-ad';
@@ -157,7 +158,7 @@ function ubadScript() {
        child.appendChild(z);
        document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1615189532474-0">';
       }
-    // }
+    }
 
     // if(!(window.location.href == "https://docbao.vn/")){
       z1= document.createElement('div');
@@ -188,7 +189,7 @@ function ubadScript() {
         }
       // }
 
-    // if(!(window.location.href== "https://m.docbao.vn/")){
+    if((window.location.href== "https://m.docbao.vn/")){
       z2 = document.createElement("div");
       z2.id = "ub-popup-ad-container";
       z2.className = "ub-popup-ad-container";
@@ -196,7 +197,7 @@ function ubadScript() {
           '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
       x2 = document.querySelector("body");
       x2.appendChild(z2);
-    // }
+    }
   }
 
   function mybotubPopadcls() {
@@ -276,7 +277,7 @@ function ubadScript() {
 
   if (mobileCheck()) {
       // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-    // if(!(window.location.href== "https://m.docbao.vn/")){
+    if((window.location.href== "https://m.docbao.vn/")){
       adUnits1 = {
           code: "/22140546871/docbao.vn_popup_fluid_336x280",
           mediaTypes: {
@@ -302,7 +303,7 @@ function ubadScript() {
           ],
       };
       adUnits_full_hb.push(adUnits1);
-      // }
+      }
   }
 
   var googletag = googletag || {};
@@ -316,6 +317,25 @@ function ubadScript() {
 
   function mainHbRun() {
       ubpbjs.que.push(function () {
+          // ubpbjs.setBidderConfig({
+          // bidders: ['emx_digital'],   // can list more bidders here if they share the same config
+          // config: {
+          //   schain: {
+          //     validation: "relaxed",
+          //     config: {
+          //       ver:"1.0",
+          //       complete: 1,
+          //       nodes: [
+          //         {
+          //           asi:"unibots.in",   //directseller
+          //           sid:"1504",     //seller_id
+          //           hp:1
+          //         },
+          //       ]
+          //     }
+          //   }
+          // }
+          // });
           ubpbjs.addAdUnits(adUnits_full_hb);
           ubpbjs.aliasBidder("criteo", "criteointl");
           ubpbjs.bidderSettings = {
@@ -1042,9 +1062,9 @@ function ubadScript() {
   function checkHBUnits() {
       if (mobileCheck()) {
           // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-         // if(!(window.location.href== "https://m.docbao.vn/")){
+         if((window.location.href== "https://m.docbao.vn/")){
           addNewsBotAd();
-          // }
+          }
       }
 
       // changeConfigToHB();

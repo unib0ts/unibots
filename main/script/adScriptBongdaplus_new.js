@@ -55,7 +55,7 @@ var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong
   (window.location.href.split('https://bongdaplus.vn/ket-nghia-anh-em').length == 2);
 
 function ubadScript() {
-  if(!(bong_vietnamcatg)){
+  // if(!(bong_vietnamcatg)){
     var cachebuster = Math.round(new Date().getTime() / 1000);
     url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js?cb=" + cachebuster;
     ub_vs = document.createElement("script");
@@ -69,7 +69,7 @@ function ubadScript() {
           unibotsPlayer("bongda");
       });
     }
-  }
+  // }
 
   checkHBUnits();
 }
@@ -105,7 +105,7 @@ function ubadScript() {
   loadAd("gabywa");
 
   var mybotstyleSheet =
-      ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483646}.ub-sticky-ad{width:100%;z-index:2147483647;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}";
+      ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:99}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -322,6 +322,25 @@ function ubadScript() {
 
   function mainHbRun() {
       ubpbjs.que.push(function () {
+        //   ubpbjs.setBidderConfig({
+        // bidders: ['emx_digital'],   // can list more bidders here if they share the same config
+        // config: {
+        //   schain: {
+        //     validation: "relaxed",
+        //     config: {
+        //       ver:"1.0",
+        //       complete: 1,
+        //       nodes: [
+        //         {
+        //           asi:"unibots.in",   //directseller
+        //           sid:"1504",     //seller_id
+        //           hp:1
+        //         },
+        //       ]
+        //     }
+        //   }
+        // }
+        // });
           ubpbjs.addAdUnits(adUnits_full_hb);
           ubpbjs.aliasBidder("criteo", "criteointl");
           ubpbjs.bidderSettings = {
@@ -619,11 +638,11 @@ function ubadScript() {
             // 'div-gpt-ad-1614843621164-0',  //'/22140546871/bongdaplus.vn_pc_header_970x250',
             "div-gpt-ad-1614844401467-0", //'/22140546871/bongdaplus.vn_pc_center1_970x250',
             "div-gpt-ad-1614844501678-0", //'/22140546871/bongdaplus.vn_pc_center2_970x250',
-            "div-gpt-ad-1614844652124-0", //'/22140546871/bongdaplus.vn_pc_R1_300x250',
-            "div-gpt-ad-1614844767234-0", //'/22140546871/bongdaplus.vn_pc_R2_300x250',
-            "div-gpt-ad-1614844828905-0", //'/22140546871/bongdaplus.vn_pc_R3_300x600',
-            "div-gpt-ad-1614844910453-0", //'/22140546871/bongdaplus.vn_pc_R4_300x600',
-            "div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
+            "AR01",//"div-gpt-ad-1614844652124-0", //'/22140546871/bongdaplus.vn_pc_R1_300x250',
+            "AR02",// "div-gpt-ad-1614844767234-0", //'/22140546871/bongdaplus.vn_pc_R2_300x250',
+            "AR03",// "div-gpt-ad-1614844828905-0", //'/22140546871/bongdaplus.vn_pc_R3_300x600',
+            "AR04",//"div-gpt-ad-1614844910453-0", //'/22140546871/bongdaplus.vn_pc_R4_300x600',
+            "AR05",//"div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
             "div-gpt-ad-1614845055882-0", //'/22140546871/bongdaplus.vn_pc_fl_120x600',
             "div-gpt-ad-1614845141925-0", //'/22140546871/bongdaplus.vn_pc_fr_120x600',
             "div-gpt-ad-1615775720668-0", //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
@@ -1338,7 +1357,10 @@ function ubadScript() {
   function callMapUnits() {
       x = mappings_full_hb_config.adId;
       for (i = 0; i < x.length; i++) {
-          if (document.getElementById(mappings_full_hb_config.adId[i])) {
+       if (document.getElementById(mappings_full_hb_config.adId[i])) {
+             if (((document.getElementById(mappings_full_hb_config.adId[i])).id == "AR05") && (window.location.href == "https://bongdaplus.vn/")){
+                 continue;
+             }
               adUnitTemp = {
                   code: mappings_full_hb_config.adUnitNames[i],
                   mediaTypes: {

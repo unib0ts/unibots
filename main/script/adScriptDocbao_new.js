@@ -132,7 +132,7 @@ function ubadScript() {
     // ad_scrpt2.innerText= mybotadscrptChild;
     // document.getElementsByTagName('body')[0].appendChild(ad_scrpt2);
     // if (document.querySelector('.header')) {
-    if(window.location.href.split('https://docbao.vn/sao-360').length == 2 || window.location.href.split('https://docbao.vn/gia-dinh').length == 2 || window.location.href== "https://docbao.vn/giai-tri"){
+    if(!(window.location.href.split('https://docbao.vn/sao-360').length == 2 || window.location.href.split('https://docbao.vn/gia-dinh').length == 2 || window.location.href.split('https://docbao.vn/giai-tri').length == 2)){
       z= document.createElement('div');
       z.id = 'ub-left-ad';
       z.className = 'ub-left-ad';

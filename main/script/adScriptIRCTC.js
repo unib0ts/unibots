@@ -496,7 +496,7 @@ if(typeof customConfigObjectA === 'undefined'){
         mappings.renderedFlag[ub_slotNum] = true;
       }
       else {
-        ub_psbckRandom = Math.floor(Math.random() * 3);
+        ub_psbckRandom = Math.floor(Math.random() * 2);
           eval('ub_passback'+ub_psbckRandom+'()');
         // ub_passback1();
       }
@@ -551,7 +551,6 @@ if(typeof customConfigObjectA === 'undefined'){
   }
 
   function ub_passback2() {
-    // console.log('test3');
     s0_passback = document.createElement('script');
     s0_passback.src = "https://assets.revcontent.com/master/delivery.js";
     s0_passback.defer = "defer";

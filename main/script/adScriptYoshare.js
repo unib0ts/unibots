@@ -26,10 +26,20 @@ var REFRESH_TIMEOUT = 60000;
 	// 		clearInterval(ub_interval);
 	// 	}
 	// }, 500);
-	var ub_vs = document.createElement('script');
-	ub_vs.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/yoshare/script.min.js";
+
+	var cachebuster = Math.round(new Date().getTime() / 1000);
+	url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js?cb=" + cachebuster;
+	ub_vs = document.createElement("script");
+	ub_vs.src = url;
 	ub_vs.type = "text/javascript";
-	document.getElementsByTagName('head')[0].appendChild(ub_vs);
+	document.getElementsByTagName("head")[0].appendChild(ub_vs);
+
+	ub_vs.onload=function(){
+		window.unibots = window.unibots || { cmd: [] };
+		unibots.cmd.push(function(){
+				unibotsPlayer("yoshare");
+		});
+	}
 
 	mybotGACode = 'G-17950KSECF';
 	mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';

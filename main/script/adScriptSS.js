@@ -175,6 +175,7 @@ ubpbjs.que.push(function() {
     priceGranularity: customConfigObjectA,
     userSync: {
         iframeEnabled: true,
+        aliasSyncEnabled: true,
         syncsPerBidder: 999, // and no more than 3 syncs at a time
         // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
         filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },

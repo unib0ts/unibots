@@ -612,7 +612,7 @@ function ubadScript() {
 
   var mappings_full_hb_config_desktop = {
       adUnitNames: [
-          "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
+          "/21928950349,22612899972/bongdaplus.vn_pc_balloon_hb_300x600",
           // '/21928950349,22612899972/bongdaplus.vn_PC_bottom-article_300x250_1',
           // '/21928950349,22612899972/bongdaplus.vn_PC_bottom-article_300x250_2',
           // '/21928950349,22612899972/bongdaplus.vn_in-article_468x60',
@@ -1134,24 +1134,24 @@ function ubadScript() {
 
   var mappings_extra_units_config_desktop = {
       adUnitNames: [
-          // '/22057354005/bongdaplus_native_fluid',
+          // '/21928950349,22612899972/bongdaplus_native_fluid',
           // '/21692080761/amb_eng_header_desk_v2'  //  { bidder: "kubient", params: { zoneid: "728eb6f0a4102", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_mobile = {
       adUnitNames: [
-          // '/22057354005/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
+          // '/21928950349,22612899972/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "07971f0b93433", server: "kssp.kbntx.ch"} },
       ],
   };
   var mappings_extra_units_config_both = {
       adUnitNames: [
-          // '/22057354005/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
+          // '/21928950349,22612899972/bongdaplus_native_fluid', //  { bidder: "kubient", params: { zoneid: "a8d023686c41b", server: "kssp.kbntx.ch"} },
       ],
   };
 
   var mappings_extra_units_config = {
       adUnitNames: [
-        '/22057354005/bongdaplus_native_fluid',
+        '/21928950349,22612899972/bongdaplus_native_fluid',
       ],
   };
 
@@ -1594,7 +1594,7 @@ function ubadScript() {
 
   function refreshBid(ub_slot, adCode) {
     // console.log(ub_slot,adCode);
-    // if(adCode == '/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280' || '/22057354005/bongdaplus_native_fluid'){}
+    // if(adCode == '/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280' || '/21928950349,22612899972/bongdaplus_native_fluid'){}
     // else {
       // console.log('test');
       ubpbjs.que.push(function () {

@@ -279,7 +279,7 @@ function ubadScript() {
       // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
     if((window.location.href== "https://m.docbao.vn/")){
       adUnits1 = {
-          code: "/22140546871/docbao.vn_popup_fluid_336x280",
+          code: "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
           mediaTypes: {
               banner: {
                   sizes: div_1_sizes,
@@ -474,7 +474,7 @@ function ubadScript() {
       googletag.cmd.push(function () {
           ub_slotp = googletag
               .defineSlot(
-                  "/22140546871/docbao.vn_popup_fluid_336x280",
+                  "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
                   div_1_sizes,
                   "div-gpt-ad-1624440241552-0"
               )
@@ -492,7 +492,7 @@ function ubadScript() {
               .addEventListener("slotRenderEnded", function (event) {
                   if (
                       event.slot.getAdUnitPath() ===
-                      "/22140546871/docbao.vn_popup_fluid_336x280"
+                      "/21928950349,22612949898/docbao.vn_popup_fluid_336x280"
                   ) {
                       ub_checkAd1Rendered();
                   }
@@ -568,7 +568,7 @@ function ubadScript() {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
-              adUnitCodes: ["/22140546871/docbao.vn_popup_fluid_336x280"],
+              adUnitCodes: ["/21928950349,22612949898/docbao.vn_popup_fluid_336x280"],
               bidsBackHandler: function () {
                   googletag.cmd.push(function () {
                       ubpbjs.que.push(function () {
@@ -622,18 +622,18 @@ function ubadScript() {
           // "/22057354005/docbao.vn_pc_fr1_120x600",
           // "/22057354005/docbao.vn_pc_fr_300x250",
           // "/22057354005/docbao_pc_sticky_300x600",
-          "/22140546871/docbao.vn_pc_balloon_hb_300x600",
-          "/22140546871/docbao.vn_pc_bottom_336x280",
-          "/22140546871/docbao.vn_pc_inreadbanner-1_300x250",
-          "/22140546871/docbao.vn_pc_inreadbanner-2_300x250",
-          "/22140546871/docbao.vn_pc_header_728x90",
-          "/22140546871/docbao.vn_pc_R1_300x250",
-          "/22140546871/docbao.vn_pc_R2_300x250",
-          "/22140546871/docbao.vn_pc_R5_300x600",
-          "/22140546871/docbao.vn_pc_fl_120x600",
-          "/22140546871/docbao.vn_pc_fr1_120x600",
-          "/22140546871/docbao.vn_pc_fr_120x600",
-          "/22140546871/docbao_pc_sticky_300x600",
+          "/21928950349,22612949898/docbao.vn_pc_balloon_hb_300x600",
+          "/21928950349,22612949898/docbao.vn_pc_bottom_336x280",
+          "/21928950349,22612949898/docbao.vn_pc_inreadbanner-1_300x250",
+          "'/21928950349,22612949898/docbao.vn_pc_inreadbanner-2_300x250",
+          "/21928950349,22612949898/docbao.vn_pc_header_728x90",
+          "/21928950349,22612949898/docbao.vn_pc_R1_300x250",
+          "/21928950349,22612949898/docbao.vn_pc_R2_300x250",
+          "/21928950349,22612949898/docbao.vn_pc_R5_300x600",
+          "/21928950349,22612949898/docbao.vn_pc_fl_120x600",
+          "/21928950349,22612949898/docbao.vn_pc_fr1_120x600",
+          "/21928950349,22612949898/docbao.vn_pc_fr_300x250",
+          "/21928950349,22612949898/docbao_pc_sticky_300x600",
       ],
       adId: [
         "div-gpt-ad-1622019421633-0", //'/22057354005/docbao.vn_pc_balloon_hb_300x600',
@@ -815,16 +815,16 @@ function ubadScript() {
         // // "/22057354005/docbao.vn_mb_anchor_320x50",
         // "/22057354005/docbao.vn_mb_anchor_300x100",
 
-        //"/22140546871/docbao.vn_popup_fluid_336x280"
-        "/22140546871/docbao.vn_gpt_mobile_home_300x100",
-        "/22140546871/docbao.vn_gpt_mobile_center2_300x250",
-        "/22140546871/docbao.vn_gpt_mobile_center3_300x600",
-        "/22140546871/docbao.vn_gpt_mobile_center4_300x250",
-        "/22140546871/docbao.vn_gpt_mobile_center5_300x250",
-        "/22140546871/docbao.vn_gpt_mobile_bottom_300x250",
-        "/22140546871/docbao.vn_mobile_home_center_6",
-        "/22140546871/docbao.vn_mb_anchor_320x100",
-        "/22140546871/docbao.vn_mb_anchor_320x50"
+        //"/21928950349,22612949898/docbao.vn_popup_fluid_336x280"
+        "/21928950349,22612949898/docbao.vn_gpt_mobile_home_300x100",
+        "/21928950349,22612949898/docbao.vn_gpt_mobile_center2_300x250",
+        "/21928950349,22612949898/docbao.vn_gpt_mobile_center3_300x600",
+        "/21928950349,22612949898/docbao.vn_gpt_mobile_center4_300x250",
+        "/21928950349,22612949898/docbao.vn_gpt_mobile_center5_300x250",
+        "/21928950349,22612949898/docbao.vn_gpt_mobile_bottom_300x250",
+        "/21928950349,22612949898/docbao.vn_mobile_home_center_6",
+        "/21928950349,22612949898/docbao.vn_mb_anchor_300x100",
+        "/21928950349,22612949898/docbao.vn_mb_anchor_320x50"
       ],
       adId: [
         "div-gpt-ad-1617722423692-0", //'/22057354005/docbao.vn_gpt_mobile_home_300x100',
@@ -992,8 +992,8 @@ function ubadScript() {
 
   var mappings_extra_units_config = {
       adUnitNames: [
-        '/22057354005/docbao_native_fluid',
-        '/22057354005/docbao_ub_vignette',
+        '/21928950349,22612949898/docbao_native_fluid',
+        '/21928950349,22612949898/docbao.vn_vigenette',
       ],
   };
 
@@ -1404,7 +1404,7 @@ function ubadScript() {
 
  function refreshBid(ub_slot, adCode) {
   if (mobileCheck() && (window.location.hostname == "m.docbao.vn")) {
-    if (adCode == '/22140546871/docbao.vn_mb_anchor_320x50') {
+    if (adCode == '/21928950349,22612949898/docbao.vn_mb_anchor_320x50') {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1468,7 +1468,7 @@ function ubadScript() {
     if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-              if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x50"){
+              if (event.slot.getAdUnitPath() ==="/21928950349,22612949898/docbao.vn_mb_anchor_320x50"){
                     var nodes_anchr = document.getElementById("div-gpt-ad-1625034565032-0").childNodes[0].childNodes;
                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                         document.getElementById("close_ub-sticky-ad").style.display = "block";
@@ -1479,7 +1479,7 @@ function ubadScript() {
     }else {
       googletag.cmd.push(function () {
           googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-            if (event.slot.getAdUnitPath() ==="/22140546871/docbao.vn_mb_anchor_320x100"){
+            if (event.slot.getAdUnitPath() ==="/21928950349,22612949898/docbao.vn_mb_anchor_300x100"){
                   var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
                   if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                       document.getElementById("close_ub-sticky-ad").style.display = "block";

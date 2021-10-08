@@ -220,7 +220,7 @@ var adUnits = [];
   if (document.getElementById('yoshare_unibot1_336x280_300x250_b_tag')) {
     adUnits1 =
       {
-        code: '/21957769615/yoshare.net_hb_300x250_2',
+        code: '/21928950349,22612404853/yoshare.net_hb_300x250_2',
         mediaTypes: {
             banner: {
                 sizes: div_3_sizes
@@ -549,13 +549,13 @@ function googlePush(){
   }
   if (document.getElementById('yoshare_unibot1_336x280_300x250_b_tag')){
    mappings.slotNumbers.push(3);
-   mappings.adCode.push('/21957769615/yoshare.net_hb_300x250_2');
+   mappings.adCode.push('/21928950349,22612404853/yoshare.net_hb_300x250_2');
    mappings.sizes.push(div_3_sizes);
    mappings.adId.push('div-gpt-ad-1598961755060-0');
    googletag.cmd.push(function() {
        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
          if (event.slot === ub_slot3) {
-           ub_checkAdRendered('div-gpt-ad-1598961755060-0', ub_slot3, ['/21957769615/yoshare.net_hb_300x250_2']);
+           ub_checkAdRendered('div-gpt-ad-1598961755060-0', ub_slot3, ['/21928950349,22612404853/yoshare.net_hb_300x250_2']);
          }
        });
    });

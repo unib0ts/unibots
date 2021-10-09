@@ -114,7 +114,7 @@ const customConfigObjectA = {
 if (mobileCheck()) {
   adUnits1 =
   {
-      code: '/21928950349/dantri.com.vn_mb_anchor_320x50',
+      code: '/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -166,7 +166,7 @@ var mappings = {
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
 //   slotID: 'div-gpt-ad-1624268341453-0',
-//   slotName: '/21928950349/dantri.com.vn_mb_anchor_320x50',
+//   slotName: '/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -297,7 +297,7 @@ function mybotubScript() {
 
   if (mobileCheck()) {
     mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21928950349/dantri.com.vn_mb_anchor_320x50');
+    mappings.adCode.push('/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1624268341453-0');
     googletag.cmd.push(function() {
@@ -305,7 +305,7 @@ function mybotubScript() {
       // callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1624268341453-0', ub_slot1, ['/21928950349/dantri.com.vn_mb_anchor_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1624268341453-0', ub_slot1, ['/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50']);
         }
       });
     });

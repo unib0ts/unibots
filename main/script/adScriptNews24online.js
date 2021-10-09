@@ -46,7 +46,7 @@ if (mobileCheck()) {
   if (document.getElementById('unibots-ad')) {
     adUnits1 =
     {
-        code: '/21956916242/news24online.com_nb_320x50',
+        code: '/21928950349,22560027500/news24online.com_nb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -80,7 +80,7 @@ if (mobileCheck()) {
 }else {
   adUnits1 =
   {
-      code: '/21956916242/news24online.com_nb_320x50',
+      code: '/21928950349,22560027500/news24online.com_nb_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -367,26 +367,26 @@ function googlePush(){
 if (mobileCheck()) {
   	if (document.getElementById('unibots-ad')) {
       mappings.slotNumbers.push(1);
-      mappings.adCode.push('/21956916242/news24online.com_nb_320x50');
+      mappings.adCode.push('/21928950349,22560027500/news24online.com_nb_320x50');
       mappings.sizes.push(div_1_sizes);
       mappings.adId.push('div-gpt-ad-1615025023604-0');
       googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           if (event.slot === ub_slot1) {
-            ub_checkAdRendered('div-gpt-ad-1615025023604-0', ub_slot1, ['/21956916242/news24online.com_nb_320x50']);
+            ub_checkAdRendered('div-gpt-ad-1615025023604-0', ub_slot1, ['/21928950349,22560027500/news24online.com_nb_320x50']);
           }
         });
       });
     }
 }else {
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21956916242/news24online.com_nb_320x50');
+  mappings.adCode.push('/21928950349,22560027500/news24online.com_nb_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1615025023604-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1615025023604-0', ub_slot1, ['/21956916242/news24online.com_nb_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1615025023604-0', ub_slot1, ['/21928950349,22560027500/news24online.com_nb_320x50']);
       }
     });
   });

@@ -44,7 +44,7 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [
     // {
-    //     code: '/21928950349/marunadanmalayalee.com_ipl_320x50',
+    //     code: '/21928950349,22560027500/marunadanmalayalee.com_ipl_320x50',
     //     mediaTypes: {
     //       native: {
     //         image: {
@@ -77,7 +77,7 @@ var adUnits = [
     //     ]
     // },
     {
-        code: '/21928950349/marunadanmalayalee.com_ipl_320x50',
+        code: '/21928950349,22560027500/marunadanmalayalee.com_ipl_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -194,7 +194,7 @@ function callAdsUB(){
 
 var ub_slot1;
 googletag.cmd.push(function() {
-    ub_slot1 = googletag.defineSlot('/21928950349/marunadanmalayalee.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617874903842-0').addService(googletag.pubads());
+    ub_slot1 = googletag.defineSlot('/21928950349,22560027500/marunadanmalayalee.com_ipl_320x50', div_1_sizes, 'div-gpt-ad-1617874903842-0').addService(googletag.pubads());
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
@@ -211,7 +211,7 @@ function refreshBid() {
   ubpbjs.que.push(function() {
 	  ubpbjs.requestBids({
 		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21928950349/marunadanmalayalee.com_ipl_320x50'],
+		  adUnitCodes: ['/21928950349,22560027500/marunadanmalayalee.com_ipl_320x50'],
 		  bidsBackHandler: function() {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {

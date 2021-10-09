@@ -62,7 +62,7 @@ var div_4_sizes = [[300, 250], [336, 280]];
 
 var adUnits = [
     {
-        code: '/21956916242/mangalam.com_nb_320x50',
+        code: '/21928950349,22623748747/mangalam.com_nb_320x50',
         mediaTypes: {
           native: {
             image: {
@@ -95,7 +95,7 @@ var adUnits = [
         ]
     },
     {
-        code: '/21956916242/mangalam.com_nb_320x50',
+        code: '/21928950349,22623748747/mangalam.com_nb_320x50',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -426,13 +426,13 @@ function googlePush(){
 if (document.getElementById('div-ub-1')){
   apSlotTemp = {
     slotID: 'div-ub-1',
-    slotName: '/21956916242/mangalam.com_nb_320x50',
+    slotName: '/21928950349,22623748747/mangalam.com_nb_320x50',
     sizes: mappings.sizes,
   }
   apSlots.push(apSlotTemp);
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21956916242/mangalam.com_nb_320x50');
+  mappings.adCode.push('/21928950349,22623748747/mangalam.com_nb_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-ub-1');
   googletag.cmd.push(function() {
@@ -440,7 +440,7 @@ if (document.getElementById('div-ub-1')){
     // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21956916242/mangalam.com_nb_320x50']);
+        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349,22623748747/mangalam.com_nb_320x50']);
       }
     });
   });

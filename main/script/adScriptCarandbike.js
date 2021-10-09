@@ -1,5 +1,5 @@
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/ubvideoblocks/blocksCarandbike.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksCarandbike.json';
 mybotBlockedClientName = 'carandbike';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){

@@ -270,9 +270,9 @@ function ubadScript() {
   var adUnits_full_hb = [];
 
   var div_1_sizes = [
+      [320, 480],
+      [480, 320],
       [300, 600],
-      [300, 250],
-      [336, 280],
   ];
 
   if (mobileCheck()) {

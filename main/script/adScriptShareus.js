@@ -92,7 +92,7 @@ function mybotubstickyad() {
  document.getElementById('ub-sticky-ad-container').style.display='none';
 }
 
-var div_1_sizes = [320, 50];
+var div_1_sizes =  [[320, 50], [300, 100], [320, 100]];
 
 var adUnits = [];
 

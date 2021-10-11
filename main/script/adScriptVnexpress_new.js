@@ -84,14 +84,14 @@ else{
   ],
   slotNames: ['ub_slot1', 'ub_slot2', 'ub_slot3', 'ub_slot4', 'ub_slot5', 'ub_slot6', 'ub_slot7', 'ub_slot8'],
   adUnitNames: [
-  	'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeedinstream2',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeed-Kinhdoanh',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeed-Giaitri',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso2', //folder2DivID:
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_sis_detail.tinso1',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_sis_detail.tinso2',
+  	'/21928950349,22625376282/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
+  		'/21928950349,22625376282/vnexpress_hb_320x50_Infeedinstream2',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_Infeed-Kinhdoanh',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_Infeed-Giaitri',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
+  		'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso2', //folder2DivID:
+  		'/21928950349,22625376282/vnexpress_hb_320x50_sis_detail.tinso1',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_sis_detail.tinso2',
   ],
   adId: [
   	'div-gpt-ad-1602234437991-0', //'sis_infeed-instream1',
@@ -186,10 +186,10 @@ else{
 
   var mappings_refresh = {
       adUnitNames: [
-        '/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
-      		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeed-Kinhdoanh',
-      		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
-      		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_sis_detail.tinso1',
+        '/21928950349,22625376282/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
+      		'/21928950349,22625376282/vnexpress_hb_320x50_Infeed-Kinhdoanh',
+      		'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
+      		'/21928950349,22625376282/vnexpress_hb_320x50_sis_detail.tinso1',
       ],
   };
 

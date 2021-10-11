@@ -98,6 +98,7 @@ var adUnits = [
       },
       bids: [
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        // { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // { bidder: '33across', params: { siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] },
         // { bidder: 'emx_digital', params: { tagid: '97515' } },
@@ -174,6 +175,7 @@ ubpbjs.que.push(function() {
     priceGranularity: customConfigObjectA,
     userSync: {
         iframeEnabled: true,
+        aliasSyncEnabled: true,
         syncsPerBidder: 999, // and no more than 3 syncs at a time
         // syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
         filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
@@ -201,82 +203,83 @@ ubpbjs.que.push(function() {
     //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
    });
    ubpbjs.requestBids({
-       bidsBackHandler: initAdserver,
+       bidsBackHandler: initAdserver_hb_full,
        timeout: PREBID_TIMEOUT,
        labels: [GEO_CODE],
    });
 });
 
   // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
+  // setTimeout(function() {
+  //     initAdserver();
+  // }, FAILSAFE_TIMEOUT);
 }
 
 
-var ub_slot1;
-function addNewBotAdMobile(){
-  changeConfigToHB();
-  googletag.cmd.push(function() {
-      ub_slot1 = googletag.defineSlot('/21959913182/sakshi.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-      googletag.pubads().collapseEmptyDivs(true);
-      googletag.pubads().setCentering(true);
-      googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot.getAdUnitPath() === '/21959913182/sakshi.com_NB_320x50') {
-          ub_checkAd1Rendered();
-        }
-      });
-  });
-
-  ubpbjs.que.push(function() {
-    ubpbjs.requestBids({
-      bidsBackHandler: initAdserver,
-      timeout: PREBID_TIMEOUT
-    });
-  });
-
-  // in case ubpbjs doesn't load
-  setTimeout(function() {
-      initAdserver();
-  }, FAILSAFE_TIMEOUT);
-}
+// var ub_slot1;
+// function addNewBotAdMobile(){
+//   changeConfigToHB();
+//   googletag.cmd.push(function() {
+//       ub_slot1 = googletag.defineSlot('/21959913182/sakshi.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
+//       googletag.pubads().collapseEmptyDivs(true);
+//       googletag.pubads().setCentering(true);
+//       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+//       googletag.pubads().enableSingleRequest();
+//       googletag.enableServices();
+//       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//         if (event.slot.getAdUnitPath() === '/21959913182/sakshi.com_NB_320x50') {
+//           ub_checkAd1Rendered();
+//         }
+//       });
+//   });
+//
+//   ubpbjs.que.push(function() {
+//     ubpbjs.requestBids({
+//       bidsBackHandler: initAdserver,
+//       timeout: PREBID_TIMEOUT
+//     });
+//   });
+//
+//   // in case ubpbjs doesn't load
+//   setTimeout(function() {
+//       initAdserver();
+//   }, FAILSAFE_TIMEOUT);
+// }
 
 function addNewsBotAd(){
+  changeConfigToHB();
   googletag.cmd.push(function() {
       googletag.defineSlot('/21959913182/sakshi.com_NB_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-        if (event.slot.getAdUnitPath() === '/21959913182/sakshi.com_NB_320x50') {
-          ub_checkAd1Rendered();
-        }
-      });
+      // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      //   if (event.slot.getAdUnitPath() === '/21959913182/sakshi.com_NB_320x50') {
+      //     ub_checkAd1Rendered();
+      //   }
+      // });
   });
 }
 
-function initAdserver() {
-    if (ubpbjs.initAdserverSet) return;
-    ubpbjs.initAdserverSet = true;
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(ub_slot1);
-            // var x = ubpbjs.getAllPrebidWinningBids();
-            // var adsCalled = false;
-            // for(var i=0;i<x.length;i++){
-            //   var bc = x[i].bidderCode;
-            //   if(bc=="openx"){
-            //     adsCalled = true;
-            //     callBotman();
-            //   }
-            // }
-            // if(!adsCalled){
-            //   callAdsUB();
-            // }
-        });
-    });
-}
+// function initAdserver() {
+//     if (ubpbjs.initAdserverSet) return;
+//     ubpbjs.initAdserverSet = true;
+//     googletag.cmd.push(function() {
+//         ubpbjs.que.push(function() {
+//             ubpbjs.setTargetingForGPTAsync();
+//             googletag.pubads().refresh(ub_slot1);
+//             // var x = ubpbjs.getAllPrebidWinningBids();
+//             // var adsCalled = false;
+//             // for(var i=0;i<x.length;i++){
+//             //   var bc = x[i].bidderCode;
+//             //   if(bc=="openx"){
+//             //     adsCalled = true;
+//             //     callBotman();
+//             //   }
+//             // }
+//             // if(!adsCalled){
+//             //   callAdsUB();
+//             // }
+//         });
+//     });
+// }
 
 // var botmanCalled = false;
 // var userStatusBM = '';
@@ -380,50 +383,50 @@ function initAdserver() {
 // 	googletag.pubads().refresh(mappings_remnant.slots);
 // }
 
-function refreshBid(ub_slot) {
-  ubpbjs.que.push(function() {
-	  ubpbjs.requestBids({
-		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: ['/21959913182/sakshi.com_NB_320x50'],
-		  bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
-              // var adsCalled = false;
-              // for(var i=0;i<x.length;i++){
-              //   var bc = x[i].bidderCode;
-              //   if(bc=="openx"){
-              //     adsCalled = true;
-              //     callBotman();
-              //   }
-              // }
-              // if(!adsCalled){
-              //   callAdsUB();
-              // }
-          });
-        });
-		  }
-	  });
-  });
-}
+// function refreshBid(ub_slot) {
+//   ubpbjs.que.push(function() {
+// 	  ubpbjs.requestBids({
+// 		  timeout: PREBID_TIMEOUT,
+// 		  adUnitCodes: ['/21959913182/sakshi.com_NB_320x50'],
+// 		  bidsBackHandler: function() {
+//         googletag.cmd.push(function() {
+//           ubpbjs.que.push(function() {
+//               ubpbjs.setTargetingForGPTAsync();
+//               googletag.pubads().refresh([ub_slot]);
+//               // var adsCalled = false;
+//               // for(var i=0;i<x.length;i++){
+//               //   var bc = x[i].bidderCode;
+//               //   if(bc=="openx"){
+//               //     adsCalled = true;
+//               //     callBotman();
+//               //   }
+//               // }
+//               // if(!adsCalled){
+//               //   callAdsUB();
+//               // }
+//           });
+//         });
+// 		  }
+// 	  });
+//   });
+// }
 
-ub_ad1RefreshFlag = 0;
-function ub_checkAd1Rendered(){
-	adId1 = 'div-ub-1';
-	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if(ub_ad1RefreshFlag != 1){
-      setInterval(function() {
-        ub_ad1RefreshFlag = 1;
-        refreshBid(ub_slot1);
-      }, REFRESH_TIMEOUT);
-    }
-  }
-  // else {
-  //   ub_passback();
-  // }
-}
+// ub_ad1RefreshFlag = 0;
+// function ub_checkAd1Rendered(){
+// 	adId1 = 'div-ub-1';
+// 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+// 	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+//     if(ub_ad1RefreshFlag != 1){
+//       setInterval(function() {
+//         ub_ad1RefreshFlag = 1;
+//         refreshBid(ub_slot1);
+//       }, REFRESH_TIMEOUT);
+//     }
+//   }
+//   // else {
+//   //   ub_passback();
+//   // }
+// }
 
 // function ub_passback() {
 //   var s0_passback = document.createElement('script');
@@ -639,6 +642,7 @@ var adUnits_full_hb = [];
 var hb_full_common_bidders = [
   { bidder: 'appnexus', params: { placementId: '19056673' } }, /* one placementId for all sizes  my appnexus bidder */
   { bidder: 'oftmedia', params: { placementId: '20846125' } },
+  { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
   // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
   { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
   { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -685,7 +689,7 @@ var mappings_full_hb_config = {
     'div-gpt-ad-1579844188157-0', ///1062118/320x50_Mobile_LB_New
     'div-gpt-ad-1578660796348-0', //sakshinew_resp_Box1_entertainment_300x250
     'div-gpt-ad-1540359629900-0', ///1062118/MobileMasthead_HP_300x250
-    // 'div-ub-1', ///21959913182/sakshi.com_NB_320x50
+    'div-ub-1', ///21959913182/sakshi.com_NB_320x50
     'div-gpt-ad-1593080960785-0',  ///21959913182/sakshi_hb_320x50_top_mobile_new'
     // 'div-gpt-ad-1593080960785-0', ///1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
     'div-gpt-ad-1599810044319-0', ///1062118/Mobile_Articlepage_adslot3
@@ -725,7 +729,7 @@ var mappings_full_hb_config = {
     '/1062118/320x50_Mobile_LB_New',
     '/1062118/sakshinew_resp_Box1_entertainment_300x250',
     '/1062118/MobileMasthead_HP_300x250',
-    // '/21959913182/sakshi.com_NB_320x50',
+    '/21959913182/sakshi.com_NB_320x50',
     '/21959913182/sakshi_hb_320x50_top_mobile_new',
     // '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
     '/1062118/Mobile_Articlepage_adslot3',
@@ -765,7 +769,7 @@ var mappings_full_hb_config = {
     [320, 50], ///1062118/320x50_Mobile_LB_New
     [300, 250], //sakshinew_resp_Box1_entertainment_300x250
     [300, 250], ///1062118/MobileMasthead_HP_300x250
-    // [320, 50], ///21959913182/sakshi.com_NB_320x50
+    [320, 50], ///21959913182/sakshi.com_NB_320x50
     [[320, 100], [320, 50], [300, 50], [300, 100]], //'/21959913182/sakshi_hb_320x50_top_mobile_new
     // [[320, 50], [300, 50]], // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
     [[300, 250], [336, 280]],
@@ -1043,15 +1047,15 @@ var mappings_full_hb_config = {
       // { bidder: 'openx', params: {unit: '543268501', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] }
     ]), ///1062118/MobileMasthead_HP_300x250
-    // hb_full_common_bidders.concat([
-    //   { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE7EBE268DAD17B3BE349BE4938E'} },
-    //   { bidder: 'sovrn', params: { tagid: '708881' } },
-    //   // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
-    //   //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-    //   // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
-    //   // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
-    //   // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] }
-    // ]), ///21959913182/sakshi.com_NB_320x50
+    hb_full_common_bidders.concat([
+      { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE7EBE268DAD17B3BE349BE4938E'} },
+      { bidder: 'sovrn', params: { tagid: '708881' } },
+      // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
+      //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
+      // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
+      // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
+      // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] }
+    ]), ///21959913182/sakshi.com_NB_320x50
     hb_full_common_bidders.concat([
       // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE7EBE268DAD17B3BE349BE4938E'} },
       // { bidder: 'sovrn', params: { tagid: '708881' } },
@@ -1165,7 +1169,7 @@ var mappings_extra_units_config ={
     '/21796214895/542194_Sakshi_block_3',
     '/1062118/Intersitial_640x480_Desktop_Articlepage',
     '/1062118/Intersitial_320x480_mobile_Articlepage',
-    '/1062118/Desktop_LB_970x90_728x90',
+    // '/1062118/Desktop_LB_970x90_728x90',
     '/1062118/masthead_2_inarticle_300x250',
     '/1062118/AMP_Top_header_300x250'
   ]
@@ -1185,7 +1189,55 @@ function checkHBUnits(){
   }, FAILSAFE_TIMEOUT);
 }
 
+function fillRefreshMap(){
+  googletag.cmd.push(function () {
+      googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+              // var timer = REFRESH_TIMEOUT / 1000;
+              var el = document.getElementById(
+                  event.slot.getSlotId().getDomId()
+              );
+              var nodes = el.childNodes[0].childNodes;
+              var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
+              if (ubifame == 'iframe') {
+              // if (el != null) {
+                  // var temp = setInterval(function () {
+                      // if (isInViewSpace(el)) {
+                          // timer -= 1;
+                          // if (timer <= 0) {
+                          // if(mapping_full_hb["adCode"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
+                            console.log( [event.slot.getSlotId().getAdUnitPath()]);
+                            refreshBidfull([event.slot], [event.slot.getSlotId().getAdUnitPath()]);
+                          // }
+                              // clearInterval(temp);
+                          // }
+                      // }
+                  // }, 1000);
+              }
+          });
+  });
+}
+
+function refreshBidfull(ub_slot, adCode) {
+  console.log(adCode);
+    ubpbjs.que.push(function () {
+        ubpbjs.requestBids({
+            timeout: PREBID_TIMEOUT,
+            adUnitCodes: adCode,
+            adUnits: adUnits_full_hb,
+            bidsBackHandler: function () {
+                googletag.cmd.push(function () {
+                    ubpbjs.que.push(function () {
+                        ubpbjs.setTargetingForGPTAsync();
+                        googletag.pubads().refresh(ub_slot);
+                    });
+                });
+            },
+        });
+    });
+}
+
 function callFullHBAds(adCode, ub_slot){
+  // fillRefreshMap();
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
@@ -1205,6 +1257,7 @@ function callFullHBAds(adCode, ub_slot){
     });
   });
 }
+
 function callExtraHBAds(adCode, ub_slot){
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
@@ -1239,6 +1292,7 @@ function locate_googleSlot(targetId){
   }
   return ub_hb_slot;
 }
+
 function initAdserver_hb_full() {
     if (ubpbjs.initAdserverSetHB) return;
     ubpbjs.initAdserverSetHB = true;

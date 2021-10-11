@@ -1,44 +1,44 @@
-mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDantri.json';
-mybotBlockedClientName = 'dantri';
-
-if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
-
-  var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
-
-  request.open('GET', url, true);
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText;
-      data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
-      if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
-          return false;
-        }
-        else{
-          mybotubScript();
-        }
-      }
-    }
-    else {
-      console.log('Block Check Request failed');
-      mybotubScript();
-    }
-  };
-  request.onerror = function() {
-    console.log('Request failed');
-    mybotubScript();
-  };
-  request.send();
-}
-else{
-  mybotubScript();
-}
+// mybotBlockedPagesFlag = 1;
+// mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDantri.json';
+// mybotBlockedClientName = 'dantri';
+//
+// if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+//   urlToCheck = window.location.host+window.location.pathname+window.location.search;
+//
+//   var request = new XMLHttpRequest();
+//   url = mybotBlockedUrl;
+//
+//   request.open('GET', url, true);
+//   request.onload = function() {
+//     if (request.status >= 200 && request.status < 400) {
+//       var data = request.responseText;
+//       data = JSON.parse(data);
+//       data = data[mybotBlockedClientName];
+//       if(data) {
+//         data = data.urls;
+//         if(data.includes(urlToCheck)){
+//           // mybotdiv1 = '';
+//           return false;
+//         }
+//         else{
+//           mybotubScript();
+//         }
+//       }
+//     }
+//     else {
+//       console.log('Block Check Request failed');
+//       mybotubScript();
+//     }
+//   };
+//   request.onerror = function() {
+//     console.log('Request failed');
+//     mybotubScript();
+//   };
+//   request.send();
+// }
+// else{
+//   mybotubScript();
+// }
 
   //load apstag.js library
   // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
@@ -56,7 +56,7 @@ else{
   // });
   // apSlots = []
 
-  mybotGACode = 'G-J9G4W35NTP';
+  mybotGACode = 'G-M8ZXGHVZST';
   mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga= document.createElement('div');
@@ -65,7 +65,7 @@ else{
   document.getElementById('gabywa').innerHTML=mybotgabywa;
   loadAd('gabywa');
 
-var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:999}.ub-sticky-ad{width:100%;z-index:999;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1624268341453-0 iframe {border: unset !important;vertical-align: unset !important;}';
+var mybotstyleSheet='.ub-sticky-ad-container{width:100%;height:auto;text-align:center;background:#fff;position:fixed;bottom:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:999}.ub-sticky-ad{width:100%;z-index:999;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0} #div-gpt-ad-1633934410486-0 iframe {border: unset !important;vertical-align: unset !important;}';
 
 var css=document.createElement('style');
 css.type='text/css';
@@ -82,7 +82,7 @@ if (mobileCheck()) {
     z1= document.createElement('div');
     z1.id = 'ub-sticky-ad-container';
     z1.className = 'ub-sticky-ad-container';
-    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1624268341453-0"></div>';
+    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1633934410486-0"></div>';
     x1 = document.querySelector('body');
     x1.appendChild(z1);
 
@@ -114,28 +114,28 @@ const customConfigObjectA = {
 if (mobileCheck()) {
   adUnits1 =
   {
-      code: '/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50',
+      code: '/21928950349,22621086320/shareus.in_unibots_sticky_320x50_2',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
           }
       },
       bids: [
-        { bidder: 'appnexus', params: { placementId: '21687222' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3854136'} },
-        { bidder: 'sovrn', params: {tagid: '957020'} },
-        // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-        // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
-        // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-        { bidder: 'nobid', params: { siteId: '22604439723' } },
-        // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
-        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-        // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // // { bidder: 'criteo', params: {networkId: '10542'} },
-        // // { bidder: 'criteointl', params: {networkId: '10545'} },
-        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        { bidder: 'adyoulike', params: { placement: '4ac3ad3cf9e003e748d80cb65f7642c6'}, labelAll: ["US"] },
+        // { bidder: 'appnexus', params: { placementId: '21687222' } }, /* one placementId for all sizes  my appnexus bidder */
+        // // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3854136'} },
+        // { bidder: 'sovrn', params: {tagid: '957020'} },
+        // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+        // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+        // { bidder: 'nobid', params: { siteId: '22604439723' } },
+        // // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+        // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // // // { bidder: 'criteo', params: {networkId: '10542'} },
+        // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'adyoulike', params: { placement: '4ac3ad3cf9e003e748d80cb65f7642c6'}, labelAll: ["US"] },
       ]
   };
   adUnits.push(adUnits1);
@@ -165,15 +165,15 @@ var mappings = {
 //   // slotName: mappings_full_hb_config.adUnitNames[index],
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
-//   slotID: 'div-gpt-ad-1624268341453-0',
-//   slotName: '/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50',
+//   slotID: 'div-gpt-ad-1633934410486-0',
+//   slotName: '/21928950349,22621086320/shareus.in_unibots_sticky_320x50_2',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
 
 
 
-function mybotubScript() {
+// function mybotubScript() {
   var s0 = document.createElement('script');
   s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   s0.type = "text/javascript";
@@ -279,7 +279,7 @@ function mybotubScript() {
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://dantri.com.vn/',
+        publisherDomain: 'https://shareus.in/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -297,15 +297,15 @@ function mybotubScript() {
 
   if (mobileCheck()) {
     mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50');
+    mappings.adCode.push('/21928950349,22621086320/shareus.in_unibots_sticky_320x50_2');
     mappings.sizes.push(div_1_sizes);
-    mappings.adId.push('div-gpt-ad-1624268341453-0');
+    mappings.adId.push('div-gpt-ad-1633934410486-0');
     googletag.cmd.push(function() {
       // callAPStagBids(); //Ap part
       // callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1624268341453-0', ub_slot1, ['/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1633934410486-0', ub_slot1, ['/21928950349,22621086320/shareus.in_unibots_sticky_320x50_2']);
         }
       });
     });
@@ -322,7 +322,7 @@ function mybotubScript() {
     });
   // }
   }
-}
+// }
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;

@@ -125,7 +125,7 @@
   if (!mobileCheck()) {
   	adUnits1 =
   	{
-  			code: '/21956916242/raftaar.in_hb_dsk_728x90',
+  			code: '/21928950349,22560027500/raftaar.in_hb_dsk_728x90',
   			mediaTypes: {
   					banner: {
   							sizes: div_2_sizes
@@ -160,7 +160,7 @@
   else {
   	adUnits1 =
   	{
-  			code: '/21956916242/raftaar.in_hb_mb_320x50',
+  			code: '/21928950349,22560027500/raftaar.in_hb_mb_320x50',
   			mediaTypes: {
   					banner: {
   							sizes: div_1_sizes
@@ -483,13 +483,13 @@
   if (!mobileCheck()) {
     document.getElementById('desktopsticky').innerHTML='<div id="div-gpt-ad-1614757950116-0">';
   	mappings.slotNumbers.push(2);
-    mappings.adCode.push('/21956916242/raftaar.in_hb_dsk_728x90');
+    mappings.adCode.push('/21928950349,22560027500/raftaar.in_hb_dsk_728x90');
     mappings.sizes.push(div_2_sizes);
     mappings.adId.push('div-gpt-ad-1614757950116-0');
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot2) {
-          ub_checkAdRendered('div-gpt-ad-1614757950116-0', ub_slot2, ['/21956916242/raftaar.in_hb_dsk_728x90']);
+          ub_checkAdRendered('div-gpt-ad-1614757950116-0', ub_slot2, ['/21928950349,22560027500/raftaar.in_hb_dsk_728x90']);
         }
       });
     });
@@ -497,13 +497,13 @@
   else {
     document.getElementById('mobilesticky').innerHTML='<div id="div-gpt-ad-1614757921889-0">';
   	mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21956916242/raftaar.in_hb_mb_320x50');
+    mappings.adCode.push('/21928950349,22560027500/raftaar.in_hb_mb_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1614757921889-0');
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1614757921889-0', ub_slot1, ['/21956916242/raftaar.in_hb_mb_320x50']);
+          ub_checkAdRendered('div-gpt-ad-1614757921889-0', ub_slot1, ['/21928950349,22560027500/raftaar.in_hb_mb_320x50']);
         }
       });
     });

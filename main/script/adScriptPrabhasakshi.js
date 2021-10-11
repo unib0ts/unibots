@@ -73,7 +73,7 @@ const customConfigObjectA = {
 
   adUnits1 =
   {
-      code: '/21957769615/prabhasakshi.com_nb_320x50',
+      code: '/21928950349,22560027500/prabhasakshi.com_nb_320x50',
       mediaTypes: {
         native: {
           image: {
@@ -108,7 +108,7 @@ const customConfigObjectA = {
   adUnits.push(adUnits1);
   adUnits1 =
   {
-      code: '/21957769615/prabhasakshi.com_nb_320x50',
+      code: '/21928950349,22560027500/prabhasakshi.com_nb_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -296,7 +296,7 @@ function googlePush(){
 
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21957769615/prabhasakshi.com_nb_320x50');
+  mappings.adCode.push('/21928950349,22560027500/prabhasakshi.com_nb_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-ub-1');
   apSlotTemp = {
@@ -310,7 +310,7 @@ function googlePush(){
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21957769615/prabhasakshi.com_nb_320x50']);
+        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349,22560027500/prabhasakshi.com_nb_320x50']);
       }
     });
   });

@@ -92,7 +92,7 @@ if(typeof customConfigObjectA === 'undefined'){
       if (document.getElementById('ATD_Ad_IR_320x50')) {
         adUnits1 =
         {
-            code: '/21956916242/indianrailways_hb_320x50',
+            code: '/22082859479,22623808135/indianrail.gov.in_UB_320x50',
             mediaTypes: {
                 banner: {
                     sizes: div_1_sizes
@@ -478,13 +478,13 @@ if(typeof customConfigObjectA === 'undefined'){
         document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
         // apSlotTemp = {
         //   slotID: 'div-gpt-ad-1601280931672-0',
-        //   slotName: '/21956916242/indianrailways_hb_320x50',
+        //   slotName: '/22082859479,22623808135/indianrail.gov.in_UB_320x50',
         //   sizes: mappings.sizes,
         // }
         // apSlots.push(apSlotTemp);
 
         mappings.slotNumbers.push(1);
-        mappings.adCode.push('/21956916242/indianrailways_hb_320x50');
+        mappings.adCode.push('/22082859479,22623808135/indianrail.gov.in_UB_320x50');
         mappings.sizes.push(div_1_sizes);
         mappings.adId.push('div-gpt-ad-1601280931672-0');
         googletag.cmd.push(function() {
@@ -492,7 +492,7 @@ if(typeof customConfigObjectA === 'undefined'){
           // callAPSAds(mappings.adCode, mappings.slots);
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
             if (event.slot === ub_slot1) {
-              ub_checkAdRendered('div-gpt-ad-1601280931672-0', ub_slot1, ['/21956916242/indianrailways_hb_320x50']);
+              ub_checkAdRendered('div-gpt-ad-1601280931672-0', ub_slot1, ['/22082859479,22623808135/indianrail.gov.in_UB_320x50']);
             }
           });
         });

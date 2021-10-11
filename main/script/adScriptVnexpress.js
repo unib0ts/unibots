@@ -92,14 +92,14 @@ else{
   ],
   slotNames: ['ub_slot1', 'ub_slot2', 'ub_slot3', 'ub_slot4', 'ub_slot5', 'ub_slot6', 'ub_slot7', 'ub_slot8'],
   adUnitNames: [
-  	'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeedinstream2',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeed-Kinhdoanh',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeed-Giaitri',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso2', //folder2DivID:
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_sis_detail.tinso1',
-  		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_sis_detail.tinso2',
+  	'/21928950349,22625376282/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
+  		'/21928950349,22625376282/vnexpress_hb_320x50_Infeedinstream2',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_Infeed-Kinhdoanh',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_Infeed-Giaitri',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
+  		'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso2', //folder2DivID:
+  		'/21928950349,22625376282/vnexpress_hb_320x50_sis_detail.tinso1',
+  		'/21928950349,22625376282/vnexpress_hb_320x50_sis_detail.tinso2',
   ],
   adId: [
   	'div-gpt-ad-1602234437991-0', //'sis_infeed-instream1',
@@ -156,14 +156,14 @@ else{
   				 // { bidder: 'ucfunnel', params: { adid : 'ad-E2B4276DB6EABA99074778783A99EA4D'} },
   				 // { bidder: 'sovrn', params: {tagid: '795409'} },
   			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-  		]), //'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso1',
+  		]), //'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso1',
   		hb_common_bidders.concat([
   				 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268951'} },
            	{ bidder: 'adyoulike', params: { placement: '1bda9195af6bacac48859035dbcca125'}, labelAll: ["US"] },
   				 // { bidder: 'ucfunnel', params: { adid : 'ad-772876AD24237A49FB9278D4EBB9BDD8'} },
   				 // { bidder: 'sovrn', params: {tagid: '795410'} },
   			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
-  		]), //'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso2',
+  		]), //'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso2',
   		hb_common_bidders.concat([
   				 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3681539'} },
            	// { bidder: 'adyoulike', params: { placement: '1bda9195af6bacac48859035dbcca120'}, labelAll: ["US"] },
@@ -202,10 +202,10 @@ else{
 
   var mappings_refresh = {
       adUnitNames: [
-        '/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
-      		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_Infeed-Kinhdoanh',
-      		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
-      		'/21957769615/Vnexpress_hb/vnexpress_hb_320x50_sis_detail.tinso1',
+        '/21928950349,22625376282/vnexpress_hb_320x50_Infeedinstream1',  //InfeedDivID:
+      		'/21928950349,22625376282/vnexpress_hb_320x50_Infeed-Kinhdoanh',
+      		'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso1', //folder1DivID:
+      		'/21928950349,22625376282/vnexpress_hb_320x50_sis_detail.tinso1',
       ],
   };
 

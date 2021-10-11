@@ -112,7 +112,7 @@ else{
   if (mobileCheck()) {
   adUnits1 =
   {
-      code: '/21957769615/danviet.vn_mb_anchor_300x100',
+      code: '/21928950349,22623999158/danviet.vn_mb_anchor_300x100',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -288,14 +288,14 @@ function mybotubScript() {
     //   // sizes: mappings_full_hb_config.sizes[index]
     //
     //   slotID: 'div-gpt-ad-1623754209575-0',
-    //   slotName: '/21957769615/danviet.vn_mb_anchor_300x100',
+    //   slotName: '/21928950349,22623999158/danviet.vn_mb_anchor_300x100',
     //   sizes: mappings.sizes,
     // }
     // apSlots.push(apSlotTemp);
 
     if (mobileCheck()) {
     mappings.slotNumbers.push(1);
-    mappings.adCode.push('/21957769615/danviet.vn_mb_anchor_300x100');
+    mappings.adCode.push('/21928950349,22623999158/danviet.vn_mb_anchor_300x100');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1623754209575-0');
     googletag.cmd.push(function() {
@@ -303,7 +303,7 @@ function mybotubScript() {
       // callAPSAds(mappings.adCode, mappings.slots);
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
-          ub_checkAdRendered('div-gpt-ad-1623754209575-0', ub_slot1, ['/21957769615/danviet.vn_mb_anchor_300x100']);
+          ub_checkAdRendered('div-gpt-ad-1623754209575-0', ub_slot1, ['/21928950349,22623999158/danviet.vn_mb_anchor_300x100']);
         }
       });
     });

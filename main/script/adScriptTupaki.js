@@ -61,7 +61,7 @@ var adUnits = [];
 
   adUnits1 =
   {
-        code: '/22126273586/tupaki.com_ipl_300x100',
+        code: '/21928950349,22624317069/tupaki.com_ipl_300x100',
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes
@@ -92,7 +92,7 @@ var adUnits = [];
   adUnits.push(adUnits1);
   adUnits1 =
   {
-        code: '/22126273586/tupaki.com_ipl_125x125',
+        code: '/21928950349,22624317069/tupaki.com_ipl_125x125',
         mediaTypes: {
             banner: {
                 sizes: div_2_sizes
@@ -277,30 +277,30 @@ function googlePush(){
 }
 
 mappings.slotNumbers.push(1);
-mappings.adCode.push('/22126273586/tupaki.com_ipl_300x100');
+mappings.adCode.push('/21928950349,22624317069/tupaki.com_ipl_300x100');
 mappings.sizes.push(div_1_sizes);
 mappings.adId.push('div-gpt-ad-1617905562342-0');
 // apSlotTemp = {
 //   slotID: 'div-gpt-ad-1617905562342-0',
-//   slotName: '/22126273586/tupaki.com_ipl_300x100',
+//   slotName: '/21928950349,22624317069/tupaki.com_ipl_300x100',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
 googletag.cmd.push(function() {
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
     if (event.slot === ub_slot1) {
-      ub_checkAdRendered('div-gpt-ad-1617905562342-0', ub_slot1, ['/22126273586/tupaki.com_ipl_300x100']);
+      ub_checkAdRendered('div-gpt-ad-1617905562342-0', ub_slot1, ['/21928950349,22624317069/tupaki.com_ipl_300x100']);
     }
   });
 });
 
 mappings.slotNumbers.push(2);
-mappings.adCode.push('/22126273586/tupaki.com_ipl_125x125');
+mappings.adCode.push('/21928950349,22624317069/tupaki.com_ipl_125x125');
 mappings.sizes.push(div_2_sizes);
 mappings.adId.push('div-gpt-ad-1625226501905-0');
 // apSlotTemp = {
 //   slotID: 'div-gpt-ad-1625226501905-0',
-//   slotName: '/22126273586/tupaki.com_ipl_125x125',
+//   slotName: '/21928950349,22624317069/tupaki.com_ipl_125x125',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -310,7 +310,7 @@ googletag.cmd.push(function() {
   // callAPSAds(mappings.adCode, mappings.slots);
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
     if (event.slot === ub_slot2) {
-      ub_checkAdRendered('div-gpt-ad-1625226501905-0', ub_slot2, ['/22126273586/tupaki.com_ipl_125x125']);
+      ub_checkAdRendered('div-gpt-ad-1625226501905-0', ub_slot2, ['/21928950349,22624317069/tupaki.com_ipl_125x125']);
     }
   });
 });

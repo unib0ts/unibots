@@ -98,7 +98,7 @@ var adUnits = [
       },
       bids: [
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
-        { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
+        // { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         // { bidder: '33across', params: { siteId: 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] },
         // { bidder: 'emx_digital', params: { tagid: '97515' } },

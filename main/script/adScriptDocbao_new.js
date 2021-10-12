@@ -1271,7 +1271,7 @@ function ubadScript() {
   }
 
   var ub_divsToCheck = {
-      "div-gpt-ad-1629790932543-0": false,
+      "div-gpt-ad-1634020172783-0": false,
   };
 
   var ub_interval_div_check = setInterval(() => {
@@ -1289,7 +1289,7 @@ function ubadScript() {
               }
           }
           if (!flag && checkFlag) {
-          if(document.getElementById('div-gpt-ad-1629790932543-0')) {
+          if(document.getElementById('div-gpt-ad-1634020172783-0')) {
           x_ub = googletag.pubads().getSlots();
           x_ublen = x_ub.length;
             for (var j = 0; j < x_ublen; j++) {

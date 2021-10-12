@@ -335,7 +335,7 @@ if(typeof customConfigObjectA === 'undefined'){
         else {
           // ub_psbckRandom = Math.floor(Math.random() * 3);
           //   eval('ub_passback'+ub_psbckRandom+'()');
-          ub_passback();
+          ub_passback1();
         }
       }
     }
@@ -350,6 +350,40 @@ if(typeof customConfigObjectA === 'undefined'){
       ub_passback.id = "b56522cb95aa89c207e129509362cce3";
       ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
       ub_sticky.appendChild(ub_passback);
+    }
+
+    function ub_passback1() {
+      if(typeof colombia == 'undefined'){
+      var colombia = colombia || {};
+      colombia.fns = colombia.fns || [];
+        (function() {
+            var cads = document.createElement("script");
+            cads.async = true;
+            cads.type = "text/javascript";
+            cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+            document.getElementsByTagName('head')[0].appendChild(cads);
+        })();
+      }
+
+      ub_passback = document.createElement("div");
+      ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
+      ub_passback.setAttribute("data-position", "1");
+      ub_passback.setAttribute("data-section", "StroyPage");
+      ub_passback.setAttribute("class", "colombia");
+
+      if (!mobileCheck()) {
+          ub_passback.setAttribute("data-ua", "D");
+          ub_passback.setAttribute("data-slot", "461861");
+          ub_passback.setAttribute("id", "div-clmb-ctn-461861-1");
+          ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+          ub_sticky.appendChild(ub_passback);
+      }else {
+        ub_passback.setAttribute("data-ua", "M");
+        ub_passback.setAttribute("data-slot", "461871");
+        ub_passback.setAttribute("id", "div-clmb-ctn-461871-1");
+        ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+        ub_sticky.appendChild(ub_passback);
+      }
     }
 
     function refreshBid(ub_slot, adCode) {

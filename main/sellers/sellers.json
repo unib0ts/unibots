@@ -687,6 +687,24 @@
           "seller_id": "115",
           "name": "timesnownews",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.dantri.com.vn",
+          "seller_id": "116",
+          "name": "dantri",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.bongdaplus.vn",
+          "seller_id": "117",
+          "name": "bongdaplus",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.docbao.vn",
+          "seller_id": "118",
+          "name": "docbao",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

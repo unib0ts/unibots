@@ -172,7 +172,8 @@ function ubadScript() {
       }
     }
 
-    if((window.location.href == "https://docbao.vn/")){
+    if(!(window.location.href == "https://docbao.vn/")){}
+    else {
       z1= document.createElement('div');
       z1.id = 'ub-sticky-ad-containerdesk';
       z1.className = 'ub-sticky-ad-containerdesk';

@@ -1406,7 +1406,7 @@ function ubadScript() {
               mapping_full_hb.adId.push(mappings_full_hb_config.adId[i]);
               mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[i]);
 
-              if(mappings_full_hb_config.isAP[index]){
+              if(mappings_full_hb_config.isAP[i]){
                 apSlotTemp = {
                   slotID: mappings_full_hb_config.adId[i],
                   slotName: mappings_full_hb_config.adUnitNames[i],

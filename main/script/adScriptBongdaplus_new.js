@@ -1275,7 +1275,7 @@ function ubadScript() {
       //   }
       // }
       // callMapUnits();
-      changeConfigToHB();
+      // changeConfigToHB();
       setTimeout(function(){ callMapUnits(); }, 500);
       // setTimeout(function() {
       //     initAdserver_hb_full();

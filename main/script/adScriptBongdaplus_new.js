@@ -95,7 +95,7 @@ function ubadScript() {
     ub_vs.onload=function(){
       window.unibots = window.unibots || { cmd: [] };
       unibots.cmd.push(function(){
-          unibotsPlayer("bongda");
+          unibotsPlayer("bongdaplus");
       });
     }
   // }

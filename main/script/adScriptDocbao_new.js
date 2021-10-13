@@ -638,7 +638,7 @@ function ubadScript() {
           "/21928950349,22612949898/docbao.vn_pc_balloon_hb_300x600",
           "/21928950349,22612949898/docbao.vn_pc_bottom_336x280",
           "/21928950349,22612949898/docbao.vn_pc_inreadbanner-1_300x250",
-          "'/21928950349,22612949898/docbao.vn_pc_inreadbanner-2_300x250",
+          "/21928950349,22612949898/docbao.vn_pc_inreadbanner-2_300x250",
           "/21928950349,22612949898/docbao.vn_pc_header_728x90",
           "/21928950349,22612949898/docbao.vn_pc_R1_300x250",
           "/21928950349,22612949898/docbao.vn_pc_R2_300x250",

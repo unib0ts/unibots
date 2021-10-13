@@ -2,6 +2,21 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
+// var cachebuster = Math.round(new Date().getTime() / 1000);
+url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+ub_vs = document.createElement("script");
+ub_vs.async = "async";
+ub_vs.src = url;
+ub_vs.type = "text/javascript";
+document.getElementsByTagName("head")[0].appendChild(ub_vs);
+
+ub_vs.onload=function(){
+  window.unibots = window.unibots || { cmd: [] };
+  unibots.cmd.push(function(){
+      unibotsPlayer("marunadanmalayalee");
+  });
+}
+
 var GEO_CODE = '';
 (function (){
   var request = new XMLHttpRequest();

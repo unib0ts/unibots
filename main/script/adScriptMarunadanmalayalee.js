@@ -10,6 +10,11 @@ ub_vs.src = url;
 ub_vs.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
+ub_div = document.createElement("div");
+ub_div.id = "div-ub-marunadanmalayalee";
+ub_x2= document.querySelector('.news-detail__block');
+ub_x2=ub_x2.querySelector('p');
+ub_x2.appendChild(ub_div);
 ub_vs.onload=function(){
   window.unibots = window.unibots || { cmd: [] };
   unibots.cmd.push(function(){

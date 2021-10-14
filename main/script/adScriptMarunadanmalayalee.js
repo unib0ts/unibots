@@ -3,23 +3,27 @@ var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
 // var cachebuster = Math.round(new Date().getTime() / 1000);
-url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
-ub_vs = document.createElement("script");
-ub_vs.async = "async";
-ub_vs.src = url;
-ub_vs.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
-ub_div = document.createElement("div");
-ub_div.id = "div-ub-marunadanmalayalee";
-ub_x2= document.querySelector('.news-detail__block');
-ub_x2=ub_x2.querySelector('p');
-ub_x2.appendChild(ub_div);
-ub_vs.onload=function(){
-  window.unibots = window.unibots || { cmd: [] };
-  unibots.cmd.push(function(){
-      unibotsPlayer("marunadanmalayalee");
-  });
+
+if (document.querySelector('.news-detail__block')) {
+  url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+  ub_vs = document.createElement("script");
+  ub_vs.async = "async";
+  ub_vs.src = url;
+  ub_vs.type = "text/javascript";
+  document.getElementsByTagName("head")[0].appendChild(ub_vs);
+
+  ub_div = document.createElement("div");
+  ub_div.id = "div-ub-marunadanmalayalee";
+  ub_x2= document.querySelector('.news-detail__block');
+  ub_x2=ub_x2.querySelector('p');
+  ub_x2.appendChild(ub_div);
+  ub_vs.onload=function(){
+    window.unibots = window.unibots || { cmd: [] };
+    unibots.cmd.push(function(){
+        unibotsPlayer("marunadanmalayalee");
+    });
+  }
 }
 
 var GEO_CODE = '';

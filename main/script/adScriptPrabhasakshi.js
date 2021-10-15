@@ -202,7 +202,7 @@ function refreshBid(ub_slot, adCode) {
 function initAdserver(bids={}) {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  bids[Object.keys(bids)[0]].bids.forEach((bid)=>{
+  bids[Object.keys(bids)].bids.forEach((bid)=>{
       if(bid.cpm > 0.01){
           googletag.cmd.push(function() {
               ubpbjs.que.push(function() {

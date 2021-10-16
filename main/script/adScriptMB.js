@@ -1,3 +1,4 @@
+// //load apstag.js library
 // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 //
 // var requestManager = {
@@ -6,11 +7,15 @@
 //     prebid: false
 // };
 //
+// //initialize the apstag.js library on the page to allow bidding
 // apstag.init({
-//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637', //enter your unibque pub ID here as shown above, it must within quotes
+//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
 //      adServer: 'googletag'
 // });
 // apSlots = []
+
+var div_1_sizes = [320, 50];
+var adUnits = [];
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -53,74 +58,40 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [320, 50];
-
-
-var adUnits = [
-    {
-        code: '/21928950349,22624174647/mathrubhumi.com_nb_320x50',
-        mediaTypes: {
-          native: {
-            image: {
-              // sizes: [300, 100],
-              aspect_ratios: [{
-                min_width: 100,        /* Optional */
-                min_height: 50,       /* Optional */
-                ratio_width: 2,        /* Required */
-                ratio_height: 1,       /* Required */
-              }],
-              sendId: true
-            },
-            title: {
-              len: 50,
-              sendId: true
-            },
-            sponsoredBy: {
-              required: true,
-              sendId: true
-            },
-            clickUrl: {
-              required: true,
-              sendId: true
-            }
+// if(document.getElementById('unibots-ad')){
+  adUnits1 =
+  {
+      code: '/21928950349,22624174647/mathrubhumi.com_nb_320x50',
+      mediaTypes: {
+          banner: {
+              sizes: div_1_sizes
           }
-        },
-        bids: [
-          // { bidder: 'appnexus', params: { placementId: '19150441' } },
-          // { bidder: 'oftmedia', params: { placementId: '20846125' } }
-        ]
-    },
-    {
-        code: '/21928950349,22624174647/mathrubhumi.com_nb_320x50',
-        mediaTypes: {
-            banner: {
-                sizes: div_1_sizes
-            }
-        },
-        bids: [
-        	// { bidder: 'appnexus', params: { placementId: '19150441' } }, /* one placementId for all sizes  my appnexus bidder */
-        	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
-        	// { bidder: '33across', params: { siteId : 'beW5lABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-        	// { bidder: 'emx_digital', params: { tagid: '97496' } }, /* sizeless */
-          // { bidder: 'sovrn', params: {tagid: '701560'} },
-          // { bidder: 'adkernel', params: {zoneId: '126370', host: 'cpm.fmlabsonline.com'} },
-          // // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323782', zoneId: '1680518'} },
-          // // { bidder: 'criteo', params: {networkId: '10542'} },
-          // // { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'openx', params: {unit: '543530179', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2928964'} },
-          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          // { bidder: 'nobid', params: { siteId : '22012495560'} },
-          // { bidder: 'smartadserver', params: { siteId: '362131', pageId: '1289632', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-          // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-          // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-        	// { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-          // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE223B3B277EF7B6E7E2A79E47E8'} },
-        	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
-        ]
-    }
-];
+      },
+      bids: [
+        // { bidder: 'appnexus', params: { placementId: '19150441' } }, /* one placementId for all sizes  my appnexus bidder */
+        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        // { bidder: '33across', params: { siteId : 'beW5lABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: 'emx_digital', params: { tagid: '97496' } }, /* sizeless */
+        // { bidder: 'sovrn', params: {tagid: '701560'} },
+        // { bidder: 'adkernel', params: {zoneId: '126370', host: 'cpm.fmlabsonline.com'} },
+        // // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323782', zoneId: '1680518'} },
+        // // { bidder: 'criteo', params: {networkId: '10542'} },
+        // // { bidder: 'criteointl', params: {networkId: '10545'} },
+        // { bidder: 'openx', params: {unit: '543530179', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2928964'} },
+        // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        // { bidder: 'nobid', params: { siteId : '22012495560'} },
+        // { bidder: 'smartadserver', params: { siteId: '362131', pageId: '1289632', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        // { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+        // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE223B3B277EF7B6E7E2A79E47E8'} },
+        // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+      ]
+  };
+  adUnits.push(adUnits1);
+// }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -141,6 +112,7 @@ var mappings = {
   renderedFlag: [false]
 };
 
+
 // apSlotTemp = {
 //   // slotID: mappings_full_hb_config.targetUnits[index],
 //   // slotName: mappings_full_hb_config.adUnitNames[index],
@@ -151,142 +123,6 @@ var mappings = {
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
-
-function initAdserver() {
-    if (ubpbjs.initAdserverSet) return;
-    ubpbjs.initAdserverSet = true;
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(ub_slot1);
-            // var x = ubpbjs.getAllPrebidWinningBids();
-            // var adsCalled = false;
-            // for(var i=0;i<x.length;i++){
-            //   var bc = x[i].bidderCode;
-            //   if(bc=="openx"){
-            //     adsCalled = true;
-            //     callBotman();
-            //   }
-            // }
-            // if(!adsCalled){
-            //   callAdsUB();
-            // }
-        });
-    });
-}
-
-function googleDefine(slotNumbers, adCode, sizes, adId){
-  for(var i=0; i<slotNumbers.length;i++){
-    eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
-    var a = eval('ub_slot'+slotNumbers[i]);
-    a.addService(googletag.pubads());
-    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
-  }
-}
-
-function googlePush(){
-  googletag.cmd.push(function() {
-    googletag.pubads().collapseEmptyDivs(true);
-    googletag.pubads().setCentering(true);
-    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-}
-
-var botmanCalled = false;
-var userStatusBM = '';
-function callBotman(){
-  if(userStatusBM == ''){
-    var request = new XMLHttpRequest();
-    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=mathrubhumi';
-    request.open('GET', url, true);
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        var data = request.responseText;
-        if(data != ""){
-          data = JSON.parse(data);
-          userStatusBM = data;
-          if(userStatusBM == "0" || userStatusBM == "3"){
-            callAdsUB();
-          }
-          else{
-            console.log('Not Valid Traffic for openx');
-          }
-        }
-        else{
-          console.error('Data not returned from server');
-          callAdsUB();
-        }
-      }
-      else {
-        console.error('Request failed from server');
-        callAdsUB();
-      }
-    };
-    request.onerror = function() {
-      console.error('Request failed to Reach Server');
-      callAdsUB();
-    };
-    request.send();
-  }
-  else{
-    if(userStatusBM == "0" || userStatusBM == "3"){
-      callAdsUB();
-    }
-    else{
-      console.log('Not Valid Traffic for openx');
-    }
-  }
-
-}
-
-function callAdsUB(){
-	// googletag.pubads().refresh(mappings.slots);
-}
-
-mappings.slotNumbers.push(1);
-mappings.adCode.push('/21928950349,22624174647/mathrubhumi.com_nb_320x50');
-mappings.sizes.push(div_1_sizes);
-mappings.adId.push('div-ub-1');
-googletag.cmd.push(function() {
-  // callAPStagBids(); //Ap part
-  // callAPSAds(mappings.adCode, mappings.slots);
-  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-    if (event.slot === ub_slot1) {
-      ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349,22624174647/mathrubhumi.com_nb_320x50']);
-    }
-  });
-});
-
-
-function refreshBid(ub_slot, adCode) {
-  ubpbjs.que.push(function() {
-	  ubpbjs.requestBids({
-		  timeout: PREBID_TIMEOUT,
-		  adUnitCodes: adCode,
-		  bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
-              // var adsCalled = false;
-              // for(var i=0;i<x.length;i++){
-              //   var bc = x[i].bidderCode;
-              //   if(bc=="openx"){
-              //     adsCalled = true;
-              //     callBotman();
-              //   }
-              // }
-              // if(!adsCalled){
-              //   callAdsUB();
-              // }
-          });
-        });
-		  }
-	  });
-  });
-}
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
@@ -339,6 +175,155 @@ function ub_passback() {
   }
 }
 
+function refreshBid(ub_slot, adCode) {
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              googletag.pubads().refresh([ub_slot]);
+              // var adsCalled = false;
+              // for(var i=0;i<x.length;i++){
+              //   var bc = x[i].bidderCode;
+              //   if(bc=="openx"){
+              //     adsCalled = true;
+              //     callBotman();
+              //   }
+              // }
+              // if(!adsCalled){
+              //   callAdsUB();
+              // }
+          });
+        });
+      }
+    });
+  });
+}
+
+var botmanCalled = false;
+var userStatusBM = '';
+function callBotman(){
+  if(userStatusBM == ''){
+    var request = new XMLHttpRequest();
+    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=socialnews';
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        if(data != ""){
+          data = JSON.parse(data);
+          userStatusBM = data;
+          if(userStatusBM == "0" || userStatusBM == "3"){
+            callAdsUB();
+          }
+          else{
+            console.log('Not Valid Traffic for openx');
+          }
+        }
+        else{
+          console.error('Data not returned from server');
+          callAdsUB();
+        }
+      }
+      else {
+        console.error('Request failed from server');
+        callAdsUB();
+      }
+    };
+    request.onerror = function() {
+      console.error('Request failed to Reach Server');
+      callAdsUB();
+    };
+    request.send();
+  }
+  else{
+    if(userStatusBM == "0" || userStatusBM == "3"){
+      callAdsUB();
+    }
+    else{
+      console.log('Not Valid Traffic for openx');
+    }
+  }
+
+}
+
+function callAdsUB(){
+    // googletag.pubads().refresh(mappings.slots);
+}
+
+function initAdserver() {
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(mappings.slots);
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
+        });
+    });
+}
+
+function googleDefine(slotNumbers, adCode, sizes, adId){
+  for(var i=0; i<slotNumbers.length;i++){
+    eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
+    var a = eval('ub_slot'+slotNumbers[i]);
+    a.addService(googletag.pubads());
+    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+  }
+}
+
+function googlePush(){
+  googletag.cmd.push(function() {
+    googletag.pubads().collapseEmptyDivs(true);
+    googletag.pubads().setCentering(true);
+    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+}
+
+// if(document.getElementById('unibots-ad')){
+  mappings.slotNumbers.push(1);
+  mappings.adCode.push('/21928950349,22624174647/mathrubhumi.com_nb_320x50');
+  mappings.sizes.push(div_1_sizes);
+  mappings.adId.push('div-ub-1');
+  googletag.cmd.push(function() {
+    // callAPStagBids(); //Ap part
+    // callAPSAds(mappings.adCode, mappings.slots);
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+      if (event.slot === ub_slot1) {
+        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349,22624174647/mathrubhumi.com_nb_320x50']);
+      }
+    });
+  });
+// }
+
+if(typeof googletag.defineSlot === "function"){
+  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+  googlePush();
+}
+else{
+  // setTimeout(function(){
+    googletag.cmd.push(function() {
+      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googlePush();
+    });
+  // }, 500);
+}
+
 function mainHbRun(){
   ubpbjs.que.push(function() {
       ubpbjs.setBidderConfig({
@@ -361,21 +346,16 @@ function mainHbRun(){
       }
       });
       ubpbjs.addAdUnits(adUnits);
-      ubpbjs.aliasBidder('criteo','criteointl');
       ubpbjs.bidderSettings = {
         'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
         'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
         'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
         'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-        'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
         'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
         'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
         //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-        'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-        // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-        // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
 
         '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
         'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
@@ -427,7 +407,6 @@ function mainHbRun(){
   }, FAILSAFE_TIMEOUT);
 }
 
-
 function callAPSAds(adCode, ub_slot){
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
@@ -475,17 +454,4 @@ function sendAdserverRequest() {
     googletag.cmd.push(function() {
         googletag.pubads().refresh(mappings.slots);
     });
-}
-
-if(typeof googletag.defineSlot === "function"){
-  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-  googlePush();
-}
-else{
-  // setTimeout(function(){
-  googletag.cmd.push(function() {
-    googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
-    googlePush();
-  });
-  // }, 500);
 }

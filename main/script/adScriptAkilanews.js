@@ -164,62 +164,63 @@ function refreshBid(ub_slot, adCode) {
     });
   });
 }
-
-function initAdserver(bids={}) {
-  if (ubpbjs.initAdserverSet) return;
-  ubpbjs.initAdserverSet = true;
-  ubBidscheckFlag = false;
-  bids[Object.keys(bids)].bids.forEach((bid)=>{
-      if(bid.cpm > 0.01){
-        ubBidscheckFlag = true;
-      }
-      else{
-          ubBidscheckFlag = false;
-      }
-  })
-
-  if (ubBidscheckFlag) {
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
-            console.log('HB server request');
-        });
-    });
-  }
-  else {
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            // ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
-            console.log('Only Google server request');
-        });
-    });
-  }
-}
-
-// function initAdserver() {
-//     if (ubpbjs.initAdserverSet) return;
-//     ubpbjs.initAdserverSet = true;
+// 
+// function initAdserver(bids={}) {
+//   if (ubpbjs.initAdserverSet) return;
+//   ubpbjs.initAdserverSet = true;
+//   ubBidscheckFlag = false;
+//   bids[Object.keys(bids)].bids.forEach((bid)=>{
+//       if(bid.cpm > 0.01){
+//         ubBidscheckFlag = true;
+//       }
+//       else{
+//           ubBidscheckFlag = false;
+//       }
+//   })
+//
+//   if (ubBidscheckFlag) {
 //     googletag.cmd.push(function() {
 //         ubpbjs.que.push(function() {
 //             ubpbjs.setTargetingForGPTAsync();
 //             googletag.pubads().refresh(mappings.slots);
-//             // var x = ubpbjs.getAllPrebidWinningBids();
-//             // var adsCalled = false;
-//             // for(var i=0;i<x.length;i++){
-//             //   var bc = x[i].bidderCode;
-//             //   if(bc=="openx"){
-//             //     adsCalled = true;
-//             //     callBotman();
-//             //   }
-//             // }
-//             // if(!adsCalled){
-//             //   callAdsUB();
-//             // }
+//             console.log('HB server request');
 //         });
 //     });
+//   }
+//   else {
+//     googletag.cmd.push(function() {
+//         ubpbjs.que.push(function() {
+//             // ubpbjs.setTargetingForGPTAsync();
+//             googletag.pubads().refresh(mappings.slots);
+//             console.log('Only Google server request');
+//         });
+//     });
+//   }
 // }
+
+function initAdserver(bids={}) {
+  console.log('BIDS', bids);
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
+    googletag.cmd.push(function() {
+        ubpbjs.que.push(function() {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(mappings.slots);
+            // var x = ubpbjs.getAllPrebidWinningBids();
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
+        });
+    });
+}
 
 var botmanCalled = false;
 var userStatusBM = '';

@@ -176,30 +176,43 @@ function refreshBid(ub_slot, adCode) {
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
-      bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
-              // var adsCalled = false;
-              // for(var i=0;i<x.length;i++){
-              //   var bc = x[i].bidderCode;
-              //   if(bc=="openx"){
-              //     adsCalled = true;
-              //     callBotman();
-              //   }
-              // }
-              // if(!adsCalled){
-              //   callAdsUB();
-              // }
+      bidsBackHandler: function(bids) {
+        console.log('refreshbids', bids);
+        ubBidscheckFlag = false;
+        bids[Object.keys(bids)].bids.forEach((bid)=>{
+            if(bid.cpm > 0.01){
+              ubBidscheckFlag = true;
+            }
+            else{
+                ubBidscheckFlag = false;
+            }
+        })
+
+        if (ubBidscheckFlag) {
+          googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh([ub_slot]);
+                  console.log('HB server request');
+              });
           });
-        });
+        }
+        else {
+          googletag.cmd.push(function() {
+              ubpbjs.que.push(function() {
+                  // ubpbjs.setTargetingForGPTAsync();
+                  googletag.pubads().refresh([ub_slot]);
+                  console.log('Only Google server request');
+              });
+          });
+        }
       }
     });
   });
 }
 
 function initAdserver(bids={}) {
+  console.log('BIDS', bids);
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
   ubBidscheckFlag = false;

@@ -61,32 +61,32 @@ const customConfigObjectA = {
 // if(document.getElementById('unibots-ad')){
   adUnits1 =
   {
-      code: '/22126273586/manatelangana.news_320x50',
+      code: '/21957769615/sportsunfold.com_ub_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
           }
       },
       bids: [
-        { bidder: 'appnexus', params: { placementId: '22815896' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-        // { bidder: '33across', params: { siteId : 'dTDY7cNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-        // // { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
-        // { bidder: 'sovrn', params: {tagid: '882931'} },
-        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4051398'} },
-        // { bidder: 'openx', params: {unit: '544096396', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        // // // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-        // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-        // // { bidder: 'nobid', params: { siteId : '22012436374'} },
-        // // // { bidder: 'criteo', params: {networkId: '10542'} },
-        // // // { bidder: 'criteointl', params: {networkId: '10545'} },
-        // // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-        // // { bidder: 'smartadserver', params: { siteId: '404710', pageId: '1370494', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
-        // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-        // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        // { bidder: 'ucfunnel', params: { adid : 'ad-47B4EE44D3BD49431ED47D4424E762E6'} },
-        //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        // { bidder: 'appnexus', params: { placementId: '21356510' } }, /* one placementId for all sizes  my appnexus bidder */
+        //  	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
+        //  	// { bidder: '33across', params: { siteId : 'cAqsGUWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        //  	// { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
+        //    { bidder: 'sovrn', params: {tagid: '884156'} },
+        //    { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3581651'} },
+        //    { bidder: 'openx', params: {unit: '544022831', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        //  	{ bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+        //  	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        //    { bidder: 'nobid', params: { siteId : '22364664636'} },
+        //    // { bidder: 'criteo', params: {networkId: '10542'} },
+        //    // { bidder: 'criteointl', params: {networkId: '10545'} },
+        //    { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        //    { bidder: 'smartadserver', params: { siteId: '404715', pageId: '1370499', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
+        //    // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        //    { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        //    // { bidder: 'ucfunnel', params: { adid : 'ad-47B47763AA7B63B903E898272397323'} },
+        //    //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+        //    // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
       ]
   };
   adUnits.push(adUnits1);
@@ -117,8 +117,8 @@ var mappings = {
 //   // slotName: mappings_full_hb_config.adUnitNames[index],
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
-//   slotID: 'div-gpt-ad-1633092882755-0',
-//   slotName: '/22126273586/manatelangana.news_320x50',
+//   slotID: 'div-gpt-ad-1634373932350-0',
+//   slotName: '/21957769615/sportsunfold.com_ub_320x50',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -134,46 +134,8 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;
     }
-    else {
-      ub_passback();
-    }
   }
 }
-
-function ub_passback() {
-  if(typeof colombia == 'undefined'){
-  var colombia = colombia || {};
-  colombia.fns = colombia.fns || [];
-    (function() {
-        var cads = document.createElement("script");
-        cads.async = true;
-        cads.type = "text/javascript";
-        cads.src = "https://static.clmbtech.com/ase/91170/3748/c1.js";
-        document.getElementsByTagName('head')[0].appendChild(cads);
-    })();
-  }
-
-  ub_passback = document.createElement("div");
-  ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
-  ub_passback.setAttribute("data-position", "1");
-  ub_passback.setAttribute("data-section", "StroyPage");
-  ub_passback.setAttribute("class", "colombia");
-
-  if (!mobileCheck()) {
-      ub_passback.setAttribute("data-ua", "D");
-      ub_passback.setAttribute("data-slot", "460173");
-      ub_passback.setAttribute("id", "div-clmb-ctn-460173-1");
-      ub_sticky = document.getElementById('adSmall');
-      ub_sticky.appendChild(ub_passback);
-  }else {
-    ub_passback.setAttribute("data-ua", "M");
-    ub_passback.setAttribute("data-slot", "460174");
-    ub_passback.setAttribute("id", "div-clmb-ctn-460174-1");
-    ub_sticky = document.getElementById('adSmall');
-    ub_sticky.appendChild(ub_passback);
-  }
-}
-
 
 function refreshBid(ub_slot, adCode) {
   ubpbjs.que.push(function(){
@@ -297,15 +259,15 @@ function googlePush(){
 
 // if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/22126273586/manatelangana.news_320x50');
+  mappings.adCode.push('/21957769615/sportsunfold.com_ub_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1633092882755-0');
+  mappings.adId.push('div-gpt-ad-1634373932350-0');
   googletag.cmd.push(function() {
     // callAPStagBids(); //Ap part
     // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1633092882755-0', ub_slot1, ['/22126273586/manatelangana.news_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1634373932350-0', ub_slot1, ['/21957769615/sportsunfold.com_ub_320x50']);
       }
     });
   });
@@ -390,7 +352,7 @@ function mainHbRun(){
         useBidCache: true,
         enableSendAllBids: false, // Default will be `true` as of 1.0
         bidderSequence: 'random', // Default is random
-        publisherDomain: 'https://www.socialnews.xyz/',
+        publisherDomain: 'https://www.sportsunfold.com/',
         bidderTimeout: PREBID_TIMEOUT+500,
         //pubcid: {expInterval: },
         //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

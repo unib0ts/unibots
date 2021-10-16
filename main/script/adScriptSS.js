@@ -440,7 +440,7 @@ function ub_passback() {
       ub_passback.setAttribute("data-ua", "D");
       ub_passback.setAttribute("data-slot", "462954");
       ub_passback.setAttribute("id", "div-clmb-ctn-462954-3");
-      ub_sticky = document.querySelector('.mybotface' + i);
+      ub_sticky = document.querySelector('.mybotface3');
       ub_sticky.appendChild(ub_passback);
   }else {
     ub_passback.setAttribute("data-ua", "M");

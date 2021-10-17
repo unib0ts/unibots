@@ -84,8 +84,8 @@ else{
 						}
 				},
 				bids: [
-				 // { bidder: 'appnexus', params: { placementId: '21146806' } }, /* one placementId for all sizes  my appnexus bidder */
-				 // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507449'} },
+				//  { bidder: 'appnexus', params: { placementId: '21146806' } }, /* one placementId for all sizes  my appnexus bidder */
+				//  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507449'} },
 				//  { bidder: 'ucfunnel', params: { adid : 'ad-2736B8748AA68B4B0867E94697B93ABA'} },
 				// 	{ bidder: 'oftmedia', params: { placementId: '21224933' } },
 				// 	{ bidder: 'smartadserver', params: { siteId: '399737', pageId: '1361919', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
@@ -99,8 +99,8 @@ else{
 				// { bidder: 'criteo', params: {networkId: '10542'} },
 				// { bidder: 'criteointl', params: {networkId: '10545'} },
 				// 	{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-					//{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-					// { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+				// 	{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+				// 	{ bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
 				]
 		};
 		adUnits.push(adUnits1);
@@ -199,26 +199,26 @@ function ubadScript() {
       // });
 				ubpbjs.addAdUnits(adUnits);
 				ubpbjs.aliasBidder('criteo','criteointl');
-				ubpbjs.bidderSettings = {
-					'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-					'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-					'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-					'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-					'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-					'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-					'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-					'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-					'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-					//'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-					'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-					// 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-					// 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
+        ubpbjs.bidderSettings = {
+          'appnexus': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.86; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'pubmatic': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.74; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'rubicon': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.75; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'openx': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.75; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'criteo': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.75; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'nobid': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'oftmedia': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.80; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'sovrn': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.81; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
-					'33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-					'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-					'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-					'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
-				};
+          '33across': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'emx_digital': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'rhythmone': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'eplanning': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'adyoulike': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'smartadserver': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'onetag': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
+          'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
+        };
 				ubpbjs.setConfig({
 
 					priceGranularity: customConfigObjectA,
@@ -387,56 +387,49 @@ function ubadScript() {
 			}
 		}
 
-		function refreshBid(ub_slot, adCode) {
-			ubpbjs.que.push(function(){
-				ubpbjs.requestBids({
-					timeout: PREBID_TIMEOUT,
-					adUnitCodes: adCode,
-					bidsBackHandler: function() {
-						googletag.cmd.push(function() {
-							ubpbjs.que.push(function() {
-									ubpbjs.setTargetingForGPTAsync();
-									googletag.pubads().refresh([ub_slot]);
-									// var adsCalled = false;
-									// for(var i=0;i<x.length;i++){
-									//   var bc = x[i].bidderCode;
-									//   if(bc=="openx"){
-									//     adsCalled = true;
-									//     callBotman();
-									//   }
-									// }
-									// if(!adsCalled){
-									//   callAdsUB();
-									// }
-							});
-						});
-					}
-				});
-			});
-		}
+    function refreshBid(ub_slot, adCode) {
+      ubpbjs.que.push(function () {
+        ubpbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: adCode,
+          bidsBackHandler: function (bids) {
+            callAds(bids);
+          }
+        });
+      });
+    }
 
-		function initAdserver() {
-				if (ubpbjs.initAdserverSet) return;
-				ubpbjs.initAdserverSet = true;
-				googletag.cmd.push(function() {
-						ubpbjs.que.push(function() {
-								ubpbjs.setTargetingForGPTAsync();
-								googletag.pubads().refresh(mappings.slots);
-								// var x = ubpbjs.getAllPrebidWinningBids();
-								// var adsCalled = false;
-								// for(var i=0;i<x.length;i++){
-								//   var bc = x[i].bidderCode;
-								//   if(bc=="openx"){
-								//     adsCalled = true;
-								//     callBotman();
-								//   }
-								// }
-								// if(!adsCalled){
-								//   callAdsUB();
-								// }
-						});
-				});
-		}
+    function initAdserver(bids = {}) {
+      if (ubpbjs.initAdserverSet) return;
+      ubpbjs.initAdserverSet = true;
+      callAds(bids);
+    }
+
+    function callAds(bids = {}) {
+      let ubBidscheckFlag = false;
+      bids[Object.keys(bids)].bids.forEach((bid) => {
+        if (bid.cpm > 0.01) {
+          ubBidscheckFlag = true;
+        }
+      })
+
+      if (ubBidscheckFlag) {
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(mappings.slots);
+            console.log('HB server request');
+          });
+        });
+      }
+      else {
+        googletag.cmd.push(function () {
+          googletag.pubads().refresh(mappings.slots);
+          console.log('Only Google server request');
+        });
+      }
+    }
+
 
 		// function callAPSAds(adCode, ub_slot){
 		//   ubpbjs.que.push(function(){

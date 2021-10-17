@@ -200,7 +200,7 @@ function refreshBid(ub_slot, adCode) {
   });
 }
 
-function initAdserver(bids = {}) {
+function initAdserver() {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
   googletag.cmd.push(function () {
@@ -387,8 +387,8 @@ function mainHbRun(){
       ubpbjs.setConfig({
         floors: {
           currency: 'USD',
-          skipRate: 5,
-          modelVersion: 'Sports Ad Unit Floors',
+          // skipRate: 5,
+          // modelVersion: 'Sports Ad Unit Floors',
           schema: {
               fields: ['mediaType']
           },

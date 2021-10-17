@@ -72,7 +72,7 @@ var adUnits = [
           }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '19202087' } }
+          // { bidder: 'appnexus', params: { placementId: '19202087' } }
         ]
     },
     {
@@ -83,25 +83,25 @@ var adUnits = [
             }
         },
         bids: [
-        	{ bidder: 'appnexus', params: { placementId: '19202087' } },
-        	// { bidder: 'oftmedia', params: { placementId: '18671523' } },
-        	{ bidder: '33across', params: { siteId : 'cZwHlAWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-        	{ bidder: 'emx_digital', params: { tagid: '103697' } }, /* sizeless */
-          { bidder: 'sovrn', params: {tagid: '721747'} },
-          // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
-        	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
-        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          { bidder: 'nobid', params: { siteId : '22012495551'} },
-          { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE6EB26628EE077B9DE98322637E'} },
-          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028666'} },
-          // { bidder: 'criteo', params: {networkId: '10542'} },
-          // { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          { bidder: 'smartadserver', params: { siteId: '362115', pageId: '1289616', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
-          { bidder: 'sonobi', params: { placement_id: 'ab0665167561691b6ba3', ad_unit: 'filmyfocus.com_NB_320x50' } },
-          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        	// { bidder: 'appnexus', params: { placementId: '19202087' } },
+        	// // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+        	// { bidder: '33across', params: { siteId : 'cZwHlAWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        	// { bidder: 'emx_digital', params: { tagid: '103697' } }, /* sizeless */
+          // { bidder: 'sovrn', params: {tagid: '721747'} },
+          // // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+        	// { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
+        	// // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          // { bidder: 'nobid', params: { siteId : '22012495551'} },
+          // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE6EB26628EE077B9DE98322637E'} },
+          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028666'} },
+          // // { bidder: 'criteo', params: {networkId: '10542'} },
+          // // { bidder: 'criteointl', params: {networkId: '10545'} },
+          // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          // { bidder: 'smartadserver', params: { siteId: '362115', pageId: '1289616', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"]},
+          // { bidder: 'sonobi', params: { placement_id: 'ab0665167561691b6ba3', ad_unit: 'filmyfocus.com_NB_320x50' } },
+          // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          // // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
         ]
     }
 ];

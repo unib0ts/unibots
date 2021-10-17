@@ -172,78 +172,48 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
 }
 
 function refreshBid(ub_slot, adCode) {
-  ubpbjs.que.push(function(){
+  ubpbjs.que.push(function () {
     ubpbjs.requestBids({
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
-      bidsBackHandler: function(bids) {
-        console.log('refreshbids', bids);
-        ubBidscheckFlag = false;
-        bids[Object.keys(bids)].bids.forEach((bid)=>{
-            if(bid.cpm > 0.01){
-              ubBidscheckFlag = true;
-            }
-            else{
-                ubBidscheckFlag = false;
-            }
-        })
-
-        if (ubBidscheckFlag) {
-          googletag.cmd.push(function() {
-              ubpbjs.que.push(function() {
-                  ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
-                  console.log('HB server request');
-              });
-          });
-        }
-        else {
-          googletag.cmd.push(function() {
-              ubpbjs.que.push(function() {
-                  // ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
-                  console.log('Only Google server request');
-              });
-          });
-        }
+      bidsBackHandler: function (bids) {
+        callAds(bids);
       }
     });
   });
 }
 
-function initAdserver(bids={}) {
-  console.log('BIDS', bids);
+function initAdserver(bids = {}) {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  ubBidscheckFlag = false;
-  bids[Object.keys(bids)].bids.forEach((bid)=>{
-      if(bid.cpm > 0.01){
-        ubBidscheckFlag = true;
-      }
-      else{
-          ubBidscheckFlag = false;
-      }
+  callAds(bids);
+}
+
+function callAds(bids = {}) {
+  let ubBidscheckFlag = false;
+  bids[Object.keys(bids)].bids.forEach((bid) => {
+    if (bid.cpm > 0.01) {
+      ubBidscheckFlag = true;
+    }
   })
 
   if (ubBidscheckFlag) {
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
-            console.log('HB server request');
-        });
+    googletag.cmd.push(function () {
+      ubpbjs.que.push(function () {
+        ubpbjs.setTargetingForGPTAsync();
+        googletag.pubads().refresh(mappings.slots);
+        console.log('HB server request');
+      });
     });
   }
   else {
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            // ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
-            console.log('Only Google server request');
-        });
+    googletag.cmd.push(function () {
+      googletag.pubads().refresh(mappings.slots);
+      console.log('Only Google server request');
     });
   }
 }
+
 
 var botmanCalled = false;
 var userStatusBM = '';

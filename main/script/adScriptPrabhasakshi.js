@@ -114,6 +114,16 @@ const customConfigObjectA = {
               sizes: div_1_sizes
           }
       },
+      floors: {
+                currency: 'USD',
+                schema: {
+                    delimiter: '|',
+                    fields: [ 'mediaType', 'size' ]
+                },
+                values: {
+                    'banner|320x50': 0.01,
+                }
+            },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056264' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
@@ -362,7 +372,17 @@ function mainHbRun(){
         'ucfunnel': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} }
       };
       ubpbjs.setConfig({
-
+        floors: {
+          currency: 'USD',
+          skipRate: 5,
+          modelVersion: 'Sports Ad Unit Floors',
+          schema: {
+              fields: [ 'mediaType']
+          },
+          values: {
+              'banner': 0.01,
+          }
+        },
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

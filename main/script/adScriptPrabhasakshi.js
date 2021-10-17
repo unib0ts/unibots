@@ -187,7 +187,14 @@ function refreshBid(ub_slot, adCode) {
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
       bidsBackHandler: function (bids) {
-        callAds(bids);
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot]);
+            // console.log('HB server request');
+          });
+        });
+        // callAds(bids);
       }
     });
   });
@@ -196,33 +203,39 @@ function refreshBid(ub_slot, adCode) {
 function initAdserver(bids = {}) {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  callAds(bids);
-}
-
-function callAds(bids = {}) {
-  let ubBidscheckFlag = false;
-  bids[Object.keys(bids)].bids.forEach((bid) => {
-    if (bid.cpm > 0.01) {
-      ubBidscheckFlag = true;
-    }
-  })
-
-  if (ubBidscheckFlag) {
-    googletag.cmd.push(function () {
-      ubpbjs.que.push(function () {
-        ubpbjs.setTargetingForGPTAsync();
-        googletag.pubads().refresh(mappings.slots);
-        console.log('HB server request');
-      });
-    });
-  }
-  else {
-    googletag.cmd.push(function () {
+  googletag.cmd.push(function () {
+    ubpbjs.que.push(function () {
+      ubpbjs.setTargetingForGPTAsync();
       googletag.pubads().refresh(mappings.slots);
-      console.log('Only Google server request');
     });
-  }
+  });
+  // callAds(bids);
 }
+
+// function callAds(bids = {}) {
+//   let ubBidscheckFlag = false;
+//   bids[Object.keys(bids)].bids.forEach((bid) => {
+//     if (bid.cpm > 0.01) {
+//       ubBidscheckFlag = true;
+//     }
+//   })
+//
+//   if (ubBidscheckFlag) {
+//     googletag.cmd.push(function () {
+//       ubpbjs.que.push(function () {
+//         ubpbjs.setTargetingForGPTAsync();
+//         googletag.pubads().refresh(mappings.slots);
+//         console.log('HB server request');
+//       });
+//     });
+//   }
+//   else {
+//     googletag.cmd.push(function () {
+//       googletag.pubads().refresh(mappings.slots);
+//       console.log('Only Google server request');
+//     });
+//   }
+// }
 
 
 var botmanCalled = false;

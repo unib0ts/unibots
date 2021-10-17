@@ -777,11 +777,14 @@ var mappings = {
 
     function callAds(bids = {}) {
       let ubBidscheckFlag = false;
-      bids[Object.keys(bids)].bids.forEach((bid) => {
-        if (bid.cpm > 0.01) {
-          ubBidscheckFlag = true;
-        }
-      })
+      if (Object.keys(bids).length === 0 && bids.constructor === Object){}
+      else {
+        bids[Object.keys(bids)].bids.forEach((bid) => {
+          if (bid.cpm > 0.01) {
+            ubBidscheckFlag = true;
+          }
+        })
+      }
 
       if (ubBidscheckFlag) {
         googletag.cmd.push(function () {
@@ -792,7 +795,7 @@ var mappings = {
           });
         });
       }
-      else {
+      else{
         googletag.cmd.push(function () {
           googletag.pubads().refresh(mappings.slots);
           console.log('Only Google server request');

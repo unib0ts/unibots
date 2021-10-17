@@ -205,34 +205,6 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
   }
 }
 
-function refreshBid(ub_slot, adCode) {
-  ubpbjs.que.push(function(){
-    ubpbjs.requestBids({
-      timeout: PREBID_TIMEOUT,
-      adUnitCodes: adCode,
-      bidsBackHandler: function() {
-        googletag.cmd.push(function() {
-          ubpbjs.que.push(function() {
-              ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
-              // var adsCalled = false;
-              // for(var i=0;i<x.length;i++){
-              //   var bc = x[i].bidderCode;
-              //   if(bc=="openx"){
-              //     adsCalled = true;
-              //     callBotman();
-              //   }
-              // }
-              // if(!adsCalled){
-              //   callAdsUB();
-              // }
-          });
-        });
-      }
-    });
-  });
-}
-
 // function initAdserver(bids={}) {
 //   if (ubpbjs.initAdserverSet) return;
 //   ubpbjs.initAdserverSet = true;
@@ -266,28 +238,47 @@ function refreshBid(ub_slot, adCode) {
 //   }
 // }
 
-function initAdserver(bids={}) {
-  console.log('BIDS', bids);
-    if (ubpbjs.initAdserverSet) return;
-    ubpbjs.initAdserverSet = true;
-    googletag.cmd.push(function() {
-        ubpbjs.que.push(function() {
-            ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(mappings.slots);
-            // var x = ubpbjs.getAllPrebidWinningBids();
-            // var adsCalled = false;
-            // for(var i=0;i<x.length;i++){
-            //   var bc = x[i].bidderCode;
-            //   if(bc=="openx"){
-            //     adsCalled = true;
-            //     callBotman();
-            //   }
-            // }
-            // if(!adsCalled){
-            //   callAdsUB();
-            // }
-        });
+function refreshBid(ub_slot, adCode) {
+  ubpbjs.que.push(function () {
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnitCodes: adCode,
+      bidsBackHandler: function (bids) {
+        callAds(bids);
+      }
     });
+  });
+}
+
+function initAdserver(bids = {}) {
+  if (ubpbjs.initAdserverSet) return;
+  ubpbjs.initAdserverSet = true;
+  callAds(bids);
+}
+
+function callAds(bids = {}) {
+  let ubBidscheckFlag = false;
+  bids[Object.keys(bids)].bids.forEach((bid) => {
+    if (bid.cpm > 0.01) {
+      ubBidscheckFlag = true;
+    }
+  })
+
+  if (ubBidscheckFlag) {
+    googletag.cmd.push(function () {
+      ubpbjs.que.push(function () {
+        ubpbjs.setTargetingForGPTAsync();
+        googletag.pubads().refresh(mappings.slots);
+        console.log('HB server request');
+      });
+    });
+  }
+  else {
+    googletag.cmd.push(function () {
+      googletag.pubads().refresh(mappings.slots);
+      console.log('Only Google server request');
+    });
+  }
 }
 
 

@@ -114,16 +114,16 @@ const customConfigObjectA = {
               sizes: div_1_sizes
           }
       },
-      floors: {
-                currency: 'USD',
-                schema: {
-                    delimiter: '|',
-                    fields: [ 'mediaType', 'size' ]
-                },
-                values: {
-                    'banner|320x50': 0.01,
-                }
-            },
+      // floors: {
+      //           currency: 'USD',
+      //           schema: {
+      //               // delimiter: '|',
+      //               fields: [ 'mediaType']
+      //           },
+      //           values: {
+      //               'banner': 0.01,
+      //           }
+      //       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056264' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
@@ -377,7 +377,7 @@ function mainHbRun(){
           skipRate: 5,
           modelVersion: 'Sports Ad Unit Floors',
           schema: {
-              fields: [ 'mediaType']
+              fields: ['mediaType']
           },
           values: {
               'banner': 0.01,

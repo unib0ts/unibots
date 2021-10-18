@@ -778,7 +778,7 @@ var mappings_full_hb_config = {
     [300, 250], //'/1062118/Sakshi_Photos_Mobile_1',
     [300, 250], //'/1062118/Sakshi_Videos_Mobile_1',
     [300, 250], // '/1062118/Sakshi_Cartoon_Mobile_1',
-    [100, 100], //'/21928950349/sakshi_cube_test_100x100',
+    [120, 120], //'/21928950349/sakshi_cube_test_100x100',
   ],
   bids: [
     hb_full_common_bidders.concat([

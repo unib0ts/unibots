@@ -1,9 +1,9 @@
+// var mybotBlockedClientName = mybotBlockedClientsName.includes(window.location.host);
+var mybotBlockedClientName = mybotBlockedClientsName.filter(mybotBlockedClientName => mybotBlockedClientName.includes(window.location.host));
+
 mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksBongdaplus.json';
-mybotBlockedClientName = '';
-test= window.location.host
-// 'm.docbao.vn'
-test.split(".")
+mybotBlockedClientsName = ['docbao', 'bongdaplus', 'dantri'];
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks'+mybotBlockedClientsName.toUpperCase() + '.json';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;
@@ -40,4 +40,8 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
 }
 else{
   ubadScript();
+}
+
+function ubadScript() {
+  console.log('Player allowed');
 }

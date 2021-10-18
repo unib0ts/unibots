@@ -357,80 +357,37 @@ function ubadScript() {
           ubpbjs.addAdUnits(adUnits_full_hb);
           ubpbjs.aliasBidder("criteo", "criteointl");
           ubpbjs.bidderSettings = {
-              appnexus: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.86;
-                  },
-              },
-              pubmatic: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.74;
-                  },
-              },
-              rubicon: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.75;
-                  },
-              },
-              openx: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.75;
-                  },
-              },
-              criteo: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.85;
-                  },
-              },
-              criteointl: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.85;
-                  },
-              },
-              nobid: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 1.0;
-                  },
-              },
-              oftmedia: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.8;
-                  },
-              },
-              sovrn: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.81;
-                  },
-              },
-              onetag: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 0.85;
-                  },
-              },
-              //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+            'appnexus': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.86; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'pubmatic': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.74; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'rubicon': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'openx': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'criteo': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'nobid': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'oftmedia': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.80; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'sovrn': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.81; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
-              "33across": {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 1.0;
-                  },
-              },
-              emx_digital: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 1.0;
-                  },
-              },
-              rhythmone: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 1.0;
-                  },
-              },
-              eplanning: {
-                  bidCpmAdjustment: function (bidCpm) {
-                      return bidCpm * 1.0;
-                  },
-              },
+            '33across': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'emx_digital': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'rhythmone': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'eplanning': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'adyoulike': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'smartadserver': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'onetag': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+            'ucfunnel': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} }
           };
           ubpbjs.setConfig({
+              floors: {
+                currency: 'USD',
+                // skipRate: 5,
+                // modelVersion: 'Sports Ad Unit Floors',
+                schema: {
+                    fields: ['mediaType']
+                },
+                values: {
+                    'banner': 0.01,
+                }
+              },
               priceGranularity: customConfigObjectA,
               userSync: {
                   iframeEnabled: true,

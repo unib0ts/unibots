@@ -1,9 +1,19 @@
 // var mybotBlockedClientName = mybotBlockedClientsName.includes(window.location.host);
-var mybotBlockedClientName = mybotBlockedClientsName.filter(mybotBlockedClientName => mybotBlockedClientName.includes(window.location.host));
+mybotBlockedClientsName = ['docbao', 'bongdaplus', 'dantri'];
+mybotDomainUrl = (window.location.host).split(".");
+var mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));
+mybotBlockedClientName = mybotBlockedClientName.toString();
 
 mybotBlockedPagesFlag = 1;
-mybotBlockedClientsName = ['docbao', 'bongdaplus', 'dantri'];
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks'+mybotBlockedClientsName.toUpperCase() + '.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks'+capitalizeFLetter(mybotBlockedClientName) + '.json';
+console.log(mybotBlockedUrl);
+
+
+function capitalizeFLetter(input) {
+  var string = input;
+  x = string.charAt(0).toUpperCase() + string.slice(1);
+	 return x;
+}
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;

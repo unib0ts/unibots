@@ -366,7 +366,17 @@ else{
            // 'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
          };
          ubpbjs.setConfig({
-
+           floors: {
+             currency: 'USD',
+             // skipRate: 5,
+             // modelVersion: 'Sports Ad Unit Floors',
+             schema: {
+                 fields: ['mediaType']
+             },
+             values: {
+                 'banner': 0.01,
+             }
+           },
            priceGranularity: customConfigObjectA,
           //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
            //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

@@ -1,5 +1,5 @@
-// var mybotBlockedClientName = mybotBlockedClientsName.includes(window.location.host);
 mybotBlockedClientsName = ['docbao', 'bongdaplus', 'dantri'];
+
 mybotDomainUrl = (window.location.host).split(".");
 var mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));
 mybotBlockedClientName = mybotBlockedClientName.toString();
@@ -7,13 +7,6 @@ mybotBlockedClientName = mybotBlockedClientName.toString();
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks'+capitalizeFLetter(mybotBlockedClientName) + '.json';
 console.log(mybotBlockedUrl);
-
-
-function capitalizeFLetter(input) {
-  var string = input;
-  x = string.charAt(0).toUpperCase() + string.slice(1);
-	 return x;
-}
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;
@@ -30,6 +23,7 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
       if(data) {
         data = data.urls;
         if(data.includes(urlToCheck)){
+          console.log('Player is not allowed');
           return false;
         }
         else{
@@ -54,4 +48,10 @@ else{
 
 function ubadScript() {
   console.log('Player allowed');
+}
+
+function capitalizeFLetter(input) {
+  var string = input;
+  x = string.charAt(0).toUpperCase() + string.slice(1);
+	 return x;
 }

@@ -1,25 +1,16 @@
-mybotBlockedClientsName = ['docbao', 'bongdaplus', 'dantri'];
+mybotBlockedClientsName = ['astrologycircle', 'boldsky', 'daijiworld', 'drivespark', 'filmibeat', 'gizbot', 'shrtechs', 'sunsigns'];
 
 mybotDomainUrl = (window.location.host).split(".");
 mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));
 mybotBlockedClientName = mybotBlockedClientName.toString();
 
-mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/erelego/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
 
-var UBP_BLOCKED = checkBlocked(mybotBlockedUrl, mybotBlockedClientName);
-
-// UBP_BLOCKED.then(() => {
-//     console.log('Page is allowed for UBP');
-// }).catch(() => {
-//     console.log('Page is not allowed for UBP');
-// })
+var ISUBP_BLOCKED = false;
 
 function checkBlocked(url, clientName) {
   return new Promise((resolve, reject) => {
       let urlToCheck = window.location.host + window.location.pathname + window.location.search;
-      // var isAllowed = false;
-
       fetch(url)
           .then(response => response.json())
           .then(data => {
@@ -27,11 +18,9 @@ function checkBlocked(url, clientName) {
               if (data) {
                   data = data.urls;
                   if (data.includes(urlToCheck)) {
-                      console.log('Page is blocked');
                       reject('Page is blocked');
                   }
                   else {
-                      // isAllowed = true;
                       resolve('Page is allowed');
                   }
               }
@@ -40,6 +29,13 @@ function checkBlocked(url, clientName) {
           });
   });
 }
+
+checkBlocked(mybotBlockedUrl, mybotBlockedClientName).then(() => {
+     ISUBP_BLOCKED = true;
+    console.log('Page is allowed for UBP');
+}).catch(() => {
+    console.log('Page is not allowed for UBP');
+})
 
 function capitalizeFLetter(input) {
   var string = input;

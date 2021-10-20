@@ -19,14 +19,14 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
-if (window.location.href == "https://sandesh.com/gujarat-st-workers-go-on-strike-for-tomorrow-night/") {
-    url ="https://cdn.unibots.in/player.js";
-    ub_vs = document.createElement("script");
-    ub_vs.src = url;
-    ub_vs.async = "async";
-    ub_vs.type = "text/javascript";
-    document.getElementsByTagName("head")[0].appendChild(ub_vs);
-}
+// if (window.location.href == "https://sandesh.com/gujarat-st-workers-go-on-strike-for-tomorrow-night/") {
+//     url ="https://cdn.unibots.in/player.js";
+//     ub_vs = document.createElement("script");
+//     ub_vs.src = url;
+//     ub_vs.async = "async";
+//     ub_vs.type = "text/javascript";
+//     document.getElementsByTagName("head")[0].appendChild(ub_vs);
+// }
 
 var GEO_CODE = '';
 (function (){

@@ -7,18 +7,19 @@ mybotBlockedClientName = mybotBlockedClientName.toString();
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
 
-var returnValue = checkBlocked(mybotBlockedUrl, mybotBlockedClientName);
-returnValue.then(() => {
-  (result) =>{
-      console.log('Page is allowed for UBP');
-  }
-})
-console.log(returnValue);
+var UBP_BLOCKED = checkBlocked(mybotBlockedUrl, mybotBlockedClientName);
+
+// UBP_BLOCKED.then(() => {
+//     console.log('Page is allowed for UBP');
+// }).catch(() => {
+//     console.log('Page is not allowed for UBP');
+// })
 
 function checkBlocked(url, clientName) {
   return new Promise((resolve, reject) => {
       let urlToCheck = window.location.host + window.location.pathname + window.location.search;
-      // let urlToCheck = "bongtrend.com/sreelekha-mitra-showing-off-her-bra-strap";
+      // var isAllowed = false;
+
       fetch(url)
           .then(response => response.json())
           .then(data => {
@@ -30,6 +31,7 @@ function checkBlocked(url, clientName) {
                       reject('Page is blocked');
                   }
                   else {
+                      // isAllowed = true;
                       resolve('Page is allowed');
                   }
               }

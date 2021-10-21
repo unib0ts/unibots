@@ -18,14 +18,14 @@ function checkBlocked(url, clientName) {
               if (data) {
                   data = data.urls;
                   if (data.includes(urlToCheck)) {
-                      reject('Page is blocked');
+                      resolve('Page is blocked');
                   }
                   else {
-                      resolve('Page is allowed');
+                      reject('Page is allowed');
                   }
               }
           }).catch(() => {
-              resolve('Block Check Request failed')
+              reject('Block Check Request failed')
           });
   });
 }

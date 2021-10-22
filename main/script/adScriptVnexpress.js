@@ -64,19 +64,19 @@ else{
   var adUnits = [];
 
   var hb_common_bidders = [
-  	// { bidder: 'appnexus', params: { placementId: '19403759' } }, /* one placementId for all sizes  my appnexus bidder */
-  		// { bidder: 'oftmedia', params: { placementId: '19680368' } },
-  		// { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-  		// { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
-  		// { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-  		// { bidder: 'nobid', params: { siteId: '22049996977' } },
-  		// { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-  		// { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
-  		// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-  		// //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-  		// { bidder: 'criteo', params: {networkId: '10542'} },
-  		// { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-  		// { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'appnexus', params: { placementId: '19403759' } }, /* one placementId for all sizes  my appnexus bidder */
+      { bidder: 'oftmedia', params: { placementId: '22762548' } },
+      { bidder: '33across', params: { siteId : 'caRVfUiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+      // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
+      // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+      { bidder: 'nobid', params: { siteId: '22049996977' } },
+      { bidder: 'adyoulike', params: { placement: '1bda9195af6bacac48859035dbcca120'}, labelAll: ["US"] },
+      // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
+      // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+      //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+      // { bidder: 'criteo', params: {networkId: '10542'} },
+      { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+      // { bidder: 'criteointl', params: {networkId: '10545'} },
   ];
 
   var mapping_hb = {
@@ -358,20 +358,24 @@ else{
          // });
          ubpbjs.addAdUnits(adUnits);
          ubpbjs.bidderSettings = {
-           'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-           'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-           // 'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-           // 'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-           // 'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-           // 'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-           // 'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-           // 'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
-           // //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-           //
-           // '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-           // 'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-           // 'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-           // 'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+           'appnexus': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.86; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'pubmatic': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.74; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'rubicon': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'openx': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'criteo': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'nobid': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'oftmedia': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.80; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'sovrn': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.81; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
+
+           '33across': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'emx_digital': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'rhythmone': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'eplanning': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'adyoulike': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'smartadserver': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'onetag': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+           'ucfunnel': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} }
          };
          ubpbjs.setConfig({
            floors: {

@@ -183,24 +183,24 @@ function ubadScript() {
     }
   } else {
       // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
-        // if(!(window.location.href== "https://m.docbao.vn/")){
-        //     z1 = document.createElement("div");
-        //     z1.id = "ub-sticky-ad-container";
-        //     z1.className = "ub-sticky-ad-container";
-        //     z1.innerHTML =
-        //         '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
-        //     x1 = document.querySelector("body");
-        //     x1.appendChild(z1);
-        // }
-        // else {
-        //     z1 = document.createElement("div");
-        //     z1.id = "ub-sticky-ad-container";
-        //     z1.className = "ub-sticky-ad-container";
-        //     z1.innerHTML =
-        //         '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
-        //     x1 = document.querySelector("body");
-        //     x1.appendChild(z1);
-        // }
+        if(!(window.location.href== "https://m.docbao.vn/")){
+            z1 = document.createElement("div");
+            z1.id = "ub-sticky-ad-container";
+            z1.className = "ub-sticky-ad-container";
+            z1.innerHTML =
+                '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1625034565032-0"></div>';
+            x1 = document.querySelector("body");
+            x1.appendChild(z1);
+        }
+      //   else {
+      //       z1 = document.createElement("div");
+      //       z1.id = "ub-sticky-ad-container";
+      //       z1.className = "ub-sticky-ad-container";
+      //       z1.innerHTML =
+      //           '<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1616569480504-0"></div>';
+      //       x1 = document.querySelector("body");
+      //       x1.appendChild(z1);
+      //   }
       // }
 
     if((window.location.href== "https://m.docbao.vn/")){
@@ -1434,34 +1434,34 @@ function ubadScript() {
   }
 }
 
-//  if (mobileCheck()) {
-//    // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
-//     if(!(window.location.href== "https://m.docbao.vn/")){
-//         googletag.cmd.push(function () {
-//             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-//               if (event.slot.getAdUnitPath() ==="/21928950349,22612949898/docbao.vn_mb_anchor_320x50"){
-//                     var nodes_anchr = document.getElementById("div-gpt-ad-1625034565032-0").childNodes[0].childNodes;
-//                     if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
-//                         document.getElementById("close_ub-sticky-ad").style.display = "block";
-//                     }
-//               }
-//             });
-//         });
-//     }
-//     // else {
-//     //   googletag.cmd.push(function () {
-//     //       googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-//     //         if (event.slot.getAdUnitPath() ==="/21928950349,22612949898/docbao.vn_mb_anchor_300x100"){
-//     //               var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
-//     //               if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
-//     //                   document.getElementById("close_ub-sticky-ad").style.display = "block";
-//     //               }
-//     //         }
-//     //       });
-//     //   });
-//     // }
-//   // }
-// }
+ if (mobileCheck()) {
+   // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/doi-song').length == 2 || window.location.href== "https://m.docbao.vn/"){}else {
+    if(!(window.location.href== "https://m.docbao.vn/")){
+        googletag.cmd.push(function () {
+            googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+              if (event.slot.getAdUnitPath() ==="/21928950349,22612949898/docbao.vn_mb_anchor_320x50"){
+                    var nodes_anchr = document.getElementById("div-gpt-ad-1625034565032-0").childNodes[0].childNodes;
+                    if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
+                        document.getElementById("close_ub-sticky-ad").style.display = "block";
+                    }
+              }
+            });
+        });
+    }
+    // else {
+    //   googletag.cmd.push(function () {
+    //       googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+    //         if (event.slot.getAdUnitPath() ==="/21928950349,22612949898/docbao.vn_mb_anchor_300x100"){
+    //               var nodes_anchr = document.getElementById("div-gpt-ad-1616569480504-0").childNodes[0].childNodes;
+    //               if (nodes_anchr.length &&nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
+    //                   document.getElementById("close_ub-sticky-ad").style.display = "block";
+    //               }
+    //         }
+    //       });
+    //   });
+    // }
+  // }
+}
 
  function loadAd(id, adUnits) {
     var elm = document.getElementById(id);

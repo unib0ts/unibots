@@ -134,10 +134,10 @@ if (mobileCheck()) {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '21687222' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '22762543' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3854136'} },
         { bidder: 'sovrn', params: {tagid: '957020'} },
-        // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'cp9LcgiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
         // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22604439723' } },
@@ -146,7 +146,7 @@ if (mobileCheck()) {
         // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // // { bidder: 'criteo', params: {networkId: '10542'} },
         // // { bidder: 'criteointl', params: {networkId: '10545'} },
-        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'adyoulike', params: { placement: '4ac3ad3cf9e003e748d80cb65f7642c6'}, labelAll: ["US"] },
       ]
   };

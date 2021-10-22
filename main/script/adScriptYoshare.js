@@ -207,8 +207,8 @@ var adUnits = [];
             { bidder: 'appnexus', params: { placementId: '20132811' } }, /* one placementId for all sizes  my appnexus bidder */
             { bidder: 'sovrn', params: {tagid: '867156'} },
             // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
-           // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-           // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+           { bidder: 'oftmedia', params: { placementId: '22762550' } },
+           { bidder: '33across', params: { siteId : 'cit9hciEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             { bidder: 'openx', params: {unit: '543530140', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
            // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
@@ -238,10 +238,10 @@ var adUnits = [];
         },
         bids: [
           { bidder: 'appnexus', params: { placementId: '20132811' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'sovrn', params: {tagid: '736637'} },
+          { bidder: 'sovrn', params: {tagid: '867157'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2952064'} },
-         // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-         // { bidder: '33across', params: { siteId : 'acSmlCBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+         { bidder: 'oftmedia', params: { placementId: '22762550' } },
+         { bidder: '33across', params: { siteId : 'cit9hciEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
          // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'openx', params: {unit: '543530141', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */

@@ -1,31 +1,31 @@
-// //load apstag.js library
-// !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-//
-// var requestManager = {
-//     adserverRequestSent: false,
-//     aps: false,
-//     prebid: false
-// };
-//
-// //initialize the apstag.js library on the page to allow bidding
-// apstag.init({
-//
-//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-//      adServer: 'googletag',
-//      schain: {
-//           complete: 1,
-//           ver:'1.0',
-//           nodes: [
-//             {
-//                asi:'aps.amazon.com',
-//                sid:'117', // Same seller_id for the publisher in sellers.json
-//                hp:1
-//              }
-//           ],
-//      }
-// });
-//
-// apSlots = []
+//load apstag.js library
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false
+};
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+     adServer: 'googletag',
+     schain: {
+          complete: 1,
+          ver:'1.0',
+          nodes: [
+            {
+               asi:'aps.amazon.com',
+               sid:'117', // Same seller_id for the publisher in sellers.json
+               hp:1
+             }
+          ],
+     }
+});
+
+apSlots = []
 
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksBongdaplus.json';
@@ -1234,8 +1234,8 @@ function ubadScript() {
                   googletag.cmd.push(function () {
                       ubpbjs.que.push(function () {
                           ubpbjs.setTargetingForGPTAsync();
-                          // requestManager.prebid = true;
-                          // biddersBack();
+                          requestManager.prebid = true;
+                          biddersBack();
                           googletag.cmd.push(function () {
                               googletag.pubads().refresh(mapping_full_hb.slots);
                               // googletag.pubads().refresh(mappings_extra_units.slots);
@@ -1373,14 +1373,14 @@ function ubadScript() {
               mapping_full_hb.adId.push(mappings_full_hb_config.adId[i]);
               mapping_full_hb.sizes.push(mappings_full_hb_config.sizes[i]);
 
-              // if(mappings_full_hb_config.isAP[i]){
-              //   apSlotTemp = {
-              //     slotID: mappings_full_hb_config.adId[i],
-              //     slotName: mappings_full_hb_config.adUnitNames[i],
-              //     sizes: mappings_full_hb_config.sizes[i]
-              //   }
-              //   apSlots.push(apSlotTemp);
-              // }
+              if(mappings_full_hb_config.isAP[i]){
+                apSlotTemp = {
+                  slotID: mappings_full_hb_config.adId[i],
+                  slotName: mappings_full_hb_config.adUnitNames[i],
+                  sizes: mappings_full_hb_config.sizes[i]
+                }
+                apSlots.push(apSlotTemp);
+              }
           }
           // else if(mappings_extra_units_config.adUnitNames.includes(x[i].getSlotId().getAdUnitPath())){
           //   mappings_extra_units.slots.push(x[i]);
@@ -1409,7 +1409,7 @@ function ubadScript() {
           // }, 500);
       }
 
-      // callAPStagBids();
+      callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
   }
 

@@ -650,51 +650,51 @@ function mainHbRun(){
   }, FAILSAFE_TIMEOUT);
 }
 
-// function callAPSAds(adCode, ub_slot){
-//   ubpbjs.que.push(function(){
-//     ubpbjs.requestBids({
-//       timeout: PREBID_TIMEOUT,
-//       adUnits: adUnits,
-//       adUnitCodes: adCode,
-//       bidsBackHandler: function() {
-//         // ubpbjs.initAdserverSetHB = true;
-//         googletag.cmd.push(function() {
-//           ubpbjs.que.push(function() {
-//               ubpbjs.setTargetingForGPTAsync();
-//               requestManager.prebid = true;
-//               biddersBack();
-//               // googletag.pubads().refresh(ub_slot);
-//           });
-//         });
-//       }
-//     });
-//   });
-// }
-// function callAPStagBids(){
-//   apstag.fetchBids({
-//     slots: apSlots,
-//      timeout: 2000
-//   },function(bids) {
-//           googletag.cmd.push(function() {
-//               apstag.setDisplayBids();
-//               requestManager.aps = true;
-//               biddersBack();
-//           });
-//       }
-//   );
-// }
-// function biddersBack() {
-//     if (requestManager.aps && requestManager.prebid) {
-//         sendAdserverRequest();
-//     }
-//     return;
-// }
-// function sendAdserverRequest() {
-//     if (requestManager.adserverRequestSent === true) {
-//         return;
-//     }
-//     requestManager.adserverRequestSent = true;
-//     googletag.cmd.push(function() {
-//         googletag.pubads().refresh(mappings.slots);
-//     });
-// }
+function callAPSAds(adCode, ub_slot){
+  ubpbjs.que.push(function(){
+    ubpbjs.requestBids({
+      timeout: PREBID_TIMEOUT,
+      adUnits: adUnits,
+      adUnitCodes: adCode,
+      bidsBackHandler: function() {
+        // ubpbjs.initAdserverSetHB = true;
+        googletag.cmd.push(function() {
+          ubpbjs.que.push(function() {
+              ubpbjs.setTargetingForGPTAsync();
+              requestManager.prebid = true;
+              biddersBack();
+              // googletag.pubads().refresh(ub_slot);
+          });
+        });
+      }
+    });
+  });
+}
+function callAPStagBids(){
+  apstag.fetchBids({
+    slots: apSlots,
+     timeout: 2000
+  },function(bids) {
+          googletag.cmd.push(function() {
+              apstag.setDisplayBids();
+              requestManager.aps = true;
+              biddersBack();
+          });
+      }
+  );
+}
+function biddersBack() {
+    if (requestManager.aps && requestManager.prebid) {
+        sendAdserverRequest();
+    }
+    return;
+}
+function sendAdserverRequest() {
+    if (requestManager.adserverRequestSent === true) {
+        return;
+    }
+    requestManager.adserverRequestSent = true;
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh(mappings.slots);
+    });
+}

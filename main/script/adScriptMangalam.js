@@ -1,18 +1,30 @@
-// //load apstag.js library
-// !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-//
-// var requestManager = {
-//     adserverRequestSent: false,
-//     aps: false,
-//     prebid: false
-// };
-//
-// //initialize the apstag.js library on the page to allow bidding
-// apstag.init({
-//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-//      adServer: 'googletag'
-// });
-// apSlots = []
+//load apstag.js library
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","https://c.amazon-adsystem.com/aax2/apstag.js");
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false
+};
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+     adServer: 'googletag',
+     schain: {
+          complete: 1,
+          ver:'1.0',
+          nodes: [
+            {
+               asi:'aps.amazon.com',
+               sid:'38', // Same seller_id for the publisher in sellers.json
+               hp:1
+             }
+          ],
+     }
+});
+apSlots = []
 
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
@@ -322,39 +334,41 @@ function initAdserver() {
   googletag.cmd.push(function () {
     ubpbjs.que.push(function () {
       ubpbjs.setTargetingForGPTAsync();
+      requestManager.prebid = true;
+      biddersBack();
       googletag.pubads().refresh(mappings.slots);
     });
   });
   // callAds(bids);
 }
 
-function callAds(bids = {}) {
-  let ubBidscheckFlag = false;
-  if (Object.keys(bids).length === 0 && bids.constructor === Object){}
-  else {
-    bids[Object.keys(bids)].bids.forEach((bid) => {
-      if (bid.cpm > 0.01) {
-        ubBidscheckFlag = true;
-      }
-    })
-  }
-
-  if (ubBidscheckFlag) {
-    googletag.cmd.push(function () {
-      ubpbjs.que.push(function () {
-        ubpbjs.setTargetingForGPTAsync();
-        googletag.pubads().refresh(mappings.slots);
-        console.log('HB server request');
-      });
-    });
-  }
-  else{
-    googletag.cmd.push(function () {
-      googletag.pubads().refresh(mappings.slots);
-      console.log('Only Google server request');
-    });
-  }
-}
+// function callAds(bids = {}) {
+//   let ubBidscheckFlag = false;
+//   if (Object.keys(bids).length === 0 && bids.constructor === Object){}
+//   else {
+//     bids[Object.keys(bids)].bids.forEach((bid) => {
+//       if (bid.cpm > 0.01) {
+//         ubBidscheckFlag = true;
+//       }
+//     })
+//   }
+//
+//   if (ubBidscheckFlag) {
+//     googletag.cmd.push(function () {
+//       ubpbjs.que.push(function () {
+//         ubpbjs.setTargetingForGPTAsync();
+//         googletag.pubads().refresh(mappings.slots);
+//         console.log('HB server request');
+//       });
+//     });
+//   }
+//   else{
+//     googletag.cmd.push(function () {
+//       googletag.pubads().refresh(mappings.slots);
+//       console.log('Only Google server request');
+//     });
+//   }
+// }
 
 
 var botmanCalled = false;
@@ -433,20 +447,18 @@ function googlePush(){
 }
 
 if (document.getElementById('div-ub-1')){
-  // apSlotTemp = {
-  //   slotID: 'div-ub-1',
-  //   slotName: '/21928950349,22623748747/mangalam.com_nb_320x50',
-  //   sizes: mappings.sizes,
-  // }
-  // apSlots.push(apSlotTemp);
+  apSlotTemp = {
+    slotID: 'div-ub-1',
+    slotName: '/21928950349,22623748747/mangalam.com_nb_320x50',
+    sizes: mappings.sizes,
+  }
+  apSlots.push(apSlotTemp);
 
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349,22623748747/mangalam.com_nb_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-ub-1');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349,22623748747/mangalam.com_nb_320x50']);
@@ -455,20 +467,18 @@ if (document.getElementById('div-ub-1')){
   });
 }
 if (document.getElementById('unibot1')){
-  // apSlotTemp = {
-  //   slotID: 'div-gpt-ad-1598766449306-0',
-  //   slotName: '/21959913182/mangalam.com_hb_300x250_1',
-  //   sizes: mappings.sizes,
-  // }
-  // apSlots.push(apSlotTemp);
+  apSlotTemp = {
+    slotID: 'div-gpt-ad-1598766449306-0',
+    slotName: '/21959913182/mangalam.com_hb_300x250_1',
+    sizes: mappings.sizes,
+  }
+  apSlots.push(apSlotTemp);
 
   mappings.slotNumbers.push(2);
   mappings.adCode.push('/21959913182/mangalam.com_hb_300x250_1');
   mappings.sizes.push(div_2_sizes);
   mappings.adId.push('div-gpt-ad-1598766449306-0');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot2) {
         ub_checkAdRendered('div-gpt-ad-1598766449306-0', ub_slot2, ['/21959913182/mangalam.com_hb_300x250_1']);
@@ -477,20 +487,18 @@ if (document.getElementById('unibot1')){
   });
 }
 if (document.getElementById('unibot2')){
-  // apSlotTemp = {
-  //   slotID: 'div-gpt-ad-1598766482812-0',
-  //   slotName: '/21959913182/mangalam.com_hb_300x250_2',
-  //   sizes: mappings.sizes,
-  // }
-  // apSlots.push(apSlotTemp);
+  apSlotTemp = {
+    slotID: 'div-gpt-ad-1598766482812-0',
+    slotName: '/21959913182/mangalam.com_hb_300x250_2',
+    sizes: mappings.sizes,
+  }
+  apSlots.push(apSlotTemp);
 
   mappings.slotNumbers.push(3);
   mappings.adCode.push('/21959913182/mangalam.com_hb_300x250_2');
   mappings.sizes.push(div_3_sizes);
   mappings.adId.push('div-gpt-ad-1598766482812-0');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot3) {
         ub_checkAdRendered('div-gpt-ad-1598766482812-0', ub_slot3, ['/21959913182/mangalam.com_hb_300x250_2']);
@@ -499,20 +507,18 @@ if (document.getElementById('unibot2')){
   });
 }
 if (document.getElementById('unibot3')){
-  // apSlotTemp = {
-  //   slotID: 'div-gpt-ad-1598766502024-0',
-  //   slotName: '/21959913182/mangalam.com_hb_300x250_3',
-  //   sizes: mappings.sizes,
-  // }
-  // apSlots.push(apSlotTemp);
+  apSlotTemp = {
+    slotID: 'div-gpt-ad-1598766502024-0',
+    slotName: '/21959913182/mangalam.com_hb_300x250_3',
+    sizes: mappings.sizes,
+  }
+  apSlots.push(apSlotTemp);
 
   mappings.slotNumbers.push(4);
   mappings.adCode.push('/21959913182/mangalam.com_hb_300x250_3');
   mappings.sizes.push(div_4_sizes);
   mappings.adId.push('div-gpt-ad-1598766502024-0');
   googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot4) {
         ub_checkAdRendered('div-gpt-ad-1598766502024-0', ub_slot4, ['/21959913182/mangalam.com_hb_300x250_3']);
@@ -520,6 +526,8 @@ if (document.getElementById('unibot3')){
     });
   });
 }
+
+callAPStagBids(); //Ap part
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

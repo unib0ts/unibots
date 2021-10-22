@@ -1,18 +1,30 @@
-// //load apstag.js library
-// !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-//
-// var requestManager = {
-//     adserverRequestSent: false,
-//     aps: false,
-//     prebid: false
-// };
-//
-// //initialize the apstag.js library on the page to allow bidding
-// apstag.init({
-//      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-//      adServer: 'googletag'
-// });
-// apSlots = []
+//load apstag.js library
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","https://c.amazon-adsystem.com/aax2/apstag.js");
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false
+};
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+
+     pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+     adServer: 'googletag',
+     schain: {
+          complete: 1,
+          ver:'1.0',
+          nodes: [
+            {
+               asi:'aps.amazon.com',
+               sid:'4', // Same seller_id for the publisher in sellers.json
+               hp:1
+             }
+          ],
+     }
+});
+apSlots = []
 
 // var cachebuster = Math.round(new Date().getTime() / 1000);
 // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/madhyamam/script.min.js?cb='+cachebuster;
@@ -770,6 +782,8 @@ function initAdserver() {
   googletag.cmd.push(function () {
     ubpbjs.que.push(function () {
       ubpbjs.setTargetingForGPTAsync();
+      requestManager.prebid = true;
+      biddersBack();
       googletag.pubads().refresh(mappings.slots);
     });
   });
@@ -884,6 +898,13 @@ if (document.getElementById('div-ub-1')){
   mappings.adCode.push('/21928950349,22623753406/madhyamam.com_HB_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-ub-1');
+  apSlotTemp = {
+    slotID: mappings.adId[0],
+    slotName: mappings.adCode[0],
+    sizes: mappings.sizes
+  }
+  apSlots.push(apSlotTemp);
+  callAPStagBids(); //Ap part
   googletag.cmd.push(function() {
     // callAPStagBids(); //Ap part
     // callAPSAds(mappings.adCode, mappings.slots);

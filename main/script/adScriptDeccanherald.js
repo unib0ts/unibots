@@ -61,7 +61,7 @@ const customConfigObjectA = {
 // if(document.getElementById('unibots-ad')){
   adUnits1 =
   {
-      code: '/21956916242/deccanherald.com_ipl_320x50',
+      code: '/21928950349/deccanherald.com_ub_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -70,11 +70,11 @@ const customConfigObjectA = {
       bids: [
         { bidder: 'appnexus', params: { placementId: '20215249' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
-        { bidder: '33across', params: { siteId : 'c37nkyNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        // { bidder: '33across', params: { siteId : 'c37nkyNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         // { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
-        { bidder: 'sovrn', params: {tagid: '774099'} },
-        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206176'} },
-        { bidder: 'openx', params: {unit: '543530486', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        // { bidder: 'sovrn', params: {tagid: '774099'} },
+        // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206176'} },
+        // { bidder: 'openx', params: {unit: '543530486', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22104180276'} },
@@ -118,7 +118,7 @@ var mappings = {
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
 //   slotID: 'div-gpt-ad-1617891847140-0',
-//   slotName: '/21956916242/deccanherald.com_ipl_320x50',
+//   slotName: '/21928950349/deccanherald.com_ub_320x50',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -297,7 +297,7 @@ function googlePush(){
 
 // if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21956916242/deccanherald.com_ipl_320x50');
+  mappings.adCode.push('/21928950349/deccanherald.com_ub_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1617891847140-0');
   googletag.cmd.push(function() {
@@ -305,7 +305,7 @@ function googlePush(){
     // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1617891847140-0', ub_slot1, ['/21956916242/deccanherald.com_ipl_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1617891847140-0', ub_slot1, ['/21928950349/deccanherald.com_ub_320x50']);
       }
     });
   });

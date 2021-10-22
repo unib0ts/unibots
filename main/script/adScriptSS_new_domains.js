@@ -11,7 +11,7 @@ if(typeof customConfigObjectA === 'undefined'){
   //   s1.type = "text/javascript";
   //   document.getElementsByTagName('head')[0].appendChild(s3);
   // }
-  if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
+  // if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
     url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget220/script.js?cb='+cachebuster;
     // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
@@ -19,9 +19,9 @@ if(typeof customConfigObjectA === 'undefined'){
     s3 = document.createElement('script');
     s3.src = url;
     s3.async = "async";
-    s1.type = "text/javascript";
+    s3.type = "text/javascript";
     document.getElementsByTagName('head')[0].appendChild(s3);
-  }
+  // }
   // var s0 = document.createElement('script');
   // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   // s0.type = "text/javascript";
@@ -143,7 +143,7 @@ if(typeof customConfigObjectA === 'undefined'){
   //       }
   //   ];
   // }
-   if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
+   // if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var adUnits = [
         // {
         //   code: '/21959913182/sakshi.com_NB_320x50',
@@ -210,7 +210,7 @@ if(typeof customConfigObjectA === 'undefined'){
           ]
         }
     ];
-  }
+  // }
 
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -365,7 +365,7 @@ if(typeof customConfigObjectA === 'undefined'){
   //   }
   //  }
   // }
- if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
+ // if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
     var ub_slot1;
     function addNewsBotAd(){
       googletag.cmd.push(function() {
@@ -424,7 +424,7 @@ if(typeof customConfigObjectA === 'undefined'){
         }
     	 }
     }
-  }
+  // }
 
   var mapping_full_hb = {
     slots: [],

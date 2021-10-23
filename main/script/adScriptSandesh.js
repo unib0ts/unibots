@@ -19,6 +19,15 @@ var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
+// if (window.location.href == "https://sandesh.com/gujarat-st-workers-go-on-strike-for-tomorrow-night/") {
+//     url ="https://cdn.unibots.in/player.js";
+//     ub_vs = document.createElement("script");
+//     ub_vs.src = url;
+//     ub_vs.async = "async";
+//     ub_vs.type = "text/javascript";
+//     document.getElementsByTagName("head")[0].appendChild(ub_vs);
+// }
+
 var GEO_CODE = '';
 (function (){
   var request = new XMLHttpRequest();
@@ -110,7 +119,7 @@ var adUnits = [];
         { bidder: 'openx', params: {unit: '543530444', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
       	{ bidder: 'rhythmone', params: { placementId: '205382' } }, /* one placementId for all sizes */
       	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-      	{ bidder: '33across', params: { siteId : 'bSOt5QBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+      	{ bidder: '33across', params: { siteId : 'bNlDBeiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
       	{ bidder: 'emx_digital', params: { tagid: '97517' } }, /* sizeless */
         { bidder: 'nobid', params: { siteId : '21986889220'} },
         // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -232,17 +241,31 @@ function refreshBid(ub_slot, adCode) {
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
       bidsBackHandler: function (bids) {
-        callAds(bids);
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot]);
+            // console.log('HB server request');
+          });
+        });
+        // callAds(bids);
       }
     });
   });
 }
 
-function initAdserver(bids = {}) {
+function initAdserver() {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  callAds(bids);
+  googletag.cmd.push(function () {
+    ubpbjs.que.push(function () {
+      ubpbjs.setTargetingForGPTAsync();
+      googletag.pubads().refresh(mappings.slots);
+    });
+  });
+  // callAds(bids);
 }
+
 
 function callAds(bids = {}) {
   let ubBidscheckFlag = false;
@@ -408,7 +431,17 @@ function mainHbRun(){
         'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
       };
       ubpbjs.setConfig({
-
+        floors: {
+          currency: 'USD',
+          // skipRate: 5,
+          // modelVersion: 'Sports Ad Unit Floors',
+          schema: {
+              fields: ['mediaType']
+          },
+          values: {
+              'banner': 0.01,
+          }
+        },
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

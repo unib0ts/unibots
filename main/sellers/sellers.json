@@ -705,6 +705,24 @@
           "seller_id": "118",
           "name": "docbao",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.akilanews.com",
+          "seller_id": "119",
+          "name": "akilanews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.hindutamil.in",
+          "seller_id": "120",
+          "name": "hindutamil",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.socialnews.xyz/",
+          "seller_id": "121",
+          "name": "socialnews",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

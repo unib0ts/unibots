@@ -64,9 +64,9 @@ if (mobileCheck()) {
          // { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
          { bidder: 'oftmedia', params: { placementId: '20846125' } },
-         // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+          { bidder: '33across', params: { siteId : 'bFsuReiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
          { bidder: 'emx_digital', params: { tagid: '147562' } }, /* sizeless */
-         // { bidder: 'openx', params: {unit: '543851451', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+         { bidder: 'openx', params: {unit: '543987779', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
          { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
          // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22316085870'} },
@@ -100,7 +100,7 @@ if (mobileCheck()) {
        { bidder: 'oftmedia', params: { placementId: '20846125' } },
        // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
        { bidder: 'emx_digital', params: { tagid: '147562' } }, /* sizeless */
-       // { bidder: 'openx', params: {unit: '543851451', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        { bidder: 'openx', params: {unit: '543987779', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
        // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22316085870'} },
@@ -166,7 +166,17 @@ ubpbjs.que.push(function() {
       'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
     };
     ubpbjs.setConfig({
-
+      floors: {
+        currency: 'USD',
+        // skipRate: 5,
+        // modelVersion: 'Sports Ad Unit Floors',
+        schema: {
+            fields: ['mediaType']
+        },
+        values: {
+            'banner': 0.01,
+        }
+      },
     	priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
@@ -247,17 +257,31 @@ function refreshBid(ub_slot, adCode) {
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
       bidsBackHandler: function (bids) {
-        callAds(bids);
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot]);
+            // console.log('HB server request');
+          });
+        });
+        // callAds(bids);
       }
     });
   });
 }
 
-function initAdserver(bids = {}) {
+function initAdserver() {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  callAds(bids);
+  googletag.cmd.push(function () {
+    ubpbjs.que.push(function () {
+      ubpbjs.setTargetingForGPTAsync();
+      googletag.pubads().refresh(mappings.slots);
+    });
+  });
+  // callAds(bids);
 }
+
 
 function callAds(bids = {}) {
   let ubBidscheckFlag = false;

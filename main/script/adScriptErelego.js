@@ -1,43 +1,44 @@
-mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksBongdaplus.json';
-mybotBlockedClientName = '';
-test= window.location.host
-// 'm.docbao.vn'
-test.split(".")
+mybotBlockedClientsName = ['astrologycircle', 'boldsky', 'daijiworld', 'drivespark', 'filmibeat', 'gizbot', 'shrtechs', 'sunsigns'];
 
-if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+mybotDomainUrl = (window.location.host).split(".");
+mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));
+mybotBlockedClientName = mybotBlockedClientName.toString();
 
-  var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/erelego/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
 
-  request.open('GET', url, true);
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText;
-      data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
-      if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          return false;
-        }
-        else{
-          ubadScript();
-        }
-      }
-    }
-    else {
-      console.log('Block Check Request failed');
-      ubadScript();
-    }
-  };
-  request.onerror = function() {
-    console.log('Request failed');
-    ubadScript();
-  };
-  request.send();
+var ISUBP_BLOCKED = false;
+
+function checkBlocked(url, clientName) {
+  return new Promise((resolve, reject) => {
+      let urlToCheck = window.location.host + window.location.pathname + window.location.search;
+      fetch(url)
+          .then(response => response.json())
+          .then(data => {
+              data = data[clientName];
+              if (data) {
+                  data = data.urls;
+                  if (data.includes(urlToCheck)) {
+                      resolve('Page is blocked');
+                  }
+                  else {
+                      reject('Page is allowed');
+                  }
+              }
+          }).catch(() => {
+              reject('Block Check Request failed')
+          });
+  });
 }
-else{
-  ubadScript();
+
+checkBlocked(mybotBlockedUrl, mybotBlockedClientName).then(() => {
+     ISUBP_BLOCKED = true;
+    console.log('Page is allowed for UBP');
+}).catch(() => {
+    console.log('Page is not allowed for UBP');
+})
+
+function capitalizeFLetter(input) {
+  var string = input;
+  x = string.charAt(0).toUpperCase() + string.slice(1);
+	 return x;
 }

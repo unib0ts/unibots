@@ -41,32 +41,32 @@ else{
 }
 
   // // load apstag.js library
-  // !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-  //
-  // var requestManager = {
-  //     adserverRequestSent: false,
-  //     aps: false,
-  //     prebid: false
-  // };
-  //
-  // //initialize the apstag.js library on the page to allow bidding
-  // apstag.init({
-  //
-  //      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-  //      adServer: 'googletag',
-  //      schain: {
-  //           complete: 1,
-  //           ver:'1.0',
-  //           nodes: [
-  //             {
-  //                asi:'aps.amazon.com',
-  //                sid:'116', // Same seller_id for the publisher in sellers.json
-  //                hp:1
-  //              }
-  //           ],
-  //      }
-  // });
-  // apSlots = []
+  !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+  var requestManager = {
+      adserverRequestSent: false,
+      aps: false,
+      prebid: false
+  };
+
+  //initialize the apstag.js library on the page to allow bidding
+  apstag.init({
+
+       pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+       adServer: 'googletag',
+       schain: {
+            complete: 1,
+            ver:'1.0',
+            nodes: [
+              {
+                 asi:'aps.amazon.com',
+                 sid:'116', // Same seller_id for the publisher in sellers.json
+                 hp:1
+               }
+            ],
+       }
+  });
+  apSlots = []
 
   mybotGACode = 'G-J9G4W35NTP';
   mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
@@ -134,10 +134,10 @@ if (mobileCheck()) {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '21687222' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '22762543' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3854136'} },
         { bidder: 'sovrn', params: {tagid: '957020'} },
-        // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'cp9LcgiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
         // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22604439723' } },
@@ -146,7 +146,7 @@ if (mobileCheck()) {
         // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // // { bidder: 'criteo', params: {networkId: '10542'} },
         // // { bidder: 'criteointl', params: {networkId: '10545'} },
-        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'adyoulike', params: { placement: '4ac3ad3cf9e003e748d80cb65f7642c6'}, labelAll: ["US"] },
       ]
   };
@@ -269,6 +269,17 @@ function mybotubScript() {
         'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
       };
       ubpbjs.setConfig({
+        floors: {
+          currency: 'USD',
+          // skipRate: 5,
+          // modelVersion: 'Sports Ad Unit Floors',
+          schema: {
+              fields: ['mediaType']
+          },
+          values: {
+              'banner': 0.01,
+          }
+        },
         priceGranularity: customConfigObjectA,
         userSync: {
             iframeEnabled: true,
@@ -314,13 +325,13 @@ function mybotubScript() {
     mappings.adCode.push('/21928950349,22624969429/dantri.com.vn_mb_anchor_320x50');
     mappings.sizes.push(div_1_sizes);
     mappings.adId.push('div-gpt-ad-1624268341453-0');
-    // apSlotTemp = {
-    //   slotID: mappings.adId[0],
-    //   slotName: mappings.adCode[0],
-    //   sizes: mappings.sizes
-    // }
-    // apSlots.push(apSlotTemp);
-    // callAPStagBids(); //Ap part
+    apSlotTemp = {
+      slotID: mappings.adId[0],
+      slotName: mappings.adCode[0],
+      sizes: mappings.sizes
+    }
+    apSlots.push(apSlotTemp);
+    callAPStagBids(); //Ap part
     googletag.cmd.push(function() {
       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
         if (event.slot === ub_slot1) {
@@ -364,16 +375,31 @@ function refreshBid(ub_slot, adCode) {
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
       bidsBackHandler: function (bids) {
-        callAds(bids);
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot]);
+            // console.log('HB server request');
+          });
+        });
+        // callAds(bids);
       }
     });
   });
 }
 
-function initAdserver(bids = {}) {
+function initAdserver() {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  callAds(bids);
+  googletag.cmd.push(function () {
+    ubpbjs.que.push(function () {
+      ubpbjs.setTargetingForGPTAsync();
+      requestManager.prebid = true;
+      biddersBack();
+      googletag.pubads().refresh(mappings.slots);
+    });
+  });
+  // callAds(bids);
 }
 
 function callAds(bids = {}) {

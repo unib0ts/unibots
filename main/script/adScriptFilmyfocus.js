@@ -106,7 +106,7 @@ const customConfigObjectA = {
         { bidder: '33across', params: { siteId : 'cZwHlAWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '103697' } }, /* sizeless */
         { bidder: 'sovrn', params: {tagid: '721747'} },
-        // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
+        { bidder: 'openx', params: {unit: '545727764', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -227,17 +227,31 @@ function refreshBid(ub_slot, adCode) {
       timeout: PREBID_TIMEOUT,
       adUnitCodes: adCode,
       bidsBackHandler: function (bids) {
-        callAds(bids);
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slot]);
+            // console.log('HB server request');
+          });
+        });
+        // callAds(bids);
       }
     });
   });
 }
 
-function initAdserver(bids = {}) {
+function initAdserver() {
   if (ubpbjs.initAdserverSet) return;
   ubpbjs.initAdserverSet = true;
-  callAds(bids);
+  googletag.cmd.push(function () {
+    ubpbjs.que.push(function () {
+      ubpbjs.setTargetingForGPTAsync();
+      googletag.pubads().refresh(mappings.slots);
+    });
+  });
+  // callAds(bids);
 }
+
 
 function callAds(bids = {}) {
   let ubBidscheckFlag = false;
@@ -360,7 +374,17 @@ function mainHbRun(){
         'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
       };
       ubpbjs.setConfig({
-
+        floors: {
+          currency: 'USD',
+          // skipRate: 5,
+          // modelVersion: 'Sports Ad Unit Floors',
+          schema: {
+              fields: ['mediaType']
+          },
+          values: {
+              'banner': 0.01,
+          }
+        },
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

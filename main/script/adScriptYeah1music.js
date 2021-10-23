@@ -107,9 +107,9 @@ else{
             // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
             // { bidder: 'criteo', params: {networkId: '10542'} },
             // { bidder: 'criteointl', params: {networkId: '10545'} },
-            // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-            // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-            // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            { bidder: 'adyoulike', params: { placement: '03feaefca3c7ee7d1bdb9998ad0731a3'}, labelAll: ["US"] },
+            { bidder: 'oftmedia', params: { placementId: '22762549' } },
+            { bidder: '33across', params: { siteId : 'cev0FAiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"]  }, /*All sizes*/
             // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             { bidder: 'openx', params: {unit: '543981218', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
             // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
@@ -142,9 +142,9 @@ else{
           // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-          // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            { bidder: 'adyoulike', params: { placement: '03feaefca3c7ee7d1bdb9998ad0731a3'}, labelAll: ["US"] },
+          { bidder: 'oftmedia', params: { placementId: '22762549' } },
+          { bidder: '33across', params: { siteId : 'cev0FAiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"]  }, /*All sizes*/
           // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
           { bidder: 'openx', params: {unit: '543981219', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // // // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */

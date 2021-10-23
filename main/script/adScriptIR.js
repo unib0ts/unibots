@@ -102,9 +102,9 @@ if(typeof customConfigObjectA === 'undefined'){
         }]
     };
 
-    currentDate = new Date();
-    currentTS = currentDate.getDate();
-    if((1<= currentTS) && (currentTS<=10)){
+    // currentDate = new Date();
+    // currentTS = currentDate.getDate();
+    // if((1<= currentTS) && (currentTS<=10)){
       if (document.getElementById('ATD_Ad_IR_320x50')) {
         adUnits1 =
         {
@@ -115,12 +115,12 @@ if(typeof customConfigObjectA === 'undefined'){
                 }
             },
             bids: [
-            // { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
+            { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
             // // { bidder: 'sovrn', params: {tagid: '777762'} },
             // // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
             // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
             // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
             // // { bidder: 'criteo', params: {networkId: '10542'} },
             // // { bidder: 'criteointl', params: {networkId: '10545'} },
@@ -139,79 +139,79 @@ if(typeof customConfigObjectA === 'undefined'){
         };
         adUnits.push(adUnits1);
       }
-    }
-    else if ((11<= currentTS) && (currentTS<=20)) {
-      if (document.getElementById('ATD_Ad_IR_320x50')) {
-        adUnits1 =
-        {
-            code: '/22153349741/indianrailways_hb_320x50',
-            mediaTypes: {
-                banner: {
-                    sizes: div_1_sizes
-                }
-            },
-            bids: [
-            // { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
-            // // { bidder: 'sovrn', params: {tagid: '777762'} },
-            // // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-            // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-            // // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
-            // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
-            // { bidder: 'criteo', params: {networkId: '10542'} },
-            // { bidder: 'criteointl', params: {networkId: '10545'} },
-            // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-            // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-            // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-            // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-            // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            // { bidder: 'rhythmone', params: { placementId: '230378'}}, /* one placementId for all sizes */
-            // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            //  { bidder: 'nobid', params: { siteId : '22125676635'} },
-              // { bidder: 'criteo', params: {networkId: '4902'} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-            ]
-        };
-        adUnits.push(adUnits1);
-      }
-    }
-    else {
-      if (document.getElementById('ATD_Ad_IR_320x50')) {
-        adUnits1 =
-        {
-            code: '/22142075243/indianrailways_hb_320x50',
-            mediaTypes: {
-                banner: {
-                    sizes: div_1_sizes
-                }
-            },
-            bids: [
-            // { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
-            // // { bidder: 'sovrn', params: {tagid: '777762'} },
-            // // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-            // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-            // // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
-            // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
-            // { bidder: 'criteo', params: {networkId: '10542'} },
-            // { bidder: 'criteointl', params: {networkId: '10545'} },
-            // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-            // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-            // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-            // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-            // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            // { bidder: 'rhythmone', params: { placementId: '230378'}}, /* one placementId for all sizes */
-            // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-            //  { bidder: 'nobid', params: { siteId : '22125676635'} },
-              // { bidder: 'criteo', params: {networkId: '4902'} },
-              //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
-            ]
-        };
-        adUnits.push(adUnits1);
-     }
-    }
+    // }
+    // else if ((11<= currentTS) && (currentTS<=20)) {
+    //   if (document.getElementById('ATD_Ad_IR_320x50')) {
+    //     adUnits1 =
+    //     {
+    //         code: '/22082859479,22623808135/indianrail.gov.in_UB_320x50',
+    //         mediaTypes: {
+    //             banner: {
+    //                 sizes: div_1_sizes
+    //             }
+    //         },
+    //         bids: [
+    //         // { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
+    //         // // { bidder: 'sovrn', params: {tagid: '777762'} },
+    //         // // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    //         // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+    //         // // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    //         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
+    //         // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
+    //         // { bidder: 'criteo', params: {networkId: '10542'} },
+    //         // { bidder: 'criteointl', params: {networkId: '10545'} },
+    //         // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+    //         // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+    //         // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+    //         // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+    //         // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+    //         // { bidder: 'rhythmone', params: { placementId: '230378'}}, /* one placementId for all sizes */
+    //         // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    //         //  { bidder: 'nobid', params: { siteId : '22125676635'} },
+    //           // { bidder: 'criteo', params: {networkId: '4902'} },
+    //           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    //           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+    //         ]
+    //     };
+    //     adUnits.push(adUnits1);
+    //   }
+    // }
+    // else {
+    //   if (document.getElementById('ATD_Ad_IR_320x50')) {
+    //     adUnits1 =
+    //     {
+    //         code: '/22082859479,22623808135/indianrail.gov.in_UB_320x50',
+    //         mediaTypes: {
+    //             banner: {
+    //                 sizes: div_1_sizes
+    //             }
+    //         },
+    //         bids: [
+    //         // { bidder: 'appnexus', params: { placementId: '20253127' } }, /* one placementId for all sizes  my appnexus bidder */
+    //         // // { bidder: 'sovrn', params: {tagid: '777762'} },
+    //         // // { bidder: 'smartadserver', params: { siteId: '372446', pageId: '1309517', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    //         // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+    //         // // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    //         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
+    //         // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
+    //         // { bidder: 'criteo', params: {networkId: '10542'} },
+    //         // { bidder: 'criteointl', params: {networkId: '10545'} },
+    //         // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+    //         // // // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
+    //         // // // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+    //         // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+    //         // { bidder: 'openx', params: {unit: '543530413', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+    //         // { bidder: 'rhythmone', params: { placementId: '230378'}}, /* one placementId for all sizes */
+    //         // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+    //         //  { bidder: 'nobid', params: { siteId : '22125676635'} },
+    //           // { bidder: 'criteo', params: {networkId: '4902'} },
+    //           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+    //           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+    //         ]
+    //     };
+    //     adUnits.push(adUnits1);
+    //  }
+    // }
 
     // ======== DO NOT EDIT BELOW THIS LINE =========== //
     var googletag = googletag || {};
@@ -247,27 +247,37 @@ if(typeof customConfigObjectA === 'undefined'){
         ubpbjs.addAdUnits(adUnits);
         ubpbjs.aliasBidder('criteo','criteointl');
         ubpbjs.bidderSettings = {
-          'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-          'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-          'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-          'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-          'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-          'criteointl': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-          'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-          'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-          'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+          'appnexus': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.86; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'pubmatic': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.74; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'rubicon': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'openx': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'criteo': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'nobid': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'oftmedia': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.80; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'sovrn': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.81; temp = temp - 0.0323; return temp>0? temp: 0;} },
           //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-          'onetag': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-          // 'sonobi': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
-          // 'smartadserver': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.85; } },
 
-          '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-          'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-          'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-          'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+          '33across': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'emx_digital': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'rhythmone': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'eplanning': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'adyoulike': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'smartadserver': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'onetag': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+          'ucfunnel': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} }
         };
         ubpbjs.setConfig({
-
+          floors: {
+            currency: 'USD',
+            // skipRate: 5,
+            // modelVersion: 'Sports Ad Unit Floors',
+            schema: {
+                fields: ['mediaType']
+            },
+            values: {
+                'banner': 0.01,
+            }
+          },
           priceGranularity: customConfigObjectA,
         //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
           //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
@@ -325,18 +335,19 @@ if(typeof customConfigObjectA === 'undefined'){
       slotNumbers: [],
       sizes: [],
       adId: [],
-      renderedFlag: [false, false, false]
+      renderedFlag: [false]
     };
 
-    if((1<= currentTS) && (currentTS<=10)){
-     ubad1();
-    }
-    else if ((11<= currentTS) && (currentTS<=20)) {
-     ubad2();
-    }
-    else {
-      ubad3();
-    }
+    // if((1<= currentTS) && (currentTS<=10)){
+    //  ubad1();
+    // }
+    // else if ((11<= currentTS) && (currentTS<=20)) {
+    //  ubad2();
+    // }
+    // else {
+    //   ubad3();
+    // }
+
     function ub_checkAdRendered(adId, ub_slot, adCode){
       ub_slotNum = ub_slot[ub_slot.length-1]-1;
       if(!mappings.renderedFlag[ub_slotNum]){
@@ -403,54 +414,62 @@ if(typeof customConfigObjectA === 'undefined'){
     }
 
     function refreshBid(ub_slot, adCode) {
-      ubpbjs.que.push(function(){
+      ubpbjs.que.push(function () {
         ubpbjs.requestBids({
           timeout: PREBID_TIMEOUT,
           adUnitCodes: adCode,
-          bidsBackHandler: function() {
-            googletag.cmd.push(function() {
-              ubpbjs.que.push(function() {
-                  ubpbjs.setTargetingForGPTAsync();
-                  googletag.pubads().refresh([ub_slot]);
-                  // var adsCalled = false;
-                  // for(var i=0;i<x.length;i++){
-                  //   var bc = x[i].bidderCode;
-                  //   if(bc=="openx"){
-                  //     adsCalled = true;
-                  //     callBotman();
-                  //   }
-                  // }
-                  // if(!adsCalled){
-                  //   callAdsUB();
-                  // }
+          bidsBackHandler: function (bids) {
+            googletag.cmd.push(function () {
+              ubpbjs.que.push(function () {
+                ubpbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh([ub_slot]);
+                // console.log('HB server request');
               });
             });
+            // callAds(bids);
           }
         });
       });
     }
 
     function initAdserver() {
-        if (ubpbjs.initAdserverSet) return;
-        ubpbjs.initAdserverSet = true;
-        googletag.cmd.push(function() {
-            ubpbjs.que.push(function() {
-                ubpbjs.setTargetingForGPTAsync();
-                googletag.pubads().refresh(mappings.slots);
-                // var x = ubpbjs.getAllPrebidWinningBids();
-                // var adsCalled = false;
-                // for(var i=0;i<x.length;i++){
-                //   var bc = x[i].bidderCode;
-                //   if(bc=="openx"){
-                //     adsCalled = true;
-                //     callBotman();
-                //   }
-                // }
-                // if(!adsCalled){
-                //   callAdsUB();
-                // }
-            });
+      if (ubpbjs.initAdserverSet) return;
+      ubpbjs.initAdserverSet = true;
+      googletag.cmd.push(function () {
+        ubpbjs.que.push(function () {
+          ubpbjs.setTargetingForGPTAsync();
+          googletag.pubads().refresh(mappings.slots);
         });
+      });
+      // callAds(bids);
+    }
+
+    function callAds(bids = {}) {
+      let ubBidscheckFlag = false;
+      if (Object.keys(bids).length === 0 && bids.constructor === Object){}
+      else {
+        bids[Object.keys(bids)].bids.forEach((bid) => {
+          if (bid.cpm > 0.01) {
+            ubBidscheckFlag = true;
+          }
+        })
+      }
+
+      if (ubBidscheckFlag) {
+        googletag.cmd.push(function () {
+          ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(mappings.slots);
+            console.log('HB server request');
+          });
+        });
+      }
+      else{
+        googletag.cmd.push(function () {
+          googletag.pubads().refresh(mappings.slots);
+          console.log('Only Google server request');
+        });
+      }
     }
 
     // var botmanCalled = false;
@@ -523,7 +542,7 @@ if(typeof customConfigObjectA === 'undefined'){
         googletag.enableServices();
       });
     }
-    function ubad1() {
+    // function ubad1() {
       if (document.getElementById('ATD_Ad_IR_320x50')) {
         document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
         // apSlotTemp = {
@@ -547,59 +566,59 @@ if(typeof customConfigObjectA === 'undefined'){
           });
         });
      }
-    }
-    function ubad2() {
-      if (document.getElementById('ATD_Ad_IR_320x50')) {
-        document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot2;
-
-        // apSlotTemp = {
-        //   slotID: 'div-gpt-ad-1626241401208-0',
-        //   slotName: '/22153349741/indianrailways_hb_320x50',
-        //   sizes: mappings.sizes,
-        // }
-        // apSlots.push(apSlotTemp);
-
-
-        mappings.slotNumbers.push(2);
-        mappings.adCode.push('/22153349741/indianrailways_hb_320x50');
-        mappings.sizes.push(div_1_sizes);
-        mappings.adId.push('div-gpt-ad-1626241401208-0');
-        googletag.cmd.push(function() {
-          // callAPStagBids(); //Ap part
-          // callAPSAds(mappings.adCode, mappings.slots);
-          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === ub_slot2) {
-              ub_checkAdRendered('div-gpt-ad-1626241401208-0', ub_slot2, ['/22153349741/indianrailways_hb_320x50']);
-            }
-          });
-        });
-     }
-    }
-    function ubad3() {
-      if (document.getElementById('ATD_Ad_IR_320x50')) {
-        document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot3;
-
-        // apSlotTemp = {
-        //   slotID: 'div-gpt-ad-1602953575560-0',
-        //   slotName: '/22142075243/indianrailways_hb_320x50',
-        //   sizes: mappings.sizes,
-        // }
-        // apSlots.push(apSlotTemp);
-        mappings.slotNumbers.push(3);
-        mappings.adCode.push('/22142075243/indianrailways_hb_320x50');
-        mappings.sizes.push(div_1_sizes);
-        mappings.adId.push('div-gpt-ad-1602953575560-0');
-        googletag.cmd.push(function() {
-          // callAPStagBids(); //Ap part
-          // callAPSAds(mappings.adCode, mappings.slots);
-          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-            if (event.slot === ub_slot3) {
-              ub_checkAdRendered('div-gpt-ad-1602953575560-0', ub_slot3, ['/22142075243/indianrailways_hb_320x50']);
-            }
-          });
-        });
-     }
-    }
+    // }
+    // function ubad2() {
+    //   if (document.getElementById('ATD_Ad_IR_320x50')) {
+    //     document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot2;
+    //
+    //     // apSlotTemp = {
+    //     //   slotID: 'div-gpt-ad-1626241401208-0',
+    //     //   slotName: '/22153349741/indianrailways_hb_320x50',
+    //     //   sizes: mappings.sizes,
+    //     // }
+    //     // apSlots.push(apSlotTemp);
+    //
+    //
+    //     mappings.slotNumbers.push(2);
+    //     mappings.adCode.push('/22082859479,22623808135/indianrail.gov.in_UB_320x50');
+    //     mappings.sizes.push(div_1_sizes);
+    //     mappings.adId.push('div-gpt-ad-1626241401208-0');
+    //     googletag.cmd.push(function() {
+    //       // callAPStagBids(); //Ap part
+    //       // callAPSAds(mappings.adCode, mappings.slots);
+    //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //         if (event.slot === ub_slot2) {
+    //           ub_checkAdRendered('div-gpt-ad-1626241401208-0', ub_slot2, ['/22082859479,22623808135/indianrail.gov.in_UB_320x50']);
+    //         }
+    //       });
+    //     });
+    //  }
+    // }
+    // function ubad3() {
+    //   if (document.getElementById('ATD_Ad_IR_320x50')) {
+    //     document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot3;
+    //
+    //     // apSlotTemp = {
+    //     //   slotID: 'div-gpt-ad-1602953575560-0',
+    //     //   slotName: '/22142075243/indianrailways_hb_320x50',
+    //     //   sizes: mappings.sizes,
+    //     // }
+    //     // apSlots.push(apSlotTemp);
+    //     mappings.slotNumbers.push(3);
+    //     mappings.adCode.push('/22082859479,22623808135/indianrail.gov.in_UB_320x50');
+    //     mappings.sizes.push(div_1_sizes);
+    //     mappings.adId.push('div-gpt-ad-1602953575560-0');
+    //     googletag.cmd.push(function() {
+    //       // callAPStagBids(); //Ap part
+    //       // callAPSAds(mappings.adCode, mappings.slots);
+    //       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //         if (event.slot === ub_slot3) {
+    //           ub_checkAdRendered('div-gpt-ad-1602953575560-0', ub_slot3, ['/22082859479,22623808135/indianrail.gov.in_UB_320x50']);
+    //         }
+    //       });
+    //     });
+    //  }
+    // }
 
     if(typeof googletag.defineSlot === "function"){
       googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

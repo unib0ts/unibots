@@ -419,7 +419,7 @@ if(typeof customConfigObjectA === 'undefined'){
         if(ub_ad1RefreshFlag != 1){
           setInterval(function() {
             ub_ad1RefreshFlag = 1;
-            refreshBidTemp2(ub_slot2);
+            refreshBidTemp2(ub_slot1);
           }, REFRESH_TIMEOUT);
         }
     	 }

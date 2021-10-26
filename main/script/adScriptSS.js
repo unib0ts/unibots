@@ -1190,7 +1190,10 @@ var mappings_extra_units_config ={
     '/1062118/masthead_2_inarticle_300x250',
     '/1062118/AMP_Top_header_300x250',
     '/1062118/Article_In_Image_ad_1x1',
-    '/1062118/sakshi_new_728x90_home_mid'
+    '/1062118/sakshi_new_728x90_home_mid',
+    '/1062118/desktop_endofarticle_300x250',
+    '/1062118/desktop_468x60_home',
+    '/1062118/desktop_468x60_home_2'
   ]
 }
 var mappings_extra_units = {

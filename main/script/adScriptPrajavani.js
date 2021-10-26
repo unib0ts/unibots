@@ -61,7 +61,7 @@ const customConfigObjectA = {
 // if(document.getElementById('unibots-ad')){
   adUnits1 =
   {
-      code: '/21928950349/prajavani.net_ub_320x50',
+      code: '/22082859479/prajavani.net_iplnew_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -118,7 +118,7 @@ var mappings = {
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
 //   slotID: 'div-gpt-ad-1617892142028-0',
-//   slotName: '/21928950349/prajavani.net_ub_320x50',
+//   slotName: '/22082859479/prajavani.net_iplnew_320x50',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -297,7 +297,7 @@ function googlePush(){
 
 // if(document.getElementById('unibots-ad')){
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21928950349/prajavani.net_ub_320x50');
+  mappings.adCode.push('/22082859479/prajavani.net_iplnew_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1617892142028-0');
   googletag.cmd.push(function() {
@@ -305,7 +305,7 @@ function googlePush(){
     // callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1617892142028-0', ub_slot1, ['/21928950349/prajavani.net_ub_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1617892142028-0', ub_slot1, ['/22082859479/prajavani.net_iplnew_320x50']);
       }
     });
   });
@@ -347,23 +347,37 @@ function mainHbRun(){
       // });
       ubpbjs.addAdUnits(adUnits);
       ubpbjs.bidderSettings = {
-        'appnexus': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.86; } },
-        'pubmatic': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.74; } },
-        'rubicon': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'openx': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'criteo': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.75; } },
-        'nobid': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-        'oftmedia': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.80; } },
-        'sovrn': { bidCpmAdjustment: function(bidCpm){ return bidCpm*0.81; } },
+        'appnexus': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.86; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'pubmatic': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.74; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'rubicon': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'openx': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'criteo': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.75; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'nobid': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'oftmedia': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.80; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'sovrn': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*0.81; temp = temp - 0.0323; return temp>0? temp: 0;} },
         //'adsolut': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
 
-        '33across': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-        'emx_digital': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-        'rhythmone': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } },
-        'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
+        '33across': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'emx_digital': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'rhythmone': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'eplanning': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'adyoulike': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'smartadserver': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'onetag': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} },
+        'ucfunnel': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} }
       };
       ubpbjs.setConfig({
-
+        // floors: {
+        //   currency: 'USD',
+        //   // skipRate: 5,
+        //   // modelVersion: 'Sports Ad Unit Floors',
+        //   schema: {
+        //       fields: ['mediaType']
+        //   },
+        //   values: {
+        //       'banner': 0.01,
+        //   }
+        // },
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

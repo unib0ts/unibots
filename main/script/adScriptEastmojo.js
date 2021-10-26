@@ -69,7 +69,7 @@ const customConfigObjectA = {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19057774' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '23117156' } },
         { bidder: '33across', params: { siteId : 'bK35s4WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '107924' } }, /* sizeless */
         { bidder: 'sovrn', params: {tagid: '710754'} },

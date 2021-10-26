@@ -69,7 +69,7 @@ const customConfigObjectA = {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '20215294' } }, /* one placementId for all sizes  my appnexus bidder */
-        { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '23117157' } },
         // { bidder: '33across', params: { siteId : 'c_l_PoNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '107931' } }, /* sizeless */
         // { bidder: 'sovrn', params: {tagid: '774104'} },

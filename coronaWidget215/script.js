@@ -14,97 +14,98 @@ function mobileCheck() {
     return check;
 }
 
-// var mybotstyleSheet = ".ub-cmpgn-ad{color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:150px;position:relative;top:-12px;text-align:center;right:-25px;background-repeat:no-repeat;background-position:center;background-color:#17479e}";
-//
-// css = document.createElement("style");
-// css.type = "text/css";
-// css.appendChild(document.createTextNode(mybotstyleSheet));
-// document.getElementsByTagName("head")[0].appendChild(css);
-
- // ub_passback1().then(cubespinnervisibility);
-
-   // function ub_passback1() {
-   //     return new Promise(function(resolve, reject) {
-         if(typeof colombia == 'undefined'){
-         var colombia = colombia || {};
-         colombia.fns = colombia.fns || [];
-           (function() {
-               var cads = document.createElement("script");
-               cads.async = true;
-               cads.type = "text/javascript";
-               cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
-               document.getElementsByTagName('head')[0].appendChild(cads);
-           })();
-         }
-
-          ub_passback = document.createElement("div");
-          ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;");
-          ub_passback.setAttribute("data-position", "1");
-          ub_passback.setAttribute("data-section", "StroyPage");
-          ub_passback.setAttribute("class", "colombia");
-
-          if (!mobileCheck()) {
-              ub_passback.setAttribute("data-ua", "D");
-              ub_passback.setAttribute("data-slot", "462128");
-              ub_passback.setAttribute("id", "div-clmb-ctn-462128-1");
-              document.getElementsByTagName("body")[0].appendChild(ub_passback);
-          }else {
-            ub_passback.setAttribute("data-ua", "M");
-            ub_passback.setAttribute("data-slot", "462129");
-            ub_passback.setAttribute("id", "div-clmb-ctn-462129-1");
-            document.getElementsByTagName("body")[0].appendChild(ub_passback);
-          }
-
-          cubespinnervisibility();
-   //
-   //        resolve();
-   //      })
-   // }
-
-
-   function cubespinnervisibility() {
-     var ub_clmb = setInterval(clmbdiv, 500);
-
-     function clmbdiv() {
-         if (!mobileCheck()) {
-           if (document.querySelector('#div-clmb-ctn-462128-1').childNodes) {
-             if (document.querySelector('#div-clmb-ctn-462128-1').childNodes[0]) {
-                   ub_iframe = document.getElementById('ifr_462128-1');
-                   ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                   ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
-                   ub_z2 = document.createElement("div");
-                   ub_z2.id = "ub-cmpgn-ad";
-                   ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                   ub_z2.innerText = "Ads By Unibots";
-                   ub_innerDoc.appendChild(ub_z2);
-
-                   // ub_innerDoc.getElementById('ub-cmpgn-ad').addEventListener('click', function() {
-                   //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
-                   // });
-                   clearInterval(ub_clmb);
-             }
-           }
-         }
-         else {
-           if (document.querySelector('#div-clmb-ctn-462129-1').childNodes) {
-             if (document.querySelector('#div-clmb-ctn-462129-1').childNodes[0]) {
-                   ub_iframe = document.getElementById('ifr_462128-1');
-                   ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                   ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
-                   ub_z2 = document.createElement("div");
-                   ub_z2.id = "ub-cmpgn-ad";
-                   ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                   ub_z2.innerText = "Ads By Unibots";
-                   ub_innerDoc.appendChild(ub_z2);
-
-                   // ub_innerDoc.getElementById('ub-cmpgn-ad').addEventListener('click', function() {
-                   //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
-                   // });
-                   clearInterval(ub_clmb);
-             }
-           }
-         }
-     }
+ ub_passback1();
+ setInterval(function(){
+   if (!mobileCheck()) {
+      document.querySelector('#div-clmb-ctn-462128-1').innerHTML = '';
+   }else {
+     document.querySelector('#div-clmb-ctn-462129-1').innerHTML = '';
    }
+
+   ub_passback1();
+
+ }, 30000);
+
+ function ub_passback1() {
+ //     return new Promise(function(resolve, reject) {
+       if(typeof colombia == 'undefined'){
+       var colombia = colombia || {};
+       colombia.fns = colombia.fns || [];
+         (function() {
+             var cads = document.createElement("script");
+             cads.async = true;
+             cads.type = "text/javascript";
+             cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+             document.getElementsByTagName('head')[0].appendChild(cads);
+         })();
+       }
+
+       var ub_passback = document.createElement("div");
+       ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;position:fixed;");
+       ub_passback.setAttribute("data-position", "1");
+       ub_passback.setAttribute("data-section", "StroyPage");
+       ub_passback.setAttribute("class", "colombia");
+
+       if (!mobileCheck()) {
+           ub_passback.setAttribute("data-ua", "D");
+           ub_passback.setAttribute("data-slot", "462128");
+           ub_passback.setAttribute("id", "div-clmb-ctn-462128-1");
+           document.getElementsByTagName("body")[0].appendChild(ub_passback);
+       }else {
+         ub_passback.setAttribute("data-ua", "M");
+         ub_passback.setAttribute("data-slot", "462129");
+         ub_passback.setAttribute("id", "div-clmb-ctn-462129-1");
+         document.getElementsByTagName("body")[0].appendChild(ub_passback);
+       }
+
+       cubespinnervisibility();
+  }
+
+ function cubespinnervisibility() {
+   var ub_clmb = setInterval(clmbdiv, 500);
+
+   function clmbdiv() {
+       if (!mobileCheck()) {
+         if (document.querySelector('#div-clmb-ctn-462128-1').childNodes) {
+           if (document.querySelector('#div-clmb-ctn-462128-1').childNodes[0]) {
+                 ub_iframe = document.getElementById('ifr_462128-1');
+                 ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+
+                 ub_z2 = document.createElement("div");
+                 ub_z2.id = "ub-cmpgn-ad";
+                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+                 ub_z2.innerText = "Ads By Unibots";
+                 ub_innerDoc.appendChild(ub_z2);
+
+                 // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
+                 //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
+                 // });
+                 clearInterval(ub_clmb);
+           }
+         }
+       }
+       else {
+         if (document.querySelector('#div-clmb-ctn-462129-1').childNodes) {
+           if (document.querySelector('#div-clmb-ctn-462129-1').childNodes[0]) {
+                 ub_iframe = document.getElementById('ifr_462128-1');
+                 ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+
+                 ub_z2 = document.createElement("div");
+                 ub_z2.id = "ub-cmpgn-ad";
+                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+                 ub_z2.innerText = "Ads By Unibots";
+                 ub_innerDoc.appendChild(ub_z2);
+
+                 // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
+                 //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
+                 // });
+                 clearInterval(ub_clmb);
+           }
+         }
+       }
+   }
+ }

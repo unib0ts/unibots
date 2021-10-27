@@ -89,7 +89,7 @@ function mobileCheck() {
        else {
          if (document.querySelector('#div-clmb-ctn-462129-1').childNodes) {
            if (document.querySelector('#div-clmb-ctn-462129-1').childNodes[0]) {
-                 ub_iframe = document.getElementById('ifr_462128-1');
+                 ub_iframe = document.getElementById('ifr_462129-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
 

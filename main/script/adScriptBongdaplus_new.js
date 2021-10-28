@@ -208,7 +208,7 @@ function ubadScript() {
       // }
 
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-    if (window.location.href == "https://bongdaplus.vn/ngoai-hang-anh/nhan-dinh-bong-da-man-united-vs-liverpool-22h30-ngay-24-10-tro-choi-tau-luon-cua-m-u-3478312110.html") {
+    if ((window.location.href == "https://bongdaplus.vn/")) {
       z2 = document.createElement("div");
       z2.id = "ub-popup-ad-container";
       z2.className = "ub-popup-ad-container";
@@ -295,7 +295,7 @@ function ubadScript() {
 
   if (mobileCheck()) {
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-    if (window.location.href == "https://bongdaplus.vn/ngoai-hang-anh/nhan-dinh-bong-da-man-united-vs-liverpool-22h30-ngay-24-10-tro-choi-tau-luon-cua-m-u-3478312110.html") {
+      if ((window.location.href == "https://bongdaplus.vn/")) {
       adUnits1 = {
           code: "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
           mediaTypes: {
@@ -1208,7 +1208,7 @@ function ubadScript() {
       if (mobileCheck()) {
       //   // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
       //
-        if (window.location.href == "https://bongdaplus.vn/ngoai-hang-anh/nhan-dinh-bong-da-man-united-vs-liverpool-22h30-ngay-24-10-tro-choi-tau-luon-cua-m-u-3478312110.html") {
+          if ((window.location.href == "https://bongdaplus.vn/")) {
           addNewsBotAd();
         }
       }

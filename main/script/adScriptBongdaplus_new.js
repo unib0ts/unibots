@@ -303,7 +303,7 @@ function ubadScript() {
                   sizes: div_1_sizes,
               },
           },
-          bid  }s: [
+          bids: [
                 { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
               	{ bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910487'} },
                 { bidder: 'oftmedia', params: { placementId: '20846125' } },

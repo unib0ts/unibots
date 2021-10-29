@@ -15,15 +15,15 @@ function mobileCheck() {
 }
 
  ub_passback1();
+
+
  setInterval(function(){
+   try{ colombia.refresh('div-clmb-ctn-462128-1') }catch(e){}
    if (!mobileCheck()) {
-      document.querySelector('#div-clmb-ctn-462128-1').innerHTML = '';
+      try{ colombia.refresh('div-clmb-ctn-462128-1') }catch(e){}
    }else {
-     document.querySelector('#div-clmb-ctn-462129-1').innerHTML = '';
+      try{ colombia.refresh('div-clmb-ctn-462129-1') }catch(e){}
    }
-
-   ub_passback1();
-
  }, 30000);
 
  function ub_passback1() {

@@ -16,14 +16,8 @@ function mobileCheck() {
 
  ub_passback1();
 
-
  setInterval(function(){
-   try{ colombia.refresh('div-clmb-ctn-462128-1') }catch(e){}
-   if (!mobileCheck()) {
-      try{ colombia.refresh('div-clmb-ctn-462128-1') }catch(e){}
-   }else {
-      try{ colombia.refresh('div-clmb-ctn-462129-1') }catch(e){}
-   }
+   colombia.refresh('462129,462128')
  }, 30000);
 
  function ub_passback1() {

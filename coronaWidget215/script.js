@@ -15,15 +15,17 @@ function mobileCheck() {
 }
 
  ub_passback1();
+
  setInterval(function(){
    if (!mobileCheck()) {
-      document.querySelector('#div-clmb-ctn-462128-1').innerHTML = '';
-   }else {
-     document.querySelector('#div-clmb-ctn-462129-1').innerHTML = '';
-   }
-
-   ub_passback1();
-
+      try{
+      colombia.refresh('div-clmb-ctn-462128-1')
+      }catch(e){}
+  }else {
+    try{
+       colombia.refresh('div-clmb-ctn-462129-1')
+    }catch(e){}
+  }
  }, 30000);
 
  function ub_passback1() {
@@ -41,7 +43,7 @@ function mobileCheck() {
        }
 
        var ub_passback = document.createElement("div");
-       ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;position:fixed;");
+       ub_passback.setAttribute("style", "float:left;min-height:2px;width:100%;position:absolute;bottom:0;");
        ub_passback.setAttribute("data-position", "1");
        ub_passback.setAttribute("data-section", "StroyPage");
        ub_passback.setAttribute("class", "colombia");

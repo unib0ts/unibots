@@ -15,14 +15,14 @@ function mobileCheck() {
 }
 
 
-mybotGACode = '';
+mybotGACode = 'G-MY7409VFFC';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");
   ub_ga.id = "gabywa";
   document.getElementsByTagName("head")[0].appendChild(ub_ga);
   document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa
+  loadAd("gabywa");
 
    ub_passback1();
 

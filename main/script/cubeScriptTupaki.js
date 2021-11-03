@@ -15,14 +15,14 @@ function mobileCheck() {
 }
 
 
-mybotGACode = '';
+mybotGACode = 'G-G4C0209YRW';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");
   ub_ga.id = "gabywa";
   document.getElementsByTagName("head")[0].appendChild(ub_ga);
   document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa
+  loadAd("gabywa");
 
    ub_passback1();
 
@@ -41,20 +41,20 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
    }, 30000);
 
  function ub_passback1() {
-       // if(typeof colombia == 'undefined'){
-       // var colombia = colombia || {};
-       // colombia.fns = colombia.fns || [];
-       //   (function() {
-       //       var cads = document.createElement("script");
-       //       cads.async = true;
-       //       cads.type = "text/javascript";
-       //       cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
-       //       document.getElementsByTagName('head')[0].appendChild(cads);
-       //   })();
-       // }
+       if(typeof colombia == 'undefined'){
+       var colombia = colombia || {};
+       colombia.fns = colombia.fns || [];
+         (function() {
+             var cads = document.createElement("script");
+             cads.async = true;
+             cads.type = "text/javascript";
+             cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+             document.getElementsByTagName('head')[0].appendChild(cads);
+         })();
+       }
 
        var ub_passback = document.createElement("div");
-       ub_passback.setAttribute("style", "float:left;min-height:2px;width:auto;position:absolute;bottom:0;");
+       ub_passback.setAttribute("style", "float:right;min-height:2px;width:auto;position:absolute;bottom:0;");
        ub_passback.setAttribute("data-position", "1");
        ub_passback.setAttribute("data-section", "StroyPage");
        ub_passback.setAttribute("class", "colombia");

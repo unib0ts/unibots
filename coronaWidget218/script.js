@@ -75,11 +75,11 @@ function ubadScript() {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
-  z1 = document.createElement("div");
-  z1.id = "div-ub-1";
-  z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
-  x1 = document.querySelector("body");
-  x1.appendChild(z1);
+  // z1 = document.createElement("div");
+  // z1.id = "div-ub-1";
+  // z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
+  // x1 = document.querySelector("body");
+  // x1.appendChild(z1);
 
   if (document.getElementById('div-gpt-ad-1593080960785-0')) {
     document.getElementById('div-gpt-ad-1593080960785-0').innerHTML=mybotadTarget;

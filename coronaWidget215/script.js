@@ -14,6 +14,12 @@ function mobileCheck() {
     return check;
 }
 
+var mybotstyleSheet ="#div-clmb-ctn-462128-1{width: auto !important;} #div-clmb-ctn-462129-1{width: auto !important;}";
+var css = document.createElement("style");
+css.type = "text/css";
+css.appendChild(document.createTextNode(mybotstyleSheet));
+document.getElementsByTagName("head")[0].appendChild(css);
+
  ub_passback1();
 
  setInterval(function(){

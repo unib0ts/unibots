@@ -14,6 +14,12 @@ function mobileCheck() {
     return check;
 }
 
+var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;} #div-clmb-ctn-462955-1{width: auto !important;}";
+var css = document.createElement("style");
+css.type = "text/css";
+css.appendChild(document.createTextNode(mybotstyleSheet));
+document.getElementsByTagName("head")[0].appendChild(css);
+
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
 mybotBlockedClientName = 'ss';

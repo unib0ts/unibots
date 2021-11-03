@@ -14,6 +14,11 @@ function mobileCheck() {
     return check;
 }
 
+var mybotstyleSheet ="#div-clmb-ctn-465452-1{width: auto !important;} #div-clmb-ctn-465453-1{width: auto !important;}";
+var css = document.createElement("style");
+css.type = "text/css";
+css.appendChild(document.createTextNode(mybotstyleSheet));
+document.getElementsByTagName("head")[0].appendChild(css);
 
 mybotGACode = 'G-G4C0209YRW';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';

@@ -40,8 +40,13 @@ mybotIsScrollupDisapperEnabled =0;
 mybotGACode = 'G-G4C0209YRW';
 
 // mybotadSmallT = '<div id="div-gpt-ad-1617905562342-0"></div>';
-mybotadSmall = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:100px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="7535605780"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
-mybotadTarget = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079" crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:inline-block;width:125px;height:125px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="2344527279"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+mybotadSmall = '<div id="div-gpt-ad-1617905562342-0"></div>';
+
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTupaki.json';
+mybotBlockedClientName = 'tupaki';
+// mybotadSmall = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:100px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="7535605780"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+// mybotadTarget = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079" crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:inline-block;width:125px;height:125px" data-ad-client="ca-pub-6376205116838079" data-ad-slot="2344527279"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
 
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/close.svg">';

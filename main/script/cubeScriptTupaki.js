@@ -14,6 +14,10 @@ function mobileCheck() {
     return check;
 }
 
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTupaki.json';
+mybotBlockedClientName = 'tupaki';
+
 var mybotstyleSheet ="#div-clmb-ctn-465452-1{width: auto !important;} #div-clmb-ctn-465453-1{width: auto !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
@@ -23,11 +27,80 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'G-G4C0209YRW';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          ubadScript();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      ubadScript();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    ubadScript();
+  };
+  request.send();
+}
+else{
+  ubadScript();
+}
+
+function ubadScript() {
   ub_ga = document.createElement("div");
   ub_ga.id = "gabywa";
   document.getElementsByTagName("head")[0].appendChild(ub_ga);
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
+
+  z1 = document.createElement("div");
+  z1.id = "div-gpt-ad-1617905562342-0";
+  z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
+  x1 = document.querySelector("body");
+  x1.appendChild(z1);
+
+  var s3 = document.createElement('script');
+    s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+    s3.async = true;
+    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    document.getElementsByTagName('head')[0].appendChild(s3);
+
+    var s0 = document.createElement('script');
+    s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+    s0.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(s0);
+
+    s0.onload=function(){
+      var s1 = document.createElement('script');
+      s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+      s1.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(s1);
+
+      var s2 = document.createElement('script');
+      s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptTupaki.js";
+      s2.type = "text/javascript";
+      document.getElementsByTagName('head')[0].appendChild(s2);
+  }
 
    ub_passback1();
 
@@ -44,6 +117,8 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
       }catch(e){}
     }
    }, 30000);
+
+}
 
  function ub_passback1() {
        if(typeof colombia == 'undefined'){

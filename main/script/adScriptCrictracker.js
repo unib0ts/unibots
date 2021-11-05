@@ -688,89 +688,89 @@ googletag.cmd.push(function() {
   });
 });
 
-setTimeout(function(){
-  if ((document.getElementById('liveBlock').style.display == 'block' && document.getElementById('upcomingCompletedBlock').style.display == 'none') || (document.getElementById('liveBlock').style.display == 'none' && document.getElementById('upcomingCompletedBlock').style.display == 'block')) {
-   if (document.getElementById('liveBlock').style.display == 'block' && document.getElementById('upcomingCompletedBlock').style.display == 'none') {
-     x_ub = document.getElementById('liveBlock');
-     x_ub1 = x_ub.querySelector('.mybotfront');
-     x_ub2 = x_ub.querySelector('.mybotright');
-   }
-   else {
-     x_ub = document.getElementById('upcomingCompletedBlock');
-     x_ub1 = x_ub.querySelector('.mybotfront');
-     x_ub2 = x_ub.querySelector('.mybotright');
-   }
-
-   var s4 = document.createElement('script');
-   s4.src = "ttps://securepubads.g.doubleclick.net/tag/js/gpt.js";
-   s4.async = "async";
-   document.getElementsByTagName('head')[0].appendChild(s4);
-
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-      googletag.defineSlot('/21956916242/crictracker_dc_100x50_1', [100, 50], 'div-gpt-ad-1636093770564-0').addService(googletag.pubads());
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });
-
-
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/21956916242/crictracker_dc_100x50_2', [100, 50], 'div-gpt-ad-1636104342270-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-
-   // x_ub1.innerHTML = unibot1;
-   //  x_ub2.innerHTML = unibot2;
-
-   // mappings.slotNumbers.push(2);
-   // mappings.adCode.push('/21956916242/crictracker_dc_100x50_1');
-   // mappings.sizes.push(div_4_sizes);
-   // mappings.adId.push('div-gpt-ad-1636093770564-0');
-   // googletag.cmd.push(function() {
-   //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-   //     if (event.slot === ub_slot2) {
-   //       ub_checkAdRendered1('div-gpt-ad-1636093770564-0', ub_slot2, ['/21956916242/crictracker_dc_100x50_1']);
-   //     }
-   //   });
-   // });
-   //
-   // mappings.slotNumbers.push(3);
-   // mappings.adCode.push('/21956916242/crictracker_dc_100x50_2');
-   // mappings.sizes.push(div_5_sizes);
-   // mappings.adId.push('div-gpt-ad-1636104342270-0');
-   // googletag.cmd.push(function() {
-   //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-   //     if (event.slot === ub_slot3) {
-   //       ub_checkAdRendered1('div-gpt-ad-1636104342270-0', ub_slot3, ['/21956916242/crictracker_dc_100x50_2']);
-   //     }
-   //   });
-   // });
-
-   // z1 = document.createElement("div");
-   // z1.id = "div-gpt-ad-1636093770564-0";
-   z1 ="<div id='div-gpt-ad-1636093770564-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636093770564-0'); });</script></div>";
-   x_ub1.innerHTML = z1;
-
-    // z2 = document.createElement("div");
-    // z2.id = "div-gpt-ad-1636104342270-0";
-    z2 ="<div id='div-gpt-ad-1636104342270-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636104342270-0'); });</script></div>";
-    x_ub2.innerHTML = z2;
-   //
-   //  var googletag = googletag || {};
-   //  googletag.cmd = googletag.cmd || [];
-   //
-   //   googletag.cmd.push(function() {
-   //   googletag.pubads().display("/138639789/Crictraker.com_Mobile1_100x50", [100,50],"div-gpt-ad-1635924951347-9");
-   //   });
-   //
-   //   googletag.cmd.push(function() {
-   //   googletag.pubads().display("/138639789/Crictraker.com_Mobile2_100x50", [100,50],"div-gpt-ad-1635924877441-5");
-   //   });
-
- }
-}, 1000);
+// setTimeout(function(){
+//   if ((document.getElementById('liveBlock').style.display == 'block' && document.getElementById('upcomingCompletedBlock').style.display == 'none') || (document.getElementById('liveBlock').style.display == 'none' && document.getElementById('upcomingCompletedBlock').style.display == 'block')) {
+//    if (document.getElementById('liveBlock').style.display == 'block' && document.getElementById('upcomingCompletedBlock').style.display == 'none') {
+//      x_ub = document.getElementById('liveBlock');
+//      x_ub1 = x_ub.querySelector('.mybotfront');
+//      x_ub2 = x_ub.querySelector('.mybotright');
+//    }
+//    else {
+//      x_ub = document.getElementById('upcomingCompletedBlock');
+//      x_ub1 = x_ub.querySelector('.mybotfront');
+//      x_ub2 = x_ub.querySelector('.mybotright');
+//    }
+//
+//    var s4 = document.createElement('script');
+//    s4.src = "ttps://securepubads.g.doubleclick.net/tag/js/gpt.js";
+//    s4.async = "async";
+//    document.getElementsByTagName('head')[0].appendChild(s4);
+//
+//     window.googletag = window.googletag || {cmd: []};
+//     googletag.cmd.push(function() {
+//       googletag.defineSlot('/21956916242/crictracker_dc_100x50_1', [100, 50], 'div-gpt-ad-1636093770564-0').addService(googletag.pubads());
+//       googletag.pubads().enableSingleRequest();
+//       googletag.enableServices();
+//     });
+//
+//
+//       window.googletag = window.googletag || {cmd: []};
+//       googletag.cmd.push(function() {
+//         googletag.defineSlot('/21956916242/crictracker_dc_100x50_2', [100, 50], 'div-gpt-ad-1636104342270-0').addService(googletag.pubads());
+//         googletag.pubads().enableSingleRequest();
+//         googletag.enableServices();
+//       });
+//
+//    // x_ub1.innerHTML = unibot1;
+//    //  x_ub2.innerHTML = unibot2;
+//
+//    // mappings.slotNumbers.push(2);
+//    // mappings.adCode.push('/21956916242/crictracker_dc_100x50_1');
+//    // mappings.sizes.push(div_4_sizes);
+//    // mappings.adId.push('div-gpt-ad-1636093770564-0');
+//    // googletag.cmd.push(function() {
+//    //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//    //     if (event.slot === ub_slot2) {
+//    //       ub_checkAdRendered1('div-gpt-ad-1636093770564-0', ub_slot2, ['/21956916242/crictracker_dc_100x50_1']);
+//    //     }
+//    //   });
+//    // });
+//    //
+//    // mappings.slotNumbers.push(3);
+//    // mappings.adCode.push('/21956916242/crictracker_dc_100x50_2');
+//    // mappings.sizes.push(div_5_sizes);
+//    // mappings.adId.push('div-gpt-ad-1636104342270-0');
+//    // googletag.cmd.push(function() {
+//    //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//    //     if (event.slot === ub_slot3) {
+//    //       ub_checkAdRendered1('div-gpt-ad-1636104342270-0', ub_slot3, ['/21956916242/crictracker_dc_100x50_2']);
+//    //     }
+//    //   });
+//    // });
+//
+//    // z1 = document.createElement("div");
+//    // z1.id = "div-gpt-ad-1636093770564-0";
+//    z1 ="<div id='div-gpt-ad-1636093770564-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636093770564-0'); });</script></div>";
+//    x_ub1.innerHTML = z1;
+//
+//     // z2 = document.createElement("div");
+//     // z2.id = "div-gpt-ad-1636104342270-0";
+//     z2 ="<div id='div-gpt-ad-1636104342270-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636104342270-0'); });</script></div>";
+//     x_ub2.innerHTML = z2;
+//    //
+//    //  var googletag = googletag || {};
+//    //  googletag.cmd = googletag.cmd || [];
+//    //
+//    //   googletag.cmd.push(function() {
+//    //   googletag.pubads().display("/138639789/Crictraker.com_Mobile1_100x50", [100,50],"div-gpt-ad-1635924951347-9");
+//    //   });
+//    //
+//    //   googletag.cmd.push(function() {
+//    //   googletag.pubads().display("/138639789/Crictraker.com_Mobile2_100x50", [100,50],"div-gpt-ad-1635924877441-5");
+//    //   });
+//
+//  }
+// }, 1000);
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);

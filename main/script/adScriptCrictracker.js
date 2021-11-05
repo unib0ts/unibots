@@ -235,66 +235,66 @@ const customConfigObjectA = {
   adUnits.push(adUnits1);
 
   // if (document.getElementById('doto-mobile')) {
-          adUnits1 =
-          {
-              code: '/21956916242/crictracker_dc_100x50_1',
-              mediaTypes: {
-                  banner: {
-                      sizes: div_4_sizes
-                  }
-              },
-              bids: [
-                // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-                // // { bidder: 'sovrn', params: {tagid: '882910'} },
-                // // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-                // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-                // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-                // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579054'} },
-                // // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-                // // { bidder: 'criteo', params: {networkId: '10542'} },
-                // // { bidder: 'criteointl', params: {networkId: '10545'} },
-                // // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
-                // { bidder: 'oftmedia', params: { placementId: '21415619' } },
-                //   { bidder: '33across', params: { siteId : 'dGv0RSNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-                // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-                // { bidder: 'openx', params: {unit: '544022749', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-                // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-                // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-                //  { bidder: 'nobid', params: { siteId : '22326325034'} },
-              ]
-          };
-          adUnits.push(adUnits1);
+          // adUnits1 =
+          // {
+          //     code: '/21956916242/crictracker_dc_100x50_1',
+          //     mediaTypes: {
+          //         banner: {
+          //             sizes: div_4_sizes
+          //         }
+          //     },
+          //     bids: [
+          //       // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+          //       // // { bidder: 'sovrn', params: {tagid: '882910'} },
+          //       // // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+          //       // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+          //       // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+          //       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579054'} },
+          //       // // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          //       // // { bidder: 'criteo', params: {networkId: '10542'} },
+          //       // // { bidder: 'criteointl', params: {networkId: '10545'} },
+          //       // // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
+          //       // { bidder: 'oftmedia', params: { placementId: '21415619' } },
+          //       //   { bidder: '33across', params: { siteId : 'dGv0RSNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+          //       // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+          //       // { bidder: 'openx', params: {unit: '544022749', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          //       // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+          //       // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+          //       //  { bidder: 'nobid', params: { siteId : '22326325034'} },
+          //     ]
+          // };
+          // adUnits.push(adUnits1);
         // }
   // if (document.getElementById('doto-desktop')) {
-              adUnits1 =
-              {
-                  code: '/21956916242/crictracker_dc_100x50_2',
-                  mediaTypes: {
-                      banner: {
-                          sizes: div_5_sizes
-                      }
-                  },
-                  bids: [
-                    // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
-                    // // { bidder: 'sovrn', params: {tagid: '882914'} },
-                    // // // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-                    // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-                    // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-                    // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579056'} },
-                    // // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-                    // // { bidder: 'criteo', params: {networkId: '10542'} },
-                    // // { bidder: 'criteointl', params: {networkId: '10545'} },
-                    // // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
-                    // { bidder: 'oftmedia', params: { placementId: '21415619' } },
-                    // { bidder: '33across', params: { siteId : 'dGv0RSNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-                    // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-                    // { bidder: 'openx', params: {unit: '544022750', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-                    // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
-                    // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-                    //  { bidder: 'nobid', params: { siteId : '22326325034'} },
-                  ]
-              };
-              adUnits.push(adUnits1);
+              // adUnits1 =
+              // {
+              //     code: '/21956916242/crictracker_dc_100x50_2',
+              //     mediaTypes: {
+              //         banner: {
+              //             sizes: div_5_sizes
+              //         }
+              //     },
+              //     bids: [
+              //       // { bidder: 'appnexus', params: { placementId: '21238584' } }, /* one placementId for all sizes  my appnexus bidder */
+              //       // // { bidder: 'sovrn', params: {tagid: '882914'} },
+              //       // // // { bidder: 'smartadserver', params: { siteId: '399742', pageId: '1361924', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
+              //       // // // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+              //       // // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+              //       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579056'} },
+              //       // // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+              //       // // { bidder: 'criteo', params: {networkId: '10542'} },
+              //       // // { bidder: 'criteointl', params: {networkId: '10545'} },
+              //       // // { bidder: 'ucfunnel', params: { adid : 'ad-9A297DAE382B9A39C6E77E3BA949A84'} },
+              //       // { bidder: 'oftmedia', params: { placementId: '21415619' } },
+              //       // { bidder: '33across', params: { siteId : 'dGv0RSNiqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+              //       // // // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
+              //       // { bidder: 'openx', params: {unit: '544022750', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+              //       // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+              //       // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+              //       //  { bidder: 'nobid', params: { siteId : '22326325034'} },
+              //     ]
+              // };
+              // adUnits.push(adUnits1);
           // }
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -389,7 +389,7 @@ var mappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false, false]
+  renderedFlag: [false]
 };
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
@@ -701,18 +701,33 @@ setTimeout(function(){
      x_ub2 = x_ub.querySelector('.mybotright');
    }
 
-   z1 = document.createElement("div");
-   z1.id = "div-gpt-ad-1636093770564-0";
-   x_ub1.replaceChild(z1, x_ub1.childNodes[0]);
+   var s4 = document.createElement('script');
+   s4.src = "ttps://securepubads.g.doubleclick.net/tag/js/gpt.js";
+   s4.async = "async";
+   document.getElementsByTagName('head')[0].appendChild(s4);
 
-    z2 = document.createElement("div");
-    z2.id = "div-gpt-ad-1636104342270-0";
-    x_ub2.replaceChild(z2, x_ub2.childNodes[0]);
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/21956916242/crictracker_dc_100x50_1', [100, 50], 'div-gpt-ad-1636093770564-0').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
 
-   mappings.slotNumbers.push(2);
-   mappings.adCode.push('/21956916242/crictracker_dc_100x50_1');
-   mappings.sizes.push(div_4_sizes);
-   mappings.adId.push('div-gpt-ad-1636093770564-0');
+
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/21956916242/crictracker_dc_100x50_2', [100, 50], 'div-gpt-ad-1636104342270-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+
+   // x_ub1.innerHTML = unibot1;
+   //  x_ub2.innerHTML = unibot2;
+
+   // mappings.slotNumbers.push(2);
+   // mappings.adCode.push('/21956916242/crictracker_dc_100x50_1');
+   // mappings.sizes.push(div_4_sizes);
+   // mappings.adId.push('div-gpt-ad-1636093770564-0');
    // googletag.cmd.push(function() {
    //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
    //     if (event.slot === ub_slot2) {
@@ -720,11 +735,11 @@ setTimeout(function(){
    //     }
    //   });
    // });
-
-   mappings.slotNumbers.push(3);
-   mappings.adCode.push('/21956916242/crictracker_dc_100x50_2');
-   mappings.sizes.push(div_5_sizes);
-   mappings.adId.push('div-gpt-ad-1636104342270-0');
+   //
+   // mappings.slotNumbers.push(3);
+   // mappings.adCode.push('/21956916242/crictracker_dc_100x50_2');
+   // mappings.sizes.push(div_5_sizes);
+   // mappings.adId.push('div-gpt-ad-1636104342270-0');
    // googletag.cmd.push(function() {
    //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
    //     if (event.slot === ub_slot3) {
@@ -734,14 +749,14 @@ setTimeout(function(){
    // });
 
    // z1 = document.createElement("div");
-   // z1.id = "div-gpt-ad-1635924951347-9";
-   // z1.innerHTML ='<script type="text/javascript">googletag.cmd.push(function() {googletag.pubads().display("/138639789/Crictraker.com_Mobile1_100x50", [100,50],"div-gpt-ad-1635924951347-9");});</script>';
-   // x_ub1.appendChild(z1);
-   //
-   //  z2 = document.createElement("div");
-   //  z2.id = "div-gpt-ad-1636104342270-0";
-   //  z2.innerHTML ='<script type="text/javascript">googletag.cmd.push(function() {googletag.pubads().display("/21956916242/crictracker_dc_100x50_2", [100,50],"div-gpt-ad-1635924877441-5");});</script>';
-   //  x_ub2.appendChild(z2);
+   // z1.id = "div-gpt-ad-1636093770564-0";
+   z1 ="<div id='div-gpt-ad-1636093770564-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636093770564-0'); });</script></div>";
+   x_ub1.innerHTML = z1;
+
+    // z2 = document.createElement("div");
+    // z2.id = "div-gpt-ad-1636104342270-0";
+    z2 ="<div id='div-gpt-ad-1636104342270-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636104342270-0'); });</script></div>";
+    x_ub2.innerHTML = z2;
    //
    //  var googletag = googletag || {};
    //  googletag.cmd = googletag.cmd || [];

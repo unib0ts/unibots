@@ -366,17 +366,17 @@ if(typeof customConfigObjectA === 'undefined'){
   //  }
   // }
  // if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
-    var ub_slot1;
+    // var ub_slot1;
     function addNewsBotAd(){
       googletag.cmd.push(function() {
-          ub_slot1 = googletag.defineSlot('/21959913182/sakshipost_nb_320x50', div_1_sizes, 'div-gpt-ad-1602675444550-0').addService(googletag.pubads());
+          googletag.defineSlot('/21959913182/sakshipost_nb_320x50', div_1_sizes, 'div-gpt-ad-1602675444550-0').addService(googletag.pubads());
           googletag.pubads().collapseEmptyDivs(true);
           googletag.pubads().setCentering(true);
           googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
           googletag.pubads().enableSingleRequest();
           googletag.enableServices();
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-              if (event.slot === ub_slot1) {
+              if (event.slot ==='/21959913182/sakshipost_nb_320x50') {
                 ub_checkAdRendered();
               }
           });

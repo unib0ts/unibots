@@ -23,6 +23,23 @@ video {
     z-index: 2147489999 !important;
     animation: an 0.8s;
 }
+.ubsticky_left {
+    position: fixed;
+    bottom: 100px;
+    left: 5px;
+    z-index: 2147489999 !important;
+    animation: bounce 0.7s;
+}
+@keyframes bounce {
+    0% {
+        top: 100%;    
+        left: 30%;
+    }  
+    100% {  
+        top: calc(100vh - 21.6vh);   
+        left: 0%; 
+    }
+}
 .ubsticky_left .content_video-dimensions, .ubsticky_right .content_video-dimensions {
     width: 400px !important;
     height: 225px !important;

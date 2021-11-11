@@ -28,9 +28,33 @@ unibotsAPS = (clientName) => {
         .then(res => res.json())
         .then(data => {
             clientData = data;
-            startFuncAPS(clientData);
+              startFuncAPS(clientData);
         })
         .catch(err => console.error(err));
+}
+
+checkAPSDivs = (divsAPS) => {
+    return new Promise(
+        (resolve, reject) => {
+            try {
+                let counterAPS = 0;
+                let divsLoadedAPS = [];
+                let divFoundAPS = false;
+                let ub_interval_div_check = setInterval(() => {
+                        if (document.getElementById(divsAPS) !== null) {
+                            divFoundAPS = true;
+                    }
+                    if (divFoundAPS) {
+                        clearInterval(ub_interval_div_check);
+                        resolve({ divsLoadedAPS, counterAPS });
+                    }
+                }, 500);
+            } catch (error) {
+                reject({ error })
+            }
+
+        }
+    )
 }
 
 startFuncAPS = (data) => {
@@ -39,6 +63,13 @@ startFuncAPS = (data) => {
     s0.async = "async";
     document.getElementsByTagName("head")[0].appendChild(s0);
 
+    let divArray = clientData.mappings_ub_config[0].adId;
+    checkAPSDivs(divArray).then(() => {
+      initFunctionAPS(data);
+    });
+}
+
+initFunctionAPS = (data) => {
     for (key in data.mappings_ub_config) {
       mappings.adCode.push(data.mappings_ub_config[key].adUnitName);
       mappings.adId.push(data.mappings_ub_config[key].adId);
@@ -57,10 +88,10 @@ startFuncAPS = (data) => {
    }
 
     googletag.cmd.push(function() {
-    googleDefine(mappings.adCode, mappings.sizes, mappings.adId);
-    googletag.pubads().disableInitialLoad();
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
+      googleDefine(mappings.adCode, mappings.sizes, mappings.adId);
+      googletag.pubads().disableInitialLoad();
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
     });
 
     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:

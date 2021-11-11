@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;} #div-clmb-ctn-465589-1{width: auto !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;} #div-clmb-ctn-465589-1{width: auto !important;} #ifr_465391-1{bottom: 100px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

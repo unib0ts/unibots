@@ -28,12 +28,12 @@ unibotsAPS = (clientName) => {
         .then(res => res.json())
         .then(data => {
             clientData = data;
-            startFunc(clientData);
+            startFuncAPS(clientData);
         })
         .catch(err => console.error(err));
 }
 
-startFunc = (data) => {
+startFuncAPS = (data) => {
     var s0 = document.createElement("script");
     s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
     s0.async = "async";

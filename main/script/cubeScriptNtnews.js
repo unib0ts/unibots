@@ -41,6 +41,12 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
   s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
   document.getElementsByTagName('head')[0].appendChild(s3);
 
+  var s4 = document.createElement('script');
+  s4.setAttribute("crossorigin", "anonymous");
+  s4.async = true;
+  s4.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
+  document.getElementsByTagName('head')[0].appendChild(s4);
+
   var s0 = document.createElement('script');
   s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
   s0.type = "text/javascript";

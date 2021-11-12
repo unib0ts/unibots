@@ -18,17 +18,11 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 
-var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;} #div-clmb-ctn-465766-1{width: auto !important;} #ifr_465765-1{bottom: 100px !important;right:0px !important;} #ifr_465766-1{right:0px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;} #div-clmb-ctn-465766-1{width: auto !important;} #ifr_465765-1{bottom: 140px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
-
-z1 = document.createElement("div");
-z1.id = "div-gpt-ad-1588428540791-0";
-z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
-x1 = document.querySelector("body");
-x1.appendChild(z1);
 
 mybotGACode = 'UA-164744545-4';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
@@ -72,6 +66,16 @@ else{
 }
 
 function ubadScript() {
+  z1 = document.createElement("div");
+  z1.id = "div-gpt-ad-1588428540791-0";
+  if (!mobileCheck()) {
+    z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:95px;right:5px;z-index:99";
+  }else {
+    z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
+  }
+  x1 = document.querySelector("body");
+  x1.appendChild(z1);
+
   ub_ga = document.createElement("div");
   ub_ga.id = "gabywa";
   document.getElementsByTagName("head")[0].appendChild(ub_ga);

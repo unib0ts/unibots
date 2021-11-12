@@ -42,6 +42,11 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
     s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
     document.getElementsByTagName('head')[0].appendChild(s3);
 
+    var s0 = document.createElement('script');
+    s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+    s0.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(s0);
+
     var s1 = document.createElement('script');
     s1.async = "async";
     s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";

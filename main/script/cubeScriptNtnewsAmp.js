@@ -2,7 +2,7 @@
 mybotGACode = 'G-2MNJMK9MBY';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;} #div-clmb-ctn-465594-1{width: auto !important;} #ifr_465594-1{bottom: -20px !important; left: -30px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465594-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465594-1{bottom: -20px !important; left: -30px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

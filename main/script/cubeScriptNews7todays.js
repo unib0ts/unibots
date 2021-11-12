@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-465457-1{width: auto !important;} #div-clmb-ctn-465458-1{width: auto !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465457-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465458-1{width: auto !important;z-index: 2147483647 !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

@@ -18,7 +18,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 
-var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;} #div-clmb-ctn-465766-1{width: auto !important;} #ifr_465765-1{bottom: 140px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 140px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

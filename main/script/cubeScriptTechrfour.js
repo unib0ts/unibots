@@ -14,13 +14,13 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-465761-1{width: auto !important;} #div-clmb-ctn-465762-1{width: auto !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465761-1{width: auto !important;} #div-clmb-ctn-465762-1{width: auto !important;} #ifr_465762-1{bottom: 50px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
-mybotGACode = '';
+mybotGACode = 'G-FMWR3GN8QC';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");

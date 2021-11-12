@@ -24,6 +24,12 @@ css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
+z1 = document.createElement("div");
+z1.id = "div-gpt-ad-1588428540791-0";
+z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
+x1 = document.querySelector("body");
+x1.appendChild(z1);
+
 mybotGACode = 'UA-164744545-4';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
@@ -72,31 +78,26 @@ function ubadScript() {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
-  z1 = document.createElement("div");
-  z1.id = "div-gpt-ad-1588428540791-0";
-  z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
-  x1 = document.querySelector("body");
-  x1.appendChild(z1);
-
   var s3 = document.createElement('script');
-  s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
-  s3.async = true;
-  s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-  document.getElementsByTagName('head')[0].appendChild(s3);
+     s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+     s3.async = true;
+     s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+     document.getElementsByTagName('head')[0].appendChild(s3);
 
-  var s1 = document.createElement('script');
-  s1.async = "async";
-  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-  s1.type = "text/javascript";
-  document.getElementsByTagName('head')[0].appendChild(s1);
+     var s0 = document.createElement('script');
+     s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+     s0.type = "text/javascript";
+     document.getElementsByTagName('head')[0].appendChild(s0);
 
-  var cachebuster = Math.round(new Date().getTime() / 1000);
-  url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js?cb='+cachebuster;
-  s2 = document.createElement('script');
-  s2.src = url;
-  s2.async = "async";
-  document.body.appendChild(s2);
+     var s1 = document.createElement('script');
+     s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+     s1.type = "text/javascript";
+     document.getElementsByTagName('head')[0].appendChild(s1);
 
+     var s2 = document.createElement('script');
+     s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
+     s2.type = "text/javascript";
+     document.getElementsByTagName('head')[0].appendChild(s2);
    ub_passback1();
 
    setInterval(function(){

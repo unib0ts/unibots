@@ -891,7 +891,7 @@ function ubadScript() {
             "div-gpt-ad-1614845452435-0", //'/22140546871/bongdaplus.vn_mb_center1_336x280',
             "div-gpt-ad-1614845556049-0", //'/22140546871/bongdaplus.vn_mb_center2_336x280',
             "div-gpt-ad-1614845628694-0", //'/22140546871/bongdaplus.vn_mb_center3_336x280',
-            "div-gpt-ad-1614845690965-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
+            "div-gpt-ad-1629455812132-0", //'/22140546871/bongdaplus.vn_mb_ma_336x280',
             "div-gpt-ad-1614845787563-0", //'/22140546871/bongdaplus.vn_mb_anchor_320x50',
             // "div-gpt-ad-1615775641979-0",  //'/22140546871/bongdaplus.vn_mb_anchor_320x100',
             // 'div-gpt-ad-1624014789114-0',  //  '/22140546871/bongdaplus.vn_popup_fluid_336x280'

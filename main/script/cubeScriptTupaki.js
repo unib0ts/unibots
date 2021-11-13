@@ -18,7 +18,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTupaki.json';
 mybotBlockedClientName = 'tupaki';
 
-var mybotstyleSheet ="#div-clmb-ctn-465452-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465453-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465453-1{bottom: 100px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465452-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465453-1{width: auto !important;z-index: 2147483647 !important;}  #ifr_465452-1{bottom: 20px !important;} #ifr_465453-1{bottom: 100px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

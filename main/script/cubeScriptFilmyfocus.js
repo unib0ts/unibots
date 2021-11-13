@@ -18,7 +18,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 
-var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 140px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 160px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -69,7 +69,7 @@ function ubadScript() {
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1588428540791-0";
   if (!mobileCheck()) {
-    z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:95px;right:5px;z-index:99";
+    z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:125px;right:5px;z-index:99";
   }else {
     z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
   }

@@ -18,7 +18,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTollywood.json';
 mybotBlockedClientName = 'tollywood';
 
-var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;} #ifr_465702-1{right:0px !important;left: unset !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;bottom: 20px !important;} #ifr_465702-1{right:0px !important;left: unset !important;bottom: 20px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

@@ -45,7 +45,7 @@ const customConfigObjectA = {
 // if(document.getElementById('newsbot-ads')){
   adUnits1 =
   {
-      code: '/21928950349,22560027500/andhrajyothy_cube_320x50',
+      code: '/21928950349/andhrajyothy_cube_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -234,13 +234,13 @@ function googlePush(){
 }
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21928950349,22560027500/andhrajyothy_cube_320x50');
+  mappings.adCode.push('/21928950349/andhrajyothy_cube_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1636394755885-0');
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1636394755885-0', ub_slot1, ['/21928950349,22560027500/andhrajyothy_cube_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1636394755885-0', ub_slot1, ['/21928950349/andhrajyothy_cube_320x50']);
       }
     });
   });

@@ -73,7 +73,7 @@ const customConfigObjectA = {
 // if(document.getElementById('newsbot-ads')){
   adUnits1 =
   {
-      code: '/21928950349,22560027500/ntnews.com_nb_320x50',
+      code: '/21928950349/ntnews.com_nb_320x50',
       mediaTypes: {
           banner: {
               sizes: div_1_sizes
@@ -130,7 +130,7 @@ var mappings = {
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
 //   slotID: 'div-gpt-ad-1636385700829-0',
-//   slotName: '/21928950349,22560027500/ntnews.com_nb_320x50',
+//   slotName: '/21928950349/ntnews.com_nb_320x50',
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
@@ -281,7 +281,7 @@ function googlePush(){
 
 
   mappings.slotNumbers.push(1);
-  mappings.adCode.push('/21928950349,22560027500/ntnews.com_nb_320x50');
+  mappings.adCode.push('/21928950349/ntnews.com_nb_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1636385700829-0');
   // apSlotTemp = {
@@ -294,7 +294,7 @@ function googlePush(){
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1636385700829-0', ub_slot1, ['/21928950349,22560027500/ntnews.com_nb_320x50']);
+        ub_checkAdRendered('div-gpt-ad-1636385700829-0', ub_slot1, ['/21928950349/ntnews.com_nb_320x50']);
       }
     });
   });
@@ -354,17 +354,17 @@ function mainHbRun(){
         'onetag': { bidCpmAdjustment: function(bidCpm){ let temp = bidCpm*1.00; temp = temp - 0.0323; return temp>0? temp: 0;} }
       };
       ubpbjs.setConfig({
-        floors: {
-          currency: 'USD',
-          // skipRate: 5,
-          // modelVersion: 'Sports Ad Unit Floors',
-          schema: {
-              fields: ['mediaType']
-          },
-          values: {
-              'banner': 0.01,
-          }
-        },
+        // floors: {
+        //   currency: 'USD',
+        //   // skipRate: 5,
+        //   // modelVersion: 'Sports Ad Unit Floors',
+        //   schema: {
+        //       fields: ['mediaType']
+        //   },
+        //   values: {
+        //       'banner': 0.01,
+        //   }
+        // },
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

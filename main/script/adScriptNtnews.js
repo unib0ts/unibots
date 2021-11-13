@@ -82,13 +82,13 @@ const customConfigObjectA = {
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056061' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
-        { bidder: '33across', params: { siteId : 'bsa9LABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'bewrXiNi0r64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '107926' } }, /* sizeless */
         { bidder: 'sovrn', params: {tagid: '719003'} },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         { bidder: 'openx', params: {unit: '543530437', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        // { bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-        { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934213'} },
         { bidder: 'nobid', params: { siteId : '21986889217'} },
         // { bidder: 'criteo', params: {networkId: '10542'} },

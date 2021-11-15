@@ -120,7 +120,7 @@ else{
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19307550' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '23117158' } },
+        { bidder: 'oftmedia', params: { placementId: '23217708' } },
         // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4107726'} },
         { bidder: 'sovrn', params: {tagid: '974013'} },
         // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/

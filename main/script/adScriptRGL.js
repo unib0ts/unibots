@@ -108,6 +108,7 @@ var adUnits = [];
          // { bidder: 'criteo', params: {networkId: '4902'} },
          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934578'} },
          { bidder: 'nobid', params: { siteId : '22049999731'} },
+         { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
          // { bidder: 'criteo', params: {networkId: '10542'} },
          // { bidder: 'criteointl', params: {networkId: '10545'} },
          { bidder: 'ucfunnel', params: { adid : 'ad-E2B422827779D832C7A7B7EAA87E27A6'} },

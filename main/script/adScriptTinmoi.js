@@ -125,7 +125,7 @@ else{
         { bidder: 'sovrn', params: {tagid: '971611'} },
         // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
         // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
-        // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+        { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22642146294' } },
         { bidder: 'openx', params: {unit: '545730027', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'ucfunnel', params: { adid : 'ad-2736D78E48747EEB18ADB838494A263B'} },

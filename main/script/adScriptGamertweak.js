@@ -21,7 +21,7 @@ var adUnits = [];
 var size_array;
 
 var hb_common_bidders = [
-	    // { bidder: 'appnexus', params: { placementId: '21895124' } }, /* one placementId for all sizes  my appnexus bidder */
+	    { bidder: 'appnexus', params: { placementId: '23404517' } }, /* one placementId for all sizes  my appnexus bidder */
 		// { bidder: 'oftmedia', params: { placementId: '19680368' } },
 		// { bidder: '33across', params: { siteId : 'b3G35kWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 		// { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */

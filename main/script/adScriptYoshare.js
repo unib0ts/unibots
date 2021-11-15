@@ -113,7 +113,7 @@ if (document.getElementById('yoshare_unibot1_336x280_300x250_a_tag')) {
 				 { bidder: '33across', params: { siteId : 'cit9hciEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 				 // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
 					{ bidder: 'openx', params: {unit: '543530140', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-				 // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+				 { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
 				 // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
 					{ bidder: 'nobid', params: { siteId : '22103833237'} },
 					{ bidder: 'ucfunnel', params: { adid : 'ad-9A29AA9B43EA9A63C789BA3DD629E7E'} },
@@ -146,7 +146,7 @@ if (document.getElementById('yoshare_unibot1_336x280_300x250_b_tag')) {
 			 { bidder: '33across', params: { siteId : 'cit9hciEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 			 // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
 				{ bidder: 'openx', params: {unit: '543530141', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-			 // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */
+			 { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
 			 // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
 				{ bidder: 'nobid', params: { siteId : '22103833237'} },
 				{ bidder: 'ucfunnel', params: { adid : 'ad-D234224D978D947B1D472E6BDD68A92B'} },

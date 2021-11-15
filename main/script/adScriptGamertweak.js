@@ -18,7 +18,6 @@ function mobileCheck() {
 };
 
 var adUnits = [];
-var size_array;
 
 var hb_common_bidders = [
 	    { bidder: 'appnexus', params: { placementId: '23404517' } }, /* one placementId for all sizes  my appnexus bidder */
@@ -105,9 +104,9 @@ bids: [
 }
 
 if (!mobileCheck()) {
-  size_array = mapping_hb.sizesD;
+  var size_array = mapping_hb.sizesD;
 }else {
-  size_array = mapping_hb.sizesM;
+  var size_array = mapping_hb.sizesM;
 }
 
 // var mybotstyleSheet='.ub-sticky-ad-containerdesk{position:fixed;width:fit-content!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.close_ub-sticky-addesk{display: none; position:absolute;margin-top:-20px;width:20px;cursor:pointer;right:-20px;z-index:2147483647;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)} #div-gpt-ad-1625037685774-0{min-width: 728px;min-height: 90px;}';
@@ -183,6 +182,16 @@ var mappings = {
 
 
 function 	ub_ad() {
+  var s0 = document.createElement('script');
+  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  var s1 = document.createElement('script');
+  s1.async = "async";
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s1);
 
     var GEO_CODE = '';
     (function (){
@@ -216,7 +225,11 @@ function 	ub_ad() {
       while (document.getElementById(mapping_hb.targetUnits[i]) != null) {
         mappings.slotNumbers.push(i+1);
         mappings.adCode.push(mapping_hb.adUnitNames[i]);
-        mappings.sizes.push(mapping_hb.sizes[i]);
+        if (!mobileCheck()) {
+          mappings.sizes.push(mapping_hb.sizesD[i]);
+        }else {
+          mappings.sizes.push(mapping_hb.sizesM[i]);
+        }
         mappings.adId.push(mapping_hb.adId[i]);
         ub_checkRendered(i);
         break;

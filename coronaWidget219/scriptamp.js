@@ -1,5 +1,5 @@
 // console.log('script disabled');
-tGACode = 'G-VJD3K213QY';
+mybotGACode = 'G-VJD3K213QY';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
 var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-463364-1{width: auto !important;z-index: 2147483647 !important;} #ifr_463364-1{bottom: -20px !important; left: -30px !important;}";

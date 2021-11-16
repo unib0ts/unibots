@@ -44,10 +44,10 @@ targetUnits: [
 ],
 slotNames: ['ub_slot1', 'ub_slot2', 'ub_slot3', 'ub_slot4'],
 adUnitNames: [
-	  '/22082859479/gamertweak.com_300x250_320x50_1',
-		'/22082859479/gamertweak.com_300x250_320x50_2',
-    '/22082859479/gamertweak.com_300x250_320x50_3',
-		'/22082859479/gamertweak.com_300x250_320x50_4',
+	  '/21928950349,21806813315/gamertweak_ub_300x250_320x50_1',
+		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_2',
+    '/21928950349,21806813315/gamertweak_ub_300x250_320x50_3',
+		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_4',
 ],
 adId: [
 	  'div-gpt-ad-1636976525804-0',

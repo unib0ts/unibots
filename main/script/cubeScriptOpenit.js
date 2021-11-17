@@ -20,7 +20,7 @@ css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
-mybotGACode = '';
+mybotGACode = 'G-Y4BBC2B3VQ';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");

@@ -9,9 +9,9 @@
     <script src="https://c.amazon-adsystem.com/aax2/apstag.js"></script>
     <script>
     var mappings = {
-      adCode: ["/21928950349,1019715/sunsigns.org_banner1_ub_ebda_728x90_320x50"],
-      sizes: [[320, 50], [728, 90]],
-      adId: ["div-gpt-ad-1632902458570-0",]
+      adCode: ["/21928950349,1019715/sunsigns.org_banner11_ub_ebda_300x1050"],
+      sizes: [[300, 1050],],
+      adId: ["div-gpt-ad-1635167683956-0",]
     };
 
     apSlots = [];

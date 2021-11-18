@@ -9,8 +9,8 @@
     <script src="https://c.amazon-adsystem.com/aax2/apstag.js"></script>
     <script>
     var mappings = {
-      adCode: ["/21928950349,1019715/sunsigns.org_banner2_ub_ebda_120x600"],
-      sizes: [[120, 600]],
+      adCode: ["/21928950349,1019715/sunsigns.org_banner2_ub_ebda_120x600",],
+      sizes: [[120, 600],],
       adId: ["div-gpt-ad-1632902504286-0",]
     };
 

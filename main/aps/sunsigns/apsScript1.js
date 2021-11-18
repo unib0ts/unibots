@@ -10,7 +10,7 @@
     <script>
     var mappings = {
       adCode: ["/21928950349,1019715/sunsigns.org_banner3_famousbirthdays_ub_ebda_728x90_320x50",],
-      sizes: [[320, 50], [728, 90]],
+      sizes: [[[320, 50], [728, 90]],],
       adId: ["div-gpt-ad-1632908178420-0",]
     };
 
@@ -22,7 +22,7 @@
       apSlotTemp = {
         slotID: mappings.adId[ub_i],
         slotName: mappings.adCode[ub_i],
-        sizes: mappings.sizes[ub_i]
+        sizes: mappings.sizes
       }
       apSlots.push(apSlotTemp);
 

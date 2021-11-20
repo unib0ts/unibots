@@ -79,8 +79,7 @@ function ubadScript() {
   }else {
     z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
   }
-  x1 = document.querySelector("body");
-  x1.appendChild(z1);
+  document.querySelector("body").appendChild(z1);
 
   var s3 = document.createElement('script');
      s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");

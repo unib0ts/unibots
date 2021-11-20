@@ -1,4 +1,44 @@
-// checkHBUnits();
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksAllfreenovel.json';
+mybotBlockedClientName = 'allfreenovel';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          ubadScript();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      ubadScript();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    ubadScript();
+  };
+  request.send();
+}
+else{
+  ubadScript();
+}
 
 mybotGACode = 'G-YRVGRBP56J';
 mybotgabywa =
@@ -81,47 +121,9 @@ function mybotubstickyad() {
 //     document.getElementById("ub-sticky-ad-containerdesk").style.display = "none";
 // }
 
-var s0 = document.createElement("script");
-s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-s0.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(s0);
-
-var s1 = document.createElement("script");
-s1.async = "async";
-s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-s1.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(s1);
-
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
-
-var GEO_CODE = "";
-(function () {
-    var request = new XMLHttpRequest();
-    url =
-        "https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ";
-    request.open("GET", url, true);
-    request.onload = function () {
-        if (request.status >= 200 && request.status < 400) {
-            var data = request.responseText;
-            data = JSON.parse(data);
-            if (data.status == "success") {
-                GEO_CODE = data.countryCode;
-            } else {
-                console.error("Geo Request Failed");
-            }
-        } else {
-            console.error("Request failed from server");
-        }
-        mainHbRun();
-    };
-    request.onerror = function () {
-        console.error("Request failed to Reach GEO Server");
-        mainHbRun();
-    };
-    request.send();
-})();
 
 const customConfigObjectA = {
     buckets: [
@@ -135,6 +137,49 @@ const customConfigObjectA = {
 };
 
 var adUnits_full_hb = [];
+
+function ubadScript() {
+  var s0 = document.createElement("script");
+  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName("head")[0].appendChild(s0);
+
+  var s1 = document.createElement("script");
+  s1.async = "async";
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName("head")[0].appendChild(s1);
+
+  callMapUnits();
+
+  var GEO_CODE = "";
+  (function () {
+      var request = new XMLHttpRequest();
+      url =
+          "https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ";
+      request.open("GET", url, true);
+      request.onload = function () {
+          if (request.status >= 200 && request.status < 400) {
+              var data = request.responseText;
+              data = JSON.parse(data);
+              if (data.status == "success") {
+                  GEO_CODE = data.countryCode;
+              } else {
+                  console.error("Geo Request Failed");
+              }
+          } else {
+              console.error("Request failed from server");
+          }
+          mainHbRun();
+      };
+      request.onerror = function () {
+          console.error("Request failed to Reach GEO Server");
+          mainHbRun();
+      };
+      request.send();
+  })();
+
+}
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -481,7 +526,7 @@ if (!mobileCheckAdScript()) {
     //     addNewsBotAd();
     //   }
     // }
-    callMapUnits();
+    // callMapUnits();
     // changeConfigToHB();
     // setTimeout(function(){ callMapUnits(); }, 500);
     // setTimeout(function() {

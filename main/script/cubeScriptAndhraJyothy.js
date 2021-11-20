@@ -14,18 +14,61 @@ function mobileCheck() {
     return check;
 }
 
-if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {
-var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 0px !important;} #ifr_465589-1{bottom: 0px !important;}";
-}else {
-  var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 200px !important;} #ifr_465589-1{bottom: 120px !important;}";
-}
-var css = document.createElement("style");
-css.type = "text/css";
-css.appendChild(document.createTextNode(mybotstyleSheet));
-document.getElementsByTagName("head")[0].appendChild(css);
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksAndhrajyothy.json';
+mybotBlockedClientName = 'andhrajyothy';
 
-mybotGACode = 'G-ET940NHF6B';
-mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+  if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+    urlToCheck = window.location.host+window.location.pathname+window.location.search;
+
+    var request = new XMLHttpRequest();
+    url = mybotBlockedUrl;
+
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        data = JSON.parse(data);
+        data = data[mybotBlockedClientName];
+        if(data) {
+          data = data.urls;
+          if(data.includes(urlToCheck)){
+            // mybotdiv1 = '';
+            return false;
+          }
+          else{
+            ubadScript();
+          }
+        }
+      }
+      else {
+        console.log('Block Check Request failed');
+        ubadScript();
+      }
+    };
+    request.onerror = function() {
+      console.log('Request failed');
+      ubadScript();
+    };
+    request.send();
+  }
+  else{
+    ubadScript();
+  }
+
+  if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {
+     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 0px !important;} #ifr_465589-1{bottom: 0px !important;}";
+  }else {
+     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 200px !important;} #ifr_465589-1{bottom: 120px !important;}";
+  }
+
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.appendChild(document.createTextNode(mybotstyleSheet));
+  document.getElementsByTagName("head")[0].appendChild(css);
+
+  mybotGACode = 'G-ET940NHF6B';
+  mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");
   ub_ga.id = "gabywa";
@@ -33,6 +76,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
+function ubadScript() {
   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
     z1 = document.createElement("div");
     z1.id = "div-gpt-ad-1636394755885-0";
@@ -64,6 +108,8 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
     s2.async = "async";
     document.body.appendChild(s2);
   }
+}
+
   ub_passback1();
 
   setInterval(function(){

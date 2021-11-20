@@ -14,6 +14,48 @@ function mobileCheck() {
     return check;
 }
 
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksChitrajyothy.json';
+mybotBlockedClientName = 'chitrajyothy';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+
+  var request = new XMLHttpRequest();
+  url = mybotBlockedUrl;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      data = data[mybotBlockedClientName];
+      if(data) {
+        data = data.urls;
+        if(data.includes(urlToCheck)){
+          // mybotdiv1 = '';
+          return false;
+        }
+        else{
+          ubadScript();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      ubadScript();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    ubadScript();
+  };
+  request.send();
+}
+else{
+  ubadScript();
+}
+
 var mybotstyleSheet ="#div-clmb-ctn-465393-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465590-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465393-1{bottom: 200px !important;} #ifr_465590-1{bottom: 120px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
@@ -29,6 +71,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
+function ubadScript() {
   if (!mobileCheck()) {
     z1 = document.createElement("div");
     z1.id = "div-gpt-ad-1636394784638-0";
@@ -60,6 +103,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
     s2.async = "async";
     document.body.appendChild(s2);
   }
+}
 
    ub_passback1();
 

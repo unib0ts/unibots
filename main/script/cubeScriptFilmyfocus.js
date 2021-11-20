@@ -27,6 +27,12 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'UA-164744545-4';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
+ub_ga = document.createElement("div");
+ub_ga.id = "gabywa";
+document.getElementsByTagName("head")[0].appendChild(ub_ga);
+document.getElementById("gabywa").innerHTML = mybotgabywa;
+loadAd("gabywa");
+
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;
 
@@ -76,12 +82,6 @@ function ubadScript() {
   x1 = document.querySelector("body");
   x1.appendChild(z1);
 
-  ub_ga = document.createElement("div");
-  ub_ga.id = "gabywa";
-  document.getElementsByTagName("head")[0].appendChild(ub_ga);
-  document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa");
-
   var s3 = document.createElement('script');
      s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
      s3.async = true;
@@ -102,6 +102,9 @@ function ubadScript() {
      s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
      s2.type = "text/javascript";
      document.getElementsByTagName('head')[0].appendChild(s2);
+
+}
+
    ub_passback1();
 
    setInterval(function(){
@@ -118,7 +121,6 @@ function ubadScript() {
     }
    }, 30000);
 
-}
 
  function ub_passback1() {
        if(typeof colombia == 'undefined'){

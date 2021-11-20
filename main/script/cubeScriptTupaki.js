@@ -100,6 +100,7 @@ function ubadScript() {
       s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptTupaki.js";
       s2.type = "text/javascript";
       document.getElementsByTagName('head')[0].appendChild(s2);
+   }
   }
 
    ub_passback1();
@@ -118,7 +119,6 @@ function ubadScript() {
     }
    }, 30000);
 
-}
 
  function ub_passback1() {
        if(typeof colombia == 'undefined'){

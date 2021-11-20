@@ -30,6 +30,12 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 // mybotadSmall = '<div id="div-ub-1"></div>';
 mybotadTarget = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><div id="gpt-passback"><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21959913182/sakshi_hb_320x50_top_mobile_new", [[320, 100], [320, 50], [300, 50], [300, 100]], "gpt-passback").addService(googletag.pubads());googletag.pubads().set("page_url","sakshi.com");googletag.enableServices();googletag.display("gpt-passback");});</script></div>';
 
+ub_ga = document.createElement("div");
+ub_ga.id = "gabywa";
+document.getElementsByTagName("head")[0].appendChild(ub_ga);
+document.getElementById("gabywa").innerHTML = mybotgabywa;
+loadAd("gabywa");
+
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;
 
@@ -69,17 +75,13 @@ else{
 }
 
 function ubadScript() {
-  ub_ga = document.createElement("div");
-  ub_ga.id = "gabywa";
-  document.getElementsByTagName("head")[0].appendChild(ub_ga);
-  document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa");
-
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1602675444550-0";
   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
   x1 = document.querySelector("body");
   x1.appendChild(z1);
+
+}
 
    ub_passback1();
 
@@ -94,7 +96,6 @@ function ubadScript() {
       }catch(e){}
     }
    }, 30000);
-}
 
  function ub_passback1() {
  //     return new Promise(function(resolve, reject) {

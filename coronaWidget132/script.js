@@ -107,6 +107,7 @@ function ubadScript() {
      }, 500);
 }
 
+setTimeout(function(){
  ub_passback1();
 
  setInterval(function(){
@@ -122,6 +123,8 @@ function ubadScript() {
     }catch(e){}
   }
  }, 30000);
+ 
+}, 500);
 
 
  function ub_passback1() {

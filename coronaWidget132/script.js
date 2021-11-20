@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-mybotBlockedPagesFlag = 0;
+mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 
@@ -71,7 +71,9 @@ else{
   ubadScript();
 }
 
+
 function ubadScript() {
+  setTimeout(function(){
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1588428540791-0";
   if (!mobileCheck()) {
@@ -102,23 +104,25 @@ function ubadScript() {
      s2.type = "text/javascript";
      document.getElementsByTagName('head')[0].appendChild(s2);
 
-   }
+     }, 500);
+}
 
-   ub_passback1();
+ ub_passback1();
 
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-465765-1');
-        cubespinnervisibility();
-        }catch(e){}
-    }else {
+ setInterval(function(){
+   if (!mobileCheck()) {
       try{
-         colombia.refresh('div-clmb-ctn-465766-1');
-         cubespinnervisibility();
+      colombia.refresh('div-clmb-ctn-465765-1');
+      cubespinnervisibility();
       }catch(e){}
-    }
-   }, 30000);
+  }else {
+    try{
+       colombia.refresh('div-clmb-ctn-465766-1');
+       cubespinnervisibility();
+    }catch(e){}
+  }
+ }, 30000);
+
 
  function ub_passback1() {
        if(typeof colombia == 'undefined'){

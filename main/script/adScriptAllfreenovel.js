@@ -85,17 +85,19 @@ if (!mobileCheck() && (window.screen.availWidth > 1024)) {
         x1 = document.querySelector('body');
         x1.appendChild(z1);
 
-        z1 = document.createElement("div");
-        z1.id = "div-gpt-ad-1637235824563-0";
-        z1.style = "min-width: 300px; min-height: 250px";
+        z2 = document.createElement("div");
+        z2.id = "div-gpt-ad-1637235824563-0";
+        z2.style = "min-width: 300px; min-height: 250px";
         x1 = document.querySelector('.justify-content-center');
-        x1.appendChild(z1);
+        x1.appendChild(z2);
 
-        // z2 = document.createElement("div");
-        // z2.id = "div-gpt-ad-1637235851444-0";
-        // z2.style = "min-width: 300px; min-height: 250px";
-        // x1 = document.querySelector('.justify-content-center');
-        // x1.appendChild(z2);
+       if (document.querySelector('.storyText')) {
+         z3 = document.createElement("div");
+         z3.id = "div-gpt-ad-1637235851444-0";
+         z3.style = "min-width: 300px; min-height: 250px";
+         x1 = document.querySelectorAll('.storyText');
+         x1[8].appendChild(z3);
+       }
 
         // z3 = document.createElement("div");
         // z3.id = "div-gpt-ad-1637223913329-0";

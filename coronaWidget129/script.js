@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-mybotBlockedPagesFlag = 1;
+mybotBlockedPagesFlag = 0;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 
@@ -102,7 +102,7 @@ function ubadScript() {
      s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
      s2.type = "text/javascript";
      document.getElementsByTagName('head')[0].appendChild(s2);
-     
+
 }
    ub_passback1();
 

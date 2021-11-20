@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-mybotBlockedPagesFlag = 1;
+mybotBlockedPagesFlag = 0;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 

@@ -34,7 +34,7 @@ mybotGACode = 'G-YLT8L7SED8';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+  urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;
@@ -92,7 +92,7 @@ function ubadScript() {
  s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptTollywood.js";
  s2.type = "text/javascript";
  document.getElementsByTagName('head')[0].appendChild(s2);
- 
+
  }
    ub_passback1();
 

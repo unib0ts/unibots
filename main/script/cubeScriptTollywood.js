@@ -34,7 +34,7 @@ mybotGACode = 'G-YLT8L7SED8';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname+window.location.search;
+  urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
   url = mybotBlockedUrl;

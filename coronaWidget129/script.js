@@ -18,7 +18,11 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
 mybotBlockedClientName = 'filmyfocus';
 
-var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 180px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 60px !important;}";
+if (window.location.hostname == "telugu.filmyfocus.com" && !(window.location.href == "https://telugu.filmyfocus.com/")) {
+  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
+}else {
+  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 180px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 60px !important;}";
+}
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -26,6 +30,12 @@ document.getElementsByTagName("head")[0].appendChild(css);
 
 mybotGACode = 'UA-164744545-4';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+
+ub_ga = document.createElement("div");
+ub_ga.id = "gabywa";
+document.getElementsByTagName("head")[0].appendChild(ub_ga);
+document.getElementById("gabywa").innerHTML = mybotgabywa;
+loadAd("gabywa");
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;
@@ -65,22 +75,25 @@ else{
   ubadScript();
 }
 
+
 function ubadScript() {
+  setTimeout(function(){
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1588428540791-0";
-  if (!mobileCheck()) {
-    z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:135px;right:5px;z-index:99";
+  if (window.location.hostname == "telugu.filmyfocus.com" && !(window.location.href == "https://telugu.filmyfocus.com/")) {
+    if (!mobileCheck()) {
+      z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom: 245px;right:5px;z-index:99";
+    }else {
+      z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom: 135px;right:5px;z-index:99";
+    }
   }else {
-    z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
+    if (!mobileCheck()) {
+      z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:135px;right:5px;z-index:99";
+    }else {
+      z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
+    }
   }
-  x1 = document.querySelector("body");
-  x1.appendChild(z1);
-
-  ub_ga = document.createElement("div");
-  ub_ga.id = "gabywa";
-  document.getElementsByTagName("head")[0].appendChild(ub_ga);
-  document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa");
+  document.querySelector("body").appendChild(z1);
 
   var s3 = document.createElement('script');
      s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
@@ -102,23 +115,29 @@ function ubadScript() {
      s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
      s2.type = "text/javascript";
      document.getElementsByTagName('head')[0].appendChild(s2);
-   ub_passback1();
 
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-465765-1');
-        cubespinnervisibility();
-        }catch(e){}
-    }else {
-      try{
-         colombia.refresh('div-clmb-ctn-465766-1');
-         cubespinnervisibility();
-      }catch(e){}
-    }
-   }, 30000);
-
+     }, 500);
 }
+
+setTimeout(function(){
+ ub_passback1();
+
+ setInterval(function(){
+   if (!mobileCheck()) {
+      try{
+      colombia.refresh('div-clmb-ctn-465765-1');
+      cubespinnervisibility();
+      }catch(e){}
+  }else {
+    try{
+       colombia.refresh('div-clmb-ctn-465766-1');
+       cubespinnervisibility();
+    }catch(e){}
+  }
+ }, 30000);
+
+}, 500);
+
 
  function ub_passback1() {
        if(typeof colombia == 'undefined'){

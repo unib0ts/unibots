@@ -27,6 +27,12 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'UA-164744545-4';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
+ub_ga = document.createElement("div");
+ub_ga.id = "gabywa";
+document.getElementsByTagName("head")[0].appendChild(ub_ga);
+document.getElementById("gabywa").innerHTML = mybotgabywa;
+loadAd("gabywa");
+
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname+window.location.search;
 
@@ -65,7 +71,9 @@ else{
   ubadScript();
 }
 
+
 function ubadScript() {
+  setTimeout(function(){
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1588428540791-0";
   if (!mobileCheck()) {
@@ -73,14 +81,7 @@ function ubadScript() {
   }else {
     z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
   }
-  x1 = document.querySelector("body");
-  x1.appendChild(z1);
-
-  ub_ga = document.createElement("div");
-  ub_ga.id = "gabywa";
-  document.getElementsByTagName("head")[0].appendChild(ub_ga);
-  document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa");
+  document.querySelector("body").appendChild(z1);
 
   var s3 = document.createElement('script');
      s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
@@ -102,23 +103,29 @@ function ubadScript() {
      s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
      s2.type = "text/javascript";
      document.getElementsByTagName('head')[0].appendChild(s2);
-   ub_passback1();
 
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-465765-1');
-        cubespinnervisibility();
-        }catch(e){}
-    }else {
-      try{
-         colombia.refresh('div-clmb-ctn-465766-1');
-         cubespinnervisibility();
-      }catch(e){}
-    }
-   }, 30000);
-
+     }, 500);
 }
+
+setTimeout(function(){
+ ub_passback1();
+
+ setInterval(function(){
+   if (!mobileCheck()) {
+      try{
+      colombia.refresh('div-clmb-ctn-465765-1');
+      cubespinnervisibility();
+      }catch(e){}
+  }else {
+    try{
+       colombia.refresh('div-clmb-ctn-465766-1');
+       cubespinnervisibility();
+    }catch(e){}
+  }
+ }, 30000);
+ 
+}, 500);
+
 
  function ub_passback1() {
        if(typeof colombia == 'undefined'){

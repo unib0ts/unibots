@@ -14,18 +14,61 @@ function mobileCheck() {
     return check;
 }
 
-if (window.location.hostname == "epaper.andhrajyothy.com") {
-var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 20px !important;} #ifr_465589-1{bottom: 20px !important;}";
-}else {
-  var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 200px !important;} #ifr_465589-1{bottom: 120px !important;}";
-}
-var css = document.createElement("style");
-css.type = "text/css";
-css.appendChild(document.createTextNode(mybotstyleSheet));
-document.getElementsByTagName("head")[0].appendChild(css);
+// mybotBlockedPagesFlag = 1;
+// mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksAndhrajyothy.json';
+// mybotBlockedClientName = 'andhrajyothy';
+//
+//   if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+//     urlToCheck = window.location.host+window.location.pathname+window.location.search;
+//
+//     var request = new XMLHttpRequest();
+//     url = mybotBlockedUrl;
+//
+//     request.open('GET', url, true);
+//     request.onload = function() {
+//       if (request.status >= 200 && request.status < 400) {
+//         var data = request.responseText;
+//         data = JSON.parse(data);
+//         data = data[mybotBlockedClientName];
+//         if(data) {
+//           data = data.urls;
+//           if(data.includes(urlToCheck)){
+//             // mybotdiv1 = '';
+//             return false;
+//           }
+//           else{
+//             ubadScript();
+//           }
+//         }
+//       }
+//       else {
+//         console.log('Block Check Request failed');
+//         ubadScript();
+//       }
+//     };
+//     request.onerror = function() {
+//       console.log('Request failed');
+//       ubadScript();
+//     };
+//     request.send();
+//   }
+//   else{
+//     ubadScript();
+//   }
 
-mybotGACode = 'G-ET940NHF6B';
-mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+  if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {
+     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 0px !important;} #ifr_465589-1{bottom: 0px !important;}";
+  }else {
+     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 155px !important;} #ifr_465589-1{bottom: 120px !important;}";
+  }
+
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.appendChild(document.createTextNode(mybotstyleSheet));
+  document.getElementsByTagName("head")[0].appendChild(css);
+
+  mybotGACode = 'G-ET940NHF6B';
+  mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");
   ub_ga.id = "gabywa";
@@ -33,37 +76,40 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
-  if (!mobileCheck()) {
-    z1 = document.createElement("div");
-    z1.id = "div-gpt-ad-1636394755885-0";
-    z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:155px;left:5px;z-index:99";
-    x1 = document.querySelector("body");
-    x1.appendChild(z1);
+// function ubadScript() {
+//   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
+//     z1 = document.createElement("div");
+//     z1.id = "div-gpt-ad-1636394755885-0";
+//     z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:155px;left:5px;z-index:99";
+//     x1 = document.querySelector("body");
+//     x1.appendChild(z1);
+//
+//     var s3 = document.createElement('script');
+//     s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+//     s3.async = true;
+//     s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+//     document.getElementsByTagName('head')[0].appendChild(s3);
+//
+//     var s0 = document.createElement('script');
+//     s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+//     s0.type = "text/javascript";
+//     document.getElementsByTagName('head')[0].appendChild(s0);
+//
+//     var s1 = document.createElement('script');
+//     s1.async = "async";
+//     s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+//     s1.type = "text/javascript";
+//     document.getElementsByTagName('head')[0].appendChild(s1);
+//
+//     var cachebuster = Math.round(new Date().getTime() / 1000);
+//     url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptAndhrajyothy.js?cb='+cachebuster;
+//     s2 = document.createElement('script');
+//     s2.src = url;
+//     s2.async = "async";
+//     document.body.appendChild(s2);
+//   }
+// }
 
-    var s3 = document.createElement('script');
-    s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
-    s3.async = true;
-    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-    document.getElementsByTagName('head')[0].appendChild(s3);
-
-    var s0 = document.createElement('script');
-    s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-    s0.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(s0);
-
-    var s1 = document.createElement('script');
-    s1.async = "async";
-    s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-    s1.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(s1);
-
-    var cachebuster = Math.round(new Date().getTime() / 1000);
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptAndhrajyothy.js?cb='+cachebuster;
-    s2 = document.createElement('script');
-    s2.src = url;
-    s2.async = "async";
-    document.body.appendChild(s2);
-  }
   ub_passback1();
 
   setInterval(function(){

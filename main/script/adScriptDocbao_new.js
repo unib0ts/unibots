@@ -203,15 +203,63 @@ function ubadScript() {
         }
       // }
 
-    // if((window.location.href== "https://m.docbao.vn/")){
-    //   z2 = document.createElement("div");
-    //   z2.id = "ub-popup-ad-container";
-    //   z2.className = "ub-popup-ad-container";
-    //   z2.innerHTML =
-    //       '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
-    //   x2 = document.querySelector("body");
-    //   x2.appendChild(z2);
-    // }
+    if((window.location.href== "https://m.docbao.vn/")){
+      z2 = document.createElement("div");
+      z2.id = "ub-popup-ad-container";
+      z2.className = "ub-popup-ad-container";
+      z2.innerHTML =
+          '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
+      x2 = document.querySelector("body");
+      x2.appendChild(z2);
+    }
+
+    if (document.querySelector('#ax-article-header')) {
+       z3 = document.createElement("div");
+       z3.id = "div-gpt-ad-1617722328302-0";
+       z3.style = "min-width: 300px; min-height: 250px";
+
+       x3 = document.querySelector('#ContentDetails');
+       x3 = x3.querySelectorAll('p');
+       x3[0].appendChild(z3);
+
+       var prevparaHeight = 0;
+       var ub_flag1 = true;
+       var ub_flag2 = true;
+       var ub_flag3 = true;
+       var ub_flag4 = true;
+
+       for (var ub_j = 0; ub_j < x3.length; ub_j++) {
+         prevparaHeight += x3[ub_j].offsetHeight;
+
+         if((prevparaHeight > 700) && (ub_flag1 == true)){
+           z4 = document.createElement("div");
+           z4.id = "div-gpt-ad-1617722500738-0";
+           z4.style = "min-width: 300px; min-height: 600px";
+           x3[ub_j].appendChild(z4);
+           ub_flag1 = false;
+         }else if ((prevparaHeight > 1400) && (ub_flag2 == true)) {
+           z5 = document.createElement("div");
+           z5.id = "div-gpt-ad-1617722573994-0";
+           z5.style = "min-width: 300px; min-height: 250px";
+           x3[ub_j].appendChild(z5);
+           ub_flag2 = false;
+         }
+         else if ((prevparaHeight > 2100) && (ub_flag3 == true)) {
+           z6 = document.createElement("div");
+           z6.id = "div-gpt-ad-1617722626196-0";
+           z6.style = "min-width: 300px; min-height: 250px";
+           x3[ub_j].appendChild(z6);
+           ub_flag3 = false;
+         }
+         else if ((prevparaHeight > 2800) && (ub_flag4 == true)) {
+           z7 = document.createElement("div");
+           z7.id = "div-gpt-ad-1620991472253-0";
+           z7.style = "min-width: 300px; min-height: 250px";
+           x3[ub_j].appendChild(z7);
+           ub_flag4 = false;
+         }
+       }
+    }
   }
 
   function mybotubPopadcls() {
@@ -289,36 +337,36 @@ function ubadScript() {
       [300, 600],
   ];
 
-  // if (mobileCheck()) {
-  //     // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-  //   if((window.location.href== "https://m.docbao.vn/")){
-  //     adUnits1 = {
-  //         code: "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
-  //         mediaTypes: {
-  //             banner: {
-  //                 sizes: div_1_sizes,
-  //             },
-  //         },
-  //         bids: [
-  //           { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-  // 					{ bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
-  //           { bidder: 'oftmedia', params: { placementId: '20846125' } },
-  //           // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-  //           // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
-  //           // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-  //           { bidder: 'nobid', params: { siteId: '22049997436' } },
-  //           { bidder: 'openx', params: {unit: '545728062', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-  //           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-  //           // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-  //           // // { bidder: 'criteo', params: {networkId: '10542'} },
-  //           // // { bidder: 'criteointl', params: {networkId: '10545'} },
-  //           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-  //           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-  //         ],
-  //     };
-  //     adUnits_full_hb.push(adUnits1);
-  //     }
-  // }
+  if (mobileCheck()) {
+      // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+    if((window.location.href== "https://m.docbao.vn/")){
+      adUnits1 = {
+          code: "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
+          mediaTypes: {
+              banner: {
+                  sizes: div_1_sizes,
+              },
+          },
+          bids: [
+            { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+  					{ bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
+            { bidder: 'oftmedia', params: { placementId: '20846125' } },
+            // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+            // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            { bidder: 'nobid', params: { siteId: '22049997436' } },
+            { bidder: 'openx', params: {unit: '545728062', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // // { bidder: 'criteo', params: {networkId: '10542'} },
+            // // { bidder: 'criteointl', params: {networkId: '10545'} },
+            { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          ],
+      };
+      adUnits_full_hb.push(adUnits1);
+      }
+  }
 
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -1031,12 +1079,12 @@ function ubadScript() {
   }
 
   function checkHBUnits() {
-      // if (mobileCheck()) {
-      //     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-      //    if((window.location.href== "https://m.docbao.vn/")){
-      //     addNewsBotAd();
-      //     }
-      // }
+      if (mobileCheck()) {
+          // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+         if((window.location.href== "https://m.docbao.vn/")){
+          addNewsBotAd();
+          }
+      }
 
       // changeConfigToHB();
       callMapUnits();

@@ -208,7 +208,7 @@ function ubadScript() {
       // }
 
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-    if (!(window.location.href == "https://bongdaplus.vn/")) {
+    // if (!(window.location.href == "https://bongdaplus.vn/")) {
       z2 = document.createElement("div");
       z2.id = "ub-popup-ad-container";
       z2.className = "ub-popup-ad-container";
@@ -216,7 +216,7 @@ function ubadScript() {
           '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
       x2 = document.querySelector("body");
       x2.appendChild(z2);
-    }
+    // }
   }
 
   function mybotubPopadcls() {
@@ -295,7 +295,7 @@ function ubadScript() {
 
   if (mobileCheck()) {
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-      if (!(window.location.href == "https://bongdaplus.vn/")) {
+      // if (!(window.location.href == "https://bongdaplus.vn/")) {
       adUnits1 = {
           code: "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
           mediaTypes: {
@@ -321,7 +321,7 @@ function ubadScript() {
           ],
       };
       adUnits_full_hb.push(adUnits1);
-    }
+    // }
   }
 
   var googletag = googletag || {};
@@ -1208,9 +1208,9 @@ function ubadScript() {
       if (mobileCheck()) {
       //   // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
       //
-          if (!(window.location.href == "https://bongdaplus.vn/")) {
+          // if (!(window.location.href == "https://bongdaplus.vn/")) {
           addNewsBotAd();
-        }
+        // }
       }
       // callMapUnits();
       // changeConfigToHB();

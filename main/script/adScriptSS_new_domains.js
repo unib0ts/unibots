@@ -42,6 +42,16 @@ if(typeof customConfigObjectA === 'undefined'){
     ubadScript();
   }
 
+  var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
+  url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget220/script.js?cb='+cachebuster;
+  // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
+  // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/olympicWidget13/script.js?cb='+cachebuster;
+  s3 = document.createElement('script');
+  s3.src = url;
+  s3.async = "async";
+  s3.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s3);
+
 function ubadScript() {
   var botsiteUrl = window.location.hostname;
   // if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
@@ -56,15 +66,7 @@ function ubadScript() {
   //   document.getElementsByTagName('head')[0].appendChild(s3);
   // }
   // if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
-    var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget220/script.js?cb='+cachebuster;
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/sakshipost/script.js?cb='+cachebuster;
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/olympicWidget13/script.js?cb='+cachebuster;
-    s3 = document.createElement('script');
-    s3.src = url;
-    s3.async = "async";
-    s3.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(s3);
+
   // }
   // var s0 = document.createElement('script');
   // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";

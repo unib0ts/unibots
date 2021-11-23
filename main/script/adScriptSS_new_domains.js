@@ -1,4 +1,48 @@
 if(typeof customConfigObjectA === 'undefined'){
+
+  mybotBlockedPagesFlag = 1;
+  mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
+  mybotBlockedClientName = 'ss';
+
+  if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+    urlToCheck = window.location.host+window.location.pathname;
+
+    var request = new XMLHttpRequest();
+    url = mybotBlockedUrl;
+
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        data = JSON.parse(data);
+        data = data[mybotBlockedClientName];
+        if(data) {
+          data = data.urls;
+          if(data.includes(urlToCheck)){
+            // mybotdiv1 = '';
+            return false;
+          }
+          else{
+            ubadScript();
+          }
+        }
+      }
+      else {
+        console.log('Block Check Request failed');
+        ubadScript();
+      }
+    };
+    request.onerror = function() {
+      console.log('Request failed');
+      ubadScript();
+    };
+    request.send();
+  }
+  else{
+    ubadScript();
+  }
+
+function ubadScript() {
   var botsiteUrl = window.location.hostname;
   // if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
   //   var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
@@ -33,37 +77,40 @@ if(typeof customConfigObjectA === 'undefined'){
   s1.type = "text/javascript";
   document.getElementsByTagName('head')[0].appendChild(s1);
 
-  var PREBID_TIMEOUT = 2000;
-  var FAILSAFE_TIMEOUT = 3000;
-  var REFRESH_TIMEOUT = 60000;
-
   var GEO_CODE = '';
   (function (){
     var request = new XMLHttpRequest();
-  		url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-  		request.open('GET', url, true);
-  		request.onload = function() {
-  			if (request.status >= 200 && request.status < 400) {
-  				var data = request.responseText;
-  				data = JSON.parse(data);
-  				if(data.status == "success") {
+      url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+      request.open('GET', url, true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          var data = request.responseText;
+          data = JSON.parse(data);
+          if(data.status == "success") {
             GEO_CODE = data.countryCode;
-  				}
-  				else {
-  					console.error("Geo Request Failed");
-  				}
-  			}
-  			else {
-  				console.error('Request failed from server');
-  			}
+          }
+          else {
+            console.error("Geo Request Failed");
+          }
+        }
+        else {
+          console.error('Request failed from server');
+        }
         mainHbRun();
-  		};
-  		request.onerror = function() {
-  			console.error('Request failed to Reach GEO Server');
+      };
+      request.onerror = function() {
+        console.error('Request failed to Reach GEO Server');
         mainHbRun();
-  		};
-  		request.send();
+      };
+      request.send();
   })();
+
+    checkHBUnits();
+}
+
+  var PREBID_TIMEOUT = 2000;
+  var FAILSAFE_TIMEOUT = 3000;
+  var REFRESH_TIMEOUT = 60000;
 
   const customConfigObjectA = {
    "buckets" : [{
@@ -1130,7 +1177,6 @@ if(typeof customConfigObjectA === 'undefined'){
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
     });
   }
-  checkHBUnits();
 
   function fillRefreshMap(){
     googletag.cmd.push(function () {

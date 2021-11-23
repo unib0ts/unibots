@@ -14,13 +14,13 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-466520-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466521-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466520-1{right:0px !important;left: unset !important; bottom: 0px !important;} #ifr_466521-1{right:0px !important;left: unset !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-466538-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466539-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466538-1{bottom: 135px !important;} #ifr_466539-1{bottom: 120px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
-mybotGACode = '';
+mybotGACode = 'G-CN2LYKE7EF';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");
@@ -34,12 +34,12 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
    setInterval(function(){
      if (!mobileCheck()) {
         try{
-        colombia.refresh('div-clmb-ctn-466520-1');
+        colombia.refresh('div-clmb-ctn-466538-1');
         cubespinnervisibility();
         }catch(e){}
     }else {
       try{
-         colombia.refresh('div-clmb-ctn-466521-1');
+         colombia.refresh('div-clmb-ctn-466539-1');
          cubespinnervisibility();
       }catch(e){}
     }
@@ -66,13 +66,13 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
        if (!mobileCheck()) {
            ub_passback.setAttribute("data-ua", "D");
-           ub_passback.setAttribute("data-slot", "466520");
-           ub_passback.setAttribute("id", "div-clmb-ctn-466520-1");
+           ub_passback.setAttribute("data-slot", "466538");
+           ub_passback.setAttribute("id", "div-clmb-ctn-466538-1");
            document.getElementsByTagName("body")[0].appendChild(ub_passback);
        }else {
          ub_passback.setAttribute("data-ua", "M");
-         ub_passback.setAttribute("data-slot", "466521");
-         ub_passback.setAttribute("id", "div-clmb-ctn-466521-1");
+         ub_passback.setAttribute("data-slot", "466539");
+         ub_passback.setAttribute("id", "div-clmb-ctn-466539-1");
          document.getElementsByTagName("body")[0].appendChild(ub_passback);
        }
 
@@ -84,9 +84,9 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
    function clmbdiv() {
        if (!mobileCheck()) {
-         if (document.querySelector('#div-clmb-ctn-466520-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-466520-1').childNodes[0]) {
-                 ub_iframe = document.getElementById('ifr_466520-1');
+         if (document.querySelector('#div-clmb-ctn-466538-1').childNodes) {
+           if (document.querySelector('#div-clmb-ctn-466538-1').childNodes[0]) {
+                 ub_iframe = document.getElementById('ifr_466538-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
 
@@ -105,9 +105,9 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
          }
        }
        else {
-         if (document.querySelector('#div-clmb-ctn-466521-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-466521-1').childNodes[0]) {
-                 ub_iframe = document.getElementById('ifr_466521-1');
+         if (document.querySelector('#div-clmb-ctn-466539-1').childNodes) {
+           if (document.querySelector('#div-clmb-ctn-466539-1').childNodes[0]) {
+                 ub_iframe = document.getElementById('ifr_466539-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
 

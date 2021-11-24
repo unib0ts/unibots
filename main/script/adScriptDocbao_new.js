@@ -215,7 +215,7 @@ function ubadScript() {
     if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
        z3 = document.createElement("div");
        z3.id = "div-gpt-ad-1637576104804-0";
-       z3.style = "width: 336px; height: 280px; margin: auto;";
+       z3.style = "width: 336px; height: 280px; margin: auto !important;";
 
        x3 = document.querySelector('#ContentDetails');
        x3 = x3.querySelectorAll('p');
@@ -233,20 +233,20 @@ function ubadScript() {
          if((prevparaHeight > 700) && (ub_flag1 == true)){
            z4 = document.createElement("div");
            z4.id = "div-gpt-ad-1637576192868-0";
-           z4.style = "width: 336px; height: 280px; margin: auto;";
+           z4.style = "width: 336px; height: 280px; margin: auto !important;";
            x3[ub_j].appendChild(z4);
            ub_flag1 = false;
          }else if ((prevparaHeight > 1400) && (ub_flag2 == true)) {
            z5 = document.createElement("div");
            z5.id = "div-gpt-ad-1637576223476-0";
-           z5.style = "width: 336px; height: 280px; margin: auto;";
+           z5.style = "width: 336px; height: 280px; margin: auto !important;";
            x3[ub_j].appendChild(z5);
            ub_flag2 = false;
          }
          else if ((prevparaHeight > 2100) && (ub_flag3 == true)) {
            z6 = document.createElement("div");
            z6.id = "div-gpt-ad-1637576249097-0";
-           z6.style = "width: 336px; height: 280px; margin: auto;";
+           z6.style = "width: 336px; height: 280px; margin: auto !important;";
            x3[ub_j].appendChild(z6);
            ub_flag3 = false;
          }
@@ -262,24 +262,24 @@ function ubadScript() {
     if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
          z3 = document.createElement("div");
          z3.id = "div-gpt-ad-1637583218496-0";
-         z3.style = "width: 336px; height: 280px; margin: auto;";
+         z3.style = "width: 336px; height: 280px; margin: auto !important;";
          x3 = document.querySelector('.detail_page');
          y3 = x3.querySelectorAll('.latest_news');
          x3.insertBefore(z3, y3[0]);
 
          z4 = document.createElement("div");
          z4.id = "div-gpt-ad-1637583324963-0";
-         z4.style = "width: 336px; height: 280px; margin: auto;";
+         z4.style = "width: 336px; height: 280px; margin: auto !important;";
          x3.insertBefore(z4, y3[1]);
 
          z5 = document.createElement("div");
          z5.id = "div-gpt-ad-1637583351752-0";
-         z5.style = "width: 336px; height: 280px; margin: auto;";
+         z5.style = "width: 336px; height: 280px; margin: auto !important;";
          x3.insertBefore(z5, y3[2]);
 
          z6 = document.createElement("div");
          z6.id = "div-gpt-ad-1637583388379-0";
-         z6.style = "width: 336px; height: 280px; margin: auto;";
+         z6.style = "width: 336px; height: 280px; margin: auto !important;";
          y3[2].appendChild(z6);
     }
   }

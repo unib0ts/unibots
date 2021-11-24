@@ -20,9 +20,6 @@ css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
-mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
-mybotBlockedClientName = 'ss';
 
 mybotGACode = 'G-R0DQ8B1RNX';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
@@ -36,52 +33,11 @@ document.getElementsByTagName("head")[0].appendChild(ub_ga);
 document.getElementById("gabywa").innerHTML = mybotgabywa;
 loadAd("gabywa");
 
-if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname;
-
-  var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
-
-  request.open('GET', url, true);
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText;
-      data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
-      if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
-          return false;
-        }
-        else{
-          ubadScript();
-        }
-      }
-    }
-    else {
-      console.log('Block Check Request failed');
-      ubadScript();
-    }
-  };
-  request.onerror = function() {
-    console.log('Request failed');
-    ubadScript();
-  };
-  request.send();
-}
-else{
-  ubadScript();
-}
-
-function ubadScript() {
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1602675444550-0";
   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
   x1 = document.querySelector("body");
   x1.appendChild(z1);
-
-}
 
    ub_passback1();
 

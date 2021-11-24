@@ -216,7 +216,7 @@ function ubadScript() {
     if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
        z3 = document.createElement("div");
        z3.id = "div-gpt-ad-1637576104804-0";
-       z3.style = "min-width: 300px; min-height: 250px";
+       z3.style = "min-width: 336px; min-height: 280px";
 
        x3 = document.querySelector('#ContentDetails');
        x3 = x3.querySelectorAll('p');
@@ -234,20 +234,20 @@ function ubadScript() {
          if((prevparaHeight > 700) && (ub_flag1 == true)){
            z4 = document.createElement("div");
            z4.id = "div-gpt-ad-1637576192868-0";
-           z4.style = "min-width: 300px; min-height: 600px";
+           z4.style = "min-width: 336px; min-height: 280px";
            x3[ub_j].appendChild(z4);
            ub_flag1 = false;
          }else if ((prevparaHeight > 1400) && (ub_flag2 == true)) {
            z5 = document.createElement("div");
            z5.id = "div-gpt-ad-1637576223476-0";
-           z5.style = "min-width: 300px; min-height: 250px";
+           z5.style = "min-width: 336px; min-height: 280px";
            x3[ub_j].appendChild(z5);
            ub_flag2 = false;
          }
          else if ((prevparaHeight > 2100) && (ub_flag3 == true)) {
            z6 = document.createElement("div");
            z6.id = "div-gpt-ad-1637576249097-0";
-           z6.style = "min-width: 300px; min-height: 250px";
+           z6.style = "min-width: 336px; min-height: 280px";
            x3[ub_j].appendChild(z6);
            ub_flag3 = false;
          }

@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(){
   setTimeout(function(){
 
   function mobileCheck() {
@@ -235,4 +234,3 @@ document.addEventListener("DOMContentLoaded", function(){
    }
 
 }, 4000);
-});

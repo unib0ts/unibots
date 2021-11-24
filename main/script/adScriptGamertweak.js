@@ -109,13 +109,6 @@ if (!mobileCheck()) {
   var size_array = mapping_hb.sizesM;
 }
 
-// var mybotstyleSheet='.ub-sticky-ad-containerdesk{position:fixed;width:fit-content!important;bottom:0;left:50%;transform:translateX(-50%);z-index:2147483647}.close_ub-sticky-addesk{display: none; position:absolute;margin-top:-20px;width:20px;cursor:pointer;right:-20px;z-index:2147483647;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)} #div-gpt-ad-1625037685774-0{min-width: 728px;min-height: 90px;}';
-//
-// var css=document.createElement('style');
-// css.type='text/css';
-// css.appendChild(document.createTextNode(mybotstyleSheet));
-// document.getElementsByTagName('head')[0].appendChild(css);
-
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -144,14 +137,10 @@ var mappings = {
       ],
   };
 
-  // if (!mobileCheck()) {
-  //  z= document.createElement('div');
-  //  z.id = 'ub-sticky-ad-containerdesk';
-  //  z.className = 'ub-sticky-ad-containerdesk';
-  //  z.innerHTML ='<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div id="ub-sticky-adDesk"></div>';
-  //  x = document.querySelector('body');
-  //  x.appendChild(z);
-  // }
+  var mappings_final_refresh = {
+      adUnitNames: [],
+      adSlots: [],
+  };
 
   var mybotubad = setInterval(ub_adscript, 500);
 
@@ -369,29 +358,37 @@ function fillRefreshMap() {
                let ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
                if (ubifame == 'iframe') {
                  if (el != null) {
-                     let temp = setInterval(() => {
-                         if (isInViewSpace(el)) {
-                             timer -= 1;
-                             if (timer <= 0) {
-                               // if(mappings_final_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()}).length == 0){
-                               //   mappings_final_refresh.adSlots.push(event.slot);
-                               //   mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
-                               // }
+                     // let temp = setInterval(() => {
+                         // if (isInViewSpace(el)) {
+                             // timer -= 1;
+                             // if (timer <= 0) {
+                               if(mappings_refresh["adUnitNames"].filter(function(val){
+                                 return val == event.slot.getSlotId().getAdUnitPath()
+                               })){
+                                 mappings_final_refresh.adSlots.push(event.slot);
+                                 mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+                               }
                                // for (key in mapping_hb) {
-                                 if(mappings_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
-                                     refreshBid(
-                                         [event.slot], [event.slot.getSlotId().getAdUnitPath()]
-                                     );
-                                     clearInterval(temp);
-                                 }
+                                 // if(mappings_refresh["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
+                                 //     refreshBid(
+                                 //         [event.slot], [event.slot.getSlotId().getAdUnitPath()]
+                                 //     );
+                                 //     // clearInterval(temp);
+                                 // }
                                // }
-                             }
-                         }
-                     }, 1000);
+                             // }
+                         // }
+                     // }, 1000);
                  }
                }
            });
    });
+
+ setInterval(function() {
+   if (mappings_final_refresh.adSlots != '') {
+     refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+   }
+ }, REFRESH_TIMEOUT);
 }
 
 
@@ -412,30 +409,6 @@ function isInViewSpace(el) {
     return isVisible;
 }
 
-// function ub_checkRendered(i) {
-//   googletag.cmd.push(function() {
-//     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-//       if (event.slot === mapping_hb.slotNames[i]) {
-//         ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
-//       }
-//     });
-// });
-// }
-
-// function ub_checkAdRendered(adId, ub_slot, adCode){
-//   ub_slotNum = ub_slot[ub_slot.length-1]-1;
-//   if(!mappings.renderedFlag[ub_slotNum]){
-//     adId1 = adId;
-//     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-//     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-//       setTimeout(function() {
-//         refreshBid(ub_slot, adCode);
-//       }, REFRESH_TIMEOUT);
-//       mappings.renderedFlag[ub_slotNum] = true;
-//     }
-//   }
-// }
-
 function refreshBid(ub_slot, adCode) {
   ubpbjs.que.push(function(){
     ubpbjs.requestBids({
@@ -445,7 +418,7 @@ function refreshBid(ub_slot, adCode) {
         googletag.cmd.push(function() {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
-              googletag.pubads().refresh([ub_slot]);
+              googletag.pubads().refresh(ub_slot);
           });
         });
       }
@@ -483,19 +456,4 @@ function googlePush(){
   });
 }
 
-// if (!mobileCheck()) {
-//   googletag.cmd.push(function() {
-//         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-//           // if (event.slot === mapping_full_hb.slotNumbers[i]) {
-//             var nodes = document.getElementById('div-gpt-ad-1625037685774-0').childNodes[0].childNodes;
-//             if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-//               document.getElementById('close_ub-sticky-addesk').style.display = 'block';
-//             }
-//           // }
-//         });
-//   });
-// }
-//
-// function mybotubstickyadDesk() {
-//    document.getElementById('ub-sticky-ad-containerdesk').style.display='none';
-// }
+fillRefreshMap();

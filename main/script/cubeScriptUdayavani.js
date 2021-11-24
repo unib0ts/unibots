@@ -103,7 +103,7 @@ function mobileCheck() {
     document.getElementsByTagName('head')[0].appendChild(s1);
 
     var cachebuster = Math.round(new Date().getTime() / 1000);
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptAndhrajyothy.js?cb='+cachebuster;
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptUdayavani.js?cb='+cachebuster;
     s2 = document.createElement('script');
     s2.src = url;
     s2.async = "async";

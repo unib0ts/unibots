@@ -14,6 +14,8 @@ function mobileCheck() {
     return check;
 }
 
+if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {}
+else{
 // mybotBlockedPagesFlag = 1;
 // mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksAndhrajyothy.json';
 // mybotBlockedClientName = 'andhrajyothy';
@@ -56,11 +58,11 @@ function mobileCheck() {
 //     ubadScript();
 //   }
 
-  if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {
-     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 0px !important;} #ifr_465589-1{bottom: 0px !important;}";
-  }else {
+  // if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {
+  //    var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 0px !important;} #ifr_465589-1{bottom: 0px !important;}";
+  // }else {
      var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 155px !important;} #ifr_465589-1{bottom: 120px !important;}";
-  }
+  // }
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -112,20 +114,22 @@ function mobileCheck() {
 
   ub_passback1();
 
-  setInterval(function(){
-    if (!mobileCheck()) {
-       try{
-       colombia.refresh('div-clmb-ctn-465391-1');
-       cubespinnervisibility();
-       }catch(e){}
-   }
-    else {
-     try{
-        colombia.refresh('div-clmb-ctn-465589-1');
-        cubespinnervisibility();
-     }catch(e){}
-   }
-  }, 30000);
+  // if (!mobileCheck()) {
+  //   ub_iframe = document.getElementById('ifr_465391-1');
+  //   ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+  //
+  //     setInterval(function(){
+  //       if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+  //          try{
+  //          colombia.refresh('div-clmb-ctn-465391-1');
+  //          cubespinnervisibility();
+  //          }catch(e){}
+  //        }
+  //     }, 30000);
+  //
+  // }
+
+
   // else {
   //   var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
   //   url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/coronaWidget222/script.js?cb='+cachebuster;
@@ -172,7 +176,7 @@ function mobileCheck() {
   }
 
  function cubespinnervisibility() {
-   var ub_clmb = setInterval(clmbdiv, 500);
+   var ub_clmb = setInterval(clmbdiv, 1000);
 
    function clmbdiv() {
        if (!mobileCheck()) {
@@ -180,14 +184,24 @@ function mobileCheck() {
            if (document.querySelector('#div-clmb-ctn-465391-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_465391-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+
+                 setInterval(function(){
+                   if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+                      try{
+                      colombia.refresh('div-clmb-ctn-465391-1');
+                      cubespinnervisibility();
+                      }catch(e){}
+                    }
+                 }, 30000);
+
+                 ub_innerDoc1 = ub_innerDoc.querySelector('.main_div_swiper');
 
                  ub_z2 = document.createElement("div");
                  ub_z2.id = "ub-cmpgn-ad";
                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
                  ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
                  ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
+                 ub_innerDoc1.appendChild(ub_z2);
 
                  // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
@@ -201,14 +215,24 @@ function mobileCheck() {
            if (document.querySelector('#div-clmb-ctn-465589-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_465589-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+
+                 setInterval(function(){
+                   if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+                      try{
+                      colombia.refresh('div-clmb-ctn-465589-1');
+                      cubespinnervisibility();
+                      }catch(e){}
+                    }
+                 }, 30000);
+
+                 ub_innerDoc1 = ub_innerDoc.querySelector('.main_div_swiper');
 
                  ub_z2 = document.createElement("div");
                  ub_z2.id = "ub-cmpgn-ad";
                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
                  ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
                  ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
+                 ub_innerDoc1.appendChild(ub_z2);
 
                  // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
@@ -219,7 +243,6 @@ function mobileCheck() {
        }
    }
  }
-
 
  function loadAd(id, adUnits) {
      var elm = document.getElementById(id);
@@ -243,3 +266,31 @@ function mobileCheck() {
          oldScript.parentNode.replaceChild(newScript, oldScript);
      }
  }
+ //
+ // if (!mobileCheck()) {
+ //   ub_iframe = document.getElementById('ifr_465391-1');
+ //   ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+ //
+ //   if (ub_innerDoc.querySelector('#cube3dSwiper')) {
+ //     setInterval(function(){
+ //          try{
+ //          colombia.refresh('div-clmb-ctn-465391-1');
+ //          cubespinnervisibility();
+ //          }catch(e){}
+ //     }, 30000);
+ //   }
+ // }
+ // else {
+ //   ub_iframe = document.getElementById('ifr_465589-1');
+ //   ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+ //
+ //   if (ub_innerDoc.querySelector('#cube3dSwiper')) {
+ //     setInterval(function(){
+ //          try{
+ //          colombia.refresh('div-clmb-ctn-465589-1');
+ //          cubespinnervisibility();
+ //          }catch(e){}
+ //     }, 30000);
+ //   }
+ // }
+}

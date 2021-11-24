@@ -18,7 +18,7 @@ apstag.init({
           nodes: [
             {
                asi:'aps.amazon.com',
-               sid:'85', // Same seller_id for the publisher in sellers.json
+               sid:'26', // Same seller_id for the publisher in sellers.json
                hp:1
              }
           ],

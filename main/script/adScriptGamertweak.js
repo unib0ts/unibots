@@ -135,6 +135,20 @@ var mappings = {
     renderedFlag: [false, false, false, false]
   };
 
+  var mappings_refresh = {
+      adUnitNames: [
+        '/21928950349,21806813315/gamertweak_ub_300x250_320x50_1',
+    		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_2',
+        '/21928950349,21806813315/gamertweak_ub_300x250_320x50_3',
+    		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_4',
+      ],
+  };
+
+  var mappings_final_refresh = {
+      adUnitNames: [],
+      adSlots: [],
+  };
+
   // if (!mobileCheck()) {
   //  z= document.createElement('div');
   //  z.id = 'ub-sticky-ad-containerdesk';
@@ -249,6 +263,19 @@ function 	ub_ad() {
    // }, 500);
   }
 
+  googletag.cmd.push(function() {
+          googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+            if(mappings_refresh.adUnitNames.includes(event.slot.getAdUnitPath())){
+              mappings_final_refresh.adSlots.push(event.slot);
+              mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
+            }
+          });
+    });
+
+  setTimeout(function() {
+    refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+  }, REFRESH_TIMEOUT);
+
   function mainHbRun(){
    ubpbjs.que.push(function() {
      //    ubpbjs.setBidderConfig({
@@ -348,29 +375,29 @@ function 	ub_ad() {
   }
 }
 
-function ub_checkRendered(i) {
-  googletag.cmd.push(function() {
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === mapping_hb.slotNames[i]) {
-        ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
-      }
-    });
-});
-}
+// function ub_checkRendered(i) {
+//   googletag.cmd.push(function() {
+//     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+//       if (event.slot === mapping_hb.slotNames[i]) {
+//         ub_checkAdRendered(mapping_hb.adId[i], mapping_hb.slotNames[i], [mapping_hb.adUnitNames[i]]);
+//       }
+//     });
+// });
+// }
 
-function ub_checkAdRendered(adId, ub_slot, adCode){
-  ub_slotNum = ub_slot[ub_slot.length-1]-1;
-  if(!mappings.renderedFlag[ub_slotNum]){
-    adId1 = adId;
-    var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-    if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-      setTimeout(function() {
-        refreshBid(ub_slot, adCode);
-      }, REFRESH_TIMEOUT);
-      mappings.renderedFlag[ub_slotNum] = true;
-    }
-  }
-}
+// function ub_checkAdRendered(adId, ub_slot, adCode){
+//   ub_slotNum = ub_slot[ub_slot.length-1]-1;
+//   if(!mappings.renderedFlag[ub_slotNum]){
+//     adId1 = adId;
+//     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+//     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+//       setTimeout(function() {
+//         refreshBid(ub_slot, adCode);
+//       }, REFRESH_TIMEOUT);
+//       mappings.renderedFlag[ub_slotNum] = true;
+//     }
+//   }
+// }
 
 function refreshBid(ub_slot, adCode) {
   ubpbjs.que.push(function(){

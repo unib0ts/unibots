@@ -163,13 +163,13 @@ function ub_passback() {
       ub_passback.setAttribute("data-ua", "D");
       ub_passback.setAttribute("data-slot", "460173");
       ub_passback.setAttribute("id", "div-clmb-ctn-460173-1");
-      ub_sticky = document.getElementById('adSmall');
+      ub_sticky = document.getElementById('div-gpt-ad-1633092882755-0');
       ub_sticky.appendChild(ub_passback);
   }else {
     ub_passback.setAttribute("data-ua", "M");
     ub_passback.setAttribute("data-slot", "460174");
     ub_passback.setAttribute("id", "div-clmb-ctn-460174-1");
-    ub_sticky = document.getElementById('adSmall');
+    ub_sticky = document.getElementById('div-gpt-ad-1633092882755-0');
     ub_sticky.appendChild(ub_passback);
   }
 }

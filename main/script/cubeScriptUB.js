@@ -54,6 +54,13 @@ startFuncClmb = (clientname, gabyub) => {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
+  var s3 = document.createElement('script');
+  s3.setAttribute("crossorigin", "anonymous");
+  s3.async = true;
+  s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
+  document.getElementsByTagName('head')[0].appendChild(s3);
+
+
    ub_passback1();
 
    function ub_passback1() {

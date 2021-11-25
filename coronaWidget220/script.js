@@ -41,18 +41,6 @@ loadAd("gabywa");
 
    ub_passback1();
 
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-462954-1')
-        }catch(e){}
-    }else {
-      try{
-         colombia.refresh('div-clmb-ctn-462955-1')
-      }catch(e){}
-    }
-   }, 30000);
-
    function ub_passback1() {
          if(typeof colombia == 'undefined'){
          var colombia = colombia || {};

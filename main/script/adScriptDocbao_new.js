@@ -102,7 +102,7 @@ function ubadScript() {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
-  var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483646}.ub-sticky-ad{width:100%;z-index:2147483647;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:5px;width:18px;position:absolute; pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 50px;left: 0px;z-index: 1;pointer-events:all;cursor:pointer;}.ub-right-ad{width: auto !important;position: fixed;top: 50px;right: 10px;z-index: 100; } .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%); z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:15px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647; text-align:center} #div-gpt-ad-1624440241552-0{max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}';
+  var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483646}.ub-sticky-ad{width:100%;z-index:2147483647;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:5px;width:18px;position:absolute; pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 50px;left: 0px;z-index: 1;pointer-events:all;cursor:pointer;}.ub-right-ad{width: auto !important;position: fixed;top: 50px;right: 10px;z-index: 100; } .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%); z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:15px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647; text-align:center} #unibots1 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots2 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots3 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots4 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots5 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots6 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots7 {max-width: 336px;max-height:280px; margin:auto !important;;}#unibots8 {max-width: 336px;max-height:280px; margin:auto !important;}';
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -214,8 +214,9 @@ function ubadScript() {
 
     if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
        z3 = document.createElement("div");
-       z3.id = "div-gpt-ad-1637576104804-0";
-       z3.style = "width: 336px; height: 280px; margin: auto !important;";
+       z3.id = "unibots1";
+       z3.innerHTML = "<div id='div-gpt-ad-1637576104804-0'></div>";
+       // z3.style = "width: 336px; height: 280px; margin: auto !important;";
 
        x3 = document.querySelector('#ContentDetails');
        x3 = x3.querySelectorAll('p');
@@ -232,21 +233,24 @@ function ubadScript() {
 
          if((prevparaHeight > 700) && (ub_flag1 == true)){
            z4 = document.createElement("div");
-           z4.id = "div-gpt-ad-1637576192868-0";
-           z4.style = "width: 336px; height: 280px; margin: auto !important;";
+           z4.id = "unibots2";
+           z4.innerHTML = "<div id='div-gpt-ad-1637576192868-0'></div>";
+           // z4.style = "width: 336px; height: 280px; margin: auto !important;";
            x3[ub_j].appendChild(z4);
            ub_flag1 = false;
          }else if ((prevparaHeight > 1400) && (ub_flag2 == true)) {
            z5 = document.createElement("div");
-           z5.id = "div-gpt-ad-1637576223476-0";
-           z5.style = "width: 336px; height: 280px; margin: auto !important;";
+           z5.id = "unibots3";
+           z5.innerHTML = "<div id='div-gpt-ad-1637576223476-0'></div>";
+           // z5.style = "width: 336px; height: 280px; margin: auto !important;";
            x3[ub_j].appendChild(z5);
            ub_flag2 = false;
          }
          else if ((prevparaHeight > 2100) && (ub_flag3 == true)) {
            z6 = document.createElement("div");
-           z6.id = "div-gpt-ad-1637576249097-0";
-           z6.style = "width: 336px; height: 280px; margin: auto !important;";
+           z6.id = "unibots4";
+           z6.innerHTML = "<div id='div-gpt-ad-1637576249097-0'></div>";
+           // z6.style = "width: 336px; height: 280px; margin: auto !important;";
            x3[ub_j].appendChild(z6);
            ub_flag3 = false;
          }
@@ -261,25 +265,29 @@ function ubadScript() {
     }
     if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
          z3 = document.createElement("div");
-         z3.id = "div-gpt-ad-1637583218496-0";
-         z3.style = "width: 336px; height: 280px; margin: auto !important;";
+         z3.id = "unibots5";
+         z3.innerHTML = "<div id='div-gpt-ad-1637583218496-0'></div>";
+         // z3.style = "width: 336px; height: 280px; margin: auto !important;";
          x3 = document.querySelector('.detail_page');
          y3 = x3.querySelectorAll('.latest_news');
          x3.insertBefore(z3, y3[0]);
 
          z4 = document.createElement("div");
-         z4.id = "div-gpt-ad-1637583324963-0";
-         z4.style = "width: 336px; height: 280px; margin: auto !important;";
+         z4.id = "unibots6";
+         z4.innerHTML = "<div id='div-gpt-ad-1637583324963-0'></div>";
+         // z4.style = "width: 336px; height: 280px; margin: auto !important;";
          x3.insertBefore(z4, y3[1]);
 
          z5 = document.createElement("div");
-         z5.id = "div-gpt-ad-1637583351752-0";
-         z5.style = "width: 336px; height: 280px; margin: auto !important;";
+         z5.id = "unibots7";
+         z5.innerHTML = "<div id='div-gpt-ad-1637583351752-0'></div>";
+         // z5.style = "width: 336px; height: 280px; margin: auto !important;";
          x3.insertBefore(z5, y3[2]);
 
          z6 = document.createElement("div");
-         z6.id = "div-gpt-ad-1637583388379-0";
-         z6.style = "width: 336px; height: 280px; margin: auto !important;";
+         z6.id = "unibots8";
+         z6.innerHTML = "<div id='div-gpt-ad-1637583388379-0'></div>";
+         // z6.style = "width: 336px; height: 280px; margin: auto !important;";
          y3[2].appendChild(z6);
     }
   }
@@ -1058,45 +1066,45 @@ function ubadScript() {
         ]),
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4146953'} },
           // { bidder: 'openx', params: {unit: '545728058', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
        // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
        // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-       // //   { bidder: 'sovrn', params: {tagid: '889023'} },
+         { bidder: 'sovrn', params: {tagid: '982614'} },
        // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
         ]),
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4146954'} },
           // { bidder: 'openx', params: {unit: '545728058', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
        // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
        // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-       // //   { bidder: 'sovrn', params: {tagid: '889023'} },
+         { bidder: 'sovrn', params: {tagid: '982615'} },
        // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
         ]),
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4146955'} },
           // { bidder: 'openx', params: {unit: '545728058', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
        // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
        // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-       // //   { bidder: 'sovrn', params: {tagid: '889023'} },
+         { bidder: 'sovrn', params: {tagid: '982616'} },
        // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
         ]),
         hb_full_common_bidders.concat([
           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910488'} },
+          { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4146956'} },
           // { bidder: 'openx', params: {unit: '545728058', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
        //    { bidder: 'ucfunnel', params: { adid : 'ad-47B468D2A8746AABFED266DB773EE867'} },
        // // //   { bidder: "kubient", params: { zoneid: "2b41d3c662400", server: "kssp.kbntx.ch"} },
        // // //   {bidder: 'coinzilla', params: {placementId: '9095d19f7adaf0a6874'} },
-       // //   { bidder: 'sovrn', params: {tagid: '889023'} },
+         { bidder: 'sovrn', params: {tagid: '982617'} },
        // { bidder: 'smartadserver', params: { siteId: '399735', pageId: '1361917', formatId: '93416', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
        //   { bidder: 'dailyhunt', params: { placement_id: 63, publisher_id: 4, partner_name: 'sakshi' } }
         ]),

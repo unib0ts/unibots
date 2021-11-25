@@ -18,6 +18,8 @@ unibotsClmb = (clientName, gabyub) => {
    if(clientname.length >= 10){
      clientname = clientname.slice(0, 9);
      startFuncClmb(clientname, gabyub);
+   }else {
+     startFuncClmb(clientname, gabyub);
    }
 }
 

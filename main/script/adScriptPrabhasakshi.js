@@ -346,9 +346,26 @@ else{
 
 function mainHbRun(){
   ubpbjs.que.push(function() {
-      ubpbjs.setBidderConfig({
-      bidders: ['emx_digital'],   // can list more bidders here if they share the same config
-      config: {
+      // ubpbjs.setBidderConfig({
+      // bidders: ['emx_digital'],   // can list more bidders here if they share the same config
+      // config: {
+      //   schain: {
+      //     validation: "relaxed",
+      //     config: {
+      //       ver:"1.0",
+      //       complete: 1,
+      //       nodes: [
+      //         {
+      //           asi:"unibots.in",   //directseller
+      //           sid:"1504",     //seller_id
+      //           hp:1
+      //         },
+      //       ]
+      //     }
+      //   }
+      // }
+      // });
+      ubpbjs.setConfig({
         schain: {
           validation: "relaxed",
           config: {
@@ -356,14 +373,13 @@ function mainHbRun(){
             complete: 1,
             nodes: [
               {
-                asi:"unibots.in",   //directseller
-                sid:"1504",     //seller_id
+                asi:"unibots.in",
+                sid:"1504",
                 hp:1
-              },
+              }
             ]
           }
         }
-      }
       });
       ubpbjs.addAdUnits(adUnits);
       ubpbjs.bidderSettings = {

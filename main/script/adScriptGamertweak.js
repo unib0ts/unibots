@@ -456,4 +456,4 @@ function googlePush(){
   });
 }
 
-fillRefreshMap();
+// fillRefreshMap();

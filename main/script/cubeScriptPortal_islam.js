@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 155px !important;} #ifr_466739-1{bottom: 120px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 100px !important;} #ifr_466739-1{bottom: 60px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

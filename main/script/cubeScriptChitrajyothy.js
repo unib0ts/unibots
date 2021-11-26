@@ -107,20 +107,6 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
    ub_passback1();
 
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-465393-1');
-        cubespinnervisibility();
-        }catch(e){}
-    }else {
-      try{
-         colombia.refresh('div-clmb-ctn-465590-1');
-         cubespinnervisibility();
-      }catch(e){}
-    }
-   }, 30000);
-
    function ub_passback1() {
          if(typeof colombia == 'undefined'){
          var colombia = colombia || {};

@@ -102,7 +102,7 @@ function ubadScript() {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
-  var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483646}.ub-sticky-ad{width:100%;z-index:2147483647;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:5px;width:18px;position:absolute; pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 50px;left: 0px;z-index: 1;pointer-events:all;cursor:pointer;}.ub-right-ad{width: auto !important;position: fixed;top: 50px;right: 10px;z-index: 100; } .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%); z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:15px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647; text-align:center} #unibots1 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots2 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots3 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots4 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots5 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots6 {max-width: 336px;max-height:280px; margin:auto !important;}#unibots7 {max-width: 336px;max-height:280px; margin:auto !important;;}#unibots8 {max-width: 336px;max-height:280px; margin:auto !important;}';
+  var mybotstyleSheet='.ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:2147483646}.ub-sticky-ad{width:100%;z-index:2147483647;pointer-events:all;cursor:pointer;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:2147483647;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:5px;width:18px;position:absolute; pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 50px;left: 0px;z-index: 1;pointer-events:all;cursor:pointer;}.ub-right-ad{width: auto !important;position: fixed;top: 50px;right: 10px;z-index: 100; } .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:100% !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%); z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:15px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647; text-align:center} #unibots1 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots2 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots3 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots4 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots5 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots6 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots7 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots8 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}';
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -911,38 +911,14 @@ function ubadScript() {
         [300, 250], // '/22057354005/docbao.vn_mobile_home_center_6',
         [300,100],
         [320, 50],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
-        [
-          [300, 250],
-          [336, 280]
-        ],
+        [300, 250],
+        [300, 250],
+        [300, 250],
+        [300, 250],
+        [300, 250],
+        [300, 250],
+        [300, 250],
+        [300, 250],
       ],
       bids: [
         hb_full_common_bidders.concat([

@@ -119,6 +119,23 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
    }
 
 
+    setInterval(function(){
+      if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+        if (!mobileCheck()) {
+          try{
+            colombia.refresh('div-clmb-ctn-465391-1');
+            cubespinnervisibility();
+          }catch(e){}
+        }else {
+          try{
+            colombia.refresh('div-clmb-ctn-465589-1');
+            cubespinnervisibility();
+          }catch(e){}
+        }
+       }
+    }, 30000);
+
+
    function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {
      if (document.querySelector(clmbdiv_id).childNodes) {
        if (document.querySelector(clmbdiv_id).childNodes[0]) {

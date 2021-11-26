@@ -1,3 +1,4 @@
+console.log('ub script triggered');
 var PREBID_TIMEOUT = 1600;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 45000;
@@ -427,6 +428,7 @@ function refreshBid(ub_slot, adCode) {
 }
 
 function initAdserver() {
+  console.log('ub init fn');
     if (ubpbjs.initAdserverSet) return;
     ubpbjs.initAdserverSet = true;
     googletag.cmd.push(function() {

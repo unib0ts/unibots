@@ -110,8 +110,8 @@
   iframe.srcdoc = htmlSrc;
   (iframe.frameElement || iframe).style.cssText = "width: 100%; height: 100%; border: 0; margin:0;";
   iframe.src = "javascript:false";
-  // ub_div = document.querySelector('script[src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/apsScript3.js"]').parentElement;
-  ub_div = document.querySelector('script[src="http://localhost/unibots/main/aps/sunsigns/apsScript3.js"]').parentElement;
+  ub_div = document.querySelector('script[src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/apsScript3.js"]').parentElement;
+  // ub_div = document.querySelector('script[src="http://localhost/unibots/main/aps/sunsigns/apsScript3.js"]').parentElement;
 
   ub_divn = document.createElement("div");
   ub_divn.id = "ub-aps";

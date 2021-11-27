@@ -247,9 +247,9 @@ function ub_checkAdRendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
-   else {
-     ub_passback();
-   }
+   // else {
+   //   ub_passback();
+   // }
 }
 
 function ub_passback() {
@@ -258,7 +258,7 @@ function ub_passback() {
   colombia.fns = colombia.fns || [];
     (function() {
         var cads = document.createElement("script");
-        cads.async = true;
+        cads.async = "async";
         cads.type = "text/javascript";
         cads.src = "https://static.clmbtech.com/ase/91170/3748/c1.js";
         document.getElementsByTagName('head')[0].appendChild(cads);

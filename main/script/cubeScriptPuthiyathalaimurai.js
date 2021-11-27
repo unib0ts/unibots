@@ -57,14 +57,14 @@ function mobileCheck() {
 //   }
 
 
-  var mybotstyleSheet ="#div-clmb-ctn-466514-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466515-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466514-1{bottom: 135px !important;left: -30px !important;} #ifr_466515-1{bottom: 120px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 200px !important;left: -30px !important;} #ifr_466739-1{bottom: 120px !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
   css.appendChild(document.createTextNode(mybotstyleSheet));
   document.getElementsByTagName("head")[0].appendChild(css);
 
-  mybotGACode = 'G-RZB7RK0MEB';
+  mybotGACode = 'G-WXC2TJ489C';
   mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
   ub_ga = document.createElement("div");
@@ -75,39 +75,39 @@ function mobileCheck() {
 
 // function ubadScript() {
 //   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
-    // z1 = document.createElement("div");
-    // z1.id = "div-gpt-ad-1637646219690-0";
-    // if (!mobileCheck()) {
-    //   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:155px;left:5px;z-index:99";
-    // }else {
-    //   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
-    // }
-    // x1 = document.querySelector("body");
-    // x1.appendChild(z1);
-    //
-    // var s3 = document.createElement('script');
-    // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
-    // s3.async = true;
-    // s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-    // document.getElementsByTagName('head')[0].appendChild(s3);
-    //
-    // var s0 = document.createElement('script');
-    // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-    // s0.type = "text/javascript";
-    // document.getElementsByTagName('head')[0].appendChild(s0);
-    //
-    // var s1 = document.createElement('script');
-    // s1.async = "async";
-    // s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-    // s1.type = "text/javascript";
-    // document.getElementsByTagName('head')[0].appendChild(s1);
-    //
-    // var cachebuster = Math.round(new Date().getTime() / 1000);
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptUdayavani.js?cb='+cachebuster;
-    // s2 = document.createElement('script');
-    // s2.src = url;
-    // s2.async = "async";
-    // document.body.appendChild(s2);
+    z1 = document.createElement("div");
+    z1.id = "div-gpt-ad-1637928023129-0";
+    if (!mobileCheck()) {
+      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:155px;left:5px;z-index:99";
+    }else {
+      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
+    }
+    x1 = document.querySelector("body");
+    x1.appendChild(z1);
+
+    var s3 = document.createElement('script');
+    s3.setAttribute("crossorigin", "anonymous");
+    s3.async = true;
+    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
+    document.getElementsByTagName('head')[0].appendChild(s3);
+
+    var s0 = document.createElement('script');
+    s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+    s0.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(s0);
+
+    var s1 = document.createElement('script');
+    s1.async = "async";
+    s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+    s1.type = "text/javascript";
+    document.getElementsByTagName('head')[0].appendChild(s1);
+
+    var cachebuster = Math.round(new Date().getTime() / 1000);
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptPuthiyathalaimurai.js?cb='+cachebuster;
+    s2 = document.createElement('script');
+    s2.src = url;
+    s2.async = "async";
+    document.body.appendChild(s2);
 //   }
 // }
 
@@ -137,15 +137,15 @@ function mobileCheck() {
         if(!mobileCheck()){
           setAttributes(ub_passback,{
               "data-ua": "D",
-              "data-slot": "466514",
-              "id": "div-clmb-ctn-466514-1"
+              "data-slot": "466738",
+              "id": "div-clmb-ctn-466738-1"
             })
           document.getElementsByTagName("body")[0].appendChild(ub_passback);
        }else {
          setAttributes(ub_passback,{
            "data-ua": "M",
-           "data-slot": "466515",
-           "id": "div-clmb-ctn-466515-1"
+           "data-slot": "466739",
+           "id": "div-clmb-ctn-466739-1"
          })
          document.getElementsByTagName("body")[0].appendChild(ub_passback);
        }
@@ -158,10 +158,10 @@ function mobileCheck() {
 
     function clmbdiv() {
         if (!mobileCheck()) {
-           ub_refresh("#div-clmb-ctn-466514-1", "ifr_466514-1", ub_clmb);
+           ub_refresh("#div-clmb-ctn-466738-1", "ifr_466738-1", ub_clmb);
         }
         else {
-          ub_refresh("#div-clmb-ctn-466515-1", "ifr_466515-1", ub_clmb);
+          ub_refresh("#div-clmb-ctn-466739-1", "ifr_466739-1", ub_clmb);
         }
     }
   }
@@ -170,12 +170,12 @@ function mobileCheck() {
     if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
       if (!mobileCheck()) {
         try{
-          colombia.refresh('div-clmb-ctn-466514-1');
+          colombia.refresh('div-clmb-ctn-466738-1');
           cubespinnervisibility();
         }catch(e){}
       }else {
         try{
-          colombia.refresh('div-clmb-ctn-466515-1');
+          colombia.refresh('div-clmb-ctn-466739-1');
           cubespinnervisibility();
         }catch(e){}
       }

@@ -49,15 +49,19 @@ function ubadScript() {
       ub_vs.type = "text/javascript";
       document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
-      ub_Plyrdiv = document.createElement("div");
-      ub_Plyrdiv.id = "div-ub-docabo";
+      if (document.getElementById("unibots-video")) {
+         myub_obj = document.getElementById("unibots-video");
+         myub_obj.id = "div-ub-docabo";
+         // ub_Plyrdiv = document.createElement("div");
+         // ub_Plyrdiv.id = "div-ub-docabo";
 
-      ub_plyrscript = document.createElement("script");
-      ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('docabo');})");
-      ub_plyrscript.appendChild(ub_plyerinlineScript);
+         ub_plyrscript = document.createElement("script");
+         ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('docabo');})");
+         ub_plyrscript.appendChild(ub_plyerinlineScript);
 
-      ub_Plyrdiv.appendChild(ub_plyrscript);
-      document.querySelector('#unibots-video').appendChild(ub_Plyrdiv);
+         myub_obj.appendChild(ub_plyrscript);
+         // document.querySelector('#unibots-video').appendChild(ub_Plyrdiv);
+      }
     }
 
   checkHBUnits();

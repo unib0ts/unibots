@@ -38,14 +38,14 @@ document.getElementsByTagName("head")[0].appendChild(css);
            "class": "colombia"
          })
 
-         if(!mobileCheck()){
+         // if(!mobileCheck()){
            setAttributes(ub_passback,{
                "data-ua": "M",
                "data-slot": "466539",
                "id": "div-clmb-ctn-466539-1"
              })
            document.getElementsByTagName("body")[0].appendChild(ub_passback);
-        }
+        // }
         cubespinnervisibility();
     }
 
@@ -53,22 +53,22 @@ document.getElementsByTagName("head")[0].appendChild(css);
      var ub_clmb = setInterval(clmbdiv, 1000);
 
      function clmbdiv() {
-         if (mobileCheck()) {
+         // if (mobileCheck()) {
             ub_refresh("#div-clmb-ctn-466539-1", "ifr_466539-1", ub_clmb);
-         }
+         // }
      }
    }
 
 
     setInterval(function(){
       if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
-        if (!mobileCheck()) {
+        // if (!mobileCheck()) {
           try{
             colombia.refresh('div-clmb-ctn-466539-1');
             cubespinnervisibility();
           }catch(e){}
         }
-       }
+       // }
     }, 30000);
 
 

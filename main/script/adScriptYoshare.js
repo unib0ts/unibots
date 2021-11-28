@@ -440,7 +440,7 @@ if (document.getElementById('yoshare_unibot1_336x280_300x250_a_tag')){
 		});
 }
 if (document.getElementById('yoshare_unibot1_336x280_300x250_b_tag')){
-  document.getElementById('yoshare_unibot1_336x280_300x250_a_tag').innerHTML = '<div id="div-gpt-ad-1598961755060-0">';
+  document.getElementById('yoshare_unibot1_336x280_300x250_b_tag').innerHTML = '<div id="div-gpt-ad-1598961755060-0">';
  mappings.slotNumbers.push(2);
  mappings.adCode.push('/21928950349,22612404853/yoshare.net_hb_300x250_2');
  mappings.sizes.push(div_3_sizes);

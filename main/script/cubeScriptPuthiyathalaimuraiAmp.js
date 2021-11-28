@@ -40,7 +40,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
        var ub_passback = document.createElement("div");
        ub_passback.setAttribute("style", "float:left;min-height:2px;width:auto;position:absolute;bottom:0;");
        ub_passback.setAttribute("data-position", "1");
-       ub_passback.setAttribute("data-section", "StroyPage");
+       ub_passback.setAttribute("data-section", "puthiya");
        ub_passback.setAttribute("class", "colombia");
 
 

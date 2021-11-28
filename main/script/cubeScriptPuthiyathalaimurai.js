@@ -57,7 +57,7 @@ function mobileCheck() {
 //   }
 
 
-  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 160px !important;left: -30px !important;} #ifr_466739-1{bottom: 120px !important;left: -30px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 160px !important;left: -30px !important;} #ifr_466739-1{bottom: 120px !important;left: -30px !important;} #div-gpt-ad-1637928023129-0{z-index: 2147483647 !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -130,7 +130,7 @@ function mobileCheck() {
         setAttributes(ub_passback, {
           "style":"float:left;min-height:2px;width:auto;position:absolute;bottom:0;",
           "data-position": "1",
-          "data-section": "StroyPage",
+          "data-section": "puthiya",
           "class": "colombia"
         })
 

@@ -426,7 +426,8 @@ ubpbjs.que.push(function() {
 }
 
 if (document.getElementById('yoshare_unibot1_336x280_300x250_a_tag')){
-		mappings.slotNumbers.push(2);
+  document.getElementById('yoshare_unibot1_336x280_300x250_a_tag').innerHTML = '<div id="div-gpt-ad-1638000295109-0">';
+		mappings.slotNumbers.push(1);
 		mappings.adCode.push('/22082859479,22624242699/yoshare.net_hb_300x250');
 		mappings.sizes.push(div_2_sizes);
 		mappings.adId.push('div-gpt-ad-1638000295109-0');
@@ -439,7 +440,8 @@ if (document.getElementById('yoshare_unibot1_336x280_300x250_a_tag')){
 		});
 }
 if (document.getElementById('yoshare_unibot1_336x280_300x250_b_tag')){
- mappings.slotNumbers.push(3);
+  document.getElementById('yoshare_unibot1_336x280_300x250_a_tag').innerHTML = '<div id="div-gpt-ad-1598961755060-0">';
+ mappings.slotNumbers.push(2);
  mappings.adCode.push('/21928950349,22612404853/yoshare.net_hb_300x250_2');
  mappings.sizes.push(div_3_sizes);
  mappings.adId.push('div-gpt-ad-1598961755060-0');

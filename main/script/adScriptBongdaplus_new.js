@@ -97,7 +97,7 @@ function ubadScript() {
        myub_obj.id = "div-ub-bongdaplus";
 
        ub_plyrscript = document.createElement("script");
-       ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('docbao');})");
+       ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('bongdaplus');})");
        ub_plyrscript.appendChild(ub_plyerinlineScript);
 
        myub_obj.appendChild(ub_plyrscript);

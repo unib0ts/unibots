@@ -79,7 +79,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
          setAttributes(ub_passback, {
            "style":"float:left;min-height:2px;width:auto;position:absolute;bottom:0;",
            "data-position": "1",
-           "data-section": "mynewsmedia",
+           "data-section": "prabhanews",
            "class": "colombia"
          })
 

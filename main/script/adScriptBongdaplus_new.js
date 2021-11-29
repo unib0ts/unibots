@@ -85,19 +85,25 @@ var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong
 
 function ubadScript() {
   // if(!(bong_vietnamcatg)){
-    var cachebuster = Math.round(new Date().getTime() / 1000);
-    url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js?cb=" + cachebuster;
-    ub_vs = document.createElement("script");
-    ub_vs.src = url;
-    ub_vs.type = "text/javascript";
-    document.getElementsByTagName("head")[0].appendChild(ub_vs);
+  var ub_interval_plyr_check = setInterval(() => {
+    if (document.getElementById("unibots-video")) {
+      url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+      ub_vs = document.createElement("script");
+      ub_vs.src = url;
+      ub_vs.type = "text/javascript";
+      document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
-    ub_vs.onload=function(){
-      window.unibots = window.unibots || { cmd: [] };
-      unibots.cmd.push(function(){
-          unibotsPlayer("bongdaplus");
-      });
+       myub_obj = document.getElementById("unibots-video");
+       myub_obj.id = "div-ub-bongdaplus";
+
+       ub_plyrscript = document.createElement("script");
+       ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('docbao');})");
+       ub_plyrscript.appendChild(ub_plyerinlineScript);
+
+       myub_obj.appendChild(ub_plyrscript);
+       clearInterval(ub_interval_plyr_check);
     }
+  }, 500);
   // }
 
   checkHBUnits();

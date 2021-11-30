@@ -57,7 +57,7 @@ function mobileCheck() {
 //   }
 
 
-  var mybotstyleSheet ="#div-clmb-ctn-466514-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466515-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466514-1{bottom: 135px !important;left: -30px !important;} #ifr_466515-1{bottom: 120px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-466514-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466515-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466514-1{bottom: 135px !important;left: -30px !important;} #ifr_466515-1{bottom: 120px !important;transform: scale(0.9) !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";

@@ -101,9 +101,20 @@ initFunctionAPS = (data) => {
     ("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
     // initialize apstag and have apstag set bids on the googletag slots when they are returned to the
     apstag.init({
-    pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-    adServer: 'googletag',
-    bidTimeout: 2000
+      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
+      adServer: 'googletag',
+      bidTimeout: 2000,
+      schain: {
+           complete: 1,
+           ver:'1.0',
+           nodes: [
+             {
+                asi:'aps.amazon.com',
+                sid: data.sid, // Same seller_id for the publisher in sellers.json
+                hp:1
+              }
+           ],
+      }
     });
 
     // request the bids for the four googletag slots

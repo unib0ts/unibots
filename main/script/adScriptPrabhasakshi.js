@@ -414,6 +414,20 @@ function mainHbRun(){
               'banner': 0.01,
           }
         },
+        schain: {
+         validation: "relaxed",
+         config: {
+           ver:"1.0",
+           complete: 1,
+           nodes: [
+             {
+               asi:"unibots.in",
+               sid:"85",
+               hp:1
+             }
+           ]
+         }
+       },
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

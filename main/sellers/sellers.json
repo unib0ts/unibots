@@ -747,6 +747,78 @@
           "seller_id": "125",
           "name": "prajavani",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.janmabhumi.in/",
+          "seller_id": "126",
+          "name": "janmabhumi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.keralaonlinenews.com/",
+          "seller_id": "127",
+          "name": "keralaonlinenews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.news24online.com/",
+          "seller_id": "128",
+          "name": "news24online",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.prabhanews.com/",
+          "seller_id": "129",
+          "name": "prabhanews",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.telanganatoday.com/",
+          "seller_id": "130",
+          "name": "telanganatoday",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.theprint.in/",
+          "seller_id": "131",
+          "name": "theprint",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.tribuneindia.com/",
+          "seller_id": "132",
+          "name": "tribuneindia",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.tupaki.com/",
+          "seller_id": "133",
+          "name": "tupaki",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.workbank.vn/",
+          "seller_id": "134",
+          "name": "workbank",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.yeah1music.net/",
+          "seller_id": "135",
+          "name": "yeah1music",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.yoshare.net/",
+          "seller_id": "136",
+          "name": "yoshare",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.portal-islam.id/",
+          "seller_id": "137",
+          "name": "portal-islam",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

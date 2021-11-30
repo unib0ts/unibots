@@ -244,17 +244,17 @@ function mybotubScript() {
       'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
     };
     ubpbjs.setConfig({
-      // floors: {
-      //   currency: 'USD',
-      //   // skipRate: 5,
-      //   // modelVersion: 'Sports Ad Unit Floors',
-      //   schema: {
-      //       fields: ['mediaType']
-      //   },
-      //   values: {
-      //       'banner': 0.01,
-      //   }
-      // },
+      floors: {
+        currency: 'USD',
+        // skipRate: 5,
+        // modelVersion: 'Sports Ad Unit Floors',
+        schema: {
+            fields: ['mediaType']
+        },
+        values: {
+            'banner': 0.01,
+        }
+      },
       priceGranularity: customConfigObjectA,
       userSync: {
           iframeEnabled: true,

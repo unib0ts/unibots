@@ -463,6 +463,20 @@ function mainHbRun(){
         'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
       };
       ubpbjs.setConfig({
+        schain: {
+         validation: "relaxed",
+         config: {
+           ver:"1.0",
+           complete: 1,
+           nodes: [
+             {
+               asi:"unibots.in",
+               sid:"5",
+               hp:1
+             }
+           ]
+         }
+       },
         floors: {
           currency: 'USD',
           // skipRate: 5,

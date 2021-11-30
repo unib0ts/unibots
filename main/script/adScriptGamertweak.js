@@ -482,7 +482,7 @@ function ub_infinite() {
           if (!mobileCheck()) {
             ub_slotnumNew =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesD[i], ubslotid);
           }else {
-            ub_slotnumNew =  googletag.defineSlot(adCode[i], mapping_hb.sizesM[i], ubslotid);
+            ub_slotnumNew =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i], ubslotid);
           }
           ub_slotnumNew.setTargeting("test","infinitescroll").addService(googletag.pubads());
           googletag.pubads().refresh([ub_slotnumNew]);
@@ -492,7 +492,7 @@ function ub_infinite() {
 }
 
 var ub_url = window.location.href;
-var ub_flag = true;
+// var ub_flag = true;
 
 window.onscroll = function() {
   // console.log(ub_url != window.location.href && (ub_flag == true), ub_url,ub_flag);

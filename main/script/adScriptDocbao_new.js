@@ -222,7 +222,7 @@ function ubadScript() {
       x2.appendChild(z2);
     }
 
-    if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
+    if (document.querySelector('#ax-article-header')) {
        z3 = document.createElement("div");
        z3.id = "unibots1";
        z3.innerHTML = "<div id='div-gpt-ad-1637576104804-0'></div>";
@@ -273,7 +273,7 @@ function ubadScript() {
          // }
        }
     }
-    if (document.querySelector('#ax-article-header') && (window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2)) {
+    if (document.querySelector('#ax-article-header')) {
          z3 = document.createElement("div");
          z3.id = "unibots5";
          z3.innerHTML = "<div id='div-gpt-ad-1637583218496-0'></div>";

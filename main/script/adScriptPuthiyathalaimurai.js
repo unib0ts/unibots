@@ -10,7 +10,18 @@ var requestManager = {
 //initialize the apstag.js library on the page to allow bidding
 apstag.init({
      pubID: '8282b9c6-324d-4939-b1ea-958d67a9e637',
-     adServer: 'googletag'
+     adServer: 'googletag',
+     schain: {
+          complete: 1,
+          ver:'1.0',
+          nodes: [
+            {
+               asi:'aps.amazon.com',
+               sid:'45', // Same seller_id for the publisher in sellers.json
+               hp:1
+             }
+          ],
+     }
 });
 apSlots = []
 
@@ -149,16 +160,16 @@ var mappings = {
 };
 
 
-apSlotTemp = {
-  // slotID: mappings_full_hb_config.targetUnits[index],
-  // slotName: mappings_full_hb_config.adUnitNames[index],
-  // sizes: mappings_full_hb_config.sizes[index]
-
-  slotID: 'div-gpt-ad-1637928023129-0',
-  slotName: '/21928950349/puthiya_hb_320x50',
-  sizes: mappings.sizes,
-}
-apSlots.push(apSlotTemp);
+// apSlotTemp = {
+//   // slotID: mappings_full_hb_config.targetUnits[index],
+//   // slotName: mappings_full_hb_config.adUnitNames[index],
+//   // sizes: mappings_full_hb_config.sizes[index]
+//
+//   slotID: 'div-gpt-ad-1637928023129-0',
+//   slotName: '/21928950349/puthiya_hb_320x50',
+//   sizes: mappings.sizes,
+// }
+// apSlots.push(apSlotTemp);
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
@@ -184,17 +195,17 @@ function refreshBid(ub_slot, adCode) {
           ubpbjs.que.push(function() {
               ubpbjs.setTargetingForGPTAsync();
               googletag.pubads().refresh([ub_slot]);
-              var adsCalled = false;
-              for(var i=0;i<x.length;i++){
-                var bc = x[i].bidderCode;
-                if(bc=="openx"){
-                  adsCalled = true;
-                  callBotman();
-                }
-              }
-              if(!adsCalled){
-                callAdsUB();
-              }
+              // var adsCalled = false;
+              // for(var i=0;i<x.length;i++){
+              //   var bc = x[i].bidderCode;
+              //   if(bc=="openx"){
+              //     adsCalled = true;
+              //     callBotman();
+              //   }
+              // }
+              // if(!adsCalled){
+              //   callAdsUB();
+              // }
           });
         });
       }
@@ -259,18 +270,20 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            // googletag.pubads().refresh(mappings.slots);
-            var adsCalled = false;
-            for(var i=0;i<x.length;i++){
-              var bc = x[i].bidderCode;
-              if(bc=="openx"){
-                adsCalled = true;
-                callBotman();
-              }
-            }
-            if(!adsCalled){
-              callAdsUB();
-            }
+            requestManager.prebid = true;
+            biddersBack();
+            googletag.pubads().refresh(mappings.slots);
+            // var adsCalled = false;
+            // for(var i=0;i<x.length;i++){
+            //   var bc = x[i].bidderCode;
+            //   if(bc=="openx"){
+            //     adsCalled = true;
+            //     callBotman();
+            //   }
+            // }
+            // if(!adsCalled){
+            //   callAdsUB();
+            // }
         });
     });
 }
@@ -299,9 +312,13 @@ function googlePush(){
   mappings.adCode.push('/21928950349/puthiya_hb_320x50');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('div-gpt-ad-1637928023129-0');
+  apSlotTemp = {
+    slotID: mappings.adId[0],
+    slotName: mappings.adCode[0],
+    sizes: mappings.sizes
+  }
   googletag.cmd.push(function() {
     callAPStagBids(); //Ap part
-    callAPSAds(mappings.adCode, mappings.slots);
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
         ub_checkAdRendered('div-gpt-ad-1637928023129-0', ub_slot1, ['/21928950349/puthiya_hb_320x50']);
@@ -366,6 +383,20 @@ function mainHbRun(){
         'ucfunnel': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 1.00; temp = temp - 0.0323; return temp > 0 ? temp : 0; } }
       };
       ubpbjs.setConfig({
+        schain: {
+         validation: "relaxed",
+         config: {
+           ver:"1.0",
+           complete: 1,
+           nodes: [
+             {
+               asi:"unibots.in",
+               sid:"45",
+               hp:1
+             }
+           ]
+         }
+       },
         floors: {
           currency: 'USD',
           // skipRate: 5,

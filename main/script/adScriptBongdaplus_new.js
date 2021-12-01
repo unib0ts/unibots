@@ -126,7 +126,7 @@ function ubadScript() {
   loadAd("gabywa");
 
   var mybotstyleSheet =
-      ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:99}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}#unibots1 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots2 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots3 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots4 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots5 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots6 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots7 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots8 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;}#unibots9 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;} #unibots10 {max-width: 375px;height: auto; margin:auto !important;padding: 10px;} #unibots11{max-width: 375px;height: auto; margin:auto !important;padding: 10px;}";
+      ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:99}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}.ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}#unibots1 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots2 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots3 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots4 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots5 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots6 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots7 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots8 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}#unibots9 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;} #unibots10 {max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;} #unibots11{max-width: 375px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -252,14 +252,14 @@ function ubadScript() {
        for (var ub_j = 0; ub_j < x3.length; ub_j++) {
          prevparaHeight += x3[ub_j].offsetHeight;
 
-         if((prevparaHeight > 700) && (ub_flag1 == true)){
+         if((prevparaHeight > 800) && (ub_flag1 == true)){
            z4 = document.createElement("div");
            z4.id = "unibots2";
            z4.innerHTML = "<div id='div-gpt-ad-1637855089100-0'></div>";
 
            x3[ub_j].appendChild(z4);
            ub_flag1 = false;
-         }else if ((prevparaHeight > 1400) && (ub_flag2 == true)) {
+         }else if ((prevparaHeight > 1600) && (ub_flag2 == true)) {
            z5 = document.createElement("div");
            z5.id = "unibots3";
            z5.innerHTML = "<div id='div-gpt-ad-1637855117050-0'></div>";
@@ -267,7 +267,7 @@ function ubadScript() {
            x3[ub_j].appendChild(z5);
            ub_flag2 = false;
          }
-         else if ((prevparaHeight > 2100) && (ub_flag3 == true)) {
+         else if ((prevparaHeight > 2400) && (ub_flag3 == true)) {
            z6 = document.createElement("div");
            z6.id = "unibots4";
            z6.innerHTML = "<div id='div-gpt-ad-1637855143548-0'></div>";
@@ -1226,10 +1226,10 @@ function ubadScript() {
           //     // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           // ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150209" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1238,10 +1238,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150210" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1250,10 +1250,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150211" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1262,10 +1262,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150212" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1274,10 +1274,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150204" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1286,10 +1286,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150203" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1298,10 +1298,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150205" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1310,10 +1310,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150206" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1322,10 +1322,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150207" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1334,10 +1334,10 @@ function ubadScript() {
               // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           ]),
           hb_full_common_bidders.concat([
-              // {
-              //     bidder: "pubmatic",
-              //     params: { publisherId: "159448", adSlot: "3910487" },
-              // },
+              {
+                  bidder: "pubmatic",
+                  params: { publisherId: "159448", adSlot: "4150208" },
+              },
               //    { bidder: 'openx', params: {unit: '543981162', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },

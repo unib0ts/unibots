@@ -37,19 +37,63 @@ video {
     width: 400px !important;
     height: 225px !important;
 }
-.video-js .vjs-control.vjs-close-button {
-    right: -17px !important;
-    top: -26px !important;
-    z-index: 2147483999 !important;
-}
+
 #unibots-video{
     z-index: 2147483999 !important;
     margin: 15px 0px !important;
 }
+/* iframe css starts here */
+.pcFrame {
+    height: 390px;
+    width: 640px;
+    margin: auto;
+}
+.pcFrame2 {
+    height: 230px;
+    width: 400px;
+    margin: auto;
+}
+.mbFrame {
+    height: 255px;
+    width: auto;
+    margin: auto;
+}
+.pcStickyFrame {
+    width: 400px !important;
+    height: 255px !important;
+}
+.mbStickyFrame {
+    width: 192px !important;
+    height: 138px !important;
+}
+.vpStickyPC .content_video-dimensions {
+    width: 400px !important;
+    height: 225px !important;
+}
+.vpStickyMB .content_video-dimensions {
+    width: 192px !important;
+    height: 108px !important;
+}
+#ubvideoFrame {
+    /* margin-bottom: 15px !important; */
+}
+/* iframe css ends here */
+.video-js .vjs-control.vjs-close-button {
+    right: 1px !important;
+    top: 0px !important;
+    z-index: 2147483999 !important;
+    background-color: rgba(43, 51, 63, 0.7);
+    height: 3em !important;
+    width: 3em !important;
+}
+
 .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,
 .vjs-icon-cancel:before {
-    color: black !important;
+    /* color: black !important; */
+    top: -2px;
+    font-size: 20px;
 }
+
 #ubp_logo {
     background: #fff;
     position: absolute;

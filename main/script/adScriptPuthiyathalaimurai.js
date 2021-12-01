@@ -165,7 +165,7 @@ var mappings = {
 //   // slotName: mappings_full_hb_config.adUnitNames[index],
 //   // sizes: mappings_full_hb_config.sizes[index]
 //
-//   slotID: 'div-gpt-ad-1637928023129-0',
+//   slotID: 'div-ub-1',
 //   slotName: '/21928950349/puthiya_hb_320x50',
 //   sizes: mappings.sizes,
 // }
@@ -311,7 +311,7 @@ function googlePush(){
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349/puthiya_hb_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('div-gpt-ad-1637928023129-0');
+  mappings.adId.push('div-ub-1');
   apSlotTemp = {
     slotID: mappings.adId[0],
     slotName: mappings.adCode[0],
@@ -321,7 +321,7 @@ function googlePush(){
     callAPStagBids(); //Ap part
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('div-gpt-ad-1637928023129-0', ub_slot1, ['/21928950349/puthiya_hb_320x50']);
+        ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349/puthiya_hb_320x50']);
       }
     });
   });

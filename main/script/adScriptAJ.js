@@ -282,7 +282,20 @@ ubpbjs.que.push(function() {
       'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
     };
     ubpbjs.setConfig({
-
+      schain: {
+       validation: "relaxed",
+       config: {
+         ver:"1.0",
+         complete: 1,
+         nodes: [
+           {
+             asi:"unibots.in",
+             sid:"122",
+             hp:1
+           }
+         ]
+       }
+     },
       priceGranularity: customConfigObjectA,
      //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
       //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

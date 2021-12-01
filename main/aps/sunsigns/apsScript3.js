@@ -10,7 +10,7 @@
     <script>
     var mappings = {
       adCode: ["/21928950349,1019715/sunsigns.org_banner5_ub_ebda_300x250_320x50",],
-      sizes: [[[320, 50], [300, 250]],],
+      sizes: [[300, 250],[320, 50]],
       adId: ["div-gpt-ad-1635167074697-0",]
     };
 
@@ -22,7 +22,7 @@
       apSlotTemp = {
         slotID: mappings.adId[ub_i],
         slotName: mappings.adCode[ub_i],
-        sizes: mappings.sizes[ub_i]
+        sizes: mappings.sizes[0]
       }
       apSlots.push(apSlotTemp);
 
@@ -36,7 +36,13 @@
       googleDefine(mappings.adCode, mappings.sizes, mappings.adId);
       googletag.pubads().disableInitialLoad();
       googletag.pubads().enableSingleRequest();
-      googletag.enableServices(); });
+      googletag.enableServices();
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot.getAdUnitPath() === "/21928950349,1019715/sunsigns.org_banner5_ub_ebda_300x250_320x50") {
+            ub_checkAdRendered();
+          }
+      });
+    });
 
     apstag.init({
       pubID: "8282b9c6-324d-4939-b1ea-958d67a9e637",
@@ -56,16 +62,60 @@
           let ub_slotnum = "ub_slot" + [i];
           ub_slotnum =  googletag.defineSlot(adCode[i], sizes[i], adId[i]);
           ub_slotnum.addService(googletag.pubads());
+          // var ub_mappingsize = googletag.sizeMapping()
+          //    .addSize([1024, 768], [728, 90])
+          //    .addSize([0, 0], [320, 50])
+          //    .build();
+          // ub_slotnum.defineSizeMapping(ub_mappingsize);
         }
     }
-      </script>
-    </body>
-    </html>`;
+
+    function ub_checkAdRendered(){
+      adId = 'div-gpt-ad-1635167074697-0';
+      var nodes = document.getElementById(adId).childNodes[0].childNodes;
+      if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+       }
+       else {
+         ub_passback();
+       }
+    }
+
+    function ub_passback() {
+      fetch("https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/passbackbanner.json")
+          .then(res => res.json())
+          .then(data => {
+              clientData = data;
+              clientData= clientData["sunsigns"]["300x250"];
+              var randomNum = Math.floor(Math.random()*(27));
+              imgname = clientData["imgurls"][randomNum];
+              redirectlink = clientData["redirectlinks"][randomNum];
+
+              ub_imgurls = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/300x250AdBannerImages/"+imgname;
+              ub_psbckurl = document.createElement("a");
+              ub_psbckurl.href = redirectlink;
+              ub_psbckurl.setAttribute("target","_parent");
+              ub_psbckimg = document.createElement("img");
+              ub_psbckimg.src = ub_imgurls;
+              ub_psbckimg.style = "width:300px; height:250px;";
+              ub_psbckurl.appendChild(ub_psbckimg);
+              document.querySelector('#div-gpt-ad-1635167074697-0').appendChild(ub_psbckurl);
+          })
+          .catch(err => console.error(err));
+    }
+    </script>
+  </body>
+  </html>`;
 
   const iframe = document.createElement("iframe");
   iframe.srcdoc = htmlSrc;
-  (iframe.frameElement || iframe).style.cssText = "width: auto; height: auto; border: 0; margin:0;";
+  (iframe.frameElement || iframe).style.cssText = "width: 100%; height: 100%; border: 0; margin:0;";
   iframe.src = "javascript:false";
   ub_div = document.querySelector('script[src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/apsScript3.js"]').parentElement;
-  ub_div.appendChild(iframe);
+  // ub_div = document.querySelector('script[src="http://localhost/unibots/main/aps/sunsigns/apsScript3.js"]').parentElement;
+
+  ub_divn = document.createElement("div");
+  ub_divn.id = "ub-aps";
+  ub_divn.style = "width:300px; height:250px;"
+  ub_div.appendChild(ub_divn);
+  ub_divn.appendChild(iframe);
 })();

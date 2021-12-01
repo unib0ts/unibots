@@ -36,7 +36,13 @@
       googleDefine(mappings.adCode, mappings.sizes, mappings.adId);
       googletag.pubads().disableInitialLoad();
       googletag.pubads().enableSingleRequest();
-      googletag.enableServices(); });
+      googletag.enableServices();
+      googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          if (event.slot.getAdUnitPath() === "/21928950349,1019715/sunsigns.org_banner2_ub_ebda_120x600") {
+            ub_checkAdRendered();
+          }
+      });
+    });
 
     apstag.init({
       pubID: "8282b9c6-324d-4939-b1ea-958d67a9e637",
@@ -58,14 +64,54 @@
           ub_slotnum.addService(googletag.pubads());
         }
     }
+
+      function ub_checkAdRendered(){
+      	adId = 'div-gpt-ad-1632902504286-0';
+      	var nodes = document.getElementById(adId).childNodes[0].childNodes;
+      	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+      	 }
+         else {
+           ub_passback();
+         }
+      }
+
+      function ub_passback() {
+        fetch("https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/passbackbanner.json")
+            .then(res => res.json())
+            .then(data => {
+                clientData = data;
+                clientData= clientData["sunsigns"]["120x600"];
+                var randomNum = Math.floor(Math.random()*(27));
+                imgname = clientData["imgurls"][randomNum];
+                redirectlink = clientData["redirectlinks"][randomNum];
+
+                ub_imgurls = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/120x600AdBannerImages/"+imgname;
+                ub_psbckurl = document.createElement("a");
+                ub_psbckurl.href = redirectlink;
+                ub_psbckurl.setAttribute("target","_parent");
+                ub_psbckimg = document.createElement("img");
+                ub_psbckimg.src = ub_imgurls;
+                ub_psbckimg.style = "width:120px; height:600px;";
+                ub_psbckurl.appendChild(ub_psbckimg);
+                document.querySelector('#div-gpt-ad-1632902504286-0').appendChild(ub_psbckurl);
+            })
+            .catch(err => console.error(err));
+      }
       </script>
     </body>
     </html>`;
 
   const iframe = document.createElement("iframe");
   iframe.srcdoc = htmlSrc;
-  (iframe.frameElement || iframe).style.cssText = "width: auto; height: auto; border: 0; margin:0;";
+  (iframe.frameElement || iframe).style.cssText = "width: 100%; height: 100%; border: 0; margin:0;";
   iframe.src = "javascript:false";
   ub_div = document.querySelector('script[src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/aps/sunsigns/apsScript2.js"]').parentElement;
-  ub_div.appendChild(iframe);
+  // ub_div = document.querySelector('script[src="http://localhost/unibots/main/aps/sunsigns/apsScript2.js"]').parentElement;
+
+  ub_divn = document.createElement("div");
+  ub_divn.id = "ub-aps";
+  ub_divn.style = "width:120px; height:600px;"
+  ub_div.appendChild(ub_divn);
+  ub_divn.appendChild(iframe);
+
 })();

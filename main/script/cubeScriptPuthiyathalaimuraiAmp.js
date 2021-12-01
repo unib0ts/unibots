@@ -1,5 +1,5 @@
 // console.log('script disabled');
-mybotGACode = '';
+mybotGACode = 'G-WXC2TJ489C';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
 var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466739-1{bottom: -20px !important; left: -30px !important;}";
@@ -40,7 +40,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
        var ub_passback = document.createElement("div");
        ub_passback.setAttribute("style", "float:left;min-height:2px;width:auto;position:absolute;bottom:0;");
        ub_passback.setAttribute("data-position", "1");
-       ub_passback.setAttribute("data-section", "StroyPage");
+       ub_passback.setAttribute("data-section", "puthiya");
        ub_passback.setAttribute("class", "colombia");
 
 

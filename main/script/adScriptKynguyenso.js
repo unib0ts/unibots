@@ -53,29 +53,31 @@
               // document.getElementById("ub-left-ad").innerHTML ='<div id="div-gpt-ad-1637223892866-0">';
           }
 
-          z1 = document.createElement("div");
-          z1.id = "div-gpt-ad-1637223843374-0";
-          z1.style = "min-width: 300px; min-height: 250px";
-          x1 = document.querySelector('.sidebar');
-          x1.appendChild(z1);
+          if (document.querySelector('.sidebar')) {
+            z1 = document.createElement("div");
+            z1.id = "div-gpt-ad-1637223843374-0";
+            z1.style = "min-width: 300px; min-height: 250px";
+            x1 = document.querySelector('.sidebar');
+            x1.appendChild(z1);
 
-          z2 = document.createElement("div");
-          z2.id = "div-gpt-ad-1637223872964-0";
-          z2.style = "min-width: 300px; min-height: 250px";
-          x1 = document.querySelector('.sidebar');
-          x1.appendChild(z2);
+            z2 = document.createElement("div");
+            z2.id = "div-gpt-ad-1637223872964-0";
+            z2.style = "min-width: 300px; min-height: 250px";
+            x1 = document.querySelector('.sidebar');
+            x1.appendChild(z2);
 
-          z3 = document.createElement("div");
-          z3.id = "div-gpt-ad-1637223913329-0";
-          z3.style = "min-width: 300px; min-height: 600px";
-          x1 = document.querySelector('.sidebar');
-          x1.appendChild(z3);
+            z3 = document.createElement("div");
+            z3.id = "div-gpt-ad-1637223913329-0";
+            z3.style = "min-width: 300px; min-height: 600px";
+            x1 = document.querySelector('.sidebar');
+            x1.appendChild(z3);
 
-          z4 = document.createElement("div");
-          z4.id = "div-gpt-ad-1637223813283-0";
-          z4.style = "min-width: 300px; min-height: 250px";
-          x1 = document.querySelector('.sidebar');
-          x1.appendChild(z4);
+            z4 = document.createElement("div");
+            z4.id = "div-gpt-ad-1637223813283-0";
+            z4.style = "min-width: 300px; min-height: 250px";
+            x1 = document.querySelector('.sidebar');
+            x1.appendChild(z4);
+          }
   } else {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-container";
@@ -543,7 +545,7 @@
   // }
 
   function callFullHBAds(adCode, ub_slot) {
-      fillRefreshMap();
+      // fillRefreshMap();
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,

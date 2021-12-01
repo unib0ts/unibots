@@ -134,9 +134,9 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       }, REFRESH_TIMEOUT);
       mappings.renderedFlag[ub_slotNum] = true;
     }
-    else {
-      ub_passback();
-    }
+    // else {
+    //   ub_passback();
+    // }
   }
 }
 

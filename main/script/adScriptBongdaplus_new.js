@@ -84,6 +84,7 @@ var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong
   (window.location.href.split('https://bongdaplus.vn/ket-nghia-anh-em').length == 2);
 
 function ubadScript() {
+  console.log('ub-Scripttriggered');
   // if(!(bong_vietnamcatg)){
   var ub_interval_plyr_check = setInterval(() => {
     if (document.getElementById("unibots-video")) {
@@ -92,6 +93,7 @@ function ubadScript() {
 
       clearInterval(ub_interval_plyr_check);
       if (document.getElementById("div-ub-bongdaplus")) {
+        console.log('ub-Playertriggerd');
         url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
         ub_vs = document.createElement("script");
         ub_vs.src = url;
@@ -284,7 +286,7 @@ function ubadScript() {
          // }
        }
     }
-    if (document.querySelector('#postContent') && document.querySelectorAll('.admob')) {
+    if (document.querySelector('#postContent') && document.querySelector('.admob')) {
         // ub_admob = document.querySelectorAll('.admob');
         // for (var i = 0; i < ub_admob.length; i++) {
         //   z3 = document.createElement("div");
@@ -312,27 +314,29 @@ function ubadScript() {
          z5 = document.createElement("div");
          z5.id = "unibots7";
          z5.innerHTML = "<div id='div-gpt-ad-1637854607286-0'></div>";
-
+         if (x3[5]) {
          x3[5].appendChild(z5);
+         }
 
          z6 = document.createElement("div");
          z6.id = "unibots8";
          z6.innerHTML = "<div id='div-gpt-ad-1637854639921-0'></div>";
-
-         x3[6].appendChild(z6);
-
+         if (x3[6]) {
+          x3[6].appendChild(z6);
+         }
          z7 = document.createElement("div");
          z7.id = "unibots9";
          z7.innerHTML = "<div id='div-gpt-ad-1637854976531-0'></div>";
-
-         x3[7].appendChild(z7);
+         if (x3[7]) {
+          x3[7].appendChild(z7);
+         }
 
          z8 = document.createElement("div");
          z8.id = "unibots10";
          z8.innerHTML = "<div id='div-gpt-ad-1637855004071-0'></div>";
-
-         x3[8].appendChild(z8);
-
+         if (x3[8]) {
+          x3[8].appendChild(z8);
+         }
          // z9 = document.createElement("div");
          // z9.id = "unibots11";
          // z9.innerHTML = "<div id='div-gpt-ad-1637583388379-0'></div>";

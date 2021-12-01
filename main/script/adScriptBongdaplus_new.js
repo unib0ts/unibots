@@ -252,14 +252,14 @@ function ubadScript() {
        for (var ub_j = 0; ub_j < x3.length; ub_j++) {
          prevparaHeight += x3[ub_j].offsetHeight;
 
-         if((prevparaHeight > 800) && (ub_flag1 == true)){
+         if((prevparaHeight > 1400) && (ub_flag1 == true)){
            z4 = document.createElement("div");
            z4.id = "unibots2";
            z4.innerHTML = "<div id='div-gpt-ad-1637855089100-0'></div>";
 
            x3[ub_j].appendChild(z4);
            ub_flag1 = false;
-         }else if ((prevparaHeight > 1600) && (ub_flag2 == true)) {
+         }else if ((prevparaHeight > 2100) && (ub_flag2 == true)) {
            z5 = document.createElement("div");
            z5.id = "unibots3";
            z5.innerHTML = "<div id='div-gpt-ad-1637855117050-0'></div>";
@@ -267,7 +267,7 @@ function ubadScript() {
            x3[ub_j].appendChild(z5);
            ub_flag2 = false;
          }
-         else if ((prevparaHeight > 2400) && (ub_flag3 == true)) {
+         else if ((prevparaHeight > 2800) && (ub_flag3 == true)) {
            z6 = document.createElement("div");
            z6.id = "unibots4";
            z6.innerHTML = "<div id='div-gpt-ad-1637855143548-0'></div>";

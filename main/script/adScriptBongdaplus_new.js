@@ -836,7 +836,7 @@ function ubadScript() {
           // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           //  ]),
           hb_full_common_bidders.concat([
-              // // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4150182'} },
               //    { bidder: 'openx', params: {unit: '545728053', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               // //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -1106,7 +1106,7 @@ function ubadScript() {
       ],
       bids: [
           hb_full_common_bidders.concat([
-              // // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3507450'} },
+              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4150183'} },
               //    { bidder: 'openx', params: {unit: '545727969', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
               // //    { bidder: 'ucfunnel', params: { adid : 'ad-77289B7B3EA7B6DE07DD3478B9BEA9B'} },
               // // //   {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },

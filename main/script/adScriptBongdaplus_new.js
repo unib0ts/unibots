@@ -189,7 +189,7 @@ function ubadScript() {
             }
         }
         }
-      // if ((window.location.href == "https://bongdaplus.vn/")) {
+      if (!(window.location.href == "https://bongdaplus.vn/")) {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-containerdesk";
           z1.className = "ub-sticky-ad-containerdesk";
@@ -197,7 +197,7 @@ function ubadScript() {
               '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1622019394824-0"></div';
           x1 = document.querySelector("body");
           x1.appendChild(z1);
-      // }
+      }
 
       // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/cubeScriptBongdaplus.js';
       // s3 = document.createElement('script');
@@ -226,7 +226,7 @@ function ubadScript() {
       // }
 
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-    // if (!(window.location.href == "https://bongdaplus.vn/")) {
+    if (!(window.location.href == "https://bongdaplus.vn/")) {
     // if(!(bong_vietnamcatg)){
       z2 = document.createElement("div");
       z2.id = "ub-popup-ad-container";
@@ -235,7 +235,7 @@ function ubadScript() {
           '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
       x2 = document.querySelector("body");
       x2.appendChild(z2);
-    // }
+    }
 
     if (document.querySelector('#postContent')) {
        z3 = document.createElement("div");
@@ -423,7 +423,7 @@ function ubadScript() {
 
   if (mobileCheck()) {
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-      // if (!(window.location.href == "https://bongdaplus.vn/")) {
+      if (!(window.location.href == "https://bongdaplus.vn/")) {
     // if(!(bong_vietnamcatg)){
       adUnits1 = {
           code: "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
@@ -450,7 +450,7 @@ function ubadScript() {
           ],
       };
       adUnits_full_hb.push(adUnits1);
-    // }
+    }
   }
 
   var googletag = googletag || {};
@@ -1499,10 +1499,10 @@ function ubadScript() {
       if (mobileCheck()) {
       //   // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
       //
-          // if (!(window.location.href == "https://bongdaplus.vn/")) {
+          if (!(window.location.href == "https://bongdaplus.vn/")) {
         // if(!(bong_vietnamcatg)){
           addNewsBotAd();
-        // }
+        }
       }
       // callMapUnits();
       // changeConfigToHB();

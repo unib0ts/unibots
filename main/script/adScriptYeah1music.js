@@ -103,7 +103,7 @@ else{
             { bidder: 'smartadserver', params: { siteId: '400188', pageId: '1363333', formatId: '93422', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
             // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
             // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3225512'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4150202'} },
             // { bidder: 'ucfunnel', params: { adid : 'ad-BE78E28B83B2426EF87EAD83399A98A'} },
             // { bidder: 'criteo', params: {networkId: '10542'} },
             // { bidder: 'criteointl', params: {networkId: '10545'} },

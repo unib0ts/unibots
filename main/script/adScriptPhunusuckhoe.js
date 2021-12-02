@@ -68,7 +68,7 @@ var adUnits = [];
            // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
             { bidder: 'sovrn', params: {tagid: '732823'} },
               	{ bidder: '33across', params: { siteId : 'bJqQksiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-            // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028648'} },
+            { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028648'} },
             // { bidder: 'criteo', params: {networkId: '10542'} },
             // { bidder: 'criteointl', params: {networkId: '10545'} },
             { bidder: 'smartadserver', params: { siteId: '362137', pageId: '1289638', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

@@ -73,7 +73,7 @@ const customConfigObjectA = {
           // { bidder: '33across', params: { siteId : 'drmU7-Niqr64oSaKjGFx_2', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
           // { bidder: 'emx_digital', params: { tagid: '147567' } }, /* sizeless */
           // { bidder: 'sovrn', params: {tagid: '970133'} },
-          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3579047'} },
+          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4151365'} },
           // { bidder: 'openx', params: {unit: '544025986', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
           // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
           // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },

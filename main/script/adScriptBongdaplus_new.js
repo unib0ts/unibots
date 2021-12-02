@@ -158,36 +158,37 @@ function ubadScript() {
       // s5.type = "text/javascript";
       // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
       // document.getElementsByTagName('head')[0].appendChild(s5);
-      if (document.querySelector("main")) {
-          z = document.createElement("div");
-          z.id = "ub-left-ad";
-          z.className = "ub-left-ad";
-          x = document.querySelector("body");
-          parentWidth = x.offsetWidth;
-          child = document.querySelector(".containr");
-          childWidth = child.offsetWidth;
-          space = (parentWidth - childWidth) / 2;
-          if (space > 120) {
-              document.querySelector("main").appendChild(z);
-              document.getElementById("ub-left-ad").innerHTML =
-                  '<div id="div-gpt-ad-1614845055882-0">';
-          }
+        if(!(bong_vietnamcatg)){
+          if (document.querySelector("main")) {
+            z = document.createElement("div");
+            z.id = "ub-left-ad";
+            z.className = "ub-left-ad";
+            x = document.querySelector("body");
+            parentWidth = x.offsetWidth;
+            child = document.querySelector(".containr");
+            childWidth = child.offsetWidth;
+            space = (parentWidth - childWidth) / 2;
+            if (space > 120) {
+                document.querySelector("main").appendChild(z);
+                document.getElementById("ub-left-ad").innerHTML =
+                    '<div id="div-gpt-ad-1614845055882-0">';
+            }
 
-          z = document.createElement("div");
-          z.id = "ub-right-ad";
-          z.className = "ub-right-ad";
-          x = document.querySelector("body");
-          parentWidth = x.offsetWidth;
-          child = document.querySelector(".containr");
-          childWidth = child.offsetWidth;
-          space = (parentWidth - childWidth) / 2;
-          if (space > 120) {
-              document.querySelector("main").appendChild(z);
-              document.getElementById("ub-right-ad").innerHTML =
-                  '<div id="div-gpt-ad-1614845141925-0">';
-          }
-      }
-
+            z = document.createElement("div");
+            z.id = "ub-right-ad";
+            z.className = "ub-right-ad";
+            x = document.querySelector("body");
+            parentWidth = x.offsetWidth;
+            child = document.querySelector(".containr");
+            childWidth = child.offsetWidth;
+            space = (parentWidth - childWidth) / 2;
+            if (space > 120) {
+                document.querySelector("main").appendChild(z);
+                document.getElementById("ub-right-ad").innerHTML =
+                    '<div id="div-gpt-ad-1614845141925-0">';
+            }
+        }
+        }
       // if ((window.location.href == "https://bongdaplus.vn/")) {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-containerdesk";

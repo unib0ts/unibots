@@ -110,7 +110,7 @@ var adUnits = [];
               { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2945605'} },
               { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
+              // { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
             	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
               { bidder: 'ucfunnel', params: { adid : 'pub-9A292626B229BA98F442B7D7BA36B39E'} },
             	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
@@ -615,7 +615,7 @@ function checkRemnantUnits(){
               { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934210'} },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-              { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
+              // { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
             	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
             	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
             ]
@@ -660,7 +660,7 @@ function checkRemnantUnits(){
               // { bidder: 'criteointl', params: {networkId: '10545'} },
               // { bidder: 'openx', params: {unit: '541046365', delDomain: 'yieldbird-d.openx.net'} },
               { bidder: 'nobid', params: { siteId : '22027218255'} },
-              { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
+              // { bidder: 'adkernel', params: {zoneId: '126005', host: 'cpm.fmlabsonline.com'} },
               { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
               // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */

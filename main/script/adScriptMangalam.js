@@ -116,7 +116,7 @@ var adUnits = [
         bids: [
         	{ bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
         	{ bidder: 'oftmedia', params: { placementId: '20846125' } },
-        	{ bidder: '33across', params: { siteId : 'a_OZjGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        	{ bidder: '33across', params: { siteId : 'dmyeTgu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '718927'} },
           { bidder: 'nobid', params: { siteId : '22045890860'} },
@@ -126,7 +126,7 @@ var adUnits = [
           // { bidder: 'openx', params: {unit: '541046186', delDomain: 'yieldbird-d.openx.net'} },
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
+          // { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2963245'} },
           { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
@@ -151,7 +151,7 @@ if(document.getElementById('unibot1')){
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
         //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
-        { bidder: '33across', params: { siteId : 'a_OZjGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'dmyeTgu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22045890860' } },
@@ -161,7 +161,7 @@ if(document.getElementById('unibot1')){
         { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3182871'} },
-        { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
+        // { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -184,7 +184,7 @@ if(document.getElementById('unibot2')){
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
         //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
-        { bidder: '33across', params: { siteId : 'a_OZjGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'dmyeTgu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22045890860' } },
@@ -194,7 +194,7 @@ if(document.getElementById('unibot2')){
         { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3182872'} },
-        { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
+        // { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         // { bidder: 'criteointl', params: {networkId: '10545'} },
         // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -217,12 +217,12 @@ if(document.getElementById('unibot3')){
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056049' } }, /* one placementId for all sizes  my appnexus bidder */
         //{ bidder: 'oftmedia', params: { placementId: '18778196' } },
-        { bidder: '33across', params: { siteId : 'a_OZjGBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'dmyeTgu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
         { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22045890860' } },
         { bidder: 'sovrn', params: {tagid: '867136'} },
-        { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
+        // { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-AA7BAAB7648D23B8184AB7E963494498'} },
         { bidder: 'openx', params: {unit: '543530094', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },

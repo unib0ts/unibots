@@ -67,7 +67,7 @@ if (typeof mobileCheck === "function") {
            // { bidder: 'criteo', params: {networkId: '10542'} },
            // { bidder: 'criteointl', params: {networkId: '10545'} },
            // // { bidder: 'oftmedia', params: { placementId: '18671523' } },
-           // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            	{ bidder: '33across', params: { siteId : 'dPKB4Qu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
            // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
            //  // { bidder: 'openx', params: {unit: '541046026', delDomain: 'yieldbird-d.openx.net'} },
            // // { bidder: 'rhythmone', params: { placementId: '211538'}}, /* one placementId for all sizes */

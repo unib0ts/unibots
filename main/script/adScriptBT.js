@@ -101,7 +101,7 @@ var adUnits = [
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999644'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996016'} },
-          { bidder: 'adkernel', params: {zoneId: '126002', host: 'cpm.fmlabsonline.com'} },
+          // { bidder: 'adkernel', params: {zoneId: '126002', host: 'cpm.fmlabsonline.com'} },
           // { bidder: 'criteo', params: {networkId: '4902'} }
         ]
     }

@@ -221,7 +221,7 @@ const customConfigObjectA = {
       //  // { bidder: 'criteointl', params: {networkId: '10545'} },
        { bidder: 'ucfunnel', params: { adid : 'ad-34B8946D966E38ED18D6DAE3B6838D7'} },
        { bidder: 'oftmedia', params: { placementId: '23117135' } },
-      //  // { bidder: '33across', params: { siteId : 'c879m0WuGr6PjyaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+      { bidder: '33across', params: { siteId : 'c5xutmu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
       //  // // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
       // { bidder: 'openx', params: {unit: '544014841', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
       //  // { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */

@@ -114,7 +114,7 @@ adUnits = [
           { bidder: 'openx', params: {unit: '543530177', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          { bidder: 'adkernel', params: {zoneId: '126369', host: 'cpm.fmlabsonline.com'} },
+          // { bidder: 'adkernel', params: {zoneId: '126369', host: 'cpm.fmlabsonline.com'} },
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'nobid', params: { siteId : '22049999656'} },

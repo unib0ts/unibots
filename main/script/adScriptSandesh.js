@@ -129,7 +129,7 @@ var adUnits = [];
         { bidder: 'smartadserver', params: { siteId: '362145', pageId: '1289646', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        { bidder: 'adkernel', params: {zoneId: '126020', host: 'cpm.fmlabsonline.com'} },
+        // { bidder: 'adkernel', params: {zoneId: '126020', host: 'cpm.fmlabsonline.com'} },
         { bidder: 'adyoulike', params: { placement: '2ae55db8a34b479636e7281b5665b0a6'}, labelAll: ["US"] },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323848', zoneId: '1680746'} }

@@ -101,7 +101,7 @@ var adUnits = [
           { bidder: 'smartadserver', params: { siteId: '362096', pageId: '1289597', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-          { bidder: 'adkernel', params: {zoneId: '126014', host: 'cpm.fmlabsonline.com'} },
+          // { bidder: 'adkernel', params: {zoneId: '126014', host: 'cpm.fmlabsonline.com'} },
         ]
     }
 ];

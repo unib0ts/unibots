@@ -86,7 +86,7 @@ const customConfigObjectA = {
         { bidder: '33across', params: { siteId : 'beW5lABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '97496' } }, /* sizeless */
         { bidder: 'sovrn', params: {tagid: '701560'} },
-        { bidder: 'adkernel', params: {zoneId: '126370', host: 'cpm.fmlabsonline.com'} },
+        // { bidder: 'adkernel', params: {zoneId: '126370', host: 'cpm.fmlabsonline.com'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323782', zoneId: '1680518'} },
         // { bidder: 'criteo', params: {networkId: '10542'} },
         // { bidder: 'criteointl', params: {networkId: '10545'} },

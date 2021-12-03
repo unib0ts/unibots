@@ -89,7 +89,7 @@ else{
 				//  { bidder: 'ucfunnel', params: { adid : 'ad-2736B8748AA68B4B0867E94697B93ABA'} },
 				// 	{ bidder: 'oftmedia', params: { placementId: '21224933' } },
 				// 	{ bidder: 'smartadserver', params: { siteId: '399737', pageId: '1361919', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
-				// // // 	// { bidder: '33across', params: { siteId : 'bKEogyBuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+				// // // 	// { bidder: '33across', params: { siteId : 'c0kGhuu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 				// 	{ bidder: 'emx_digital', params: { tagid: '147563' } }, /* sizeless */
 				// 	{ bidder: 'sovrn', params: {tagid: '867113'} },
 				// // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },

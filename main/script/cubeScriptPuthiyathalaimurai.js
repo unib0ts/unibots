@@ -57,7 +57,7 @@ function mobileCheck() {
 //   }
 
 
-  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 125px !important;left: -30px !important;} #ifr_466739-1{bottom: 120px !important;left: -30px !important;} #div-ub-1{z-index: 2147483647 !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-467893-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-467894-1{width: auto !important;z-index: 2147483647 !important;} #ifr_467893-1{bottom: 125px !important;left: -30px !important;} #ifr_467894-1{bottom: 120px !important;left: -30px !important;} #div-ub-1{z-index: 2147483647 !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -130,22 +130,22 @@ function mobileCheck() {
         setAttributes(ub_passback, {
           "style":"float:left;min-height:2px;width:auto;position:absolute;bottom:0;",
           "data-position": "1",
-          "data-section": "puthiya",
+          "data-section": "StroyPage",
           "class": "colombia"
         })
 
         if(!mobileCheck()){
           setAttributes(ub_passback,{
               "data-ua": "D",
-              "data-slot": "466738",
-              "id": "div-clmb-ctn-466738-1"
+              "data-slot": "467893",
+              "id": "div-clmb-ctn-467893-1"
             })
           document.getElementsByTagName("body")[0].appendChild(ub_passback);
        }else {
          setAttributes(ub_passback,{
            "data-ua": "M",
-           "data-slot": "466739",
-           "id": "div-clmb-ctn-466739-1"
+           "data-slot": "467894",
+           "id": "div-clmb-ctn-467894-1"
          })
          document.getElementsByTagName("body")[0].appendChild(ub_passback);
        }
@@ -158,10 +158,10 @@ function mobileCheck() {
 
     function clmbdiv() {
         if (!mobileCheck()) {
-           ub_refresh("#div-clmb-ctn-466738-1", "ifr_466738-1", ub_clmb);
+           ub_refresh("#div-clmb-ctn-467893-1", "ifr_467893-1", ub_clmb);
         }
         else {
-          ub_refresh("#div-clmb-ctn-466739-1", "ifr_466739-1", ub_clmb);
+          ub_refresh("#div-clmb-ctn-467894-1", "ifr_467894-1", ub_clmb);
         }
     }
   }
@@ -170,12 +170,12 @@ function mobileCheck() {
     if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
       if (!mobileCheck()) {
         try{
-          colombia.refresh('div-clmb-ctn-466738-1');
+          colombia.refresh('div-clmb-ctn-467893-1');
           cubespinnervisibility();
         }catch(e){}
       }else {
         try{
-          colombia.refresh('div-clmb-ctn-466739-1');
+          colombia.refresh('div-clmb-ctn-467894-1');
           cubespinnervisibility();
         }catch(e){}
       }

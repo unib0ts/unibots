@@ -312,23 +312,29 @@ var mappings_full_hb_config_desktop = {
     adUnitNames: [
         "/21928950349,28569147/heightcomparison.com_ub_728x90", //.desktop_ad_1
         "/21928950349,28569147/heightcomparison.com_ub_300x250_1", //.desktop_ad_box
-        "/21928950349,28569147/heightcomparison.com_ub_300x250_2",
-        "/22082859479,22623724900/kynguyenso.plo.vn_pcleftbanner_160x600",
-        "/22082859479,22623724900/kynguyenso.plo.vn_pcstickyhotbannerR3_300x600",
+        "/21928950349,28569147/heightcomparison.com_ub_300x250_2",  //.mobile_ad_1
+        "/21928950349,28569147/heightcomparison.com_ub_320x100_1",  //.mobile_ad_2
+        "/21928950349,28569147/heightcomparison.com_ub_300x250_3",
+        // "/21928950349,28569147/heightcomparison.com_ub_320x50_1",
+        // "/21928950349,28569147/heightcomparison.com_ub_320x50_2",
     ],
     adId: [
           "div-gpt-ad-1637828269964-0",
           "div-gpt-ad-1637828362397-0",
           "div-gpt-ad-1637829389088-0",
-          "div-gpt-ad-1637223892866-0",
-          "div-gpt-ad-1637223913329-0",
+          "div-gpt-ad-1637830020023-0",
+          "div-gpt-ad-1637830087947-0",
+          // "div-gpt-ad-1637828475383-0",
+          // "div-gpt-ad-1637828810308-0",
     ],
     sizes: [
         [728, 90],
         [300, 250],
         [300, 250],
-        [160, 600],
-        [300, 600],
+        [320, 100],
+        [300, 250],
+        // [320, 50],
+        // [320, 50]
     ],
     bids: [
         hb_full_common_bidders.concat([

@@ -18,12 +18,6 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTupaki.json';
 mybotBlockedClientName = 'tupaki';
 
-var mybotstyleSheet =".mybot .ub-roller-wrapper{bottom: 100px !important;}";
-var css = document.createElement("style");
-css.type = "text/css";
-css.appendChild(document.createTextNode(mybotstyleSheet));
-document.getElementsByTagName("head")[0].appendChild(css);
-
 mybotGACode = 'G-G4C0209YRW';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
@@ -79,13 +73,18 @@ function ubadScript() {
   s0.type = "text/javascript";
   document.getElementsByTagName('head')[0].appendChild(s0);
 
+  var mybotstyleSheet ="#ub-roller-wrapper{bottom: 110px !important;}";
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.appendChild(document.createTextNode(mybotstyleSheet));
+  document.getElementsByTagName("head")[0].appendChild(css);
+
  s0.onload=function(){
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1617905562342-0";
   z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
   x1 = document.querySelector(".ub-sticky-ad");
   x1.appendChild(z1);
-
 
   var s3 = document.createElement('script');
     s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");

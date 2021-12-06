@@ -212,15 +212,15 @@ function ubadScript() {
         }
       }
 
-    // if((window.location.href== "https://m.docbao.vn/")){
-    //   z2 = document.createElement("div");
-    //   z2.id = "ub-popup-ad-container";
-    //   z2.className = "ub-popup-ad-container";
-    //   z2.innerHTML =
-    //       '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
-    //   x2 = document.querySelector("body");
-    //   x2.appendChild(z2);
-    // }
+    if((window.location.href== "https://m.docbao.vn/")){
+      z2 = document.createElement("div");
+      z2.id = "ub-popup-ad-container";
+      z2.className = "ub-popup-ad-container";
+      z2.innerHTML =
+          '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
+      x2 = document.querySelector("body");
+      x2.appendChild(z2);
+    }
 
     if (document.querySelector('#ax-article-header')) {
        z3 = document.createElement("div");
@@ -385,37 +385,37 @@ function ubadScript() {
       [300, 600],
   ];
 
-  // if (mobileCheck()) {
-  //     // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-  //   if((window.location.href== "https://m.docbao.vn/")){
-  //     adUnits1 = {
-  //         code: "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
-  //         mediaTypes: {
-  //             banner: {
-  //                 sizes: div_1_sizes,
-  //             },
-  //         },
-  //         bids: [
-  //           // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
-  // 					// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
-  //           // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-  //           // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-  //           // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
-  //           // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-  //           // { bidder: 'nobid', params: { siteId: '22049997436' } },
-  //           // { bidder: 'openx', params: {unit: '545728062', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-  //           // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-  //           // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-  //           // // // { bidder: 'criteo', params: {networkId: '10542'} },
-  //           // // // { bidder: 'criteointl', params: {networkId: '10545'} },
-               // // { bidder: 'sovrn', params: {tagid: '970967'} },
-  //           // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-  //           // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-  //         ],
-  //     };
-  //     adUnits_full_hb.push(adUnits1);
-  //     }
-  // }
+  if (mobileCheck()) {
+      // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
+    if((window.location.href== "https://m.docbao.vn/")){
+      adUnits1 = {
+          code: "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
+          mediaTypes: {
+              banner: {
+                  sizes: div_1_sizes,
+              },
+          },
+          bids: [
+            // { bidder: 'appnexus', params: { placementId: '21156521' } }, /* one placementId for all sizes  my appnexus bidder */
+  					// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910489'} },
+            // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+            // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+            // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+            // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+            // { bidder: 'nobid', params: { siteId: '22049997436' } },
+            // { bidder: 'openx', params: {unit: '545728062', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+            // // // { bidder: 'criteo', params: {networkId: '10542'} },
+            // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+               // { bidder: 'sovrn', params: {tagid: '970967'} },
+            // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+            // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+          ],
+      };
+      adUnits_full_hb.push(adUnits1);
+      }
+  }
 
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -1253,12 +1253,12 @@ function ubadScript() {
   }
 
   function checkHBUnits() {
-      // if (mobileCheck()) {
-      //     // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-      //    if((window.location.href== "https://m.docbao.vn/")){
-      //     addNewsBotAd();
-      //     }
-      // }
+      if (mobileCheck()) {
+          // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
+         if((window.location.href== "https://m.docbao.vn/")){
+          addNewsBotAd();
+          }
+      }
 
       // changeConfigToHB();
       callMapUnits();

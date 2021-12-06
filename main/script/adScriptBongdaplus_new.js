@@ -1513,7 +1513,7 @@ function ubadScript() {
   }
 
   function callFullHBAds(adCode, ub_slot) {
-      fillRefreshMap();
+      // fillRefreshMap();
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1881,9 +1881,6 @@ function ubadScript() {
   }
 
   function refreshBid(ub_slot, adCode) {
-    if (ub_slot === "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280") {
-
-    }else {
       ubpbjs.que.push(function () {
           ubpbjs.requestBids({
               timeout: PREBID_TIMEOUT,
@@ -1899,7 +1896,6 @@ function ubadScript() {
               },
           });
       });
-    }
   }
 
   if (mobileCheck()) {

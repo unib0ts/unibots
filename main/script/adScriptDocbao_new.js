@@ -152,7 +152,7 @@ function ubadScript() {
     // ad_scrpt2.innerText= mybotadscrptChild;
     // document.getElementsByTagName('body')[0].appendChild(ad_scrpt2);
     // if (document.querySelector('.header')) {
-    if(!(window.location.href.split('https://docbao.vn/xa-hoi').length == 2 )){
+    // if(!(window.location.href.split('https://docbao.vn/xa-hoi').length == 2 )){
       z= document.createElement('div');
       z.id = 'ub-left-ad';
       z.className = 'ub-left-ad';
@@ -178,7 +178,7 @@ function ubadScript() {
        child.appendChild(z);
        document.getElementById('ub-right-ad').innerHTML= '<div id="div-gpt-ad-1615189532474-0">';
       }
-    }
+    // }
 
     if(!(window.location.href == "https://docbao.vn/")){
       z1= document.createElement('div');

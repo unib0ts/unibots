@@ -39,44 +39,50 @@
   }
 
   if (!mobileCheck() && (window.screen.availWidth > 1024)) {
-      // if (document.querySelector("main")) {
-          z = document.createElement("div");
-          z.id = "div-gpt-ad-1637223892866-0";
-          z.className = "ub-left-ad";
-          x = document.querySelector("body");
-          parentWidth = x.offsetWidth;
-          child = document.querySelector(".container");
-          childWidth = child.offsetWidth;
-          space = (parentWidth - childWidth) / 2;
-          if (space > 120) {
-              document.querySelector("body").appendChild(z);
-              // document.getElementById("ub-left-ad").innerHTML ='<div id="div-gpt-ad-1637223892866-0">';
-          }
+          // z = document.createElement("div");
+          // z.id = "div-gpt-ad-1637223892866-0";
+          // z.className = "ub-left-ad";
+          // x = document.querySelector("body");
+          // parentWidth = x.offsetWidth;
+          // child = document.querySelector(".container");
+          // childWidth = child.offsetWidth;
+          // space = (parentWidth - childWidth) / 2;
+          // if (space > 120) {
+          //     document.querySelector("body").appendChild(z);
+          // }
+
+         if (document.querySelector('#sidebar_top')) {
+           z1 = document.createElement("div");
+           z1.id = "div-gpt-ad-1637223892866-0";
+           z1.style = "min-width: 160px; min-height: 600px; padding: 20px 0px;";
+           x1 = document.querySelector('#sidebar_top');
+           x1.appendChild(z1);
+         }
+
+         z4 = document.createElement("div");
+         z4.id = "ub-sticky-ad-containerdesk";
+         z4.className = "ub-sticky-ad-containerdesk";
+         z4.innerHTML = '<span class="close_ub-sticky-addesk" id="close_ub-sticky-addesk" onclick="mybotubstickyadDesk()"><img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/close.svg"></span><div class="ub-sticky-adDesk" id="div-gpt-ad-1637223813283-0"></div';
+         document.querySelector("body").appendChild(z4);
 
           if (document.querySelector('.sidebar')) {
             z1 = document.createElement("div");
             z1.id = "div-gpt-ad-1637223843374-0";
-            z1.style = "min-width: 300px; min-height: 250px";
+            z1.style = "min-width: 300px; min-height: 250px; padding: 20px 0px;";
             x1 = document.querySelector('.sidebar');
             x1.appendChild(z1);
 
             z2 = document.createElement("div");
             z2.id = "div-gpt-ad-1637223872964-0";
-            z2.style = "min-width: 300px; min-height: 250px";
+            z2.style = "min-width: 300px; min-height: 250px;padding: 20px 0px;";
             x1 = document.querySelector('.sidebar');
             x1.appendChild(z2);
 
             z3 = document.createElement("div");
             z3.id = "div-gpt-ad-1637223913329-0";
-            z3.style = "min-width: 300px; min-height: 600px";
+            z3.style = "min-width: 300px; min-height: 600px;padding: 20px 0px;";
             x1 = document.querySelector('.sidebar');
             x1.appendChild(z3);
-
-            z4 = document.createElement("div");
-            z4.id = "div-gpt-ad-1637223813283-0";
-            z4.style = "min-width: 300px; min-height: 250px";
-            x1 = document.querySelector('.sidebar');
-            x1.appendChild(z4);
           }
   } else {
           z1 = document.createElement("div");
@@ -91,21 +97,21 @@
           z2 = document.createElement("div");
           z2.id = "div-gpt-ad-1637224185002-0";
           z2.style = "min-width: 300px; min-height: 250px";
-          if (document.querySelector('.article-content')) {
-            x1 = document.querySelector('.article-content');
-            x1.appendChild(z2);
+          if (document.querySelector('.slist-01')) {
+            x1 = document.querySelectorAll('.slist-01');
+            x1[2].appendChild(z2);
+          }
+          else if (document.querySelector('article')) {
+            x1 = document.querySelector('article');
+            x1.insertBefore(z2, x1.childNodes[0]);
           }
 
           z3 = document.createElement("div");
           z3.id = "div-gpt-ad-1637224154071-0";
           z3.style = "min-width: 300px; min-height: 600px";
-          if (document.querySelector('.slist-01')) {
-            x1 = document.querySelectorAll('.slist-01');
-            x1[2].appendChild(z3);
-          }
-          else if (document.querySelector('article')) {
-            x1 = document.querySelector('article');
-            x1.insertBefore(z3, x1.childNodes[0]);
+          if (document.querySelector('.article-content')) {
+            x1 = document.querySelector('.article-content');
+            x1.appendChild(z3);
           }
   }
 
@@ -117,9 +123,9 @@
       document.getElementById("ub-sticky-ad-container").style.display = "none";
   }
 
-  // function mybotubstickyadDesk() {
-  //     document.getElementById("ub-sticky-ad-containerdesk").style.display = "none";
-  // }
+  function mybotubstickyadDesk() {
+      document.getElementById("ub-sticky-ad-containerdesk").style.display = "none";
+  }
 
   var s0 = document.createElement("script");
   s0.src = "https://www.googletagservices.com/tag/js/gpt.js";

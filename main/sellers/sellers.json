@@ -819,6 +819,12 @@
           "seller_id": "137",
           "name": "portal-islam",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.sumantv.com/",
+          "seller_id": "138",
+          "name": "sumantv",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

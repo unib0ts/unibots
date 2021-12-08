@@ -18,7 +18,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTupaki.json';
 mybotBlockedClientName = 'tupaki';
 
-var mybotstyleSheet ="#div-clmb-ctn-465452-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465453-1{width: auto !important;z-index: 2147483647 !important;}  #ifr_465452-1{bottom: 60px !important;} #ifr_465453-1{bottom: 100px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465452-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465453-1{width: auto !important;z-index: 2147483647 !important;}  #ifr_465452-1{bottom: 100px !important;right:0px !important;left: unset !important;} #ifr_465453-1{bottom: 100px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -75,7 +75,7 @@ function ubadScript() {
 
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1617905562342-0";
-  z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
+  z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
   x1 = document.querySelector("body");
   x1.appendChild(z1);
 

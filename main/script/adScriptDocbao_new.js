@@ -190,8 +190,8 @@ function ubadScript() {
     }
   } else {
       // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/gia-dinh').length == 2){}
-      if (window.location.href.split('https://m.docbao.vn/phap-luat').length == 2){}
-      else {
+      // if (window.location.href.split('https://m.docbao.vn/phap-luat').length == 2){}
+      // else {
         if(!(window.location.href== "https://m.docbao.vn/")){
             z1 = document.createElement("div");
             z1.id = "ub-sticky-ad-container";
@@ -210,7 +210,7 @@ function ubadScript() {
             x1 = document.querySelector("body");
             x1.appendChild(z1);
         }
-      }
+      // }
 
     if((window.location.href== "https://m.docbao.vn/")){
       z2 = document.createElement("div");

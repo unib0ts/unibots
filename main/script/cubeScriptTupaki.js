@@ -75,7 +75,7 @@ function ubadScript() {
 
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1617905562342-0";
-  z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
+  z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
   x1 = document.querySelector("body");
   x1.appendChild(z1);
 

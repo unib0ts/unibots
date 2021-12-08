@@ -84,7 +84,7 @@ var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong
   (window.location.href.split('https://bongdaplus.vn/ket-nghia-anh-em').length == 2);
 
 function ubadScript() {
-  console.log('ub-Scripttriggered');
+  // console.log('ub-Scripttriggered');
   // if(!(bong_vietnamcatg)){
   var ub_interval_plyr_check = setInterval(() => {
     if (document.getElementById("unibots-video")) {
@@ -93,7 +93,7 @@ function ubadScript() {
 
       clearInterval(ub_interval_plyr_check);
       if (document.getElementById("div-ub-bongdaplus")) {
-        console.log('ub-Playertriggerd');
+        // console.log('ub-Playertriggerd');
         url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
         ub_vs = document.createElement("script");
         ub_vs.src = url;
@@ -158,7 +158,7 @@ function ubadScript() {
       // s5.type = "text/javascript";
       // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
       // document.getElementsByTagName('head')[0].appendChild(s5);
-        if(!(bong_vietnamcatg)){
+        // if(!(bong_vietnamcatg)){
           if (document.querySelector("main")) {
             z = document.createElement("div");
             z.id = "ub-left-ad";
@@ -188,7 +188,7 @@ function ubadScript() {
                     '<div id="div-gpt-ad-1614845141925-0">';
             }
         }
-        }
+        // }
       if (!(window.location.href == "https://bongdaplus.vn/")) {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-containerdesk";
@@ -226,16 +226,16 @@ function ubadScript() {
       // }
 
     // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-    if (!(window.location.href == "https://bongdaplus.vn/")) {
-    // if(!(bong_vietnamcatg)){
-      z2 = document.createElement("div");
-      z2.id = "ub-popup-ad-container";
-      z2.className = "ub-popup-ad-container";
-      z2.innerHTML =
-          '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
-      x2 = document.querySelector("body");
-      x2.appendChild(z2);
-    }
+    // if (!(window.location.href == "https://bongdaplus.vn/")) {
+    // // if(!(bong_vietnamcatg)){
+    //   z2 = document.createElement("div");
+    //   z2.id = "ub-popup-ad-container";
+    //   z2.className = "ub-popup-ad-container";
+    //   z2.innerHTML =
+    //       '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
+    //   x2 = document.querySelector("body");
+    //   x2.appendChild(z2);
+    // }
 
     if (document.querySelector('#postContent')) {
        z3 = document.createElement("div");
@@ -421,37 +421,37 @@ function ubadScript() {
     [300, 600],
   ];
 
-  if (mobileCheck()) {
-    // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-      if (!(window.location.href == "https://bongdaplus.vn/")) {
-    // if(!(bong_vietnamcatg)){
-      adUnits1 = {
-          code: "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
-          mediaTypes: {
-              banner: {
-                  sizes: div_1_sizes,
-              },
-          },
-          bids: [
-                // { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
-              	// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910487'} },
-                // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-                // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
-                // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
-                // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-                // { bidder: 'nobid', params: { siteId: '22049997436' } },
-                // // // { bidder: 'openx', params: {unit: '545727976', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-                // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-                // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-                // // // { bidder: 'criteo', params: {networkId: '10542'} },
-                // // // { bidder: 'criteointl', params: {networkId: '10545'} },
-                // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-                // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          ],
-      };
-      adUnits_full_hb.push(adUnits1);
-    }
-  }
+  // if (mobileCheck()) {
+  //   // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
+  //     if (!(window.location.href == "https://bongdaplus.vn/")) {
+  //   // if(!(bong_vietnamcatg)){
+  //     adUnits1 = {
+  //         code: "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
+  //         mediaTypes: {
+  //             banner: {
+  //                 sizes: div_1_sizes,
+  //             },
+  //         },
+  //         bids: [
+  //               // { bidder: 'appnexus', params: { placementId: '21146574' } }, /* one placementId for all sizes  my appnexus bidder */
+  //             	// { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3910487'} },
+  //               // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+  //               // // // // { bidder: '33across', params: { siteId : 'bPSPrGBuar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+  //               // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
+  //               // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
+  //               // { bidder: 'nobid', params: { siteId: '22049997436' } },
+  //               // // // { bidder: 'openx', params: {unit: '545727976', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+  //               // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+  //               // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+  //               // // // { bidder: 'criteo', params: {networkId: '10542'} },
+  //               // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+  //               // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  //               // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+  //         ],
+  //     };
+  //     adUnits_full_hb.push(adUnits1);
+  //   }
+  // }
 
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
@@ -1420,7 +1420,7 @@ function ubadScript() {
 
   var mappings_final_refresh_list = {
       adUnitNames: [
-        "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
+        // "/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280",
         // '/21928950349,22612899972/bongdaplus.vn_PC_bottom-article_300x250_1',
         // '/21928950349,22612899972/bongdaplus.vn_PC_bottom-article_300x250_2',
         // '/21928950349,22612899972/bongdaplus.vn_in-article_468x60',
@@ -1496,14 +1496,14 @@ function ubadScript() {
   }
 
   function checkHBUnits() {
-      if (mobileCheck()) {
-      //   // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
-      //
-          if (!(window.location.href == "https://bongdaplus.vn/")) {
-        // if(!(bong_vietnamcatg)){
-          addNewsBotAd();
-        }
-      }
+      // if (mobileCheck()) {
+      // //   // if(!((window.location.href.split('https://bongdaplus.vn/ngoai-hang-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-anh/').length == 2) || (window.location.href.split('https://bongdaplus.vn/fa-cup').length == 2))){
+      // //
+      //     if (!(window.location.href == "https://bongdaplus.vn/")) {
+      //   // if(!(bong_vietnamcatg)){
+      //     addNewsBotAd();
+      //   }
+      // }
       // callMapUnits();
       // changeConfigToHB();
       setTimeout(function(){ callMapUnits(); }, 500);

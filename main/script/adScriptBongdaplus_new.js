@@ -158,6 +158,7 @@ function ubadScript() {
       // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
       // document.getElementsByTagName('head')[0].appendChild(s5);
         // if(!(bong_vietnamcatg)){
+        if(!(window.location.href.split('https://bongdaplus.vn/aff-cup/').length == 2)) {
           if (document.querySelector("main")) {
             z = document.createElement("div");
             z.id = "ub-left-ad";
@@ -187,7 +188,7 @@ function ubadScript() {
                     '<div id="div-gpt-ad-1614845141925-0">';
             }
         }
-        // }
+      }
       if (!(window.location.href == "https://bongdaplus.vn/")) {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-containerdesk";
@@ -254,14 +255,14 @@ function ubadScript() {
        for (var ub_j = 0; ub_j < x3.length; ub_j++) {
          prevparaHeight += x3[ub_j].offsetHeight;
 
-         if((prevparaHeight > 1400) && (ub_flag1 == true)){
+         if((prevparaHeight > 1500) && (ub_flag1 == true)){
            z4 = document.createElement("div");
            z4.id = "unibots2";
            z4.innerHTML = "<div id='div-gpt-ad-1637855089100-0'></div>";
 
            x3[ub_j].appendChild(z4);
            ub_flag1 = false;
-         }else if ((prevparaHeight > 2100) && (ub_flag2 == true)) {
+         }else if ((prevparaHeight > 2200) && (ub_flag2 == true)) {
            z5 = document.createElement("div");
            z5.id = "unibots3";
            z5.innerHTML = "<div id='div-gpt-ad-1637855117050-0'></div>";
@@ -269,7 +270,7 @@ function ubadScript() {
            x3[ub_j].appendChild(z5);
            ub_flag2 = false;
          }
-         else if ((prevparaHeight > 2800) && (ub_flag3 == true)) {
+         else if ((prevparaHeight > 2900) && (ub_flag3 == true)) {
            z6 = document.createElement("div");
            z6.id = "unibots4";
            z6.innerHTML = "<div id='div-gpt-ad-1637855143548-0'></div>";

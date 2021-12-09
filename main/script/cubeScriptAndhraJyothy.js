@@ -61,7 +61,7 @@ else{
   // if (window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com") {
   //    var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 0px !important;} #ifr_465589-1{bottom: 0px !important;}";
   // }else {
-     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 155px !important;} #ifr_465589-1{bottom: 120px !important;}";
+     var mybotstyleSheet ="#div-clmb-ctn-465391-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465589-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465391-1{bottom: 155px !important;} #ifr_465589-1{bottom: 120px !important;transform: scale(0.8) !important;}";
   // }
 
   var css = document.createElement("style");

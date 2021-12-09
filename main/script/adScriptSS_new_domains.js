@@ -2,24 +2,23 @@ if(typeof customConfigObjectA === 'undefined'){
 
   mybotBlockedPagesFlag = 1;
   mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
-  mybotBlockedClientName = 'ss';
+  mybotBlockedClientName = 'Ss';
 
   if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
     urlToCheck = window.location.host+window.location.pathname;
 
     var request = new XMLHttpRequest();
-    url = mybotBlockedUrl;
+    url = 'https://api.unibots.in/block?client=SS&page='+urlToCheck;
 
     request.open('GET', url, true);
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
         var data = request.responseText;
         data = JSON.parse(data);
-        data = data[mybotBlockedClientName];
+        // data = data[mybotBlockedClientName];
         if(data) {
-          data = data.urls;
-          if(data.includes(urlToCheck)){
-            // mybotdiv1 = '';
+          // data = data.urls;
+          if(data.status == true){
             return false;
           }
           else{
@@ -247,6 +246,7 @@ function ubadScript() {
             // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
             // { bidder: 'criteo', params: {networkId: '10542'} },
+            { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2250744'} },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
             // // { bidder: 'criteointl', params: {networkId: '10545'} },
             // // // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
@@ -312,6 +312,7 @@ function ubadScript() {
       'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
     };
     ubpbjs.setConfig({
+      rubicon: {singleRequest: true},
       priceGranularity: customConfigObjectA,
       userSync: {
           iframeEnabled: true,
@@ -495,6 +496,7 @@ function ubadScript() {
     // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+    { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2250744'} },
     // { bidder: 'criteo', params: {networkId: '10542'} },
     // { bidder: 'criteointl', params: {networkId: '10545'} },
   ];

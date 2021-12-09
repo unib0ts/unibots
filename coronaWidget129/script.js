@@ -16,7 +16,7 @@ function mobileCheck() {
 
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
-mybotBlockedClientName = 'filmyfocus';
+mybotBlockedClientName = 'Filmyfocus';
 
 if (window.location.hostname == "telugu.filmyfocus.com" && !(window.location.href == "https://telugu.filmyfocus.com/")) {
   var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
@@ -41,18 +41,17 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
+  url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
 
   request.open('GET', url, true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = request.responseText;
       data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
+      // data = data[mybotBlockedClientName];
       if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
+        // data = data.urls;
+        if(data.status == true){
           return false;
         }
         else{
@@ -95,26 +94,36 @@ function ubadScript() {
   }
   document.querySelector("body").appendChild(z1);
 
-  var s3 = document.createElement('script');
-     s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
-     s3.async = true;
-     s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-     document.getElementsByTagName('head')[0].appendChild(s3);
+  // var s3 = document.createElement('script');
+  //    s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+  //    s3.async = true;
+  //    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+  //    document.getElementsByTagName('head')[0].appendChild(s3);
+  //
+  //    var s0 = document.createElement('script');
+  //    s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  //    s0.type = "text/javascript";
+  //    document.getElementsByTagName('head')[0].appendChild(s0);
+  //
+  //    var s1 = document.createElement('script');
+  //    s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  //    s1.type = "text/javascript";
+  //    document.getElementsByTagName('head')[0].appendChild(s1);
+  //
+  //    var s2 = document.createElement('script');
+  //    s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
+  //    s2.type = "text/javascript";
+  //    document.getElementsByTagName('head')[0].appendChild(s2);
+  var s0 = document.createElement('script');
+	s0.async = "async";
+	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
+	s0.type = "text/javascript";
+	document.getElementsByTagName('head')[0].appendChild(s0);
 
-     var s0 = document.createElement('script');
-     s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-     s0.type = "text/javascript";
-     document.getElementsByTagName('head')[0].appendChild(s0);
-
-     var s1 = document.createElement('script');
-     s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-     s1.type = "text/javascript";
-     document.getElementsByTagName('head')[0].appendChild(s1);
-
-     var s2 = document.createElement('script');
-     s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptFilmyfocus.js";
-     s2.type = "text/javascript";
-     document.getElementsByTagName('head')[0].appendChild(s2);
+	window.unibots = window.unibots || { cmd: [] };
+	unibots.cmd.push(() => {
+	    ubHB("filmyfocus");
+	});
 
      }, 500);
 }

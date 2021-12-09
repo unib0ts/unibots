@@ -4,7 +4,7 @@ mybotDomainUrl = (window.location.host).split(".");
 mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));
 mybotBlockedClientName = mybotBlockedClientName.toString();
 
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/erelego/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
 
 var ISUBP_BLOCKED = false;
 

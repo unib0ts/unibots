@@ -65,10 +65,10 @@ const customConfigObjectA = {
     }]
 };
 
-var div_1_sizes = [320, 50];
-var adUnits = [];
+var ub_div_1_sizes = [320, 50];
+var ub_adUnits = [];
 
-  adUnits1 =
+  ub_adUnits1 =
   {
       code: '/21928950349,22624158342/sandesh.com_nb_320x50',
       mediaTypes: {
@@ -102,14 +102,14 @@ var adUnits = [];
         { bidder: 'oftmedia', params: { placementId: '20846125' } }
       ]
   };
-  adUnits.push(adUnits1);
+  ub_adUnits.push(ub_adUnits1);
 
-  adUnits1 =
+  ub_adUnits1 =
   {
       code: '/21928950349,22624158342/sandesh.com_nb_320x50',
       mediaTypes: {
           banner: {
-              sizes: div_1_sizes
+              sizes: ub_div_1_sizes
           }
       },
       bids: [
@@ -135,7 +135,7 @@ var adUnits = [];
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323848', zoneId: '1680746'} }
       ]
   };
-  adUnits.push(adUnits1);
+  ub_adUnits.push(ub_adUnits1);
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
@@ -147,7 +147,7 @@ googletag.cmd.push(function() {
 var ubpbjs = ubpbjs || {};
 ubpbjs.que = ubpbjs.que || [];
 
-var mappings = {
+var ubmappings = {
   slots: [],
   adCode: [],
   slotNumbers: [],
@@ -157,26 +157,26 @@ var mappings = {
 };
 
 // apSlotTemp = {
-//   // slotID: mappings_full_hb_config.targetUnits[index],
-//   // slotName: mappings_full_hb_config.adUnitNames[index],
-//   // sizes: mappings_full_hb_config.sizes[index]
+//   // slotID: ubmappings_full_hb_config.targetUnits[index],
+//   // slotName: ubmappings_full_hb_config.adUnitNames[index],
+//   // sizes: ubmappings_full_hb_config.sizes[index]
 //
 //   slotID: 'div-ub-1',
 //   slotName: '/21928950349,22624158342/sandesh.com_nb_320x50',
-//   sizes: mappings.sizes,
+//   sizes: ubmappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
-  if(!mappings.renderedFlag[ub_slotNum]){
+  if(!ubmappings.renderedFlag[ub_slotNum]){
     adId1 = adId;
     var nodes = document.getElementById(adId1).childNodes[0].childNodes;
     if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
       setTimeout(function() {
         refreshBid(ub_slot, adCode);
       }, REFRESH_TIMEOUT);
-      mappings.renderedFlag[ub_slotNum] = true;
+      ubmappings.renderedFlag[ub_slotNum] = true;
     }else {
       ub_psbckRandom = Math.floor(Math.random() * 2);
         eval('ub_passback'+ub_psbckRandom+'()');
@@ -232,7 +232,7 @@ function callBotman(){
 }
 
 function callAdsUB(){
-	googletag.pubads().refresh(mappings.slots);
+	googletag.pubads().refresh(ubmappings.slots);
 }
 
 function refreshBid(ub_slot, adCode) {
@@ -260,7 +260,7 @@ function initAdserver() {
   googletag.cmd.push(function () {
     ubpbjs.que.push(function () {
       ubpbjs.setTargetingForGPTAsync();
-      googletag.pubads().refresh(mappings.slots);
+      googletag.pubads().refresh(ubmappings.slots);
     });
   });
   // callAds(bids);
@@ -282,14 +282,14 @@ function callAds(bids = {}) {
     googletag.cmd.push(function () {
       ubpbjs.que.push(function () {
         ubpbjs.setTargetingForGPTAsync();
-        googletag.pubads().refresh(mappings.slots);
+        googletag.pubads().refresh(ubmappings.slots);
         console.log('HB server request');
       });
     });
   }
   else{
     googletag.cmd.push(function () {
-      googletag.pubads().refresh(mappings.slots);
+      googletag.pubads().refresh(ubmappings.slots);
       console.log('Only Google server request');
     });
   }
@@ -300,7 +300,7 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
     eval('ub_slot'+slotNumbers[i]+ '= '+'googletag.defineSlot(adCode[i], sizes[i], adId[i])');
     var a = eval('ub_slot'+slotNumbers[i]);
     a.addService(googletag.pubads());
-    mappings.slots.push(eval('ub_slot'+slotNumbers[i]));
+    ubmappings.slots.push(eval('ub_slot'+slotNumbers[i]));
   }
 }
 
@@ -360,13 +360,13 @@ function ub_passback1() {
   }
 }
 
-mappings.slotNumbers.push(1);
-mappings.adCode.push('/21928950349,22624158342/sandesh.com_nb_320x50');
-mappings.sizes.push(div_1_sizes);
-mappings.adId.push('div-ub-1');
+ubmappings.slotNumbers.push(1);
+ubmappings.adCode.push('/21928950349,22624158342/sandesh.com_nb_320x50');
+ubmappings.sizes.push(ub_div_1_sizes);
+ubmappings.adId.push('div-ub-1');
 googletag.cmd.push(function() {
   // callAPStagBids(); //Ap part
-  // callAPSAds(mappings.adCode, mappings.slots);
+  // callAPSAds(ubmappings.adCode, ubmappings.slots);
   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
     if (event.slot === ub_slot1) {
       ub_checkAdRendered('div-ub-1', ub_slot1, ['/21928950349,22624158342/sandesh.com_nb_320x50']);
@@ -375,13 +375,13 @@ googletag.cmd.push(function() {
 });
 
 if(typeof googletag.defineSlot === "function"){
-  googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+  googleDefine(ubmappings.slotNumbers, ubmappings.adCode, ubmappings.sizes, ubmappings.adId);
   googlePush();
 }
 else{
   // setTimeout(function(){
     googletag.cmd.push(function() {
-      googleDefine(mappings.slotNumbers, mappings.adCode, mappings.sizes, mappings.adId);
+      googleDefine(ubmappings.slotNumbers, ubmappings.adCode, ubmappings.sizes, ubmappings.adId);
       googlePush();
     });
   // }, 500);
@@ -408,7 +408,7 @@ function mainHbRun(){
         }
       }
       });
-      ubpbjs.addAdUnits(adUnits);
+      ubpbjs.addub_adUnits(ub_adUnits);
       ubpbjs.aliasBidder('criteo','criteointl');
       ubpbjs.bidderSettings = {
         'appnexus': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.86; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },
@@ -504,7 +504,7 @@ function mainHbRun(){
 //   ubpbjs.que.push(function(){
 //     ubpbjs.requestBids({
 //       timeout: PREBID_TIMEOUT,
-//       adUnits: adUnits,
+//       ub_adUnits: ub_adUnits,
 //       adUnitCodes: adCode,
 //       bidsBackHandler: function() {
 //         // ubpbjs.initAdserverSetHB = true;
@@ -545,6 +545,6 @@ function mainHbRun(){
 //     }
 //     requestManager.adserverRequestSent = true;
 //     googletag.cmd.push(function() {
-//         googletag.pubads().refresh(mappings.slots);
+//         googletag.pubads().refresh(ubmappings.slots);
 //     });
 // }

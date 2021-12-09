@@ -116,6 +116,7 @@ var adUnits = [
         // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'adyoulike', params: { placementId: '2c2ca1653a87dd3ebe409bd5efbd611b'} },
+        { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2250744'} },
         // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] }
       ]
     }
@@ -183,6 +184,7 @@ ubpbjs.que.push(function() {
     //       'banner': 0.01,
     //   }
     // },
+    rubicon: {singleRequest: true},
     priceGranularity: customConfigObjectA,
     userSync: {
         iframeEnabled: true,
@@ -662,6 +664,7 @@ var hb_full_common_bidders = [
   // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
   // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+  { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2250744'} },
   // // { bidder: 'criteo', params: {networkId: '10542'} },
   // // { bidder: 'criteointl', params: {networkId: '10545'} },
   // { bidder: 'adkernel', params: {zoneId: '126007', host: 'cpm.fmlabsonline.com'} },

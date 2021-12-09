@@ -24,7 +24,7 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
           return false;
         }
         else{
-          ubadScript();
+          mybotubScript();
         }
       }
     }

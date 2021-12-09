@@ -16,7 +16,7 @@ function mobileCheck() {
 
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksFilmyfocus.json';
-mybotBlockedClientName = 'filmyfocus';
+mybotBlockedClientName = 'Filmyfocus';
 
 if (window.location.hostname == "telugu.filmyfocus.com" && !(window.location.href == "https://telugu.filmyfocus.com/")) {
   var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
@@ -41,18 +41,17 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
+  url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
 
   request.open('GET', url, true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = request.responseText;
       data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
+      // data = data[mybotBlockedClientName];
       if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
+        // data = data.urls;
+        if(data.status == true){
           return false;
         }
         else{

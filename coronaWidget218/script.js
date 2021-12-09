@@ -24,7 +24,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
 
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
-mybotBlockedClientName = 'ss';
+mybotBlockedClientName = 'SS';
 
 mybotGACode = 'G-R8L5HEPRNB';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
@@ -42,18 +42,17 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
+  url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
 
   request.open('GET', url, true);
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
       var data = request.responseText;
       data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
+      // data = data[mybotBlockedClientName];
       if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
+        // data = data.urls;
+        if(data.status == true){
           return false;
         }
         else{

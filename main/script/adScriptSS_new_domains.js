@@ -2,24 +2,23 @@ if(typeof customConfigObjectA === 'undefined'){
 
   mybotBlockedPagesFlag = 1;
   mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
-  mybotBlockedClientName = 'ss';
+  mybotBlockedClientName = 'Ss';
 
   if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
     urlToCheck = window.location.host+window.location.pathname;
 
     var request = new XMLHttpRequest();
-    url = mybotBlockedUrl;
+    url = 'https://api.unibots.in/block?client=SS&page='+urlToCheck;
 
     request.open('GET', url, true);
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
         var data = request.responseText;
         data = JSON.parse(data);
-        data = data[mybotBlockedClientName];
+        // data = data[mybotBlockedClientName];
         if(data) {
-          data = data.urls;
-          if(data.includes(urlToCheck)){
-            // mybotdiv1 = '';
+          // data = data.urls;
+          if(data.status == true){
             return false;
           }
           else{

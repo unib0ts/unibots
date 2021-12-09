@@ -158,7 +158,7 @@ function ubadScript() {
       // s5.src = "https://tg1.aniview.com//api/adserver/spt?AV_TAGID=5fb77ae2fab17435261f178a&AV_PUBLISHERID=5fb75940e3a751708954df17";
       // document.getElementsByTagName('head')[0].appendChild(s5);
         // if(!(bong_vietnamcatg)){
-        if(!(window.location.href.split('https://bongdaplus.vn/aff-cup/').length == 2)) {
+        if(!((window.location.href.split('https://bongdaplus.vn/aff-cup/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-chau-a').length == 2))) {
           if (document.querySelector("main")) {
             z = document.createElement("div");
             z.id = "ub-left-ad";

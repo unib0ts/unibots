@@ -276,7 +276,7 @@
               useBidCache: true,
               enableSendAllBids: false, // Default will be `true` as of 1.0
               bidderSequence: "random", // Default is random
-              publisherDomain: "https://bongdaplus.vn/",
+              publisherDomain: "https://kynguyenso.plo.vn/",
               bidderTimeout: PREBID_TIMEOUT + 500,
               //pubcid: {expInterval: },
               //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -311,7 +311,7 @@
       // { bidder: 'criteo', params: {networkId: '10542'} },
       // { bidder: 'criteointl', params: {networkId: '10545'} },
       // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-      // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+      { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
   ];
 
   var mappings_full_hb_config_desktop = {

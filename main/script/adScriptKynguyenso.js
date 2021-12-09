@@ -109,10 +109,16 @@
           z3 = document.createElement("div");
           z3.id = "div-gpt-ad-1637224154071-0";
           z3.style = "min-width: 300px; min-height: 600px";
-          if (document.querySelector('.article-content')) {
-            x1 = document.querySelector('.article-content');
-            x1.appendChild(z3);
+          if (document.querySelector('article')) {
+            x1 = document.querySelectorAll('article');
+            if (x1[2]) {
+              x1[2].appendChild(z3);
+            }
           }
+          // if (document.querySelector('.article-content')) {
+          //   x1 = document.querySelector('.article-content');
+          //   x1.appendChild(z3);
+          // }
   }
 
   // function mybotubPopadcls() {

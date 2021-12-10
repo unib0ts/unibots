@@ -160,6 +160,8 @@ var ub_adUnits = [];
   };
   ub_adUnits.push(ub_adUnits1);
 
+  console.log(GEO_CODE);
+
   if (mobileCheck() && GEO_CODE =="US") {
       ub_adUnits1 = {
           code: "/21928950349,22624158342/sandesh_interstitial",

@@ -35,20 +35,6 @@ function mobileCheck() {
     return check;
 }
 
-if (mobileCheck() && GEO_CODE =="US") {
-  z2 = document.createElement("div");
-  z2.id = "ub-popup-ad-container";
-  z2.className = "ub-popup-ad-container";
-  z2.innerHTML =
-      '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
-  x2 = document.querySelector("body");
-  x2.appendChild(z2);
-}
-
-function mybotubPopadcls() {
-    document.getElementById("ub-popup-ad-container").style.display = "none";
-}
-
 var GEO_CODE = '';
 function ub_geocode(){
   var request = new XMLHttpRequest();
@@ -90,6 +76,21 @@ const customConfigObjectA = {
 var ub_div_1_sizes = [320, 50];
 var ub_div_2_sizes = [[320, 480], [480, 320]];
 var ub_adUnits = [];
+
+if (mobileCheck() && GEO_CODE =="US") {
+  z2 = document.createElement("div");
+  z2.id = "ub-popup-ad-container";
+  z2.className = "ub-popup-ad-container";
+  z2.innerHTML =
+      '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1629457284866-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1629457284866-0);});</script></div>';
+  x2 = document.querySelector("body");
+  x2.appendChild(z2);
+}
+
+function mybotubPopadcls() {
+    document.getElementById("ub-popup-ad-container").style.display = "none";
+}
+
 
   ub_adUnits1 =
   {

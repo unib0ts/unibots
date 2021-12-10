@@ -825,6 +825,12 @@
           "seller_id": "138",
           "name": "sumantv",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.manatelangana.news/",
+          "seller_id": "139",
+          "name": "manatelangana",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

@@ -35,6 +35,15 @@ function mobileCheck() {
     return check;
 }
 
+var mybotstyleSheet =
+    ".ub-popup-ad{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%);z-index:2147483646}.mybotpopupCloseButton{background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:25px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647;text-align:center} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;";
+
+var css = document.createElement("style");
+css.type = "text/css";
+css.appendChild(document.createTextNode(mybotstyleSheet));
+document.getElementsByTagName("head")[0].appendChild(css);
+
+
 var GEO_CODE = '';
 (function(){
   var request = new XMLHttpRequest();
@@ -170,7 +179,7 @@ var ubmappings = {
   slotNumbers: [],
   sizes: [],
   adId: [],
-  renderedFlag: [false, false]
+  renderedFlag: [false]
 };
 
 // apSlotTemp = {
@@ -201,56 +210,56 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
   }
 }
 
-var botmanCalled = false;
-var userStatusBM = '';
-function callBotman(){
-  if(userStatusBM == ''){
-    var request = new XMLHttpRequest();
-    var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=sandesh';
-    request.open('GET', url, true);
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        var data = request.responseText;
-        if(data != ""){
-          data = JSON.parse(data);
-          userStatusBM = data;
-          if(userStatusBM == "0" || userStatusBM == "3"){
-            callAdsUB();
-          }
-          else{
-            console.log('Not Valid Traffic for openx');
-          }
-        }
-        else{
-          console.error('Data not returned from server');
-          callAdsUB();
-        }
-      }
-      else {
-        console.error('Request failed from server');
-        callAdsUB();
-      }
-    };
-    request.onerror = function() {
-      console.error('Request failed to Reach Server');
-      callAdsUB();
-    };
-    request.send();
-  }
-  else{
-    if(userStatusBM == "0" || userStatusBM == "3"){
-      callAdsUB();
-    }
-    else{
-      console.log('Not Valid Traffic for openx');
-    }
-  }
-
-}
-
-function callAdsUB(){
-	googletag.pubads().refresh(ubmappings.slots);
-}
+// var botmanCalled = false;
+// var userStatusBM = '';
+// function callBotman(){
+//   if(userStatusBM == ''){
+//     var request = new XMLHttpRequest();
+//     var url = 'https://ep7.10777.api.botman.ninja/ic2.php?m=AF&t=prebid&s=10777&b=10777&s15=sandesh';
+//     request.open('GET', url, true);
+//     request.onload = function() {
+//       if (request.status >= 200 && request.status < 400) {
+//         var data = request.responseText;
+//         if(data != ""){
+//           data = JSON.parse(data);
+//           userStatusBM = data;
+//           if(userStatusBM == "0" || userStatusBM == "3"){
+//             callAdsUB();
+//           }
+//           else{
+//             console.log('Not Valid Traffic for openx');
+//           }
+//         }
+//         else{
+//           console.error('Data not returned from server');
+//           callAdsUB();
+//         }
+//       }
+//       else {
+//         console.error('Request failed from server');
+//         callAdsUB();
+//       }
+//     };
+//     request.onerror = function() {
+//       console.error('Request failed to Reach Server');
+//       callAdsUB();
+//     };
+//     request.send();
+//   }
+//   else{
+//     if(userStatusBM == "0" || userStatusBM == "3"){
+//       callAdsUB();
+//     }
+//     else{
+//       console.log('Not Valid Traffic for openx');
+//     }
+//   }
+//
+// }
+//
+// function callAdsUB(){
+// 	googletag.pubads().refresh(ubmappings.slots);
+// }
 
 function refreshBid(ub_slot, adCode) {
   ubpbjs.que.push(function () {
@@ -281,35 +290,6 @@ function initAdserver() {
     });
   });
   // callAds(bids);
-}
-
-
-function callAds(bids = {}) {
-  let ubBidscheckFlag = false;
-  if (Object.keys(bids).length === 0 && bids.constructor === Object){}
-  else {
-    bids[Object.keys(bids)].bids.forEach((bid) => {
-      if (bid.cpm > 0.01) {
-        ubBidscheckFlag = true;
-      }
-    })
-  }
-
-  if (ubBidscheckFlag) {
-    googletag.cmd.push(function () {
-      ubpbjs.que.push(function () {
-        ubpbjs.setTargetingForGPTAsync();
-        googletag.pubads().refresh(ubmappings.slots);
-        console.log('HB server request');
-      });
-    });
-  }
-  else{
-    googletag.cmd.push(function () {
-      googletag.pubads().refresh(ubmappings.slots);
-      console.log('Only Google server request');
-    });
-  }
 }
 
 function googleDefine(slotNumbers, adCode, sizes, adId){
@@ -432,42 +412,93 @@ function ubpopup() {
         ],
     };
     ub_adUnits.push(ub_adUnits1);
+
+    googletag.cmd.push(function () {
+        ub_slotp = googletag
+            .defineSlot(
+                "/21928950349,22624158342/sandesh_interstitial",
+                ub_div_2_sizes,
+                "div-gpt-ad-1639132029151-0"
+            )
+            .addService(googletag.pubads());
+        googletag.pubads().collapseEmptyDivs(true);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag
+            .pubads()
+            .addEventListener("slotRenderEnded", function (event) {
+                if (
+                    event.slot.getAdUnitPath() ===
+                    "/21928950349,22624158342/sandesh_interstitial"
+                ) {
+                    ub_checkAd1Rendered();
+                }
+            });
+    });
+
+    ubpbjs.que.push(function () {
+        ubpbjs.requestBids({
+            bidsBackHandler: initAdserver1,
+            timeout: PREBID_TIMEOUT,
+        });
+    });
+
+    // in case ubpbjs doesn't load
+    setTimeout(function () {
+        initAdserver1();
+    }, FAILSAFE_TIMEOUT);
   }
 
-  ubmappings.slotNumbers.push(2);
-  ubmappings.adCode.push('/21928950349,22624158342/sandesh_interstitial');
-  ubmappings.sizes.push(ub_div_2_sizes);
-  ubmappings.adId.push('div-gpt-ad-1639132029151-0');
-  googletag.cmd.push(function() {
-    // callAPStagBids(); //Ap part
-    // callAPSAds(ubmappings.adCode, ubmappings.slots);
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-      if (event.slot === ub_slot2) {
-        ub_checkAd1Rendered('div-gpt-ad-1639132029151-0', ub_slot2, ['/21928950349,22624158342/sandesh_interstitial']);
-      }
+  function initAdserver1() {
+    if (ubpbjs.initAdserverSet) return;
+    ubpbjs.initAdserverSet = true;
+    googletag.cmd.push(function () {
+        ubpbjs.que.push(function () {
+            ubpbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh([ub_slotp]);
+        });
     });
-  });
+  }
+
+  function ub_checkAd1Rendered() {
+      adId1 = "div-gpt-ad-1639132029151-0";
+      var nodes = document.getElementById(adId1).childNodes[0].childNodes;
+      if (
+          !(nodes.length && nodes[0].nodeName.toLowerCase() == "iframe") ||
+          document.getElementById(adId1).style.display == "none"
+      ) {
+          document.querySelector("#ub-popup-ad-container").style.display = "none";
+      } else if (nodes.length && nodes[0].nodeName.toLowerCase() == "iframe") {
+          document.getElementById("mybotpopupCloseButton").style.display =
+              "block";
+          document.querySelector("#ub-popup-ad-container").style.display =
+              "block";
+          mybotpopupad = document.querySelector("#ub-popup-ad-container");
+          mybotpopupad.style.height = "100%";
+          mybotpopupad.style.backgroundColor = "rgb(0, 0, 0)";
+          mybotpopupad.style.zIndex = "2147483647";
+      }
+  }
 }
 
-function ub_checkAd1Rendered() {
-    adId1 = "div-gpt-ad-1639132029151-0";
-    var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-    if (
-        !(nodes.length && nodes[0].nodeName.toLowerCase() == "iframe") ||
-        document.getElementById(adId1).style.display == "none"
-    ) {
-        document.querySelector("#ub-popup-ad-container").style.display = "none";
-    } else if (nodes.length && nodes[0].nodeName.toLowerCase() == "iframe") {
-        document.getElementById("mybotpopupCloseButton").style.display =
-            "block";
-        document.querySelector("#ub-popup-ad-container").style.display =
-            "block";
-        mybotpopupad = document.querySelector("#ub-popup-ad-container");
-        mybotpopupad.style.height = "100%";
-        mybotpopupad.style.backgroundColor = "rgb(0, 0, 0)";
-        mybotpopupad.style.zIndex = "2147483647";
-    }
-}
+  // ubmappings.slotNumbers.push(2);
+  // ubmappings.adCode.push('/21928950349,22624158342/sandesh_interstitial');
+  // ubmappings.sizes.push(ub_div_2_sizes);
+  // ubmappings.adId.push('div-gpt-ad-1639132029151-0');
+  // googletag.cmd.push(function() {
+  //   // callAPStagBids(); //Ap part
+  //   // callAPSAds(ubmappings.adCode, ubmappings.slots);
+  //   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+  //     if (event.slot === ub_slot2) {
+  //       ub_checkAd1Rendered('div-gpt-ad-1639132029151-0', ub_slot2, ['/21928950349,22624158342/sandesh_interstitial']);
+  //     }
+  //   });
+  // });
+
+
+// }
 
 if(typeof googletag.defineSlot === "function"){
   googleDefine(ubmappings.slotNumbers, ubmappings.adCode, ubmappings.sizes, ubmappings.adId);

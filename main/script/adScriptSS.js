@@ -228,6 +228,21 @@ ubpbjs.que.push(function() {
   // }, FAILSAFE_TIMEOUT);
 }
 
+var s0 = document.createElement('script');
+s0.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+s0.async = "async";
+document.getElementsByTagName('head')[0].appendChild(s0);
+
+googletag.cmd.push(function() {
+  googletag.defineSlot('/1062118/Unibot_Count_Pixel', [1, 1], 'div-gpt-ad-1638776087773-0').addService(googletag.pubads());
+  googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+});
+
+var ub_div1 = document.createElement('div');
+ub_div1.id = "div-gpt-ad-1638776087773-0";
+ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1638776087773-0'); });</script>";
+document.getElementsByTagName('body')[0].appendChild(ub_div1);
 
 // var ubsmall_slot1;
 // function addNewBotAdMobile(){
@@ -1231,7 +1246,8 @@ var mappings_extra_units_config ={
     '/1062118/sakshi_new_728x90_home_mid',
     '/1062118/desktop_endofarticle_300x250',
     '/1062118/desktop_468x60_home',
-    '/1062118/desktop_468x60_home_2'
+    '/1062118/desktop_468x60_home_2',
+    '/1062118/Unibot_Count_Pixel'
   ]
 }
 var mappings_extra_units = {

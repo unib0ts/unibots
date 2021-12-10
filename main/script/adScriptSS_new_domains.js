@@ -67,10 +67,6 @@ function ubadScript() {
   // if (botsiteUrl=="english.sakshi.com" || botsiteUrl=="menglish.sakshi.com") {
 
   // }
-  // var s0 = document.createElement('script');
-  // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-  // s0.type = "text/javascript";
-  // document.getElementsByTagName('head')[0].appendChild(s0);
 
   var s1 = document.createElement('script');
   s1.async = "async";
@@ -269,6 +265,22 @@ function ubadScript() {
 
   var ubpbjs = ubpbjs || {};
   ubpbjs.que = ubpbjs.que || [];
+
+  var s0 = document.createElement('script');
+  s0.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+  s0.async = "async";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1062118/Unibot_Count_Pixel', [1, 1], 'div-gpt-ad-1638776087773-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+
+  var ub_div1 = document.createElement('div');
+  ub_div1.id = "div-gpt-ad-1638776087773-0";
+  ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1638776087773-0'); });</script>";
+  document.getElementsByTagName('body')[0].appendChild(ub_div1);
 
   function mainHbRun(){
   ubpbjs.que.push(function() {
@@ -564,6 +576,7 @@ function ubadScript() {
       'div-gpt-ad-1577967696397-0',
       'div-gpt-ad-1602675466139-0', ///21959913182/sakshisamachar_nb_320x50
       'div-gpt-ad-1602675444550-0', //'/21959913182/sakshipost_nb_320x50',
+      'div-gpt-ad-1638776087773-0',
     ],
     adUnitNames: [
       '/1062118/Epaper_RW_Box1_HP',
@@ -628,6 +641,7 @@ function ubadScript() {
       '/1062118/hindi_mob_hp_300x250_3',
       '/21959913182/sakshisamachar_nb_320x50',
       '/21959913182/sakshipost_nb_320x50',
+      '/1062118/Unibot_Count_Pixel',
     ],
 
     sizes: [
@@ -693,6 +707,7 @@ function ubadScript() {
        [300, 250],
        [320, 50], ///21959913182/sakshisamachar_nb_320x50
        [320, 50],  ///21959913182/sakshipost_nb_320x50
+       [1, 1]
     ],
     bids: [
       hb_full_common_bidders.concat([
@@ -1045,6 +1060,13 @@ function ubadScript() {
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
         ]),  //'/21959913182/sakshisamachar_nb_320x50',
+        hb_full_common_bidders.concat([
+         	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
+           // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
+          // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
+      //   { bidder: 'sovrn', params: {tagid: '744083'} },
+      //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
+        ]),  //'/21959913182/sakshipost_nb_320x50'
         hb_full_common_bidders.concat([
          	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },

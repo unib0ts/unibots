@@ -109,10 +109,16 @@
           z3 = document.createElement("div");
           z3.id = "div-gpt-ad-1637224154071-0";
           z3.style = "min-width: 300px; min-height: 600px";
-          if (document.querySelector('.article-content')) {
-            x1 = document.querySelector('.article-content');
-            x1.appendChild(z3);
+          if (document.querySelector('article')) {
+            x1 = document.querySelectorAll('article');
+            if (x1[2]) {
+              x1[2].appendChild(z3);
+            }
           }
+          // if (document.querySelector('.article-content')) {
+          //   x1 = document.querySelector('.article-content');
+          //   x1.appendChild(z3);
+          // }
   }
 
   // function mybotubPopadcls() {
@@ -276,7 +282,7 @@
               useBidCache: true,
               enableSendAllBids: false, // Default will be `true` as of 1.0
               bidderSequence: "random", // Default is random
-              publisherDomain: "https://bongdaplus.vn/",
+              publisherDomain: "https://kynguyenso.plo.vn/",
               bidderTimeout: PREBID_TIMEOUT + 500,
               //pubcid: {expInterval: },
               //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
@@ -311,7 +317,7 @@
       // { bidder: 'criteo', params: {networkId: '10542'} },
       // { bidder: 'criteointl', params: {networkId: '10545'} },
       // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-      // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+      { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
   ];
 
   var mappings_full_hb_config_desktop = {

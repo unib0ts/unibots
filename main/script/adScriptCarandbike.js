@@ -98,7 +98,7 @@ else{
 				// { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
 				// { bidder: 'criteo', params: {networkId: '10542'} },
 				// { bidder: 'criteointl', params: {networkId: '10545'} },
-				// 	{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+				// 	{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}},
 				// 	{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
 				// 	{ bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
 				]

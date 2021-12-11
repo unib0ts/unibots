@@ -105,10 +105,10 @@ var adUnits = [
           { bidder: 'sovrn', params: {tagid: '703444'} },
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'openx', params: {unit: '543530181', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '543530181', delDomain: 'unibots-d.openx.net'}},
           { bidder: 'nobid', params: { siteId : '22049999737'} },
         	{ bidder: 'rhythmone', params: { placementId: '205475' } }, /* one placementId for all sizes */
-          { bidder: 'smartadserver', params: { siteId: '362147', pageId: '1289648', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362147', pageId: '1289648', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           { bidder: 'sonobi', params: { placement_id: '9556f14f37ff1c8b8ccd', ad_unit: 'scoopwhoop.com_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           // { bidder: 'adkernel', params: {zoneId: '126372', host: 'cpm.fmlabsonline.com'} },

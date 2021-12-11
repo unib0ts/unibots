@@ -88,7 +88,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'bv1fmaWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	//{ bidder: 'emx_digital', params: { tagid: '97450' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '716636'} },
-          { bidder: 'openx', params: {unit: '543851454', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '543851454', delDomain: 'unibots-d.openx.net'}},
         	{ bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'nobid', params: { siteId : '22049999743'} },
@@ -96,7 +96,7 @@ var adUnits = [
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA3963E7BABEC68E6429B4BAE26'} },
-          { bidder: 'smartadserver', params: { siteId: '362150', pageId: '1289651', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362150', pageId: '1289651', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           { bidder: 'sonobi', params: { placement_id: 'bb129020728451ecbd91', ad_unit: 'studyguideindia_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996048'} },

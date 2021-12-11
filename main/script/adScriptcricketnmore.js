@@ -87,7 +87,7 @@ var adUnits = [
     { bidder: 'appnexus', params: { placementId: '19057834' } }, /* one placementId for all sizes  my appnexus bidder */
     { bidder: 'sovrn', params: {tagid: '708874'} },
     { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-    { bidder: 'openx', params: {unit: '542291764', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+    { bidder: 'openx', params: {unit: '542291764', delDomain: 'unibots-d.openx.net'}},
     { bidder: 'nobid', params: { siteId : '22049999653'} },
   	{ bidder: '33across', params: { siteId : 'aWVS38WuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -97,7 +97,7 @@ var adUnits = [
     { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
     { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA7E46A3434DF4EAEB3787D27B3E'} },
-    { bidder: 'smartadserver', params: { siteId: '370920', pageId: '1306099', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    { bidder: 'smartadserver', params: { siteId: '370920', pageId: '1306099', formatId: '93231', domain: 'https://prg8.smartadserver.com' } },
   ]
 }];
 

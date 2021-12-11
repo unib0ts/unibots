@@ -325,7 +325,7 @@ var mappings_full_hb_config_desktop = {
     bids: [
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4165142" } },
-            { bidder: 'openx', params: {unit: '556397146', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556397146', delDomain: 'unibots-d.openx.net'}},
                 { bidder: 'ucfunnel', params: { adid : 'ad-7728E287494963680B9B8AD844DAB639'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -334,7 +334,7 @@ var mappings_full_hb_config_desktop = {
         ]),
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4165143" } },
-            { bidder: 'openx', params: {unit: '556397147', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556397147', delDomain: 'unibots-d.openx.net'}},
                 { bidder: 'ucfunnel', params: { adid : 'ad-627DA7D29883B7EDF699A22E3DB2D36'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -343,7 +343,7 @@ var mappings_full_hb_config_desktop = {
         ]),
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4165144" } },
-            { bidder: 'openx', params: {unit: '556397148', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556397148', delDomain: 'unibots-d.openx.net'} },
                 { bidder: 'ucfunnel', params: { adid : 'ad-9A29829A34ADADD7F494DBB79AA69442'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -352,7 +352,7 @@ var mappings_full_hb_config_desktop = {
         ]),
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4165145" } },
-            { bidder: 'openx', params: {unit: '556397149', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556397149', delDomain: 'unibots-d.openx.net'}},
                 { bidder: 'ucfunnel', params: { adid : 'ad-47B48B47A2EE329E0EE3ADB43A3BE378'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -361,7 +361,7 @@ var mappings_full_hb_config_desktop = {
         ]),
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4165146" } },
-            { bidder: 'openx', params: {unit: '556397150', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556397150', delDomain: 'unibots-d.openx.net'} },
                 { bidder: 'ucfunnel', params: { adid : 'ad-7728E28743E766D7C87BE3842BA39D9'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },

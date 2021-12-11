@@ -141,7 +141,7 @@ function mybotubPopadcls() {
       	{ bidder: 'appnexus', params: { placementId: '19056689' } }, /* one placementId for all sizes  my appnexus bidder */
         { bidder: 'oftmedia', params: { placementId: '20846125' } },
         { bidder: 'sovrn', params: {tagid: '711904'} },
-        { bidder: 'openx', params: {unit: '543530444', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        { bidder: 'openx', params: {unit: '543530444', delDomain: 'unibots-d.openx.net'}},
       	{ bidder: 'rhythmone', params: { placementId: '205382' } }, /* one placementId for all sizes */
       	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
       	{ bidder: '33across', params: { siteId : 'bNlDBeiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
@@ -151,7 +151,7 @@ function mybotubPopadcls() {
         // { bidder: 'criteointl', params: {networkId: '10545'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-34B8449476B466781324998DEAD39BBA'} },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2953660'} },
-        { bidder: 'smartadserver', params: { siteId: '362145', pageId: '1289646', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        { bidder: 'smartadserver', params: { siteId: '362145', pageId: '1289646', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
         //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         // { bidder: 'adkernel', params: {zoneId: '126020', host: 'cpm.fmlabsonline.com'} },
@@ -392,7 +392,7 @@ function ubpopup() {
           { bidder: 'appnexus', params: { placementId: '23739103' } }, /* one placementId for all sizes  my appnexus bidder */
           // { bidder: 'oftmedia', params: { placementId: '20846125' } },
           { bidder: 'sovrn', params: {tagid: '987230'} },
-          { bidder: 'openx', params: {unit: '556400682', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '556400682', delDomain: 'unibots-d.openx.net'}},
           { bidder: 'rhythmone', params: { placementId: '205382' } }, /* one placementId for all sizes */
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // { bidder: '33across', params: { siteId : 'bNlDBeiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/

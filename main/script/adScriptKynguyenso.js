@@ -304,7 +304,7 @@
 
   var hb_full_common_bidders = [
       { bidder: "appnexus", params: { placementId: "23545198" } }, /* one placementId for all sizes  my appnexus bidder */,
-      // { bidder: 'oftmedia', params: { placementId: '22762548' } },
+      { bidder: 'oftmedia', params: { placementId: '23740962' } },
       { bidder: '33across', params: { siteId : 'cI4Kuiu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
       // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
       // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */

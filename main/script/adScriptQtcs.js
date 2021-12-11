@@ -137,7 +137,7 @@ if (mobileCheck()) {
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4167181'} },
         { bidder: 'sovrn', params: {tagid: '987193'} },
          { bidder: 'ucfunnel', params: { adid : 'ad-2736E343E3EEAE89C8869EEB6DEEB28B'} },
-        // { bidder: '33across', params: { siteId : 'cp9LcgiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        { bidder: '33across', params: { siteId : 'cB21fuwCmr7kzhaKj0P0Le', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
         // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
         { bidder: 'nobid', params: { siteId: '22659426796' } },

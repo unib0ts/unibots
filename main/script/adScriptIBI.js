@@ -92,7 +92,7 @@ var adUnits = [
     { bidder: 'oftmedia', params: { placementId: '20846125' } },
     // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     { bidder: 'nobid', params: { siteId : '22049999689'} },
-    { bidder: 'smartadserver', params: { siteId: '372444', pageId: '1309515', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+    { bidder: 'smartadserver', params: { siteId: '372444', pageId: '1309515', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
     // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
     { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028668'} },
     //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

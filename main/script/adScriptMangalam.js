@@ -120,7 +120,7 @@ var adUnits = [
         	{ bidder: 'emx_digital', params: { tagid: '97492' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '718927'} },
           { bidder: 'nobid', params: { siteId : '22045890860'} },
-          { bidder: 'openx', params: {unit: '543530446', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '543530446', delDomain: 'unibots-d.openx.net'}},
         	{ bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           // { bidder: 'openx', params: {unit: '541046186', delDomain: 'yieldbird-d.openx.net'} },
@@ -128,7 +128,7 @@ var adUnits = [
           // { bidder: 'criteointl', params: {networkId: '10545'} },
           // { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2963245'} },
-          { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
@@ -157,8 +157,8 @@ if(document.getElementById('unibot1')){
         { bidder: 'nobid', params: { siteId: '22045890860' } },
         { bidder: 'sovrn', params: {tagid: '867134'} },
         { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE8742646D8B17DE77BE46BE299B'} },
-        { bidder: 'openx', params: {unit: '543530091', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        { bidder: 'openx', params: {unit: '543530091', delDomain: 'unibots-d.openx.net'}},
+        { bidder: 'smartadserver', params: { siteId: '362130', pageId: '1289631', formatId: '93232', domain: 'https://prg8.smartadserver.com' }},
         // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3182871'} },
         // { bidder: 'adkernel', params: {zoneId: '133841', host: 'cpm.fmlabsonline.com'} },

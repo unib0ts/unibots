@@ -54,6 +54,30 @@ function mobileCheck() {
    x1.appendChild(z1);
  }
 
+ if (document.querySelector('#UB_300x250_3')) {
+   z1 = document.createElement("div");
+   z1.id = "div-gpt-ad-1639217851476-0";
+   z1.style = "min-width: 300px; min-height: 250px; padding: 20px 0px;";
+   x1 = document.querySelector('#UB_300x250_3');
+   x1.appendChild(z1);
+ }
+
+ if (document.querySelector('#UB_300x250_4')) {
+   z1 = document.createElement("div");
+   z1.id = "div-gpt-ad-1639217872841-0";
+   z1.style = "min-width: 300px; min-height: 250px; padding: 20px 0px;";
+   x1 = document.querySelector('#UB_300x250_4');
+   x1.appendChild(z1);
+ }
+
+ if (document.querySelector('#UB_300x250_5')) {
+   z1 = document.createElement("div");
+   z1.id = "div-gpt-ad-1639217891687-0";
+   z1.style = "min-width: 300px; min-height: 250px; padding: 20px 0px;";
+   x1 = document.querySelector('#UB_300x250_5');
+   x1.appendChild(z1);
+ }
+
 
 
 var s0 = document.createElement("script");
@@ -228,7 +252,7 @@ var mapping_full_hb = {
 var hb_full_common_bidders = [
     { bidder: "appnexus", params: { placementId: "23724164" } }, /* one placementId for all sizes  my appnexus bidder */,
     // { bidder: 'oftmedia', params: { placementId: '20846125' } },
-    // { bidder: '33across', params: { siteId : 'cI4Kuiu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+    { bidder: '33across', params: { siteId : 'cydkqqwCmr7kzhaKj0P0Le', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
     // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
     // { bidder: 'nobid', params: { siteId: '22656256385' } },
@@ -247,19 +271,28 @@ var mappings_full_hb_config_desktop = {
     adUnitNames: [
         "/21957769615/gogoanime.wiki_300x250_1",
         "/21957769615/gogoanime.wiki_300x250_2",
+        "/21957769615/gogoanime.wiki_300x250_3",
+        "/21957769615/gogoanime.wiki_300x250_4",
+        "/21957769615/gogoanime.wiki_300x250_5",
     ],
     adId: [
           "div-gpt-ad-1639047062932-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
           "div-gpt-ad-1639047091702-0", //'/22140546871/bongdaplus.vn_in-article_336x280',
+          "div-gpt-ad-1639217851476-0",
+          "div-gpt-ad-1639217872841-0",
+          "div-gpt-ad-1639217891687-0",
     ],
     sizes: [
+        [300, 250],
+        [300, 250],
+        [300, 250],
         [300, 250],
         [300, 250],
     ],
     bids: [
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167178" } },
-            { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}},
             { bidder: 'ucfunnel', params: { adid : 'ad-AA7BE79329EB49E7F238BA286D7789E'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
@@ -268,56 +301,47 @@ var mappings_full_hb_config_desktop = {
         ]),
         hb_full_common_bidders.concat([
             { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
-            { bidder: 'openx', params: {unit: '556400374', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'openx', params: {unit: '556400374', delDomain: 'unibots-d.openx.net'}},
             { bidder: 'ucfunnel', params: { adid : 'ad-627DA73EB86782ED0E9E3724B263B47E'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
                 { bidder: 'sovrn', params: {tagid: '987192'} },
             // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         ]),
+        hb_full_common_bidders.concat([
+            // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167178" } },
+            // { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'ucfunnel', params: { adid : 'ad-9A2982B468E2D3D604BEA63BD83A2629'} },
+            // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+            // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+                { bidder: 'sovrn', params: {tagid: '987338'} },
+            // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        ]),
+        hb_full_common_bidders.concat([
+            // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
+            // { bidder: 'openx', params: {unit: '556400374', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'ucfunnel', params: { adid : ' ad-2736E3D2B7D676B70D9842DE38B274A'} },
+            // // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+            // // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+                { bidder: 'sovrn', params: {tagid: '987339'} },
+            // // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        ]),hb_full_common_bidders.concat([
+            // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167178" } },
+            // { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            { bidder: 'ucfunnel', params: { adid : 'ad-7728E2639889A782CB664972B38BA8B6'} },
+            // // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
+            // // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
+                { bidder: 'sovrn', params: {tagid: '987340'} },
+            // // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        ]),
     ],
     isAP: [
         false,
         false,
+        false,
+        false,
+        false
     ],
-};
-var mappings_full_hb_config_mobile = {
-  adUnitNames: [
-      "/21957769615/gogoanime.wiki_300x250_1",
-      "/21957769615/gogoanime.wiki_300x250_2",
-  ],
-  adId: [
-        "div-gpt-ad-1639047062932-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
-        "div-gpt-ad-1639047091702-0", //'/22140546871/bongdaplus.vn_in-article_336x280',
-  ],
-  sizes: [
-      [300, 250],
-      [300, 250],
-  ],
-  bids: [
-    hb_full_common_bidders.concat([
-        { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
-        // // { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        //     { bidder: 'ucfunnel', params: { adid : 'ad-34B872DEB9762BEDC3B84ABDB68BAB8E'} },
-        // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
-        // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-        //     // { bidder: 'sovrn', params: {tagid: '982601'} },
-        // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-    ]),
-    hb_full_common_bidders.concat([
-        { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
-        // // { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        //     { bidder: 'ucfunnel', params: { adid : 'ad-9A29B4D72D63E4A3C79DEB3833BD23A'} },
-        // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
-        // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-        //     // { bidder: 'sovrn', params: {tagid: '982606'} },
-        // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-    ]),
-  ],
-  isAP: [
-      false,
-      false,
-  ],
 };
 var mappings_full_hb_config_both = {
     adUnitNames: [],
@@ -383,29 +407,13 @@ function mobileCheckAdScript() {
     return check;
 }
 
-if (!mobileCheckAdScript()) {
+
     mappings_full_hb_config.adUnitNames = mappings_full_hb_config_desktop.adUnitNames.concat(mappings_full_hb_config_both.adUnitNames);
     mappings_full_hb_config.bids = mappings_full_hb_config_desktop.bids.concat(mappings_full_hb_config_both.bids);
     mappings_full_hb_config.isAP = mappings_full_hb_config_desktop.isAP.concat(mappings_full_hb_config_both.isAP);
     mappings_full_hb_config.adId = mappings_full_hb_config_desktop.adId;
     mappings_full_hb_config.sizes = mappings_full_hb_config_desktop.sizes;
     // mappings_extra_units_config.adUnitNames = mappings_extra_units_config_desktop.adUnitNames.concat(mappings_extra_units_config_both.adUnitNames);
-} else {
-    mappings_full_hb_config.adUnitNames = mappings_full_hb_config_mobile.adUnitNames.concat(
-            mappings_full_hb_config_both.adUnitNames
-        );
-    mappings_full_hb_config.bids = mappings_full_hb_config_mobile.bids.concat(
-        mappings_full_hb_config_both.bids
-    );
-    mappings_full_hb_config.isAP = mappings_full_hb_config_mobile.isAP.concat(
-        mappings_full_hb_config_both.isAP
-    );
-    mappings_full_hb_config.adId = mappings_full_hb_config_mobile.adId;
-    mappings_full_hb_config.sizes = mappings_full_hb_config_mobile.sizes;
-    // mappings_extra_units_config.adUnitNames = mappings_extra_units_config_mobile.adUnitNames.concat(
-    //         mappings_extra_units_config_both.adUnitNames
-    //     );
-}
 
 // function checkHBUnits() {
     // if (mobileCheck()) {

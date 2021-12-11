@@ -125,7 +125,7 @@ const customConfigObjectA = {
         { bidder: '33across', params: { siteId : 'aTA8RoWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         { bidder: 'emx_digital', params: { tagid: '107914' } }, /* sizeless */
         { bidder: 'sovrn', params: {tagid: '725477'} },
-        { bidder: 'openx', params: {unit: '543530423', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        { bidder: 'openx', params: {unit: '543530423', delDomain: 'unibots-d.openx.net'}},
         { bidder: 'rhythmone', params: { placementId: '205945'}}, /* one placementId for all sizes */
         // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
         { bidder: 'nobid', params: { siteId : '22104180282'} },
@@ -135,7 +135,7 @@ const customConfigObjectA = {
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996052'} },
         { bidder: 'ucfunnel', params: { adid : 'pub-273677D363B69D730DA7DA22DD72D64'} },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-        { bidder: 'smartadserver', params: { siteId: '371050', pageId: '1306274', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        { bidder: 'smartadserver', params: { siteId: '371050', pageId: '1306274', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
       ]

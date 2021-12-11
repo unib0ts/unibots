@@ -57,7 +57,7 @@ if(document.getElementById('unibotsfooterWrap')){
       bids: [
        { bidder: 'appnexus', params: { placementId: '20215295' } }, /* one placementId for all sizes  my appnexus bidder */
        { bidder: 'sovrn', params: {tagid: '774106'} },
-       { bidder: 'smartadserver', params: { siteId: '371044', pageId: '1306268', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+       { bidder: 'smartadserver', params: { siteId: '371044', pageId: '1306268', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
        // // //{ bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
        // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3206179'} },

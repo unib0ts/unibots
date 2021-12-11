@@ -96,7 +96,7 @@ var adUnits = [
           { bidder: 'nobid', params: { siteId : '22316040529'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-9A297864462A682EC4DE788886D732D2'} },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028663'} },
-          { bidder: 'smartadserver', params: { siteId: '399736', pageId: '1361918', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '399736', pageId: '1361918', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
           // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }

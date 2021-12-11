@@ -55,7 +55,7 @@ var GEO_CODE = '';
 				data = JSON.parse(data);
 				if(data.status == "success") {
            GEO_CODE = data.countryCode;
-           if (GEO_CODE=="US") {
+           if (GEO_CODE =="US" || GEO_CODE =="CA") {
               ubpopup();
            }
 				}
@@ -534,7 +534,7 @@ function mainHbRun(){
         }
       }
       });
-      ubpbjs.addub_adUnits(ub_adUnits);
+      ubpbjs.addAdUnits(ub_adUnits);
       ubpbjs.aliasBidder('criteo','criteointl');
       ubpbjs.bidderSettings = {
         'appnexus': { bidCpmAdjustment: function (bidCpm) { let temp = bidCpm * 0.86; temp = temp - 0.0323; return temp > 0 ? temp : 0; } },

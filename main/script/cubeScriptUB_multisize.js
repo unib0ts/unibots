@@ -13,7 +13,7 @@ setInterval(() => {
     runCMD();
 }, 500);
 
-unibotsClmb = (clientName, gabyub,d_Clmbid, m_Clmbid) => {
+unibotsClmb = (clientName, gabyub, d_Clmbid, m_Clmbid) => {
    let clientname = clientName;
    let d_clmbid = d_Clmbid;
    let m_clmbid = m_Clmbid;
@@ -26,7 +26,12 @@ unibotsClmb = (clientName, gabyub,d_Clmbid, m_Clmbid) => {
 }
 
 
-startFuncClmb = (clientname, gabyub) => {
+startFuncClmb = (clientname, gabyub, d_clmbid, m_clmbid) => {
+  // var ub_flag = true;
+  //
+  // if (ub_flag == true) {
+  //   ub_flag = false;
+  // }
   function mobileCheck() {
       var check = false;
       (function (a) {
@@ -43,7 +48,7 @@ startFuncClmb = (clientname, gabyub) => {
       return check;
   }
 
-  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 155px !important;} #ifr_466739-1{bottom: 120px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-466738-1, #div-clmb-ctn-466739-1, #div-clmb-ctn-468346-1, #div-clmb-ctn-468348-1,#div-clmb-ctn-468347-1, #div-clmb-ctn-468351-1,#div-clmb-ctn-468350-1, #div-clmb-ctn-468349-1, #div-clmb-ctn-468352-1 {width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1, #ifr_468346-1, #ifr_468348-1, #ifr_468347-1 {bottom: 155px !important;} #ifr_466739-1, #ifr_468351-1, #ifr_468350-1, #ifr_468349-1, #ifr_468352-1 {bottom: 120px !important;}";
   var css = document.createElement("style");
   css.type = "text/css";
   css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -104,64 +109,63 @@ startFuncClmb = (clientname, gabyub) => {
           document.getElementsByTagName("body")[0].appendChild(ub_passback);
         }
 
-        cubespinnervisibility();
+        // cubespinnervisibility();
     }
 
-   function cubespinnervisibility() {
-     var ub_clmb = setInterval(clmbdiv, 1000);
-
-     function clmbdiv() {
-         if (!mobileCheck()) {
-
-            ub_refresh("#div-clmb-ctn-"+d_clmbid+"-1", "ifr_" +d_clmbid+ "-1", ub_clmb);
-         }
-         else {
-           ub_refresh("#div-clmb-ctn-" +m_clmbid+ "-1", "ifr_" + m_clmbid+ "-1", ub_clmb);
-         }
-     }
-   }
+   // function cubespinnervisibility() {
+   //   var ub_clmb = setInterval(clmbdiv, 1000);
+   //
+   //   function clmbdiv() {
+   //       if (!mobileCheck()) {
+   //          ub_refresh("#div-clmb-ctn-"+d_clmbid+"-1", "ifr_" +d_clmbid+ "-1", ub_clmb);
+   //       }
+   //       else {
+   //         ub_refresh("#div-clmb-ctn-" +m_clmbid+ "-1", "ifr_" + m_clmbid+ "-1", ub_clmb);
+   //       }
+   //   }
+   // }
 
    setInterval(function(){
-     if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+     // if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
        if (!mobileCheck()) {
          try{
            colombia.refresh("div-clmb-ctn-"+d_clmbid+"-1");
-           cubespinnervisibility();
+           // cubespinnervisibility();
          }catch(e){}
        }else {
          try{
            colombia.refresh("div-clmb-ctn-"+m_clmbid+"-1");
-           cubespinnervisibility();
+           // cubespinnervisibility();
          }catch(e){}
        }
-      }
+      // }
    }, 30000);
 
 
-   function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {
-     if (document.querySelector(clmbdiv_id).childNodes) {
-       if (document.querySelector(clmbdiv_id).childNodes[0]) {
-             ub_iframe = document.getElementById(clmbiframe_id);
-             ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-
-            if (ub_innerDoc.querySelector('.main_div_swiper')) {
-              ub_innerDoc1 = ub_innerDoc.querySelector('.main_div_swiper');
-
-              ub_z2 = document.createElement("div");
-              ub_z2.id = "ub-cmpgn-ad";
-              ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
-              ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-              ub_z2.innerText = "Ads by Unibots";
-              ub_innerDoc1.appendChild(ub_z2);
-              clearInterval(ub_clmb);
-            }
-
-             // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
-             //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
-             // });
-       }
-     }
-   }
+   // function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {
+   //   if (document.querySelector(clmbdiv_id).childNodes) {
+   //     if (document.querySelector(clmbdiv_id).childNodes[0]) {
+   //           ub_iframe = document.getElementById(clmbiframe_id);
+   //           ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+   //
+   //          if (ub_innerDoc.querySelector('.main_div_swiper')) {
+   //            ub_innerDoc1 = ub_innerDoc.querySelector('.main_div_swiper');
+   //
+   //            ub_z2 = document.createElement("div");
+   //            ub_z2.id = "ub-cmpgn-ad";
+   //            ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+   //            ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+   //            ub_z2.innerText = "Ads by Unibots";
+   //            ub_innerDoc1.appendChild(ub_z2);
+   //            clearInterval(ub_clmb);
+   //          }
+   //
+   //           // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
+   //           //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
+   //           // });
+   //     }
+   //   }
+   // }
 
    function loadAd(id, adUnits) {
        var elm = document.getElementById(id);

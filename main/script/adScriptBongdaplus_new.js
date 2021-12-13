@@ -93,7 +93,7 @@ function ubadScript() {
       clearInterval(ub_interval_plyr_check);
       if (document.getElementById("div-ub-bongdaplus")) {
         // console.log('ub-Playertriggerd');
-        url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+        url ="https://unibots.b-cdn.net/clientdata/player.js";
         ub_vs = document.createElement("script");
         ub_vs.src = url;
         ub_vs.type = "text/javascript";

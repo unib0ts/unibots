@@ -108,8 +108,8 @@ function ubadScript() {
 	s0.type = "text/javascript";
 	document.getElementsByTagName('head')[0].appendChild(s0);
 
-	window.unibots = window.unibots || { cmd: [] };
-	unibots.cmd.push(() => {
+	window.unibotshb = window.unibotshb || { cmd: [] };
+	unibotshb.cmd.push(() => {
 	    ubHB("filmyfocus");
 	});
 

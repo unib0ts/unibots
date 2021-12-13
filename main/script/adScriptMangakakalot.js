@@ -226,8 +226,8 @@ var mapping_full_hb = {
 };
 
 var hb_full_common_bidders = [
-    { bidder: "appnexus", params: { placementId: "23724164" } }, /* one placementId for all sizes  my appnexus bidder */,
-    // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+    { bidder: "appnexus", params: { placementId: "23750199" } }, /* one placementId for all sizes  my appnexus bidder */,
+    // { bidder: 'oftmedia', params: { placementId: '4168843' } },
     // { bidder: '33across', params: { siteId : 'cI4Kuiu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
     // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -258,21 +258,24 @@ var mappings_full_hb_config_desktop = {
     ],
     bids: [
         hb_full_common_bidders.concat([
-            { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167178" } },
-            { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            { bidder: 'ucfunnel', params: { adid : 'ad-AA7BE79329EB49E7F238BA286D7789E'} },
+            // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167178" } },
+            // { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // { bidder: 'ucfunnel', params: { adid : 'ad-AA7BE79329EB49E7F238BA286D7789E'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-                { bidder: 'sovrn', params: {tagid: '987191'} },
+                { bidder: 'sovrn', params: {tagid: '987341'} },
+                { bidder: 'oftmedia', params: { placementId: '4168843' } },
+                  // { bidder: 'oftmedia', params: { placementId: '4168843' } },
             // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         ]),
         hb_full_common_bidders.concat([
-            { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
-            { bidder: 'openx', params: {unit: '556400374', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-            { bidder: 'ucfunnel', params: { adid : 'ad-627DA73EB86782ED0E9E3724B263B47E'} },
+            // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
+            // { bidder: 'openx', params: {unit: '556400374', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+            // { bidder: 'ucfunnel', params: { adid : 'ad-627DA73EB86782ED0E9E3724B263B47E'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-                { bidder: 'sovrn', params: {tagid: '987192'} },
+                { bidder: 'sovrn', params: {tagid: '987342'} },
+                { bidder: 'oftmedia', params: { placementId: '4168844' } },
             // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         ]),
     ],
@@ -296,21 +299,24 @@ var mappings_full_hb_config_mobile = {
   ],
   bids: [
     hb_full_common_bidders.concat([
-        { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
-        // // { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        //     { bidder: 'ucfunnel', params: { adid : 'ad-34B872DEB9762BEDC3B84ABDB68BAB8E'} },
+        // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167178" } },
+        // { bidder: 'openx', params: {unit: '556400375', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        // { bidder: 'ucfunnel', params: { adid : 'ad-AA7BE79329EB49E7F238BA286D7789E'} },
         // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
         // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-        //     // { bidder: 'sovrn', params: {tagid: '982601'} },
+            { bidder: 'sovrn', params: {tagid: '987341'} },
+            { bidder: 'oftmedia', params: { placementId: '4168843' } },
+              // { bidder: 'oftmedia', params: { placementId: '4168843' } },
         // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
     ]),
     hb_full_common_bidders.concat([
-        { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
-        // // { bidder: 'openx', params: {unit: '544096391', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-        //     { bidder: 'ucfunnel', params: { adid : 'ad-9A29B4D72D63E4A3C79DEB3833BD23A'} },
+        // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
+        // { bidder: 'openx', params: {unit: '556400374', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        // { bidder: 'ucfunnel', params: { adid : 'ad-627DA73EB86782ED0E9E3724B263B47E'} },
         // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
         // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-        //     // { bidder: 'sovrn', params: {tagid: '982606'} },
+            { bidder: 'sovrn', params: {tagid: '987342'} },
+            { bidder: 'oftmedia', params: { placementId: '4168844' } },
         // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
     ]),
   ],

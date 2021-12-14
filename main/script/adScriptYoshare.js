@@ -182,7 +182,7 @@ var mappings = {
 
 function mybotubScript() {
 	// var cachebuster = Math.round(new Date().getTime() / 1000);
-	url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+	url ="https://unibots.b-cdn.net/player.js";
 	ub_vs = document.createElement("script");
 	ub_vs.src = url;
 	ub_vs.type = "text/javascript";

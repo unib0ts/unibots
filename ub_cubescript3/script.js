@@ -30,11 +30,11 @@ googletag.cmd = googletag.cmd || [];
 
 // mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/close_new.png" alt="ub-closebtn" width="16px;">';
+mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/close.svg" alt="ub-closebtn">';
 //
 // mybotadSmall = '<div id="div-gpt-ad-1626772946328-0"></div>';
 
-function mybotCustomFunction() {
+mybotCustomFunction =()=> {
   // document.getElementById('gabywa').innerHTML=mybotgabywa;
   document.getElementById('ub-close').innerHTML=mybotClosevar;
   document.getElementById('ub-close').style.display = "none";
@@ -71,11 +71,11 @@ function mybotCustomFunction() {
 
 }
 
-function loadAdCustom() {
+loadAdCustom=() =>{
   return false;
 }
 
-function ub_passback1(clientname, gabyub) {
+ ub_passback1 =(clientname, gabyub)=> {
   mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+gabyub+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+gabyub+'");</script>';
   document.getElementById('gabywa').innerHTML=mybotgabywa;
 
@@ -99,10 +99,10 @@ function ub_passback1(clientname, gabyub) {
   }
 }
 
-function cubespinnervisibility() {
+ cubespinnervisibility=()=> {
   var ub_clmb = setInterval(clmbdiv, 500);
 
-  function clmbdiv() {
+   function clmbdiv() {
       if (!mobileCheck()) {
         if (document.querySelector('#ob_holder')) {
           if (document.querySelector('#ob_holder').childNodes[0]) {
@@ -122,7 +122,7 @@ function cubespinnervisibility() {
   }
 }
 
-function setAttributes(el, attrs) {
+ setAttributes=(el, attrs)=> {
  for(var key in attrs) {
    el.setAttribute(key, attrs[key]);
  }

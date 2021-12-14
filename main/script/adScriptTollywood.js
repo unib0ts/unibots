@@ -247,9 +247,9 @@ function ub_checkAdRendered(){
       }, REFRESH_TIMEOUT);
     }
 	 }
-   else {
-     ub_passback();
-   }
+   // else {
+   //   ub_passback();
+   // }
 }
 
 function ub_passback() {

@@ -18,7 +18,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTupaki.json';
 mybotBlockedClientName = 'tupaki';
 
-var mybotstyleSheet = mobileCheck() ? "mybot .ub-roller-wrapper {bottom: 130px !important};":"mybot .ub-roller-wrapper {right: 15px !important;left: unset !important;}";
+var mybotstyleSheet = mobileCheck() ? "mybot .ub-roller-wrapper {bottom: 130px !important};":"mybot .ub-roller-wrapper {right: 15px !important;left: unset !important;bottom: 110px !important}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));

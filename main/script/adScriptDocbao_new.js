@@ -190,7 +190,7 @@ function ubadScript() {
   } else {
       // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/gia-dinh').length == 2){}
       // if (window.location.href.split('https://m.docbao.vn/phap-luat').length == 2){}
-      if((window.location.href.split('https://docbao.vn/xa-hoi').length == 2 )){}
+      if((window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2 )){}
       else {
         if(!(window.location.href== "https://m.docbao.vn/")){
             z1 = document.createElement("div");

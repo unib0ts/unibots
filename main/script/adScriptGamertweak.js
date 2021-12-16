@@ -469,7 +469,7 @@ function ub_infinite() {
       ubtargetdivid = "#" + mapping_hb.targetUnits[i];
       targetUnit = document.querySelectorAll(ubtargetdivid);
       targetUnit = targetUnit[targetUnit.length- 1];
-      // console.log(targetUnit,targetUnit.innerHTML == "");
+
       if (targetUnit != undefined && targetUnit.innerHTML == "") {
         var ubslotid = generateubNextSlotName('ubslot');
         ubslotdiv = "ubslotDiv" + i;
@@ -478,14 +478,18 @@ function ub_infinite() {
         targetUnit.appendChild(ubslotdiv)
 
         googletag.cmd.push(function() {
-          let ub_slotnumNew = "ub_slotN" + [i];
+          // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+          //     if (event.slot === ub_slot1) {
+          //     }
+          // });
+          // let ub_slotnumNew = "ub_slotN" + [i];
           if (!mobileCheck()) {
-            ub_slotnumNew =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesD[i], ubslotid);
+            ubslotid =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesD[i], ubslotid);
           }else {
-            ub_slotnumNew =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i], ubslotid);
+            ubslotid =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i], ubslotid);
           }
-          ub_slotnumNew.setTargeting("test","infinitescroll").addService(googletag.pubads());
-          googletag.pubads().refresh([ub_slotnumNew]);
+          ubslotid.setTargeting("test","infinitescroll").addService(googletag.pubads());
+          googletag.pubads().refresh([ubslotid]);
         });
       }
   }
@@ -499,6 +503,7 @@ window.onscroll = function() {
   if (ub_url != window.location.href) {
      // ub_flag = false;
      ub_url = window.location.href;
+    // googletag.destroySlots([ub_slot1, ub_slot2, ub_slot3, ub_slot4]);
      ub_infinite();
      // console.log('test1');
   }

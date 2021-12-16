@@ -1,6 +1,6 @@
 // checkHBUnits();
 
-mybotGACode = "G-2V4NN8J880";
+mybotGACode = "G-H02LZEWMVJ";
 mybotgabywa =
     '<script async src="https://www.googletagmanager.com/gtag/js?id=' +
     mybotGACode +
@@ -217,7 +217,7 @@ function mainHbRun() {
             useBidCache: true,
             enableSendAllBids: false, // Default will be `true` as of 1.0
             bidderSequence: "random", // Default is random
-            publisherDomain: "https://mangakakalot.com/",
+            publisherDomain: "https://m.mangabat.com/m",
             bidderTimeout: PREBID_TIMEOUT + 500,
             //pubcid: {expInterval: },
             //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },

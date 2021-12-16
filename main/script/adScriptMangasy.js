@@ -1,4 +1,4 @@
-mybotGACode = "G-2V4NN8J880";
+mybotGACode = "G-EQYNQN8H8D";
 mybotgabywa =
     '<script async src="https://www.googletagmanager.com/gtag/js?id=' +
     mybotGACode +

@@ -46,8 +46,8 @@ if (!mobileCheck()) {
   if (document.querySelector('#UB_728x90_1')) {
     document.querySelector('#UB_728x90_1').innerHTML = "<div id='div-gpt-ad-1637828269964-0'></div>";
   }
-  if (document.querySelector('#UB_mobile_300x250')) {
-    document.querySelector('#UB_mobile_300x250').innerHTML = "<div id='div-gpt-ad-1637830087947-0'></div>";
+  if (document.querySelector('#UB_320x100')) {
+    document.querySelector('#UB_320x100').innerHTML = "<div id='div-gpt-ad-1637830087947-0'></div>";
   }
 }else {
 

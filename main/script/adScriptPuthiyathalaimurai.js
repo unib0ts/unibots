@@ -170,22 +170,6 @@ var mappings = {
 //   sizes: mappings.sizes,
 // }
 // apSlots.push(apSlotTemp);
-var s0 = document.createElement('script');
-s0.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-s0.async = "async";
-document.getElementsByTagName('head')[0].appendChild(s0);
-
-googletag.cmd.push(function() {
-  ub_slotpixel = googletag.defineSlot('/76299822/Unibots', [1, 1], 'div-gpt-ad-1639655414468-0').addService(googletag.pubads());
-  googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
-  googletag.pubads().refresh([ub_slotpixel]);
-});
-
-var ub_div1 = document.createElement('div');
-ub_div1.id = "div-gpt-ad-1639655414468-0";
-ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1639655414468-0'); });</script>";
-document.getElementsByTagName('body')[0].appendChild(ub_div1);
 
 
 

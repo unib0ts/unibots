@@ -73,6 +73,26 @@ function mobileCheck() {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
+  window.googletag = window.googletag || {cmd: []};
+  var ub_slotpixel;
+
+  var s5 = document.createElement('script');
+  s5.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+  s5.async = "async";
+  document.getElementsByTagName('head')[0].appendChild(s5);
+
+  googletag.cmd.push(function() {
+    ub_slotpixel = googletag.defineSlot('/76299822/Unibots', [1, 1], 'div-gpt-ad-1639655414468-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    googletag.pubads().refresh([ub_slotpixel]);
+  });
+
+  var ub_div1 = document.createElement('div');
+  ub_div1.id = "div-gpt-ad-1639655414468-0";
+  ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1639655414468-0'); });</script>";
+  document.getElementsByTagName('body')[0].appendChild(ub_div1);
+
 // function ubadScript() {
 //   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
     z1 = document.createElement("div");

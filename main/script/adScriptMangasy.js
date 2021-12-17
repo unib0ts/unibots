@@ -71,7 +71,7 @@ var hb_full_common_bidders = [
     // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
     // { bidder: 'nobid', params: { siteId: '22656256385' } },
     // // { bidder: 'adkernel', params: {zoneId: '152650', host: 'cpm.fmlabsonline.com'} },
-    // { bidder: 'nobid', params: { siteId : '22052735848'} },
+    { bidder: 'nobid', params: { siteId : '22661303811'} },
     // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
     // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
@@ -105,7 +105,7 @@ var mappings_full_hb_config = {
             // { bidder: 'ucfunnel', params: { adid : 'ad-AA7BE79329EB49E7F238BA286D7789E'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-                // { bidder: 'sovrn', params: {tagid: '987341'} },
+                { bidder: 'sovrn', params: {tagid: '991083'} }
                 // { bidder: 'oftmedia', params: { placementId: '4168843' } },
                   // { bidder: 'oftmedia', params: { placementId: '4168843' } },
             // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
@@ -116,7 +116,7 @@ var mappings_full_hb_config = {
             // { bidder: 'ucfunnel', params: { adid : 'ad-627DA73EB86782ED0E9E3724B263B47E'} },
             // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },
             // // // // //     {bidder: 'coinzilla', params: {placementId: '23945aaa6cfc06141'} },
-                // { bidder: 'sovrn', params: {tagid: '987342'} },
+                { bidder: 'sovrn', params: {tagid: '991084'} }
                 // { bidder: 'oftmedia', params: { placementId: '4168844' } },
             // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
         ]),

@@ -224,7 +224,7 @@ var hb_full_common_bidders = [
     // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
     // { bidder: 'nobid', params: { siteId: '22656256385' } },
     // // { bidder: 'adkernel', params: {zoneId: '152650', host: 'cpm.fmlabsonline.com'} },
-    // { bidder: 'nobid', params: { siteId : '22052735848'} },
+    { bidder: 'nobid', params: { siteId : '22661303640'} },
     // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
     // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

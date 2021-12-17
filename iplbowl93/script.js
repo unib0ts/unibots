@@ -96,19 +96,19 @@ function ubadScript() {
  }
    ub_passback1();
 
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-465701-1');
-        cubespinnervisibility();
-        }catch(e){}
-    }else {
-      try{
-         colombia.refresh('div-clmb-ctn-465702-1');
-         cubespinnervisibility();
-      }catch(e){}
-    }
-   }, 30000);
+   // setInterval(function(){
+   //   if (!mobileCheck()) {
+   //      try{
+   //      colombia.refresh('div-clmb-ctn-465701-1');
+   //      cubespinnervisibility();
+   //      }catch(e){}
+   //  }else {
+   //    try{
+   //       colombia.refresh('div-clmb-ctn-465702-1');
+   //       cubespinnervisibility();
+   //    }catch(e){}
+   //  }
+   // }, 30000);
 
 
  function ub_passback1() {

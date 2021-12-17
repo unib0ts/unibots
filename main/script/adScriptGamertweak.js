@@ -479,7 +479,7 @@ function ub_infinite() {
         ubslotdiv.id = ubslotid; // Id must be the same as slotName
         targetUnit.appendChild(ubslotdiv)
 
-        googletag.destroySlots(mappings.slots[i])
+        // googletag.destroySlots(mappings.slots[i])
         googletag.cmd.push(function() {
           // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           //     if (event.slot === ub_slot1) {

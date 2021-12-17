@@ -31,17 +31,17 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
  ub_passback1();
 
- setInterval(function(){
-   if (!mobileCheck()) {
-      try{
-      colombia.refresh('div-clmb-ctn-462128-1')
-      }catch(e){}
-  }else {
-    try{
-       colombia.refresh('div-clmb-ctn-462129-1')
-    }catch(e){}
-  }
- }, 30000);
+ // setInterval(function(){
+ //   if (!mobileCheck()) {
+ //      try{
+ //      colombia.refresh('div-clmb-ctn-462128-1')
+ //      }catch(e){}
+ //  }else {
+ //    try{
+ //       colombia.refresh('div-clmb-ctn-462129-1')
+ //    }catch(e){}
+ //  }
+ // }, 30000);
 
  function ub_passback1() {
  //     return new Promise(function(resolve, reject) {

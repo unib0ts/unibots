@@ -121,6 +121,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 var mappings = {
     slots: [],
+    slots_new: [],
     adCode: [],
     slotNumbers: [],
     sizes: [],
@@ -460,26 +461,29 @@ function googlePush(){
 var ubnextSlotId = 1;
 function generateubNextSlotName(ubslot) {
   var ubid = ubnextSlotId++;
-  return ubslot + '-' + ubid;
+  return ubslot + '_' + ubid;
 }
 
 function ub_infinite() {
   // Create a div for the slot
+  // var ub_AdunitInit = 0;
   for(var i=0; i<mapping_hb.targetUnits.length; i++){
       ubtargetdivid = "#" + mapping_hb.targetUnits[i];
       targetUnit = document.querySelectorAll(ubtargetdivid);
       targetUnit = targetUnit[targetUnit.length- 1];
 
       if (targetUnit != undefined && targetUnit.innerHTML == "") {
-        var ubslotid = generateubNextSlotName('ubslot');
+        var ubslotid = generateubNextSlotName('ubslotN');
         ubslotdiv = "ubslotDiv" + i;
         ubslotdiv = document.createElement('div');
         ubslotdiv.id = ubslotid; // Id must be the same as slotName
         targetUnit.appendChild(ubslotdiv)
 
+        googletag.destroySlots(mappings.slots[i])
         googletag.cmd.push(function() {
           // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
           //     if (event.slot === ub_slot1) {
+          //         googletag.destroySlots([ub_slot1, ub_slot2, ub_slot3, ub_slot4]);
           //     }
           // });
           // let ub_slotnumNew = "ub_slotN" + [i];
@@ -489,10 +493,16 @@ function ub_infinite() {
             ubslotid =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i], ubslotid);
           }
           ubslotid.setTargeting("test","infinitescroll").addService(googletag.pubads());
+          // mappings.slots_new.push(ubslotid);
           googletag.pubads().refresh([ubslotid]);
         });
+        // ub_AdunitInit = 1;
       }
   }
+  // if (ub_AdunitInit) {
+  //   console.log('testingaduint');
+  //     googletag.pubads().refresh(mappings.slots_new);
+  // }
 }
 
 var ub_url = window.location.href;
@@ -503,7 +513,6 @@ window.onscroll = function() {
   if (ub_url != window.location.href) {
      // ub_flag = false;
      ub_url = window.location.href;
-    // googletag.destroySlots([ub_slot1, ub_slot2, ub_slot3, ub_slot4]);
      ub_infinite();
      // console.log('test1');
   }

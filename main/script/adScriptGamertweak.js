@@ -143,50 +143,50 @@ var mappings = {
       adSlots: [],
   };
 
-  mybotBlockedPagesFlag = 1;
-  mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksGamertweak.json';
-  mybotBlockedClientName = 'Gamertweak';
+  // mybotBlockedPagesFlag = 1;
+  // mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksGamertweak.json';
+  // mybotBlockedClientName = 'Gamertweak';
+  //
+  // if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  //   urlToCheck = window.location.host+window.location.pathname;
+  //
+  //   var request = new XMLHttpRequest();
+  //     url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+  //
+  //   request.open('GET', url, true);
+  //   request.onload = function() {
+  //     if (request.status >= 200 && request.status < 400) {
+  //       var data = request.responseText;
+  //       data = JSON.parse(data);
+  //       // data = data[mybotBlockedClientName];
+  //       if(data) {
+  //         // data = data.urls;
+  //         if(data.status == true){
+  //           return false;
+  //         }
+  //         else{
+  //           mybotubScript();
+  //         }
+  //       }
+  //     }
+  //     else {
+  //       console.log('Block Check Request failed');
+  //       mybotubScript();
+  //     }
+  //   };
+  //   request.onerror = function() {
+  //     console.log('Request failed');
+  //     mybotubScript();
+  //   };
+  //   request.send();
+  // }
+  // else{
+  //   mybotubScript();
+  // }
 
-  if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-    urlToCheck = window.location.host+window.location.pathname;
-
-    var request = new XMLHttpRequest();
-      url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
-
-    request.open('GET', url, true);
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        var data = request.responseText;
-        data = JSON.parse(data);
-        // data = data[mybotBlockedClientName];
-        if(data) {
-          // data = data.urls;
-          if(data.status == true){
-            return false;
-          }
-          else{
-            mybotubScript();
-          }
-        }
-      }
-      else {
-        console.log('Block Check Request failed');
-        mybotubScript();
-      }
-    };
-    request.onerror = function() {
-      console.log('Request failed');
-      mybotubScript();
-    };
-    request.send();
-  }
-  else{
-    mybotubScript();
-  }
-
-function mybotubScript() {
+// function mybotubScript() {
   var mybotubad = setInterval(ub_adscript, 500);
-}
+// }
 
   function ub_adscript() {
     var mybotAdscriptEnabled =0;

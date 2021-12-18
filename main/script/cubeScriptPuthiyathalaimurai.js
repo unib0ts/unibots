@@ -14,47 +14,46 @@ function mobileCheck() {
     return check;
 }
 
-// mybotBlockedPagesFlag = 1;
-// mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksAndhrajyothy.json';
-// mybotBlockedClientName = 'andhrajyothy';
+mybotBlockedPagesFlag = 1;
+mybotBlockedClientName = 'Puthiyathalaimurai';
 //
-//   if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-//     urlToCheck = window.location.host+window.location.pathname+window.location.search;
-//
-//     var request = new XMLHttpRequest();
-//     url = mybotBlockedUrl;
-//
-//     request.open('GET', url, true);
-//     request.onload = function() {
-//       if (request.status >= 200 && request.status < 400) {
-//         var data = request.responseText;
-//         data = JSON.parse(data);
-//         data = data[mybotBlockedClientName];
-//         if(data) {
-//           data = data.urls;
-//           if(data.includes(urlToCheck)){
-//             // mybotdiv1 = '';
-//             return false;
-//           }
-//           else{
-//             ubadScript();
-//           }
-//         }
-//       }
-//       else {
-//         console.log('Block Check Request failed');
-//         ubadScript();
-//       }
-//     };
-//     request.onerror = function() {
-//       console.log('Request failed');
-//       ubadScript();
-//     };
-//     request.send();
-//   }
-//   else{
-//     ubadScript();
-//   }
+  if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+    url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+
+    var request = new XMLHttpRequest();
+    url = mybotBlockedUrl;
+
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        data = JSON.parse(data);
+        data = data[mybotBlockedClientName];
+        if(data) {
+          data = data.urls;
+          if(data.includes(urlToCheck)){
+            // mybotdiv1 = '';
+            return false;
+          }
+          else{
+            ubadScript();
+          }
+        }
+      }
+      else {
+        console.log('Block Check Request failed');
+        ubadScript();
+      }
+    };
+    request.onerror = function() {
+      console.log('Request failed');
+      ubadScript();
+    };
+    request.send();
+  }
+  else{
+    ubadScript();
+  }
 
 
   var mybotstyleSheet ="#div-clmb-ctn-467893-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-467894-1{width: auto !important;z-index: 2147483647 !important;} #ifr_467893-1{bottom: 125px !important;left: -30px !important;} #ifr_467894-1{bottom: 120px !important;left: -30px !important;} #div-ub-1{z-index: 2147483647 !important;}";
@@ -73,6 +72,7 @@ function mobileCheck() {
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
 
+function ubadScript() {
   window.googletag = window.googletag || {cmd: []};
   var ub_slotpixel;
 
@@ -111,23 +111,6 @@ function mobileCheck() {
     s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
     document.getElementsByTagName('head')[0].appendChild(s3);
 
-    // var s0 = document.createElement('script');
-    // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-    // s0.type = "text/javascript";
-    // document.getElementsByTagName('head')[0].appendChild(s0);
-    //
-    // var s1 = document.createElement('script');
-    // s1.async = "async";
-    // s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-    // s1.type = "text/javascript";
-    // document.getElementsByTagName('head')[0].appendChild(s1);
-    //
-    // var cachebuster = Math.round(new Date().getTime() / 1000);
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptPuthiyathalaimurai.js?cb='+cachebuster;
-    // s2 = document.createElement('script');
-    // s2.src = url;
-    // s2.async = "async";
-    // document.body.appendChild(s2);
     var s0 = document.createElement('script');
   	s0.async = "async";
   	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
@@ -139,7 +122,7 @@ function mobileCheck() {
   	    ubHB("puthiyathalaimurai");
   	});
 //   }
-// }
+}
 
   ub_passback1();
 

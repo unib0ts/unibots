@@ -1,12 +1,12 @@
 mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSuckhoedoisong.json';
-mybotBlockedClientName = 'suckhoedoisong';
+mybotBlockedClientName = 'Suckhoedoisong';
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname;
 
   var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
+  url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
 
   request.open('GET', url, true);
   request.onload = function() {

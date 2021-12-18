@@ -18,11 +18,10 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedClientName = 'Puthiyathalaimurai';
 //
   if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-    url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
-
+    urlToCheck = window.location.host+window.location.pathname;
     var request = new XMLHttpRequest();
-    url = mybotBlockedUrl;
-
+    url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+    // url = mybotBlockedUrl;
     request.open('GET', url, true);
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {

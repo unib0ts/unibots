@@ -27,6 +27,12 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'G-G4C0209YRW';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
+ub_ga = document.createElement("div");
+ub_ga.id = "gabywa";
+document.getElementsByTagName("head")[0].appendChild(ub_ga);
+document.getElementById("gabywa").innerHTML = mybotgabywa;
+loadAd("gabywa");
+
 
 if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
   urlToCheck = window.location.host+window.location.pathname;
@@ -39,11 +45,10 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
     if (request.status >= 200 && request.status < 400) {
       var data = request.responseText;
       data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
+      // data = data[mybotBlockedClientName];
       if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
+        // data = data.urls;
+        if(data.status == true){
           return false;
         }
         else{
@@ -67,12 +72,6 @@ else{
 }
 
 function ubadScript() {
-  ub_ga = document.createElement("div");
-  ub_ga.id = "gabywa";
-  document.getElementsByTagName("head")[0].appendChild(ub_ga);
-  document.getElementById("gabywa").innerHTML = mybotgabywa;
-  loadAd("gabywa");
-
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1617905562342-0";
   z1.style = "width:320px;height:100px;float:left;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";

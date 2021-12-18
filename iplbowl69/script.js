@@ -36,21 +36,20 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
 
   request.open('GET', url, true);
   request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText;
-      data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
-      if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
-          return false;
-        }
-        else{
-          ubadScript();
-        }
-      }
-    }
+		if (request.status >= 200 && request.status < 400) {
+			var data = request.responseText;
+			data = JSON.parse(data);
+			// data = data[mybotBlockedClientName];
+			if(data) {
+				// data = data.urls;
+				if(data.status == true){
+					return false;
+				}
+				else{
+					ubadScript();
+				}
+			}
+		}
     else {
       console.log('Block Check Request failed');
       ubadScript();

@@ -13,15 +13,14 @@ if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
     if (request.status >= 200 && request.status < 400) {
       var data = request.responseText;
       data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
+      // data = data[mybotBlockedClientName];
       if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
+        // data = data.urls;
+        if(data.status == true){
           return false;
         }
         else{
-          mybotubScript();
+          ubadScript();
         }
       }
     }

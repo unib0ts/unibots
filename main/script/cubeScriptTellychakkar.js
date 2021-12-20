@@ -75,49 +75,49 @@ function mobileCheck() {
 
 // function ubadScript() {
 //   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
-    z1 = document.createElement("div");
-    z1.id = "div-gpt-ad-1639138716208-0";
-    if (!mobileCheck()) {
-      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:82px;left:5px;z-index:99";
-    }else {
-      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:125px !important;left:5px;z-index:99";
-    }
-    x1 = document.querySelector("body");
-    x1.appendChild(z1);
-
-    var s3 = document.createElement('script');
-    s3.setAttribute("crossorigin", "anonymous");
-    s3.async = true;
-    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
-    document.getElementsByTagName('head')[0].appendChild(s3);
-
+    // z1 = document.createElement("div");
+    // z1.id = "div-gpt-ad-1639138716208-0";
+    // if (!mobileCheck()) {
+    //   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:82px;left:5px;z-index:99";
+    // }else {
+    //   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:125px !important;left:5px;z-index:99";
+    // }
+    // x1 = document.querySelector("body");
+    // x1.appendChild(z1);
+    //
+    // var s3 = document.createElement('script');
+    // s3.setAttribute("crossorigin", "anonymous");
+    // s3.async = true;
+    // s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
+    // document.getElementsByTagName('head')[0].appendChild(s3);
+    //
+    // // var s0 = document.createElement('script');
+    // // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+    // // s0.type = "text/javascript";
+    // // document.getElementsByTagName('head')[0].appendChild(s0);
+    // //
+    // // var s1 = document.createElement('script');
+    // // s1.async = "async";
+    // // s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+    // // s1.type = "text/javascript";
+    // // document.getElementsByTagName('head')[0].appendChild(s1);
+    // //
+    // // var cachebuster = Math.round(new Date().getTime() / 1000);
+    // // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptPuthiyathalaimurai.js?cb='+cachebuster;
+    // // s2 = document.createElement('script');
+    // // s2.src = url;
+    // // s2.async = "async";
+    // // document.body.appendChild(s2);
     // var s0 = document.createElement('script');
-    // s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-    // s0.type = "text/javascript";
-    // document.getElementsByTagName('head')[0].appendChild(s0);
+  	// s0.async = "async";
+  	// s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
+  	// s0.type = "text/javascript";
+  	// document.getElementsByTagName('head')[0].appendChild(s0);
     //
-    // var s1 = document.createElement('script');
-    // s1.async = "async";
-    // s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-    // s1.type = "text/javascript";
-    // document.getElementsByTagName('head')[0].appendChild(s1);
-    //
-    // var cachebuster = Math.round(new Date().getTime() / 1000);
-    // url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptPuthiyathalaimurai.js?cb='+cachebuster;
-    // s2 = document.createElement('script');
-    // s2.src = url;
-    // s2.async = "async";
-    // document.body.appendChild(s2);
-    var s0 = document.createElement('script');
-  	s0.async = "async";
-  	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
-  	s0.type = "text/javascript";
-  	document.getElementsByTagName('head')[0].appendChild(s0);
-
-  	window.unibotshb = window.unibotshb || { cmd: [] };
-  	unibotshb.cmd.push(() => {
-  	    ubHB("tellychakkar");
-  	});
+  	// window.unibotshb = window.unibotshb || { cmd: [] };
+  	// unibotshb.cmd.push(() => {
+  	//     ubHB("tellychakkar");
+  	// });
 //   }
 // }
 

@@ -237,56 +237,56 @@ function ubadScript() {
     //   x2.appendChild(z2);
     // }
 
-    if (document.querySelector('#postContent')) {
-       z3 = document.createElement("div");
-       z3.id = "unibots1";
-       z3.innerHTML = "<div id='div-gpt-ad-1637855061344-0'></div>";
-
-       x3 = document.querySelector('#postContent');
-       x3 = x3.querySelectorAll('p');
-       x3[0].appendChild(z3);
-
-       var prevparaHeight = 0;
-       var ub_flag1 = true;
-       var ub_flag2 = true;
-       var ub_flag3 = true;
-       // var ub_flag4 = true;
-
-       for (var ub_j = 0; ub_j < x3.length; ub_j++) {
-         prevparaHeight += x3[ub_j].offsetHeight;
-
-         if((prevparaHeight > 1500) && (ub_flag1 == true)){
-           z4 = document.createElement("div");
-           z4.id = "unibots2";
-           z4.innerHTML = "<div id='div-gpt-ad-1637855089100-0'></div>";
-
-           x3[ub_j].appendChild(z4);
-           ub_flag1 = false;
-         }else if ((prevparaHeight > 2200) && (ub_flag2 == true)) {
-           z5 = document.createElement("div");
-           z5.id = "unibots3";
-           z5.innerHTML = "<div id='div-gpt-ad-1637855117050-0'></div>";
-
-           x3[ub_j].appendChild(z5);
-           ub_flag2 = false;
-         }
-         else if ((prevparaHeight > 2900) && (ub_flag3 == true)) {
-           z6 = document.createElement("div");
-           z6.id = "unibots4";
-           z6.innerHTML = "<div id='div-gpt-ad-1637855143548-0'></div>";
-
-           x3[ub_j].appendChild(z6);
-           ub_flag3 = false;
-         }
-         // else if ((prevparaHeight > 2800) && (ub_flag4 == true)) {
-         //   z7 = document.createElement("div");
-         //   z7.id = "div-gpt-ad-1620991472253-0";
-         //   z7.style = "width: 300px; height: 250px";
-         //   x3[ub_j].appendChild(z7);
-         //   ub_flag4 = false;
-         // }
-       }
-    }
+    // if (document.querySelector('#postContent')) {
+    //    z3 = document.createElement("div");
+    //    z3.id = "unibots1";
+    //    z3.innerHTML = "<div id='div-gpt-ad-1637855061344-0'></div>";
+    //
+    //    x3 = document.querySelector('#postContent');
+    //    x3 = x3.querySelectorAll('p');
+    //    x3[0].appendChild(z3);
+    //
+    //    var prevparaHeight = 0;
+    //    var ub_flag1 = true;
+    //    var ub_flag2 = true;
+    //    var ub_flag3 = true;
+    //    // var ub_flag4 = true;
+    //
+    //    for (var ub_j = 0; ub_j < x3.length; ub_j++) {
+    //      prevparaHeight += x3[ub_j].offsetHeight;
+    //
+    //      if((prevparaHeight > 1500) && (ub_flag1 == true)){
+    //        z4 = document.createElement("div");
+    //        z4.id = "unibots2";
+    //        z4.innerHTML = "<div id='div-gpt-ad-1637855089100-0'></div>";
+    //
+    //        x3[ub_j].appendChild(z4);
+    //        ub_flag1 = false;
+    //      }else if ((prevparaHeight > 2200) && (ub_flag2 == true)) {
+    //        z5 = document.createElement("div");
+    //        z5.id = "unibots3";
+    //        z5.innerHTML = "<div id='div-gpt-ad-1637855117050-0'></div>";
+    //
+    //        x3[ub_j].appendChild(z5);
+    //        ub_flag2 = false;
+    //      }
+    //      else if ((prevparaHeight > 2900) && (ub_flag3 == true)) {
+    //        z6 = document.createElement("div");
+    //        z6.id = "unibots4";
+    //        z6.innerHTML = "<div id='div-gpt-ad-1637855143548-0'></div>";
+    //
+    //        x3[ub_j].appendChild(z6);
+    //        ub_flag3 = false;
+    //      }
+    //      // else if ((prevparaHeight > 2800) && (ub_flag4 == true)) {
+    //      //   z7 = document.createElement("div");
+    //      //   z7.id = "div-gpt-ad-1620991472253-0";
+    //      //   z7.style = "width: 300px; height: 250px";
+    //      //   x3[ub_j].appendChild(z7);
+    //      //   ub_flag4 = false;
+    //      // }
+    //    }
+    // }
     if (document.querySelector('#postContent') && document.querySelector('.admob')) {
         // ub_admob = document.querySelectorAll('.admob');
         // for (var i = 0; i < ub_admob.length; i++) {

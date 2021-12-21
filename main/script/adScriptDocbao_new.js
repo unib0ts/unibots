@@ -209,7 +209,7 @@ function ubadScript() {
         //     x1 = document.querySelector("body");
         //     x1.appendChild(z1);
         // }
-      }
+      // }
 
     if((window.location.href== "https://m.docbao.vn/")){
       z2 = document.createElement("div");

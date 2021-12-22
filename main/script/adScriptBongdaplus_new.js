@@ -93,7 +93,7 @@ function ubadScript() {
       clearInterval(ub_interval_plyr_check);
       if (document.getElementById("div-ub-bongdaplus")) {
         // console.log('ub-Playertriggerd');
-        url ="https://unibots.b-cdn.net/clientdata/player.js";
+        url ="https://unibots.b-cdn.net/clientdata/player2.js";
         ub_vs = document.createElement("script");
         ub_vs.src = url;
         ub_vs.type = "text/javascript";
@@ -1832,7 +1832,7 @@ function ubadScript() {
       });
 
       setInterval(function() {
-        if (!mappings_final_refresh.adSlots == '') {
+        if (!(mappings_final_refresh.adSlots == '')) {
           refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
         }
       }, REFRESH_TIMEOUT);

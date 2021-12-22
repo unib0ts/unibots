@@ -41,7 +41,8 @@ startFuncClmb = (clientname, gabyub) => {
       return check;
   }
 
-  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 155px !important;} #ifr_466739-1{bottom: 120px !important;}";
+
+  var mybotstyleSheet = (window.location.hostname =="beta.patrika.com" || window.location.hostname =="www.patrika.com") ? "#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 0px !important; left: -20px !important;} #ifr_466739-1{bottom: 110px !important;height:172px !important;left: -20px !important;}" : "#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 155px !important;} #ifr_466739-1{bottom: 120px !important;}";
   var css = document.createElement("style");
   css.type = "text/css";
   css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -62,9 +63,9 @@ startFuncClmb = (clientname, gabyub) => {
   s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
   document.getElementsByTagName('head')[0].appendChild(s3);
 
-
-   ub_passback1();
-
+  var ub_flag = true;
+  (window.location.hostname =="beta.patrika.com" || window.location.hostname =="www.patrika.com") ? (mobileCheck() ? window.onscroll = ()=> {if(ub_flag){ub_passback1(); ub_flag = false;}} : ub_passback1()):ub_passback1();
+  
    function ub_passback1() {
          if(typeof colombia == 'undefined'){
          var colombia = colombia || {};

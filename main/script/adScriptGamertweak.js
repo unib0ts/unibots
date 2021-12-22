@@ -485,7 +485,7 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   for (var i = 0; i < slotNumbers.length; i++) {
       let ub_slotnum = "ub_slot" + slotNumbers[i];
       ub_slotnum =  googletag.defineSlot(adCode[i], sizes[i], adId[i]);
-      ub_slotnum.setTargeting("test","infinitescroll").addService(googletag.pubads());
+      ub_slotnum.addService(googletag.pubads());
       mappings.slots.push(ub_slotnum);
   }
 }

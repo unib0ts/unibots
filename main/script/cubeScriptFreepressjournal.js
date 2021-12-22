@@ -54,7 +54,7 @@ function mobileCheck() {
 //   }
 
 
-  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 0px !important;left: -30px !important;} #ifr_466739-1{bottom: 0px !important;left: -30px !important;} #div-ub-1{z-index: 2147483647 !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 60px !important;left: -30px !important;} #ifr_466739-1{bottom: 60px !important;left: -30px !important;} #div-gpt-ad-1640171170795-0{z-index: 2147483647 !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -86,40 +86,40 @@ function mobileCheck() {
 //   //   googletag.pubads().refresh([ub_slotpixel]);
 //   // });
 //
-//   var ub_div1 = document.createElement('div');
-//   ub_div1.id = "div-gpt-ad-1639655414468-0";
-//   ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1639655414468-0'); });</script>";
-//   document.getElementsByTagName('body')[0].appendChild(ub_div1);
-//
+  // var ub_div1 = document.createElement('div');
+  // ub_div1.id = "div-gpt-ad-1640171170795-0";
+  // ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1640171170795-0'); });</script>";
+  // document.getElementsByTagName('body')[0].appendChild(ub_div1);
+
 // // function ubadScript() {
 // //   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
-//     z1 = document.createElement("div");
-//     z1.id = "div-ub-1";
-//     if (!mobileCheck()) {
-//       z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:82px;left:5px;z-index:99";
-//     }else {
-//       z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:50px !important;left:5px;z-index:99";
-//     }
-//     x1 = document.querySelector("body");
-//     x1.appendChild(z1);
-//
-//     var s3 = document.createElement('script');
-//     s3.setAttribute("crossorigin", "anonymous");
-//     s3.async = true;
-//     s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
-//     document.getElementsByTagName('head')[0].appendChild(s3);
-//
-//     var s0 = document.createElement('script');
-//   	s0.async = "async";
-//   	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
-//   	s0.type = "text/javascript";
-//   	document.getElementsByTagName('head')[0].appendChild(s0);
-//
-//   	window.unibotshb = window.unibotshb || { cmd: [] };
-//   	unibotshb.cmd.push(() => {
-//   	    ubHB("puthiyathalaimurai");
-//   	});
-// //   }
+    z1 = document.createElement("div");
+    z1.id = "div-gpt-ad-1640171170795-0";
+    if (!mobileCheck()) {
+      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0px;left:5px;z-index:99";
+    }else {
+      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0px !important;left:5px;z-index:99";
+    }
+    x1 = document.querySelector("body");
+    x1.appendChild(z1);
+
+    var s3 = document.createElement('script');
+    s3.setAttribute("crossorigin", "anonymous");
+    s3.async = true;
+    s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347743608688020";
+    document.getElementsByTagName('head')[0].appendChild(s3);
+
+    var s0 = document.createElement('script');
+  	s0.async = "async";
+  	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
+  	s0.type = "text/javascript";
+  	document.getElementsByTagName('head')[0].appendChild(s0);
+
+  	window.unibotshb = window.unibotshb || { cmd: [] };
+  	unibotshb.cmd.push(() => {
+  	    ubHB("freepressjournal");
+  	});
+//   }
 // }
 
   ub_passback1();

@@ -48,6 +48,14 @@ adUnitNames: [
 		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_2',
     '/21928950349,21806813315/gamertweak_ub_300x250_320x50_3',
 		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_4',
+    '/21928950349,21806813315/gamertweak_ub_300x250_320x50_5',
+   '/21928950349,21806813315/gamertweak_ub_300x250_320x50_6',
+    '/21928950349,21806813315/gamertweak_ub_300x250_320x50_7',
+   '/21928950349,21806813315/gamertweak_ub_300x250_320x50_8',
+   '/21928950349,21806813315/gamertweak_ub_300x250_320x50_9',
+   '/21928950349,21806813315/gamertweak_ub_300x250_320x50_10',
+   '/21928950349,21806813315/gamertweak_ub_300x250_320x50_11',
+   '/21928950349,21806813315/gamertweak_ub_300x250_320x50_12',
 ],
 adId: [
 	  'div-gpt-ad-1636976525804-0',
@@ -429,7 +437,7 @@ function fillRefreshMap() {
    });
 
  setInterval(function() {
-   if (mappings_final_refresh.adSlots != '') {
+   if ((mappings_final_refresh.adSlots != '')) {
      refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
    }
  }, REFRESH_TIMEOUT);
@@ -507,6 +515,11 @@ function generateubNextSlotName(ubslot) {
   return ubslot + '_' + ubid;
 }
 
+var ubnewadunit = 5;
+function generateubNewadunit() {
+  return ubnewadunit++;
+}
+
 function ub_infinite() {
   // Create a div for the slot
   // var ub_AdunitInit = 0;
@@ -517,6 +530,7 @@ function ub_infinite() {
 
       if (targetUnit != undefined && targetUnit.innerHTML == "") {
         var ubslot_new= generateubNextSlotName('ubslotN');
+        var ub_newadunit = generateubNewadunit();
         // ubslotdiv = "ubslotDiv" + i;
         // ubslotdiv = document.createElement('div');
         // ubslotdiv.id = ubslotid; // Id must be the same as slotName
@@ -526,9 +540,9 @@ function ub_infinite() {
         googletag.cmd.push(function() {
           // let ub_slotnumNew = "ub_slotN" + [i];
           if (!mobileCheck()) {
-             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesD[i]);
+             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i+ub_newadunit], mapping_hb.sizesD[i]);
           }else {
-            ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i]);
+             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i+ub_newadunit], mapping_hb.sizesM[i]);
           }
           ubslot_new.addService(googletag.pubads());
           ubslotdiv = document.createElement('div');

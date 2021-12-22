@@ -811,10 +811,10 @@ function fillRefreshMap() {
                 var ubifame = nodes.length && nodes[0].nodeName.toLowerCase();
                 if (ubifame == 'iframe') {
                 if (el != null) {
-                    // var temp = setInterval(function () {
+                    var temp = setInterval(function () {
                         if (isInViewSpace(el)) {
-                            // timer -= 1;
-                            // if (timer <= 0) {
+                            timer -= 1;
+                            if (timer <= 0) {
                               if(mappings_final_refresh_list["adUnitNames"].filter(function(val){return val == event.slot.getSlotId().getAdUnitPath()})){
                                 mappings_final_refresh.adSlots.push(event.slot);
                                 mappings_final_refresh.adUnitNames.push(event.slot.getSlotId().getAdUnitPath());
@@ -822,9 +822,9 @@ function fillRefreshMap() {
                                 // console.log(mappings_final_refresh.adUnitNames);
                                 // refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
                                 // clearInterval(temp);
-                            // }
+                            }
                         }
-                    // }, 1000);
+                    }, 1000);
                 }
               }
             });
@@ -841,7 +841,9 @@ googletag.cmd.push(function() {
   });
 
 setTimeout(function() {
-  refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+  if (!(mappings_final_refresh.adSlots == '')) {
+    refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
+  }
 }, REFRESH_TIMEOUT);
 
 // function callExtraHBAds(adCode, ub_slot){

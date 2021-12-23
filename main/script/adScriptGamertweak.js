@@ -515,7 +515,7 @@ function generateubNextSlotName(ubslot) {
   return ubslot + '_' + ubid;
 }
 
-var ubnewadunit = 5;
+var ubnewadunit = 4;
 function generateubNewadunit() {
   return ubnewadunit++;
 }
@@ -535,14 +535,15 @@ function ub_infinite() {
         ubslotdiv = document.createElement('div');
         ubslotdiv.id = ubslot_new; // Id must be the same as slotName
         targetUnit.appendChild(ubslotdiv)
+        // console.log(ub_newadunit,i, mapping_hb.adUnitNames[i+ub_newadunit]);
 
         // googletag.destroySlots(mappings.slots[i])
         googletag.cmd.push(function() {
           // let ub_slotnumNew = "ub_slotN" + [i];
           if (!mobileCheck()) {
-             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i+ub_newadunit], mapping_hb.sizesD[i],ubslot_new);
+             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[ub_newadunit], mapping_hb.sizesD[i],ubslot_new);
           }else {
-             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i+ub_newadunit], mapping_hb.sizesM[i], ubslot_new);
+             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[ub_newadunit], mapping_hb.sizesM[i], ubslot_new);
           }
           ubslot_new.addService(googletag.pubads());
           // ubslotdiv = document.createElement('div');

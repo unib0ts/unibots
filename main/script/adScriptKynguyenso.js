@@ -15,7 +15,7 @@
   loadAd("gabywa");
 
   var mybotstyleSheet =
-      ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:99}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 150px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;}";
+      ".ub-sticky-ad-container{width:100%;float:left;text-align:center;background:#fff;position:fixed;bottom:0;left:0;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;z-index:99}.ub-sticky-ad{width:100%;z-index:100;padding-top:4px}.close_ub-sticky-ad{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0}.close_ub-sticky-addesk{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}.ub-sticky-ad-containerdesk{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646}.ub-left-ad{width: auto !important;position: fixed;top: 150px;left: 0px;z-index: 100;}.ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}  .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);} #div-gpt-ad-1629457284866-0{ max-width: unset !important;padding-left: unset !important; margin-left: unset !important; margin-right:unset !important;} .AdsInnov_Container_Parallax{background-color:#fff;width:100%;text-align:center;height:340px;position:relative;margin:40px auto}.AdsInnov_Container_Parallax_one{width:100%;height:100%;top:20px;cursor:pointer;position:absolute;margin:auto;z-index:auto;clip:rect(0,auto,auto,0)}.AdsInnov_Container_Parallax_two{vertical-align:bottom;margin:0 auto;position:fixed;top:0;left:0;width:100%;height:100%;transform:matrix(1,0,0,1,0,0);overflow:hidden}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -97,23 +97,39 @@
           z2 = document.createElement("div");
           z2.id = "div-gpt-ad-1637224185002-0";
           z2.style = "min-width: 300px; min-height: 250px";
-          if (document.querySelector('.slist-01')) {
-            x1 = document.querySelectorAll('.slist-01');
-            x1[2].appendChild(z2);
+          // if (document.querySelector('article')) {
+          //   x1 = document.querySelectorAll('article');
+          //   if (x1[2]) {
+          //     x1[2].appendChild(z3);
+          //   }
+          // }
+          if (document.querySelector('.article-content')) {
+            x1 = document.querySelector('.article-content');
+            x1.appendChild(z2);
           }
-          else if (document.querySelector('article')) {
-            x1 = document.querySelector('article');
-            x1.insertBefore(z2, x1.childNodes[0]);
-          }
+
+          ub_z1 = document.createElement("div");
+          ub_z1.className = "AdsInnov_Container_Parallax";
+
+          ub_z2 = document.createElement("div");
+          ub_z2.className = "AdsInnov_Container_Parallax_one";
+          ub_z1.appendChild(ub_z2);
+
+          ub_z3 = document.createElement("div");
+          ub_z3.className = "AdsInnov_Container_Parallax_two";
+          ub_z2.appendChild(ub_z3);
 
           z3 = document.createElement("div");
           z3.id = "div-gpt-ad-1637224154071-0";
           z3.style = "min-width: 300px; min-height: 600px";
-          if (document.querySelector('article')) {
-            x1 = document.querySelectorAll('article');
-            if (x1[2]) {
-              x1[2].appendChild(z3);
-            }
+          ub_z3.appendChild(z3);
+          if (document.querySelector('.slist-01')) {
+            x1 = document.querySelectorAll('.slist-01');
+            x1[2].appendChild(ub_z1);
+          }
+          else if (document.querySelector('article')) {
+            x1 = document.querySelector('article');
+            x1.insertBefore(ub_z1, x1.childNodes[0]);
           }
           // if (document.querySelector('.article-content')) {
           //   x1 = document.querySelector('.article-content');

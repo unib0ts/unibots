@@ -19,9 +19,9 @@ mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/block
 mybotBlockedClientName = 'Filmyfocus';
 
 if (window.location.hostname == "telugu.filmyfocus.com" && !(window.location.href == "https://telugu.filmyfocus.com/")) {
-  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 99 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 99 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
 }else {
-  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 180px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 60px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 99 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 99 !important;} #ifr_465765-1{bottom: 180px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 60px !important;}";
 }
 var css = document.createElement("style");
 css.type = "text/css";

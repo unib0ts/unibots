@@ -432,7 +432,7 @@ function mobileCheckAdScript() {
 // }
 
 function callFullHBAds(adCode, ub_slot) {
-    // fillRefreshMap();
+    fillRefreshMap();
     ubpbjs.que.push(function () {
         ubpbjs.requestBids({
             timeout: PREBID_TIMEOUT,
@@ -720,7 +720,7 @@ function fillRefreshMap() {
     });
 
     setInterval(function() {
-      if (!mappings_final_refresh.adSlots == '') {
+      if (!(mappings_final_refresh.adSlots == '')) {
         refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
       }
     }, REFRESH_TIMEOUT);

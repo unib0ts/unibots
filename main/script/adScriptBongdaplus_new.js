@@ -298,20 +298,21 @@ function ubadScript() {
         //   x3 = document.querySelectorAll('.admob');
         //   x3[1].appendChild(z3);
         // }
-         z3 = document.createElement("div");
-         z3.id = "unibots5";
-         z3.innerHTML = "<div id='div-gpt-ad-1637854561248-0'></div>";
+         // z3 = document.createElement("div");
+         // z3.id = "unibots5";
+         // z3.innerHTML = "<div id='div-gpt-ad-1637854561248-0'></div>";
 
          x3 = document.querySelectorAll('.admob');
-         x3[1].appendChild(z3);
+         // x3[1].appendChild(z3);
          // y3 = x3.querySelectorAll('.latest_news');
          // x3.insertBefore(z3, y3[0]);
 
          z4 = document.createElement("div");
          z4.id = "unibots6";
          z4.innerHTML = "<div id='div-gpt-ad-1637854359680-0'></div>";
-
-         x3[3].appendChild(z4);
+         if (x3[4]) {
+         x3[4].appendChild(z4);
+         }
 
          z5 = document.createElement("div");
          z5.id = "unibots7";

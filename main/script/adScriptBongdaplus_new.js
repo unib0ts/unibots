@@ -93,7 +93,7 @@ function ubadScript() {
       clearInterval(ub_interval_plyr_check);
       if (document.getElementById("div-ub-bongdaplus")) {
         // console.log('ub-Playertriggerd');
-        url ="https://unibots.b-cdn.net/clientdata/player2.js";
+        url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
         ub_vs = document.createElement("script");
         ub_vs.src = url;
         ub_vs.type = "text/javascript";
@@ -159,7 +159,7 @@ function ubadScript() {
       // document.getElementsByTagName('head')[0].appendChild(s5);
         // if(!(bong_vietnamcatg)){
         // if(!((window.location.href.split('https://bongdaplus.vn/aff-cup/').length == 2) || (window.location.href.split('https://bongdaplus.vn/bong-da-chau-a').length == 2) || (window.location.href.split('https://bongdaplus.vn/chuyen-de/ket-qua-aff-cup-2020.htm?new=463634').length == 2) || (window.location.href.split('https://bongdaplus.vn/aff-cup/lich-thi-dau-dt-viet-nam-tai-aff-cup-2020-3465842110.html').length == 2)  || (window.location.href.split('https://bongdaplus.vn/chuyen-de/bang-xep-hang-aff-cup-2020.htm?new=463634').length == 2))) {
-        if(window.location.href == "https://bongdaplus.vn/"){
+        // if(window.location.href == "https://bongdaplus.vn/"){
           if (document.querySelector("main")) {
             z = document.createElement("div");
             z.id = "ub-left-ad";
@@ -189,7 +189,7 @@ function ubadScript() {
                     '<div id="div-gpt-ad-1614845141925-0">';
             }
         }
-      }
+      // }
       if (!(window.location.href == "https://bongdaplus.vn/")) {
           z1 = document.createElement("div");
           z1.id = "ub-sticky-ad-containerdesk";
@@ -741,8 +741,8 @@ function ubadScript() {
             "AR03",// "div-gpt-ad-1614844828905-0", //'/22140546871/bongdaplus.vn_pc_R3_300x600',
             "AR04",//"div-gpt-ad-1614844910453-0", //'/22140546871/bongdaplus.vn_pc_R4_300x600',
             "AR05",//"div-gpt-ad-1614844982617-0", //'/22140546871/bongdaplus.vn_pc_R5_300x600',
-            "ub-left-ad", //'/22140546871/bongdaplus.vn_pc_fl_120x600',
-            "ub-right-ad", //'/22140546871/bongdaplus.vn_pc_fr_120x600',
+            "div-gpt-ad-1614845055882-0", //'/22140546871/bongdaplus.vn_pc_fl_120x600',
+            "div-gpt-ad-1614845141925-0", //'/22140546871/bongdaplus.vn_pc_fr_120x600',
             "div-gpt-ad-1615775720668-0", //'/22140546871/bongdaplus.vn_pc_centerarticlepc_336x280',
 
           // "div-gpt-ad-1629456718562-0", //'/21928950349,22612899972/bongdaplus.vn_popup_fluid_336x280'

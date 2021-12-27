@@ -14,47 +14,44 @@ function mobileCheck() {
     return check;
 }
 
-// mybotBlockedPagesFlag = 1;
-// mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksAndhrajyothy.json';
-// mybotBlockedClientName = 'andhrajyothy';
+mybotBlockedPagesFlag = 1;
+mybotBlockedClientName = 'Puthiyathalaimurai';
 //
-//   if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-//     urlToCheck = window.location.host+window.location.pathname+window.location.search;
-//
-//     var request = new XMLHttpRequest();
-//     url = mybotBlockedUrl;
-//
-//     request.open('GET', url, true);
-//     request.onload = function() {
-//       if (request.status >= 200 && request.status < 400) {
-//         var data = request.responseText;
-//         data = JSON.parse(data);
-//         data = data[mybotBlockedClientName];
-//         if(data) {
-//           data = data.urls;
-//           if(data.includes(urlToCheck)){
-//             // mybotdiv1 = '';
-//             return false;
-//           }
-//           else{
-//             ubadScript();
-//           }
-//         }
-//       }
-//       else {
-//         console.log('Block Check Request failed');
-//         ubadScript();
-//       }
-//     };
-//     request.onerror = function() {
-//       console.log('Request failed');
-//       ubadScript();
-//     };
-//     request.send();
-//   }
-//   else{
-//     ubadScript();
-//   }
+  if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+    urlToCheck = window.location.host+window.location.pathname;
+    var request = new XMLHttpRequest();
+    url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+    // url = mybotBlockedUrl;
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var data = request.responseText;
+        data = JSON.parse(data);
+        // data = data[mybotBlockedClientName];
+        if(data) {
+          // data = data.urls;
+          if(data.status == true){
+            return false;
+          }
+          else{
+            ubadScript();
+          }
+        }
+      }
+      else {
+        console.log('Block Check Request failed');
+        ubadScript();
+      }
+    };
+    request.onerror = function() {
+      console.log('Request failed');
+      ubadScript();
+    };
+    request.send();
+  }
+  else{
+    ubadScript();
+  }
 
 
   var mybotstyleSheet ="#div-clmb-ctn-467893-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-467894-1{width: auto !important;z-index: 2147483647 !important;} #ifr_467893-1{bottom: 125px !important;left: -30px !important;} #ifr_467894-1{bottom: 120px !important;left: -30px !important;} #div-ub-1{z-index: 2147483647 !important;}";
@@ -72,6 +69,27 @@ function mobileCheck() {
   document.getElementsByTagName("head")[0].appendChild(ub_ga);
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
+
+function ubadScript() {
+  window.googletag = window.googletag || {cmd: []};
+  var ub_slotpixel;
+
+  var s5 = document.createElement('script');
+  s5.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+  s5.async = "async";
+  document.getElementsByTagName('head')[0].appendChild(s5);
+
+  googletag.cmd.push(function() {
+    ub_slotpixel = googletag.defineSlot('/76299822/Unibots', [1, 1], 'div-gpt-ad-1639655414468-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    googletag.pubads().refresh([ub_slotpixel]);
+  });
+
+  var ub_div1 = document.createElement('div');
+  ub_div1.id = "div-gpt-ad-1639655414468-0";
+  ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1639655414468-0'); });</script>";
+  document.getElementsByTagName('body')[0].appendChild(ub_div1);
 
 // function ubadScript() {
 //   if (!mobileCheck() && !(window.location.hostname == "epaper.andhrajyothy.com" || window.location.hostname == "ebeta.andhrajyothy.com")) {
@@ -92,24 +110,17 @@ function mobileCheck() {
     document.getElementsByTagName('head')[0].appendChild(s3);
 
     var s0 = document.createElement('script');
-    s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-    s0.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(s0);
+  	s0.async = "async";
+  	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
+  	s0.type = "text/javascript";
+  	document.getElementsByTagName('head')[0].appendChild(s0);
 
-    var s1 = document.createElement('script');
-    s1.async = "async";
-    s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-    s1.type = "text/javascript";
-    document.getElementsByTagName('head')[0].appendChild(s1);
-
-    var cachebuster = Math.round(new Date().getTime() / 1000);
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptPuthiyathalaimurai.js?cb='+cachebuster;
-    s2 = document.createElement('script');
-    s2.src = url;
-    s2.async = "async";
-    document.body.appendChild(s2);
+  	window.unibotshb = window.unibotshb || { cmd: [] };
+  	unibotshb.cmd.push(() => {
+  	    ubHB("puthiyathalaimurai");
+  	});
 //   }
-// }
+}
 
   ub_passback1();
 
@@ -166,21 +177,21 @@ function mobileCheck() {
     }
   }
 
-  setInterval(function(){
-    if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
-      if (!mobileCheck()) {
-        try{
-          colombia.refresh('div-clmb-ctn-467893-1');
-          cubespinnervisibility();
-        }catch(e){}
-      }else {
-        try{
-          colombia.refresh('div-clmb-ctn-467894-1');
-          cubespinnervisibility();
-        }catch(e){}
-      }
-     }
-  }, 30000);
+  // setInterval(function(){
+  //   if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+  //     if (!mobileCheck()) {
+  //       try{
+  //         colombia.refresh('div-clmb-ctn-467893-1');
+  //         cubespinnervisibility();
+  //       }catch(e){}
+  //     }else {
+  //       try{
+  //         colombia.refresh('div-clmb-ctn-467894-1');
+  //         cubespinnervisibility();
+  //       }catch(e){}
+  //     }
+  //    }
+  // }, 30000);
 
 
   function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {

@@ -19,9 +19,9 @@ mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/block
 mybotBlockedClientName = 'Filmyfocus';
 
 if (window.location.hostname == "telugu.filmyfocus.com" && !(window.location.href == "https://telugu.filmyfocus.com/")) {
-  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 99 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 99 !important;} #ifr_465765-1{bottom: 290px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 180px !important;}";
 }else {
-  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465765-1{bottom: 180px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 60px !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-465765-1{width: auto !important;z-index: 99 !important;} #div-clmb-ctn-465766-1{width: auto !important;z-index: 99 !important;} #ifr_465765-1{bottom: 180px !important;right:0px !important;left: unset !important;} #ifr_465766-1{right:0px !important;left: unset !important;bottom: 60px !important;}";
 }
 var css = document.createElement("style");
 css.type = "text/css";
@@ -120,8 +120,8 @@ function ubadScript() {
 	s0.type = "text/javascript";
 	document.getElementsByTagName('head')[0].appendChild(s0);
 
-	window.unibots = window.unibots || { cmd: [] };
-	unibots.cmd.push(() => {
+	window.unibotshb = window.unibotshb || { cmd: [] };
+	unibotshb.cmd.push(() => {
 	    ubHB("filmyfocus");
 	});
 
@@ -131,19 +131,19 @@ function ubadScript() {
 setTimeout(function(){
  ub_passback1();
 
- setInterval(function(){
-   if (!mobileCheck()) {
-      try{
-      colombia.refresh('div-clmb-ctn-465765-1');
-      cubespinnervisibility();
-      }catch(e){}
-  }else {
-    try{
-       colombia.refresh('div-clmb-ctn-465766-1');
-       cubespinnervisibility();
-    }catch(e){}
-  }
- }, 30000);
+ // setInterval(function(){
+ //   if (!mobileCheck()) {
+ //      try{
+ //      colombia.refresh('div-clmb-ctn-465765-1');
+ //      cubespinnervisibility();
+ //      }catch(e){}
+ //  }else {
+ //    try{
+ //       colombia.refresh('div-clmb-ctn-465766-1');
+ //       cubespinnervisibility();
+ //    }catch(e){}
+ //  }
+ // }, 30000);
 
 }, 500);
 

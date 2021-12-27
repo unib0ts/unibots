@@ -56,14 +56,14 @@ document.getElementsByTagName("head")[0].appendChild(css);
      }
    }
 
-   setInterval(function(){
-     if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
-         try{
-           colombia.refresh('div-clmb-ctn-466515-1');
-           cubespinnervisibility();
-         }catch(e){}
-      }
-   }, 30000);
+   // setInterval(function(){
+   //   if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
+   //       try{
+   //         colombia.refresh('div-clmb-ctn-466515-1');
+   //         cubespinnervisibility();
+   //       }catch(e){}
+   //    }
+   // }, 30000);
 
 
    function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {

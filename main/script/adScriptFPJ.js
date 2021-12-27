@@ -92,14 +92,14 @@ var adUnits = [
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-          { bidder: 'openx', params: {unit: '543530338', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '543530338', delDomain: 'unibots-d.openx.net'}},
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2995936'} },
           { bidder: 'nobid', params: { siteId : '22049999677'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE68738DD92EF72767822378D727'} },
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
-          { bidder: 'smartadserver', params: { siteId: '362116', pageId: '1289617', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362116', pageId: '1289617', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           { bidder: 'sonobi', params: { placement_id: '795c9731aacf3eb81e49', ad_unit: 'freepressjournal.in_NB_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         ]

@@ -48,6 +48,14 @@ adUnitNames: [
 		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_2',
     '/21928950349,21806813315/gamertweak_ub_300x250_320x50_3',
 		'/21928950349,21806813315/gamertweak_ub_300x250_320x50_4',
+   //  '/21928950349,21806813315/gamertweak_ub_300x250_320x50_5',
+   // '/21928950349,21806813315/gamertweak_ub_300x250_320x50_6',
+   //  '/21928950349,21806813315/gamertweak_ub_300x250_320x50_7',
+   // '/21928950349,21806813315/gamertweak_ub_300x250_320x50_8',
+   // '/21928950349,21806813315/gamertweak_ub_300x250_320x50_9',
+   // '/21928950349,21806813315/gamertweak_ub_300x250_320x50_10',
+   // '/21928950349,21806813315/gamertweak_ub_300x250_320x50_11',
+   // '/21928950349,21806813315/gamertweak_ub_300x250_320x50_12',
 ],
 adId: [
 	  'div-gpt-ad-1636976525804-0',
@@ -73,7 +81,7 @@ bids: [
          	// { bidder: 'adyoulike', params: { placement: '33aeb1ecd77e4749e314a127a84d161e'}, labelAll: ["US"] },
 				 { bidder: 'ucfunnel', params: { adid : 'ad-34B87D8A229B6D67C3A272D438B74DE9'} },
 				 { bidder: 'sovrn', params: {tagid: '977416'} },
-           { bidder: 'openx', params: {unit: '551027268', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+           { bidder: 'openx', params: {unit: '551027268', delDomain: 'unibots-d.openx.net'} },
 			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
 		]), //Infeedinstream1
 		hb_common_bidders.concat([
@@ -81,7 +89,7 @@ bids: [
          	// { bidder: 'adyoulike', params: { placement: '33aeb1ecd77e4749e314a127a84d161e'}, labelAll: ["US"] },
 				 { bidder: 'ucfunnel', params: { adid : 'ad-47B49E4D28DE4829CED3499338726D4A'} },
 				 { bidder: 'sovrn', params: {tagid: '977417'} },
-           { bidder: 'openx', params: {unit: '551027584', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+           { bidder: 'openx', params: {unit: '551027584', delDomain: 'unibots-d.openx.net'}},
 			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
 		]), //Infeedinstream2
 		hb_common_bidders.concat([
@@ -89,7 +97,7 @@ bids: [
          	// { bidder: 'adyoulike', params: { placement: '33aeb1ecd77e4749e314a127a84d161e'}, labelAll: ["US"] },
 				 { bidder: 'ucfunnel', params: { adid : 'ad-2736D86AD39D2249C87342E39B7493EE'} },
 				 { bidder: 'sovrn', params: {tagid: '977418'} },
-           { bidder: 'openx', params: {unit: '551027873', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+           { bidder: 'openx', params: {unit: '551027873', delDomain: 'unibots-d.openx.net'} },
 			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
 		]), //Infeed-Kinhdoanh
 		hb_common_bidders.concat([
@@ -97,7 +105,7 @@ bids: [
          	// { bidder: 'adyoulike', params: { placement: '33aeb1ecd77e4749e314a127a84d161e'}, labelAll: ["US"] },
 				 { bidder: 'ucfunnel', params: { adid : 'ad-2736D86AD76B2B8208A6A69D9647D82A'} },
 				 { bidder: 'sovrn', params: {tagid: '977419'} },
-           { bidder: 'openx', params: {unit: '551028139', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+           { bidder: 'openx', params: {unit: '551028139', delDomain: 'unibots-d.openx.net'} },
 			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
 		]), //Infeed-Giaitri
 	]
@@ -121,6 +129,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 var mappings = {
     slots: [],
+    slots_new: [],
     adCode: [],
     slotNumbers: [],
     sizes: [],
@@ -142,7 +151,50 @@ var mappings = {
       adSlots: [],
   };
 
+  // mybotBlockedPagesFlag = 1;
+  // mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksGamertweak.json';
+  // mybotBlockedClientName = 'Gamertweak';
+  //
+  // if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  //   urlToCheck = window.location.host+window.location.pathname;
+  //
+  //   var request = new XMLHttpRequest();
+  //     url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+  //
+  //   request.open('GET', url, true);
+  //   request.onload = function() {
+  //     if (request.status >= 200 && request.status < 400) {
+  //       var data = request.responseText;
+  //       data = JSON.parse(data);
+  //       // data = data[mybotBlockedClientName];
+  //       if(data) {
+  //         // data = data.urls;
+  //         if(data.status == true){
+  //           return false;
+  //         }
+  //         else{
+  //           mybotubScript();
+  //         }
+  //       }
+  //     }
+  //     else {
+  //       console.log('Block Check Request failed');
+  //       mybotubScript();
+  //     }
+  //   };
+  //   request.onerror = function() {
+  //     console.log('Request failed');
+  //     mybotubScript();
+  //   };
+  //   request.send();
+  // }
+  // else{
+  //   mybotubScript();
+  // }
+
+// function mybotubScript() {
   var mybotubad = setInterval(ub_adscript, 500);
+// }
 
   function ub_adscript() {
     var mybotAdscriptEnabled =0;
@@ -385,7 +437,7 @@ function fillRefreshMap() {
    });
 
  setInterval(function() {
-   if (mappings_final_refresh.adSlots != '') {
+   if ((mappings_final_refresh.adSlots != '')) {
      refreshBid(mappings_final_refresh.adSlots, mappings_final_refresh.adUnitNames);
    }
  }, REFRESH_TIMEOUT);
@@ -441,7 +493,7 @@ function googleDefine(slotNumbers, adCode, sizes, adId){
   for (var i = 0; i < slotNumbers.length; i++) {
       let ub_slotnum = "ub_slot" + slotNumbers[i];
       ub_slotnum =  googletag.defineSlot(adCode[i], sizes[i], adId[i]);
-      ub_slotnum.setTargeting("test","infinitescroll").addService(googletag.pubads());
+      ub_slotnum.addService(googletag.pubads());
       mappings.slots.push(ub_slotnum);
   }
 }
@@ -460,32 +512,45 @@ function googlePush(){
 var ubnextSlotId = 1;
 function generateubNextSlotName(ubslot) {
   var ubid = ubnextSlotId++;
-  return ubslot + '-' + ubid;
+  return ubslot + '_' + ubid;
+}
+
+var ubnewadunit = 4;
+function generateubNewadunit() {
+  return ubnewadunit++;
 }
 
 function ub_infinite() {
   // Create a div for the slot
+  // var ub_AdunitInit = 0;
   for(var i=0; i<mapping_hb.targetUnits.length; i++){
       ubtargetdivid = "#" + mapping_hb.targetUnits[i];
       targetUnit = document.querySelectorAll(ubtargetdivid);
       targetUnit = targetUnit[targetUnit.length- 1];
-      // console.log(targetUnit,targetUnit.innerHTML == "");
-      if (targetUnit != undefined && targetUnit.innerHTML == "") {
-        var ubslotid = generateubNextSlotName('ubslot');
-        ubslotdiv = "ubslotDiv" + i;
-        ubslotdiv = document.createElement('div');
-        ubslotdiv.id = ubslotid; // Id must be the same as slotName
-        targetUnit.appendChild(ubslotdiv)
 
+      if (targetUnit != undefined && targetUnit.innerHTML == "") {
+        var ubslot_new= generateubNextSlotName('ubslotN');
+        // var ub_newadunit = generateubNewadunit();
+        // ubslotdiv = "ubslotDiv" + i;
+        // ubslotdiv = document.createElement('div');
+        // ubslotdiv.id = ubslot_new; // Id must be the same as slotName
+        // targetUnit.appendChild(ubslotdiv)
+        // console.log(ub_newadunit,i, mapping_hb.adUnitNames[i+ub_newadunit]);
+
+        // googletag.destroySlots(mappings.slots[i])
         googletag.cmd.push(function() {
-          let ub_slotnumNew = "ub_slotN" + [i];
+          // let ub_slotnumNew = "ub_slotN" + [i];
           if (!mobileCheck()) {
-            ub_slotnumNew =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesD[i], ubslotid);
+             ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesD[i]);
           }else {
-            ub_slotnumNew =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i], ubslotid);
+            ubslot_new =  googletag.defineSlot(mapping_hb.adUnitNames[i], mapping_hb.sizesM[i]);
           }
-          ub_slotnumNew.setTargeting("test","infinitescroll").addService(googletag.pubads());
-          googletag.pubads().refresh([ub_slotnumNew]);
+          ubslot_new.addService(googletag.pubads());
+          ubslotdiv = document.createElement('div');
+          ubslotdiv.id = ubslot_new.getSlotElementId(); //auto-generated by GPT
+          targetUnit.appendChild(ubslotdiv);
+          // googletag.display(targetUnit);
+          googletag.pubads().refresh([ubslot_new]);
         });
       }
   }

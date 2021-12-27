@@ -89,7 +89,7 @@ var adUnits = [
         	{ bidder: '33across', params: { siteId : 'd2YM3SBt8r6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
         	{ bidder: 'emx_digital', params: { tagid: '97454' } }, /* sizeless */
           { bidder: 'sovrn', params: {tagid: '719000'} },
-          { bidder: 'openx', params: {unit: '543530322', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+          { bidder: 'openx', params: {unit: '543530322', delDomain: 'unibots-d.openx.net'}},
         	{ bidder: 'rhythmone', params: { placementId: '205373' } }, /* one placementId for all sizes */
         	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028641'} },
@@ -97,7 +97,7 @@ var adUnits = [
           // { bidder: 'criteointl', params: {networkId: '10545'} },
           { bidder: 'nobid', params: { siteId : '22049999638'} },
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-          { bidder: 'smartadserver', params: { siteId: '362093', pageId: '1289594', formatId: '93231', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+          { bidder: 'smartadserver', params: { siteId: '362093', pageId: '1289594', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           { bidder: 'sonobi', params: { placement_id: 'bc6bf942b24fc0dd4ba7', ad_unit: 'assamtribune.com_nb_320x50' } },
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

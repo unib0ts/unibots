@@ -831,6 +831,18 @@
           "seller_id": "139",
           "name": "manatelangana",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.tellychakkar.com/",
+          "seller_id": "140",
+          "name": "tellychakkar",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.tamilspark.com/",
+          "seller_id": "141",
+          "name": "tamilspark",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

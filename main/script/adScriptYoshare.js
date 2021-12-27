@@ -111,7 +111,7 @@ if (document.getElementById('yoshare_unibot1_336x280_300x250_a_tag')) {
 				 { bidder: 'oftmedia', params: { placementId: '22762550' } },
 				 { bidder: '33across', params: { siteId : 'cit9hciEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 				 // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-					{ bidder: 'openx', params: {unit: '543530140', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+					{ bidder: 'openx', params: {unit: '543530140', delDomain: 'unibots-d.openx.net'} },
 				 { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
 				 // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
 					{ bidder: 'nobid', params: { siteId : '22103833237'} },
@@ -144,7 +144,7 @@ if (document.getElementById('yoshare_unibot1_336x280_300x250_b_tag')) {
 			 { bidder: 'oftmedia', params: { placementId: '22762550' } },
 			 { bidder: '33across', params: { siteId : 'cit9hciEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
 			 // { bidder: 'emx_digital', params: { tagid: '97458' } }, /* sizeless */
-				{ bidder: 'openx', params: {unit: '543530141', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+				{ bidder: 'openx', params: {unit: '543530141', delDomain: 'unibots-d.openx.net'} },
 			 { bidder: 'rhythmone', params: { placementId: '205945' } }, /* one placementId for all sizes */
 			 // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
 				{ bidder: 'nobid', params: { siteId : '22103833237'} },
@@ -182,7 +182,7 @@ var mappings = {
 
 function mybotubScript() {
 	// var cachebuster = Math.round(new Date().getTime() / 1000);
-	url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+	url ="https://unibots.b-cdn.net/player.js";
 	ub_vs = document.createElement("script");
 	ub_vs.src = url;
 	ub_vs.type = "text/javascript";

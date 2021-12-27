@@ -171,6 +171,8 @@ var mappings = {
 // }
 // apSlots.push(apSlotTemp);
 
+
+
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;
   if(!mappings.renderedFlag[ub_slotNum]){

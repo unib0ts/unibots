@@ -617,6 +617,10 @@ function ubadScript() {
       '/1062118/English_HP_970x90_1',
       '/1062118/English_HP_300x250_1',
       '/1062118/English_HP_300x250_2',
+      '/1062118/English_Post_300X250_belowtopstories',
+      /1062118/'English_Post_300X250_abovetechnologysection',
+      '/1062118/English_Post_300X250_belowrichcards',
+      '/1062118/English_Post_300X250_Inbetweenarticle',
       '/1062118/hindi_hp_lb_970x90',  //https://hindi.sakshi.com/ -
       '/1062118/hindi_hp_skin_left_160x600',
       '/1062118/hindi_hp_skin_right_160x600',

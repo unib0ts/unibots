@@ -213,13 +213,13 @@ function ubadScript() {
       // }
 
     if((window.location.href== "https://m.docbao.vn/")){
-    //   z2 = document.createElement("div");
-    //   z2.id = "ub-popup-ad-container";
-    //   z2.className = "ub-popup-ad-container";
-    //   z2.innerHTML =
-    //       '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
-    //   x2 = document.querySelector("body");
-    //   x2.appendChild(z2);
+      z2 = document.createElement("div");
+      z2.id = "ub-popup-ad-container";
+      z2.className = "ub-popup-ad-container";
+      z2.innerHTML =
+          '<span class="mybotpopupCloseButton" id="mybotpopupCloseButton" onclick="mybotubPopadcls()" style="display:none">\u0078</span><div class="ub-popup-ad" id="div-gpt-ad-1624440241552-0"><script>googletag.cmd.push(function() {googletag.display("div-gpt-ad-1624440241552-0);});</script></div>';
+      x2 = document.querySelector("body");
+      x2.appendChild(z2);
     }
 
     if (document.querySelector('#ax-article-header')) {

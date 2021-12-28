@@ -151,8 +151,8 @@ function ubadScript() {
     // ad_scrpt2.innerText= mybotadscrptChild;
     // document.getElementsByTagName('body')[0].appendChild(ad_scrpt2);
     // if (document.querySelector('.header')) {
-    // if(!(window.location.href.split('https://docbao.vn/xa-hoi').length == 2 )){
-    if(window.location.href == "https://docbao.vn/"){
+    if(!((window.location.href.split('https://docbao.vn/xa-hoi').length == 2 ) || (window.location.href.split('https://docbao.vn/doi-song').length == 2 ))){
+    // if(window.location.href == "https://docbao.vn/"){
       z= document.createElement('div');
       z.id = 'ub-left-ad';
       z.className = 'ub-left-ad';

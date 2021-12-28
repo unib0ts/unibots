@@ -323,7 +323,7 @@ var mappings_full_hb_config_mobile = {
           // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
       ]),
       hb_full_common_bidders.concat([
-          // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
+          { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4239555" } },
           { bidder: 'openx', params: {unit: '556412887', delDomain: 'unibots-d.openx.net'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-BE783AD79AB3432B172B2AD3DABAD8A8'} },
           // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },

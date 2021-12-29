@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-466530-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466531-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466530-1{bottom: 135px !important;} #ifr_466531-1{bottom: 120px !important;}";
+var mybotstyleSheet = mobileCheck() ? "mybot .ub-roller-wrapper {bottom: 130px !important};":"mybot .ub-roller-wrapper {right: 15px !important;left: unset !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -46,87 +46,64 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
    // }, 30000);
 
  function ub_passback1() {
-       if(typeof colombia == 'undefined'){
-       var colombia = colombia || {};
-       colombia.fns = colombia.fns || [];
-         (function() {
-             var cads = document.createElement("script");
-             cads.async = true;
-             cads.type = "text/javascript";
-             cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
-             document.getElementsByTagName('head')[0].appendChild(cads);
-         })();
-       }
+   s4 = document.createElement('script');
+   s4.async = true;
+   s4.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ub_cubescript3/script.min.js";
+   document.getElementsByTagName('head')[0].appendChild(s4);
 
-       var ub_passback = document.createElement("div");
-       ub_passback.setAttribute("style", "float:left;min-height:2px;width:auto;position:absolute;bottom:0;");
-       ub_passback.setAttribute("data-position", "1");
-       ub_passback.setAttribute("data-section", "StroyPage");
-       ub_passback.setAttribute("class", "colombia");
-
-       if (!mobileCheck()) {
-           ub_passback.setAttribute("data-ua", "D");
-           ub_passback.setAttribute("data-slot", "466530");
-           ub_passback.setAttribute("id", "div-clmb-ctn-466530-1");
-           document.getElementsByTagName("body")[0].appendChild(ub_passback);
-       }else {
-         ub_passback.setAttribute("data-ua", "M");
-         ub_passback.setAttribute("data-slot", "466531");
-         ub_passback.setAttribute("id", "div-clmb-ctn-466531-1");
-         document.getElementsByTagName("body")[0].appendChild(ub_passback);
-       }
-
-       cubespinnervisibility();
+   window.unibotsoutb = window.unibotsoutb || { cmd: [] };
+       unibotsoutb.cmd.push(()=>{unibotsOutb("https://kalyanpanelchart.in/");
+   });
   }
 
- function cubespinnervisibility() {
-   var ub_clmb = setInterval(clmbdiv, 500);
-
-   function clmbdiv() {
-       if (!mobileCheck()) {
-         if (document.querySelector('#div-clmb-ctn-466530-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-466530-1').childNodes[0]) {
-                 ub_iframe = document.getElementById('ifr_466530-1');
-                 ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
-                 ub_z2 = document.createElement("div");
-                 ub_z2.id = "ub-cmpgn-ad";
-                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
-                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                 ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
-
-                 // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
-                 //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
-                 // });
-                 clearInterval(ub_clmb);
-           }
-         }
-       }
-       else {
-         if (document.querySelector('#div-clmb-ctn-466531-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-466531-1').childNodes[0]) {
-                 ub_iframe = document.getElementById('ifr_466531-1');
-                 ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
-                 ub_z2 = document.createElement("div");
-                 ub_z2.id = "ub-cmpgn-ad";
-                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
-                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                 ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
-
-                 // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
-                 //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
-                 // });
-                 clearInterval(ub_clmb);
-           }
-         }
-       }
-   }
- }
+ // function cubespinnervisibility() {
+ //   var ub_clmb = setInterval(clmbdiv, 500);
+ //
+ //   function clmbdiv() {
+ //       if (!mobileCheck()) {
+ //         if (document.querySelector('#div-clmb-ctn-466530-1').childNodes) {
+ //           if (document.querySelector('#div-clmb-ctn-466530-1').childNodes[0]) {
+ //                 ub_iframe = document.getElementById('ifr_466530-1');
+ //                 ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+ //                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+ //
+ //                 ub_z2 = document.createElement("div");
+ //                 ub_z2.id = "ub-cmpgn-ad";
+ //                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+ //                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+ //                 ub_z2.innerText = "Ads by Unibots";
+ //                 ub_innerDoc.appendChild(ub_z2);
+ //
+ //                 // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
+ //                 //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
+ //                 // });
+ //                 clearInterval(ub_clmb);
+ //           }
+ //         }
+ //       }
+ //       else {
+ //         if (document.querySelector('#div-clmb-ctn-466531-1').childNodes) {
+ //           if (document.querySelector('#div-clmb-ctn-466531-1').childNodes[0]) {
+ //                 ub_iframe = document.getElementById('ifr_466531-1');
+ //                 ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+ //                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+ //
+ //                 ub_z2 = document.createElement("div");
+ //                 ub_z2.id = "ub-cmpgn-ad";
+ //                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+ //                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+ //                 ub_z2.innerText = "Ads by Unibots";
+ //                 ub_innerDoc.appendChild(ub_z2);
+ //
+ //                 // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
+ //                 //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
+ //                 // });
+ //                 clearInterval(ub_clmb);
+ //           }
+ //         }
+ //       }
+ //   }
+ // }
 
 
  function loadAd(id, adUnits) {

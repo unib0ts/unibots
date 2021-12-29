@@ -38,30 +38,30 @@ function mobileCheck() {
     return check;
 }
 
-if (!mobileCheck()) {
-  if (document.querySelector('#UB_728x90_2')) {
-    document.querySelector('#UB_728x90_2').innerHTML = "<div id='div-gpt-ad-1640343284191-0'></div>";
-  }
-  if (document.querySelector('#UB_728x90_1')) {
-    document.querySelector('#UB_728x90_1').innerHTML = "<div id='div-gpt-ad-1640343311552-0'></div>";
-  }
-}else {
-  if (document.querySelector('#UB_300x600_1')) {
-    document.querySelector('#UB_300x600_1').innerHTML = "<div id='div-gpt-ad-1640343748827-0'></div>";
-  }
-  if (document.querySelector('#UB_300x250_4')) {
-    document.querySelector('#UB_300x250_4').innerHTML = "<div id='div-gpt-ad-1640343787225-0'></div>";
-  }
-  if (document.querySelector('#UB_300x250_3')) {
-    document.querySelector('#UB_300x250_3').innerHTML = "<div id='div-gpt-ad-1640343818319-0'></div>";
-  }
-  if (document.querySelector('#UB_300x250_2')) {
-    document.querySelector('#UB_300x250_2').innerHTML = "<div id='div-gpt-ad-1640343851118-0'></div>";
-  }
-  if (document.querySelector('#UB_300x250_1')) {
-    document.querySelector('#UB_300x250_1').innerHTML = "<div id='div-gpt-ad-1640343893689-0'></div>";
-  }
-}
+// if (!mobileCheck()) {
+//   if (document.querySelector('#UB_728x90_2')) {
+//     document.querySelector('#UB_728x90_2').innerHTML = "<div id='div-gpt-ad-1640343284191-0'></div>";
+//   }
+//   if (document.querySelector('#UB_728x90_1')) {
+//     document.querySelector('#UB_728x90_1').innerHTML = "<div id='div-gpt-ad-1640343311552-0'></div>";
+//   }
+// }else {
+//   if (document.querySelector('#UB_300x600_1')) {
+//     document.querySelector('#UB_300x600_1').innerHTML = "<div id='div-gpt-ad-1640343748827-0'></div>";
+//   }
+//   if (document.querySelector('#UB_300x250_4')) {
+//     document.querySelector('#UB_300x250_4').innerHTML = "<div id='div-gpt-ad-1640343787225-0'></div>";
+//   }
+//   if (document.querySelector('#UB_300x250_3')) {
+//     document.querySelector('#UB_300x250_3').innerHTML = "<div id='div-gpt-ad-1640343818319-0'></div>";
+//   }
+//   if (document.querySelector('#UB_300x250_2')) {
+//     document.querySelector('#UB_300x250_2').innerHTML = "<div id='div-gpt-ad-1640343851118-0'></div>";
+//   }
+//   if (document.querySelector('#UB_300x250_1')) {
+//     document.querySelector('#UB_300x250_1').innerHTML = "<div id='div-gpt-ad-1640343893689-0'></div>";
+//   }
+// }
 
 
 

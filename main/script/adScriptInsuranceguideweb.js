@@ -240,7 +240,7 @@ var hb_full_common_bidders = [
     { bidder: '33across', params: { siteId : 'bodvB2z9Kr7ioKrkHcnlKl', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
     // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
-    // { bidder: 'nobid', params: { siteId: '22656256385' } },
+    { bidder: 'nobid', params: { siteId: '22664946552' } },
     // // { bidder: 'adkernel', params: {zoneId: '152650', host: 'cpm.fmlabsonline.com'} },
     // { bidder: 'nobid', params: { siteId : '22661458898'} },
     // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },

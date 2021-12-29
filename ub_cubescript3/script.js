@@ -35,6 +35,7 @@ mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/clos
 // mybotadSmall = '<div id="div-gpt-ad-1626772946328-0"></div>';
 
 mybotCustomFunction =()=> {
+  document.getElementById('ub-close').innerHTML=mybotClosevar;
   // document.getElementById('gabywa').innerHTML=mybotgabywa;
   // document.getElementById('ub-close').style.display = "none";
   // document.getElementById('adsmall').innerHTML=mybotadSmall;
@@ -58,7 +59,7 @@ mybotCustomFunction =()=> {
      let clientname = clientName;
        ub_passback1(clientname, gabyub);
   }
-  cubespinnervisibility();
+  // cubespinnervisibility();
 
 }
 
@@ -91,23 +92,23 @@ loadAdCustom=() =>{
   }
 }
 
- cubespinnervisibility=()=> {
-  var ub_clmb = setInterval(clmbdiv, 500);
-
-   function clmbdiv() {
-        if (document.querySelector('#ob_holder')) {
-          if (document.querySelector('#ob_holder').childNodes[0]) {
-                document.getElementById('ub-close').innerHTML=mybotClosevar;
-                // ub_z2 = document.createElement("div");
-                // ub_z2.id = "ub_adsbanner";
-                // ub_z2.style = "line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:-18px;text-align:center;right: 16px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                // ub_z2.innerHTML = "<a href='https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget' style='color: #fff;text-decoration: none;'>Ads by Unibots</a>";
-                // document.querySelector('#ub-roller-wrapper').appendChild(ub_z2);
-                clearInterval(ub_clmb);
-          }
-        }
-  }
-}
+//  cubespinnervisibility=()=> {
+//   var ub_clmb = setInterval(clmbdiv, 500);
+//
+//    function clmbdiv() {
+//         if (document.querySelector('#ob_holder')) {
+//           if (document.querySelector('#ob_holder').childNodes[0]) {
+//                 document.getElementById('ub-close').innerHTML=mybotClosevar;
+//                 // ub_z2 = document.createElement("div");
+//                 // ub_z2.id = "ub_adsbanner";
+//                 // ub_z2.style = "line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:-18px;text-align:center;right: 16px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+//                 // ub_z2.innerHTML = "<a href='https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget' style='color: #fff;text-decoration: none;'>Ads by Unibots</a>";
+//                 // document.querySelector('#ub-roller-wrapper').appendChild(ub_z2);
+//                 clearInterval(ub_clmb);
+//           }
+//         }
+//   }
+// }
 
  setAttributes=(el, attrs)=> {
  for(var key in attrs) {

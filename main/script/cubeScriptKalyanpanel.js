@@ -52,7 +52,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
    document.getElementsByTagName('head')[0].appendChild(s4);
 
    window.unibotsoutb = window.unibotsoutb || { cmd: [] };
-       unibotsoutb.cmd.push(()=>{unibotsOutB("https://kalyanpanelchart.in/");
+       unibotsoutb.cmd.push(()=>{unibotsOutb("https://kalyanpanelchart.in/");
    });
   }
 

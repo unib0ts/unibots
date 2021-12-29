@@ -1,3 +1,43 @@
+mybotBlockedPagesFlag = 1;
+mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksDantri.json';
+mybotBlockedClientName = 'Qtcs';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname;
+
+  var request = new XMLHttpRequest();
+  url = 'https://api.unibots.in/block?client=Qtcs&page='+urlToCheck;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      // data = data[mybotBlockedClientName];
+      if(data) {
+        // data = data.urls;
+        if(data.status == true){
+          return false;
+        }
+        else{
+          mybotubScript();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      mybotubScript();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    mybotubScript();
+  };
+  request.send();
+}
+else{
+  mybotubScript();
+}
 
   mybotGACode = 'G-TVKXDF7QLT';
   mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
@@ -21,55 +61,6 @@ var check = false;
 return check;
 };
 
-var s0 = document.createElement('script');
-s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
-s0.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(s0);
-
-var s1 = document.createElement('script');
-s1.async = "async";
-s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
-s1.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(s1);
-
-var GEO_CODE = '';
-(function (){
-  var request = new XMLHttpRequest();
-    url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
-    request.open('GET', url, true);
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        var data = request.responseText;
-        data = JSON.parse(data);
-        if(data.status == "success") {
-          GEO_CODE = data.countryCode;
-        }
-        else {
-          console.error("Geo Request Failed");
-        }
-      }
-      else {
-        console.error('Request failed from server');
-      }
-      mainHbRun();
-    };
-    request.onerror = function() {
-      console.error('Request failed to Reach GEO Server');
-      mainHbRun();
-    };
-    request.send();
-})();
-
-if (mobileCheck()) {
-    z1= document.createElement('div');
-    z1.id = 'ub-sticky-ad-container';
-    z1.className = 'ub-sticky-ad-container';
-    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1639122072424-0"></div>';
-    x1 = document.querySelector('body');
-    x1.appendChild(z1);
-
-}
-
 function mybotubstickyad() {
  document.getElementById('ub-sticky-ad-container').style.display='none';
 }
@@ -78,9 +69,9 @@ var div_1_sizes = [320, 50];
 
 var adUnits = [];
 
-var PREBID_TIMEOUT = 2000;
+var PREBID_TIMEOUT = 1400;
 var FAILSAFE_TIMEOUT = 3000;
-var REFRESH_TIMEOUT = 60000;
+var REFRESH_TIMEOUT = 30000;
 // var boturlbid = window.location.hostname;
 
 
@@ -144,6 +135,45 @@ var mappings = {
 };
 
 
+function mybotubScript() {
+  var s0 = document.createElement('script');
+  s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  var s1 = document.createElement('script');
+  s1.async = "async";
+  s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+  s1.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s1);
+
+  var GEO_CODE = '';
+  (function (){
+    var request = new XMLHttpRequest();
+      url = 'https://pro.ip-api.com/json/?fields=status,message,countryCode&key=LWKtz4EzQwMJRyQ';
+      request.open('GET', url, true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          var data = request.responseText;
+          data = JSON.parse(data);
+          if(data.status == "success") {
+            GEO_CODE = data.countryCode;
+          }
+          else {
+            console.error("Geo Request Failed");
+          }
+        }
+        else {
+          console.error('Request failed from server');
+        }
+        mainHbRun();
+      };
+      request.onerror = function() {
+        console.error('Request failed to Reach GEO Server');
+        mainHbRun();
+      };
+      request.send();
+  })();
 
   function mainHbRun(){
     ubpbjs.que.push(function() {
@@ -241,6 +271,13 @@ var mappings = {
   }
 
   if (mobileCheck()) {
+    z1= document.createElement('div');
+    z1.id = 'ub-sticky-ad-container';
+    z1.className = 'ub-sticky-ad-container';
+    z1.innerHTML ='<span class="close_ub-sticky-ad" id="close_ub-sticky-ad" onclick="mybotubstickyad()">\u0078</span><div class="ub-sticky-ad" id="div-gpt-ad-1639122072424-0"></div>';
+    x1 = document.querySelector('body');
+    x1.appendChild(z1);
+
     mappings.slotNumbers.push(1);
     mappings.adCode.push('/22082859479,22547024640/qtcs.com.vn_anchor_320x50');
     mappings.sizes.push(div_1_sizes);
@@ -265,7 +302,7 @@ var mappings = {
     });
   // }
   }
-// }
+}
 
 function ub_checkAdRendered(adId, ub_slot, adCode){
   ub_slotNum = ub_slot[ub_slot.length-1]-1;

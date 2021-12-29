@@ -298,7 +298,9 @@ function mybotStart(){
 					// clearTimeout(ub_timeout);
  				 document.getElementById('adsmall').style.display = "none";
  				 document.getElementById('ub-banner-ad').style.display = "none"
-				 document.getElementById('ub_adsbanner').style.display = "none"
+				 if (document.getElementById('ub_adsbanner')) {
+					 document.getElementById('ub_adsbanner').style.display = "none"
+				 }
  				 document.getElementById('ub-roller').style.display = "none";
  				 document.getElementById('ub-close').style.display = "none";
 				})

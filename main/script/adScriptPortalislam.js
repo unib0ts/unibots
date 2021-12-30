@@ -227,7 +227,7 @@ var mapping_full_hb = {
 
 var hb_full_common_bidders = [
     { bidder: "appnexus", params: { placementId: "23902355" } }, /* one placementId for all sizes  my appnexus bidder */
-    // // { bidder: 'oftmedia', params: { placementId: '4168843' } },
+    { bidder: 'oftmedia', params: { placementId: '23909013' } },
     { bidder: '33across', params: { siteId : 'd2CxICu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
     // // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */

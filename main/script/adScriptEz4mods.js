@@ -72,6 +72,7 @@
   // { bidder: 'criteo', params: {networkId: '10542'} },
   { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
   // { bidder: 'criteointl', params: {networkId: '10545'} },
+  { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265098'} }
 ];
 
   var mapping_hb = {
@@ -353,7 +354,7 @@
          'eplanning': { bidCpmAdjustment: function(bidCpm){ return bidCpm*1.00; } }
        };
        ubpbjs.setConfig({
-
+        rubicon: {singleRequest: true},
          priceGranularity: customConfigObjectA,
         //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
          //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

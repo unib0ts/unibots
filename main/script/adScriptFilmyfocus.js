@@ -88,7 +88,8 @@ const customConfigObjectA = {
       }
     },
     bids: [
-      // { bidder: 'appnexus', params: { placementId: '19202087' } }
+      // { bidder: 'appnexus', params: { placementId: '19202087' } },
+      { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265410'} }
     ]
 };
   adUnits.push(adUnits1);
@@ -119,7 +120,7 @@ const customConfigObjectA = {
         { bidder: 'smartadserver', params: { siteId: '362115', pageId: '1289616', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
         { bidder: 'sonobi', params: { placement_id: 'ab0665167561691b6ba3', ad_unit: 'filmyfocus.com_NB_320x50' } },
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265410'} }
       ]
   };
   adUnits.push(adUnits1);
@@ -399,6 +400,7 @@ function mainHbRun(){
               'banner': 0.01,
           }
         },
+        rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

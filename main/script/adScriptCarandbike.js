@@ -100,7 +100,7 @@ else{
 				// { bidder: 'criteointl', params: {networkId: '10545'} },
 				// 	{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}},
 				// 	{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-				// 	{ bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+    	        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: ''} }
 				]
 		};
 		adUnits.push(adUnits1);
@@ -231,6 +231,7 @@ function ubadScript() {
                 'banner': 0.01,
             }
           },
+		  rubicon: {singleRequest: true},
 					priceGranularity: customConfigObjectA,
 				 //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
 					//cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

@@ -81,7 +81,7 @@ var adUnits = [];
             { bidder: 'nobid', params: { siteId : '22604974694'} },
            //  { bidder: 'criteo', params: {networkId: '4902'} },
             // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-            // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265416'} }
           ]
       };
       adUnits.push(adUnits1);
@@ -111,7 +111,7 @@ var adUnits = [];
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           // { bidder: 'criteo', params: {networkId: '4902'} },
           // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265416'} }
         ]
     };
       adUnits.push(adUnits1);
@@ -202,7 +202,7 @@ var adUnits = [];
          { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
          { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
          //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-         // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265416'} }
        ]
     };
     adUnits.push(adUnits1);
@@ -602,6 +602,7 @@ function mainHbRun(){
            ]
          }
        },
+       rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

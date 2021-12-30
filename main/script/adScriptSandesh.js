@@ -124,7 +124,8 @@ function mybotubPopadcls() {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056689' } },
-        { bidder: 'oftmedia', params: { placementId: '20846125' } }
+        { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2253180'} }
       ]
   };
   ub_adUnits.push(ub_adUnits1);

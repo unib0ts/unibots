@@ -72,7 +72,8 @@ var adUnits = [
           }
         },
         bids: [
-          { bidder: 'appnexus', params: { placementId: '19202090' } }
+          { bidder: 'appnexus', params: { placementId: '19202090' } },
+          { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265412'} }
         ]
     },
     {
@@ -99,7 +100,7 @@ var adUnits = [
           { bidder: 'smartadserver', params: { siteId: '399736', pageId: '1361918', formatId: '93231', domain: 'https://prg8.smartadserver.com' }},
           // { bidder: 'criteo', params: {networkId: '10542'} },
           // { bidder: 'criteointl', params: {networkId: '10545'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323604', zoneId: '1680004'} }
+          { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265412'} }
         ]
     }
 ];
@@ -313,6 +314,7 @@ function mainHbRun(){
              ]
            }
          },
+         rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

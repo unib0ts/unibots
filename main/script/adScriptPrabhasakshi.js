@@ -102,7 +102,8 @@ const customConfigObjectA = {
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19056264' } },
-        { bidder: 'oftmedia', params: { placementId: '20846125' } }
+        { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265420'} }
       ]
   };
   adUnits.push(adUnits1);
@@ -143,7 +144,7 @@ const customConfigObjectA = {
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028671'} },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323828', zoneId: '1680664'} }
+        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265420'} }
       ]
   };
   adUnits.push(adUnits1);
@@ -428,6 +429,7 @@ function mainHbRun(){
            ]
          }
        },
+       rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

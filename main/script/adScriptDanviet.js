@@ -134,6 +134,7 @@ else{
         // // { bidder: 'criteointl', params: {networkId: '10545'} },
         // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265404'} }
       ]
   };
   adUnits.push(adUnits1);
@@ -254,6 +255,7 @@ function mybotubScript() {
             'banner': 0.01,
         }
       },
+      rubicon: {singleRequest: true},
       priceGranularity: customConfigObjectA,
       userSync: {
           iframeEnabled: true,

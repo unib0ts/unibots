@@ -134,7 +134,7 @@ var adUnits = [
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'ucfunnel', params: { adid : 'ad-273677B4238BDB2809D798E468627E8'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323750', zoneId: '1680366'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265414'} }
         ]
     }
 ];
@@ -167,7 +167,7 @@ if(document.getElementById('unibot1')){
         // { bidder: 'criteo', params: {networkId: '10542'} },
         // { bidder: 'criteointl', params: {networkId: '10545'} },
         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265414'} }
       ]
   }
   adUnits.push(adUnits1);
@@ -200,7 +200,7 @@ if(document.getElementById('unibot2')){
         // { bidder: 'criteo', params: {networkId: '10542'} },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265414'} }
       ]
   }
   adUnits.push(adUnits1);
@@ -233,7 +233,7 @@ if(document.getElementById('unibot3')){
         { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         // { bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323748', zoneId: '1680438'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265414'} }
       ]
   }
   adUnits.push(adUnits1);
@@ -618,6 +618,7 @@ function mainHbRun(){
            ]
          }
        },
+       rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

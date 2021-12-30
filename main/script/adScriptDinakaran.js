@@ -73,7 +73,8 @@ var adUnits = [
         },
         bids: [
           { bidder: 'appnexus', params: { placementId: '19054505' } },
-          { bidder: 'oftmedia', params: { placementId: '20846125' } }
+          { bidder: 'oftmedia', params: { placementId: '20846125' } },
+          { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265094'} }
         ]
     },
     {
@@ -103,7 +104,7 @@ var adUnits = [
           { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
           { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996028'} },
           // { bidder: 'criteo', params: {networkId: '4902'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323630', zoneId: '1680030'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265094'} }
         ]
     }
 ];
@@ -353,6 +354,7 @@ function mainHbRun(){
              ]
            }
          },
+         rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

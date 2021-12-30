@@ -55,13 +55,13 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
        unibotsoutb.cmd.push(()=>{unibotsOutb("https://kalyanpanelchart.in/");
    });
 
-    s4.onload = function(){
-       ub_z2 = document.createElement("div");
-       ub_z2.id = "ub_adsbanner";
-       ub_z2.style = "line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:-18px;text-align:center;right: 16px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-       ub_z2.innerHTML = "<a href='https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget' style='color: #fff;text-decoration: none;'>Ads by Unibots</a>";
-       document.querySelector('#ub-roller-wrapper').appendChild(ub_z2);
-   };
+   //  s4.onload = function(){
+   //     ub_z2 = document.createElement("div");
+   //     ub_z2.id = "ub_adsbanner";
+   //     ub_z2.style = "line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:-18px;text-align:center;right: 16px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+   //     ub_z2.innerHTML = "<a href='https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget' style='color: #fff;text-decoration: none;'>Ads by Unibots</a>";
+   //     document.querySelector('#ub-roller-wrapper').appendChild(ub_z2);
+   // };
   }
 
  // function cubespinnervisibility() {

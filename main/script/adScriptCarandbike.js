@@ -100,7 +100,7 @@ else{
 				// { bidder: 'criteointl', params: {networkId: '10545'} },
 				// 	{ bidder: 'openx', params: {unit: '543981006', delDomain: 'unibots-d.openx.net'}},
 				// 	{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-    	        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: ''} }
+    	        // { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: ''} }
 				]
 		};
 		adUnits.push(adUnits1);

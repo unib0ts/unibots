@@ -134,7 +134,7 @@ var adUnits = [
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'ucfunnel', params: { adid : 'ad-273677B4238BDB2809D798E468627E8'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265414'} }
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265606'} }
         ]
     }
 ];

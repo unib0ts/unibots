@@ -102,7 +102,7 @@ adUnits1 = {
       { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3028672'} },
       { bidder: 'adyoulike', params: { placement: 'ea86a0d6312290fd47d75d59b22165f1'}, labelAll: ["US"] },
       //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-      // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323746', zoneId: '1680434'} }
+      { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265120'} }
     ]
   }
     adUnits.push(adUnits1);
@@ -405,6 +405,7 @@ function mainHbRun(){
            ]
          }
        },
+       rubicon: {singleRequest: true},
        priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

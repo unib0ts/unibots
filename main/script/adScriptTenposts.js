@@ -196,6 +196,7 @@ bids: [
 }
 
 function checkHBUnits(){
+  changeConfigToHB();
   callMapUnits();
 
   setTimeout(function() {
@@ -401,7 +402,7 @@ function mainHbRun(){
        publisherDomain: 'https://tenposts.com/',
        bidderTimeout: PREBID_TIMEOUT+500,
        //pubcid: {expInterval: },
-       //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
+       // currency: { 'adServerCurrency': "ILS", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
       });
      // ubpbjs.requestBids({
      //   bidsBackHandler: initAdserver,
@@ -413,6 +414,19 @@ function mainHbRun(){
  // setTimeout(function() {
  //     initAdserver();
  // }, FAILSAFE_TIMEOUT);
+}
+
+function changeConfigToHB(){
+  ubpbjs.que.push(function() {
+    ubpbjs.setConfig({
+      "currency": {
+         "adServerCurrency": "ILS",
+         "granularityMultiplier":3 ,
+         "conversionRateFile": 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
+         "defaultRates": { "USD": { "ILS": 3.09 }}
+       }
+     });
+  });
 }
 
 checkHBUnits();

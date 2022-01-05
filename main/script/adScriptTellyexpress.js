@@ -47,7 +47,7 @@ s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScrip
 s1.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(s1);
 
-var PREBID_TIMEOUT = 3000;
+var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 
@@ -92,7 +92,8 @@ const customConfigObjectA = {
 var adUnits = [];
 
 var div_1_sizes = [
-  [[480, 320], [320, 480]]
+  [480, 320],
+  [320, 480]
 ];
 
 if (mobileCheck()) {
@@ -116,9 +117,10 @@ if (mobileCheck()) {
               // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
               // // // { bidder: 'criteo', params: {networkId: '10542'} },
               // // // { bidder: 'criteointl', params: {networkId: '10545'} },
+              // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
               { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-              { bidder: 'sovrn', params: {tagid: '993910'} },
-              { bidder: 'ucfunnel', params: { adid : 'ad-2736E8A89E786DD608A972BAB89B6366'} },
+             { bidder: 'sovrn', params: {tagid: '993910'} },
+             { bidder: 'ucfunnel', params: { adid : 'ad-2736E8A89E786DD608A972BAB89B6366'} },
               // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
         ],
     };
@@ -136,7 +138,7 @@ ubpbjs.que = ubpbjs.que || [];
 
 
 function mainHbRun(){
-ubpbjs.que.push(function() {
+  ubpbjs.que.push(function() {
     ubpbjs.addAdUnits(adUnits);
     ubpbjs.aliasBidder('criteo','criteointl');
     ubpbjs.bidderSettings = {
@@ -220,21 +222,25 @@ ubpbjs.que.push(function() {
       setTimeout(function() {
       initAdserver();
       }, FAILSAFE_TIMEOUT);
-    }
+}
 
-googletag.cmd.push(function () {
-  var ub_slotp = googletag.defineSlot("/21928950349/tellyexpress.com_hb_popup",div_1_sizes,"div-gpt-ad-1629457284866-0").addService(googletag.pubads());
-    googletag.pubads().collapseEmptyDivs(true);
-    googletag.pubads().setCentering(true);
-    googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-    googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-            if (event.slot.getAdUnitPath() === "/21928950349/tellyexpress.com_hb_popup") {
-                ub_checkAd1Rendered();
-            }
-        });
-});
+var ub_slotp
+
+if (mobileCheck()) {
+  googletag.cmd.push(function () {
+       ub_slotp = googletag.defineSlot("/21928950349/tellyexpress.com_hb_popup",div_1_sizes,"div-gpt-ad-1629457284866-0").addService(googletag.pubads());
+      googletag.pubads().collapseEmptyDivs(true);
+      googletag.pubads().setCentering(true);
+      googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+      googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+        if (event.slot.getAdUnitPath() === "/21928950349/tellyexpress.com_hb_popup") {
+            ub_checkAd1Rendered();
+        }
+      });
+  });
+}
 
 
 function initAdserver() {

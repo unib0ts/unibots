@@ -855,6 +855,24 @@
           "seller_id": "143",
           "name": "ez4mods",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.crictracker.com/",
+          "seller_id": "144",
+          "name": "crictracker",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "http://www.indianrail.gov.in/",
+          "seller_id": "145",
+          "name": "indianrail",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://marunadanmalayalee.com/",
+          "seller_id": "146",
+          "name": "marunadanmalayalee",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

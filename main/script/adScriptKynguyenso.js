@@ -38,6 +38,14 @@
       return check;
   }
 
+  myub_obj = document.createElement("div");
+  myub_obj.id = "div-ub-kynguyenso";
+  ub_plyrscript = document.createElement("script");
+  ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('kynguyenso');})");
+  ub_plyrscript.appendChild(ub_plyerinlineScript);
+  myub_obj.appendChild(ub_plyrscript);
+  document.querySelector("body").appendChild(myub_obj);
+
   if (!mobileCheck() && (window.screen.availWidth > 1024)) {
           // z = document.createElement("div");
           // z.id = "div-gpt-ad-1637223892866-0";

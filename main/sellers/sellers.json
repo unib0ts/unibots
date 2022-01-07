@@ -873,6 +873,12 @@
           "seller_id": "146",
           "name": "marunadanmalayalee",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.tollywood.net/",
+          "seller_id": "147",
+          "name": "tollywood",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

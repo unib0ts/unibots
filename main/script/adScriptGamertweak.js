@@ -556,14 +556,15 @@ function ub_infinite() {
   }
 }
 
-var ub_url = window.location.href;
+var ub_url = window.location.href.length;
+// var ub_url = window.location.href;
 // var ub_flag = true;
 
 window.onscroll = function() {
   // console.log(ub_url != window.location.href && (ub_flag == true), ub_url,ub_flag);
-  if (ub_url != window.location.href) {
+  if (ub_url != window.location.href.length) {
      // ub_flag = false;
-     ub_url = window.location.href;
+     ub_url = window.location.href.length;
      ub_infinite();
      // console.log('test1');
   }

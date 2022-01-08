@@ -98,7 +98,7 @@ var div_1_sizes = [
 
 if (mobileCheck()) {
     adUnits1 = {
-        code: "/21928950349/tellyexpress.com_hb_popup",
+        code: "/21928950349,22212097781/tellyexpress.com_hb_popup",
         mediaTypes: {
             banner: {
                 sizes: div_1_sizes,
@@ -228,14 +228,14 @@ var ub_slotp
 
 if (mobileCheck()) {
   googletag.cmd.push(function () {
-       ub_slotp = googletag.defineSlot("/21928950349/tellyexpress.com_hb_popup",div_1_sizes,"div-gpt-ad-1629457284866-0").addService(googletag.pubads());
+       ub_slotp = googletag.defineSlot("/21928950349,22212097781/tellyexpress.com_hb_popup",div_1_sizes,"div-gpt-ad-1629457284866-0").addService(googletag.pubads());
       googletag.pubads().collapseEmptyDivs(true);
       googletag.pubads().setCentering(true);
       googletag.pubads().setPrivacySettings({ restrictDataProcessing: true });
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
       googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-        if (event.slot.getAdUnitPath() === "/21928950349/tellyexpress.com_hb_popup") {
+        if (event.slot.getAdUnitPath() === "/21928950349,22212097781/tellyexpress.com_hb_popup") {
             ub_checkAd1Rendered();
         }
       });
@@ -279,7 +279,7 @@ function ub_checkAd1Rendered() {
 //     ubpbjs.que.push(function () {
 //         ubpbjs.requestBids({
 //             timeout: PREBID_TIMEOUT,
-//             adUnitCodes: ["/21928950349/tellyexpress.com_hb_popup"],
+//             adUnitCodes: ["/21928950349,22212097781/tellyexpress.com_hb_popup"],
 //             bidsBackHandler: function () {
 //                 googletag.cmd.push(function () {
 //                     ubpbjs.que.push(function () {

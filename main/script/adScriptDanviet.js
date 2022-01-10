@@ -119,7 +119,7 @@ else{
       },
       bids: [
         { bidder: 'appnexus', params: { placementId: '19669443' } }, /* one placementId for all sizes  my appnexus bidder */
-        // { bidder: 'oftmedia', params: { placementId: '20846125' } },
+        { bidder: 'oftmedia', params: { placementId: '23908996' } },
         { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3796457'} },
         { bidder: 'sovrn', params: {tagid: '921072'} },
         { bidder: '33across', params: { siteId : 'c9qjIQu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
@@ -134,6 +134,7 @@ else{
         // // { bidder: 'criteointl', params: {networkId: '10545'} },
         // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
         // { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265404'} }
       ]
   };
   adUnits.push(adUnits1);
@@ -254,6 +255,7 @@ function mybotubScript() {
             'banner': 0.01,
         }
       },
+      rubicon: {singleRequest: true},
       priceGranularity: customConfigObjectA,
       userSync: {
           iframeEnabled: true,

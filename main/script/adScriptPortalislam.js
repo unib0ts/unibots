@@ -227,7 +227,7 @@ var mapping_full_hb = {
 
 var hb_full_common_bidders = [
     { bidder: "appnexus", params: { placementId: "23902355" } }, /* one placementId for all sizes  my appnexus bidder */
-    // // { bidder: 'oftmedia', params: { placementId: '4168843' } },
+    { bidder: 'oftmedia', params: { placementId: '23909013' } },
     { bidder: '33across', params: { siteId : 'd2CxICu30r7kDFrkHcnlxd', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     // // // // { bidder: 'emx_digital', params: { tagid: '112606' } }, /* sizeless */
     // // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
@@ -323,7 +323,7 @@ var mappings_full_hb_config_mobile = {
           // // // { bidder: 'smartadserver', params: { siteId: '399739', pageId: '1361921', formatId: '94418', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
       ]),
       hb_full_common_bidders.concat([
-          // { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4167177" } },
+          { bidder: "pubmatic", params: { publisherId: "159448", adSlot: "4239555" } },
           { bidder: 'openx', params: {unit: '556412887', delDomain: 'unibots-d.openx.net'} },
           { bidder: 'ucfunnel', params: { adid : 'ad-BE783AD79AB3432B172B2AD3DABAD8A8'} },
           // // // // //     { bidder: "kubient", params: { zoneid: "0cef49235ab77", server: "kssp.kbntx.ch"} },

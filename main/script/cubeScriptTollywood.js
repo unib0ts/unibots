@@ -19,6 +19,7 @@ mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/block
 mybotBlockedClientName = 'tollywood';
 
 var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;bottom: 55px !important;} #ifr_465702-1{right:0px !important;left: unset !important;bottom: 55px !important;}";
+// var mybotstyleSheet = mobileCheck() ? "mybot .ub-roller-wrapper {bottom: 130px !important};":"mybot .ub-roller-wrapper {right: 15px !important;left: unset !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -97,6 +98,16 @@ function ubadScript() {
 
    ub_passback1();
 
+  //  function ub_passback1() {
+  //    s4 = document.createElement('script');
+  //    s4.async = true;
+  //    s4.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ub_cubescript3/script.min.js";
+  //    document.getElementsByTagName('head')[0].appendChild(s4);
+  //
+  //    window.unibotsoutb = window.unibotsoutb || { cmd: [] };
+  //        unibotsoutb.cmd.push(()=>{unibotsOutb("https://www.tollywood.net/");
+  //    });
+  // }
    setInterval(function(){
      if (!mobileCheck()) {
         try{

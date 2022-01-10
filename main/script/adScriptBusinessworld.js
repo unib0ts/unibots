@@ -484,15 +484,8 @@ var adUnits = [];
           params: {
             siteId : '22049999647'
           }
-        }
-        // {
-        //   bidder: 'rubicon',
-        //   params: {
-        //     accountId: '11734',
-        //     siteId: '323588',
-        //     zoneId: '1679924'
-        //   }
-        // }
+        },
+        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265146'} }
       ]
     };
   adUnits.push(adUnits1);
@@ -1090,6 +1083,7 @@ function mainHbRun(){
               'banner': 0.01,
           }
         },
+        rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

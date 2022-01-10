@@ -38,6 +38,14 @@
       return check;
   }
 
+  myub_obj = document.createElement("div");
+  myub_obj.id = "div-ub-kynguyenso";
+  ub_plyrscript = document.createElement("script");
+  ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(function(){unibotsPlayer('kynguyenso');})");
+  ub_plyrscript.appendChild(ub_plyerinlineScript);
+  myub_obj.appendChild(ub_plyrscript);
+  document.querySelector("body").appendChild(myub_obj);
+
   if (!mobileCheck() && (window.screen.availWidth > 1024)) {
           // z = document.createElement("div");
           // z.id = "div-gpt-ad-1637223892866-0";
@@ -933,13 +941,13 @@
   if (mobileCheck()) {
       googletag.cmd.push(function () {
           googletag.pubads().addEventListener("slotRenderEnded", function (event) {
-                if (event.slot.getAdUnitPath() ==="/22082859479,22623724900/kynguyenso.plo.vn_mb_anchor_320x50"){
+                if (event.slot.getAdUnitPath() ==="/22082859479,22547024640/kynguyenso.plo.vn_mb_anchor_320x50"){
                   var nodes_anchr = document.getElementById("div-gpt-ad-1637224122961-0").childNodes[0].childNodes;
                   if (nodes_anchr.length && nodes_anchr[0].nodeName.toLowerCase() == "iframe") {
                       document.getElementById("close_ub-sticky-ad").style.display = "block";
                   }
                 }
-                if (event.slot.getAdUnitPath() ==="/22082859479,22623724900/kynguyenso.plo.vn_mb_inpage_300x600"){
+                if (event.slot.getAdUnitPath() ==="/22082859479,22547024640/kynguyenso.plo.vn_mb_inpage_300x600"){
                   var nodes_parallax = document.getElementById("div-gpt-ad-1637224154071-0").childNodes[0].childNodes;
                   if (nodes_parallax.length && nodes_parallax[0].nodeName.toLowerCase() == "iframe") {
                       document.getElementById("ub_Container_Parallax").style.display = "block";

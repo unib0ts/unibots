@@ -134,7 +134,7 @@ const customConfigObjectA = {
             // { bidder: 'ucfunnel', params: { adid : 'ad-34B844E6734DA43A13E3738EE4382336'} },
         // { bidder: 'criteo', params: {networkId: '4902'} },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323840', zoneId: '1680700'} }
+          { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265100'} }
       ]
     };
   adUnits.push(adUnits1);
@@ -410,6 +410,7 @@ function mainHbRun(){
               'banner': 0.01,
           }
         },
+        rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

@@ -157,7 +157,7 @@ function mybotubPopadcls() {
         // { bidder: 'adkernel', params: {zoneId: '126020', host: 'cpm.fmlabsonline.com'} },
         { bidder: 'adyoulike', params: { placement: '2ae55db8a34b479636e7281b5665b0a6'}, labelAll: ["US"] },
         //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323848', zoneId: '1680746'} }
+        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2253180'} }
       ]
   };
   ub_adUnits.push(ub_adUnits1);
@@ -409,7 +409,7 @@ function ubpopup() {
           // { bidder: 'adkernel', params: {zoneId: '126020', host: 'cpm.fmlabsonline.com'} },
           { bidder: 'adyoulike', params: { placement: '2ae55db8a34b479636e7281b5665b0a6'}, labelAll: ["US"] },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-          // { bidder: 'rubicon', params: {accountId: '11734', siteId: '323848', zoneId: '1680746'} }
+        // { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2253180'} }
         ],
     };
     ub_adUnits.push(ub_adUnits1);

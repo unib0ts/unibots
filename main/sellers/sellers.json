@@ -843,6 +843,42 @@
           "seller_id": "141",
           "name": "tamilspark",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://techmody.io/",
+          "seller_id": "142",
+          "name": "techmody",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://ez4mods.com/",
+          "seller_id": "143",
+          "name": "ez4mods",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.crictracker.com/",
+          "seller_id": "144",
+          "name": "crictracker",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "http://www.indianrail.gov.in/",
+          "seller_id": "145",
+          "name": "indianrail",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://marunadanmalayalee.com/",
+          "seller_id": "146",
+          "name": "marunadanmalayalee",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.tollywood.net/",
+          "seller_id": "147",
+          "name": "tollywood",
+          "seller_type": "PUBLISHER"
       }
     ]
 }

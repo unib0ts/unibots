@@ -70,7 +70,8 @@ var adUnits = [];
           { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
           { bidder: 'ucfunnel', params: { adid : 'ad-7728779B6AE2AD4DCB34AA27967BAD3E'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265440'} }
         ]
     };
     adUnits.push(adUnits1);
@@ -103,7 +104,8 @@ if (document.getElementById('thirdPartyAd')) {
              { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
              { bidder: 'ucfunnel', params: { adid : 'ad-47B4776E94367A42FEA2939B6AB7EE72'} },
              // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-           	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+           	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265440'} }
            ]
        };
      adUnits.push(adUnits1);
@@ -137,7 +139,8 @@ if (document.getElementById('ubad')) {
            { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
            { bidder: 'ucfunnel', params: { adid : 'ad-273677B82DB3B9DDC8832E2B44267E26'} },
            // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+           // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265440'} }
          ]
      };
   adUnits.push(adUnits1);
@@ -435,6 +438,7 @@ function mainHbRun(){
            ]
          }
        },
+       rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

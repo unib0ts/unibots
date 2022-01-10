@@ -98,7 +98,8 @@ var adUnits = [
     { bidder: '33across', params: { siteId : 'dmVeCmWuGr6PjyaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
     { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
     // { bidder: 'criteo', params: {networkId: '10542'} },
-    // { bidder: 'criteointl', params: {networkId: '10545'} }
+    // { bidder: 'criteointl', params: {networkId: '10545'} },
+    { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265438'} }
   ]
 }];
 
@@ -309,6 +310,7 @@ function mainHbRun(){
          ]
        }
      },
+     rubicon: {singleRequest: true},
       priceGranularity: customConfigObjectA,
       userSync: {
           iframeEnabled: true,

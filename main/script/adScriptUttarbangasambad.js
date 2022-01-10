@@ -102,7 +102,8 @@ var adUnits = [
           { bidder: 'ucfunnel', params: { adid : 'ad-34B844ED282B794DF3BD8A986B9A72E6'} },
           //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
         	//{ bidder: 'rhythmone', params: { placementId: '205372' } }, /* one placementId for all sizes */
-        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+        	// { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+            { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265442'} }
         ]
     }
 ];
@@ -318,6 +319,7 @@ function mainHbRun(){
            ]
          }
        },
+       rubicon: {singleRequest: true},
       	priceGranularity: customConfigObjectA,
        //consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
         //cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},

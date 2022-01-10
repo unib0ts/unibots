@@ -13,25 +13,37 @@ video {
     position: fixed;
     bottom: 0;
     right: 10px;
-    z-index: 2147489999 !important;
-    animation: an 0.8s;
+    z-index: 2147483647 !important;
+    animation: fade-in-up 1.5s ease forwards;
 }
 .ubsticky_left {
     position: fixed;
     bottom: 0px;
     left: 5px;
-    z-index: 2147489999 !important;
-    animation: bounce 0.7s;
+    z-index: 2147483647 !important;
+  animation: fade-in-up 1.5s ease forwards;
 }
-@keyframes bounce {
-    0% {
-        top: 100%;    
-        left: 30%;
-    }  
-    100% {  
-        top: calc(100vh - 21.6vh);   
-        left: 0%; 
-    }
+@keyframes fade-in-up {
+  0% {
+      opacity: 0;
+ }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+ }
+}
+.unsticky{
+  transform: translateZ(50%);
+  animation: fade-in-d 1.5s ease forwards;
+}
+@keyframes fade-in-d {
+  0% {
+      opacity: 0;
+ }
+  100% {
+      transform: translateZ(0);
+      opacity: 1;
+ }
 }
 .ubsticky_left .content_video-dimensions, .ubsticky_right .content_video-dimensions {
     width: 400px !important;

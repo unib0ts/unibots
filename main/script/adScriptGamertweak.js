@@ -563,15 +563,30 @@ var ub_url = window.location.href.length;
 // var ub_url = window.location.href;
 // var ub_flag = true;
 
-window.onscroll = function() {
-  // console.log(ub_url != window.location.href && (ub_flag == true), ub_url,ub_flag);
-  if (ub_url != window.location.href.length) {
-     // ub_flag = false;
-     ub_url = window.location.href.length;
-     ub_infinite();
-     // console.log('test1');
-  }
-};
+// window.onscroll = function() {
+//   // console.log(ub_url != window.location.href && (ub_flag == true), ub_url,ub_flag);
+//   if (ub_url != window.location.href.length) {
+//      // ub_flag = false;
+//      ub_url = window.location.href.length;
+//      ub_infinite();
+//      // console.log('test1');
+//   }
+// };
+
+var ub_oldheight = Math.max( document.body.scrollHeight, document.body.offsetHeight,
+                       document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+window.addEventListener('scroll',function(ev){mybotScrollStart()});
+
+function mybotScrollStart(){
+    var ub_height = Math.max( document.body.scrollHeight, document.body.offsetHeight,
+                           document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    ub_heightChange = ub_height - ub_oldheight;
+    if(ub_heightChange > 2000){
+    // console.log('trigger code here');
+    ub_infinite();
+    }
+    ub_oldheight = ub_height;
+}
 
 
 // fillRefreshMap();

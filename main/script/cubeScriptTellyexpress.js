@@ -34,11 +34,11 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
  function ub_passback1() {
    s4 = document.createElement('script');
    s4.async = "async";
-   s4.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ub_cubescript3/script.min.js";
+   s4.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/cubeScriptUB.min.js";
    document.getElementsByTagName('head')[0].appendChild(s4);
 
-   window.unibotsoutb = window.unibotsoutb || { cmd: [] };
-       unibotsoutb.cmd.push(()=>{unibotsOutb("https://www.tellyexpress.com/");
+   window.unibots = window.unibots || { cmd: [] };
+         unibots.cmd.push(()=>{unibotsClmb("tellyexpress");
    });
 
    s3 = document.createElement('script');

@@ -719,165 +719,171 @@
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.socialnews.xyz/",
+          "domain": "www.socialnews.xyz",
           "seller_id": "121",
           "name": "socialnews",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.andhrajyothy.com/",
+          "domain": "www.andhrajyothy.com",
           "seller_id": "122",
           "name": "andhrajyothy",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.cinemapettai.com/",
+          "domain": "www.cinemapettai.com",
           "seller_id": "123",
           "name": "cinemapettai",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.deccanherald.com/",
+          "domain": "www.deccanherald.com",
           "seller_id": "124",
           "name": "deccanherald",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.prajavani.net/",
+          "domain": "www.prajavani.net",
           "seller_id": "125",
           "name": "prajavani",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.janmabhumi.in/",
+          "domain": "www.janmabhumi.in",
           "seller_id": "126",
           "name": "janmabhumi",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.keralaonlinenews.com/",
+          "domain": "www.keralaonlinenews.com",
           "seller_id": "127",
           "name": "keralaonlinenews",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.news24online.com/",
+          "domain": "www.news24online.com",
           "seller_id": "128",
           "name": "news24online",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.prabhanews.com/",
+          "domain": "www.prabhanews.com",
           "seller_id": "129",
           "name": "prabhanews",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.telanganatoday.com/",
+          "domain": "www.telanganatoday.com",
           "seller_id": "130",
           "name": "telanganatoday",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.theprint.in/",
+          "domain": "www.theprint.in",
           "seller_id": "131",
           "name": "theprint",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.tribuneindia.com/",
+          "domain": "www.tribuneindia.com",
           "seller_id": "132",
           "name": "tribuneindia",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.tupaki.com/",
+          "domain": "www.tupaki.com",
           "seller_id": "133",
           "name": "tupaki",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.workbank.vn/",
+          "domain": "www.workbank.vn",
           "seller_id": "134",
           "name": "workbank",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.yeah1music.net/",
+          "domain": "www.yeah1music.net",
           "seller_id": "135",
           "name": "yeah1music",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.yoshare.net/",
+          "domain": "www.yoshare.net",
           "seller_id": "136",
           "name": "yoshare",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.portal-islam.id/",
+          "domain": "www.portal-islam.id",
           "seller_id": "137",
           "name": "portal-islam",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.sumantv.com/",
+          "domain": "www.sumantv.com",
           "seller_id": "138",
           "name": "sumantv",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://www.manatelangana.news/",
+          "domain": "www.manatelangana.news",
           "seller_id": "139",
           "name": "manatelangana",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://www.tellychakkar.com/",
+          "domain": "www.tellychakkar.com",
           "seller_id": "140",
           "name": "tellychakkar",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://www.tamilspark.com/",
+          "domain": "www.tamilspark.com",
           "seller_id": "141",
           "name": "tamilspark",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://techmody.io/",
+          "domain": "wwww.techmody.io",
           "seller_id": "142",
           "name": "techmody",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://ez4mods.com/",
+          "domain": "www.ez4mods.com",
           "seller_id": "143",
           "name": "ez4mods",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://www.crictracker.com/",
+          "domain": "www.crictracker.com",
           "seller_id": "144",
           "name": "crictracker",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "http://www.indianrail.gov.in/",
+          "domain": "www.indianrail.gov.in",
           "seller_id": "145",
           "name": "indianrail",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://marunadanmalayalee.com/",
+          "domain": "www.marunadanmalayalee.com",
           "seller_id": "146",
           "name": "marunadanmalayalee",
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "https://www.tollywood.net/",
+          "domain": "www.tollywood.net",
           "seller_id": "147",
           "name": "tollywood",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "www.papayamobile.com",
+          "seller_id": "148",
+          "name": "papayamobile",
           "seller_type": "PUBLISHER"
       }
     ]

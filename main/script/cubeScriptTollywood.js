@@ -14,9 +14,9 @@ function mobileCheck() {
     return check;
 }
 
-mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTollywood.json';
-mybotBlockedClientName = 'tollywood';
+// mybotBlockedPagesFlag = 1;
+// mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTollywood.json';
+// mybotBlockedClientName = 'tollywood';
 
 var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;bottom: 55px !important;} #ifr_465702-1{right:0px !important;left: unset !important;bottom: 55px !important;}";
 // var mybotstyleSheet = mobileCheck() ? "mybot .ub-roller-wrapper {bottom: 130px !important};":"mybot .ub-roller-wrapper {right: 15px !important;left: unset !important;}";
@@ -34,67 +34,57 @@ x1.appendChild(z1);
 mybotGACode = 'G-YLT8L7SED8';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname;
+// if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+//   urlToCheck = window.location.host+window.location.pathname;
+//
+//   var request = new XMLHttpRequest();
+//   url = mybotBlockedUrl;
+//
+//   request.open('GET', url, true);
+//   request.onload = function() {
+//     if (request.status >= 200 && request.status < 400) {
+//       var data = request.responseText;
+//       data = JSON.parse(data);
+//       data = data[mybotBlockedClientName];
+//       if(data) {
+//         data = data.urls;
+//         if(data.includes(urlToCheck)){
+//           // mybotdiv1 = '';
+//           return false;
+//         }
+//         else{
+//           ubadScript();
+//         }
+//       }
+//     }
+//     else {
+//       console.log('Block Check Request failed');
+//       ubadScript();
+//     }
+//   };
+//   request.onerror = function() {
+//     console.log('Request failed');
+//     ubadScript();
+//   };
+//   request.send();
+// }
+// else{
+//   ubadScript();
+// }
 
-  var request = new XMLHttpRequest();
-  url = mybotBlockedUrl;
+// function ubadScript() {
+  var s0 = document.createElement('script');
+  s0.async = "async";
+  s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
 
-  request.open('GET', url, true);
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText;
-      data = JSON.parse(data);
-      data = data[mybotBlockedClientName];
-      if(data) {
-        data = data.urls;
-        if(data.includes(urlToCheck)){
-          // mybotdiv1 = '';
-          return false;
-        }
-        else{
-          ubadScript();
-        }
-      }
-    }
-    else {
-      console.log('Block Check Request failed');
-      ubadScript();
-    }
-  };
-  request.onerror = function() {
-    console.log('Request failed');
-    ubadScript();
-  };
-  request.send();
-}
-else{
-  ubadScript();
-}
+  window.unibotshb = window.unibotshb || { cmd: [] };
+  unibotshb.cmd.push(() => {
+      ubHB("tollywood");
+  });
 
-function ubadScript() {
-  var s3 = document.createElement('script');
- s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
- s3.async = true;
- s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
- document.getElementsByTagName('head')[0].appendChild(s3);
-
- var s0 = document.createElement('script');
- s0.src = "https://www.googletagservices.com/tag/js/gpt.js";
- s0.type = "text/javascript";
- document.getElementsByTagName('head')[0].appendChild(s0);
-
- var s1 = document.createElement('script');
- s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
- s1.type = "text/javascript";
- document.getElementsByTagName('head')[0].appendChild(s1);
-
- var s2 = document.createElement('script');
- s2.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptTollywood.js";
- s2.type = "text/javascript";
- document.getElementsByTagName('head')[0].appendChild(s2);
-
- }
+ // }
 
    ub_passback1();
 

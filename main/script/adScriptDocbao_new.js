@@ -192,9 +192,8 @@ function ubadScript() {
       // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/gia-dinh').length == 2){}
       // if (window.location.href.split('https://m.docbao.vn/phap-luat').length == 2){}
       // if((window.location.href.split('https://m.docbao.vn/xa-hoi').length == 2 )){}
-      if (window.location.href.split('https://m.docbao.vn/sao-360').length == 2 ) {
-
-      }else {
+      if (window.location.href.split('https://m.docbao.vn/doi-song').length == 2) {}
+      else {
         if(!(window.location.href== "https://m.docbao.vn/")){
             z1 = document.createElement("div");
             z1.id = "ub-sticky-ad-container";
@@ -215,7 +214,7 @@ function ubadScript() {
         }
       }
 
-    if((window.location.href== "https://m.docbao.vn/")){
+    if(window.location.href== "https://m.docbao.vn/"){
       z2 = document.createElement("div");
       z2.id = "ub-popup-ad-container";
       z2.className = "ub-popup-ad-container";
@@ -391,7 +390,7 @@ console.log(GEO_CODE ,"test");
 
   if (mobileCheck()) {
       // if(!(window.location.href.split('https://bongdaplus.vn/euro-cup-chau-au/').length == 2)){
-    if((window.location.href== "https://m.docbao.vn/")){
+    if(window.location.href== "https://m.docbao.vn/"){
       adUnits1 = {
           code: "/21928950349,22612949898/docbao.vn_popup_fluid_336x280",
           mediaTypes: {
@@ -1259,7 +1258,7 @@ console.log(GEO_CODE ,"test");
   function checkHBUnits() {
       if (mobileCheck()) {
           // if(window.location.href == "https://bongdaplus.vn/euro-cup-chau-au/ai-xung-dang-la-cau-thu-xuat-sac-nhat-euro-2020-3374772107.html"){
-         if((window.location.href== "https://m.docbao.vn/")){
+         if(window.location.href== "https://m.docbao.vn/"){
           addNewsBotAd();
           }
       }
@@ -1661,7 +1660,7 @@ console.log(GEO_CODE ,"test");
 }
 
  if (mobileCheck()) {
-   // if(window.location.href.split('https://m.docbao.vn/giai-tri').length == 2 || window.location.href.split('https://m.docbao.vn/gia-dinh').length == 2){}else {
+   if (!(window.location.href.split('https://m.docbao.vn/doi-song').length == 2)) {
     if(!(window.location.href== "https://m.docbao.vn/")){
         googletag.cmd.push(function () {
             googletag.pubads().addEventListener("slotRenderEnded", function (event) {
@@ -1686,7 +1685,7 @@ console.log(GEO_CODE ,"test");
           });
       });
     }
-  // }
+  }
 }
 
  function loadAd(id, adUnits) {

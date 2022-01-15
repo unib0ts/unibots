@@ -885,6 +885,48 @@
           "seller_id": "148",
           "name": "papayamobile",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://kesharinews24.com/",
+          "seller_id": "149",
+          "name": "kesharinews24",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.zee5.com/",
+          "seller_id": "150",
+          "name": "zee5",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.ians.in/",
+          "seller_id": "151",
+          "name": "ians",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://gamertweak.com/",
+          "seller_id": "152",
+          "name": "gamertweak",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.allfreenovel.com/",
+          "seller_id": "153",
+          "name": "allfreenovel",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://kynguyenso.plo.vn/",
+          "seller_id": "154",
+          "name": "kynguyenso",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://heightcomparison.com/",
+          "seller_id": "155",
+          "name": "heightcomparison",
+          "seller_type": "PUBLISHER"
       }
-    ]
+      ]
 }

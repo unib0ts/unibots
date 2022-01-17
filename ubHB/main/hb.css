@@ -2,8 +2,8 @@
 .ub-anchor{width:100%;z-index:100;padding-top:4px;}
 .close_ub-anchor{display:none;position:absolute;top:-20px;background:#fff;color:#000;left:0px;pointer-events:all;height:20px;z-index:100;width:30px;font-size:26px;line-height:23px;box-shadow:0 -3px 3px rgba(0,0,0,.2)!important;border-radius:2px 10px 0 0;}
 .ub-balloon-adcontainer{position:fixed;width:auto!important;bottom:0;right:0;z-index:2147483646;}
-.ub-balloon{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}
-.close_ub-balloon{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;}
+/* .ub-balloon{display:block;top: -25px;right:0px;width:18px;position:absolute;pointer-events:all;cursor:pointer;z-index:2147483647;} */
+.close_ub-balloon{top: -25px;background: red;right: 0px;width: 20px;font-size: 20px;font-weight: 600;text-align: center;color: #fff;position: absolute;pointer-events: all;cursor: pointer;z-index: 2147483647;}
 .ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}
 .ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}
 .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}

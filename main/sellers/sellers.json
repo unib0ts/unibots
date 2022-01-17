@@ -927,6 +927,18 @@
           "seller_id": "155",
           "name": "heightcomparison",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://gogoanime.wiki/",
+          "seller_id": "156",
+          "name": "gogoanime",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "http://insuranceguideweb.com/",
+          "seller_id": "157",
+          "name": "insuranceguideweb",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

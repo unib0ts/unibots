@@ -305,9 +305,9 @@
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "www.gujratilexicon.com",
+          "domain": "www.gujaratilexicon.com",
           "seller_id": "52",
-          "name": "gujratilexicon",
+          "name": "gujaratilexicon",
           "seller_type": "PUBLISHER"
       },
       {
@@ -938,6 +938,30 @@
           "domain": "http://insuranceguideweb.com/",
           "seller_id": "157",
           "name": "insuranceguideweb",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://songvahuong.com/",
+          "seller_id": "158",
+          "name": "songvahuong",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://yeuthethao.vn/",
+          "seller_id": "159",
+          "name": "yeuthethao",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://qtcs.com.vn/",
+          "seller_id": "160",
+          "name": "qtcs",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.irctc.co.in/",
+          "seller_id": "161",
+          "name": "irctc",
           "seller_type": "PUBLISHER"
       }
       ]

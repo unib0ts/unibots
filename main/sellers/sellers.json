@@ -963,6 +963,12 @@
           "seller_id": "161",
           "name": "irctc",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://celebhub.in/",
+          "seller_id": "162",
+          "name": "celebhub",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

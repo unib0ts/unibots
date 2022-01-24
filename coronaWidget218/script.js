@@ -103,12 +103,22 @@ function ubadScript() {
     s1.type = "text/javascript";
     document.getElementsByTagName('head')[0].appendChild(s1);
 
-    var cachebuster = Math.round(new Date().getTime() / 1000);
-    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptSS_new.js?cb='+cachebuster;
-    s2 = document.createElement('script');
-    s2.src = url;
-    s2.async = "async";
-    document.body.appendChild(s2);
+    if (window.location.href == "https://www.sakshi.com/telugu-news/sports/shikhar-dhawan-top-scorer-india-tour-south-africa-1429495") {
+      var cachebuster = Math.round(new Date().getTime() / 1000);
+      url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptSS.js?cb='+cachebuster;
+      s2 = document.createElement('script');
+      s2.src = url;
+      s2.async = "async";
+      document.body.appendChild(s2);
+
+    }else {
+      var cachebuster = Math.round(new Date().getTime() / 1000);
+      url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptSS_new.js?cb='+cachebuster;
+      s2 = document.createElement('script');
+      s2.src = url;
+      s2.async = "async";
+      document.body.appendChild(s2);
+    }
 }
    ub_passback1();
 

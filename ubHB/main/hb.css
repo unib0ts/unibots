@@ -7,7 +7,7 @@
 .ub-left-ad{width: auto !important;position: fixed;top: 120px;left: 0px;z-index: 100;}
 .ub-right-ad{width: auto !important;position: fixed;top: 120px;right: 0px;z-index: 2147483646;}
 .ub-popup-ad-container{width:100%;top:50%;left:50%;position:fixed;display:flex;pointer-events:auto;align-items:center;transform:translate(-50%,-50%);}
-.ub-popup{width:100% !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%); z-index:2147483646}
+.ub-popup{width:auto !important;height:auto !important;position: fixed !important;top: 50%;left: 50%;align-items: center;transform: translate(-50%, -50%); z-index:2147483646}
 .close_ub-popup{display:none;background-color:#fff;color:#000;cursor:pointer;font-family:arial;font-weight:700;position:absolute;top:15px;left:2px;font-size:25px;line-height:25px;width:25px;height:25px;z-index:2147483647; text-align:center}
 #unibots1 {width:300px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}
 #unibots2 {width:300px;height: auto; margin:auto !important;padding: 10px 0 10px 0;}

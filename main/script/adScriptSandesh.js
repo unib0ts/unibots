@@ -43,6 +43,12 @@ css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
+var s3 = document.createElement('script');
+s3.setAttribute("crossorigin", "anonymous");
+s3.async = true;
+s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079";
+document.getElementsByTagName('head')[0].appendChild(s3);
+
 
 var GEO_CODE = '';
 (function(){

@@ -49,6 +49,12 @@ s3.async = true;
 s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9927599584498453";
 document.getElementsByTagName('head')[0].appendChild(s3);
 
+var s4 = document.createElement('script');
+s4.setAttribute("crossorigin", "anonymous");
+s4.async = true;
+s4.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079";
+document.getElementsByTagName('head')[0].appendChild(s4);
+
 
 var GEO_CODE = '';
 (function(){

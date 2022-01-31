@@ -104,6 +104,7 @@ targetUnits: [
   'unibots_MobileMiddleUnit',
   'unibots_StickyMobile',
   'unibots_MobileSecondAd',
+  'unibots_RightDownDesktop'
 ],
 adUnitNames: [
     '/22439852253/MiddleUnit',
@@ -114,6 +115,7 @@ adUnitNames: [
     '/22439852253/MobileMiddleUnit',
     '/22439852253/StickyMobile',
     '/22439852253/MobileSecondAd',
+    '/22439852253/RightDownDesktop'
 ],
 sizes: [
   [300, 250],
@@ -124,6 +126,7 @@ sizes: [
   [300, 600],
   [320, 50],
   [320, 100],
+  [300, 600],
 ],
 adId: [
   'unibots1',
@@ -134,6 +137,7 @@ adId: [
   'unibots6',
   'unibots7',
   'unibots8',
+  'unibots9',
 ],
 bids: [
   hb_common_bidders.concat([
@@ -190,6 +194,13 @@ bids: [
        { bidder: 'ucfunnel', params: { adid : 'ad-7728EB43B27B82E41B997B2366BAB8A2'} },
        { bidder: 'sovrn', params: {tagid: '994300'} },
        { bidder: 'openx', params: {unit: '556537501', delDomain: 'unibots-d.openx.net'}},
+     //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
+  ]), //Infeedinstream2
+  hb_common_bidders.concat([
+       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '4244918'} },
+       // { bidder: 'ucfunnel', params: { adid : 'ad-7728EB43B27B82E41B997B2366BAB8A2'} },
+       // { bidder: 'sovrn', params: {tagid: '994300'} },
+       // { bidder: 'openx', params: {unit: '556537501', delDomain: 'unibots-d.openx.net'}},
      //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   ]), //Infeedinstream2
 ],

@@ -46,7 +46,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
 var s3 = document.createElement('script');
 s3.setAttribute("crossorigin", "anonymous");
 s3.async = true;
-s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6376205116838079";
+s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9927599584498453";
 document.getElementsByTagName('head')[0].appendChild(s3);
 
 

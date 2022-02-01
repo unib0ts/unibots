@@ -975,6 +975,12 @@
           "seller_id": "163",
           "name": "tamilminutes",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://hindi.scoopwhoop.com/",
+          "seller_id": "164",
+          "name": "hindi.scoopwhoop",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

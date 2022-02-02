@@ -98,19 +98,19 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
   //        unibotsoutb.cmd.push(()=>{unibotsOutb("https://www.tollywood.net/");
   //    });
   // }
-   setInterval(function(){
-     if (!mobileCheck()) {
-        try{
-        colombia.refresh('div-clmb-ctn-466738-1');
-        cubespinnervisibility();
-        }catch(e){}
-    }else {
-      try{
-         colombia.refresh('div-clmb-ctn-466739-1');
-         cubespinnervisibility();
-      }catch(e){}
-    }
-   }, 30000);
+   // setInterval(function(){
+   //   if (!mobileCheck()) {
+   //      try{
+   //      colombia.refresh('div-clmb-ctn-466738-1');
+   //      cubespinnervisibility();
+   //      }catch(e){}
+   //  }else {
+   //    try{
+   //       colombia.refresh('div-clmb-ctn-466739-1');
+   //       cubespinnervisibility();
+   //    }catch(e){}
+   //  }
+   // }, 30000);
 
 
  function ub_passback1() {

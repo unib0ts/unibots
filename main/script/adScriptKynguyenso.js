@@ -347,11 +347,11 @@
 
   var mappings_full_hb_config_desktop = {
       adUnitNames: [
-          "/22082859479,22547024640/kynguyenso.plo.vn_pcballoon_300x250",
-          "/22082859479,22547024640/kynguyenso.plo.vn_pchotbannerR1_300x250",
-          "/22082859479,22547024640/kynguyenso.plo.vn_pchotbannerR2_300x250",
-          "/22082859479,22547024640/kynguyenso.plo.vn_pcleftbanner_160x600",
-          "/22082859479,22547024640/kynguyenso.plo.vn_pcstickyhotbannerR3_300x600",
+          "/21928950349,22547024640/kynguyenso.plo.vn_pcballoon_300x250",
+          "/21928950349,22547024640/kynguyenso.plo.vn_pchotbannerR1_300x250",
+          "/21928950349,22547024640/kynguyenso.plo.vn_pchotbannerR2_300x250",
+          "/21928950349,22547024640/kynguyenso.plo.vn_pcleftbanner_160x600",
+          "/21928950349,22547024640/kynguyenso.plo.vn_pcstickyhotbannerR3_300x600",
       ],
       adId: [
             "div-gpt-ad-1637223813283-0", //'/22140546871/bongdaplus.vn_pc_balloon_hb_300x600'
@@ -427,9 +427,9 @@
   };
   var mappings_full_hb_config_mobile = {
       adUnitNames: [
-          "/22082859479,22547024640/kynguyenso.plo.vn_mb_anchor_320x50",
-          "/22082859479,22547024640/kynguyenso.plo.vn_mb_inpage_300x600",
-          "/22082859479,22547024640/kynguyenso.plo.vn_mb_undersrticle_300x250",
+          "/21928950349,22547024640/kynguyenso.plo.vn_mb_anchor_320x50",
+          "/21928950349,22547024640/kynguyenso.plo.vn_mb_inpage_300x600",
+          "/21928950349,22547024640/kynguyenso.plo.vn_mb_undersrticle_300x250",
       ],
       adId: [
           "div-gpt-ad-1637224122961-0", // '/22140546871/bongdaplus.vn_in-article_468x60',

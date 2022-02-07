@@ -993,6 +993,12 @@
           "seller_id": "166",
           "name": "sportsunfold",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://tenposts.com/",
+          "seller_id": "167",
+          "name": "tenposts",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

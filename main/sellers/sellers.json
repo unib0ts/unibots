@@ -969,6 +969,36 @@
           "seller_id": "162",
           "name": "celebhub",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://tamilminutes.com/",
+          "seller_id": "163",
+          "name": "tamilminutes",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://hindi.scoopwhoop.com/",
+          "seller_id": "164",
+          "name": "hindi.scoopwhoop",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.auditionform.in/",
+          "seller_id": "165",
+          "name": "auditionform",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.sportsunfold.com/",
+          "seller_id": "166",
+          "name": "sportsunfold",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://tenposts.com/",
+          "seller_id": "167",
+          "name": "tenposts",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

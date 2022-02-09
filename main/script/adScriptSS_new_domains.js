@@ -223,7 +223,7 @@ function ubadScript() {
         //   ]
         // },
         {
-          code: '/21959913182/sakshipost_nb_320x50',
+          code: '21928950349,22666385065/sakshipost_nb_320x50',
           mediaTypes: {
             banner: {
               sizes: div_1_sizes
@@ -431,14 +431,14 @@ function ubadScript() {
     // var ub_slot1;
     function addNewsBotAd(){
       googletag.cmd.push(function() {
-          googletag.defineSlot('/21959913182/sakshipost_nb_320x50', div_1_sizes, 'div-gpt-ad-1602675444550-0').addService(googletag.pubads());
+          googletag.defineSlot('21928950349,22666385065/sakshipost_nb_320x50', div_1_sizes, 'div-gpt-ad-1602675444550-0').addService(googletag.pubads());
           googletag.pubads().collapseEmptyDivs(true);
           googletag.pubads().setCentering(true);
           googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
           googletag.pubads().enableSingleRequest();
           googletag.enableServices();
           googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-              if (event.slot ==='/21959913182/sakshipost_nb_320x50') {
+              if (event.slot ==='21928950349,22666385065/sakshipost_nb_320x50') {
                 ub_checkAdRendered();
               }
           });
@@ -460,7 +460,7 @@ function ubadScript() {
       ubpbjs.que.push(function() {
     	  ubpbjs.requestBids({
     		  timeout: PREBID_TIMEOUT,
-    		  adUnitCodes: ['/21959913182/sakshipost_nb_320x50'],
+    		  adUnitCodes: ['21928950349,22666385065/sakshipost_nb_320x50'],
     		  bidsBackHandler: function() {
             googletag.cmd.push(function() {
               ubpbjs.que.push(function() {
@@ -575,7 +575,7 @@ function ubadScript() {
       'div-gpt-ad-1577967622339-0',
       'div-gpt-ad-1577967696397-0',
       'div-gpt-ad-1602675466139-0', ///21959913182/sakshisamachar_nb_320x50
-      'div-gpt-ad-1602675444550-0', //'/21959913182/sakshipost_nb_320x50',
+      'div-gpt-ad-1602675444550-0', //'21928950349,22666385065/sakshipost_nb_320x50',
       'div-gpt-ad-1638776087773-0',
     ],
     adUnitNames: [
@@ -644,7 +644,7 @@ function ubadScript() {
       '/1062118/hindi_mob_hp_300x250_1',
       '/1062118/hindi_mob_hp_300x250_3',
       '/21959913182/sakshisamachar_nb_320x50',
-      '/21959913182/sakshipost_nb_320x50',
+      '21928950349,22666385065/sakshipost_nb_320x50',
       '/1062118/Unibot_Count_Pixel',
     ],
 
@@ -710,7 +710,7 @@ function ubadScript() {
        [300, 250],
        [300, 250],
        [320, 50], ///21959913182/sakshisamachar_nb_320x50
-       [320, 50],  ///21959913182/sakshipost_nb_320x50
+       [320, 50],  //21928950349,22666385065/sakshipost_nb_320x50
        [1, 1]
     ],
     bids: [
@@ -1070,14 +1070,14 @@ function ubadScript() {
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
-        ]),  //'/21959913182/sakshipost_nb_320x50'
+        ]),  //'21928950349,22666385065/sakshipost_nb_320x50'
         hb_full_common_bidders.concat([
          	// { bidder: 'oftmedia', params: { placementId: '20846125' } },
            // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
           // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3265017'} },
       //   { bidder: 'sovrn', params: {tagid: '744083'} },
       //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233' } }
-        ]),  //'/21959913182/sakshipost_nb_320x50'
+        ]),  //'21928950349,22666385065/sakshipost_nb_320x50'
     ]
   }
 

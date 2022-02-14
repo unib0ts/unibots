@@ -82,7 +82,7 @@ function mobileCheck() {
         setAttributes(ub_passback, {
           "style":"float:left;min-height:2px;width:auto;position:absolute;bottom:0;",
           "data-position": "1",
-          "data-section": "StroyPage",
+          "data-section": "sandesh",
           "class": "colombia"
         })
 

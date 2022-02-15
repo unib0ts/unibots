@@ -34,6 +34,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'G-J7M7D7PLVS';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
+var mybotScrollStartFlag = 0;
 // if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
 //   urlToCheck = window.location.host+window.location.pathname;
 //
@@ -86,8 +87,35 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
  // }
 
-   ub_passback1();
+ window.addEventListener('scroll',function(ev){mybotScrollStart()});
 
+
+ function mybotScrollStart(){
+   if (100 <= (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) && (mybotScrollStartFlag == 1)) {
+      mybotScrollStartFlag = 1;
+   	}else if(100 <= (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop)){
+          mybotScrollStartFlag = 1;
+          ub_passback1();
+    }
+ }
+
+ if (mybotScrollStartFlag == 1) {
+     ub_passback1();
+ }
+
+if (!mobileCheck()) {
+   if (document.querySelector('#div-clmb-ctn-466738-1') && document.querySelector('#div-clmb-ctn-466738-1').childNodes && document.querySelector('#div-clmb-ctn-466738-1').childNodes[0]) {
+           ub_iframe = document.getElementById('ifr_466738-1');
+           ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+           ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+  }
+}else {
+  if (document.querySelector('#div-clmb-ctn-466739-1') && document.querySelector('#div-clmb-ctn-466739-1').childNodes && document.querySelector('#div-clmb-ctn-466739-1').childNodes[0]) {
+          ub_iframe = document.getElementById('ifr_466739-1');
+          ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+          ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+ }
+}
   //  function ub_passback1() {
   //    s4 = document.createElement('script');
   //    s4.async = true;
@@ -114,6 +142,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
 
  function ub_passback1() {
+   console.log('clmb triggerd');
        if(typeof colombia == 'undefined'){
        var colombia = colombia || {};
        colombia.fns = colombia.fns || [];
@@ -152,8 +181,7 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
    function clmbdiv() {
        if (!mobileCheck()) {
-         if (document.querySelector('#div-clmb-ctn-466738-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-466738-1').childNodes[0]) {
+         if (document.querySelector('#div-clmb-ctn-466738-1') && document.querySelector('#div-clmb-ctn-466738-1').childNodes && document.querySelector('#div-clmb-ctn-466738-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_466738-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
@@ -169,12 +197,10 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
                  // });
                  clearInterval(ub_clmb);
-           }
          }
        }
        else {
-         if (document.querySelector('#div-clmb-ctn-466739-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-466739-1').childNodes[0]) {
+        if (document.querySelector('#div-clmb-ctn-466739-1') && document.querySelector('#div-clmb-ctn-466739-1').childNodes && document.querySelector('#div-clmb-ctn-466739-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_466739-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
@@ -190,7 +216,6 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
                  // });
                  clearInterval(ub_clmb);
-           }
          }
        }
    }

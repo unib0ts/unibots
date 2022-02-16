@@ -4,20 +4,18 @@ mybotDomainUrl = (window.location.host).split(".");
 mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));
 mybotBlockedClientName = mybotBlockedClientName.toString();
 
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocks' + capitalizeFLetter(mybotBlockedClientName) + '.json';
-
 var ISUBP_BLOCKED = false;
 
-function checkBlocked(url, clientName) {
+function checkBlocked(clientName) {
   return new Promise((resolve, reject) => {
-      let urlToCheck = window.location.host + window.location.pathname + window.location.search;
-      fetch(url)
+      let urlToCheck = window.location.host+window.location.pathname;
+      clientName = clientName.charAt(0).toUpperCase() + clientName.slice(1);
+      let blockCheckUrl = 'https://api.unibots.in/block?client='+clientName+'&page='+urlToCheck;
+      fetch(blockCheckUrl)
           .then(response => response.json())
           .then(data => {
-              data = data[clientName];
               if (data) {
-                  data = data.urls;
-                  if (data.includes(urlToCheck)) {
+                  if(data.status == true){
                       resolve('Page is blocked');
                   }
                   else {
@@ -30,15 +28,15 @@ function checkBlocked(url, clientName) {
   });
 }
 
-checkBlocked(mybotBlockedUrl, mybotBlockedClientName).then(() => {
+checkBlocked(mybotBlockedClientName).then(() => {
      ISUBP_BLOCKED = true;
     console.log('Page is allowed for UBP');
 }).catch(() => {
     console.log('Page is not allowed for UBP');
 })
 
-function capitalizeFLetter(input) {
-  var string = input;
-  x = string.charAt(0).toUpperCase() + string.slice(1);
-	 return x;
-}
+// function capitalizeFLetter(input) {
+//   var string = input;
+//   x = string.charAt(0).toUpperCase() + string.slice(1);
+// 	 return x;
+// }

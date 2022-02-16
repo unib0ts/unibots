@@ -363,7 +363,7 @@ if (document.querySelector('.image_listical')) {
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349,22560027500/socialnews.xyz_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('unibots-1');
+  mappings.adId.push('ub-inimage0');
   apSlotTemp = {
     slotID: mappings.adId[0],
     slotName: mappings.adCode[0],
@@ -374,7 +374,7 @@ if (document.querySelector('.image_listical')) {
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('unibots-1', ub_slot1, ['/21928950349,22560027500/socialnews.xyz_ipl_320x50']);
+        ub_checkAdRendered('ub-inimage0', ub_slot1, ['/21928950349,22560027500/socialnews.xyz_ipl_320x50']);
       }
     });
   });
@@ -382,7 +382,7 @@ if (document.querySelector('.image_listical')) {
   mappings.slotNumbers.push(1);
   mappings.adCode.push('/21928950349,22560027500/ragalahari.com_NB_728x90');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('unibots-2');
+  mappings.adId.push('ub-inimage1');
   // apSlotTemp = {
   //   slotID: mappings.adId[0],
   //   slotName: mappings.adCode[0],
@@ -393,7 +393,7 @@ if (document.querySelector('.image_listical')) {
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot2) {
-        ub_checkAdRendered('unibots-2', ub_slot2, ['/21928950349,22560027500/ragalahari.com_NB_728x90']);
+        ub_checkAdRendered('ub-inimage1', ub_slot2, ['/21928950349,22560027500/ragalahari.com_NB_728x90']);
       }
     });
   });

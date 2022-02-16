@@ -34,7 +34,17 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'G-J7M7D7PLVS';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-var mybotScrollStartFlag = 0;
+// var mybotScrollStartFlag = 0;
+ub_passback1();
+// if (!mobileCheck()) {
+//     if (document.getElementById('div-clmb-ctn-466738-1')) {
+//         document.getElementById('div-clmb-ctn-466738-1').style.display = 'none';
+//     }
+//   }else {
+//     if (document.getElementById('div-clmb-ctn-466739-1')) {
+//        document.getElementById('div-clmb-ctn-466739-1').style.display = 'none';
+//     }
+//   }
 // if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
 //   urlToCheck = window.location.host+window.location.pathname;
 //
@@ -91,30 +101,28 @@ var mybotScrollStartFlag = 0;
 
 
  function mybotScrollStart(){
-   if (100 <= (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) && (mybotScrollStartFlag == 1)) {
-      mybotScrollStartFlag = 1;
-   	}else if(100 <= (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop)){
-          mybotScrollStartFlag = 1;
-          ub_passback1();
-    }
- }
-
- if (mybotScrollStartFlag == 1) {
-     ub_passback1();
- }
-
-if (!mobileCheck()) {
-   if (document.querySelector('#div-clmb-ctn-466738-1') && document.querySelector('#div-clmb-ctn-466738-1').childNodes && document.querySelector('#div-clmb-ctn-466738-1').childNodes[0]) {
-           ub_iframe = document.getElementById('ifr_466738-1');
-           ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-           ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-  }
-}else {
-  if (document.querySelector('#div-clmb-ctn-466739-1') && document.querySelector('#div-clmb-ctn-466739-1').childNodes && document.querySelector('#div-clmb-ctn-466739-1').childNodes[0]) {
-          ub_iframe = document.getElementById('ifr_466739-1');
-          ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-          ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
- }
+ 	if (100 <= (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop)) {
+    if (!mobileCheck()) {
+        if (document.getElementById('div-clmb-ctn-466738-1')) {
+            document.getElementById('div-clmb-ctn-466738-1').style.display = 'block';
+        }
+      }else {
+        if (document.getElementById('div-clmb-ctn-466739-1')) {
+           document.getElementById('div-clmb-ctn-466739-1').style.display = 'block';
+        }
+      }
+ 		// }
+ 	}else {
+    if (!mobileCheck()) {
+        if (document.getElementById('div-clmb-ctn-466738-1')) {
+            document.getElementById('div-clmb-ctn-466738-1').style.display = 'none';
+        }
+      }else {
+        if (document.getElementById('div-clmb-ctn-466739-1')) {
+           document.getElementById('div-clmb-ctn-466739-1').style.display = 'none';
+        }
+      }
+ 	}
 }
   //  function ub_passback1() {
   //    s4 = document.createElement('script');
@@ -182,40 +190,50 @@ if (!mobileCheck()) {
    function clmbdiv() {
        if (!mobileCheck()) {
          if (document.querySelector('#div-clmb-ctn-466738-1') && document.querySelector('#div-clmb-ctn-466738-1').childNodes && document.querySelector('#div-clmb-ctn-466738-1').childNodes[0]) {
+                 document.getElementById('div-clmb-ctn-466738-1').style.display = 'none';
                  ub_iframe = document.getElementById('ifr_466738-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+                if (ub_innerDoc.querySelector('.main_div_swiper')) {
+                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+                  ub_z2 = document.createElement("div");
+                  ub_z2.id = "ub-cmpgn-ad";
+                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+                  ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+                  ub_z2.innerText = "Ads by Unibots";
+                  ub_innerDoc.appendChild(ub_z2);
 
-                 ub_z2 = document.createElement("div");
-                 ub_z2.id = "ub-cmpgn-ad";
-                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
-                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                 ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
+                  clearInterval(ub_clmb);
+                }
+
 
                  // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
                  // });
-                 clearInterval(ub_clmb);
          }
        }
        else {
         if (document.querySelector('#div-clmb-ctn-466739-1') && document.querySelector('#div-clmb-ctn-466739-1').childNodes && document.querySelector('#div-clmb-ctn-466739-1').childNodes[0]) {
+                 document.getElementById('div-clmb-ctn-466739-1').style.display = 'none';
                  ub_iframe = document.getElementById('ifr_466739-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
 
-                 ub_z2 = document.createElement("div");
-                 ub_z2.id = "ub-cmpgn-ad";
-                 ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
-                 ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
-                 ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
+                 if (ub_innerDoc.querySelector('.main_div_swiper')) {
+                   ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
+                   ub_z2 = document.createElement("div");
+                   ub_z2.id = "ub-cmpgn-ad";
+                   ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
+                   ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
+                   ub_z2.innerText = "Ads by Unibots";
+                   ub_innerDoc.appendChild(ub_z2);
+
+                  clearInterval(ub_clmb);
+                 }
+
 
                  // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
                  // });
-                 clearInterval(ub_clmb);
+
          }
        }
    }

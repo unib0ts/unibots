@@ -27,9 +27,9 @@ apstag.init({
 apSlots = []
 
 if (!mobileCheck()) {
-  var div_1_sizes = [320, 50];
+    var div_1_sizes = [728, 90];
 }else {
-  var div_1_sizes = [728, 90];
+     var div_1_sizes = [320, 50];
 }
 var adUnits = [];
 

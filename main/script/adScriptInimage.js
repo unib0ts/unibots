@@ -379,7 +379,7 @@ if (document.querySelector('.image_listical')) {
     });
   });
 
-  mappings.slotNumbers.push(1);
+  mappings.slotNumbers.push(2);
   mappings.adCode.push('/21928950349,22560027500/ragalahari.com_NB_728x90');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('ub-inimage1');

@@ -132,7 +132,7 @@ if(document.querySelector('.image_listical')){
   adUnits.push(adUnits1);
 
   adUnits1 = {
-    code: '/21928950349,22560027500/ragalahari.com_NB_728x90',
+    code: '/21928950349/ragalahari.com_NB_728x90',
     mediaTypes: {
       banner: {
         sizes: div_1_sizes
@@ -380,7 +380,7 @@ if (document.querySelector('.image_listical')) {
   });
 
   mappings.slotNumbers.push(2);
-  mappings.adCode.push('/21928950349,22560027500/ragalahari.com_NB_728x90');
+  mappings.adCode.push('/21928950349/ragalahari.com_NB_728x90');
   mappings.sizes.push(div_1_sizes);
   mappings.adId.push('ub-inimage1');
   // apSlotTemp = {
@@ -393,7 +393,7 @@ if (document.querySelector('.image_listical')) {
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot2) {
-        ub_checkAdRendered('ub-inimage1', ub_slot2, ['/21928950349,22560027500/ragalahari.com_NB_728x90']);
+        ub_checkAdRendered('ub-inimage1', ub_slot2, ['/21928950349/ragalahari.com_NB_728x90']);
       }
     });
   });

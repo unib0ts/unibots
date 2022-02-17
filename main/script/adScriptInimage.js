@@ -85,8 +85,7 @@ const customConfigObjectA = {
     }]
 };
 
-  var mybotstyleSheet='.ubinimagead_wrap{position:absolute;bottom:0;overflow:hidden;background:rgba(255,255,255,.5); z-index: 999;left:50%;align-items:center;transform:translateX(-50%);} .ubclosebtn_inimg{left:0;top:0;cursor:pointer;background:#ebebeb;padding:0px 2px;font-weight:700;position:absolute;font-size: 14px;line-height: 14px;}';
-  // .ub_adinimge{width:100%;overflow-x:scroll}
+  var mybotstyleSheet='.ubinimagead_wrap{width: 100%; position:absolute;bottom:0;overflow:hidden;background:rgba(255,255,255,.5); z-index: 999;left:50%;align-items:center;transform:translateX(-50%);} .ubclosebtn_inimg{left:0;top:0;cursor:pointer;background:#ebebeb;padding:0px 2px;font-weight:700;position:absolute;font-size: 14px;line-height: 14px;pointer-events: all;} .ub_adinimge{width:100%;overflow-x:scroll}';
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -162,9 +161,6 @@ if(document.querySelector('.image_listical')){
   adUnits.push(adUnits1);
 }
 
-function ubinimgagead() {
-    document.querySelector(".ubinimagead_wrap").style.display = "none";
-}
 
 function inimagead_target(imagetargetdiv) {
   ub_targetimages = document.querySelectorAll(imagetargetdiv);
@@ -179,6 +175,11 @@ function inimagead_target(imagetargetdiv) {
     ubinimgage_adId.id = 'ub-inimage'+i;
     document.querySelectorAll('.ub_adinimge')[i].appendChild(ubinimgage_adId)
   }
+}
+
+function ubinimgagead() {
+  console.log('close triggered');
+    document.querySelector(".ubinimagead_wrap").style.display = "none";
 }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //

@@ -33,43 +33,17 @@ x1.appendChild(z1);
 mybotGACode = 'G-YLT8L7SED8';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-// if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-//   urlToCheck = window.location.host+window.location.pathname;
-//
-//   var request = new XMLHttpRequest();
-//   url = mybotBlockedUrl;
-//
-//   request.open('GET', url, true);
-//   request.onload = function() {
-//     if (request.status >= 200 && request.status < 400) {
-//       var data = request.responseText;
-//       data = JSON.parse(data);
-//       data = data[mybotBlockedClientName];
-//       if(data) {
-//         data = data.urls;
-//         if(data.includes(urlToCheck)){
-//           // mybotdiv1 = '';
-//           return false;
-//         }
-//         else{
-//           ubadScript();
-//         }
-//       }
-//     }
-//     else {
-//       console.log('Block Check Request failed');
-//       ubadScript();
-//     }
-//   };
-//   request.onerror = function() {
-//     console.log('Request failed');
-//     ubadScript();
-//   };
-//   request.send();
-// }
-// else{
-//   ubadScript();
-// }
+url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+ub_vs = document.createElement("script");
+ub_vs.src = url;
+ub_vs.type = "text/javascript";
+document.getElementsByTagName("head")[0].appendChild(ub_vs);
+
+ub_plyrscript = document.createElement("script");
+ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(()=>{unibotsPlayer('tollywood');})");
+ub_plyrscript.appendChild(ub_plyerinlineScript);
+
+document.getElementsByTagName("body")[0].appendChild(ub_plyrscript);
 
 // function ubadScript() {
   var s0 = document.createElement('script');
@@ -140,12 +114,11 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
    function clmbdiv() {
        if (!mobileCheck()) {
-         if (document.querySelector('#div-clmb-ctn-465701-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-465701-1').childNodes[0]) {
+         if (document.querySelector('#div-clmb-ctn-465701-1') && document.querySelector('#div-clmb-ctn-465701-1').childNodes && document.querySelector('#div-clmb-ctn-465701-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_465701-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+               if (ub_innerDoc.querySelector('.main_div_swiper')) {
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
                  ub_z2 = document.createElement("div");
                  ub_z2.id = "ub-cmpgn-ad";
                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
@@ -161,12 +134,11 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
          }
        }
        else {
-         if (document.querySelector('#div-clmb-ctn-465702-1').childNodes) {
-           if (document.querySelector('#div-clmb-ctn-465702-1').childNodes[0]) {
+         if (document.querySelector('#div-clmb-ctn-465702-1') && document.querySelector('#div-clmb-ctn-465702-1').childNodes && document.querySelector('#div-clmb-ctn-465702-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_465702-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
+              if (ub_innerDoc.querySelector('.main_div_swiper')) {
                  ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
                  ub_z2 = document.createElement("div");
                  ub_z2.id = "ub-cmpgn-ad";
                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");

@@ -87,7 +87,7 @@ ub_passback1();
        var ub_passback = document.createElement("div");
        ub_passback.setAttribute("style", "float:left;min-height:2px;width:auto;position:absolute;bottom:0;");
        ub_passback.setAttribute("data-position", "1");
-       ub_passback.setAttribute("data-section", "patrika");
+       ub_passback.setAttribute("data-section", "kannadatoppicks");
        ub_passback.setAttribute("class", "colombia");
 
        if (!mobileCheck()) {
@@ -111,7 +111,7 @@ ub_passback1();
    function clmbdiv() {
        if (!mobileCheck()) {
          if (document.querySelector('#div-clmb-ctn-466738-1') && document.querySelector('#div-clmb-ctn-466738-1').childNodes && document.querySelector('#div-clmb-ctn-466738-1').childNodes[0]) {
-                 document.getElementById('div-clmb-ctn-466738-1').style.display = 'none';
+                 // document.getElementById('div-clmb-ctn-466738-1').style.display = 'none';
                  ub_iframe = document.getElementById('ifr_466738-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
                 if (ub_innerDoc.querySelector('.main_div_swiper')) {
@@ -129,7 +129,7 @@ ub_passback1();
        }
        else {
         if (document.querySelector('#div-clmb-ctn-466739-1') && document.querySelector('#div-clmb-ctn-466739-1').childNodes && document.querySelector('#div-clmb-ctn-466739-1').childNodes[0]) {
-                 document.getElementById('div-clmb-ctn-466739-1').style.display = 'none';
+                 // document.getElementById('div-clmb-ctn-466739-1').style.display = 'none';
                  ub_iframe = document.getElementById('ifr_466739-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
 

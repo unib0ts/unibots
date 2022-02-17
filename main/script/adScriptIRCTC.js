@@ -505,11 +505,11 @@ if(typeof customConfigObjectA === 'undefined'){
         }, REFRESH_TIMEOUT);
         mappings.renderedFlag[ub_slotNum] = true;
       }
-      else {
-        // ub_psbckRandom = Math.floor(Math.random() * 2);
-        //   eval('ub_passback'+ub_psbckRandom+'()');
-        ub_passback1();
-      }
+      // else {
+      //   // ub_psbckRandom = Math.floor(Math.random() * 2);
+      //   //   eval('ub_passback'+ub_psbckRandom+'()');
+      //   ub_passback1();
+      // }
     }
   }
 

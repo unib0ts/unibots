@@ -33,17 +33,27 @@ x1.appendChild(z1);
 mybotGACode = 'G-YLT8L7SED8';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
-ub_vs = document.createElement("script");
-ub_vs.src = url;
-ub_vs.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(ub_vs);
+if (document.querySelector('article')) {
+  url ="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubPlayer/main/player.js";
+  ub_vs = document.createElement("script");
+  ub_vs.src = url;
+  ub_vs.type = "text/javascript";
+  document.getElementsByTagName("head")[0].appendChild(ub_vs);
 
-ub_plyrscript = document.createElement("script");
-ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(()=>{unibotsPlayer('tollywood');})");
-ub_plyrscript.appendChild(ub_plyerinlineScript);
+  x_ub= document.querySelector('article');
+  x1_ub = x_ub.querySelector('figure');
 
-document.getElementById("div-ub-tollywood").appendChild(ub_plyrscript);
+  myub_obj = document.createElement("div");
+  myub_obj.id = "div-ub-tollywood";
+
+  ub_plyrscript = document.createElement("script");
+  ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(()=>{unibotsPlayer('tollywood');})");
+  ub_plyrscript.appendChild(ub_plyerinlineScript);
+  
+  myub_obj.appendChild(ub_plyrscript);
+  x1_ub.nextElementSibling.appendChild(myub_obj);
+
+}
 
 // function ubadScript() {
   var s0 = document.createElement('script');
@@ -56,8 +66,7 @@ document.getElementById("div-ub-tollywood").appendChild(ub_plyrscript);
   unibotshb.cmd.push(() => {
       ubHB("tollywood");
   });
- //
- // }
+
    ub_passback1();
 
    // setInterval(function(){

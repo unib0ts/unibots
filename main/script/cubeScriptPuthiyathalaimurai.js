@@ -54,7 +54,7 @@ mybotBlockedClientName = 'Puthiyathalaimurai';
   }
 
 
-  var mybotstyleSheet ="#div-clmb-ctn-467893-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-467894-1{width: auto !important;z-index: 2147483647 !important;} #ifr_467893-1{bottom: 125px !important;left: -30px !important;} #ifr_467894-1{bottom: 120px !important;left: -30px !important;} #div-ub-1{z-index: 2147483647 !important;}";
+  var mybotstyleSheet ="#div-clmb-ctn-467893-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-467894-1{width: auto !important;z-index: 2147483647 !important;} #ifr_467893-1{bottom: 145px !important;left: -30px !important;height: 180px !important;} #ifr_467894-1{bottom: 125px !important;left: -30px !important;height: 180px !important;} #div-ub-1{z-index: 2147483647 !important;}";
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -96,9 +96,9 @@ function ubadScript() {
     z1 = document.createElement("div");
     z1.id = "div-ub-1";
     if (!mobileCheck()) {
-      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:82px;left:5px;z-index:99";
+      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:95px;left:5px;z-index:99";
     }else {
-      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:50px !important;left:5px;z-index:99";
+      z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:72px !important;left:5px;z-index:99";
     }
     x1 = document.querySelector("body");
     x1.appendChild(z1);

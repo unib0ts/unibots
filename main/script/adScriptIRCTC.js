@@ -6,8 +6,8 @@ if(typeof customConfigObjectA === 'undefined'){
   ub_banner_ad2 = '<div id="div-gpt-ad-1613478315967-0">';
   ub_banner_ad3 = '<div id="div-gpt-ad-1613478315967-0">';
   // ub_sticky_ad = '<div id="div-gpt-ad-1610698846439-0">';
-  // if (document.getElementById('ATD_Ad_IR_320x50')) {
-  //   document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
+  // if (document.getElementById('irctc_hb_320x50')) {
+  //   document.getElementById('irctc_hb_320x50').innerHTML = unibot1;
   // }
   // var s3 = document.createElement('script');
   // s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
@@ -123,7 +123,7 @@ if(typeof customConfigObjectA === 'undefined'){
   //
   //
   // if((1<= currentTS) && (currentTS<=10)){
-    if (document.getElementById('ATD_Ad_IR_320x50')) {
+    if (document.getElementById('irctc_hb_320x50')) {
             adUnits1 =
             {
                 code: '/22082859479,22623808135/irctc.co.in_hb_320x50',
@@ -191,7 +191,7 @@ if(typeof customConfigObjectA === 'undefined'){
           }
   // }
   // else if ((11<= currentTS) && (currentTS<=20)) {
-  //   if (document.getElementById('ATD_Ad_IR_320x50')) {
+  //   if (document.getElementById('irctc_hb_320x50')) {
   //           adUnits1 =
   //           {
   //               code: '/22082859479,22623808135/irctc.co.in_hb_320x50',
@@ -259,7 +259,7 @@ if(typeof customConfigObjectA === 'undefined'){
   //         }
   // }
   // else {
-  //   if (document.getElementById('ATD_Ad_IR_320x50')) {
+  //   if (document.getElementById('irctc_hb_320x50')) {
   //           adUnits1 =
   //           {
   //               code: '/22082859479,22623808135/irctc.co.in_hb_320x50',
@@ -505,11 +505,11 @@ if(typeof customConfigObjectA === 'undefined'){
         }, REFRESH_TIMEOUT);
         mappings.renderedFlag[ub_slotNum] = true;
       }
-      else {
-        // ub_psbckRandom = Math.floor(Math.random() * 2);
-        //   eval('ub_passback'+ub_psbckRandom+'()');
-        ub_passback1();
-      }
+      // else {
+      //   // ub_psbckRandom = Math.floor(Math.random() * 2);
+      //   //   eval('ub_passback'+ub_psbckRandom+'()');
+      //   ub_passback1();
+      // }
     }
   }
 
@@ -521,7 +521,7 @@ if(typeof customConfigObjectA === 'undefined'){
 
     ub_passback = document.createElement("div");
     ub_passback.id = "eb46c61f91aab8c2b002b288485fc118";
-    ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+    ub_sticky = document.getElementById('irctc_hb_320x50');
     ub_sticky.appendChild(ub_passback);
   }
 
@@ -548,13 +548,13 @@ if(typeof customConfigObjectA === 'undefined'){
         ub_passback.setAttribute("data-ua", "D");
         ub_passback.setAttribute("data-slot", "459127");
         ub_passback.setAttribute("id", "div-clmb-ctn-459127-1");
-        ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+        ub_sticky = document.getElementById('irctc_hb_320x50');
         ub_sticky.appendChild(ub_passback);
     }else {
       ub_passback.setAttribute("data-ua", "M");
       ub_passback.setAttribute("data-slot", "459117");
       ub_passback.setAttribute("id", "div-clmb-ctn-459117-1");
-      ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+      ub_sticky = document.getElementById('irctc_hb_320x50');
       ub_sticky.appendChild(ub_passback);
     }
   }
@@ -573,7 +573,7 @@ if(typeof customConfigObjectA === 'undefined'){
     ub_passback.setAttribute("data-widget-id", "226459");
     ub_passback.setAttribute("data-banner-size", "320x50");
     // ub_passback.id = "eb46c61f91aab8c2b002b288485fc118";
-    ub_sticky = document.getElementById('ATD_Ad_IR_320x50');
+    ub_sticky = document.getElementById('irctc_hb_320x50');
     ub_sticky.appendChild(ub_passback);
   }
 
@@ -709,8 +709,8 @@ if(typeof customConfigObjectA === 'undefined'){
   }
 
   // function ubad1() {
-    if (document.getElementById('ATD_Ad_IR_320x50')) {
-      document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot1;
+    if (document.getElementById('irctc_hb_320x50')) {
+      document.getElementById('irctc_hb_320x50').innerHTML = unibot1;
       // apSlotTemp = {
       //   slotID: 'div-gpt-ad-1601280866524-0',
       //   slotName: '/22082859479,22623808135/irctc.co.in_hb_320x50',
@@ -759,8 +759,8 @@ if(typeof customConfigObjectA === 'undefined'){
     }
   // }
   // function ubad2() {
-  //   if (document.getElementById('ATD_Ad_IR_320x50')) {
-  //     document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot2;
+  //   if (document.getElementById('irctc_hb_320x50')) {
+  //     document.getElementById('irctc_hb_320x50').innerHTML = unibot2;
   //
   //     // apSlotTemp = {
   //     //   slotID: 'div-gpt-ad-1626241363418-0',
@@ -811,8 +811,8 @@ if(typeof customConfigObjectA === 'undefined'){
   //   }
   // }
   // function ubad3() {
-  //   if (document.getElementById('ATD_Ad_IR_320x50')) {
-  //     document.getElementById('ATD_Ad_IR_320x50').innerHTML = unibot3;
+  //   if (document.getElementById('irctc_hb_320x50')) {
+  //     document.getElementById('irctc_hb_320x50').innerHTML = unibot3;
   //
   //     // apSlotTemp = {
   //     //   slotID: 'div-gpt-ad-1602953590737-0',

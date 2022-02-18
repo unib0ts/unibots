@@ -85,8 +85,7 @@ const customConfigObjectA = {
     }]
 };
 
-  var mybotstyleSheet='.ubinimagead_wrap{position:absolute;bottom:0;overflow:hidden;background:rgba(255,255,255,.5); z-index: 999;left:50%;align-items:center;transform:translateX(-50%);} .ubclosebtn_inimg{left:0;top:0;cursor:pointer;background:#ebebeb;padding:0px 2px;font-weight:700;position:absolute;font-size: 14px;line-height: 14px;}';
-  // .ub_adinimge{width:100%;overflow-x:scroll}
+  var mybotstyleSheet='.ubinimagead_wrap{width: 100%; position:absolute;bottom:0;overflow:hidden;background:rgba(255,255,255,.5); z-index: 999;left:50%;align-items:center;transform:translateX(-50%);} .ubclosebtn_inimg{left:0;top:0;cursor:pointer;background:#ebebeb;padding:0px 2px;font-weight:700;position:absolute;font-size: 14px;line-height: 14px;pointer-events: all;} .ub_adinimge{width:100%;overflow-x:scroll}';
 
   var css = document.createElement("style");
   css.type = "text/css";
@@ -99,6 +98,37 @@ if(document.querySelectorAll('.image_listical')){
 }
 
 if(document.querySelector('.image_listical')){
+
+    adUnits1 = {
+      code: '/21956238066/inimage_728x90',
+      mediaTypes: {
+        banner: {
+          sizes: div_1_sizes
+        }
+      },
+      bids: [
+        { bidder: 'appnexus', params: { placementId: '19056651' } }, /* one placementId for all sizes  my appnexus bidder */
+        { bidder: 'sovrn', params: {tagid: '736462'} },
+        //{ bidder: 'oftmedia', params: { placementId: '18677505' } },
+        { bidder: '33across', params: { siteId : 'bNbIJABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
+        { bidder: 'emx_digital', params: { tagid: '97514' } }, /* sizeless */
+        // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
+        { bidder: 'openx', params: {unit: '543851457', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
+        { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934577'} },
+        { bidder: 'nobid', params: { siteId : '22049999731'} },
+        // { bidder: 'criteo', params: {networkId: '10542'} },
+        // { bidder: 'criteointl', params: {networkId: '10545'} },
+          { bidder: 'ucfunnel', params: { adid : 'ad-772877476E3A87DEC24E6E28438B499'} },
+          { bidder: 'smartadserver', params: { siteId: '362144', pageId: '1289645', formatId: '93233', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
+        { bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
+        { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+        { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
+        // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
+          { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265424'} }
+      ]
+      }
+    adUnits.push(adUnits1);
+
   adUnits1 =
   {
       code: '/21928950349,22560027500/socialnews.xyz_ipl_320x50',
@@ -130,41 +160,8 @@ if(document.querySelector('.image_listical')){
       ]
   };
   adUnits.push(adUnits1);
-
-  adUnits1 = {
-    code: '/21928950349/ragalahari.com_NB_728x90',
-    mediaTypes: {
-      banner: {
-        sizes: div_1_sizes
-      }
-    },
-    bids: [
-      { bidder: 'appnexus', params: { placementId: '19056651' } }, /* one placementId for all sizes  my appnexus bidder */
-      { bidder: 'sovrn', params: {tagid: '736462'} },
-      //{ bidder: 'oftmedia', params: { placementId: '18677505' } },
-      { bidder: '33across', params: { siteId : 'bNbIJABuar6PWLaKlId8sQ', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
-      { bidder: 'emx_digital', params: { tagid: '97514' } }, /* sizeless */
-      // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
-      { bidder: 'openx', params: {unit: '543851457', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
-      { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2934577'} },
-      { bidder: 'nobid', params: { siteId : '22049999731'} },
-      // { bidder: 'criteo', params: {networkId: '10542'} },
-      // { bidder: 'criteointl', params: {networkId: '10545'} },
-        { bidder: 'ucfunnel', params: { adid : 'ad-772877476E3A87DEC24E6E28438B499'} },
-        { bidder: 'smartadserver', params: { siteId: '362144', pageId: '1289645', formatId: '93233', domain: 'https://prg8.smartadserver.com' }, labelAny: ["US", "CA"] },
-      { bidder: 'sonobi', params: { placement_id: 'e061c85c1bf277a0a913', ad_unit: 'ragalahari_NB_728x90' } },
-      { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
-      { bidder: 'adyoulike', params: { placement: '2c2ca1653a87dd3ebe409bd5efbd611b'}, labelAll: ["US"] },
-      // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
-        { bidder: 'rubicon', params: {accountId: '23976', siteId: '400078', zoneId: '2265424'} }
-    ]
-    }
-  adUnits.push(adUnits1);
 }
 
-function ubinimgagead() {
-    document.querySelector(".ubinimagead_wrap").style.display = "none";
-}
 
 function inimagead_target(imagetargetdiv) {
   ub_targetimages = document.querySelectorAll(imagetargetdiv);
@@ -179,6 +176,11 @@ function inimagead_target(imagetargetdiv) {
     ubinimgage_adId.id = 'ub-inimage'+i;
     document.querySelectorAll('.ub_adinimge')[i].appendChild(ubinimgage_adId)
   }
+}
+
+function ubinimgagead() {
+  console.log('close triggered');
+    document.querySelector(".ubinimagead_wrap").style.display = "none";
 }
 
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -360,10 +362,10 @@ function googlePush(){
 }
 
 if (document.querySelector('.image_listical')) {
-  mappings.slotNumbers.push(1);
+  mappings.slotNumbers.push(2);
   mappings.adCode.push('/21928950349,22560027500/socialnews.xyz_ipl_320x50');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('ub-inimage0');
+  mappings.adId.push('ub-inimage1');
   apSlotTemp = {
     slotID: mappings.adId[0],
     slotName: mappings.adCode[0],
@@ -374,15 +376,15 @@ if (document.querySelector('.image_listical')) {
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot1) {
-        ub_checkAdRendered('ub-inimage0', ub_slot1, ['/21928950349,22560027500/socialnews.xyz_ipl_320x50']);
+        ub_checkAdRendered('ub-inimage1', ub_slot1, ['/21928950349,22560027500/socialnews.xyz_ipl_320x50']);
       }
     });
   });
 
-  mappings.slotNumbers.push(2);
-  mappings.adCode.push('/21928950349/ragalahari.com_NB_728x90');
+  mappings.slotNumbers.push(1);
+  mappings.adCode.push('/21956238066/inimage_728x90');
   mappings.sizes.push(div_1_sizes);
-  mappings.adId.push('ub-inimage1');
+  mappings.adId.push('ub-inimage0');
   // apSlotTemp = {
   //   slotID: mappings.adId[0],
   //   slotName: mappings.adCode[0],
@@ -393,7 +395,7 @@ if (document.querySelector('.image_listical')) {
   googletag.cmd.push(function() {
     googletag.pubads().addEventListener('slotRenderEnded', function(event) {
       if (event.slot === ub_slot2) {
-        ub_checkAdRendered('ub-inimage1', ub_slot2, ['/21928950349/ragalahari.com_NB_728x90']);
+        ub_checkAdRendered('ub-inimage0', ub_slot2, ['/21956238066/inimage_728x90']);
       }
     });
   });

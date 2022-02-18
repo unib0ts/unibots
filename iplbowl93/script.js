@@ -43,7 +43,7 @@ ub_plyrscript = document.createElement("script");
 ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(()=>{unibotsPlayer('tollywood');})");
 ub_plyrscript.appendChild(ub_plyerinlineScript);
 
-document.getElementsByTagName("body")[0].appendChild(ub_plyrscript);
+document.getElementById("div-ub-tollywood").appendChild(ub_plyrscript);
 
 // function ubadScript() {
   var s0 = document.createElement('script');

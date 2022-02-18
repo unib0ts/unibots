@@ -15,7 +15,7 @@ function mobileCheck() {
 }
 
 
-var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483646 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483646 !important;} #ifr_466738-1{bottom: 0px !important;left: -20px !important;} #ifr_466739-1{bottom: 0px !important;left: -20px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483646 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483646 !important;} #ifr_466738-1{bottom: 0px !important;left: unset !important; right:0px !important;} #ifr_466739-1{bottom: 0px !important;left: -20px !important;}";
 // var mybotstyleSheet = mobileCheck() ? "mybot .ub-roller-wrapper {bottom: 130px !important};":"mybot .ub-roller-wrapper {right: 15px !important;left: unset !important;}";
 var css = document.createElement("style");
 css.type = "text/css";

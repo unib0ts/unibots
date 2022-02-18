@@ -244,6 +244,7 @@ function ubadScript() {
             // { bidder: 'criteo', params: {networkId: '10542'} },
             { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2250744'} },
             { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+            { bidder: 'adtelligent', params: { aid: 726034 } },
             // // { bidder: 'criteointl', params: {networkId: '10545'} },
             // // // {bidder: 'dailyhunt', params: {placement_id: 1, publisher_id: 6, partner_name: 'Sakshi'} },
             // // //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
@@ -504,6 +505,7 @@ function ubadScript() {
     { bidder: 'emx_digital', params: { tagid: '97515' } }, /* sizeless */
     { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
     { bidder: 'nobid', params: { siteId: '21987177881' } },
+    { bidder: 'adtelligent', params: { aid: 726034 } },
     // // { bidder: 'openx', params: {unit: '541046310', delDomain: 'yieldbird-d.openx.net'} },
     // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
     // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },

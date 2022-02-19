@@ -110,6 +110,7 @@ else{
                   // // // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */
                   { bidder: 'nobid', params: { siteId: '22049996977' } },
                   { bidder: 'sovrn', params: {tagid: '957052'} },
+                  { bidder: 'adtelligent', params: { aid: 726032 } },
                   { bidder: '33across', params: { siteId : 'caRVfUiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] },
                   // // // { bidder: 'openx', params: {unit: '545727976', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
                   // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
@@ -118,7 +119,7 @@ else{
                   // // // { bidder: 'criteointl', params: {networkId: '10545'} },
                   // { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
                   // { bidder: 'adyoulike', params: { placement: '1bda9195af6bacac48859035dbcca120'}, labelAll: ["US"] },
-                  { bidder: 'ucfunnel', params: { adid : 'ad-9A2986A243BE76E414D4B8879E927E2D'} },         
+                  { bidder: 'ucfunnel', params: { adid : 'ad-9A2986A243BE76E414D4B8879E927E2D'} },
             ],
         };
         adUnits.push(adUnits1);
@@ -205,6 +206,7 @@ else{
   var hb_common_bidders = [
     { bidder: 'appnexus', params: { placementId: '19403759' } }, /* one placementId for all sizes  my appnexus bidder */
       { bidder: 'oftmedia', params: { placementId: '22762548' } },
+      { bidder: 'adtelligent', params: { aid: 726032 } },
       { bidder: '33across', params: { siteId : 'caRVfUiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] }, /*All sizes*/
       // // { bidder: 'emx_digital', params: { tagid: '107927' } }, /* sizeless */
       // // { bidder: 'rhythmone', params: { placementId: '205945'} }, /* one placementId for all sizes */

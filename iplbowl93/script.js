@@ -1,3 +1,6 @@
+// if (window.location.href == 'https://www.tollywood.net/') {
+//   console.log('script disalbed');
+// }else {
 function mobileCheck() {
     var check = false;
     (function (a) {
@@ -13,10 +16,6 @@ function mobileCheck() {
     })(navigator.userAgent || navigator.vendor || window.opera);
     return check;
 }
-
-// mybotBlockedPagesFlag = 1;
-// mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksTollywood.json';
-// mybotBlockedClientName = 'tollywood';
 
 var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;bottom: 55px !important;} #ifr_465702-1{right:0px !important;left: unset !important;bottom: 55px !important;}";
 var css = document.createElement("style");
@@ -49,7 +48,7 @@ if (document.querySelector('article')) {
   ub_plyrscript = document.createElement("script");
   ub_plyerinlineScript = document.createTextNode("window.unibots = window.unibots || { cmd: [] }; unibots.cmd.push(()=>{unibotsPlayer('tollywood');})");
   ub_plyrscript.appendChild(ub_plyerinlineScript);
-  
+
   myub_obj.appendChild(ub_plyrscript);
   x1_ub.nextElementSibling.appendChild(myub_obj);
 
@@ -188,3 +187,4 @@ if (document.querySelector('article')) {
          oldScript.parentNode.replaceChild(newScript, oldScript);
      }
  }
+// }

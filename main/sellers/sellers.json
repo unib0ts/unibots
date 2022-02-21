@@ -1005,6 +1005,12 @@
           "seller_id": "168",
           "name": "carandbike",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://sportzwiki.com/",
+          "seller_id": "169",
+          "name": "sportzwiki",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

@@ -36,6 +36,14 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
 
 // var mybotScrollStartFlag = 0;
 ub_passback1();
+
+var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000;
+url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptInimagePatrika.min.js?cb='+cachebuster;
+s1 = document.createElement('script');
+s1.src = url;
+s1.async = "async";
+s1.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(s1);
 // if (!mobileCheck()) {
 //     if (document.getElementById('div-clmb-ctn-466738-1')) {
 //         document.getElementById('div-clmb-ctn-466738-1').style.display = 'none';

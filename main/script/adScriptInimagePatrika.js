@@ -102,7 +102,7 @@ const customConfigObjectA = {
     }]
 };
 
-  var mybotstyleSheet='.ubinimagead_wrap{width: 100%; position:absolute;bottom:0;overflow:hidden;background:rgba(255,255,255,.5); z-index: 999;left:50%;align-items:center;transform:translateX(-50%);} .ubclosebtn_inimg{left:0;top:0;cursor:pointer;background:#ebebeb;padding:0px 2px;font-weight:700;position:absolute;font-size: 14px;line-height: 14px;pointer-events: all;} .ub_adinimge{width:100%;}';
+  var mybotstyleSheet='.ubinimagead_wrap{width: 100%; position:absolute;bottom:0;overflow:hidden;background:rgba(255,255,255,.5); z-index: 999;left:50%;align-items:center;transform:translateX(-50%);} .ubclosebtn_inimg{left:0;top:0;cursor:pointer;background:#ebebeb;padding:0px 2px;font-weight:700;position:absolute;font-size: 14px;line-height: 14px;pointer-events: all;width: 14px !important;} .ub_adinimge{width:100%;}';
 
   var css = document.createElement("style");
   css.type = "text/css";

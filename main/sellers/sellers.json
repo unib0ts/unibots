@@ -1011,6 +1011,12 @@
           "seller_id": "169",
           "name": "sportzwiki",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.patrika.com/",
+          "seller_id": "170",
+          "name": "patrika",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

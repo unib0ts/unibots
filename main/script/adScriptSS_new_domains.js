@@ -22,6 +22,12 @@ apSlots = []
 // s3.type = "text/javascript";
 // document.getElementsByTagName('head')[0].appendChild(s3);
 
+z1 = document.createElement("div");
+z1.id = "div-ub-1";
+z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
+x1 = document.querySelector("body");
+x1.appendChild(z1);
+
 var PREBID_TIMEOUT = 2000;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;

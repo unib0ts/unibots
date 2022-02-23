@@ -33,12 +33,6 @@ document.getElementsByTagName("head")[0].appendChild(ub_ga);
 document.getElementById("gabywa").innerHTML = mybotgabywa;
 loadAd("gabywa");
 
-  z1 = document.createElement("div");
-  z1.id = "div-gpt-ad-1602675444550-0";
-  z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
-  x1 = document.querySelector("body");
-  x1.appendChild(z1);
-
    ub_passback1();
 
    function ub_passback1() {
@@ -93,23 +87,6 @@ loadAd("gabywa");
          }
      }
    }
-
-   // setInterval(function(){
-   //   if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
-   //     if (!mobileCheck()) {
-   //       try{
-   //         colombia.refresh('div-clmb-ctn-462954-1');
-   //         cubespinnervisibility();
-   //       }catch(e){}
-   //     }else {
-   //       try{
-   //         colombia.refresh('div-clmb-ctn-462955-1');
-   //         cubespinnervisibility();
-   //       }catch(e){}
-   //     }
-   //    }
-   // }, 30000);
-
 
    function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {
      if (document.querySelector(clmbdiv_id).childNodes) {

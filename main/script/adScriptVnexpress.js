@@ -111,6 +111,7 @@ else{
                   { bidder: 'nobid', params: { siteId: '22049996977' } },
                   { bidder: 'sovrn', params: {tagid: '957052'} },
                   { bidder: 'adtelligent', params: { aid: 726032 } },
+                  { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2321528'} },
                   { bidder: '33across', params: { siteId : 'caRVfUiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] },
                   // // // { bidder: 'openx', params: {unit: '545727976', delDomain: 'unibots-d.openx.net'}, labelAny: ["US", "CA"] },
                   // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
@@ -217,6 +218,7 @@ else{
       // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
       // // { bidder: 'criteo', params: {networkId: '10542'} },
       { bidder: 'onetag', params: { pubId: '60c32c42465aac2' } },
+      { bidder: 'rubicon', params: { accountId: '23976', siteId: '400078', zoneId: '2321528'} },
       // // { bidder: 'criteointl', params: {networkId: '10545'} },
   ];
 

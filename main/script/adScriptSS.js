@@ -1295,7 +1295,7 @@ var mappings_extra_units = {
 }
 
 function checkHBUnits(){
-  // addNewsBotAd();
+  addNewsBotAd();
   changeConfigToHB();
   callMapUnits();
 

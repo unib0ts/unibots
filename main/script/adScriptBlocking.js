@@ -16,10 +16,10 @@ function checkBlocked(clientName) {
           .then(data => {
               if (data) {
                   if(data.status == true){
-                      resolve('Page is blocked');
+                      reject('Page is blocked');
                   }
                   else {
-                      reject('Page is allowed');
+                      resolve('Page is allowed');
                   }
               }
           }).catch(() => {

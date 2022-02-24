@@ -16,10 +16,10 @@ function checkBlocked(clientName) {
           .then(data => {
               if (data) {
                   if(data.status == true){
-                      reject('Page is blocked');
+                      resolve('Page is blocked');
                   }
                   else {
-                      resolve('Page is allowed');
+                      reject('Page is allowed');
                   }
               }
           }).catch(() => {
@@ -30,9 +30,9 @@ function checkBlocked(clientName) {
 
 checkBlocked(mybotBlockedClientName).then(() => {
      ISUBP_BLOCKED = true;
-    console.log('VastTags is allowed for UBP');
-}).catch(() => {
     console.log('VastTags is not allowed for UBP');
+}).catch(() => {
+    console.log('VastTags is allowed for UBP');
 })
 
 // function capitalizeFLetter(input) {

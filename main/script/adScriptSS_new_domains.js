@@ -1153,4 +1153,4 @@ checkHBUnits();
 setInterval(function() {
   // ub_ad1RefreshFlag = 1;
   refreshBidfull(mappings_extra_units.slots, mappings_extra_units.adUnitNames);
-}, 30000);
+}, REFRESH_TIMEOUT);

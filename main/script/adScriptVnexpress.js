@@ -123,6 +123,7 @@ else{
                   { bidder: '33across', params: { siteId : 'caRVfUiEmr7kSQaKlKyvbs', productId: 'siab' }, labelAll: ["US"] },
                   // { bidder: 'openx', params: {unit: '543530506', delDomain: 'unibots-d.openx.net'}},
                   { bidder: 'ucfunnel', params: { adid : 'ad-9A2986A243BE76E414D4B8879E927E2D'} },
+                  { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3681540'} },
                   // // // // { bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } },
                   // // // // //{ bidder: 'adsolut', params: {zoneId: '107071', host: 'cpm.adsolut.in'} },
                   // // // { bidder: 'criteo', params: {networkId: '10542'} },
@@ -279,6 +280,7 @@ else{
   				 { bidder: 'ucfunnel', params: { adid : 'ad-8A29A4E8342A6BA60B22EBEB98AEAB8E'} },
   				 { bidder: 'sovrn', params: {tagid: '795405'} },
           { bidder: 'openx', params: {unit: '543486337', delDomain: 'unibots-d.openx.net'}},
+              { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268941'} },
   			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //Infeedinstream1
   		hb_common_bidders.concat([
@@ -287,6 +289,7 @@ else{
   				 { bidder: 'ucfunnel', params: { adid : 'ad-BE78EBA933BEEA24C7D38BBEE4B46B42'} },
   				 { bidder: 'sovrn', params: {tagid: '795406'} },
              { bidder: 'openx', params: {unit: '543530498', delDomain: 'unibots-d.openx.net'}},
+                 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268942'} },
   			 // //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //Infeedinstream2
   		hb_common_bidders.concat([
@@ -295,6 +298,7 @@ else{
   				 { bidder: 'ucfunnel', params: { adid : 'ad-D2342DE83224EAEDFD2DD6D6E7BBA72E'} },
   				 { bidder: 'sovrn', params: {tagid: '795407'} },
              { bidder: 'openx', params: {unit: '543530499', delDomain: 'unibots-d.openx.net'}},
+                 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268943'} },
   			 // //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //Infeed-Kinhdoanh
   		hb_common_bidders.concat([
@@ -303,6 +307,7 @@ else{
   				 { bidder: 'ucfunnel', params: { adid : 'ad-8A29A4E7296AAB7B1EAD7A4AA29EED7'} },
   				 { bidder: 'sovrn', params: {tagid: '795408'} },
              { bidder: 'openx', params: {unit: '543530500', delDomain: 'unibots-d.openx.net'}},
+                 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268944'} },
   			 // //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //Infeed-Giaitri
   		hb_common_bidders.concat([
@@ -311,6 +316,7 @@ else{
   				 { bidder: 'ucfunnel', params: { adid : 'ad-627D2E4822D9D47EFEE7A3966D79EE92'} },
   				 { bidder: 'sovrn', params: {tagid: '795416'} },
              { bidder: 'openx', params: {unit: '543486488', delDomain: 'unibots-d.openx.net'}},
+                 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268950'} },
   			 // //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso1',
   		hb_common_bidders.concat([
@@ -319,6 +325,7 @@ else{
   				 { bidder: 'ucfunnel', params: { adid : 'ad-AA7BA3D6AB433D6BF22ABA4D32D493D'} },
   				 { bidder: 'sovrn', params: {tagid: '795417'} },
              { bidder: 'openx', params: {unit: '543530506', delDomain: 'unibots-d.openx.net'}},
+                 { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3268951'} },
   			 // //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //'/21928950349,22625376282/vnexpress_hb_320x50_folder.tinso2',
   		// hb_common_bidders.concat([
@@ -333,6 +340,7 @@ else{
            	// { bidder: 'adyoulike', params: { placement: '1bda9195af6bacac48859035dbcca120'}, labelAll: ["US"] },
   				 { bidder: 'ucfunnel', params: { adid : 'ad-AA7BEDA7828A9694C2B96274699D2A7'} },
   				 { bidder: 'sovrn', params: {tagid: '957051'} },
+               { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3681539'} },
              // { bidder: 'openx', params: {unit: '543530506', delDomain: 'unibots-d.openx.net'}},
   			 //   { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' } }
   		]), //thongtindoanhnghiepso1

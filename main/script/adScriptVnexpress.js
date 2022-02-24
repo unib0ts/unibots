@@ -2,6 +2,14 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksVNE.json';
 mybotBlockedClientName = 'vnexpress';
 
+mybotGACode = 'G-E7CGQDVW22';
+mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+
+  ub_ga = document.createElement("div");
+  ub_ga.id = "gabywa";
+  document.getElementsByTagName("head")[0].appendChild(ub_ga);
+  document.getElementById("gabywa").innerHTML = mybotgabywa;
+  loadAd("gabywa");
 
 var mybotstyleSheet='.ubtext_ads{width:100%;margin-bottom:8px;font:400 11px arial;color:#828282;text-align:center;position:relative} .ubtext_ads .ubtxt_qc{display:inline-block;position:relative;padding-left:21px} .ubtext_ads .ubtxt_qc:before{width:16px;height:16px;background:url("https://s1cdn.vnecdn.net/vnexpress/restruct/c/v825/v2/mobile_redesign/images/graphics/Advertising.svg") no-repeat 0 0;content:"";position:absolute;top:-1px;left:0}';
 
@@ -635,4 +643,27 @@ else{
   						});
       googletag.enableServices();
     });
+  }
+
+  function loadAd(id, adUnits) {
+      var elm = document.getElementById(id);
+      var scripts = Array(elm.querySelectorAll("script"));
+      scripts = scripts[0];
+      for (var i = 0; i < scripts.length; i++) {
+          oldScript = scripts[i];
+          const newScript = document.createElement("script");
+          var scriptAttr = Array(oldScript.attributes);
+          scriptAttr = scriptAttr[0];
+          for (var j = 0; j < scriptAttr.length; j++) {
+              attr = scriptAttr[j];
+              newScript.setAttribute(attr.name, attr.value);
+          }
+          newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+          newScript.onload = function () {
+              if (adUnits !== undefined) {
+                  smartyads.buildUnits(adUnits);
+              }
+          };
+          oldScript.parentNode.replaceChild(newScript, oldScript);
+      }
   }

@@ -456,14 +456,14 @@ ub_ad1RefreshFlag = 0;
 function ub_checkAd1Rendered(ubsmall_slot1){
 	adId1 = 'div-ub-1';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if(ub_ad1RefreshFlag != 1){
-      setInterval(function() {
-        ub_ad1RefreshFlag = 1;
-        refreshBid(ubsmall_slot1);
-      }, REFRESH_TIMEOUT);
-    }
-  }
+	// if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+  //   if(ub_ad1RefreshFlag != 1){
+  //     setInterval(function() {
+  //       ub_ad1RefreshFlag = 1;
+  //       refreshBid(ubsmall_slot1);
+  //     }, REFRESH_TIMEOUT);
+  //   }
+  // }
 }
 
 
@@ -826,24 +826,24 @@ function fillRefreshMap(){
   });
 }
 
-function refreshBidfull(ub_slot, adCode) {
-  googletag.pubads().refresh(ub_slot);
-    // ubpbjs.que.push(function () {
-    //     ubpbjs.requestBids({
-    //         timeout: PREBID_TIMEOUT,
-    //         adUnitCodes: adCode,
-    //         adUnits: adUnits_full_hb,
-    //         bidsBackHandler: function () {
-    //             googletag.cmd.push(function () {
-    //                 ubpbjs.que.push(function () {
-    //                     ubpbjs.setTargetingForGPTAsync();
-    //                     googletag.pubads().refresh(ub_slot);
-    //                 });
-    //             });
-    //         },
-    //     });
-    // });
-}
+// function refreshBidfull(ub_slot, adCode) {
+//   googletag.pubads().refresh(ub_slot);
+//     // ubpbjs.que.push(function () {
+//     //     ubpbjs.requestBids({
+//     //         timeout: PREBID_TIMEOUT,
+//     //         adUnitCodes: adCode,
+//     //         adUnits: adUnits_full_hb,
+//     //         bidsBackHandler: function () {
+//     //             googletag.cmd.push(function () {
+//     //                 ubpbjs.que.push(function () {
+//     //                     ubpbjs.setTargetingForGPTAsync();
+//     //                     googletag.pubads().refresh(ub_slot);
+//     //                 });
+//     //             });
+//     //         },
+//     //     });
+//     // });
+// }
 
 function callFullHBAds(adCode, ub_slot){
   // fillRefreshMap();

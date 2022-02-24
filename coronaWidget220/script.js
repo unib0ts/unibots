@@ -24,7 +24,6 @@ document.getElementsByTagName("head")[0].appendChild(css);
 mybotGACode = 'G-R0DQ8B1RNX';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-// mybotadSmall = '<div id="div-ub-1"></div>';
 mybotadTarget = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><div id="gpt-passback"><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21959913182/sakshi_hb_320x50_top_mobile_new", [[320, 100], [320, 50], [300, 50], [300, 100]], "gpt-passback").addService(googletag.pubads());googletag.pubads().set("page_url","sakshi.com");googletag.enableServices();googletag.display("gpt-passback");});</script></div>';
 
 ub_ga = document.createElement("div");

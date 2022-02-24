@@ -827,21 +827,22 @@ function fillRefreshMap(){
 }
 
 function refreshBidfull(ub_slot, adCode) {
-    ubpbjs.que.push(function () {
-        ubpbjs.requestBids({
-            timeout: PREBID_TIMEOUT,
-            adUnitCodes: adCode,
-            adUnits: adUnits_full_hb,
-            bidsBackHandler: function () {
-                googletag.cmd.push(function () {
-                    ubpbjs.que.push(function () {
-                        ubpbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh(ub_slot);
-                    });
-                });
-            },
-        });
-    });
+  googletag.pubads().refresh(ub_slot);
+    // ubpbjs.que.push(function () {
+    //     ubpbjs.requestBids({
+    //         timeout: PREBID_TIMEOUT,
+    //         adUnitCodes: adCode,
+    //         adUnits: adUnits_full_hb,
+    //         bidsBackHandler: function () {
+    //             googletag.cmd.push(function () {
+    //                 ubpbjs.que.push(function () {
+    //                     ubpbjs.setTargetingForGPTAsync();
+    //                     googletag.pubads().refresh(ub_slot);
+    //                 });
+    //             });
+    //         },
+    //     });
+    // });
 }
 
 function callFullHBAds(adCode, ub_slot){
@@ -1148,3 +1149,8 @@ checkHBUnits();
 // else{
   // checkHBUnits();
 // }
+
+setInterval(function() {
+  // ub_ad1RefreshFlag = 1;
+  refreshBidfull(mappings_extra_units.slots, mappings_extra_units.adUnitNames);
+}, 30000);

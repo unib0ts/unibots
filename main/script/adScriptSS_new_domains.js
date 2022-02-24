@@ -754,7 +754,7 @@ var mappings_full_hb_config = {
 var mappings_extra_units_config ={
   adUnitNames: [
     '/1062118/Unibot_Count_Pixel',
-    '/21928950349,22666385065/sakshipost_nb_320x50',
+    // '/21928950349,22666385065/sakshipost_nb_320x50',
     '/1062118/English_Mob_HP_LB_300x250',   //https://english.sakshi.com/ -
     '/1062118/English_Mob_Hp_300x250_1',
     '/1062118/English_Mob_Hp_300x250_2',
@@ -790,7 +790,7 @@ var mappings_extra_units = {
 }
 
 function checkHBUnits(){
-  addNewsBotAd();
+  // addNewsBotAd();
   // changeConfigToHB();
   callMapUnits();
 

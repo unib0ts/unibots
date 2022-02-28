@@ -1017,6 +1017,12 @@
           "seller_id": "170",
           "name": "patrika",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://bengali.sportzwiki.com",
+          "seller_id": "171",
+          "name": "sportzwikibengali",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

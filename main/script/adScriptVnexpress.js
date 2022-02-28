@@ -644,9 +644,9 @@ else{
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
       googletag.pubads().enableSingleRequest();
   		googletag.pubads().enableLazyLoad({
-  							fetchMarginPercent: 200,
-  							renderMarginPercent: 100,
-  							mobileScaling: 2.0
+  							fetchMarginPercent: 700,
+  							renderMarginPercent: 500,
+  							mobileScaling: 1.5
   						});
       googletag.enableServices();
     });

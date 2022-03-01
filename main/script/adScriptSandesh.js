@@ -540,7 +540,12 @@ function mainHbRun(){
             nodes: [
               {
                 asi:"unibots.in",   //directseller
-                sid:"1504",     //seller_id
+                sid:"87",     //seller_id
+                hp:1
+              },
+              {
+                asi:"emxdgt.com",   //directseller
+                sid:"2145",     //seller_id
                 hp:1
               },
             ]

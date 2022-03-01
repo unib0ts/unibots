@@ -22,14 +22,9 @@ css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
 document.getElementsByTagName("head")[0].appendChild(css);
 
-mybotBlockedPagesFlag = 1;
-mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksSS.json';
-mybotBlockedClientName = 'SS';
-
 mybotGACode = 'G-R8L5HEPRNB';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 
-// mybotadSmall = '<div id="div-ub-1"></div>';
 mybotadTarget = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><div id="gpt-passback"><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21959913182/sakshi_hb_320x50_top_mobile_new", [[320, 100], [320, 50], [300, 50], [300, 100]], "gpt-passback").addService(googletag.pubads());googletag.pubads().set("page_url","sakshi.com");googletag.enableServices();googletag.display("gpt-passback");});</script></div>';
 
 ub_ga = document.createElement("div");
@@ -38,44 +33,6 @@ document.getElementsByTagName("head")[0].appendChild(ub_ga);
 document.getElementById("gabywa").innerHTML = mybotgabywa;
 loadAd("gabywa");
 
-if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
-  urlToCheck = window.location.host+window.location.pathname;
-
-  var request = new XMLHttpRequest();
-  url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
-
-  request.open('GET', url, true);
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      var data = request.responseText;
-      data = JSON.parse(data);
-      // data = data[mybotBlockedClientName];
-      if(data) {
-        // data = data.urls;
-        if(data.status == true){
-          return false;
-        }
-        else{
-          ubadScript();
-        }
-      }
-    }
-    else {
-      console.log('Block Check Request failed');
-      ubadScript();
-    }
-  };
-  request.onerror = function() {
-    console.log('Request failed');
-    ubadScript();
-  };
-  request.send();
-}
-else{
-  ubadScript();
-}
-
-function ubadScript() {
   z1 = document.createElement("div");
   z1.id = "div-ub-1";
   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
@@ -103,23 +60,14 @@ function ubadScript() {
     s1.type = "text/javascript";
     document.getElementsByTagName('head')[0].appendChild(s1);
 
-    if (window.location.href == "https://www.sakshi.com/telugu-news/sports/shikhar-dhawan-top-scorer-india-tour-south-africa-1429495") {
-      var cachebuster = Math.round(new Date().getTime() / 1000);
-      url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptSS.js?cb='+cachebuster;
-      s2 = document.createElement('script');
-      s2.src = url;
-      s2.async = "async";
-      document.body.appendChild(s2);
 
-    }else {
-      var cachebuster = Math.round(new Date().getTime() / 1000);
-      url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptSS_new.js?cb='+cachebuster;
-      s2 = document.createElement('script');
-      s2.src = url;
-      s2.async = "async";
-      document.body.appendChild(s2);
-    }
-}
+    var cachebuster = Math.round(new Date().getTime() / 1000);
+    url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScriptSS_new.js';
+    s2 = document.createElement('script');
+    s2.src = url;
+    s2.async = "async";
+    document.body.appendChild(s2);
+
    ub_passback1();
 
    function ub_passback1() {
@@ -174,23 +122,6 @@ function ubadScript() {
          }
      }
    }
-
-   // setInterval(function(){
-   //   if (ub_innerDoc.querySelector('#cube3dSwiper') !=null) {
-   //     if (!mobileCheck()) {
-   //       try{
-   //         colombia.refresh('div-clmb-ctn-462954-1');
-   //         cubespinnervisibility();
-   //       }catch(e){}
-   //     }else {
-   //       try{
-   //         colombia.refresh('div-clmb-ctn-462955-1');
-   //         cubespinnervisibility();
-   //       }catch(e){}
-   //     }
-   //    }
-   // }, 30000);
-
 
    function ub_refresh(clmbdiv_id, clmbiframe_id, ub_clmb ) {
      if (document.querySelector(clmbdiv_id).childNodes) {

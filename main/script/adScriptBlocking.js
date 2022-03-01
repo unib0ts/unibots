@@ -30,9 +30,9 @@ function checkBlocked(clientName) {
 
 checkBlocked(mybotBlockedClientName).then(() => {
      ISUBP_BLOCKED = true;
-    console.log('Page is allowed for UBP');
+    console.log('VastTags is not allowed for UBP');
 }).catch(() => {
-    console.log('Page is not allowed for UBP');
+    console.log('VastTags is allowed for UBP');
 })
 
 // function capitalizeFLetter(input) {

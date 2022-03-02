@@ -644,7 +644,7 @@ else{
       googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
       googletag.pubads().enableSingleRequest();
   		googletag.pubads().enableLazyLoad({
-  							fetchMarginPercent: 700,
+  							fetchMarginPercent: 500,
   							renderMarginPercent: 500,
   							mobileScaling: 1.5
   						});

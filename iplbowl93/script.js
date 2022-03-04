@@ -1,6 +1,6 @@
-// if (window.location.href == 'https://www.tollywood.net/') {
-//   console.log('script disalbed');
-// }else {
+if (window.location.href == 'https://www.tollywood.net/') {
+  console.log('script disalbed');
+}else {
 function mobileCheck() {
     var check = false;
     (function (a) {
@@ -187,4 +187,4 @@ if (document.querySelector('article')) {
          oldScript.parentNode.replaceChild(newScript, oldScript);
      }
  }
-// }
+}

@@ -157,7 +157,9 @@
           if (document.querySelector('.ads-full')) {
             x1 = document.querySelectorAll('.ads-full');
             x1[0].appendChild(z5);
-            x1[1].appendChild(z4);
+            if (x1[1]) {
+              x1[1].appendChild(z4);
+            }
           }
 
           z6 = document.createElement("div");

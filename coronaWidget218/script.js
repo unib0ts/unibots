@@ -16,7 +16,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;} #div-clmb-ctn-462955-1{width: auto !important;}#ifr_462954-1{z-index: 1 !important;} #ifr_462955-1{z-index: 1 !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-462954-1{width: auto !important;} #div-clmb-ctn-462955-1{width: auto !important;}#ifr_462954-1{z-index: 2 !important;} #ifr_462955-1{z-index: 2 !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -35,7 +35,7 @@ loadAd("gabywa");
 
   z1 = document.createElement("div");
   z1.id = "div-ub-1";
-  z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:1";
+  z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:2";
   x1 = document.querySelector("body");
   x1.appendChild(z1);
 

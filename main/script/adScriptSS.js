@@ -1286,7 +1286,7 @@ var mappings_extra_units = {
 
 function checkHBUnits(){
   addNewsBotAd();
-  changeConfigToHB();
+  // changeConfigToHB();
   callMapUnits();
 
   setTimeout(function() {

@@ -560,7 +560,7 @@
       'div-gpt-ad-1577431165523-0',
       'div-gpt-ad-1577431145444-0',
       'div-gpt-ad-1577431340341-0',
-      // 'div-gpt-ad-1602675444550-0', //'/21928950349,22666385065/sakshipost_nb_320x50',
+      'div-gpt-ad-1602675444550-0', //'/21928950349,22666385065/sakshipost_nb_320x50',
       'div-gpt-ad-1638776087773-0',
     ],
     adUnitNames: [
@@ -591,7 +591,7 @@
       '/1062118/English_Post_300X250_abovetechnologysection',
       '/1062118/English_Post_300X250_belowrichcards',
       '/1062118/English_Post_300X250_Inbetweenarticle',
-      // '/21928950349,22666385065/sakshipost_nb_320x50',
+      '/21928950349,22666385065/sakshipost_nb_320x50',
       '/1062118/Unibot_Count_Pixel',
     ],
 

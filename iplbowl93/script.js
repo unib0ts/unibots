@@ -1,6 +1,6 @@
-if (window.location.href == 'https://www.tollywood.net/') {
-  console.log('script disalbed');
-}else {
+// if (window.location.href == 'https://www.tollywood.net/') {
+//   console.log('script disalbed');
+// }else {
 function mobileCheck() {
     var check = false;
     (function (a) {
@@ -17,7 +17,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;bottom: 55px !important;} #ifr_465702-1{right:0px !important;left: unset !important;bottom: 55px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465701-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #div-clmb-ctn-465702-1{width: auto !important;float:right !important;z-index: 2147483647 !important;} #ifr_465701-1{right:0px !important;left: unset !important;bottom: 135px !important;} #ifr_465702-1{right:0px !important;left: unset !important;bottom: 55px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -25,7 +25,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
 
 z1 = document.createElement("div");
 z1.id = "div-gpt-ad-1632141731305-0";
-z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:5px;z-index:99";
+z1.style = "width:320px;height:50px;float:right;text-align:center;position:fixed;bottom:0;right:95px;z-index:99";
 x1 = document.querySelector("body");
 x1.appendChild(z1);
 
@@ -187,4 +187,4 @@ if (document.querySelector('article')) {
          oldScript.parentNode.replaceChild(newScript, oldScript);
      }
  }
-}
+// }

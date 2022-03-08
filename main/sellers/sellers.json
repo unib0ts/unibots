@@ -1023,6 +1023,12 @@
           "seller_id": "171",
           "name": "sportzwikibengali",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://www.tellyexpress.com",
+          "seller_id": "172",
+          "name": "tellyexpress",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

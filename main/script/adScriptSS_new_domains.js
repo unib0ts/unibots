@@ -59,7 +59,7 @@
   document.getElementsByTagName('head')[0].appendChild(s3);
 
 // function ubadScript() {
-  var botsiteUrl = window.location.hostname;
+  // var botsiteUrl = window.location.hostname;
   // if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
   //   var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
   //   url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl49/script.js?cb='+cachebuster;

@@ -17,11 +17,11 @@ document.getElementsByTagName("head")[0].appendChild(css);
 
    ub_passback1();
 
-   setInterval(function(){
-      try{
-         colombia.refresh('div-clmb-ctn-465594-1')
-      }catch(e){}
-   }, 30000);
+   // setInterval(function(){
+   //    try{
+   //       colombia.refresh('div-clmb-ctn-465594-1')
+   //    }catch(e){}
+   // }, 30000);
 
  function ub_passback1() {
  //     return new Promise(function(resolve, reject) {

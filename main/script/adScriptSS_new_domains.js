@@ -59,7 +59,7 @@
   document.getElementsByTagName('head')[0].appendChild(s3);
 
 // function ubadScript() {
-  var botsiteUrl = window.location.hostname;
+  // var botsiteUrl = window.location.hostname;
   // if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
   //   var cachebuster = parseInt((Math.round(new Date().getTime() / 1000))/10000)*10000
   //   url = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/iplbowl49/script.js?cb='+cachebuster;
@@ -108,8 +108,6 @@
       };
       request.send();
   })();
-
-    // checkHBUnits();
 // }
 
   var PREBID_TIMEOUT = 2000;
@@ -128,39 +126,39 @@
   var div_1_sizes = [320, 50];
   // if (botsiteUrl=="hindi.sakshi.com" || botsiteUrl=="localhost" || botsiteUrl=="mhindi.sakshi.com") {
     var adUnits = [
-        // {
-        //   code: '/21928950349,22666385065/sakshipost_nb_320x50',
-        //   mediaTypes: {
-        //     native: {
-        //       image: {
-        //         // sizes: [300, 100],
-        //         aspect_ratios: [{
-        //           min_width: 100,
-        //           min_height: 50,
-        //           ratio_width: 2,
-        //           ratio_height: 1,
-        //         }],
-        //         sendId: true
-        //       },
-        //       title: {
-        //         len: 50,
-        //         sendId: true
-        //       },
-        //       sponsoredBy: {
-        //         required: true,
-        //         sendId: true
-        //       },
-        //       clickUrl: {
-        //         required: true,
-        //         sendId: true
-        //       }
-        //     }
-        //   },
-        //   bids: [
-        //     { bidder: 'appnexus', params: { placementId: '19056673' } },
-        //     { bidder: 'oftmedia', params: { placementId: '20846125' } }
-        //   ]
-        // },
+        {
+          code: '/21928950349,22666385065/sakshipost_nb_320x50',
+          mediaTypes: {
+            native: {
+              image: {
+                // sizes: [300, 100],
+                aspect_ratios: [{
+                  min_width: 100,
+                  min_height: 50,
+                  ratio_width: 2,
+                  ratio_height: 1,
+                }],
+                sendId: true
+              },
+              title: {
+                len: 50,
+                sendId: true
+              },
+              sponsoredBy: {
+                required: true,
+                sendId: true
+              },
+              clickUrl: {
+                required: true,
+                sendId: true
+              }
+            }
+          },
+          bids: [
+            { bidder: 'appnexus', params: { placementId: '19056673' } },
+            { bidder: 'oftmedia', params: { placementId: '20846125' } }
+          ]
+        },
         {
           code: '/21928950349,22666385065/sakshipost_nb_320x50',
           mediaTypes: {
@@ -453,7 +451,7 @@
               }
           });
       });
-
+      //
       // ubpbjs.que.push(function() {
       //   ubpbjs.requestBids({
       //     bidsBackHandler: initAdserver,
@@ -772,7 +770,7 @@
 
   var mappings_extra_units_config ={
     adUnitNames: [
-      '/21928950349,22666385065/sakshipost_nb_320x50'
+      // '/21928950349,22666385065/sakshipost_nb_320x50'
     ]
   }
 
@@ -871,6 +869,7 @@
     }
     return ub_hb_slot;
   }
+
   function initAdserver_hb_full() {
       if (ubpbjs.initAdserverSetHB) return;
       ubpbjs.initAdserverSetHB = true;
@@ -920,7 +919,7 @@
         }
       }
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
-      callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots);
+      // callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots);
     });
   }
 
@@ -970,3 +969,4 @@
   }
 
 // }
+    checkHBUnits();

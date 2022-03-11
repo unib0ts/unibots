@@ -543,11 +543,11 @@ function mainHbRun(){
                 sid:"87",     //seller_id
                 hp:1
               },
-              {
-                asi:"emxdgt.com",   //directseller
-                sid:"2145",     //seller_id
-                hp:1
-              },
+              // {
+              //   asi:"emxdgt.com",   //directseller
+              //   sid:"2145",     //seller_id
+              //   hp:1
+              // },
             ]
           }
         }

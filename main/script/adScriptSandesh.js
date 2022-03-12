@@ -217,6 +217,7 @@ function ub_checkAdRendered(adId, ub_slot, adCode){
       }, REFRESH_TIMEOUT);
       ubmappings.renderedFlag[ub_slotNum] = true;
     }else {
+      console.log('ub_passback');
       ub_psbckRandom = Math.floor(Math.random() * 2);
         eval('ub_passback'+ub_psbckRandom+'()');
     }

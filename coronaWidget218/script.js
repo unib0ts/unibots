@@ -33,6 +33,48 @@ document.getElementsByTagName("head")[0].appendChild(ub_ga);
 document.getElementById("gabywa").innerHTML = mybotgabywa;
 loadAd("gabywa");
 
+mybotBlockedPagesFlag = 1;
+mybotBlockedClientName = 'Sakshi';
+
+if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+  urlToCheck = window.location.host+window.location.pathname;
+
+  var request = new XMLHttpRequest();
+  url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+
+  request.open('GET', url, true);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      var data = request.responseText;
+      data = JSON.parse(data);
+      // data = data[mybotBlockedClientName];
+      if(data) {
+        // data = data.urls;
+        if(data.status == true){
+          return false;
+        }
+        else{
+          ubadScript();
+        }
+      }
+    }
+    else {
+      console.log('Block Check Request failed');
+      ubadScript();
+    }
+  };
+  request.onerror = function() {
+    console.log('Request failed');
+    ubadScript();
+  };
+  request.send();
+}
+else{
+  ubadScript();
+}
+
+
+function ubadScript() {
   z1 = document.createElement("div");
   z1.id = "div-ub-1";
   z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:2";
@@ -67,6 +109,7 @@ loadAd("gabywa");
     s2.src = url;
     s2.async = "async";
     document.body.appendChild(s2);
+  }
 
    ub_passback1();
 

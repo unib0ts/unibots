@@ -19,7 +19,7 @@ mybotBlockedPagesFlag = 1;
 mybotBlockedUrl = 'https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/blocks/blocksPrabhanews.json';
 mybotBlockedClientName = 'Prabhanews';
 
-var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 180px !important;} #ifr_466739-1{bottom: 60px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-466738-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-466739-1{width: auto !important;z-index: 2147483647 !important;} #ifr_466738-1{bottom: 210px !important;height: 180px !important;} #ifr_466739-1{bottom: 60px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -75,7 +75,7 @@ function ubadScript() {
   z1 = document.createElement("div");
   z1.id = "div-gpt-ad-1618059111605-0";
   if (!mobileCheck()) {
-    z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:135px;left:5px;z-index:99";
+    z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:160px;left:5px;z-index:99";
   }else {
     z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:99";
   }

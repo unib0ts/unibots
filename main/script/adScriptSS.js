@@ -755,7 +755,7 @@ var mappings_full_hb_config = {
     '/1062118/320x50_Mobile_LB_New',
     '/1062118/sakshinew_resp_Box1_entertainment_300x250',
     '/1062118/MobileMasthead_HP_300x250',
-    '/21928950349,22666385065/sakshi.com_nb_320x50',
+    // '/21928950349,22666385065/sakshi.com_nb_320x50',
     '/21959913182/sakshi_hb_320x50_top_mobile_new',
     // '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
     '/1062118/Mobile_Articlepage_adslot3',
@@ -1268,7 +1268,7 @@ var mappings_extra_units_config ={
     '/1062118/desktop_468x60_home',
     '/1062118/desktop_468x60_home_2',
     '/1062118/Unibot_Count_Pixel',
-    // '/21928950349,22666385065/sakshi.com_nb_320x50',
+    '/21928950349,22666385065/sakshi.com_nb_320x50',
     '/1062118/sakshi_belowrichcards_Desk_Article_300X250',
     '/1062118/Sakshi_Coronapage_300X250_2022',
     '/1062118/sakshi_300X250_belowemojis_Article',

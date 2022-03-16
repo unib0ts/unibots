@@ -1,7 +1,10 @@
 var clientDomain = location.hostname.split('.').reverse().splice(0, 2).reverse().join('.');
 var scriptElement = document.createElement('script');
 scriptElement.async = "async";
-if(clientDomain == "deepika.com"){
+clients = [
+    "deepika.com","rozanaspokesman.in","tamilminutes.com","bonggossip.com","hindnow.com","ichorepaka.in"
+]
+if(clients.includes(clientDomain)){
     scriptElement.src = "https://cdn.unibots.in/clientData/player.js";
 }else{
     scriptElement.src = "https://cdn.unibots.in/ubPlayer/player.js";

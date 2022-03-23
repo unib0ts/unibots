@@ -1041,6 +1041,60 @@
           "seller_id": "174",
           "name": "hindnow",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "corover.ai",
+          "seller_id": "175",
+          "name": "corover",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "tinmoi.vn",
+          "seller_id": "176",
+          "name": "tinmoi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "detik.com",
+          "seller_id": "177",
+          "name": "detik",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "arablocal.com",
+          "seller_id": "178",
+          "name": "arablocal",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "vietnamtimes.org.vn",
+          "seller_id": "179",
+          "name": "vietnamtimes",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "saodaily.com",
+          "seller_id": "180",
+          "name": "saodaily",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "tailieumoi.vn",
+          "seller_id": "181",
+          "name": "tailieumoi",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "abplive.com",
+          "seller_id": "182",
+          "name": "abplive",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "fnewsnow.com",
+          "seller_id": "183",
+          "name": "fnewsnow",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

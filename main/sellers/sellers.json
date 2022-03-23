@@ -1029,6 +1029,12 @@
           "seller_id": "172",
           "name": "tellyexpress",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "https://2dep.vn",
+          "seller_id": "173",
+          "name": "2dep",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

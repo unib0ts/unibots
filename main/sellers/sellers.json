@@ -1041,18 +1041,6 @@
           "seller_id": "174",
           "name": "hindnow",
           "seller_type": "PUBLISHER"
-      },
-      {
-          "domain": "prajavani.net",
-          "seller_id": "175",
-          "name": "prajavani",
-          "seller_type": "PUBLISHER"
-      },
-      {
-          "domain": "deccanherald.com",
-          "seller_id": "176",
-          "name": "deccanherald",
-          "seller_type": "PUBLISHER"
       }
       ]
 }

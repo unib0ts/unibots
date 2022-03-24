@@ -111,8 +111,8 @@ function ubadScript() {
     document.body.appendChild(s2);
   }
 
-   // ub_passback1();
-//
+   ub_passback1();
+
    function ub_passback1() {
          if(typeof colombia == 'undefined'){
          var colombia = colombia || {};

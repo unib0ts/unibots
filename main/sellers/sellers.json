@@ -1095,6 +1095,18 @@
           "seller_id": "183",
           "name": "fnewsnow",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "thecricketlounge.com",
+          "seller_id": "184",
+          "name": "thecricketlounge",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "hindi.crictracker.com",
+          "seller_id": "185",
+          "name": "hindicrictracker",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

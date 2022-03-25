@@ -3,7 +3,7 @@ var cachebuster = parseInt((Math.round(new Date().getTime() / 1000)) / 10000) * 
 var scriptElement = document.createElement('script');
 scriptElement.async = "async";
 clients = [
-    "deepika.com","rozanaspokesman.in","tamilminutes.com","bonggossip.com","hindnow.com","ichorepaka.in","cricketaddictor.com"
+    "deepika.com","rozanaspokesman.in","tamilminutes.com","bonggossip.com","hindnow.com","ichorepaka.in","cricketaddictor.com","sportzwiki.com"
 ]
 if(clients.includes(clientDomain)){
     scriptElement.src = 'https://cdn.unibots.in/clientData/player.js?cb='+ cachebuster;

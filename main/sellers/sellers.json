@@ -1107,6 +1107,18 @@
           "seller_id": "185",
           "name": "hindicrictracker",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "the12thman.in",
+          "seller_id": "186",
+          "name": "the12thman",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "vikatan.com",
+          "seller_id": "187",
+          "name": "vikatan",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

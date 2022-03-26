@@ -1149,6 +1149,12 @@
           "seller_id": "192",
           "name": "dainikgomantak",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "tnnews24air.com",
+          "seller_id": "193",
+          "name": "tnnews24air",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

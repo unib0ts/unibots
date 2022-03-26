@@ -1,24 +1,22 @@
 mybotMultipleIconsDynamicEnabled = 1;
 var mybotMultipleIconsEnabled=0;
-mybotMultiIconName = 'IPLCaricatures/';
+mybotMultiIconName = 't20worldcup/';
 mybotMultiIconType = '.png';
-mybotMultiIconNumber = 18;
+mybotMultiIconNumber = 16;
 mybotMultiIconTimestamps = [
 	[1648301400, 1648318800 ], [1648373400, 1648405200], [1648474200, 1648491600], [1648560600, 1648578000], [1648647000, 1648664400], [1648733400, 1648750800], [1648819800, 1648837200], [1648891800, 1648923600], [1648992600, 1649010000], [1649079000, 1649096400], [1649165400, 1649182800], [1649251800, 1649269200], [1649338200, 1649355600], [1649424600, 1649442000], [1649496600, 1649528400], [1649597400, 1649614800], [1649683800, 1649701200], [1649770200, 1649787600], [1649856600, 1649874000], [1649943000, 1649960400], [1650029400, 1650046800], [1650101400, 1650133200], [1650187800, 1650219600], [1650288600, 1650306000], [1650375000, 1650392400], [1650461400, 1650478800], [1650547800, 1650565200], [1650634200, 1650651600], [1650706200, 1650738000], [1650807000, 1650824400], [1650893400, 1650910800], [1650979800, 1650997200], [1651066200, 1651083600], [1651152600, 1651170000], [1651239000, 1651256400], [1651311000, 1651342800], [1651397400, 1651429200], [1651498200, 1651515600], [1651584600, 1651602000], [1651671000, 1651688400], [1651757400, 1651774800], [1651843800, 1651861200], [1651915800, 1651947600], [1652002200, 1652034000], [1652103000, 1652120400], [1652189400, 1652206800], [1652275800, 1652293200], [1652362200, 1652379600], [1652448600, 1652466000], [1652535000, 1652552400], [1652607000, 1652638800], [1652707800, 1652725200], [1652794200, 1652811600], [1652880600, 1652898000], [1652967000, 1652984400], [1653053400, 1653070800], [1653139800, 1653157200], [1653226200, 1653243600]
 ];
 
-mybotbowlWidgetNlvHrs=1;
-redirectlinkpage ='';
-
-mybotLoadAdDefault = 1;
+mybotbowlWidgetNlvHrs= 1;
+mybotLoadAdDefault = 0;
 mybotAuthEnabled = 0;
-mybotCloseEnabled = 1;
+mybotCloseEnabled = 0;
 mybotClickCountEnabled = 1;
 mybotClickLocation = '';
 mybotScoreAPI = 'get_score';
 mybotStartHour = 12;
 mybotEndHour = 6;
-mybotampEnabled = 0;
+mybotampEnabled = 1;
 botPosition ='right';
 botPoweredBrand = '';
 
@@ -31,61 +29,40 @@ var mybotIsBottomScrollStartDisapperEnabled = 0;
 mybotMobileTopPlacement = 0;
 mybotIsScrollupDisapperEnabled =0;
 // mobileTopPixel = 54;
-mybotCustomAdRightdiv =1;
 
 
-mybotGACode = 'UA-142486390-3';
-
-mybotAdLinkSmall = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
-mybotAdSmallName = '/123148010/MO_HOME_PAGE_FLOATING_WIDGET_320x50';
-mybotAdSmallSize = '[320, 50]';
-mybotAdSmallID = 'div-gpt-ad-1560923413609-0';
-
-mybotadSmall ='<script async src="'+mybotAdLinkSmall+'"></script><script>var REFRESH_KEY_NEWSBOT1 = "refresh";var REFRESH_VALUE_NEWSBOT1 = "true";window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("'+mybotAdSmallName+'",'+mybotAdSmallSize+' , "'+mybotAdSmallID+'").setTargeting(REFRESH_KEY_NEWSBOT1, REFRESH_VALUE_NEWSBOT1).setForceSafeFrame(true).addService(googletag.pubads());var SECONDS_TO_WAIT_AFTER_VIEWABILITY_NEWSBOT1 = 30;googletag.pubads().addEventListener("impressionViewable", function(event) {var slot1 = event.slot;if (slot1.getTargeting(REFRESH_KEY_NEWSBOT1).indexOf(REFRESH_VALUE_NEWSBOT1) > -1) {setTimeout(function() {googletag.pubads().refresh([slot1]);}, SECONDS_TO_WAIT_AFTER_VIEWABILITY_NEWSBOT1 * 1000);}});googletag.pubads().enableSingleRequest();googletag.enableServices();});</script><div id="'+mybotAdSmallID+'" data-ng-non-bindable><script>googletag.cmd.push(function() { googletag.display("'+mybotAdSmallID+'"); });</script></div>';
-
-mybotCustomAD ='<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> <script> window.googletag = window.googletag || {cmd: []}; googletag.cmd.push(function() { googletag.defineSlot("/21959913182/manorama_direct_hona", [100, 50], "div-gpt-ad-1602572467661-0").addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); }); </script><div id="div-gpt-ad-1602572467661-0" style="width: 100px; height: 50px;""> <script> googletag.cmd.push(function() { googletag.display("div-gpt-ad-1602572467661-0"); }); </script> </div>';
-
+mybotGACode = '';
+mybotadSmall = '';
 mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
 mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/close.svg">';
 
 function mybotCustomFunction() {
   document.getElementById('adSmall').innerHTML=mybotadSmall;
   document.getElementById('gabywa').innerHTML=mybotgabywa;
-  // document.getElementById('mybotright').innerHTML=mybotBrandtxt;
-	// if (document.getElementById('liveBlock').display=="none") {
-	//
-	// }
-	// var mybotCustomADTr = document.querySelectorAll('.mybotright');
-	// for(var mybotCustomAdTr of mybotCustomADTr)
-	// currentTS = Date.now() / 1000 | 0;
-	// for(i=0;i<mybotMultiIconTimestamps.length;i++){
-	// 	if((mybotMultiIconTimestamps[i][0]<= currentTS) && (currentTS<=mybotMultiIconTimestamps[i][1])){
-	// 		document.getElementById('mybotrightLv').innerHTML =mybotCustomAD;
-	// 		loadAd('mybotrightLv');
-	// 	}
-	// 	else {
-			// document.getElementById('mybotright').innerHTML =mybotCustomAD;
-			// loadAd('mybotright');
-	// 	}
-	// }
+  document.getElementById('mybotClose').innerHTML=mybotClosevar;
+  // document.getElementById('mybotright').innerHTML='';
+  // document.getElementById('mybotright').addEventListener('click', function() {
+  //    if(mybotDragClick == false){
+  //      window.open('https://www.samsung.com/in/', '_blank');
+  //    }
+  //    setTimeout(function(){
+  //     mybotDragClick = false;
+  //    }, 200);
+  // });
+  document.getElementById('dragItem').classList.add('mybotAmpDragItem');
+  var mybotAmpstage = document.querySelectorAll('#mybotstage');
+ for(var mybotAmpStage of mybotAmpstage)
+  mybotAmpStage.classList.add('mybotAmpStage');
+	document.querySelector('#ub-cmpgn-ad').classList.add('ub-cmpgn-adAMP');
 
-  var mybotClose = document.querySelectorAll('#mybotClose');
-  for(var mybotClosebtn of mybotClose)
-  mybotClosebtn.innerHTML =mybotClosevar;
-	var mybotwrapredirecturl =document.querySelectorAll('#mybotstage');
-		 for(var mybotwrapredirectUrl of mybotwrapredirecturl)
-	  mybotwrapredirectUrl.addEventListener('click', function() {
-	     if(mybotDragClick == false){
-	         window.open('https://www.manoramaonline.com/sports/indepth/ipl-2020.html?utm_source=unibots&utm_medium=iplwidget', '_blank');
-	     }
-	     setTimeout(function(){
-	      mybotDragClick = false;
-	     }, 200);
-	  });
+  document.getElementById('mybot-adcover').style.display ='none';
+ //  if(!mobileCheck()){
+ //  botPosition ='left';
+ // }
 }
 
 function loadAdCustom() {
-    return false;
+  return false;
 }
 
 // =============================================================================
@@ -213,20 +190,20 @@ function mybotStart(){
 					if (mobileCheck() && (document.getElementById('dragItem').style.display =='none')) {
 						 clearInterval(function(){
 						 rotateValues();
-						}, 20000);
+					 }, 21300);
 					}
 					else {
 						rotateValues();
 						setInterval(function(){
 						 rotateValues();
-						}, 20000);
+					 }, 21300);
 					}
           mybotBowl();
 					getScore(0);
 					// runSequence();
 					setInterval(function() {
 						runSequence();
-					}, 20000);
+					}, 21300);
 					mybotMultipleIconsEnabled=0;
 					break;
 				}
@@ -241,7 +218,7 @@ function mybotStart(){
 				rotateValues();
 				setInterval(function(){
 				 rotateValues();
-				}, 20000);
+				}, 21300);
 				getScore(0);
 				// runSequence();
 			}
@@ -251,7 +228,7 @@ function mybotStart(){
 				}
 				else {
 					mybotBowl();
-					botPic();
+					// botPic();
 				}
 			}
 		}
@@ -525,12 +502,7 @@ function formatTime(date) {
 }
 
 function putData(mybotDataSet, isLive) {
-    // console.log(mybotDataSet);
-
 	if(isLive == 1) {
-		document.getElementById('liveBlock').style.display = 'block';
-		document.getElementById('upcomingCompletedBlock').style.display = 'none';
-
 		if(typeof mybotShortScore !== 'undefined' && mybotShortScore ==1){
 
 		}else {
@@ -618,10 +590,6 @@ function putData(mybotDataSet, isLive) {
 			time = (date.substring(10, 12)=="60") ? (parseInt(date.substring(8, 10)) + 1)  + ':' + '00' + ':' + date.substring(12, 14) : (date.substring(8, 10) + ':' + date.substring(10, 12) + ':' + date.substring(12, 14));
 			date = formatDate(date);
 
-			// let date = new Date(mybotDataSet.startDateTime);
-			// let time = formatTime(date);
-			// date = formatDate(date);
-
 			if(currentScore=='' && currentOvers=='' && botBowlerStats=='' && botBatsmanOneStats==''){
 				botCurrentScoreStats = 'Score will be updated soon!';
 				botBowlerStats = 'Score will be updated soon!';
@@ -639,27 +607,42 @@ function putData(mybotDataSet, isLive) {
 				document.getElementById('botBatsmanTwoScore').innerHTML = botBatsmanTwoStats;
 
 			}
-			document.getElementById('botSet1').innerHTML = mybotDataSet.title+'<br>[Live]';
-			document.getElementById('botSet2').innerHTML = mybotDataSet.title+'<br>[Live]';
 			document.getElementById('botCurrentScore').innerHTML = botCurrentScoreStats;
 			document.getElementById('botCurrentOvers').innerHTML = botCurrentOverStats;
 			document.getElementById('botCurrentTeam').innerHTML = currentTeam;
-			document.getElementById('botTarget').innerHTML = botTarget;
+			if (currentTeam == "SUN" || currentTeam == "CHE") {
+         document.getElementById('dragItem').style.color = "#000";
+			}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+        document.getElementById('dragItem').style.color = "#F9E698";
+			}else if (currentTeam == "LUC") {
+          document.getElementById('dragItem').style.color = "#E64600";
+			}else {
+				document.getElementById('dragItem').style.color = "#fff";
+			}
+			document.getElementById('mybotbowl-imagelv').src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
 			document.getElementById('botBowler').innerHTML = botbowlerName;
 			document.getElementById('botBowlerOvers').innerHTML = botBowlerStats;
-			document.getElementById('botSummary').innerHTML = botSummary;
-			if (mybotLivescore) {
-				console.log('test');
-								// ubSponserAd();
-			}
+			document.getElementById('liveBlock').style.display = 'block';
 		}
 	}
-	if (isLive == 0) {
-		document.getElementById('liveBlock').style.display = 'none';
-		// if(typeof mybotSponserAd !== 'undefined' && mybotSponserAd == 1){}
-		// else {
+	if (isLive == 0) {;
+			document.getElementById('liveBlock').style.display = 'none';
 			document.getElementById('summaryText4UCB').innerHTML = 'Score Board';
-		// }
+			currentTeam = ub_currentteam(mybotDataSet[1].title);
+			if (currentTeam == "SUN" || currentTeam == "CHE") {
+				document.getElementById('titleText1UCB').style.color = "#000";
+				document.getElementById('summaryText1UCB').style.color = "#000";
+			}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+				document.getElementById('titleText1UCB').style.color = "#F9E698";
+				document.getElementById('summaryText1UCB').style.color = "#F9E698";
+			}else if (currentTeam == "LUC") {
+				document.getElementById('titleText1UCB').style.color = "#E64600";
+				document.getElementById('summaryText1UCB').style.color = "#E64600";
+			}else {
+				document.getElementById('titleText1UCB').style.color = "#fff";
+				document.getElementById('summaryText1UCB').style.color = "#fff";
+			}
+			document.getElementById('mybotbowl-image4').src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
     	if(typeof mybotShortScore !== 'undefined' && mybotShortScore ==1){
 				document.getElementById('upcomingCompletedBlock').style.display = 'block';
 				for (var j = 1; j <= 3; j++) {
@@ -707,18 +690,29 @@ function putData(mybotDataSet, isLive) {
 					time = (date.substring(10, 12)=="60") ? (parseInt(date.substring(8, 10)) + 1)  + ':' + '00' + ':' + date.substring(12, 14) : (date.substring(8, 10) + ':' + date.substring(10, 12) + ':' + date.substring(12, 14));
 					date = formatDate(date);
 
-					// let date = new Date(mybotDataSet[j - 1].startDateTime);
-					// date = new Date(date);
-					// let time = formatTime(date);
-					// date = formatDate(date);
 					if(document.getElementById('summaryText' + j +'UCB') !== null) {
 						if(typeof mybotSponserAd !== 'undefined' && mybotSponserAd == 1){
 							document.getElementById('titleText2UCB').innerHTML = "Upcoming Match<br>"+mybotDataSet[1].title;
 							document.getElementById('summaryText2UCB').innerHTML = date + "<br>" + time;
 						}
 						else {
-							document.getElementById('titleText' + j +'UCB').innerHTML = "Upcoming Match<br>"+mybotDataSet[j - 1].title;
-						 document.getElementById('summaryText' + j +'UCB').innerHTML = date + "<br>" + time;
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + j +'UCB').innerHTML = mybotDataSet[j - 1].title;
+						  document.getElementById('summaryText' + j +'UCB').innerHTML = date + "<br>" + time;
 						}
 					}
 				}
@@ -730,7 +724,22 @@ function putData(mybotDataSet, isLive) {
 							document.getElementById('summaryText2UCB').innerHTML = botSummary;
 						}
 						else {
-							document.getElementById('titleText' + j +'UCB').innerHTML = "Completed Match<br>"+mybotDataSet[j - 1].title;
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + j +'UCB').innerHTML = mybotDataSet[j - 1].title;
 							document.getElementById('summaryText' + j +'UCB').innerHTML = botSummary;
 					  }
 					}
@@ -739,11 +748,41 @@ function putData(mybotDataSet, isLive) {
 					document.getElementById('upcomingCompletedBlock').style.display = 'block';
 					if(document.getElementById('summaryText' + j +'UCB') !== null) {
 						if (document.getElementById('titleText' + i +'UCB') !== null) {
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
 							document.getElementById('titleText' + i +'UCB').innerHTML = "In-progress Match<br>"+mybotDataSet[j - 1].title;
 							document.getElementById('summaryText' + i +'UCB').innerHTML = botSummary;
 						}
 						else {
-							document.getElementById('titleText' + 1 +'UCB').innerHTML = "In-progress Match<br>"+mybotDataSet[j - 1].title;
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + 1 +'UCB').innerHTML = mybotDataSet[j - 1].title;
 							document.getElementById('summaryText' + 1 +'UCB').innerHTML = botSummary;
 						}
 					}
@@ -813,10 +852,10 @@ function getScore(flag) {
 							mybotDataSet2 = data.data[0][1];
 						}
 						if(flag == 0) {
-							setIntervalX(function () {
-								putData(mybotDataSet1, mybotIsMatchLive);
-							}, 1000, 9);
-							// putData(mybotDataSet1, mybotIsMatchLive);
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
 						}
 					}
 					else{
@@ -876,10 +915,10 @@ function getScore(flag) {
 								}
 							}
 							mybotDataSet1 = dataSet;
-							setIntervalX(function () {
-								putData(mybotDataSet1, mybotIsMatchLive);
-							}, 1000, 9);
-							// putData(mybotDataSet1, mybotIsMatchLive);
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
 						}
 						else if(mybotProgressMatches==0 && mybotUpcomingMatches!=0){
 							if(mybotUpcomingMatches == 3 && mybotCompleteMatches==0){
@@ -918,10 +957,10 @@ function getScore(flag) {
 								dataSet.push(data.data[1][0]);
 							}
 							mybotDataSet1 = dataSet;
-							setIntervalX(function () {
-								putData(mybotDataSet1, mybotIsMatchLive);
-							}, 1000, 9);
-							// putData(mybotDataSet1, mybotIsMatchLive);
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
 						}
 						else if(mybotProgressMatches==0 && mybotUpcomingMatches==0 && mybotCompleteMatches!=0){
 							if(mybotCompleteMatches==3){
@@ -940,10 +979,10 @@ function getScore(flag) {
 								dataSet.push(data.data[3][0]);
 							}
 							mybotDataSet1 = dataSet;
-							setIntervalX(function () {
-								putData(mybotDataSet1, mybotIsMatchLive);
-							}, 1000, 9);
-							// putData(mybotDataSet1, mybotIsMatchLive);
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
 						}
 					}
 				}
@@ -1073,7 +1112,6 @@ function mobileTopPlacement(){
 }
 
 function mybotScrollStart(){
-
 	if(mobileCheck()){
 		if (((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) && (mybotScrollStartFlag == 0)) {
         document.getElementById('dragItem').style.display = 'none';
@@ -1116,7 +1154,6 @@ function mybotScrollEnd(){
 }
 
 function mybotScrollStartAd(){
-
 	if(mobileCheck()){
 		if (((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) && (mybotScrollStartFlag == 0)) {
         document.getElementById('mybot-adcover').style.display = 'none';
@@ -1147,11 +1184,11 @@ function placeBotAndAd(){
 	var botElement = document.getElementById("dragItem");
 	var mybotstage = document.querySelectorAll('#mybotstage');
 	var adCoverElement = document.getElementById("mybot-adcover");
-	var adtagElement = document.getElementById("mybot-ad-tag");
+	// var adtagElement = document.getElementById("mybot-ad-tag");
 	var closeElement = document.getElementById("mybotClose");
-	if (mybotadSmall =='') {
-   document.getElementById('mybot-ad-tag').style.display = 'none';
-  }
+	// if (mybotadSmall =='') {
+  //  document.getElementById('mybot-ad-tag').style.display = 'none';
+  // }
 	if (botPosition=='right' || typeof botPosition==='undefined' ){
 		for(var mybotStage of mybotstage)
 		mybotStage.style.right ='0';
@@ -1169,7 +1206,7 @@ function placeBotAndAd(){
 		var mybotClose = document.querySelectorAll('#mybotClose');
 		for(var mybotClosebtn of mybotClose)
 		mybotClosebtn.style.left ='5px';
-		adtagElement.classList.add("mybot-ad-tag-left");
+		// adtagElement.classList.add("mybot-ad-tag-left");
 		// stageElement.classList.add("mybotstage-left");
 		botElement.classList.add("profile_div-left");
 		adCoverElement.classList.add("mybot-adcover-left");
@@ -1213,7 +1250,7 @@ function rotateValues(){
 			el.classList.add('scale-up-center');
 		}, 5000);
 			});
-	}, 5000);
+	}, 5350);
 
 	setTimeout(()=>{
 	[].forEach.call(document.querySelectorAll('.set-3'),      function(el) {
@@ -1228,7 +1265,7 @@ function rotateValues(){
 
 		}, 5000);
 			});
-	}, 10000);
+	}, 10700);
 
 	setTimeout(()=>{
 	[].forEach.call(document.querySelectorAll('.set-4'),      function(el) {
@@ -1237,93 +1274,20 @@ function rotateValues(){
 		setTimeout(()=>{
 			setTimeout(()=>{
 			el.style.display = 'none';
-			},100);
+		},250);
 			el.classList.remove('scale-down-center');
 			el.classList.add('scale-up-center');
 
 		}, 5000);
 			});
-	}, 15000);
+	}, 16050);
 }
 
-function botPic() {
-	// if (document.getElementById('mybot-ad-tag')! = null) {
-  //   	document.getElementById('mybot-ad-tag').style.display = 'none';
-	// }
-	var randomNum = Math.floor(Math.random()*(mybotMultiIconNumber))+1;
-	var myPix = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/"+mybotMultiIconName+randomNum+mybotMultiIconType;
-	mybotFace = '<img class="" id="mybotfaceimg" src="">';
-	var mybotstageImg=document.querySelectorAll('#mybotstage');
-	// for(var mybotStageImg of mybotstageImg)
-	document.getElementById('upcomingCompletedBlock').style.display = 'block';
-  mybotstageImg[1].innerHTML=mybotFace;
-	if (botPosition=='left') {
-    	mybotstageImg[1].style.right ='unset';
-			mybotstageImg[1].style.left ='10px';
-	}
-	else {
-			mybotstageImg[1].style.left ='unset';
-			mybotstageImg[1].style.right ='10px';
-	}
-	// mybotstageImg[1].style.width ='70px';
-	document.getElementById("mybotfaceimg").src = myPix;
-	var mybotClosebtn = document.querySelectorAll('#mybotClose');
-  // mybotClosebtn[1].style.marginTop ='-20px';
-	// mybotBrandtxt ='<div class="mybotBrandtxt"><span class="mybotPoweredBy">Powered By</span><span class="mybotPoweredByBrand"> Unibots</span></div>';
-		var mybotBrandtxt2 = document.createElement('div');
-		mybotBrandtxt2.className = 'ub-brand-text';
-		mybotBrandtxt2.innerHTML='Powered By Unibots';
-		mybotstageImg[1].appendChild(mybotBrandtxt2);
-
-		// document.getElementById('mybotfaceimg').addEventListener('click', function() {
-		// 	 if(mybotDragClick == false){
-		// 		 window.open('https://unibots.in/?utm_source=unibots&utm_medium=iplwidget', '_blank');
-		// 	 }
-		// 	 setTimeout(function(){
-		// 		mybotDragClick = false;
-		// 	 }, 200);
-		// });
-	// if((typeof mybotProfileheight !== 'undefined') && (mybotProfileheight== 1)){
-	// 	document.getElementById('dragItem').classList.add("mybotProfileHeight");
-	// 	document.getElementById('mybotstage').classList.add("mybotFaceHeight");
-	// 	document.getElementById('botfaceclosed').classList.add("mybotFacecls");
-	// }
+function ub_currentteam(currentTeam) {
+	currentTeam =  currentTeam.split(" ");
+	currentTeamnew = [];
+  currentTeamnew.push(currentTeam[0],currentTeam[2]);
+  randomNum = Math.floor(Math.random()*(2));
+	return currentTeam[0];
 }
-
-function ubSponserAd() {
-	var mybotwrapfront =document.querySelector('.mybotfrontLv');
-	var mybotwrapright =document.querySelectorAll('.mybotbackLv');
-
-	var s4 = document.createElement('script');
-	s4.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-	s4.async = "async";
-	document.getElementsByTagName('head')[0].appendChild(s4);
-
-	 window.googletag = window.googletag || {cmd: []};
-	 var ub_slot1;
-	 googletag.cmd.push(function() {
-	 ub_slot1 = googletag.defineSlot('/21956916242/crictracker_dc_100x50_1', [100, 50], 'div-gpt-ad-1636093770564-0').addService(googletag.pubads());
-	 googletag.pubads().enableSingleRequest();
-	 googletag.enableServices();
-	 googletag.pubads().refresh([ub_slot1]);
-	 });
-
-	 z1 = document.createElement("div");
-	 z1.id = "div-gpt-ad-1636093770564-0";
-	 z1 ="<div id='div-gpt-ad-1636093770564-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636093770564-0'); });</script></div>";
-	 mybotwrapfront.innerHTML = z1;
-
-	 var ub_slot2;
-	 googletag.cmd.push(function() {
-	 ub_slot2 = googletag.defineSlot('/21956916242/crictracker_dc_100x50_2', [100, 50], 'div-gpt-ad-1636104342270-0').addService(googletag.pubads());
-	 googletag.pubads().enableSingleRequest();
-	 googletag.enableServices();
-	 googletag.pubads().refresh([ub_slot2]);
-	 });
-
-	 z2 = document.createElement("div");
-	 z2.id = "div-gpt-ad-1636104342270-0";
-	 z2 ="<div id='div-gpt-ad-1636104342270-0' style='min-width: 100px; min-height: 50px;'><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1636104342270-0'); });</script></div>";
-	 mybotwrapright.innerHTML = z2;
-}
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div class="row" id="liveBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwrap"> <div class="mybotcube"> <div class="mybotfaceLv mybotfront mybotfrontLv"> <div class="mybotTeams" id="mybotTeams"></div> <div class="mybotTime" id="mybotTime"></div> </div> <div class="mybotfaceLv mybotback mybotbackLv"> <div class="mybotBatsmanScore"> <div class="mybotBatsmanOne"> <span id="botBatsmanOne" class="mybotBatsmanOneName"></span> <span id="botBatsmanOneScore" class="mybotBatsmanOneScore"></span> </div> <div class="mybotBatsmanTwo"> <span id="botBatsmanTwo" class="mybotBatsmanTwoName"></span> <span id="botBatsmanTwoScore" class="mybotBatsmanTwoScore"></span> </div> </div> </div>  <div class="mybotfaceLv mybotleft"> <div class="mybotScoreLive"> <div class="mybotScoreLiveTeam"> <span id="botCurrentTeam" class="mybotText"></span> </div> <div class="mybotScoreLiveScore"> <span id="botCurrentScore" class="mybotText"></span> </div> <div class="mybotScoreLiveOvers"> <span id="botCurrentOvers" class="mybotText"></span> </div> </div> </div> <div class="mybotfaceLv mybotright" id="mybotrightLv"> <div class="mybotBowlerStats"> <div class="mybotBowlerOne"> <div id="botBowler" class="mybotBowlerOneName"></div> <div id="botBowlerOvers" class="mybotBowlerOneStats"></div> </div> </div> </div> </div> </div> <div class="mybotBowlWrapper"> <img class="mybotbowl-image" src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/Ball.png"> <div class="mybotBowlText"> <p class="mybotbowl-text set-1" id="botSet1"></p> <p class="mybotbowl-text set-2" id="botSet2"></p> <p class="mybotbowl-text set-3" id="botTarget"></p> <p class="mybotbowl-text set-4" id="botSummary"></p> </div> </div> </div> </div> </div> </div> </div> <div class="row" id="upcomingCompletedBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwrap"> <div class="mybotcube"> <div class="mybotface mybotfront"><span id="summaryText1UCB"></span></div> <div class="mybotface mybotback"><span id="summaryText3UCB"></span></div>  <div class="mybotface mybotleft"><span id="summaryText2UCB"></span></div> <div class="mybotface mybotright" id="mybotright"><span id="summaryText4UCB"></span></div> </div> </div> <div class="mybotBowlWrapper"> <img class="mybotbowl-image" src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/Ball.png"> <div class="mybotBowlText"> <p class="mybotbowl-text set-1" id="titleText1UCB"></p> <p class="mybotbowl-text set-2" id="titleText2UCB"></p> <p class="mybotbowl-text set-3" id="titleText3UCB"></p> <p class="mybotbowl-text set-4" id="titleText4UCB"></p> </div> </div> </div> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> <div class="row"> <div class="mybot-adcover" id="mybot-adcover"> <div class="mybot-ad-tag" id="mybot-ad-tag">Ad</div> <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='.mybotright{cursor:pointer;pointer-events:all}mybot .mybotAmpDragItem{width:150px!important;height:140px!important}mybot .mybotAmpStage{bottom:0px!important;right:-10px!important}mybot .mybotBrandtxt{padding-top:12px;height:100%;align-items:center;text-align:center;justify-content:center;font-size:11px;font-weight:600}.mybotPoweredByBrand{font-size:14px;font-weight:600}';var rule_common='@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);mybot{font-family:"Alata",sans-serif;position:sticky;z-index:2147483647;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:326px;height:190px;cursor:default;z-index:2147483647;pointer-events:none}mybot .profile_div-left{left:0}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:20px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}mybot .mybot-container{font-family:"Alata",sans-serif;position:absolute;bottom:53px;cursor:pointer;pointer-events:all}mybot .mybot-cylinder{width:150px;height:150px}.mybotimage-container{position:absolute;bottom:0;left:50%;margin-left:-60px}.mybotBowlWrapper{display:flex}.mybotbowl-image{display:flex;align-items:center;justify-content:center;text-align:center}.mybotBowlText{display:flex;justify-content:center;align-items:center;height:50px;width:100px;position:absolute;text-align:center;margin-left:10px;bottom:5px}.mybotimage-container .mybotbowl-text{position:absolute;z-index:1;margin:0;text-align:center;font-size:10px;color:#fff}.mybotimage-container .mybotcontainer-text{position:relative;z-index:2;margin:0;text-align:center;font-size:14px}.mybotimage-container .mybotct-1{font-size:18px;font-weight:800}.mybotimage-container .mybotct-2{font-size:16px;font-weight:800}.mybotimage-container .mybotct-3{font-size:16px;font-weight:800}.mybotimage-container .mybotimage-text{background:#66BA1E;z-index:2;color:white!important;border-radius:10px;border:5px solid #5B080E;padding:2px}.mybotslide-bck-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotslide-fwd-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotscale-up-center{-webkit-animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both}.mybotscale-down-center{-webkit-animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both}@-webkit-keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}.set-2,.set-3,.set-4{display:none}.mybotwrap{position:relative;width:100px;height:50px;top:-10px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotcube{position:relative;width:100px;transform-style:preserve-3d;animation:mybotspin 20s infinite linear;-webkit-perspective:30000;-moz-perspective:30000;-ms-perspective:30000;perspective:30000}.mybotcube .mybotfaceLv{position:absolute;width:100px;height:50px;color:#fff;border-radius:4px;border:1px solid #F23B01;background:transparent radial-gradient(closest-side at 111% -27%,#4B494A 0%,#292B32 41%,#131823 77%,#0C121E 100%) 0% 0% no-repeat padding-box;display:flex;justify-content:center;flex-direction:column;align-items:center;font-size:12px}.mybotfaceLv{position:absolute;margin:0;width:100px;text-align:center;font-size:14px;line-height:1.1}.mybotcube .mybotface{position:absolute;width:100px;height:50px;color:#fff;border-radius:4px;border:1px solid #F23B01;background:transparent radial-gradient(closest-side at 111% -27%,#4B494A 0%,#292B32 41%,#131823 77%,#0C121E 100%) 0% 0% no-repeat padding-box}.mybotface p{top:50%;left:50%;transform:translate(-50%,-50%);position:absolute;margin:0;width:100px;text-align:center;font-size:14px;line-height:1.1}.mybotback{transform:translateZ(-50px) rotateY(180deg)}.mybotright{transform:rotateY(-270deg) translateX(50px);transform-origin:top right}.mybotleft{transform:rotateY(270deg) translateX(-50px);transform-origin:center left}.mybottop{transform:rotateX(-90deg) translateY(-50px);transform-origin:top center}.mybotbottom{transform:rotateX(90deg) translateY(50px);transform-origin:bottom center}.mybotfront{transform:translateZ(50px)}@keyframes mybotspin{from{transform:rotateY(0deg)}20%{transform:rotateY(0deg)}25%{transform:rotateY(90deg)}45%{transform:rotateY(90deg)}50%{transform:rotateY(180deg)}70%{transform:rotateY(180deg)}75%{transform:rotateY(270deg)}95%{transform:rotateY(270deg)}to{transform:rotateY(360deg)}}mybot .col-hgt-ad{height:50px;float:right;position:absolute;bottom:3px;left:3px;pointer-events:all}mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;position:fixed;bottom:0;right:0;cursor:pointer}mybot .mybot-adcover-left{left:0}mybot .mybot-ad-tag{position:absolute;top:-10px;right:0;font-size:9px;z-index:1;color:#fff;cursor:pointer;background:#000;width:16px;text-align:center}mybot .mybot-ad-tag-left{left:0}mybot .closeBotFrontTop{margin-top:180px!important}mybot #summaryText1UCB,mybot #summaryText2UCB,mybot #summaryText3UCB,mybot #summaryText4UCB{font-size:12px;display:flex;height:100%;align-items:center;text-align:center;justify-content:center}mybot #mybotfaceimg{width:55px;height:120px;padding-left:17px;pointer-events:all;cursor:pointer}@media screen and (max-width:635px){mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;bottom:0;right:0;display:flex;pointer-events:auto;align-items:center;left:50%;transform:translateX(-50%);position:fixed}mybot .mybot-ad-tag{display:none}}mybot .ub-brand-text{cursor:pointer;text-align:center;pointer-events:all;font-size:10px;color:#fff;padding:1px;background:transparent radial-gradient(closest-side at 111% -27%,#4B494A 0%,#292B32 41%,#131823 77%,#0C121E 100%) 0% 0% no-repeat padding-box}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReadybwl();});
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div id="ub-cmpgn-ad" href="https://unibots.in/?utm_source=unibots&amp;utm_medium=cubeadwidget" class="ub-cmpgn-ad">Powered by Unibots</div> <div class="row" id="liveBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <img class="mybotbowl-image" id="mybotbowl-imagelv"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwraplv"> <div class="mybotcube mybotcubelv"> <div class="mybotfacelv mybotfront set-1"> <div class="mybotTeams" id="mybotTeams"></div> <div class="mybotTime" id="mybotTime"></div> </div> <div class="mybotfacelv mybotback set-3"> <div class="mybotBatsmanScore"> <div class="mybotBatsmanOne"> <span id="botBatsmanOne" class="mybotBatsmanOneName"></span><br> <span id="botBatsmanOneScore" class="mybotBatsmanOneScore"></span> </div> <div class="mybotBatsmanTwo"> <span id="botBatsmanTwo" class="mybotBatsmanTwoName"></span><br> <span id="botBatsmanTwoScore" class="mybotBatsmanTwoScore"></span> </div> </div> </div>  <div class="mybotfacelv mybotleft set-2"> <div class="mybotScoreLive"> <div class="mybotScoreLiveTeam"> <span id="botCurrentTeam" class="mybotText"></span> </div> <div class="mybotScoreLiveScore"> <span id="botCurrentScore" class="mybotText"></span> </div> <div class="mybotScoreLiveOvers"> <span id="botCurrentOvers" class="mybotText"></span> </div> </div> </div> <div class="mybotfacelv mybotright set-4" id="mybotrightLv"> <div class="mybotBowlerStats"> <div class="mybotBowlerOne"> <div id="botBowler" class="mybotBowlerOneName"></div> <div id="botBowlerOvers" class="mybotBowlerOneStats"></div> </div> </div> </div> </div> </div> <div class="mybotBowlWrapper"> <div class="mybotBowlText">  </div> </div> </div> </div> </div> </div> </div> <div class="row" id="upcomingCompletedBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <img class="mybotbowl-image set-1" id ="mybotbowl-image1"> <img class="mybotbowl-image set-2" id ="mybotbowl-image2"> <img class="mybotbowl-image set-3" id ="mybotbowl-image3"> <img class="mybotbowl-image set-4" id ="mybotbowl-image4"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwraplv"> <div class="mybotcubelv"> <div class="mybotfacelv set-1"><span id="summaryText1UCB"></span></div> <div class="mybotfacelv set-2"><span id="summaryText2UCB"></span></div> <div class="mybotfacelv set-3"><span id="summaryText3UCB"></span></div> <div class="mybotfacelv set-4" id="mybotright"><span id="summaryText4UCB"></span></div> </div> </div> <div class="mybotBowlWrapper"> <div class="mybotBowlText"> <p class="mybotbowl-text set-1" id="titleText1UCB"></p> <p class="mybotbowl-text set-2" id="titleText2UCB"></p> <p class="mybotbowl-text set-3" id="titleText3UCB"></p> <p class="mybotbowl-text set-4" id="titleText4UCB"></p> </div> </div> </div> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> <div class="row"> <div class="mybot-adcover" id="mybot-adcover">  <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='';var rule_common='@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);mybot{font-family:"Alata",sans-serif;position:sticky;z-index:2147483647;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:326px;height:200px;cursor:default;z-index:2147483647;font-weight:600;pointer-events:none}mybot .profile_div-left{left:0}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:18px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}mybot .mybot-container{font-size:12px;font-family:"Alata",sans-serif;position:absolute;bottom:70px;cursor:pointer;pointer-events:all}mybot .mybot-cylinder{height:150px}.mybotimage-container{position:absolute;bottom:-5px;margin-left:25px}.mybotBowlWrapper{display:flex}.mybotbowl-image{height:150px;width:150px;display:flex;align-items:center;justify-content:center;text-align:center}.mybotBowlText{display:flex;justify-content:center;align-items:center;height:50px;width:100px;position:absolute;text-align:center;margin-left:5px;bottom:0}.mybotimage-container .mybotbowl-text{position:absolute;z-index:1;margin:0;font-weight:600;text-align:center;font-size:10px}.mybotimage-container .mybotcontainer-text{position:relative;z-index:2;margin:0;text-align:center;font-size:14px}.mybotimage-container .mybotct-1{font-size:18px;font-weight:800}.mybotimage-container .mybotct-2{font-size:16px;font-weight:800}.mybotimage-container .mybotct-3{font-size:16px;font-weight:800}.mybotimage-container .mybotimage-text{background:#66BA1E;z-index:2;color:white!important;border-radius:10px;border:5px solid #5B080E;padding:2px}.mybotslide-bck-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotslide-fwd-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotscale-up-center{-webkit-animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both}.mybotscale-down-center{-webkit-animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both}@-webkit-keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}.set-2,.set-3,.set-4{display:none}.mybotwrap{position:relative;height:50px;top:-65px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotwraplv{position:relative;height:50px;bottom:14px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotcube{position:relative;width:100px;transform-style:preserve-3d;-webkit-perspective:30000;-moz-perspective:30000;-ms-perspective:30000;perspective:30000}.mybotcubelv{width:110px!important}.mybotcube .mybotfaceLv{position:absolute;width:160px;height:50px;border-radius:4px}.mybotfaceLv{position:absolute;margin:0;width:100px;text-align:center;font-size:14px;line-height:1.1}.mybotcube .mybotface{position:absolute;width:80px;height:50px;color:#000;border-radius:4px}.mybotface p{top:50%;left:50%;transform:translate(-50%,-50%);position:absolute;margin:0;width:80px;text-align:center;font-size:10px;line-height:1.1}mybot .mybotback{font-size:11px}@keyframes mybotspin{from{transform:rotateY(0deg)}20%{transform:rotateY(0deg)}25%{transform:rotateY(90deg)}45%{transform:rotateY(90deg)}50%{transform:rotateY(180deg)}70%{transform:rotateY(180deg)}75%{transform:rotateY(270deg)}95%{transform:rotateY(270deg)}to{transform:rotateY(360deg)}}mybot .col-hgt-ad{height:50px;float:right;position:absolute;bottom:3px;left:3px;pointer-events:all}mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;position:fixed;bottom:0;right:0;cursor:pointer}mybot .mybot-adcover-left{left:0}mybot .mybot-ad-tag{position:absolute;top:-10px;right:0;font-size:9px;z-index:1;color:#fff;cursor:pointer;background:#000;width:16px;text-align:center}mybot .mybot-ad-tag-left{left:0}mybot .closeBotFrontTop{margin-top:180px!important}mybot #summaryText1UCB,mybot #summaryText2UCB,mybot #summaryText3UCB,mybot #summaryText4UCB{font-size:10px;display:flex;line-height:1.5;height:100%;align-items:center;text-align:center;justify-content:center}mybot #mybotfaceimg{width:55px;height:120px;padding-left:17px;pointer-events:all;cursor:pointer}@media screen and (max-width:635px){mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;bottom:0;right:0;display:flex;pointer-events:auto;align-items:center;left:50%;transform:translateX(-50%);position:fixed}mybot .mybot-ad-tag{display:none}}mybot .ub-brand-text{cursor:pointer;text-align:center;pointer-events:all;font-size:10px;color:#fff;padding:1px;background:transparent radial-gradient(closest-side at 111% -27%,#4B494A 0%,#292B32 41%,#131823 77%,#0C121E 100%) 0% 0% no-repeat padding-box}mybot .ub-cmpgn-ad{color:rgb(255,255,255);line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;bottom:58px;text-align:center;right:10px;background-repeat:no-repeat;background-position:center;background-color:rgb(23,71,158)}mybot .mybotAmpDragItem{width:150px!important;height:150px!important}mybot .mybotAmpStage{bottom:12px!important}mybot .ub-cmpgn-adAMP{bottom:0px!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReadybwl();});

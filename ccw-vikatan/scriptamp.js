@@ -1,3 +1,1293 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3n=1;2 1v=0;1u=\'1t/\';1s=\'.1r\';1q=16;1p=[[1o,1n],[1l,1b],[1k,1j],[1i,1h],[1g,1f],[1e,1d],[1c,1w],[1m,1x],[1K,1T],[1S,1R],[1Q,1P],[1O,1N],[1M,1L],[1J,1z],[19,1H],[1G,1F],[1E,1D],[1C,1B],[1A,1y],[1a,13],[18,E],[D,C],[B,A],[z,y],[x,w],[F,v],[u,p],[o,n],[q,r],[s,H],[U,17],[15,14],[G,11],[10,Z],[Y,X],[W,V],[T,I],[S,R],[Q,P],[O,N],[M,L],[K,J],[1U,1I],[1W,2j],[32,31],[30,2Z],[2Y,2X],[2W,1V],[2U,2S],[2I,2R],[2Q,2P],[2O,2N],[2M,2L],[2K,2J],[33,34],[35,3c],[3m,3l],[3k,3j]];3i=1;3h=0;3g=0;3f=0;36=1;3d=\'\';3e=\'3b\';3a=12;39=6;38=1;37=\'2T\';2H=\'\';2 2G=0;2F=0;2 2g=2f;2e=0;2 2d=0;2 2c=0;2b=0;2a=0;9=\'\';g=\'\';m=\'<5 29 d="h://28.26.1X/7/i?25=\'+9+\'"></5><5>e.c = e.c || [];8 7(){c.24(23);}7("i", 22 21());7("20", "\'+9+\'");</5>\';f=\'<1Z d="h://1Y.2h.27/2i/2v/2E/2D/2C.2B">\';8 2A(){3.4(\'2z\').a=g;3.4(\'2y\').a=m;3.4(\'2x\').a=f;3.4(\'2w\').j.l(\'2u\');2 k=3.2k(\'#2t\');2s(2 b 2r k)b.j.l(\'b\');3.4(\'2q-2p\').2o.2n=\'2m\';}8 2l(){2V t;}',62,210,'||var|document|getElementById|script||gtag|function|mybotGACode|innerHTML|mybotAmpStage|dataLayer|src|window|mybotClosevar|mybotadSmall|https|js|classList|mybotAmpstage|add|mybotgabywa|1650651600|1650634200|1650565200|1650706200|1650738000|1650807000|false|1650547800|1650478800|1650392400|1650375000|1650306000|1650288600|1650219600|1650187800|1650133200|1650101400|1650046800|1650461400|1651066200|1650824400|1651429200|1651861200|1651843800|1651774800|1651757400|1651688400|1651671000|1651602000|1651584600|1651515600|1651498200|1651397400|1650893400|1651342800|1651311000|1651256400|1651239000|1651170000|1651152600|1651083600||1649960400|1650997200|1650979800||1650910800|1650029400|1649496600|1649943000|1648405200|1648819800|1648750800|1648733400|1648664400|1648647000|1648578000|1648560600|1648491600|1648474200|1648373400|1648891800|1648318800|1648301400|mybotMultiIconTimestamps|mybotMultiIconNumber|png|mybotMultiIconType|t20worldcup|mybotMultiIconName|mybotMultipleIconsEnabled|1648837200|1648923600|1649874000|1649442000|1649856600|1649787600|1649770200|1649701200|1649683800|1649614800|1649597400|1649528400|1651947600|1649424600|1648992600|1649355600|1649338200|1649269200|1649251800|1649182800|1649165400|1649096400|1649079000|1649010000|1651915800|1652379600|1652002200|com|cdn|img|config|Date|new|arguments|push|id|googletagmanager|net|www|async|mybotIsScrollupDisapperEnabled|mybotMobileTopPlacement|mybotIsBottomScrollStartDisapperEnabled|mybotIsBottomScrollDisapperEnabled|mybotScrollStartPixelHeight|45|mybotScrollPixelHeight|jsdelivr|gh|1652034000|querySelectorAll|loadAdCustom|none|display|style|adcover|mybot|of|for|mybotstage|mybotAmpDragItem|unib0ts|dragItem|mybotClose|gabywa|adSmall|mybotCustomFunction|svg|close|main|unibots|mybotScrollStartFlag|mybotScrollFlag|botPoweredBrand|1652535000|1652898000|1652880600|1652811600|1652794200|1652725200|1652707800|1652638800|1652607000|1652552400|1652466000|right|1652448600|return|1652362200|1652293200|1652275800|1652206800|1652189400|1652120400|1652103000|1652967000|1652984400|1653053400|mybotClickCountEnabled|botPosition|mybotampEnabled|mybotEndHour|mybotStartHour|get_score|1653070800|mybotClickLocation|mybotScoreAPI|mybotCloseEnabled|mybotAuthEnabled|mybotLoadAdDefault|mybotbowlWidgetNlvHrs|1653243600|1653226200|1653157200|1653139800|mybotMultipleIconsDynamicEnabled'.split('|'),0,{}))
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('G 4c="";G 5d=1C;G 6t=1C;G 19,25;G 1W=2;G 3x=1;G 1c=0;G 5W=7U;G 2u;G 4o=0;G 1o=U.4z.8q;G 1g={"5J 8r":"5J","5O 8s 6e":"5O","63 8t":"63","62 6e":"62","8u 6n":"6n","8v 8w 5Q":"5Q","5U 8x 8y":"5U","6q 8z":"6q","8p 8A":"8C","8D":"8E","8F":"8G"};H 8H(){q(T 4R!==\'N\'&&4R==1){5i=U.4z.8I+U.4z.8J;G P=1F 3k();1Y=\'1n://8K.1q.2a/16?8L=\'+8B+\'&8n=\'+5i;P.24(\'3d\',1Y,1e);P.2R=H(){q(P.1E>=3n&&P.1E<3E){G f=P.3J;f=3I.3O(f);q(f){q(f.1E==1e){A.B(\'Z\').S=\'\';1R 1C;}D{q(T 1z!==\'N\'&&1z==1){q(1o==2L||1o==\'2P://2U/2W/2K.2O\'){1w();}D{22();}}D{q(T 1z!==\'N\'&&1z==1){q(1o==2L||1o==\'2P://2U/2W/2K.2O\'){1w();}D{22();}}D{1w();}}}}}D{1k.1j(\'8b 8m 1P 1Q\');q(T 1z!==\'N\'&&1z==1){q(1o==2L||1o==\'2P://2U/2W/2K.2O\'){1w();}D{22();}}D{1w();}}};P.3A=H(){1k.1j(\'1P 1Q\');q(T 1z!==\'N\'&&1z==1){q(1o==2L||1o==\'2P://2U/2W/2K.2O\'){1w();}D{22();}}D{1w();}};P.3y();}D{q(T 1z!==\'N\'&&1z==1){q(1o==2L||1o==\'2P://2U/2W/2K.2O\'){1w();}D{22();}}D{1w();}}}H 1w(){q((T 6a!==\'N\')&&(6a==1)){4G=42.7X()/1N|0;17(i=0;i<4t.1A;i++){q((4t[i][0]<=4G)&&(4G<=4t[i][1])){q(1J()&&(A.B(\'Z\').C.O==\'Y\')){4U(H(){2l();},3z);}D{2l();3b(H(){2l();},3z);}3D();3F(0);3b(H(){6g();},3z);3P=0;7Y;}D{3P=1;}}}q(3P){q((T 6x!==\'N\')&&(6x==1)){3D();2l();3b(H(){2l();},3z);3F(0);}D{q((T 68!==\'N\')&&(68==1)){22();}D{3D();}}}}H 3D(){7Z();6p();4n(\'82\');q(84){4n(\'5Z\');}D{87(\'5Z\');}q(88){4d();}q(1J()){5W=89;}[].2k.2j(A.1h(\'.1D\'),H(Q){Q.27(\'6i\',H(){4f(0);})});q(T 5R!==\'N\'&&5R==1){5I();q(1J()){G 1y=A.1h(\'#1y\');17(G 2B 1X 1y)2B.15.1b(\'7W\');}}q((T 3g!==\'N\')&&(3g==1)){4J();U.27(\'3i\',H(43){4J()});}q((T 6f!==\'N\')&&(6f==1)){4H();U.27(\'3i\',H(43){4H()});}q((T 6v!==\'N\')&&(6v==1)){q(1J()){G 3Z=U.3j;U.8a=H(){G 3W=U.3j;q(3Z<3W){q(2u){A.B(\'Z\').C.O=\'Y\';}D{q((U.38)>=((37.36/3)-34)){A.B(\'Z\').C.O=\'16\';}}}D{A.B(\'Z\').C.O=\'Y\';}3Z=3W;}}}q((T 6o!==\'N\')&&(6o==1)){U.27(\'3i\',H(43){4V()});}q(8c){[].2k.2j(A.1h(\'.8d\'),H(Q){Q.C.O=\'16\';Q.27(\'6i\',H(2J){2J.8e();2J.4j();A.5P(\'#1f-1U\').C.O=\'Y\';A.5P(\'#Z\').C.O=\'Y\';2u=1;q(T 5a!==\'N\'&&5a==1){8f();}})});}q((T 4o!==\'N\')&&(4o==1)){5B(A.B("Z"));}}H 1M(2G,4W,4Y){G x=0;G 4X=U.3b(H(){2G();q(++x===4Y){U.4U(4X);}},4W);}H 4n(4v,4g){G 4L=A.B(4v);G 2N=4T(4L.1h("3U"));2N=2N[0];17(G i=0;i<2N.1A;i++){2H=2N[i];8g 2I=A.6u("3U");G 2M=4T(2H.8h);2M=2M[0];17(G j=0;j<2M.1A;j++){4m=2M[j];2I.8i(4m.8j,4m.8k);}2I.6h(A.8l(2H.S));2I.2R=H(){q(4g!==N){8M.8o(4g);}};2H.4I.8N(2I,2H);}}H 4f(4e){q(9f){q(4e>=2){1R;}G P=1F 3k();1Y=\'1n://1q.5G.2a//9h\';P.24(\'3d\',1Y,1e);P.9i(\'9j-9k\',4c);P.2R=H(){q(P.1E>=3n&&P.1E<3E){G f=P.3J;f=3I.3O(f);q(f.26==1e){1k.1j(f.9l);1k.1j(f.9m);4d(4f(4e+1));}D q(f.26==1C){}}D{1k.1j(\'1P 1Q 9n 9o\');}};P.3A=H(){9p();1k.1j(\'1P 1Q\');};P.3y();q(3B!=\'\'){U.24(3B,\'5M\');}}D{q(3B!=\'\'){U.24(3B,\'5M\');}1R 1C;}}H 4d(2G){G P=1F 3k();P.24(\'3d\',\'1n://1q.5G.2a//9q\',1e);P.2R=H(){q(P.1E>=3n&&P.1E<3E){G f=P.3J;f=3I.3O(f);q(f.26===1C){4c=f.9g;}q(T 2G=="H"){2G();}}D{1k.1j(\'1P 1Q\');}};P.3A=H(){1k.1j(\'1P 1Q\');};P.3y();}H 1J(){G 44=1C;(H(a){q(/(9r|bb\\d+|9t).+5k|9u|9v\\/|9w|9x|9y|9z|9A|9B|9C|64(9s|59)|5A|9e|91 |9d|8Q|8R|5k.+8S|8T|5D m(8U|2a)i|8V( 5F)?|8W|p(8X|1G)\\/|8Y|8Z|8P|90(4|6)0|92|93|2h\\.(94|95)|96|97|99 ce|9a|9b/i.5H(a)||/9c|8O|7V|7T|6O|50[1-6]i|6P|6R|a 5y|6S|ac(5K|5n|s\\-)|ai(6T|6N)|al(av|ca|co)|6W|an(6Y|46|6Z)|71|ar(ch|4D)|as(4b|6L)|72|au(73|\\-m|r |s )|75|be(ck|5h|6M)|bi(6K|6z)|bl(ac|az)|br(e|v)w|6E|bw\\-(n|u)|6I\\/|6y|6G|6D\\-|6B|6A|6J|6F\\-|co(6C|5s)|77|da(5u|5h|79)|7z|dc\\-s|7A|7D|7E|5L(c|p)o|7F(12|\\-d)|Q(49|ai)|78(7I|7K)|5K(7L|7M)|7N|7P([4-7]0|5F|5y|7R)|7J|7h(\\-|6d)|5j u|7i|7a|7k\\-5|g\\-4a|4D(\\.w|59)|7y(ad|7t)|7q|7m|7j\\-(m|p|t)|7g\\-|7b(5v|5p)|7v( i|64)|7w\\-c|7Q(c(\\-| |6d|a|g|p|s|t)|6Q)|7H(aw|6U)|i\\-(20|4D|48)|7B|7C( |\\-|\\/)|7G|7l|7c|7d|7e|7f|7u|5A|7s(t|v)a|7r|7p|7n|76|6X|6H( |\\/)|7x|7S |7o\\-|7O(c|k)|74(6V|9D)|86( g|\\/(k|l|u)|50|54|\\-[a-w])|cL|cF|cy\\-w|d4|d3\\/|48(4b|cR|cZ)|5r(2F|21|ca)|m\\-cr|bQ(bP|5t)|bN(bL|c8|5l)|c2|4a(2F|ct|bi|de|5L|t(\\-| |o|v)|c3)|c4(50|c5|v )|c7|c9|c1[0-2]|cb[2-3]|cd(0|2)|cf(0|2|5)|cg(0(0|1)|10)|ci((c|m)\\-|cj|cl|cm|cn|cp)|cc(6|i)|bZ|bO|bY(bF|bG)|bH|bI|bJ|bK(a|d|t)|bM|bE(13|\\-([1-8]|c))|bU|bV|5m(ay|bX)|cq\\-2|cE(ck|cT|5q)|cU|cW|5v\\-g|cX\\-a|cY(d0|12|21|32|60|\\-[2-7]|i\\-)|d7|d8|d9|db|cQ|cP(cw|cA)|cB\\/|cC(cu|48|cG|cI|46|cJ)|cM(2F|h\\-|5n|p\\-)|bD\\/|5q(c(\\-|0|1)|47|5r|5s|5t)|a6\\-|bC|a8(\\-|m)|a9\\-0|aa(45|4v)|ae(al|ar|b3|5u|ah)|aj(am|46)|ao(2F|h\\-|v\\-|v )|aq(2F|at)|ax(18|50)|aB(3Q|10|18)|5p(aC|aD)|ak\\-|a3\\-|9R(i|m)|a2\\-|t\\-4a|9E(5m|9H)|5l(70|m\\-|9I|9J)|9K\\-9|2h(\\.b|5j|9L)|9M|9N|9O|9P|9G(9Q|4b)|9S(40|5[0-3]|\\-v)|9V|9W|9Y|9Z(52|53|60|61|70|80|81|83|85|98)|aF(\\-| )|b7|b9|ba(g |bd|bf)|bg|bh|bj|bk\\-|bm|b8|bn\\-/i.5H(a.bq(0,4)))44=1e;})(5E.bs||5E.bt||U.5D);1R 44;};H 5B(1O){G 3h=0,3c=0,3L=0,3M=0;q(A.B(1O)){A.B(1O).5z=4h;}D{1O.5z=4h;}H 4h(e){e=e||U.2J;e.4j();3L=e.4k;3M=e.4l;A.4O=4N;A.4P=5x;}H 5x(e){e=e||U.2J;e.4j();3h=3L-e.4k;3c=3M-e.4l;q(3h!=0||3c!=0){5d=1e;}3L=e.4k;3M=e.4l;1O.C.2b=(1O.bu-3c)+"3f";1O.C.1B=(1O.bv-3h)+"3f";}H 4N(e){A.4O=1V;A.4P=1V;}}H 3m(M){G 56=["by","bz","bA","bo","b6","aT","b5","aI","aJ","aK","aL","aM"];G 55=M.1a(6,8);G 57=M.1a(4,6);G 58=M.1a(0,4);1R""+55+"-"+56[3S(57)-1]+"-"+58;}H 6r(M){1R M.aO().39(\' \')[0];}H 1i(L,3Y){q(3Y==1){q(T 1T!==\'N\'&&1T==1){}D{3s=L.3s;3r=L.3r;3V=3s;5X=3r+" aP";J=L.J;1L=L.1L;3p=L.3p;3q=L.3q;q(1L[0]==N){2i=\'\';4q=\'\';4p=\'\';2T=\'\';}D{2i=1L[0];1H=2i.39(\' \');2i=1H[0][0]+\' \'+1H[1];4q=3p[0];4p=3q[0];2T=4p+" ("+4q+")";}q(1L[1]==N){2S=\'\';4s=\'\';4r=\'\';41=\'\';}D{2S=1L[1];1H=2S.39(\' \');2S=1H[0][0]+\' \'+1H[1];4s=3p[1];4r=3q[1];41=4r+" ("+4s+")";}3K=L.aQ;6j=L.aR;6k=L.aH;6l=L.aS;q(3K==\'Y\'){2d=\'\';}D{2d=3K+"-"+6j+"-"+6k+"-"+6l;}q(L.4i==\'Y\'||L.4i==N){31=\'2V 69\';2d=\'\';}D{31=L.4i;1H=31.39(\' \');31=1H[0][0]+\' \'+1H[1];}q(L.R==\'Y\'||L.R==N){11=\'\';}D{11=L.R;17(G i=0;i<2r.2n(1g).1A-1;i++){G 1r=2r.2n(1g)[i];G 1G=1F 3T(1r,\'i\');11=11.2E(1G,1g[1r]);}}q(1L[0]==N&&1L[0]==N&&(11!=N&&11!=\'Y\')){2i=11;}2Q=L.aU;q(2Q==0){2Q=L.1d+\'<br>[aV]\';}D{2Q=\'aW - \'+2Q;}2p M=(L.67)-66;M=M.2o();2p 1I=M;1I=(M.1a(10,12)=="60")?(3S(M.1a(8,10))+1)+\':\'+\'3Q\'+\':\'+M.1a(12,14):(M.1a(8,10)+\':\'+M.1a(10,12)+\':\'+M.1a(12,14));M=3m(M);q(3s==\'\'&&3r==\'\'&&2d==\'\'&&2T==\'\'){3V=\'2V 3R be 4u 3X!\';2d=\'2V 3R be 4u 3X!\';2T=\'2V 3R be 4u 3X!\';}q(T 2q!==\'N\'&&2q==1){6t=1e;}D{A.B(\'aY\').S=L.1d;A.B(\'aZ\').S=M.2o()+"<br>"+1I.2o();A.B(\'b0\').S=2i;A.B(\'b1\').S=2S;A.B(\'b2\').S=2T;A.B(\'b4\').S=41;}A.B(\'9F\').S=3V;A.B(\'a7\').S=5X;A.B(\'aX\').S=J;q(J=="2f"||J=="2s"){A.B(\'Z\').C.K="#1p";}D q(J=="2D"||J=="2A"){A.B(\'Z\').C.K="#1v";}D q(J=="2t"){A.B(\'Z\').C.K="#1t";}D{A.B(\'Z\').C.K="#1s";}A.B(\'2z-aN\').1Z="1n://2y.2x.2w/2v/2m/1q@2e/23/2c/"+J+".28";A.B(\'bx\').S=31;A.B(\'3K\').S=2d;A.B(\'65\').C.O=\'16\';}}q(3Y==0){;A.B(\'65\').C.O=\'Y\';A.B(\'bp\').S=\'2V 69\';J=2g(L[1].1d);q(J=="2f"||J=="2s"){A.B(\'3N\').C.K="#1p";A.B(\'3H\').C.K="#1p";}D q(J=="2D"||J=="2A"){A.B(\'3N\').C.K="#1v";A.B(\'3H\').C.K="#1v";}D q(J=="2t"){A.B(\'3N\').C.K="#1t";A.B(\'3H\').C.K="#1t";}D{A.B(\'3N\').C.K="#1s";A.B(\'3H\').C.K="#1s";}A.B(\'2z-bc\').1Z="1n://2y.2x.2w/2v/2m/1q@2e/23/2c/"+J+".28";q(T 1T!==\'N\'&&1T==1){A.B(\'3G\').C.O=\'16\';17(G j=1;j<=3;j++){11=L[0].a4;2X=L[j-1][\'6c-1\'];2Z=L[j-1][\'6c-2\'];17(G i=0;i<2r.2n(1g).1A-1;i++){G 1r=2r.2n(1g)[i];G 1G=1F 3T(1r,\'i\');11=11.2E(1G,1g[1r]);2X=2X.2E(1G,1g[1r]);2Z=2Z.2E(1G,1g[1r]);}2p M=1F 42(L[j-1].aE);2p 1I=6r(M);M=3m(M);q(L[j-1].30==1C){q(A.B(\'R\'+j+\'I\')!==1V){A.B(\'V\'+j+\'I\').S="5e 33<br>"+2X+" 6m "+2Z;A.B(\'R\'+j+\'I\').S=M.2o()+"<br>"+1I.2o();}}D q(L[j-1].30==1e){q(A.B(\'R\'+j+\'I\')!==1V){A.B(\'V\'+j+\'I\').S="5S 33<br>"+2X+" 6m "+2Z;A.B(\'R\'+j+\'I\').S=11;}}}}D{17(G j=1;j<=3;j++){11=L[j-1].R;17(G i=0;i<2r.2n(1g).1A-1;i++){G 1r=2r.2n(1g)[i];G 1G=1F 3T(1r,\'i\');11=11.2E(1G,1g[1r]);}q(L[j-1].4A==\'a1\'){A.B(\'3G\').C.O=\'16\';2p M=(L[j-1].67)-66;M=M.2o();2p 1I=M;1I=(M.1a(10,12)=="60")?(3S(M.1a(8,10))+1)+\':\'+\'3Q\'+\':\'+M.1a(12,14):(M.1a(8,10)+\':\'+M.1a(10,12)+\':\'+M.1a(12,14));M=3m(M);q(A.B(\'R\'+j+\'I\')!==1V){q(T 2q!==\'N\'&&2q==1){A.B(\'6s\').S="5e 33<br>"+L[1].1d;A.B(\'5T\').S=M+"<br>"+1I;}D{J=2g(L[j-1].1d);q(J=="2f"||J=="2s"){A.B(\'V\'+j+\'I\').C.K="#1p";A.B(\'R\'+j+\'I\').C.K="#1p";}D q(J=="2D"||J=="2A"){A.B(\'V\'+j+\'I\').C.K="#1v";A.B(\'R\'+j+\'I\').C.K="#1v";}D q(J=="2t"){A.B(\'V\'+j+\'I\').C.K="#1t";A.B(\'R\'+j+\'I\').C.K="#1t";}D{A.B(\'V\'+j+\'I\').C.K="#1s";A.B(\'R\'+j+\'I\').C.K="#1s";}A.B(\'2z-3t\'+j).1Z="1n://2y.2x.2w/2v/2m/1q@2e/23/2c/"+J+".28";A.B(\'V\'+j+\'I\').S=L[j-1].1d;A.B(\'R\'+j+\'I\').S=M+"<br>"+1I;}}}D q(L[j-1].4A==\'a0\'){A.B(\'3G\').C.O=\'16\';q(A.B(\'R\'+j+\'I\')!==1V){q(T 2q!==\'N\'&&2q==1){A.B(\'6s\').S="5S 33<br>"+L[j-1].1d;A.B(\'5T\').S=11;}D{J=2g(L[j-1].1d);q(J=="2f"||J=="2s"){A.B(\'V\'+j+\'I\').C.K="#1p";A.B(\'R\'+j+\'I\').C.K="#1p";}D q(J=="2D"||J=="2A"){A.B(\'V\'+j+\'I\').C.K="#1v";A.B(\'R\'+j+\'I\').C.K="#1v";}D q(J=="2t"){A.B(\'V\'+j+\'I\').C.K="#1t";A.B(\'R\'+j+\'I\').C.K="#1t";}D{A.B(\'V\'+j+\'I\').C.K="#1s";A.B(\'R\'+j+\'I\').C.K="#1s";}A.B(\'2z-3t\'+j).1Z="1n://2y.2x.2w/2v/2m/1q@2e/23/2c/"+J+".28";A.B(\'V\'+j+\'I\').S=L[j-1].1d;A.B(\'R\'+j+\'I\').S=11;}}}D q(L[j-1].4A==\'9X\'){A.B(\'3G\').C.O=\'16\';q(A.B(\'R\'+j+\'I\')!==1V){q(A.B(\'V\'+i+\'I\')!==1V){J=2g(L[j-1].1d);q(J=="2f"||J=="2s"){A.B(\'V\'+j+\'I\').C.K="#1p";A.B(\'R\'+j+\'I\').C.K="#1p";}D q(J=="2D"||J=="2A"){A.B(\'V\'+j+\'I\').C.K="#1v";A.B(\'R\'+j+\'I\').C.K="#1v";}D q(J=="2t"){A.B(\'V\'+j+\'I\').C.K="#1t";A.B(\'R\'+j+\'I\').C.K="#1t";}D{A.B(\'V\'+j+\'I\').C.K="#1s";A.B(\'R\'+j+\'I\').C.K="#1s";}A.B(\'2z-3t\'+j).1Z="1n://2y.2x.2w/2v/2m/1q@2e/23/2c/"+J+".28";A.B(\'V\'+i+\'I\').S="9U-9T 33<br>"+L[j-1].1d;A.B(\'R\'+i+\'I\').S=11;}D{J=2g(L[j-1].1d);q(J=="2f"||J=="2s"){A.B(\'V\'+j+\'I\').C.K="#1p";A.B(\'R\'+j+\'I\').C.K="#1p";}D q(J=="2D"||J=="2A"){A.B(\'V\'+j+\'I\').C.K="#1v";A.B(\'R\'+j+\'I\').C.K="#1v";}D q(J=="2t"){A.B(\'V\'+j+\'I\').C.K="#1t";A.B(\'R\'+j+\'I\').C.K="#1t";}D{A.B(\'V\'+j+\'I\').C.K="#1s";A.B(\'R\'+j+\'I\').C.K="#1s";}A.B(\'2z-3t\'+j).1Z="1n://2y.2x.2w/2v/2m/1q@2e/23/2c/"+J+".28";A.B(\'V\'+1+\'I\').S=L[j-1].1d;A.B(\'R\'+1+\'I\').S=11;}}}}}}}H 3F(5C){G P=1F 3k();q(T 1T!==\'N\'&&1T==1){1Y=\'1n://4M.1q.2a/\'+aA;}D{1Y=\'1n://4M.1q.2a/\'+\'ap\';}P.24(\'3d\',1Y,1e);P.2R=H(){q(P.1E>=3n&&P.1E<3E){E=[];2Y=0;X=0;1S=0;W=0;G f=P.3J;f=3I.3O(f);q(f.26===1C){q(T 1T!==\'N\'&&1T==1){2Y=f.f[0].30;X=f.f[1].30;X=f.f[2].30;E.F(f.f[0]);E.F(f.f[1]);E.F(f.f[2]);19=E;1M(H(){1i(19,1c);},1N,9);}D{2Y=f.f[0].1A;X=f.f[1].1A;1S=f.f[2].1A;W=f.f[3].1A;q(2Y>0){1c=1;19=f.f[0][0];q(2Y==2){25=f.f[0][1];}q(5C==0){1i(19,1c);}}D{q(1S!=0){q(1S==3){E.F(f.f[2][0]);E.F(f.f[2][1]);E.F(f.f[0][2]);}D q(1S==2){q(X!=0){E.F(f.f[2][0]);E.F(f.f[2][1]);E.F(f.f[1][0]);}D q(W!=0){E.F(f.f[2][0]);E.F(f.f[1][0]);E.F(f.f[3][0]);}D q(X==0&&W==0){E.F(f.f[2][0]);E.F(f.f[2][1]);E.F(f.f[2][0]);}}D q(1S==1){q(X!=0&&W!=0){E.F(f.f[2][0]);E.F(f.f[1][0]);E.F(f.f[3][0]);}D q(W==0&&X>=2){E.F(f.f[2][0]);E.F(f.f[1][0]);E.F(f.f[1][1]);}D q(W==0&&X==1){E.F(f.f[2][0]);E.F(f.f[1][0]);E.F(f.f[2][0]);}D q(W>=2&&X==0){E.F(f.f[2][0]);E.F(f.f[3][0]);E.F(f.f[3][1]);}D q(W==1&&X==0){E.F(f.f[2][0]);E.F(f.f[3][0]);E.F(f.f[2][0]);}D q(X==0&&W==0){E.F(f.f[2][0]);E.F(f.f[2][0]);E.F(f.f[2][0]);}}19=E;1i(19,1c);}D q(1S==0&&X!=0){q(X==3&&W==0){E.F(f.f[1][0]);E.F(f.f[1][1]);E.F(f.f[1][2]);}q(X==3&&W!=0){E.F(f.f[1][0]);E.F(f.f[3][0]);E.F(f.f[1][1]);}q(X==2&&W>=1){E.F(f.f[1][0]);E.F(f.f[1][1]);E.F(f.f[3][0]);}q(X==2&&W==0){E.F(f.f[1][0]);E.F(f.f[1][1]);E.F(f.f[1][0]);}q(X==1&&W>=2){E.F(f.f[1][0]);E.F(f.f[3][0]);E.F(f.f[3][1]);}q(X==1&&W==1){E.F(f.f[1][0]);E.F(f.f[3][0]);E.F(f.f[1][0]);}q(X==1&&W==0){E.F(f.f[1][0]);E.F(f.f[1][0]);E.F(f.f[1][0]);}19=E;1i(19,1c);}D q(1S==0&&X==0&&W!=0){q(W==3){E.F(f.f[3][0]);E.F(f.f[3][1]);E.F(f.f[3][2]);}q(W==2){E.F(f.f[3][0]);E.F(f.f[3][1]);E.F(f.f[3][0]);}q(W==1){E.F(f.f[3][0]);E.F(f.f[3][0]);E.F(f.f[3][0]);}19=E;1i(19,1c);}}}}q(f.26===1e){1k.1j("26 a5 ag f");1k.1j(f);}}D{1k.1j(\'1P 1Q\');}};P.3A=H(){1k.1j(\'1P 1Q\');};P.3y();}H 6g(){t=1F 42();5g=t.af();5w=t.ab();3C=5g+5;q(5w>29){3C+=1;}q((3C>bB)&&(3C<aG)){q(1W%2==0){1M(H(){1i(19,1c);},1N,9);}D{q(25!=N){1M(H(){1i(25,1c);},1N,9);}D{1M(H(){1i(19,1c);},1N,9);}}}D{q(1W%2==0){1M(H(){1i(19,1c);},1N,9);}D{q(25!=N){1M(H(){1i(25,1c);},1N,9);}D{1M(H(){1i(19,1c);},1N,9);}}q(1W%4==1){1W=1;3F(1);}}q(3x>0){q(3x==1){1W+=1;}3x-=1;}D{1W+=1;}}H 5I(){q(1J()){x=A.B(\'1f-1U\');q(T 3e!==\'N\'){x.C.2b=3e+\'3f\';}D{x.C.2b=\'4K\';}1D=A.1h(\'#1D\');17(G z 1X 1D)z.C.2b=\'cK\';17(G 4S 1X 1D)4S.C.cH=\'4x\';x=x.cD;x.4I.4Q(x);y=A.B(\'Z\');y.cz(x,y.cx);35=A.B(\'Z\');35.C.O=\'Y\';q(T 3e!==\'N\'){35.C.2b=3e+\'3f\';}D{35.C.2b=\'4K\';}q(T 3g!==\'N\'&&3g==1){}D{U.27(\'3i\',H(){35.C.O=\'16\';});}}}H 4J(){q(1J()){q(((U.38)<=((37.36/3)-34))&&(1x==0)){A.B(\'Z\').C.O=\'Y\';1x=1;}D q(1x==1){q((U.38)>=((37.36/3)-34)){q(2u){A.B(\'Z\').C.O=\'Y\';1x=0;}D{A.B(\'Z\').C.O=\'16\';1x=0;}}}}}H 4V(){q(1J()){q((U.4Z+U.3j)>=A.51.5b-5c){A.B(\'Z\').C.O=\'Y\';3o=1;}D q(3o==1){q((U.4Z+U.3j)<=A.51.5b-5c){q(2u){A.B(\'Z\').C.O=\'16\';3o=0;}D{A.B(\'Z\').C.O=\'16\';3o=0;}}}}}H 4H(){q(1J()){q(((U.38)<=((37.36/3)-34))&&(1x==0)){A.B(\'1f-1U\').C.O=\'Y\';1x=1;}D q(1x==1){q((U.38)>=((37.36/3)-34)){q(2u){A.B(\'1f-1U\').C.O=\'Y\';1x=0;}D{A.B(\'1f-1U\').C.O=\'16\';1x=0;}}}}}H cv(5N){G 4C=5N;x=4C.cO(0).d6()+4C.d5(1);1R x;}H 6p(){G 4w=A.B("Z");G 1D=A.1h(\'#1D\');G 4E=A.B("1f-1U");G 6w=A.B("1f-ad-4B");G 6b=A.B("1y");q(d2==\'\'){A.B(\'1f-ad-4B\').C.O=\'Y\';}q(4y==\'3a\'||T 4y===\'N\'){17(G 2C 1X 1D)2C.C.3a=\'0\';2C.C.1B=\'4x\';G 1y=A.1h(\'#1y\');17(G 2B 1X 1y)2B.C.3a=\'4F\';4w.15.1b("5V");4E.15.1b("1f-1U-3a");}D q(4y==\'1B\'){17(G 2C 1X 1D)2C.C.1B=\'0\';2C.C.3a=\'4x\';G 1y=A.1h(\'#1y\');17(G 2B 1X 1y)2B.C.1B=\'4F\';6w.15.1b("1f-ad-4B-1B");4w.15.1b("5V-1B");4E.15.1b("1f-1U-1B");6b.C.1B=\'4F\';}}H 22(){Q=A.5Y(\'1f\');Q[0].4I.4Q(Q[0]);G s=A.6u(\'3U\');s.1Z=cV;s.cS="cs/c0";s.bW=1e;A.5Y(\'bT\')[0].6h(s);}H 2l(){[].2k.2j(A.1h(\'.3v-1\'),H(Q){Q.C.O=\'16\';Q.15.1b(\'1l-1K-1m\');1u(()=>{1u(()=>{Q.C.O=\'Y\';},3u);Q.15.3w(\'1l-1K-1m\');Q.15.1b(\'1l-2h-1m\');},3l);});1u(()=>{[].2k.2j(A.1h(\'.3v-2\'),H(Q){Q.C.O=\'16\';Q.15.1b(\'1l-1K-1m\');1u(()=>{1u(()=>{Q.C.O=\'Y\';},3u);Q.15.3w(\'1l-1K-1m\');Q.15.1b(\'1l-2h-1m\');},3l);});},c6);1u(()=>{[].2k.2j(A.1h(\'.3v-3\'),H(Q){Q.C.O=\'16\';Q.15.1b(\'1l-1K-1m\');1u(()=>{1u(()=>{Q.C.O=\'Y\';},3u);Q.15.3w(\'1l-1K-1m\');Q.15.1b(\'1l-2h-1m\');},3l);});},dd);1u(()=>{[].2k.2j(A.1h(\'.3v-4\'),H(Q){Q.C.O=\'16\';Q.15.1b(\'1l-1K-1m\');1u(()=>{1u(()=>{Q.C.O=\'Y\';},3u);Q.15.3w(\'1l-1K-1m\');Q.15.1b(\'1l-2h-1m\');},3l);});},bR);}H 2g(J){J=J.39(" ");5f=[];5f.F(J[0],J[2]);bS=5o.d1(5o.cN()*(2));1R J[0];}',62,821,'|||||||||||||||data|||||||||||if||||||||||document|getElementById|style|else|dataSet|push|var|function|UCB|currentTeam|color|mybotDataSet|date|undefined|display|request|el|summaryText|innerHTML|typeof|window|titleText|mybotCompleteMatches|mybotUpcomingMatches|none|dragItem||botSummary||||classList|block|for||mybotDataSet1|substring|add|mybotIsMatchLive|title|true|mybot|teamsBowl|querySelectorAll|putData|log|console|scale|center|https|boturl|000|unibots|teamToCheck|fff|E64600|setTimeout|F9E698|mybotStart|mybotScrollStartFlag|mybotClose|mybotNewsbotEnabled|length|left|false|mybotstage|status|new|re|temp|time|mobileCheck|down|currentBatsmen|setIntervalX|1000|elmnt|Request|failed|return|mybotProgressMatches|mybotShortScore|adcover|null|mybotSequenceIndex|of|url|src|||mybotloadNewsbotWidget|main|open|mybotDataSet2|error|addEventListener|png||in|top|iplcc_2022|botBowlerStats|latest|SUN|ub_currentteam|up|batsmanOne|call|forEach|rotateValues|unib0ts|keys|toString|let|mybotSponserAd|Object|CHE|LUC|mybotCloseTriggeredFlag|gh|net|jsdelivr|cdn|mybotbowl|GUJ|mybotClosebtn|mybotStage|ROY|replace|01|callback|oldScript|newScript|event|build_test|mybotCovidurl|scriptAttr|scripts|ph|http|botTarget|onload|batsmanTwo|botBatsmanOneStats|localhost|Score|newsbot|mybotTeam1|mybotLiveMatches|mybotTeam2|matchStarted|botbowlerName||Match|mybotScrollStartPixelHeight|mybotDragItem|height|screen|scrollY|split|right|setInterval|pos2|GET|mobileTopPixel|px|mybotIsBottomScrollStartDisapperEnabled|pos1|scroll|pageYOffset|XMLHttpRequest|5000|formatDate|200|mybotScrollFlag|currentBatsmenBalls|currentBatsmenRuns|currentOvers|currentScore|image|250|set|remove|mybotSequenceIndexStart|send|21300|onerror|mybotClickLocation|istHour|mybotBowl|400|getScore|upcomingCompletedBlock|summaryText1UCB|JSON|responseText|botBowlerOvers|pos3|pos4|titleText1UCB|parse|mybotMultipleIconsEnabled|00|will|parseInt|RegExp|script|botCurrentScoreStats|currentScrollPos|soon|isLive|prevScrollpos||botBatsmanTwoStats|Date|ev|check||ny||ma||mo|te|AUTH_TOKEN|updateAuthToken|count|mybotClickCount|adUnits|dragMouseDown|currentBowler|preventDefault|clientX|clientY|attr|loadAd|mybotDragElementFlag|batsmanScoreOne|batsmanBallsOne|batsmanScoreTwo|batsmanBallsTwo|mybotMultiIconTimestamps|updated|id|botElement|unset|botPosition|location|matchStatus|tag|string|go|adCoverElement|5px|currentTS|mybotScrollStartAd|parentNode|mybotScrollStart|0px|elm|cricket|closeDragElement|onmouseup|onmousemove|removeChild|mybotBlockedPagesFlag|btm|Array|clearInterval|mybotScrollEnd|delay|intervalID|repetitions|innerHeight||body||||day|month_names|month_index|year|od|mybotampEnabled|offsetHeight|mybotScrollPixelHeight|mybotDragClick|Upcoming|currentTeamnew|utcHours|ll|urlToCheck|g1|mobile|ts|pl|oo|Math|ta|se|mc|nd|ri|it|pt|utcMinutes|elementDrag|wa|onmousedown|iris|dragElement|flag|opera|navigator|os|warw|test|mobileTopPlacement|Mumbai|er|do|_blank|input|Chennai|querySelector|Bangalore|mybotMobileTopPlacement|Completed|summaryText2UCB|Kolkata|profile_div|botInsideFlag|botCurrentOverStats|getElementsByTagName|adSmall|||Punjab|Delhi|ip|liveBlock|17000|startDateTime|mybotCovidWidgetNlvHrs|Board|mybotMultipleIconsDynamicEnabled|closeElement|team|_|Kings|mybotIsBottomScrollStartDisapperEnabledAD|runSequence|appendChild|click|botBowlerMaiden|botBowlerRuns|botBowlerWickets|vs|Hyderabad|mybotIsBottomScrollDisapperEnabled|placeBotAndAd|Rajasthan|formatTime|titleText2UCB|mybotLivescore|createElement|mybotIsScrollupDisapperEnabled|adtagElement|mybotbowlWidgetNlvHrs|capi|rd|chtm|cell|mp|cdm|bumb|cmd|ccwa|kgt|c55|cldc|lb|us|nq|rn|4thp|770s|tp|802s|abac|ko|tc|no|amoi|keji|ex|yw||aptu|attw|di|le|avan|kddi|craw|em|ng|gene|hi|ig01|ikom|im1k|inno|hei|fly|g560|hd|gf|idea|hcit|jigs|kwc|jemu|haie|jbro|ja|un|ipaq|hp|hs|klon|gr|dbte|devi|i230|iac|dica|dmob|ds|ibro|hu|l2|fetc|ul|ic|k0|esl8|kyo|ez|ht|ze|kpt|3gso|120|6590|closeBotFrontTop|now|break|mybotCustomFunction|||gabywa||mybotLoadAdDefault||lg|loadAdCustom|mybotAuthEnabled|100|onscroll|Block|mybotCloseEnabled|mybotclose|stopPropagation|mybotampClose|const|attributes|setAttribute|name|value|createTextNode|Check|page|buildUnits|Sri|href|Indians|Super|Capitals|Sunrisers|Royal|Challengers|Knight|Riders|Royals|Lanka|mybotBlockedClientName|SL|Bangladesh|BAN|Unknown|TBD|callOnDocumentReadybwl|host|pathname|api|client|smartyads|replaceChild|6310|psp|midp|mmp|firefox|netfront|ob|palm|phone|ixi|plucker|pocket|series|lge|symbian|treo|browser|link|vodafone|wap||windows|xda|xiino|1207|maemo|kindle|mybotClickCountEnabled|auth_token|bot_open|setRequestHeader|Auth|Token|msg|errmsg|from|server|closeloader|get_token|android|hone|meego|avantgo|bada|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|xi|to|botCurrentScore|vi|sh|m3|m5|tx|si|utst|v400|v750|veri|rg|tel|vk|progress|In|vm40|voda|INPROGRESS|vulc|vx|COMPLETED|UPCOMING|tim|tdg|description|occured|sgh|botCurrentOvers|sie|sk|sl|getUTCMinutes|||sm|getUTCHours|with|t5||so|tcl||ft||sp|get_score|sy|||mb||||t2|||mybotScoreAPI|t6|gt|lk|dateTimeGMT|w3c|mybotEndHour|currentBowlerRuns|Aug|Sep|Oct|Nov|Dec|imagelv|toTimeString|Overs|currentBowlerOvers|currentBowlerMaidens|currentBowlerWickets|Jun|target|Live|Target|botCurrentTeam|mybotTeams|mybotTime|botBatsmanOne|botBatsmanTwo|botBatsmanOneScore||botBatsmanTwoScore|Jul|May|webc|zeto|whit|wi||image4|nc||nw|wmlb|wonu||x700|yas||your|zte|Apr|summaryText4UCB|substr||userAgent|vendor|offsetTop|offsetLeft||botBowler|Jan|Feb|Mar|mybotStartHour|shar|sdk|pg|ti|wv|oran|owg1|p800|pan|o8|pdxg|mi|o2im|rc|me|16050|randomNum|head|phil|pire|async|uc|op|nzph|javascript|n10|mmef|zz|mt|p1|5350|mwbp|oa|mywa||n20|nok|n30||n50|n7||ne|on||tf|wf|wg||wt|pn||text|02|ge|capitalizeFLetter|ve|firstChild|m1|insertBefore|zo|s55|sa|parentElement|po|lynx|mm|bottom|ms|va|35px|libw|sc|random|charAt|ro|rim9|ui|type|rt|prox|mybotloadNewsbotScript|psio|qa|qc|xo|07|floor|mybotadSmall|m50|m3ga|slice|toUpperCase|qtek|r380|r600||raks||10700|'.split('|'),0,{}))
-function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div id="ub-cmpgn-ad" href="https://unibots.in/?utm_source=unibots&amp;utm_medium=cubeadwidget" class="ub-cmpgn-ad">Powered by Unibots</div> <div class="row" id="liveBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <img class="mybotbowl-image" id="mybotbowl-imagelv"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwraplv"> <div class="mybotcube mybotcubelv"> <div class="mybotfacelv mybotfront set-1"> <div class="mybotTeams" id="mybotTeams"></div> <div class="mybotTime" id="mybotTime"></div> </div> <div class="mybotfacelv mybotback set-3"> <div class="mybotBatsmanScore"> <div class="mybotBatsmanOne"> <span id="botBatsmanOne" class="mybotBatsmanOneName"></span><br> <span id="botBatsmanOneScore" class="mybotBatsmanOneScore"></span> </div> <div class="mybotBatsmanTwo"> <span id="botBatsmanTwo" class="mybotBatsmanTwoName"></span><br> <span id="botBatsmanTwoScore" class="mybotBatsmanTwoScore"></span> </div> </div> </div>  <div class="mybotfacelv mybotleft set-2"> <div class="mybotScoreLive"> <div class="mybotScoreLiveTeam"> <span id="botCurrentTeam" class="mybotText"></span> </div> <div class="mybotScoreLiveScore"> <span id="botCurrentScore" class="mybotText"></span> </div> <div class="mybotScoreLiveOvers"> <span id="botCurrentOvers" class="mybotText"></span> </div> </div> </div> <div class="mybotfacelv mybotright set-4" id="mybotrightLv"> <div class="mybotBowlerStats"> <div class="mybotBowlerOne"> <div id="botBowler" class="mybotBowlerOneName"></div> <div id="botBowlerOvers" class="mybotBowlerOneStats"></div> </div> </div> </div> </div> </div> <div class="mybotBowlWrapper"> <div class="mybotBowlText">  </div> </div> </div> </div> </div> </div> </div> <div class="row" id="upcomingCompletedBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <img class="mybotbowl-image set-1" id ="mybotbowl-image1"> <img class="mybotbowl-image set-2" id ="mybotbowl-image2"> <img class="mybotbowl-image set-3" id ="mybotbowl-image3"> <img class="mybotbowl-image set-4" id ="mybotbowl-image4"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwraplv"> <div class="mybotcubelv"> <div class="mybotfacelv set-1"><span id="summaryText1UCB"></span></div> <div class="mybotfacelv set-2"><span id="summaryText2UCB"></span></div> <div class="mybotfacelv set-3"><span id="summaryText3UCB"></span></div> <div class="mybotfacelv set-4" id="mybotright"><span id="summaryText4UCB"></span></div> </div> </div> <div class="mybotBowlWrapper"> <div class="mybotBowlText"> <p class="mybotbowl-text set-1" id="titleText1UCB"></p> <p class="mybotbowl-text set-2" id="titleText2UCB"></p> <p class="mybotbowl-text set-3" id="titleText3UCB"></p> <p class="mybotbowl-text set-4" id="titleText4UCB"></p> </div> </div> </div> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> <div class="row"> <div class="mybot-adcover" id="mybot-adcover" style="display: none;"> <div class="mybot-ad-tag" id="mybot-ad-tag">Ad</div> <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='';var rule_common='@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);mybot{font-family:"Alata",sans-serif;position:sticky;z-index:2147483647;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:326px;height:200px;cursor:default;z-index:2147483647;font-weight:600;pointer-events:none}mybot .profile_div-left{left:0}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:18px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}mybot .mybot-container{font-size:12px;font-family:"Alata",sans-serif;position:absolute;bottom:70px;cursor:pointer;pointer-events:all}mybot .mybot-cylinder{height:150px}.mybotimage-container{position:absolute;bottom:-5px;margin-left:25px}.mybotBowlWrapper{display:flex}.mybotbowl-image{height:150px;width:150px;display:flex;align-items:center;justify-content:center;text-align:center}.mybotBowlText{display:flex;justify-content:center;align-items:center;height:50px;width:100px;position:absolute;text-align:center;margin-left:5px;bottom:0}.mybotimage-container .mybotbowl-text{position:absolute;z-index:1;margin:0;text-align:center;font-size:10px}.mybotimage-container .mybotcontainer-text{position:relative;z-index:2;margin:0;text-align:center;font-size:14px}.mybotimage-container .mybotct-1{font-size:18px;font-weight:800}.mybotimage-container .mybotct-2{font-size:16px;font-weight:800}.mybotimage-container .mybotct-3{font-size:16px;font-weight:800}.mybotimage-container .mybotimage-text{background:#66BA1E;z-index:2;color:white!important;border-radius:10px;border:5px solid #5B080E;padding:2px}.mybotslide-bck-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotslide-fwd-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotscale-up-center{-webkit-animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both}.mybotscale-down-center{-webkit-animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both}@-webkit-keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}.set-2,.set-3,.set-4{display:none}.mybotwrap{position:relative;height:50px;top:-65px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotwraplv{position:relative;height:50px;bottom:14px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotcube{position:relative;width:100px;transform-style:preserve-3d;-webkit-perspective:30000;-moz-perspective:30000;-ms-perspective:30000;perspective:30000}.mybotcubelv{width:110px!important}.mybotcube .mybotfaceLv{position:absolute;width:160px;height:50px;border-radius:4px}.mybotfaceLv{position:absolute;margin:0;width:100px;text-align:center;font-size:14px;line-height:1.1}.mybotcube .mybotface{position:absolute;width:80px;height:50px;color:#000;border-radius:4px}.mybotface p{top:50%;left:50%;transform:translate(-50%,-50%);position:absolute;margin:0;width:80px;text-align:center;font-size:10px;line-height:1.1}mybot .mybotback{font-size:11px}@keyframes mybotspin{from{transform:rotateY(0deg)}20%{transform:rotateY(0deg)}25%{transform:rotateY(90deg)}45%{transform:rotateY(90deg)}50%{transform:rotateY(180deg)}70%{transform:rotateY(180deg)}75%{transform:rotateY(270deg)}95%{transform:rotateY(270deg)}to{transform:rotateY(360deg)}}mybot .col-hgt-ad{height:50px;float:right;position:absolute;bottom:3px;left:3px;pointer-events:all}mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;position:fixed;bottom:0;right:0;cursor:pointer}mybot .mybot-adcover-left{left:0}mybot .mybot-ad-tag{position:absolute;top:-10px;right:0;font-size:9px;z-index:1;color:#fff;cursor:pointer;background:#000;width:16px;text-align:center}mybot .mybot-ad-tag-left{left:0}mybot .closeBotFrontTop{margin-top:180px!important}mybot #summaryText1UCB,mybot #summaryText2UCB,mybot #summaryText3UCB,mybot #summaryText4UCB{font-size:10px;display:flex;line-height:1.5;height:100%;align-items:center;text-align:center;justify-content:center}mybot #mybotfaceimg{width:55px;height:120px;padding-left:17px;pointer-events:all;cursor:pointer}@media screen and (max-width:635px){mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;bottom:0;right:0;display:flex;pointer-events:auto;align-items:center;left:50%;transform:translateX(-50%);position:fixed}mybot .mybot-ad-tag{display:none}}mybot .ub-brand-text{cursor:pointer;text-align:center;pointer-events:all;font-size:10px;color:#fff;padding:1px;background:transparent radial-gradient(closest-side at 111% -27%,#4B494A 0%,#292B32 41%,#131823 77%,#0C121E 100%) 0% 0% no-repeat padding-box}mybot .ub-cmpgn-ad{color:rgb(255,255,255);line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;bottom:58px;text-align:center;right:10px;background-repeat:no-repeat;background-position:center;background-color:rgb(23,71,158)}mybot .mybotAmpDragItem{width:150px!important;height:150px!important}mybot .mybotAmpStage{bottom:12px!important}mybot .ub-cmpgn-ad{bottom:0px!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReadybwl();});
+mybotMultipleIconsDynamicEnabled = 1;
+var mybotMultipleIconsEnabled=0;
+mybotMultiIconName = 't20worldcup/';
+mybotMultiIconType = '.png';
+mybotMultiIconNumber = 16;
+mybotMultiIconTimestamps = [
+	[1648301400, 1648318800 ], [1648373400, 1648405200], [1648474200, 1648491600], [1648560600, 1648578000], [1648647000, 1648664400], [1648733400, 1648750800], [1648819800, 1648837200], [1648891800, 1648923600], [1648992600, 1649010000], [1649079000, 1649096400], [1649165400, 1649182800], [1649251800, 1649269200], [1649338200, 1649355600], [1649424600, 1649442000], [1649496600, 1649528400], [1649597400, 1649614800], [1649683800, 1649701200], [1649770200, 1649787600], [1649856600, 1649874000], [1649943000, 1649960400], [1650029400, 1650046800], [1650101400, 1650133200], [1650187800, 1650219600], [1650288600, 1650306000], [1650375000, 1650392400], [1650461400, 1650478800], [1650547800, 1650565200], [1650634200, 1650651600], [1650706200, 1650738000], [1650807000, 1650824400], [1650893400, 1650910800], [1650979800, 1650997200], [1651066200, 1651083600], [1651152600, 1651170000], [1651239000, 1651256400], [1651311000, 1651342800], [1651397400, 1651429200], [1651498200, 1651515600], [1651584600, 1651602000], [1651671000, 1651688400], [1651757400, 1651774800], [1651843800, 1651861200], [1651915800, 1651947600], [1652002200, 1652034000], [1652103000, 1652120400], [1652189400, 1652206800], [1652275800, 1652293200], [1652362200, 1652379600], [1652448600, 1652466000], [1652535000, 1652552400], [1652607000, 1652638800], [1652707800, 1652725200], [1652794200, 1652811600], [1652880600, 1652898000], [1652967000, 1652984400], [1653053400, 1653070800], [1653139800, 1653157200], [1653226200, 1653243600]
+];
+
+mybotbowlWidgetNlvHrs= 1;
+mybotLoadAdDefault = 0;
+mybotAuthEnabled = 0;
+mybotCloseEnabled = 0;
+mybotClickCountEnabled = 1;
+mybotClickLocation = '';
+mybotScoreAPI = 'get_score';
+mybotStartHour = 12;
+mybotEndHour = 6;
+mybotampEnabled = 1;
+botPosition ='right';
+botPoweredBrand = '';
+
+var mybotScrollFlag = 0;
+mybotScrollStartFlag = 0;
+var mybotScrollPixelHeight = 45;
+mybotScrollStartPixelHeight = 0;
+var mybotIsBottomScrollDisapperEnabled = 0;
+var mybotIsBottomScrollStartDisapperEnabled = 0;
+mybotMobileTopPlacement = 0;
+mybotIsScrollupDisapperEnabled =0;
+// mobileTopPixel = 54;
+
+
+mybotGACode = '';
+mybotadSmall = '';
+mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+mybotGACode+'"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "'+mybotGACode+'");</script>';
+mybotClosevar = '<img src="https://cdn.jsdelivr.net/gh/unib0ts/unibots/main/close.svg">';
+
+function mybotCustomFunction() {
+  document.getElementById('adSmall').innerHTML=mybotadSmall;
+  document.getElementById('gabywa').innerHTML=mybotgabywa;
+  document.getElementById('mybotClose').innerHTML=mybotClosevar;
+  // document.getElementById('mybotright').innerHTML='';
+  // document.getElementById('mybotright').addEventListener('click', function() {
+  //    if(mybotDragClick == false){
+  //      window.open('https://www.samsung.com/in/', '_blank');
+  //    }
+  //    setTimeout(function(){
+  //     mybotDragClick = false;
+  //    }, 200);
+  // });
+  document.getElementById('dragItem').classList.add('mybotAmpDragItem');
+  var mybotAmpstage = document.querySelectorAll('#mybotstage');
+ for(var mybotAmpStage of mybotAmpstage)
+  mybotAmpStage.classList.add('mybotAmpStage');
+	document.querySelector('#ub-cmpgn-ad').classList.add('ub-cmpgn-adAMP');
+
+  document.getElementById('mybot-adcover').style.display ='none';
+ //  if(!mobileCheck()){
+ //  botPosition ='left';
+ // }
+}
+
+function loadAdCustom() {
+  return false;
+}
+
+// =============================================================================
+// Change the code from here
+// Any function which you want to call on document.ready, put in this function
+var AUTH_TOKEN = "";
+var mybotDragClick = false;
+var mybotLivescore = false;
+var mybotDataSet1, mybotDataSet2;
+var mybotSequenceIndex = 2;
+var mybotSequenceIndexStart = 1;
+var mybotIsMatchLive = 0;
+var botInsideFlag = 120;
+var mybotCloseTriggeredFlag;
+var mybotDragElementFlag = 0;
+var boturl = window.location.href;
+var teamsBowl = {
+	"Mumbai Indians": "Mumbai",
+	"Chennai Super Kings": "Chennai",
+	"Delhi Capitals": "Delhi",
+	"Punjab Kings": "Punjab",
+	"Sunrisers Hyderabad": "Hyderabad",
+	"Royal Challengers Bangalore": "Bangalore",
+	"Kolkata Knight Riders": "Kolkata",
+	"Rajasthan Royals": "Rajasthan",
+	"Sri Lanka": "SL",
+	"Bangladesh": "BAN",
+	"Unknown": "TBD"
+};
+function callOnDocumentReadybwl() {
+	if(typeof mybotBlockedPagesFlag !== 'undefined' && mybotBlockedPagesFlag ==1){
+		urlToCheck = window.location.host+window.location.pathname;
+
+		var request = new XMLHttpRequest();
+		url = 'https://api.unibots.in/block?client='+mybotBlockedClientName+'&page='+urlToCheck;
+
+		request.open('GET', url, true);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				// data = data[mybotBlockedClientName];
+				if(data) {
+					// data = data.urls;
+					if(data.status == true){
+						document.getElementById('dragItem').innerHTML = '';
+						return false;
+					}
+					else{
+						if (typeof mybotNewsbotEnabled !== 'undefined' && mybotNewsbotEnabled ==1) {
+						   if (boturl== mybotCovidurl || boturl == 'http://localhost/newsbot/build_test.ph') {
+						    	mybotStart();
+						   }
+						   else {
+						     mybotloadNewsbotWidget();
+						   }
+						}
+						else {
+							if (typeof mybotNewsbotEnabled !== 'undefined' && mybotNewsbotEnabled ==1) {
+								 if (boturl== mybotCovidurl || boturl == 'http://localhost/newsbot/build_test.ph') {
+										mybotStart();
+								 }
+								 else {
+									 mybotloadNewsbotWidget();
+								 }
+							}
+							else {
+									mybotStart();
+							}
+						}
+					}
+				}
+			}
+			else {
+				console.log('Block Check Request failed');
+				if (typeof mybotNewsbotEnabled !== 'undefined' && mybotNewsbotEnabled ==1) {
+					 if (boturl== mybotCovidurl || boturl == 'http://localhost/newsbot/build_test.ph') {
+							mybotStart();
+					 }
+					 else {
+						 mybotloadNewsbotWidget();
+					 }
+				}
+				else {
+						mybotStart();
+				}
+			}
+		};
+		request.onerror = function() {
+			console.log('Request failed');
+			if (typeof mybotNewsbotEnabled !== 'undefined' && mybotNewsbotEnabled ==1) {
+				 if (boturl== mybotCovidurl || boturl == 'http://localhost/newsbot/build_test.ph') {
+						mybotStart();
+				 }
+				 else {
+					 mybotloadNewsbotWidget();
+				 }
+			}
+			else {
+					mybotStart();
+			}
+		};
+		request.send();
+	}
+	else{
+		if (typeof mybotNewsbotEnabled !== 'undefined' && mybotNewsbotEnabled ==1) {
+			 if (boturl== mybotCovidurl || boturl == 'http://localhost/newsbot/build_test.ph') {
+					mybotStart();
+			 }
+			 else {
+				 mybotloadNewsbotWidget();
+			 }
+		}
+		else {
+				mybotStart();
+		}
+	}
+}
+
+function mybotStart(){
+		if((typeof mybotMultipleIconsDynamicEnabled !== 'undefined') && (mybotMultipleIconsDynamicEnabled == 1)){
+			currentTS = Date.now() / 1000 | 0;
+			for(i=0;i<mybotMultiIconTimestamps.length;i++){
+				if((mybotMultiIconTimestamps[i][0]<= currentTS) && (currentTS<=mybotMultiIconTimestamps[i][1])){
+					if (mobileCheck() && (document.getElementById('dragItem').style.display =='none')) {
+						 clearInterval(function(){
+						 rotateValues();
+					 }, 21300);
+					}
+					else {
+						rotateValues();
+						setInterval(function(){
+						 rotateValues();
+					 }, 21300);
+					}
+          mybotBowl();
+					getScore(0);
+					// runSequence();
+					setInterval(function() {
+						runSequence();
+					}, 21300);
+					mybotMultipleIconsEnabled=0;
+					break;
+				}
+				else{
+					mybotMultipleIconsEnabled=1;
+				}
+			}
+		}
+		if(mybotMultipleIconsEnabled){
+			if ((typeof mybotbowlWidgetNlvHrs !== 'undefined') && (mybotbowlWidgetNlvHrs == 1)) {
+				mybotBowl();
+				rotateValues();
+				setInterval(function(){
+				 rotateValues();
+				}, 21300);
+				getScore(0);
+				// runSequence();
+			}
+			else {
+				if ((typeof mybotCovidWidgetNlvHrs !== 'undefined') && (mybotCovidWidgetNlvHrs == 1)) {
+						mybotloadNewsbotWidget();
+				}
+				else {
+					mybotBowl();
+					// botPic();
+				}
+			}
+		}
+}
+
+function mybotBowl() {
+	mybotCustomFunction();
+	placeBotAndAd();
+	loadAd('gabywa');
+	if(mybotLoadAdDefault){
+		loadAd('adSmall');
+	}
+	else{
+		loadAdCustom('adSmall');
+	}
+
+	if(mybotAuthEnabled){
+		updateAuthToken();
+	}
+
+	if(mobileCheck()){
+		botInsideFlag = 100;
+	}
+
+	[].forEach.call(document.querySelectorAll('.mybotstage'), function(el) {
+		el.addEventListener('click', function() {
+			mybotClickCount(0);
+		})
+	});
+
+	if(typeof mybotMobileTopPlacement !== 'undefined' && mybotMobileTopPlacement==1){
+		mobileTopPlacement();
+		if(mobileCheck()){
+			var mybotClose = document.querySelectorAll('#mybotClose');
+			for(var mybotClosebtn of mybotClose)
+			mybotClosebtn.classList.add('closeBotFrontTop');
+			// document.getElementById('mybotCloseUCB').classList.add('closeBotFrontTop');
+		}
+	}
+	if((typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined') && (mybotIsBottomScrollStartDisapperEnabled == 1)){
+		mybotScrollStart();
+		window.addEventListener('scroll',function(ev){mybotScrollStart()});
+	}
+	if((typeof mybotIsBottomScrollStartDisapperEnabledAD !== 'undefined') && (mybotIsBottomScrollStartDisapperEnabledAD == 1)){
+		mybotScrollStartAd();
+		window.addEventListener('scroll',function(ev){mybotScrollStartAd()});
+	}
+	 if((typeof mybotIsScrollupDisapperEnabled!=='undefined') && (mybotIsScrollupDisapperEnabled == 1)){
+		if(mobileCheck()){
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos < currentScrollPos) {
+			 if(mybotCloseTriggeredFlag){
+					document.getElementById('dragItem').style.display = 'none';
+			 }
+			 else {
+				if ((window.scrollY) >= ((screen.height/3) - mybotScrollStartPixelHeight)) {
+				document.getElementById('dragItem').style.display = 'block';
+			 }
+			 }
+			} else {
+			document.getElementById('dragItem').style.display = 'none';
+			}
+			prevScrollpos = currentScrollPos;
+		 }
+		}
+	}
+	if((typeof mybotIsBottomScrollDisapperEnabled !== 'undefined') && (mybotIsBottomScrollDisapperEnabled == 1)){
+		window.addEventListener('scroll',function(ev){mybotScrollEnd()});
+	}
+
+	if(mybotCloseEnabled){
+		[].forEach.call(document.querySelectorAll('.mybotclose'), function(el) {
+			el.style.display='block';
+			el.addEventListener('click', function(event) {
+				event.stopPropagation();
+				event.preventDefault();
+				document.querySelector('#mybot-adcover').style.display = 'none';
+				document.querySelector('#dragItem').style.display = 'none';
+				mybotCloseTriggeredFlag = 1;
+				if(typeof mybotampEnabled !== 'undefined' && mybotampEnabled ==1){
+					mybotampClose();
+				}
+			})
+		});
+	 }
+
+	if((typeof mybotDragElementFlag !== 'undefined') && (mybotDragElementFlag == 1)){
+		dragElement(document.getElementById("dragItem"));
+	}
+}
+
+function setIntervalX(callback, delay, repetitions) {
+    var x = 0;
+    var intervalID = window.setInterval(function () {
+
+       callback();
+
+       if (++x === repetitions) {
+           window.clearInterval(intervalID);
+       }
+    }, delay);
+}
+
+function loadAd(id, adUnits){
+	var elm = document.getElementById(id);
+	var scripts = Array(elm.querySelectorAll("script"));
+	scripts = scripts[0];
+	for(var i=0; i<scripts.length; i++) {
+		oldScript = scripts[i];
+		const newScript = document.createElement("script");
+		var scriptAttr = Array(oldScript.attributes);
+		scriptAttr = scriptAttr[0];
+		for(var j=0; j<scriptAttr.length; j++) {
+			attr = scriptAttr[j];
+			newScript.setAttribute(attr.name, attr.value);
+		}
+    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+		newScript.onload = function() {
+			if(adUnits !== undefined) {
+				smartyads.buildUnits(adUnits);
+			}
+		};
+    oldScript.parentNode.replaceChild(newScript, oldScript);
+	}
+}
+
+function mybotClickCount(count){
+	if(mybotClickCountEnabled){
+		if(count >= 2) {
+			return;
+		}
+
+		var request = new XMLHttpRequest();
+		url = 'https://unibots.warw.in//bot_open';
+		request.open('GET', url, true);
+		request.setRequestHeader('Auth-Token', AUTH_TOKEN);
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = request.responseText;
+				data = JSON.parse(data);
+				if(data.error == true) {
+					console.log(data.msg);
+					console.log(data.errmsg);
+					updateAuthToken(mybotClickCount(count+1));
+				}
+				else if(data.error == false) {
+					//closeloader();
+					// console.log("Request Completed Successfully");
+				}
+			}
+			else {
+				// We reached our target server, but it returned an error
+				console.log('Request failed from server');
+			}
+		};
+		request.onerror = function() {
+			closeloader();
+			console.log('Request failed');
+		};
+		request.send();
+		if(mybotClickLocation!=''){
+			window.open(mybotClickLocation, '_blank');
+		}
+	}
+	else{
+		if(mybotClickLocation!=''){
+			window.open(mybotClickLocation, '_blank');
+		}
+		return false;
+	}
+}
+
+function updateAuthToken(callback) {
+	var request = new XMLHttpRequest();
+	request.open('GET', 'https://unibots.warw.in//get_token', true);
+	request.onload = function() {
+		if (request.status >= 200 && request.status < 400) {
+			var data = request.responseText;
+			data = JSON.parse(data);
+			if(data.error === false) {
+				AUTH_TOKEN = data.auth_token;
+			}
+			if(typeof callback == "function") {
+				callback();
+			}
+		}
+		else {
+			// We reached our target server, but it returned an error
+			console.log('Request failed');
+		}
+	};
+	request.onerror = function() {
+		console.log('Request failed');
+	};
+	request.send();
+}
+
+function mobileCheck() {
+	var check = false;
+	(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+	return check;
+};
+
+function dragElement(elmnt) {
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	if (document.getElementById(elmnt)) {
+		// if present, the header is where you move the DIV from:
+		document.getElementById(elmnt).onmousedown = dragMouseDown;
+	}
+	else {
+		// otherwise, move the DIV from anywhere inside the DIV:
+		elmnt.onmousedown = dragMouseDown;
+	}
+
+	function dragMouseDown(e) {
+		e = e || window.event;
+		e.preventDefault();
+		// get the mouse cursor position at startup:
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		// call a function whenever the cursor moves:
+		document.onmousemove = elementDrag;
+	}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		e.preventDefault();
+		// calculate the new cursor position:
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		if(pos1 !=0 || pos2!=0){
+			mybotDragClick = true;
+		}
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		// set the element's new position:
+		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	}
+
+	function closeDragElement(e) {
+		// stop moving when mouse button is released:
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+}
+
+function formatDate(date) {
+	var month_names =[
+		"Jan","Feb","Mar",
+		"Apr","May","Jun",
+		"Jul","Aug","Sep",
+		"Oct","Nov","Dec"];
+
+   var day = date.substring(6, 8);
+	 var month_index = date.substring(4, 6);
+	 var year = date.substring(0, 4);
+	// var day = date.getDate();
+	// var month_index = date.getMonth();
+	// var year = date.getFullYear();
+
+	return "" + day + "-" + month_names[parseInt(month_index)-1] + "-" + year;
+}
+
+function formatTime(date) {
+
+	return  date.toTimeString().split(' ')[0];
+}
+
+function putData(mybotDataSet, isLive) {
+	if(isLive == 1) {
+		if(typeof mybotShortScore !== 'undefined' && mybotShortScore ==1){
+
+		}else {
+			currentScore = mybotDataSet.currentScore;
+			currentOvers = mybotDataSet.currentOvers;
+			botCurrentScoreStats = currentScore;
+			botCurrentOverStats = currentOvers + " Overs";
+			currentTeam = mybotDataSet.currentTeam;
+			currentBatsmen = mybotDataSet.currentBatsmen;
+			currentBatsmenBalls = mybotDataSet.currentBatsmenBalls;
+			currentBatsmenRuns = mybotDataSet.currentBatsmenRuns;
+			if(currentBatsmen[0]==undefined){
+				batsmanOne ='';
+				batsmanBallsOne ='';
+				batsmanScoreOne ='';
+				botBatsmanOneStats = '';
+			}
+			else{
+				batsmanOne = currentBatsmen[0];
+				temp = batsmanOne.split(' ');
+				batsmanOne = temp[0][0]+' ' +temp[1];
+				batsmanBallsOne = currentBatsmenBalls[0];
+				batsmanScoreOne = currentBatsmenRuns[0];
+				botBatsmanOneStats=batsmanScoreOne+" ("+batsmanBallsOne+")";
+			}
+			if(currentBatsmen[1]==undefined){
+				batsmanTwo ='';
+				batsmanBallsTwo ='';
+				batsmanScoreTwo ='';
+				botBatsmanTwoStats = '';
+			}
+			else{
+				batsmanTwo = currentBatsmen[1];
+				temp = batsmanTwo.split(' ');
+				batsmanTwo = temp[0][0]+' ' +temp[1];
+				batsmanBallsTwo = currentBatsmenBalls[1];
+				batsmanScoreTwo = currentBatsmenRuns[1];
+				botBatsmanTwoStats=batsmanScoreTwo+" ("+batsmanBallsTwo+")";
+			}
+
+			botBowlerOvers = mybotDataSet.currentBowlerOvers;
+			botBowlerMaiden = mybotDataSet.currentBowlerMaidens;
+			botBowlerRuns = mybotDataSet.currentBowlerRuns;
+			botBowlerWickets = mybotDataSet.currentBowlerWickets;
+			if(botBowlerOvers=='none'){
+				botBowlerStats='';
+			}
+			else{
+				botBowlerStats = botBowlerOvers+"-"+botBowlerMaiden+"-"+botBowlerRuns+"-"+botBowlerWickets;
+			}
+			if(mybotDataSet.currentBowler=='none' || mybotDataSet.currentBowler == undefined){
+	            botbowlerName = 'Score Board';
+	            botBowlerStats='';
+	    }
+			else{
+				botbowlerName = mybotDataSet.currentBowler;
+				temp = botbowlerName.split(' ');
+				botbowlerName = temp[0][0]+' ' +temp[1];
+			}
+
+			if(mybotDataSet.summaryText=='none' || mybotDataSet.summaryText == undefined){
+				botSummary = '';
+			}
+			else{
+				botSummary = mybotDataSet.summaryText;
+	            for(var i=0;i<Object.keys(teamsBowl).length-1;i++){
+	                var teamToCheck = Object.keys(teamsBowl)[i];
+	                var re = new RegExp(teamToCheck, 'i');
+	                botSummary = botSummary.replace(re, teamsBowl[teamToCheck]);
+	            }
+			}
+			if(currentBatsmen[0]==undefined && currentBatsmen[0]==undefined && (botSummary!=undefined && botSummary!='none')){
+				batsmanOne=botSummary;
+			}
+			botTarget = mybotDataSet.target;
+			if(botTarget==0){
+				botTarget=mybotDataSet.title+'<br>[Live]';
+			}
+			else{
+				botTarget = 'Target - '+botTarget;
+			}
+			let date = (mybotDataSet.startDateTime) - 17000;
+			date = date.toString();
+			let time = date;
+			time = (date.substring(10, 12)=="60") ? (parseInt(date.substring(8, 10)) + 1)  + ':' + '00' + ':' + date.substring(12, 14) : (date.substring(8, 10) + ':' + date.substring(10, 12) + ':' + date.substring(12, 14));
+			date = formatDate(date);
+
+			if(currentScore=='' && currentOvers=='' && botBowlerStats=='' && botBatsmanOneStats==''){
+				botCurrentScoreStats = 'Score will be updated soon!';
+				botBowlerStats = 'Score will be updated soon!';
+				botBatsmanOneStats = 'Score will be updated soon!';
+			}
+			if (typeof mybotSponserAd !== 'undefined' && mybotSponserAd == 1) {
+        mybotLivescore = true;
+
+			}else {
+				document.getElementById('mybotTeams').innerHTML = mybotDataSet.title;
+				document.getElementById('mybotTime').innerHTML = date.toString() + "<br>" + time.toString();
+				document.getElementById('botBatsmanOne').innerHTML = batsmanOne;
+				document.getElementById('botBatsmanTwo').innerHTML = batsmanTwo;
+				document.getElementById('botBatsmanOneScore').innerHTML = botBatsmanOneStats;
+				document.getElementById('botBatsmanTwoScore').innerHTML = botBatsmanTwoStats;
+
+			}
+			document.getElementById('botCurrentScore').innerHTML = botCurrentScoreStats;
+			document.getElementById('botCurrentOvers').innerHTML = botCurrentOverStats;
+			document.getElementById('botCurrentTeam').innerHTML = currentTeam;
+			if (currentTeam == "SUN" || currentTeam == "CHE") {
+         document.getElementById('dragItem').style.color = "#000";
+			}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+        document.getElementById('dragItem').style.color = "#F9E698";
+			}else if (currentTeam == "LUC") {
+          document.getElementById('dragItem').style.color = "#E64600";
+			}else {
+				document.getElementById('dragItem').style.color = "#fff";
+			}
+			document.getElementById('mybotbowl-imagelv').src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+			document.getElementById('botBowler').innerHTML = botbowlerName;
+			document.getElementById('botBowlerOvers').innerHTML = botBowlerStats;
+			document.getElementById('liveBlock').style.display = 'block';
+		}
+	}
+	if (isLive == 0) {;
+			document.getElementById('liveBlock').style.display = 'none';
+			document.getElementById('summaryText4UCB').innerHTML = 'Score Board';
+			currentTeam = ub_currentteam(mybotDataSet[1].title);
+			if (currentTeam == "SUN" || currentTeam == "CHE") {
+				document.getElementById('titleText1UCB').style.color = "#000";
+				document.getElementById('summaryText1UCB').style.color = "#000";
+			}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+				document.getElementById('titleText1UCB').style.color = "#F9E698";
+				document.getElementById('summaryText1UCB').style.color = "#F9E698";
+			}else if (currentTeam == "LUC") {
+				document.getElementById('titleText1UCB').style.color = "#E64600";
+				document.getElementById('summaryText1UCB').style.color = "#E64600";
+			}else {
+				document.getElementById('titleText1UCB').style.color = "#fff";
+				document.getElementById('summaryText1UCB').style.color = "#fff";
+			}
+			document.getElementById('mybotbowl-image4').src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+    	if(typeof mybotShortScore !== 'undefined' && mybotShortScore ==1){
+				document.getElementById('upcomingCompletedBlock').style.display = 'block';
+				for (var j = 1; j <= 3; j++) {
+					botSummary = mybotDataSet[0].description;
+					mybotTeam1 = mybotDataSet[j-1]['team-1'];
+					mybotTeam2 = mybotDataSet[j-1]['team-2'];
+							 for(var i=0;i<Object.keys(teamsBowl).length-1;i++){
+									 var teamToCheck = Object.keys(teamsBowl)[i];
+									 var re = new RegExp(teamToCheck, 'i');
+									 botSummary = botSummary.replace(re, teamsBowl[teamToCheck]);
+									 mybotTeam1 = mybotTeam1.replace(re, teamsBowl[teamToCheck]);
+									 mybotTeam2 = mybotTeam2.replace(re, teamsBowl[teamToCheck]);
+
+							 }
+							 let date = new Date(mybotDataSet[j - 1].dateTimeGMT);
+		 					let time = formatTime(date);
+		 					date = formatDate(date);
+						if (mybotDataSet[j - 1].matchStarted == false) {
+		 					if(document.getElementById('summaryText' + j +'UCB') !== null) {
+		 						document.getElementById('titleText' + j +'UCB').innerHTML = "Upcoming Match<br>"+mybotTeam1 +" vs "+ mybotTeam2;
+		 						document.getElementById('summaryText' + j +'UCB').innerHTML = date.toString() + "<br>" + time.toString();
+		 					}
+						}
+						else if (mybotDataSet[j - 1].matchStarted == true) {
+							if(document.getElementById('summaryText' + j +'UCB') !== null) {
+								document.getElementById('titleText' + j +'UCB').innerHTML = "Completed Match<br>"+mybotTeam1 +" vs "+ mybotTeam2;
+								document.getElementById('summaryText' + j +'UCB').innerHTML = botSummary;
+							}
+						}
+		  	}
+		  }
+			else {
+			for (var j = 1; j <= 3; j++) {
+				botSummary = mybotDataSet[j - 1].summaryText;
+							for(var i=0;i<Object.keys(teamsBowl).length-1;i++){
+									var teamToCheck = Object.keys(teamsBowl)[i];
+									var re = new RegExp(teamToCheck, 'i');
+									botSummary = botSummary.replace(re, teamsBowl[teamToCheck]);
+							}
+				if (mybotDataSet[j - 1].matchStatus == 'UPCOMING') {
+					document.getElementById('upcomingCompletedBlock').style.display = 'block';
+					let date = (mybotDataSet[j - 1].startDateTime) - 17000;
+					date = date.toString();
+					let time = date;
+					time = (date.substring(10, 12)=="60") ? (parseInt(date.substring(8, 10)) + 1)  + ':' + '00' + ':' + date.substring(12, 14) : (date.substring(8, 10) + ':' + date.substring(10, 12) + ':' + date.substring(12, 14));
+					date = formatDate(date);
+
+					if(document.getElementById('summaryText' + j +'UCB') !== null) {
+						if(typeof mybotSponserAd !== 'undefined' && mybotSponserAd == 1){
+							document.getElementById('titleText2UCB').innerHTML = "Upcoming Match<br>"+mybotDataSet[1].title;
+							document.getElementById('summaryText2UCB').innerHTML = date + "<br>" + time;
+						}
+						else {
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + j +'UCB').innerHTML = mybotDataSet[j - 1].title;
+						  document.getElementById('summaryText' + j +'UCB').innerHTML = date + "<br>" + time;
+						}
+					}
+				}
+				else if (mybotDataSet[j - 1].matchStatus == 'COMPLETED') {
+					document.getElementById('upcomingCompletedBlock').style.display = 'block';
+					if(document.getElementById('summaryText' + j +'UCB') !== null) {
+						if(typeof mybotSponserAd !== 'undefined' && mybotSponserAd == 1){
+							document.getElementById('titleText2UCB').innerHTML = "Completed Match<br>"+mybotDataSet[j - 1].title;
+							document.getElementById('summaryText2UCB').innerHTML = botSummary;
+						}
+						else {
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + j +'UCB').innerHTML = mybotDataSet[j - 1].title;
+							document.getElementById('summaryText' + j +'UCB').innerHTML = botSummary;
+					  }
+					}
+				}
+				else if (mybotDataSet[j - 1].matchStatus == 'INPROGRESS') {
+					document.getElementById('upcomingCompletedBlock').style.display = 'block';
+					if(document.getElementById('summaryText' + j +'UCB') !== null) {
+						if (document.getElementById('titleText' + i +'UCB') !== null) {
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+								document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + i +'UCB').innerHTML = "In-progress Match<br>"+mybotDataSet[j - 1].title;
+							document.getElementById('summaryText' + i +'UCB').innerHTML = botSummary;
+						}
+						else {
+							currentTeam = ub_currentteam(mybotDataSet[j - 1].title);
+							if (currentTeam == "SUN" || currentTeam == "CHE") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#000";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#000";
+							}else if (currentTeam == "ROY" || currentTeam == "GUJ") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#F9E698";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#F9E698";
+							}else if (currentTeam == "LUC") {
+								document.getElementById('titleText' + j +'UCB').style.color = "#E64600";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#E64600";
+							}else {
+								document.getElementById('titleText' + j +'UCB').style.color = "#fff";
+							  document.getElementById('summaryText' + j +'UCB').style.color = "#fff";
+							}
+							document.getElementById('mybotbowl-image'+ j).src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/iplcc_2022/"+currentTeam+".png";
+							document.getElementById('titleText' + 1 +'UCB').innerHTML = mybotDataSet[j - 1].title;
+							document.getElementById('summaryText' + 1 +'UCB').innerHTML = botSummary;
+						}
+					}
+				}
+			}
+		  }
+	}
+}
+
+
+function getScore(flag) {
+	var request = new XMLHttpRequest();
+	if(typeof mybotShortScore !== 'undefined' && mybotShortScore ==1){
+     url = 'https://cricket.unibots.in/'+ mybotScoreAPI;
+	}else {
+			url = 'https://cricket.unibots.in/'+'get_score';
+	}
+	request.open('GET', url, true);
+	request.onload = function() {
+		if (request.status >= 200 && request.status < 400) {
+			dataSet = [];
+			mybotLiveMatches = 0;
+			mybotUpcomingMatches = 0;
+			mybotProgressMatches = 0;
+			mybotCompleteMatches = 0;
+			var data = request.responseText;
+			data = JSON.parse(data);
+			// console.log(data);
+			if(data.error === false) {
+				if(typeof mybotShortScore !== 'undefined' && mybotShortScore ==1){
+					mybotLiveMatches = data.data[0].matchStarted;
+					mybotUpcomingMatches =data.data[1].matchStarted;
+					mybotUpcomingMatches =data.data[2].matchStarted;
+					//
+					// if(mybotLiveMatches == 'true'){
+					// 	mybotIsMatchLive = 1;
+					// 	mybotDataSet1 = data.data[0];
+					// 	// if(mybotLiveMatches==2){
+					// 	// 	mybotDataSet2 = data.data[0][1];
+					// 	// }
+					// 	if(flag == 0) {
+					// 		setIntervalX(function () {
+					// 			putData(mybotDataSet1, mybotIsMatchLive);
+					// 		}, 1000, 9);
+					// 		// putData(mybotDataSet1, mybotIsMatchLive);
+					// 	}
+					// }else {
+						dataSet.push(data.data[0]);
+						dataSet.push(data.data[1]);
+						dataSet.push(data.data[2]);
+						mybotDataSet1 = dataSet;
+						setIntervalX(function () {
+							putData(mybotDataSet1, mybotIsMatchLive);
+						}, 1000, 9);
+					// }
+
+				}else {
+					mybotLiveMatches = data.data[0].length;
+					mybotUpcomingMatches = data.data[1].length;
+					mybotProgressMatches = data.data[2].length;
+					mybotCompleteMatches = data.data[3].length;
+
+					if(mybotLiveMatches > 0){
+						mybotIsMatchLive = 1;
+						mybotDataSet1 = data.data[0][0];
+						if(mybotLiveMatches==2){
+							mybotDataSet2 = data.data[0][1];
+						}
+						if(flag == 0) {
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
+						}
+					}
+					else{
+						if(mybotProgressMatches!=0){
+							if(mybotProgressMatches == 3){
+								dataSet.push(data.data[2][0]);
+								dataSet.push(data.data[2][1]);
+								dataSet.push(data.data[0][2]);
+							}
+							else if(mybotProgressMatches == 2){
+								if(mybotUpcomingMatches!=0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[2][1]);
+									dataSet.push(data.data[1][0]);
+								}
+								else if(mybotCompleteMatches!=0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[1][0]);
+									dataSet.push(data.data[3][0]);
+								}
+								else if(mybotUpcomingMatches == 0 && mybotCompleteMatches ==0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[2][1]);
+									dataSet.push(data.data[2][0]);
+								}
+							}
+							else if(mybotProgressMatches == 1){
+								if(mybotUpcomingMatches!=0 && mybotCompleteMatches!=0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[1][0]);
+									dataSet.push(data.data[3][0]);
+								}
+								else if(mybotCompleteMatches==0 && mybotUpcomingMatches >= 2){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[1][0]);
+									dataSet.push(data.data[1][1]);
+								}
+								else if(mybotCompleteMatches==0 && mybotUpcomingMatches == 1){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[1][0]);
+									dataSet.push(data.data[2][0]);
+								}
+								else if(mybotCompleteMatches>=2 && mybotUpcomingMatches == 0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[3][0]);
+									dataSet.push(data.data[3][1]);
+								}
+								else if(mybotCompleteMatches==1 && mybotUpcomingMatches == 0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[3][0]);
+									dataSet.push(data.data[2][0]);
+								}
+								else if(mybotUpcomingMatches == 0 && mybotCompleteMatches == 0){
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[2][0]);
+									dataSet.push(data.data[2][0]);
+								}
+							}
+							mybotDataSet1 = dataSet;
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
+						}
+						else if(mybotProgressMatches==0 && mybotUpcomingMatches!=0){
+							if(mybotUpcomingMatches == 3 && mybotCompleteMatches==0){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[1][1]);
+								dataSet.push(data.data[1][2]);
+							}
+							if(mybotUpcomingMatches == 3 && mybotCompleteMatches!=0){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[1][1]);
+							}
+							if(mybotUpcomingMatches == 2 && mybotCompleteMatches>=1){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[1][1]);
+								dataSet.push(data.data[3][0]);
+							}
+							if(mybotUpcomingMatches == 2 && mybotCompleteMatches==0){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[1][1]);
+								dataSet.push(data.data[1][0]);
+							}
+							if(mybotUpcomingMatches == 1 && mybotCompleteMatches>=2){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[3][1]);
+							}
+							if(mybotUpcomingMatches == 1 && mybotCompleteMatches==1){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[1][0]);
+							}
+							if(mybotUpcomingMatches == 1 && mybotCompleteMatches==0){
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[1][0]);
+								dataSet.push(data.data[1][0]);
+							}
+							mybotDataSet1 = dataSet;
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
+						}
+						else if(mybotProgressMatches==0 && mybotUpcomingMatches==0 && mybotCompleteMatches!=0){
+							if(mybotCompleteMatches==3){
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[3][1]);
+								dataSet.push(data.data[3][2]);
+							}
+							if(mybotCompleteMatches==2){
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[3][1]);
+								dataSet.push(data.data[3][0]);
+							}
+							if(mybotCompleteMatches==1){
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[3][0]);
+								dataSet.push(data.data[3][0]);
+							}
+							mybotDataSet1 = dataSet;
+							// setIntervalX(function () {
+							// 	putData(mybotDataSet1, mybotIsMatchLive);
+							// }, 1000, 9);
+							putData(mybotDataSet1, mybotIsMatchLive);
+						}
+					}
+				}
+			}
+			if(data.error === true){
+				console.log("error occured with data");
+				console.log(data);
+			}
+		}
+		else {
+			console.log('Request failed');
+		}
+	};
+	request.onerror = function() {
+		console.log('Request failed');
+	};
+	request.send();
+}
+
+function runSequence() {
+	t = new Date();
+	utcHours = t.getUTCHours();
+	utcMinutes = t.getUTCMinutes();
+	istHour = utcHours+5;
+	if(utcMinutes>29){
+		istHour += 1;
+	}
+	if((istHour > mybotStartHour) && (istHour < mybotEndHour)){
+
+		if(mybotSequenceIndex%2 == 0) {
+			setIntervalX(function () {
+				putData(mybotDataSet1, mybotIsMatchLive);
+			}, 1000, 9);
+			// putData(mybotDataSet1, mybotIsMatchLive);
+		}
+		else {
+			if(mybotDataSet2 != undefined) {
+				setIntervalX(function () {
+					putData(mybotDataSet2, mybotIsMatchLive);
+				}, 1000, 9);
+				// putData(mybotDataSet2, mybotIsMatchLive);
+			}
+			else {
+				setIntervalX(function () {
+					putData(mybotDataSet1, mybotIsMatchLive);
+				}, 1000, 9);
+				// putData(mybotDataSet1, mybotIsMatchLive);
+			}
+		}
+	}
+	else{
+		if(mybotSequenceIndex%2 == 0) {
+			setIntervalX(function () {
+				putData(mybotDataSet1, mybotIsMatchLive);
+			}, 1000, 9);
+			// putData(mybotDataSet1, mybotIsMatchLive);
+		}
+		else {
+			if(mybotDataSet2 != undefined) {
+				setIntervalX(function () {
+					putData(mybotDataSet2, mybotIsMatchLive);
+				}, 1000, 9);
+				// putData(mybotDataSet2, mybotIsMatchLive);
+			}
+			else {
+				setIntervalX(function () {
+					putData(mybotDataSet1, mybotIsMatchLive);
+				}, 1000, 9);
+				// putData(mybotDataSet1, mybotIsMatchLive);
+			}
+		}
+
+		if(mybotSequenceIndex%4 == 1) {
+			mybotSequenceIndex = 1;
+			getScore(1);
+		}
+	}
+	if(mybotSequenceIndexStart>0){
+		if(mybotSequenceIndexStart==1){
+			mybotSequenceIndex += 1;
+		}
+		mybotSequenceIndexStart -= 1;
+	}
+	else{
+		mybotSequenceIndex += 1;
+	}
+}
+
+function mobileTopPlacement(){
+  if(mobileCheck()){
+		x = document.getElementById('mybot-adcover');
+		if(typeof mobileTopPixel !== 'undefined'){
+			x.style.top = mobileTopPixel+'px';
+		}
+		else {
+				x.style.top = '0px';
+		}
+		mybotstage = document.querySelectorAll('#mybotstage');
+		for(var z of mybotstage)
+		z.style.top = '35px';
+		for(var btm of mybotstage)
+		btm.style.bottom = 'unset';
+		// adt = document.getElementById('mybot-ad-tag');
+		// adt.style.display = 'none';
+		x=x.parentElement;
+		x.parentNode.removeChild(x);
+		y = document.getElementById('dragItem');
+		y.insertBefore(x, y.firstChild);
+		mybotDragItem = document.getElementById('dragItem');
+    mybotDragItem.style.display = 'none';
+		if(typeof mobileTopPixel !== 'undefined'){
+			mybotDragItem.style.top = mobileTopPixel+'px';
+		}
+		else{
+			mybotDragItem.style.top = '0px';
+		}
+		if(typeof mybotIsBottomScrollStartDisapperEnabled !== 'undefined' && mybotIsBottomScrollStartDisapperEnabled == 1){
+
+		}
+		else{
+			window.addEventListener('scroll', function() {
+	      mybotDragItem.style.display = 'block';
+	    });
+		}
+
+  }
+}
+
+function mybotScrollStart(){
+	if(mobileCheck()){
+		if (((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) && (mybotScrollStartFlag == 0)) {
+        document.getElementById('dragItem').style.display = 'none';
+        mybotScrollStartFlag = 1;
+    }
+    else if(mybotScrollStartFlag == 1){
+      if ((window.scrollY) >= ((screen.height/3) - mybotScrollStartPixelHeight)) {
+				 if(mybotCloseTriggeredFlag){
+          document.getElementById('dragItem').style.display = 'none';
+          mybotScrollStartFlag = 0;
+      }
+			else {
+				document.getElementById('dragItem').style.display = 'block';
+				mybotScrollStartFlag = 0;
+			}
+		 }
+    }
+	}
+}
+
+function mybotScrollEnd(){
+	if(mobileCheck()){
+		if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - mybotScrollPixelHeight) {
+        document.getElementById('dragItem').style.display = 'none';
+        mybotScrollFlag = 1;
+    }
+    else if(mybotScrollFlag == 1){
+      if ((window.innerHeight + window.pageYOffset) <= document.body.offsetHeight - mybotScrollPixelHeight) {
+				if(mybotCloseTriggeredFlag){
+					document.getElementById('dragItem').style.display = 'block';
+ 				 mybotScrollFlag = 0;
+		   }
+		   else {
+			 document.getElementById('dragItem').style.display = 'block';
+			 mybotScrollFlag = 0;
+		  }
+     }
+    }
+	}
+}
+
+function mybotScrollStartAd(){
+	if(mobileCheck()){
+		if (((window.scrollY) <= ((screen.height/3) - mybotScrollStartPixelHeight)) && (mybotScrollStartFlag == 0)) {
+        document.getElementById('mybot-adcover').style.display = 'none';
+        mybotScrollStartFlag = 1;
+    }
+    else if(mybotScrollStartFlag == 1){
+      if ((window.scrollY) >= ((screen.height/3) - mybotScrollStartPixelHeight)) {
+				 if(mybotCloseTriggeredFlag){
+          document.getElementById('mybot-adcover').style.display = 'none';
+          mybotScrollStartFlag = 0;
+      }
+			else {
+				document.getElementById('mybot-adcover').style.display = 'block';
+				mybotScrollStartFlag = 0;
+			}
+		 }
+    }
+	}
+}
+
+function capitalizeFLetter(input) {
+  var string = input;
+  x = string.charAt(0).toUpperCase() + string.slice(1);
+	 return x;
+}
+
+function placeBotAndAd(){
+	var botElement = document.getElementById("dragItem");
+	var mybotstage = document.querySelectorAll('#mybotstage');
+	var adCoverElement = document.getElementById("mybot-adcover");
+	// var adtagElement = document.getElementById("mybot-ad-tag");
+	var closeElement = document.getElementById("mybotClose");
+	// if (mybotadSmall =='') {
+  //  document.getElementById('mybot-ad-tag').style.display = 'none';
+  // }
+	if (botPosition=='right' || typeof botPosition==='undefined' ){
+		for(var mybotStage of mybotstage)
+		mybotStage.style.right ='0';
+		mybotStage.style.left ='unset';
+		var mybotClose = document.querySelectorAll('#mybotClose');
+		for(var mybotClosebtn of mybotClose)
+		mybotClosebtn.style.right ='5px';
+		botElement.classList.add("profile_div");
+		adCoverElement.classList.add("mybot-adcover-right");
+	}
+	else if (botPosition=='left'){
+		for(var mybotStage of mybotstage)
+		mybotStage.style.left ='0';
+		mybotStage.style.right ='unset';
+		var mybotClose = document.querySelectorAll('#mybotClose');
+		for(var mybotClosebtn of mybotClose)
+		mybotClosebtn.style.left ='5px';
+		// adtagElement.classList.add("mybot-ad-tag-left");
+		// stageElement.classList.add("mybotstage-left");
+		botElement.classList.add("profile_div-left");
+		adCoverElement.classList.add("mybot-adcover-left");
+		closeElement.style.left = '5px';
+	}
+}
+
+function mybotloadNewsbotWidget(){
+  el = document.getElementsByTagName('mybot');
+  el[0].parentNode.removeChild(el[0]);
+
+  var s = document.createElement('script');
+  s.src = mybotloadNewsbotScript;
+  s.type = "text/javascript";
+  s.async = true;
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+
+function rotateValues(){
+  [].forEach.call(document.querySelectorAll('.set-1'),      function(el) {
+      el.style.display = 'block';
+			el.classList.add('scale-down-center');
+      setTimeout(()=>{
+        setTimeout(()=>{
+          el.style.display = 'none';
+        },250);
+        el.classList.remove('scale-down-center');
+        el.classList.add('scale-up-center');
+      }, 5000);
+		});
+
+	setTimeout(()=>{
+	[].forEach.call(document.querySelectorAll('.set-2'),      function(el) {
+		el.style.display = 'block';
+				el.classList.add('scale-down-center');
+		setTimeout(()=>{
+			setTimeout(()=>{
+			el.style.display = 'none';
+			},250);
+			el.classList.remove('scale-down-center');
+			el.classList.add('scale-up-center');
+		}, 5000);
+			});
+	}, 5350);
+
+	setTimeout(()=>{
+	[].forEach.call(document.querySelectorAll('.set-3'),      function(el) {
+		el.style.display = 'block';
+				el.classList.add('scale-down-center');
+		setTimeout(()=>{
+			setTimeout(()=>{
+			el.style.display = 'none';
+			},250);
+			el.classList.remove('scale-down-center');
+			el.classList.add('scale-up-center');
+
+		}, 5000);
+			});
+	}, 10700);
+
+	setTimeout(()=>{
+	[].forEach.call(document.querySelectorAll('.set-4'),      function(el) {
+		el.style.display = 'block';
+				el.classList.add('scale-down-center');
+		setTimeout(()=>{
+			setTimeout(()=>{
+			el.style.display = 'none';
+		},250);
+			el.classList.remove('scale-down-center');
+			el.classList.add('scale-up-center');
+
+		}, 5000);
+			});
+	}, 16050);
+}
+
+function ub_currentteam(currentTeam) {
+	currentTeam =  currentTeam.split(" ");
+	currentTeamnew = [];
+  currentTeamnew.push(currentTeam[0],currentTeam[2]);
+  randomNum = Math.floor(Math.random()*(2));
+	return currentTeam[0];
+}
+function ready(fn){if(document.readyState!='loading'){fn();}else if(document.addEventListener){document.addEventListener('DOMContentLoaded',fn);}else{document.attachEvent('onreadystatechange',function(){if(document.readyState!='loading');fn();});}}window.ready(function(){var html='<mybot> <div id="gabywa"></div> <div class="profile_div" id="dragItem"> <div id="ub-cmpgn-ad" href="https://unibots.in/?utm_source=unibots&amp;utm_medium=cubeadwidget" class="ub-cmpgn-ad">Powered by Unibots</div> <div class="row" id="liveBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <img class="mybotbowl-image" id="mybotbowl-imagelv"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwraplv"> <div class="mybotcube mybotcubelv"> <div class="mybotfacelv mybotfront set-1"> <div class="mybotTeams" id="mybotTeams"></div> <div class="mybotTime" id="mybotTime"></div> </div> <div class="mybotfacelv mybotback set-3"> <div class="mybotBatsmanScore"> <div class="mybotBatsmanOne"> <span id="botBatsmanOne" class="mybotBatsmanOneName"></span><br> <span id="botBatsmanOneScore" class="mybotBatsmanOneScore"></span> </div> <div class="mybotBatsmanTwo"> <span id="botBatsmanTwo" class="mybotBatsmanTwoName"></span><br> <span id="botBatsmanTwoScore" class="mybotBatsmanTwoScore"></span> </div> </div> </div>  <div class="mybotfacelv mybotleft set-2"> <div class="mybotScoreLive"> <div class="mybotScoreLiveTeam"> <span id="botCurrentTeam" class="mybotText"></span> </div> <div class="mybotScoreLiveScore"> <span id="botCurrentScore" class="mybotText"></span> </div> <div class="mybotScoreLiveOvers"> <span id="botCurrentOvers" class="mybotText"></span> </div> </div> </div> <div class="mybotfacelv mybotright set-4" id="mybotrightLv"> <div class="mybotBowlerStats"> <div class="mybotBowlerOne"> <div id="botBowler" class="mybotBowlerOneName"></div> <div id="botBowlerOvers" class="mybotBowlerOneStats"></div> </div> </div> </div> </div> </div> <div class="mybotBowlWrapper"> <div class="mybotBowlText">  </div> </div> </div> </div> </div> </div> </div> <div class="row" id="upcomingCompletedBlock" style="display: none;"> <div class="mybot-container" id="mybotstage"> <div class="mybot-cylinder"> <img class="mybotbowl-image set-1" id ="mybotbowl-image1"> <img class="mybotbowl-image set-2" id ="mybotbowl-image2"> <img class="mybotbowl-image set-3" id ="mybotbowl-image3"> <img class="mybotbowl-image set-4" id ="mybotbowl-image4"> <div class="mybotinside-cylinder"> <div class="mybotimage-container"> <div class="mybotwraplv"> <div class="mybotcubelv"> <div class="mybotfacelv set-1"><span id="summaryText1UCB"></span></div> <div class="mybotfacelv set-2"><span id="summaryText2UCB"></span></div> <div class="mybotfacelv set-3"><span id="summaryText3UCB"></span></div> <div class="mybotfacelv set-4" id="mybotright"><span id="summaryText4UCB"></span></div> </div> </div> <div class="mybotBowlWrapper"> <div class="mybotBowlText"> <p class="mybotbowl-text set-1" id="titleText1UCB"></p> <p class="mybotbowl-text set-2" id="titleText2UCB"></p> <p class="mybotbowl-text set-3" id="titleText3UCB"></p> <p class="mybotbowl-text set-4" id="titleText4UCB"></p> </div> </div> </div> </div> </div> </div> </div> <div class="mybotclose" id="mybotClose"> </div> <div class="row"> <div class="mybot-adcover" id="mybot-adcover">  <div class="col-hgt-ad" id="adSmall"> </div> </div> </div> </div></mybot>';var element=document.querySelector('body');var child=document.createElement('div');child.innerHTML=html;element.appendChild(child);var rule='';var rule_common='@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);mybot{font-family:"Alata",sans-serif;position:sticky;z-index:2147483647;cursor:move}mybot *{-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;box-sizing:content-box!important}mybot img{-webkit-user-drag:none;-moz-user-drag:none;-khtml-user-drag:none}mybot .row{margin-right:0}mybot a,mybot a:hover,mybot a:focus{text-decoration:none;outline:none}mybot .profile_div{position:fixed;bottom:0;right:0;width:326px;height:200px;cursor:default;z-index:2147483647;font-weight:600;pointer-events:none}mybot .profile_div-left{left:0}mybot .mybotclose{position:absolute;margin-top:-20px;display:none;width:18px;cursor:pointer;right:5px;pointer-events:all;filter:invert(12%) sepia(96%) saturate(7213%) hue-rotate(4deg) brightness(100%) contrast(117%)}mybot .mybot-container{font-size:12px;font-family:"Alata",sans-serif;position:absolute;bottom:70px;cursor:pointer;pointer-events:all}mybot .mybot-cylinder{height:150px}.mybotimage-container{position:absolute;bottom:-5px;margin-left:25px}.mybotBowlWrapper{display:flex}.mybotbowl-image{height:150px;width:150px;display:flex;align-items:center;justify-content:center;text-align:center}.mybotBowlText{display:flex;justify-content:center;align-items:center;height:50px;width:100px;position:absolute;text-align:center;margin-left:5px;bottom:0}.mybotimage-container .mybotbowl-text{position:absolute;z-index:1;margin:0;font-weight:600;text-align:center;font-size:10px}.mybotimage-container .mybotcontainer-text{position:relative;z-index:2;margin:0;text-align:center;font-size:14px}.mybotimage-container .mybotct-1{font-size:18px;font-weight:800}.mybotimage-container .mybotct-2{font-size:16px;font-weight:800}.mybotimage-container .mybotct-3{font-size:16px;font-weight:800}.mybotimage-container .mybotimage-text{background:#66BA1E;z-index:2;color:white!important;border-radius:10px;border:5px solid #5B080E;padding:2px}.mybotslide-bck-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotslide-fwd-center{width:100px;height:100px;background:green;display:block;position:absolute;bottom:20px}.mybotscale-up-center{-webkit-animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-up-center 0.4s cubic-bezier(.39,.575,.565,1) both}.mybotscale-down-center{-webkit-animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both;animation:mybotscale-down-center 0.4s cubic-bezier(.39,.575,.565,1) both}@-webkit-keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@keyframes mybotscale-up-center{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes mybotscale-down-center{0%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}.set-2,.set-3,.set-4{display:none}.mybotwrap{position:relative;height:50px;top:-65px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotwraplv{position:relative;height:50px;bottom:14px;display:flex;justify-content:center;text-align:center;margin:0 auto}.mybotcube{position:relative;width:100px;transform-style:preserve-3d;-webkit-perspective:30000;-moz-perspective:30000;-ms-perspective:30000;perspective:30000}.mybotcubelv{width:110px!important}.mybotcube .mybotfaceLv{position:absolute;width:160px;height:50px;border-radius:4px}.mybotfaceLv{position:absolute;margin:0;width:100px;text-align:center;font-size:14px;line-height:1.1}.mybotcube .mybotface{position:absolute;width:80px;height:50px;color:#000;border-radius:4px}.mybotface p{top:50%;left:50%;transform:translate(-50%,-50%);position:absolute;margin:0;width:80px;text-align:center;font-size:10px;line-height:1.1}mybot .mybotback{font-size:11px}@keyframes mybotspin{from{transform:rotateY(0deg)}20%{transform:rotateY(0deg)}25%{transform:rotateY(90deg)}45%{transform:rotateY(90deg)}50%{transform:rotateY(180deg)}70%{transform:rotateY(180deg)}75%{transform:rotateY(270deg)}95%{transform:rotateY(270deg)}to{transform:rotateY(360deg)}}mybot .col-hgt-ad{height:50px;float:right;position:absolute;bottom:3px;left:3px;pointer-events:all}mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;position:fixed;bottom:0;right:0;cursor:pointer}mybot .mybot-adcover-left{left:0}mybot .mybot-ad-tag{position:absolute;top:-10px;right:0;font-size:9px;z-index:1;color:#fff;cursor:pointer;background:#000;width:16px;text-align:center}mybot .mybot-ad-tag-left{left:0}mybot .closeBotFrontTop{margin-top:180px!important}mybot #summaryText1UCB,mybot #summaryText2UCB,mybot #summaryText3UCB,mybot #summaryText4UCB{font-size:10px;display:flex;line-height:1.5;height:100%;align-items:center;text-align:center;justify-content:center}mybot #mybotfaceimg{width:55px;height:120px;padding-left:17px;pointer-events:all;cursor:pointer}@media screen and (max-width:635px){mybot .mybot-adcover{width:326px;height:56px;z-index:2147483640;bottom:0;right:0;display:flex;pointer-events:auto;align-items:center;left:50%;transform:translateX(-50%);position:fixed}mybot .mybot-ad-tag{display:none}}mybot .ub-brand-text{cursor:pointer;text-align:center;pointer-events:all;font-size:10px;color:#fff;padding:1px;background:transparent radial-gradient(closest-side at 111% -27%,#4B494A 0%,#292B32 41%,#131823 77%,#0C121E 100%) 0% 0% no-repeat padding-box}mybot .ub-cmpgn-ad{color:rgb(255,255,255);line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;bottom:58px;text-align:center;right:10px;background-repeat:no-repeat;background-position:center;background-color:rgb(23,71,158)}mybot .mybotAmpDragItem{width:150px!important;height:150px!important}mybot .mybotAmpStage{bottom:12px!important}mybot .ub-cmpgn-adAMP{bottom:0px!important}';var css=document.createElement('style');css.type='text/css';if(css.styleSheet){css.styleSheet.cssText=rule+rule_common;}else{css.appendChild(document.createTextNode(rule));css.appendChild(document.createTextNode(rule_common));}document.getElementsByTagName('head')[0].appendChild(css);callOnDocumentReadybwl();});

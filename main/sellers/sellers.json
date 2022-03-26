@@ -1119,6 +1119,24 @@
           "seller_id": "187",
           "name": "vikatan",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "newsunfolded.com",
+          "seller_id": "188",
+          "name": "newsunfolded",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "sportsry.com",
+          "seller_id": "189",
+          "name": "sportsry",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "esakal.com",
+          "seller_id": "190",
+          "name": "esakal",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

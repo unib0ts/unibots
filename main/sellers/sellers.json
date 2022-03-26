@@ -1137,6 +1137,18 @@
           "seller_id": "190",
           "name": "esakal",
           "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "saamtv.com",
+          "seller_id": "191",
+          "name": "saamtv",
+          "seller_type": "PUBLISHER"
+      },
+      {
+          "domain": "dainikgomantak.com",
+          "seller_id": "192",
+          "name": "dainikgomantak",
+          "seller_type": "PUBLISHER"
       }
       ]
 }

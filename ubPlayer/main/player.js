@@ -6,7 +6,7 @@ clients = [
     "deepika.com","rozanaspokesman.in","tamilminutes.com","bonggossip.com","hindnow.com","ichorepaka.in","cricketaddictor.com","sportzwiki.com","hindisahayta.in","portal-islam.id"
 ]
 if(clients.includes(clientDomain)){
-    scriptElement.src = 'https://cdn.unibots.in/clientData/player.js?cb='+ cachebuster';
+    scriptElement.src = 'https://cdn.unibots.in/clientData/player.js?cb='+ cachebuster;
 }else{
     scriptElement.src = 'https://cdn.unibots.in/ubPlayer/player.js?cb='+ cachebuster;
 }

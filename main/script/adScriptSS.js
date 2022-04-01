@@ -1094,7 +1094,7 @@ var mappings_extra_units_config ={
     '/1062118/desktop_468x60_home',
     '/1062118/desktop_468x60_home_2',
     '/1062118/Unibot_Count_Pixel',
-    '/21928950349,22666385065/sakshi.com_nb_320x50',
+    // '/21928950349,22666385065/sakshi.com_nb_320x50',
     '/1062118/sakshi_belowrichcards_Desk_Article_300X250',
     '/1062118/Sakshi_Coronapage_300X250_2022',
     '/1062118/sakshi_300X250_belowemojis_Article',

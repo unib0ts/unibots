@@ -1115,7 +1115,7 @@ function checkHBUnits(){
     changeConfigToHB();
     callMapUnits();
   }else {
-    addNewsBotAd();
+    // addNewsBotAd();
     changeConfigToHB();
     callMapUnits();
   }

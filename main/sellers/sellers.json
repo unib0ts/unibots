@@ -977,12 +977,6 @@
           "seller_type": "PUBLISHER"
       },
       {
-          "domain": "hindi.scoopwhoop.com",
-          "seller_id": "164",
-          "name": "hindi.scoopwhoop",
-          "seller_type": "PUBLISHER"
-      },
-      {
           "domain": "auditionform.in",
           "seller_id": "165",
           "name": "auditionform",
@@ -1016,12 +1010,6 @@
           "domain": "patrika.com",
           "seller_id": "170",
           "name": "patrika",
-          "seller_type": "PUBLISHER"
-      },
-      {
-          "domain": "bengali.sportzwiki.com",
-          "seller_id": "171",
-          "name": "sportzwikibengali",
           "seller_type": "PUBLISHER"
       },
       {
@@ -1100,12 +1088,6 @@
           "domain": "thecricketlounge.com",
           "seller_id": "184",
           "name": "thecricketlounge",
-          "seller_type": "PUBLISHER"
-      },
-      {
-          "domain": "hindi.crictracker.com",
-          "seller_id": "185",
-          "name": "hindicrictracker",
           "seller_type": "PUBLISHER"
       },
       {

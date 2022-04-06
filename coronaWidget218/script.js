@@ -220,4 +220,20 @@ function ubadScript() {
     }
   }
 
+  let ubnew_i = 0;
+  while (ubnew_i < 10) {
+    if (document.getElementById("ubvideoFrame")) {
+      let cubeDiv = document.querySelector(".colombiatracked");
+      let cubeDiv2 = document.querySelector(".colombiaSuccess");
+      if(cubeDiv){
+          cubeDiv.style.removeProperty("display");
+          cubeDiv.style.setProperty('display','none');
+      }
+      if(cubeDiv2){
+          cubeDiv2.style.removeProperty("display");
+          cubeDiv2.style.setProperty('display','none');
+      }
+    }
+    ubnew_i++;
+  }
 }, 4000);

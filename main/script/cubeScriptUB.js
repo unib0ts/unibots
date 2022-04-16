@@ -74,7 +74,7 @@ startFuncClmb = (clientname, gabyub) => {
                var cads = document.createElement("script");
                cads.async = true;
                cads.type = "text/javascript";
-               cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+               cads.src = "https://static.clmbtech.com/ad/commons/js/91170/colombia_v2.js";
                document.getElementsByTagName('head')[0].appendChild(cads);
            })();
          }

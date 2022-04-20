@@ -1,6 +1,6 @@
 var s0 = document.createElement('script');
 	s0.async = "async";
-	s0.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/ubHB/main/hb.js";
+	s0.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
 	s0.type = "text/javascript";
 	document.getElementsByTagName('head')[0].appendChild(s0);
 
@@ -101,20 +101,21 @@ var s0 = document.createElement('script');
 //   ubadScript();
 // }
 //
-// var bong_vietnamcatg =   (window.location.href.split('https://bongdaplus.vn/bong-da-viet-nam/').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/v-league').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/hang-nhat-quoc-gia').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/cup-quoc-gia').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2)  ||
-//   (window.location.href.split('https://bongdaplus.vn/bong-da-nu-viet-nam').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/u17-viet-nam').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/u19-viet-nam').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/u21-viet-nam').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/futsal').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/bong-da-phong-trao').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/cac-doi-tuyen-tre-viet-nam').length == 2) ||
-//   (window.location.href.split('https://bongdaplus.vn/ket-nghia-anh-em').length == 2);
-//
+// var bong_vietnamcatg =
+ // https://bongdaplus.vn/bong-da-viet-nam/
+ //  https://bongdaplus.vn/v-league
+ //  https://bongdaplus.vn/hang-nhat-quoc-gia
+ //  https://bongdaplus.vn/cup-quoc-gia
+ //  https://bongdaplus.vn/doi-tuyen-quoc-gia-viet-nam').length == 2)  ||
+ //  https://bongdaplus.vn/bong-da-nu-viet-nam
+ //  https://bongdaplus.vn/u17-viet-nam
+ //  https://bongdaplus.vn/u19-viet-nam
+ //  https://bongdaplus.vn/u21-viet-nam
+ //  https://bongdaplus.vn/futsal
+ //  https://bongdaplus.vn/bong-da-phong-trao
+ //  https://bongdaplus.vn/cac-doi-tuyen-tre-viet-nam
+ //  https://bongdaplus.vn/ket-nghia-anh-em
+
 // function ubadScript() {
 //   // console.log('ub-Scripttriggered');
 //   // if(!(bong_vietnamcatg)){

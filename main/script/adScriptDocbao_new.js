@@ -1,14 +1,15 @@
-  if(!(window.location.href== "https://docbao.vn/") && !(window.location.href== "https://m.docbao.vn/")){
-var s0 = document.createElement('script');
-	s0.async = "async";
-	s0.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
-	s0.type = "text/javascript";
-	document.getElementsByTagName('head')[0].appendChild(s0);
+if((window.location.href== "https://docbao.vn/") || (window.location.href== "https://m.docbao.vn/")){}
+else {
+  var s0 = document.createElement('script');
+  s0.async = "async";
+  s0.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
 
-	window.unibotshb = window.unibotshb || { cmd: [] };
-	unibotshb.cmd.push(() => {
-	    ubHB("docbao");
-	});
+  window.unibotshb = window.unibotshb || { cmd: [] };
+  unibotshb.cmd.push(() => {
+      ubHB("docbao");
+  });
 }
 //   if(!(window.location.href== "https://docbao.vn/")){
 //     // var cachebuster = Math.round(new Date().getTime() / 1000);

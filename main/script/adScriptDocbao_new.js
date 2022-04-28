@@ -1,4 +1,4 @@
-if((window.location.href== "https://docbao.vn/") || (window.location.href== "https://m.docbao.vn/")){}
+if(window.location.href== "https://docbao.vn/"){}
 else {
   var s0 = document.createElement('script');
   s0.async = "async";

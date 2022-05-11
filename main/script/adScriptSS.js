@@ -1,3 +1,16 @@
+if (window.location.hostname == "english.sakshi.com" || window.location.hostname == "menglish.sakshi.com") {
+  var s0 = document.createElement('script');
+  s0.async = "async";
+  s0.src = "https://cdn.unibots.in/headerbidding/sakshipost.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+}else {
+  var s4 = document.createElement('script');
+  s4.async = "async";
+  s4.src = "https://cdn.unibots.in/headerbidding/clmbcube/cubeScriptSakshi.js";
+  s4.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s4);
+
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
 var requestManager = {
@@ -12,10 +25,44 @@ apstag.init({
 });
 apSlots = []
 
+var s3 = document.createElement('script');
+s3.setAttribute("data-ad-client", "ca-pub-6376205116838079");
+s3.async = "async";
+s3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+document.getElementsByTagName('head')[0].appendChild(s3);
 
-var isRoadblock = false;
+var s1 = document.createElement('script');
+s1.async = "async";
+s1.src = "https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js";
+s1.type = "text/javascript";
+document.getElementsByTagName('head')[0].appendChild(s1);
 
-var PREBID_TIMEOUT = 2000;
+var s0 = document.createElement('script');
+s0.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+s0.async = "async";
+document.getElementsByTagName('head')[0].appendChild(s0);
+
+z1 = document.createElement("div");
+z1.id = "div-ub-1";
+z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:0;left:5px;z-index:100";
+x1 = document.querySelector("body");
+x1.appendChild(z1);
+
+mybotadTarget = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><div id="gpt-passback"><script>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot("/21959913182/sakshi_hb_320x50_top_mobile_new", [[320, 100], [320, 50], [300, 50], [300, 100]], "gpt-passback").addService(googletag.pubads());googletag.pubads().set("page_url","sakshi.com");googletag.enableServices();googletag.display("gpt-passback");});</script></div>';
+
+if (document.getElementById('div-gpt-ad-1593080960785-0')) {
+  document.getElementById('div-gpt-ad-1593080960785-0').innerHTML=mybotadTarget;
+  loadAd('div-gpt-ad-1593080960785-0');
+}
+
+var ub_div1 = document.createElement('div');
+ub_div1.id = "div-gpt-ad-1638776087773-0";
+ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1638776087773-0'); });</script>";
+document.getElementsByTagName('body')[0].appendChild(ub_div1);
+
+var isRoadblock = true;
+
+var PREBID_TIMEOUT = 1300;
 var FAILSAFE_TIMEOUT = 3000;
 var REFRESH_TIMEOUT = 60000;
 // var boturl = window.location.href;
@@ -188,6 +235,20 @@ ubpbjs.que.push(function() {
     //       'banner': 0.01,
     //   }
     // },
+    schain: {
+     validation: "relaxed",
+     config: {
+       ver:"1.0",
+       complete: 1,
+       nodes: [
+         {
+           asi:"unibots.in",
+           sid: "1",
+           hp:1
+         }
+      ]
+     }
+    },
     rubicon: {singleRequest: true},
     priceGranularity: customConfigObjectA,
     userSync: {
@@ -232,21 +293,13 @@ ubpbjs.que.push(function() {
   // }, FAILSAFE_TIMEOUT);
 }
 
-var s0 = document.createElement('script');
-s0.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-s0.async = "async";
-document.getElementsByTagName('head')[0].appendChild(s0);
-
 googletag.cmd.push(function() {
   googletag.defineSlot('/1062118/Unibot_Count_Pixel', [1, 1], 'div-gpt-ad-1638776087773-0').addService(googletag.pubads());
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
 });
 
-var ub_div1 = document.createElement('div');
-ub_div1.id = "div-gpt-ad-1638776087773-0";
-ub_div1.innerHTML =  "<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1638776087773-0'); });</script>";
-document.getElementsByTagName('body')[0].appendChild(ub_div1);
+
 
 var ubsmall_slot1;
 function addNewsBotAd(){
@@ -277,24 +330,6 @@ function addNewsBotAd(){
   }, FAILSAFE_TIMEOUT);
 }
 
-// function addNewsBotAd(){
-//   // changeConfigToHB();
-//   changeConfigToUSD();
-//   googletag.cmd.push(function() {
-//         ubsmall_slot1 = googletag.defineSlot('/21928950349,22666385065/sakshi.com_nb_320x50', div_1_sizes, 'div-ub-1').addService(googletag.pubads());
-//         googletag.pubads().collapseEmptyDivs(true);
-//         googletag.pubads().setCentering(true);
-//         googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
-//         googletag.pubads().enableSingleRequest();
-//         googletag.enableServices();
-//       // googletag.defineSlot('/21928950349/sakshi_cube_test_100x100', [100, 100], 'div-gpt-ad-1634370996769-0').addService(googletag.pubads());
-//       googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-//         if (event.slot.getAdUnitPath() === '/21928950349,22666385065/sakshi.com_nb_320x50') {
-//           ub_checkAd1Rendered(event.slot);
-//         }
-//       });
-//   });
-// }
 
 function initAdserver() {
     if (ubpbjs.initAdserverSet) return;
@@ -302,7 +337,7 @@ function initAdserver() {
     googletag.cmd.push(function() {
         ubpbjs.que.push(function() {
             ubpbjs.setTargetingForGPTAsync();
-            googletag.pubads().refresh(ubsmall_slot1);
+            googletag.pubads().refresh([ubsmall_slot1]);
         });
     });
 }
@@ -441,14 +476,14 @@ ub_ad1RefreshFlag = 0;
 function ub_checkAd1Rendered(ubsmall_slot1){
 	adId1 = 'div-ub-1';
 	var nodes = document.getElementById(adId1).childNodes[0].childNodes;
-	if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
-    if(ub_ad1RefreshFlag != 1){
-      setInterval(function() {
-        ub_ad1RefreshFlag = 1;
-        refreshBid(ubsmall_slot1);
-      }, REFRESH_TIMEOUT);
-    }
-  }
+	// if(nodes.length && nodes[0].nodeName.toLowerCase() == 'iframe') {
+  //   if(ub_ad1RefreshFlag != 1){
+  //     setInterval(function() {
+  //       ub_ad1RefreshFlag = 1;
+  //       refreshBid(ubsmall_slot1);
+  //     }, REFRESH_TIMEOUT);
+  //   }
+  // }
   // else {
   //   ub_passback();
   // }
@@ -539,7 +574,6 @@ var mappings_full_hb_config = {
     'div-gpt-ad-1579844188157-0', ///1062118/320x50_Mobile_LB_New
     'div-gpt-ad-1578660796348-0', //sakshinew_resp_Box1_entertainment_300x250
     'div-gpt-ad-1540359629900-0', ///1062118/MobileMasthead_HP_300x250
-    // 'div-ub-1', ///21928950349,22666385065/sakshi.com_nb_320x50
     'div-gpt-ad-1593080960785-0',  ///21959913182/sakshi_hb_320x50_top_mobile_new'
     // 'div-gpt-ad-1593080960785-0', ///1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
     'div-gpt-ad-1599810044319-0', ///1062118/Mobile_Articlepage_adslot3
@@ -581,7 +615,6 @@ var mappings_full_hb_config = {
     '/1062118/320x50_Mobile_LB_New',
     '/1062118/sakshinew_resp_Box1_entertainment_300x250',
     '/1062118/MobileMasthead_HP_300x250',
-    // '/21928950349,22666385065/sakshi.com_nb_320x50',
     '/21959913182/sakshi_hb_320x50_top_mobile_new',
     // '/21959913182/sakshi_hb_320x50_top_mobile' // <-'/1062118/SakshiNew_ArticlepageLB_300x50'
     '/1062118/Mobile_Articlepage_adslot3',
@@ -623,7 +656,6 @@ var mappings_full_hb_config = {
     [320, 50], ///1062118/320x50_Mobile_LB_New
     [300, 250], //sakshinew_resp_Box1_entertainment_300x250
     [300, 250], ///1062118/MobileMasthead_HP_300x250
-    // [320, 50], ///21928950349,22666385065/sakshi.com_nb_320x50
     [[320, 100], [320, 50], [300, 50], [300, 100]], //'/21959913182/sakshi_hb_320x50_top_mobile_new
     // [[320, 50], [300, 50]], // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile
     [[300, 250], [336, 280]],
@@ -638,7 +670,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983534'} },
       { bidder: 'sovrn', params: {tagid: '888283'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543454990', delDomain: 'unibots-d.openx.net'}},
       // // { bidder: "kubient", params: { zoneid: "76c65728741bf", server: "kssp.kbntx.ch"} },
       // // // {bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
@@ -649,7 +681,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983534'} },
       { bidder: 'sovrn', params: {tagid: '744054'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543454990', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "76c65728741bf", server: "kssp.kbntx.ch"} },
       // // {bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
@@ -660,7 +692,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983535'} },
       { bidder: 'sovrn', params: {tagid: '744064'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543458039', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "d127db0a0fafa", server: "kssp.kbntx.ch"} },
       // // {bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
@@ -671,7 +703,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983536'} },
       { bidder: 'sovrn', params: {tagid: '744057'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543455757', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "5283241d8273a", server: "kssp.kbntx.ch"} },
       // // {bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
@@ -690,7 +722,7 @@ var mappings_full_hb_config = {
       // {bidder: 'dailyhunt', params: {placement_id: 139, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983530'} },
       { bidder: 'sovrn', params: {tagid: '744083'} },
-      { bidder: 'adsolut', params: { zoneId: '149450', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149450', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543458137', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "22f4c0ca3a449", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93233', domain: 'https://prg8.smartadserver.com' }}
@@ -719,7 +751,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 145, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983531'} },
       { bidder: 'sovrn', params: {tagid: '744058'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '54345592', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "515bdea4396a8", server: "kssp.kbntx.ch"} },
     ]), //1062118/SakshiNew_HP_Box_300x600,
@@ -734,7 +766,7 @@ var mappings_full_hb_config = {
     ]), //1062118/Desktop_HP_300x100
     hb_full_common_bidders.concat([
       { bidder: 'ucfunnel', params: { adid : 'ad-273677379833D44E03D462BAA9E47DA'} },
-      { bidder: 'adsolut', params: { zoneId: '149450', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149450', host: 'cpm.adsolut.in' } },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983537'} },
       // { bidder: 'dailyhunt', params: {placement_id: 139, publisher_id: 6, partner_name: 'sakshi'} },
       { bidder: 'sovrn', params: {tagid: '744067'} },
@@ -764,7 +796,7 @@ var mappings_full_hb_config = {
       { bidder: 'ucfunnel', params: { adid : 'ad-627D2272869AB2EBFE4B3BAE2DE29883'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983538'} },
       { bidder: 'sovrn', params: {tagid: '744059'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "01b6896b583e7", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543456852', delDomain: 'unibots-d.openx.net'} },
       // // { bidder: 'dailyhunt', params: {placement_id: 145, publisher_id: 6, partner_name: 'sakshi'} },
@@ -775,7 +807,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983541'} },
       { bidder: 'sovrn', params: {tagid: '744075'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543455615', delDomain: 'unibots-d.openx.net'} },
       // { bidder: "kubient", params: { zoneid: "2821e007e0100", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -786,7 +818,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983542'} },
       { bidder: 'sovrn', params: {tagid: '744066'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "46be0bac55041", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543270894', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -796,7 +828,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983543'} },
       { bidder: 'sovrn', params: {tagid: '744078'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "469d105d8cab1", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543456697', delDomain: 'unibots-d.openx.net'}},
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -805,7 +837,7 @@ var mappings_full_hb_config = {
       { bidder: 'ucfunnel', params: { adid : 'ad-AA7BAA7A4E24733DF88A83EE2BDD89EB'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983522'} },
       { bidder: 'sovrn', params: {tagid: '744069'} },
-      { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "7972e8b16e463", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543271469', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }}
@@ -816,7 +848,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983569'} },
       { bidder: 'sovrn', params: {tagid: '744065'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543268667', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
     ]), ///1062118/Sakshi_Moblile_LB
@@ -825,7 +857,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983548'} },
       { bidder: 'sovrn', params: {tagid: '744077'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "53cf0231e4dae", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543456615', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -835,7 +867,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983549'} },
       { bidder: 'sovrn', params: {tagid: '744071'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "3d7d889fc27ab", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543454780', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -845,7 +877,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983550'} },
       { bidder: 'sovrn', params: {tagid: '744081'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "1c85712249abc", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543457464', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -855,7 +887,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983551'} },
       { bidder: 'sovrn', params: {tagid: '744074'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543455522', delDomain: 'unibots-d.openx.net'} },
       // { bidder: "kubient", params: { zoneid: "4fb59fda0ab9f", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -865,7 +897,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983563'} },
       { bidder: 'sovrn', params: {tagid: '744052'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "147c0b0d6df21", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543270086', delDomain: 'unibots-d.openx.net'} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }},
@@ -875,7 +907,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983553'} },
       { bidder: 'sovrn', params: {tagid: '744076'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543456534', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "ebb9cdd7118b5", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -885,7 +917,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983554'} },
       { bidder: 'sovrn', params: {tagid: '744070'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543454681', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "eb8fc120a52da", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -895,7 +927,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983555'} },
       { bidder: 'sovrn', params: {tagid: '744080'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "c37f5e79f7424", server: "kssp.kbntx.ch"} },
       { bidder: 'openx', params: {unit: '543457388', delDomain: 'unibots-d.openx.net'}},
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -905,7 +937,7 @@ var mappings_full_hb_config = {
       // { bidder: 'dailyhunt', params: {placement_id: 138, publisher_id: 6, partner_name: 'sakshi'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983556'} },
       { bidder: 'sovrn', params: {tagid: '744073'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543455356', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "f5370f6bc07fe", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -914,7 +946,7 @@ var mappings_full_hb_config = {
       { bidder: 'ucfunnel', params: { adid : 'ad-9A29AA2A48973EBEC7E6DB3E746D76A'} },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2996105'} },
       { bidder: 'sovrn', params: {tagid: '744090'} },
-      { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543459177', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "b925d06159c89", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }}
@@ -925,7 +957,7 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983523'} },
       { bidder: 'sovrn', params: {tagid: '744062'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543457236', delDomain: 'unibots-d.openx.net'}},
       // { bidder: "kubient", params: { zoneid: "a30c04217fcc8", server: "kssp.kbntx.ch"} },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
@@ -937,25 +969,15 @@ var mappings_full_hb_config = {
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2983562'} },
       { bidder: 'sovrn', params: {tagid: '744032'} },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       { bidder: 'openx', params: {unit: '543268501', delDomain: 'unibots-d.openx.net'}},
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93232', domain: 'https://prg8.smartadserver.com' }}
     ]), ///1062118/MobileMasthead_HP_300x250
-    // hb_full_common_bidders.concat([
-    //   { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE7EBE268DAD17B3BE349BE4938E'} },
-    //   { bidder: 'sovrn', params: { tagid: '708881' } },
-    //   { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
-    //   { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
-    //   //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
-    //   // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
-    //   // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
-    //   // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }}
-    // ]), ///21928950349,22666385065/sakshi.com_nb_320x50
     hb_full_common_bidders.concat([
       // { bidder: 'ucfunnel', params: { adid : 'ad-BE78EE7EBE268DAD17B3BE349BE4938E'} },
       // { bidder: 'sovrn', params: { tagid: '708881' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
-      { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149449', host: 'cpm.adsolut.in' } },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '2932597'} },
       // // { bidder: 'rubicon', params: { accountId: '11734', siteId: '323846', zoneId: '1680740' } },
       // { bidder: 'smartadserver', params: { siteId: '361368', pageId: '1287116', formatId: '93231', domain: 'https://prg8.smartadserver.com' }}
@@ -971,7 +993,7 @@ var mappings_full_hb_config = {
     // ]), // /1062118/SakshiNew_ArticlepageLB_300x50 -> /21959913182/sakshi_hb_320x50_top_mobile -> '/21959913182/sakshi_hb_320x50_top_mobile_new
     hb_full_common_bidders.concat([
       { bidder: 'sovrn', params: { tagid: '708881' } },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: "kubient", params: { zoneid: "10b433b9bd2d5", server: "kssp.kbntx.ch"} },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
@@ -982,7 +1004,7 @@ var mappings_full_hb_config = {
     hb_full_common_bidders.concat([
       { bidder: 'sovrn', params: { tagid: '789455' } },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3247597'} },
@@ -992,7 +1014,7 @@ var mappings_full_hb_config = {
     hb_full_common_bidders.concat([
       { bidder: 'sovrn', params: { tagid: '789456' } },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3247598'} },
@@ -1002,7 +1024,7 @@ var mappings_full_hb_config = {
     hb_full_common_bidders.concat([
       { bidder: 'sovrn', params: { tagid: '789457' } },
       { bidder: 'unibots', params: {zoneId: 144261, host: 'cpm.unibots.in'} },
-      { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
+      // { bidder: 'adsolut', params: { zoneId: '149448', host: 'cpm.adsolut.in' } },
       // { bidder: 'openx', params: { unit: '541046310', delDomain: 'yieldbird-d.openx.net' } },
       //{ bidder: 'adsolut', params: { zoneId: '107071', host: 'cpm.adsolut.in' } },
       // { bidder: 'pubmatic', params: { publisherId : '159448', adSlot: '3247599'} },
@@ -1053,7 +1075,6 @@ var mappings_full_hb_config = {
     false, // '/1062118/320x50_Mobile_LB_New',
     false, // 'sakshinew_resp_Box1_entertainment_300x250',
     false, // '/1062118/MobileMasthead_HP_300x250'
-    // false, // /21928950349,22666385065/sakshi.com_nb_320x50
     false, // /1062118/SakshiNew_ArticlepageLB_300x50
     false, ///1062118/Mobile_Articlepage_adslot3
     false,
@@ -1112,10 +1133,11 @@ var mappings_extra_units = {
 
 function checkHBUnits(){
   if (isRoadblock) {
+      addNewsBotAd();
     changeConfigToHB();
     callMapUnits();
   }else {
-    // addNewsBotAd();
+    addNewsBotAd();
     changeConfigToHB();
     callMapUnits();
   }
@@ -1191,8 +1213,9 @@ function callFullHBAds(adCode, ub_slot){
                   googletag.pubads().refresh(ub_slot);
                 }else {
                   ubpbjs.setTargetingForGPTAsync();
-                  requestManager.prebid = true;
-                  this.biddersBack();
+                      googletag.pubads().refresh(ub_slot);
+                  // requestManager.prebid = true;
+                  // this.biddersBack();
                 }
               // requestManager.prebid = true;
               // biddersBack();
@@ -1471,7 +1494,7 @@ function callMapUnits(){
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
       callExtraHBAds(mappings_extra_units.adUnitNames, mappings_extra_units.slots);
     }else {
-      callAPStagBids();
+      // callAPStagBids();
       callFullHBAds(mapping_full_hb.adCode, mapping_full_hb.slots);
     }
   });
@@ -1491,3 +1514,26 @@ checkHBUnits();
 // else{
   // checkHBUnits();
 // }
+function loadAd(id, adUnits) {
+    var elm = document.getElementById(id);
+    var scripts = Array(elm.querySelectorAll("script"));
+    scripts = scripts[0];
+    for (var i = 0; i < scripts.length; i++) {
+        oldScript = scripts[i];
+        const newScript = document.createElement("script");
+        var scriptAttr = Array(oldScript.attributes);
+        scriptAttr = scriptAttr[0];
+        for (var j = 0; j < scriptAttr.length; j++) {
+            attr = scriptAttr[j];
+            newScript.setAttribute(attr.name, attr.value);
+        }
+        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+        newScript.onload = function () {
+            if (adUnits !== undefined) {
+                smartyads.buildUnits(adUnits);
+            }
+        };
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+    }
+}
+}

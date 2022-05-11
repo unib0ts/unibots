@@ -14,7 +14,7 @@ function mobileCheck() {
     return check;
 }
 
-var mybotstyleSheet ="#div-clmb-ctn-465459-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465460-1{width: auto !important;z-index: 2147483647 !important;} #ifr_465459-1{bottom: 135px !important;} #ifr_465460-1{bottom: 120px !important;}";
+var mybotstyleSheet ="#div-clmb-ctn-465459-1{width: auto !important;z-index: 2147483647 !important;} #div-clmb-ctn-465460-1{width: auto !important;z-index: 2147483647 !important;}  #ifr_465459-1{bottom: 190px !important;height:180px !important;} #ifr_465460-1{left: -30px !important;height:180px !important;}";
 var css = document.createElement("style");
 css.type = "text/css";
 css.appendChild(document.createTextNode(mybotstyleSheet));
@@ -28,6 +28,27 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
   document.getElementsByTagName("head")[0].appendChild(ub_ga);
   document.getElementById("gabywa").innerHTML = mybotgabywa;
   loadAd("gabywa");
+
+  z1 = document.createElement("div");
+  z1.id = "div-ub-1";
+  if (!mobileCheck()) {
+    z1.style = "width:320px;height:50px;float:left;text-align:center;position:fixed;bottom:135px;left:5px;z-index:99";
+  }else {
+    z1.style = "width:320px;height:50px;;transform: translateX(-50%);position:fixed;bottom:0px !important;left:50%;z-index:99";
+  }
+  x1 = document.querySelector("body");
+  x1.appendChild(z1);
+
+  var s0 = document.createElement('script');
+  s0.async = "async";
+  s0.src = "https://cdn.unibots.in/headerbidding/common/hb.js";
+  s0.type = "text/javascript";
+  document.getElementsByTagName('head')[0].appendChild(s0);
+
+  window.unibotshb = window.unibotshb || { cmd: [] };
+  unibotshb.cmd.push(() => {
+      ubHB("bonggossip");
+  });
 
    ub_passback1();
 
@@ -46,17 +67,17 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
    // }, 30000);
 
  function ub_passback1() {
-       // if(typeof colombia == 'undefined'){
-       // var colombia = colombia || {};
-       // colombia.fns = colombia.fns || [];
-       //   (function() {
-       //       var cads = document.createElement("script");
-       //       cads.async = true;
-       //       cads.type = "text/javascript";
-       //       cads.src = "https://static.clmbtech.com/ctn/commons/js/colombia_v2.js";
-       //       document.getElementsByTagName('head')[0].appendChild(cads);
-       //   })();
-       // }
+    if(typeof colombia == 'undefined'){
+       var colombia = colombia || {};
+       colombia.fns = colombia.fns || [];
+         (function() {
+             var cads = document.createElement("script");
+             cads.async = true;
+             cads.type = "text/javascript";
+             cads.src = "https://static.clmbtech.com/ad/commons/js/91170/colombia_v2.js";
+             document.getElementsByTagName('head')[0].appendChild(cads);
+         })();
+    }
 
        var ub_passback = document.createElement("div");
        ub_passback.setAttribute("style", "float:left;min-height:2px;width:auto;position:absolute;bottom:0;");
@@ -88,19 +109,21 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
            if (document.querySelector('#div-clmb-ctn-465459-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_465459-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
 
+         if (ub_innerDoc.querySelector('.main_div_swiper')) {
+           ub_innerDoc1 = ub_innerDoc.querySelector('.main_div_swiper');
                  ub_z2 = document.createElement("div");
                  ub_z2.id = "ub-cmpgn-ad";
                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
                  ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
                  ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
+                 ub_innerDoc1.appendChild(ub_z2);
 
                  // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
                  // });
                  clearInterval(ub_clmb);
+               }
            }
          }
        }
@@ -109,19 +132,20 @@ mybotgabywa = '<script async src="https://www.googletagmanager.com/gtag/js?id='+
            if (document.querySelector('#div-clmb-ctn-465460-1').childNodes[0]) {
                  ub_iframe = document.getElementById('ifr_465460-1');
                  ub_innerDoc = (ub_iframe.contentDocument) ? ub_iframe.contentDocument : ub_iframe.contentWindow.document;
-                 ub_innerDoc = ub_innerDoc.querySelector('.main_div_swiper');
-
+                 if (ub_innerDoc.querySelector('.main_div_swiper')) {
+                   ub_innerDoc1 = ub_innerDoc.querySelector('.main_div_swiper');
                  ub_z2 = document.createElement("div");
                  ub_z2.id = "ub-cmpgn-ad";
                  ub_z2.setAttribute('href',"https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget");
                  ub_z2.style = "color:#fff;line-height:11px;border-radius:5px;font-size:10px;width:130px;position:absolute;top:10px;text-align:center;right:26px;background-repeat:no-repeat;background-position:center;background-color:#17479e;";
                  ub_z2.innerText = "Ads by Unibots";
-                 ub_innerDoc.appendChild(ub_z2);
+                 ub_innerDoc1.appendChild(ub_z2);
 
                  // ub_innerDoc.querySelector('#ub-cmpgn-ad').addEventListener('click', function() {
                  //   window.open('https://unibots.in/?utm_source=unibots&utm_medium=cubeadwidget', '_blank');
                  // });
                  clearInterval(ub_clmb);
+               }
            }
          }
        }

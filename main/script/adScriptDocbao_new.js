@@ -18,7 +18,7 @@ var s0 = document.createElement('script');
      clearInterval(ub_interval_plyr_check);
      if (document.getElementById(myub_objId)) {
        // url ="https://cdn.unibots.in/ubplayer/player.js";
-       url = "https://cdn.unibots.in/ubplayer/player_external_scripts/level_two/player.js";
+       url = "https://cdn.unibots.in/ubplayer/player.js";
        ub_vs = document.createElement("script");
        ub_vs.src = url;
        ub_vs.type = "text/javascript";

@@ -1,4 +1,14 @@
-mybotBlockedClientsName = ['astrologycircle', 'boldsky', 'daijiworld', 'drivespark', 'filmibeat', 'gizbot', 'shrtechs', 'sunsigns', 'vietgiaitri', 'suara', 'bolatimes', 'matamata', 'agrifarming', 'ettoday', 'agniban', 'jagran', 'epapergujaratsamachar', 'onlymyhealth', 'jagranjosh', 'naidunia', 'techring', 'navodayatimes', 'inextlive', 'techwead', 'herzindagi', 'mintah', 'hitekno', 'dewiku', 'bollytrendz', 'himedik', 'popdaily', 'npg', 'southlive', 'newdelhiairport', 'gotv_ctitv', 'gestiopolis', 'sambad','bongdaplus'];
+mybotBlockedClientsName = ['astrologycircle', 'boldsky', 'daijiworld', 'drivespark', 'filmibeat', 'gizbot', 'shrtechs', 'sunsigns', 'vietgiaitri', 'suara', 'bolatimes', 'matamata', 'agrifarming', 'ettoday', 'agniban', 'jagran', 'epapergujaratsamachar', 'onlymyhealth', 'jagranjosh', 'naidunia', 'techring', 'navodayatimes', 'inextlive', 'techwead', 'herzindagi', 'mintah', 'hitekno', 'dewiku', 'bollytrendz', 'himedik', 'popdaily', 'npg', 'southlive', 'newdelhiairport', 'gotv_ctitv', 'gestiopolis', 'sambad','bongdaplus',
+'poskota',
+'cool3c',
+'mababy',
+'epop',
+'cna',
+'wowkeren,'
+'ctee',
+'inside',
+'jamja'
+];
 
 mybotDomainUrl = (window.location.host).split(".");
 mybotBlockedClientName = mybotDomainUrl.filter(mybotDomainUrl => mybotBlockedClientsName.includes(mybotDomainUrl));

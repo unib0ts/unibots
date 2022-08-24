@@ -4,7 +4,7 @@ mybotBlockedClientsName = ['astrologycircle', 'boldsky', 'daijiworld', 'drivespa
 'mababy',
 'epop',
 'cna',
-'wowkeren,'
+'wowkeren',
 'ctee',
 'inside',
 'jamja'

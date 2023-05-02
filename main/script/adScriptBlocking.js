@@ -18,6 +18,7 @@ mybotBlockedClientsName = ['astrologycircle', 'boldsky', 'daijiworld', 'drivespa
 'bacaterus',
 'ttshow',
 'myeva',
+'realityblurb',
 ];
 
 mybotDomainUrl = (window.location.host).split(".");

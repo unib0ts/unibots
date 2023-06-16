@@ -1,23 +1,24 @@
 // var s0 = document.createElement('script');
 // s0.src = "https://cdn.unibots.in/headerbidding/clmbcube/cubeScriptTupaki.js";
 // s0.type = "text/javascript";
-// document.getElementsByTagName('head')[0].appendChild(s0);
-// var s0 = document.createElement('script');
-// s0.async = "async";
-// s0.src = "https://cdn.unibots.in/genericcube/common/script.js";
-// s0.type = "text/javascript";
-// document.getElementsByTagName('head')[0].appendChild(s0);
-
-// window.unibotsDirectAds = window.unibotsDirectAds || { cmd: [] };
-// unibotsDirectAds.cmd.push("tupaki");
+document.getElementsByTagName('head')[0].appendChild(s0);
 var s0 = document.createElement('script');
 s0.async = "async";
-s0.src = "https://cdn.unibots.in/directcampaign/common/script.js";
+s0.src = "https://cdn.unibots.in/genericcube/common/script.js";
 s0.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(s0);
 
-window.ubCampaign = window.ubCampaign || { cmd: [] };
- ubCampaign.cmd.push("tupaki");
+window.unibotsDirectAds = window.unibotsDirectAds || { cmd: [] };
+unibotsDirectAds.cmd.push("tupaki");
+
+// var s0 = document.createElement('script');
+// s0.async = "async";
+// s0.src = "https://cdn.unibots.in/directcampaign/common/script.js";
+// s0.type = "text/javascript";
+// document.getElementsByTagName('head')[0].appendChild(s0);
+
+// window.ubCampaign = window.ubCampaign || { cmd: [] };
+//  ubCampaign.cmd.push("tupaki");
 
 
  ubadScript();

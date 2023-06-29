@@ -24,7 +24,7 @@ unibotsDirectAds.cmd.push("tupaki");
 
  ubadScript();
      
-   var mybotstyleSheet ="mybot #ub-roller-wrapper{z-index:90 !important;} #mybot-adcover{display:block;width: max-content; height:100px;bottom: 0px !important;text-align: center;z-index: 90 !important;position: fixed !important;}@media screen and (max-width:635px) { #mybot-adcover{bottom: 0px;right:unset;}}";
+   var mybotstyleSheet ="mybot #ub-roller-wrapper{z-index:90 !important;} #mybot-adcover{display:block;width: max-content; height:auto;bottom: 0px !important;text-align: center;z-index: 90 !important;position: fixed !important;}@media screen and (max-width:635px) { #mybot-adcover{bottom: 0px;right:unset;}}";
    var css = document.createElement("style");
    css.type = "text/css";
    css.appendChild(document.createTextNode(mybotstyleSheet));
